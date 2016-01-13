@@ -73,11 +73,15 @@ To update the installed bower packages, run the below command.
 ~~~
 bower update syncfusion-javascript
 ~~~
+
 ## Documentation
+
 
 For complete Syncfusion JavaScript documentation, please visit [http://help.syncfusion.com/js/](http://help.syncfusion.com/js/# "")
 
 ## Demos
+
+### Online Demos
 
 Take a look at the Syncfusion JavaScript Web and Mobile live demos.
 
@@ -85,13 +89,17 @@ Take a look at the Syncfusion JavaScript Web and Mobile live demos.
 
 * [Mobile](http://js.syncfusion.com/demos/mobile/# "")
 
+### Offline Demos
+
+Download our JavaScript Platform installer from here <https://www.syncfusion.com/downloads/javascript/>
+
 ## Support
 
 In case of any questions regarding the use of Syncfusion JavaScript, please [contact us](http://www.syncfusion.com/support/# "") by creating a support ticket.
 
 ## Release Notes
 
-Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes at Syncfusion](http://files2.syncfusion.com/Installs/v13.3.0.18/ReleaseNotes/JavaScript.html# "").
+Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes at Syncfusion](http://help.syncfusion.com/js/release-notes/v13.4.0.53# "").
 
 ## License Information
 
