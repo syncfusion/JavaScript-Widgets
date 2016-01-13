@@ -1,6 +1,6 @@
 ## About Syncfusion JavaScript
 
-Syncfusion Essential JavaScript is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. It includes all the UI controls that are typically required for building line-of-business (LOB) applications including charts, grids, gantt, scheduler, diagram and much more.
+Syncfusion Essential JavaScript is a comprehensive collection of over 80+ enterprise-grade HTML5 JavaScript components for building modern web applications. It includes all the UI controls that are typically required for building line-of-business (LOB) applications including charts, grids, gantt, scheduler, diagram and much more.
 ## Configure the Syncfusion JavaScript Bower
 
 ### Bower Installation
@@ -46,7 +46,7 @@ In another way, you can add the packages to the bower.json file by simply specif
 “syncfusion-javascript” : “13.3.0.18”
 ~~~
 
->Note
+>**Note**
 
 >ASP.NET 5 (preview) projects have bower.json file by default. If your project doesn’t have bower.json file run the below command from your project directory.
 
