@@ -102,16 +102,22 @@
 
             .e-grid.e-responsive .e-pager .e-parentmsgbar {
                 position: absolute;
-                top: 0;
+                top: 34px;
                 padding-top: 0;
                 margin-left: 24%;
             }
 
             .e-grid.e-responsive .e-pager .e-pagercontainer {
-                position: absolute;
-                bottom: 0;
+                position: absolute;               
                 margin-left: 16%;
-                margin-bottom: 5px;
+                top:5px;
+            }
+            .e-pager .e-pagercontainer{
+                margin-left:30px;               
+            }
+            .e-pager div.e-parentmsgbar{
+                margin-left:24%;
+                float:none;
             }
 
             .e-grid.e-responsive .e-pager .e-PP, .e-grid.e-responsive .e-pager .e-NP {

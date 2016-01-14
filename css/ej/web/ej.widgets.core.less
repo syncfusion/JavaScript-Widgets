@@ -1,6 +1,7 @@
 /*Definition*/
 @font-family: Segoe UI;
 @font-size: 13px;
+@font-path: "common-images";
 @border-size: 1px;
 @border-type: solid;
 @header-font-weight:bold;
@@ -42,6 +43,7 @@
 @rte-split-height: "";
 @rte-toolbar-res-margin-top: 8px;
 @fe-toolbar-res-margin-top: 8px;
+@fe-treeview-image-top: 2px;
 @button-height: "";
 @border-radius: "";
 @border-left-radius: "";
@@ -193,6 +195,11 @@
     .e-dialog-wrap > .e-header {
         border-radius: @inner-border-top-radius;
     }
+	.e-listbox li{
+		webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+	} 
 
     .e-corner.e-progressbar .e-progress.e-complete {
         border-radius: 3px 3px 3px 3px;
@@ -351,12 +358,8 @@
         background-color: gray;
         opacity: 0.5;
         filter: alpha(opacity= 50);
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
-        z-index: 100;
     }
 
     .e-tooltipbox {
@@ -397,6 +400,8 @@
 
     .watermerk-style() {
         font-style: italic;
+        opacity: 0.6;
+        filter: alpha(opacity=60);
     }
 
     .e-widget .e-input.e-placeholder {
@@ -1053,7 +1058,7 @@
         position: relative;
     }
 
-    .e-ddl-popup .e-atc.e-search .e-isearch {
+    .e-ddl-popup .e-atc.e-search .e-isearch, .e-ddl-popup .e-atc.e-search .e-iclose {
         width: 14px;
         right: 10px;
     }
@@ -1067,6 +1072,11 @@
         font-size: 20px;
         margin-top: -3px;
     }
+	.e-ddl-popup .e-atc.e-search .e-iclose:before {
+		content: "\e60a";
+		font-size: 20px;
+		margin-top: -3px;
+	}
 
     .e-ddl .e-icon {
         font-size: 12px;
@@ -1078,7 +1088,7 @@
         padding: 0 7px 0 20px;
     }
 
-    .e-ddl-popup.e-rtl .e-atc.e-search .e-isearch {
+    .e-ddl-popup.e-rtl .e-atc.e-search .e-isearch, .e-ddl-popup.e-rtl .e-atc.e-search .e-iclose {
         right: auto;
         left: 0;
         padding-left: 10px;
@@ -1135,7 +1145,6 @@
 
     .e-time-popup {
         cursor: default;
-        overflow: auto;
         position: absolute;
         border: 1px solid;
         outline: 0 none;
@@ -1162,6 +1171,10 @@
 
     .e-time-popup.e-rtl ul li {
         padding: 2px 0.857em 2px 2px;
+    }
+
+    .e-timewidget.e-error .e-in-wrap {
+        border-color: #FF0000;
     }
 }
 
@@ -1471,12 +1484,6 @@
         white-space: nowrap;
     }
 
-    .e-menu .e-list > ul li.e-separator {
-        height: 1px;
-        margin: 2px 0 2px 18%;
-        position: relative;
-        border: 0px none;
-    }
 
     .e-menu li.e-list > a > img,
     .e-menu li.e-list > span > img,
@@ -1553,10 +1560,6 @@
         text-align: right;
     }
 
-    .e-menu.e-rtl .e-list > ul li.e-separator {
-        margin: 2px 18% 2px 0;
-    }
-
     .e-menu.e-rtl .e-list > a > img,
     .e-menu.e-rtl .e-list > span > img,
     .e-menu.e-rtl .e-list > a > div,
@@ -1566,15 +1569,11 @@
         margin: 0 0 0 4px;
     }
 
-    .e-menu.e-rtl .e-list > a span.e-icon,
-    .e-menu.e-rtl .e-list > span span.e-icon {
+    .e-menu.e-rtl .e-list > a span.e-icon.e-arrows,
+    .e-menu.e-rtl .e-list > span span.e-icon.e-arrows {
         left: -2px;
         margin-left: 5px;
         right: auto;
-    }
-
-    .e-menu.e-rtl.e-separator.e-horizontal > .e-list {
-        border-left: 1px solid;
     }
 
     .e-menu.e-rtl .e-list > a > span {
@@ -1651,19 +1650,33 @@
         padding-right: 28px;
     }
 
-    .e-menu.e-horizontal > .e-list, .e-menu.e-separator.e-horizontal > li:last-child, .e-menu.e-separator.e-vertical > li:last-child, .e-menu.e-rtl.e-horizontal > .e-list, .e-menu.e-rtl.e-separator.e-horizontal > li:last-child, .e-menu.e-rtl.e-separator.e-vertical > li:last-child {
+    .e-menu.e-horizontal > .e-list,
+    .e-menu.e-separator.e-horizontal > li:last-child,.e-menu.e-horizontal > li.e-separator:last-child, .e-menu.e-horizontal .e-list > ul .e-list.e-separator:last-child,
+    .e-menu.e-separator.e-vertical > li:last-child,.e-menu.e-vertical > li.e-separator:last-child,.e-menu.e-vertical .e-list > ul .e-list.e-separator:last-child,
+    .e-menu.e-rtl.e-horizontal > .e-list,
+    .e-menu.e-rtl.e-separator.e-horizontal > li:last-child,.e-menu.e-rtl.e-horizontal > li.e-separator:last-child, .e-menu.e-rtl.e-horizontal .e-list > ul .e-list.e-separator:last-child,
+    .e-menu.e-rtl.e-separator.e-vertical > li:last-child, .e-menu.e-rtl.e-vertical > li.e-separator:last-child,.e-menu.e-rtl.e-vertical .e-list > ul .e-list.e-separator:last-child,
+    .e-menu.e-separator.e-context > li:last-child, .e-menu.e-context > li.e-separator:last-child, .e-menu.e-context .e-list > ul .e-list.e-separator:last-child,
+    .e-menu.e-rtl.e-separator.e-context > li:last-child, .e-menu.e-rtl.e-context > li.e-separator:last-child, .e-menu.e-rtl.e-context .e-list > ul .e-list.e-separator:last-child {
         border: 0 none;
     }
 
-    .e-menu.e-separator.e-horizontal > .e-list {
+    .e-menu.e-separator.e-horizontal > .e-list, .e-menu.e-horizontal > .e-separator {
         border-right: 1px solid;
     }
 
-    .e-menu.e-separator.e-vertical > .e-list {
-        border-bottom: 1px solid;
+    .e-menu.e-horizontal .e-list > ul .e-list.e-separator, 
+    .e-menu.e-horizontal .e-list > ul .e-list.e-separator:hover, 
+    .e-menu.e-vertical .e-list > ul .e-list.e-separator,
+    .e-menu.e-vertical .e-list > ul .e-list.e-separator:hover,
+    .e-menu.e-context .e-list > ul .e-list.e-separator,
+    .e-menu.e-context .e-list > ul .e-list.e-separator:hover,
+    .e-menu.e-separator.e-vertical > .e-list, .e-menu.e-vertical > .e-separator,
+    .e-menu.e-context > .e-separator {
+		border-bottom:1px solid;
     }
 
-    .e-menu.e-separator.e-rtl.e-horizontal > .e-list {
+    .e-menu.e-separator.e-rtl.e-horizontal > .e-list, .e-menu.e-rtl.e-horizontal > .e-separator.e-list {
         border-right: 0 none;
         border-left: 1px solid;
     }
@@ -1684,7 +1697,7 @@
         border: 1px solid;
     }
 
-    .e-menu.e-vertical .e-list {
+    .e-menu.e-vertical .e-list, .e-menu.e-vertical > li.e-list.e-separator {
         line-height: @menu-vertical-line-height;
     }
 
@@ -1697,13 +1710,6 @@
 
     .e-menu.e-vertical .e-list > ul .e-list {
         line-height: @menu-ver-child-line-height;
-    }
-
-    .e-menu.e-vertical > li.e-separator,
-    .e-menu.e-context > li.e-separator {
-        height: 1px;
-        width: 100%;
-        border: 0px none;
     }
 
     .e-menu.e-vertical > .e-list > img {
@@ -1752,7 +1758,7 @@
         font-size: 13px;
     }
 
-    .e-menu.e-context .e-list > ul .e-list, .e-menu.e-context .e-list {
+    .e-menu.e-context .e-list > ul .e-list, .e-menu.e-context .e-list, .e-menu.e-context > li.e-list.e-separator {
         line-height: 27px;
     }
 
@@ -1768,10 +1774,6 @@
     .e-menu.e-context > .e-list > a > div,
     .e-menu.e-context > .e-list > a > span {
         float: left;
-    }
-
-    .e-menu.e-rtl.e-context > li.e-separator {
-        margin: 2px 30px 2px 2px;
     }
 
     .e-menu.e-context.e-rtl > .e-list > a,
@@ -1791,7 +1793,7 @@
         outline: 0 none;
     }
 
-    .e-acrdn > .e-select > .e-icon {
+    .e-acrdn > .e-select > .e-icon, .e-acrdn.e-rtl > .e-select > div.e-close{
         border: 0 none transparent;
         display: block;
         height: 16px;
@@ -1828,13 +1830,23 @@
         border: 1px solid;
     }
 
-    .e-acrdn.e-rtl .e-icon {
+    .e-acrdn.e-rtl .e-icon, .e-acrdn > .e-select > div.e-close {
         float: right;
         margin-left: 5px;
     }
 
     .e-acrdn .e-select.e-disable a, .e-acrdn .e-select.e-disable span.e-icon {
         cursor: default;
+    }
+
+    .e-acrdn > .e-select > div.e-close {
+        visibility:hidden;
+    }    
+    .e-acrdn > .e-select:hover > div.e-close {
+        visibility:visible;
+    }
+    .e-acrdn > .e-select.e-disable:hover > div.e-close {
+        visibility:hidden;
     }
 }
 
@@ -1925,7 +1937,6 @@
 }
 
 .mixin(@widget) when (@widget = radiobutton), (@widget = none) {
-
     .e-radiobtn-wrap .e-radiobtn {
         display: none;
         height: 0px;
@@ -2022,7 +2033,7 @@
         margin: -1px 0px -1px 0px;
     }
 
-    .e-tab .e-bottom-line {
+    .e-tab .e-bottom-line.e-active {
         margin: 0px 0px -1px 0;
     }
 
@@ -2171,7 +2182,14 @@
     .e-dialog .e-draggable {
         cursor: move;
     }
-
+    .e-dialog.e-dialog-wrap >.e-disable-overlay{
+        position:absolute;
+        height:100%;
+        width:100%;
+        top:0px;
+        left:0px;
+        z-index: 10001;
+    } 
     .e-dialog .e-dialog-icon {
         cursor: pointer;
         padding: 1px;
@@ -2377,6 +2395,7 @@
         border: dashed 3px #C1C3C5;
         display: table;
         position: relative;
+        box-sizing: border-box;
     }
 
     .e-upload-box.e-drag-wrapper .e-drag-container {
@@ -2907,8 +2926,12 @@
     .e-treeview-wrap {
         white-space: nowrap;
         outline: 0 none;
-        overflow: auto;
         border-image: initial;
+    }
+
+    .e-treeview-wrap > .e-ul {
+        overflow: auto;
+        height: inherit;
     }
 
     .e-treeview .e-treeview-ul {
@@ -3439,8 +3462,8 @@
     /*SVG*/
     @font-face {
         font-family: 'ej-webfont';
-        src: url('common-images/ejicons.eot?-dzszjm');
-        src: url('common-images/ejicons.eot?#iefix-dzszjm') format('embedded-opentype'), url('common-images/ejicons.woff?-dzszjm') format('woff'), url('common-images/ejicons.ttf?-dzszjm') format('truetype'), url('common-images/ejicons.svg?-dzszjm#ejicons') format('svg');
+        src: url('@{font-path}/ejicons.eot?-dzszjm');
+        src: url('@{font-path}/ejicons.eot?#iefix-dzszjm') format('embedded-opentype'), url('@{font-path}/ejicons.woff?-dzszjm') format('woff'), url('@{font-path}/ejicons.ttf?-dzszjm') format('truetype'), url('@{font-path}/ejicons.svg?-dzszjm#ejicons') format('svg');
         font-weight: normal;
         font-style: normal;
     }
@@ -3490,11 +3513,11 @@
     /*
 .e-icon.e-ui-light
 {
-background-image: url(../common-images/icons-gray.png);
+background-image: url('../@{font-path}/icons-gray.png');
 }
 .e-icon.e-ui-dark
 {
-background-image: url(../common-images/icons-white.png);
+background-image: url('../@{font-path}/icons-white.png');
 }
 */
     /* icon positions */
@@ -3902,20 +3925,8 @@ background-image: url(../common-images/icons-white.png);
         content: "\e675";
     }
 
-    .e-groupbutton:before {
+    .e-gridgroupbutton:before{
         content: "\e61c";
-    }
-
-    .e-columnmenu-ascending:before {
-        content: "\e76c";
-    }
-
-    .e-columnmenu-descending:before {
-        content: "\e76d";
-    }
-
-    .e-columnchooser-icon:before {
-        content: "\e76e";
     }
 
     .e-gnextmedia {
@@ -4136,15 +4147,13 @@ background-image: url(../common-images/icons-white.png);
 
     .e-scrollbar .e-hhandlespace,
     .e-scrollbar .e-hup,
-    .e-scrollbar .e-hdown,
-    .e-scrollbar .e-hscroll {
+    .e-scrollbar .e-hdown {
         height: inherit;
         display: inline-block;
     }
 
-    .e-scrollbar .e-hhandle {
+    .e-scrollbar .e-hhandle,.e-scrollbar .e-hscroll {
         height: inherit;
-        display: inline-block;
     }
 
     .e-scrollbar .e-vscroll .e-icon {
@@ -4247,6 +4256,10 @@ background-image: url(../common-images/icons-white.png);
 }
 
 .mixin(@widget) when (@widget = datetimepicker), (@widget = none) {
+    
+    .e-datetime-wrap.e-error .e-in-wrap {
+        border-color: #FF0000;
+    }
 
     .e-datetime-wrap {
         display: block;
@@ -4612,6 +4625,10 @@ background-image: url(../common-images/icons-white.png);
     .e-filtertext::-ms-clear {
         display: none;
     }
+    
+    .e-grid .e-filtertext::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+    }
 
     .e-grid .e-gridsummary .e-indentcell {
         width: 30px !important;
@@ -4793,6 +4810,58 @@ background-image: url(../common-images/icons-white.png);
         content: "\e681";
     }
 
+    .e-icon.e-contextadd:before {
+        content: "\e7bf";
+    }
+
+    .e-icon.e-contextedit:before {
+        content: "\e7c2";
+    }
+
+    .e-icon.e-contextdelete:before {
+        content: "\e7c1";
+    }
+
+    .e-icon.e-contextcancel:before {
+        content: "\e7c0";
+    }
+
+    .e-icon.e-contextsave:before {
+        content: "\e7c8";
+    }
+
+    .e-icon.e-contextgrouping:before {
+        content: "\e7c4";
+    }
+
+    .e-icon.e-contextungrouping:before {
+        content: "\e7cb";
+    }
+
+    .e-icon.e-contextascending:before {
+        content: "\e7ca";
+    }
+
+    .e-icon.e-contextdescending:before {
+        content: "\e7c9";
+    }
+
+    .e-icon.e-contextnext:before {
+        content: "\e7c6";
+    }
+
+    .e-icon.e-contextlast:before {
+        content: "\e7c5";
+    }
+
+    .e-icon.e-contextprevious:before {
+        content: "\e7c7";
+    }
+
+    .e-icon.e-contextfirst:before {
+        content: "\e7c3";
+    }
+
     .e-columnChooser {
         min-width: 200px;
         padding: 0px;
@@ -4867,20 +4936,6 @@ background-image: url(../common-images/icons-white.png);
         padding: 0 13px;
     }
 
-    .e-columnMenuListDiv label {
-        width: 175px;
-        margin-left: 15px;
-        display: inline-block;
-        margin-bottom: 0px;
-        font-weight: inherit;
-    }
-
-    .e-columnMenuListDiv {
-        line-height: 1.9;
-        white-space: nowrap;
-        padding: 0px 8px 3px;
-    }
-
     .e-columnChooser .e-vscroll,
     .e-columnChooser .e-vscrollbar {
         width: 10px !important;
@@ -4892,12 +4947,11 @@ background-image: url(../common-images/icons-white.png);
     }
 
     .e-columnChooser .e-hhandlespace {
-        width: 221px !important;
         margin-top: 0px;
     }
 
     .e-columnChooser .e-content {
-        width: 214px !important;
+        width: 214px;
     }
 
     .e-columnChooserSplitter {
@@ -4908,6 +4962,7 @@ background-image: url(../common-images/icons-white.png);
 
     .e-columnChooser .e-hscrollbar {
         height: 11px !important;
+		margin-top: 8px;
     }
     .e-grid.e-columnChooser .e-hscroll, .e-grid.e-columnChooser .e-vscroll{
 		border:0px;
@@ -5065,7 +5120,9 @@ background-image: url(../common-images/icons-white.png);
     .e-grid .e-normaledit .e-rowcell {
         padding: 1px 3px;
     }
-
+    .e-grid .e-bottomrow {
+	    border-top : 1px solid;
+	}
     .e-grid .e-normaledit .e-boolcell {
         padding-left: 0.7em;
     }
@@ -5109,7 +5166,11 @@ background-image: url(../common-images/icons-white.png);
         border-style: @border-type;
         border-width: @border-size 0px 0px;
     }
-
+    
+	.e-grid  .e-detailrowcollapse.e-lastrowcell{
+        border-bottom-width:@border-size;
+    }
+	
     .e-grid .e-headercell .e-descending, .e-grid .e-headercell .e-ascending,
     .e-grid .e-togglegroup, .e-grid .e-toggleungroup {
         padding-left: 7px;
@@ -5271,6 +5332,13 @@ background-image: url(../common-images/icons-white.png);
         word-wrap: break-word;
     }
 
+    .e-grid .e-summaryscroll {
+       padding-right:18px;
+     }
+   .e-grid .e-summaryscroll .e-rtl {
+       padding-left:18px;
+     }
+
     .e-grid .e-boolrowcell input[type='checkbox'] {
         margin-left: 0.7em;
         width: auto;
@@ -5368,7 +5436,6 @@ background-image: url(../common-images/icons-white.png);
     }
 
     .e-grid .e-normaledit td {
-        border: 1px solid #c4c4c4;
         border-bottom: none;
     }
 
@@ -5472,7 +5539,7 @@ background-image: url(../common-images/icons-white.png);
         height: 40px;
     }
 
-    .e-grid .e-dialog .e-rowcell {
+    .e-grid .e-dialog .gridform .e-rowcell {
         border: none;
         padding: 0.1em;
     }
@@ -5521,7 +5588,7 @@ background-image: url(../common-images/icons-white.png);
     }
 
     .e-grid .e-gridheader {
-        border-bottom-width: 3px;
+        border-bottom-width: 1px;
         border-bottom-style: @border-type;
     }
 
@@ -5637,6 +5704,7 @@ background-image: url(../common-images/icons-white.png);
          padding-left: 0px;
          padding-right:0.7em;
 }
+
     .e-grid .e-detailrowcollapse, .e-grid .e-detailcell, .e-grid tr.e-editedrow td.e-rowcell {
         border-top-width: @border-size;
         border-top-style: @border-type;
@@ -5765,7 +5833,6 @@ background-image: url(../common-images/icons-white.png);
       font-family: 'ej-webfont';
       color: red;
 }
-
     .e-grid form .e-icon:before {
         display: block;
     }
@@ -5810,7 +5877,7 @@ background-image: url(../common-images/icons-white.png);
 
     .e-grid .e-rowcell.e-updatedtd {
         font-size: @font-size;
-        font-family:@font-family;
+        font-family:@font-family;        
     }
 
     .e-grid .e-dlgBtns .e-button {
@@ -5920,7 +5987,9 @@ background-image: url(../common-images/icons-white.png);
     .e-grid.e-rtl .e-grouptopleftcell, {
         border-width: 0px @border-size 0px 0px;
     }
-
+	.e-grid.e-rtl .e-reorderindicate{
+	border-left-width: 3px;
+	}
     .e-grid.e-rtl .e-cloneproperties {
         border-width: @border-size @border-size 3px @border-size;
     }
@@ -5966,7 +6035,13 @@ background-image: url(../common-images/icons-white.png);
         padding-right: 0px;
         padding-left: 18px;
     }
-    
+	
+    .e-grid .e-widget .e-pager.e-rtl {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
     .e-grid.e-rtl .e-grid-filterstatusbar .e-msgdiv, .e-grid.e-rtl .e-grid-filterstatusbarbottom .e-msgdiv {
         margin-right: 5px;
     }
@@ -6074,7 +6149,9 @@ background-image: url(../common-images/icons-white.png);
     .e-pager .e-pagerstatusbar {
         padding-bottom: 9px;
     }
-
+     .e-spreadsheet .e-pager .e-icon{
+        display:inline-block;
+    }
     .e-pager .e-icon {
         font-size: 10px;
     }
@@ -6138,7 +6215,9 @@ text-decoration: none;
         -o-user-select: none;
         user-select: none;
     }
-
+    .e-pager .e-icon:before{
+        display: inline-block;
+      }
     .e-pager .e-firstpage,
     .e-pager .e-prevpage,
     .e-pager .e-firstpagedisabled,
@@ -6217,9 +6296,15 @@ margin: 0 6px 0 6px;
         margin: 6px;
     }
 
-.e-pager.e-rtl .e-pagercontainer{
-float:none;
-margin-right: 6px;
+    .e-grid .e-pagerfiltermsg {
+        display: block;
+        margin: 6px 0px 6px;
+        padding-left: 9px;
+    }
+
+    .e-pager.e-rtl .e-pagercontainer {
+        float: none;
+        margin-right: 6px;
         padding: 0px;
     }
 
@@ -6314,6 +6399,7 @@ border-right: medium none;
     .e-rotator-wrap {
         position: relative;
         display: block;
+        direction: ltr;
     }
 
     .e-rotator-wrap .e-in-wrap {
@@ -6547,9 +6633,132 @@ border-right: medium none;
         font-family: icon;
         font-size: 22px;
         margin-left: 20px;
+        margin-right: 20px;
         padding-top: 11px;
         position: absolute;
     }
+}
+
+.mixin(@widget) when (@widget = groupbutton), (@widget = none) {
+    
+    .e-groupbutton {
+        border: 1px solid;
+        outline: 0 none;
+    }
+
+    .e-groupbutton > .e-ul {
+        cursor: default;
+        list-style-type: none;
+        vertical-align: middle;
+        overflow: hidden;
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+
+    .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content .e-center {
+        display: block;
+        margin: 0 auto;
+    }
+    .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content .e-inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content {
+        display: block;
+        vertical-align: middle;
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    .e-groupbutton.e-no-border > .e-horizontal.e-ul {
+        border-spacing: 1px 0;
+    }
+
+    .e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item {
+        width: 100%;
+        display: block;
+    }
+
+    .e-groupbutton.e-hidden, .e-groupbutton > .e-ul > .e-grp-btn-item.e-hidden {
+        display: none;
+    }   
+
+    .e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item {
+        border-right: 1px solid;
+    }
+
+    .e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item, .e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.e-border-left {
+        border-left: 1px solid;
+    }
+
+    .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item {
+        border-bottom: 1px solid;
+    }
+
+    .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.e-border-bottom {
+        border-top: 1px solid;
+    }
+
+    .e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.last, .e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item, .e-groupbutton > .e-horizontal.e-ul > .e-grp-btn-item.e-disable {
+        border-right: none;
+    }
+
+    .e-groupbutton.e-rtl > .e-horizontal.e-ul > .e-grp-btn-item.last {
+        border-left: none;
+    }
+
+    .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.last, .e-groupbutton.e-no-border > .e-vertical.e-ul > .e-grp-btn-item, .e-groupbutton > .e-vertical.e-ul > .e-grp-btn-item.e-disable {
+        border-bottom: none;
+    }
+
+    .e-groupbutton.e-no-border, .e-groupbutton.e-no-border > .e-horizontal.e-ul > .e-grp-btn-item {
+        border: none;
+    }
+
+    .e-groupbutton.e-no-border > .e-vertical.e-ul > .e-grp-btn-item {
+        margin-bottom: 1px;
+    }
+
+    .e-groupbutton.e-no-border > .e-vertical.e-ul > .e-grp-btn-item.last {
+        margin-bottom: 0;
+    }
+
+    .e-groupbutton.e-no-border.e-corner > .e-ul > .e-grp-btn-item {
+        border-radius: 4px 4px 4px 4px;
+    }
+
+    .e-grp-btn-mini {
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .e-grp-btn-small {
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .e-grp-btn-medium {
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .e-grp-btn-large {
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .e-grp-btn-normal {
+        height: @button-height;
+    }
+
 }
 
 .mixin(@widget) when (@widget = rte), (@widget = none) {
@@ -6576,7 +6785,20 @@ border-right: medium none;
     .e-rte .content-iframe {
         border: none;
     }
+	.e-rte .e-split-btn-div .e-icon {            
+        padding: 0px;          
+    }
 
+    .e-rte .e-splitarrowright .e-split-btn.e-rht-btn, .e-rte .e-splitarrowright .e-split-btn.e-btn-txt {
+        width: 15px;
+    }
+    .e-rte .e-split .e-padding.e-splitarrowright
+    {
+        padding: 0px 15px 0 0;
+    }
+	.e-rte .e-split.e-rtl .e-padding.e-splitarrowright {
+		padding: 0px 0 0 15px;
+	}
     .e-rte .e-resizable-handle {
         bottom: 0;
         cursor: se-resize;
@@ -6732,9 +6954,8 @@ border-right: medium none;
 
     .e-rte .e-toolbar .e-rte-format > li,
     .e-rte .e-toolbar .e-rte-fontgroup > li {
-        padding-left: 2px;
-        padding-right: 2px;
-        border: 0;
+        border-width: 1px; 
+        padding: 1px;
     }
 
     .e-rte .e-rte-toolbar .e-input {
@@ -7178,39 +7399,39 @@ border-right: medium none;
     }
 
     .e-skew-bottomleft, .e-skew-bottomright, .e-skew-topright, .e-skew-topleft, .e-skew-top, .e-skew-bottom, .e-skew-left, .e-skew-right, .e-skew-center {
-        transition: transform 250ms;
+        transition: transform 100ms;
     }
 
     .e-skew-top {
-        transform: perspective(1000px) rotateX(10deg);
-        -webkit-transform: perspective(1000) rotate3d(1, 0, 0, 10deg);
-        -moz-transform: perspective(1000) rotate3d(1, 0, 0, 10deg);
-        -webkit-transition-duration: 350ms;
-        -moz-transition-duration: 350ms;
+        transform: perspective(1000px) rotateX(15deg);
+        -webkit-transform: perspective(1000) rotate3d(1, 0, 0, 15deg);
+        -moz-transform: perspective(1000) rotate3d(1, 0, 0, 15deg);
+        -webkit-transition-duration: 100ms;
+        -moz-transition-duration: 100ms;
     }
 
     .e-skew-bottom {
-        transform: perspective(1000px) rotateX(-10deg);
-        -webkit-transform: perspective(1000) rotate3d(1, 0, 0, -10deg);
-        -moz-transform: perspective(1000) rotate3d(1, 0, 0, -10deg);
-        -webkit-transition-duration: 350ms;
-        -moz-transition-duration: 350ms;
+        transform: perspective(1000px) rotateX(-15deg);
+        -webkit-transform: perspective(1000) rotate3d(1, 0, 0, -15deg);
+        -moz-transform: perspective(1000) rotate3d(1, 0, 0, -15deg);
+        -webkit-transition-duration: 100ms;
+        -moz-transition-duration: 100ms;
     }
 
     .e-skew-left {
-        transform: perspective(1000px) rotateY(-10deg);
-        -webkit-transform: perspective(1000) rotateY(-10deg);
-        -moz-transform: perspective(1000) rotateY(-10deg);
-        -webkit-transition-duration: 350ms;
-        -moz-transition-duration: 350ms;
+        transform: perspective(1000px) rotateY(-15deg);
+        -webkit-transform: perspective(1000) rotateY(-15deg);
+        -moz-transform: perspective(1000) rotateY(-15deg);
+        -webkit-transition-duration: 100ms;
+        -moz-transition-duration: 100ms;
     }
 
     .e-skew-right {
-        transform: perspective(1000px) rotateY(10deg);
-        -webkit-transform: perspective(1000) rotateY(10deg);
-        -moz-transform: perspective(1000) rotateY(10deg);
-        -webkit-transition-duration: 350ms;
-        -moz-transition-duration: 350ms;
+        transform: perspective(1000px) rotateY(15deg);
+        -webkit-transform: perspective(1000) rotateY(15deg);
+        -moz-transform: perspective(1000) rotateY(15deg);
+        -webkit-transition-duration: 100ms;
+        -moz-transition-duration: 100ms;
     }
 
     .e-skew-center {
@@ -7845,6 +8066,10 @@ border-right: medium none;
         outline: none;
     }
 
+    .e-gantt .e-toolbarspan{
+    margin:0;
+    }
+
     .e-gantt .e-search.e-tooltxt.e-hover {
         background: none !important;
         border-color: transparent !important;
@@ -7884,12 +8109,13 @@ border-right: medium none;
         content: "\e74a";
     }
 
-    #Task.e-menuitem > div.e-icon:before {
+    #Task.e-menuitem > span.e-icon:before {
         content: "\e601";
         padding-top: 3px;
     }
 
-    #Add.e-menuitem > div.e-icon:before {
+    #Add.e-menuitem > div.e-icon:before,
+    div.e-menuitem > div.e-expander:before {
         padding-top: 3px;
     }
 
@@ -7905,7 +8131,7 @@ border-right: medium none;
         padding-top: 3px;
     }
 
-    #Add.e-menuitem > span.e-expander:before, div.e-columnmenu span.e-expander:before,
+    div.e-menuitem > div.e-expander:before, div.e-columnmenu span.e-expander:before,
     div.e-contextmenu div.e-expander:before,
     div.e-columnmenu div.e-expander:before {
         content: "\e67e" !important;
@@ -8118,6 +8344,25 @@ border-right: medium none;
         -moz-osx-font-smoothing: grayscale;
         font-size: 14px;
     }
+
+    .e-treegrid .e-headercelldiv div{
+        display:inline-block;   
+    }
+
+    .e-treegrid .e-headertemplate > .e-headercelldiv {
+        padding: 0 8px;
+    }
+
+    .e-treegrid.e-wrap  .e-headercelldiv {
+        height: Auto;
+        white-space: normal;
+        line-height: 19px;
+        word-wrap: break-word;
+    }
+    .e-treegrid.e-wrap .e-headercelldiv {
+        margin-bottom: 2px;
+        margin-top: 0px;
+    }
 }
 
 .mixin(@widget) when (@widget = treegrid), (@widget = none) {
@@ -8134,6 +8379,10 @@ border-right: medium none;
         box-sizing: border-box !important;
         -webkit-box-sizing: border-box !important;
         -moz-box-sizing: border-box !important;
+    }
+
+    .e-treegrid .e-toolbarspan{
+      margin:0;
     }
 
     .e-treegrid .e-widget [class^="e-"] {
@@ -8156,7 +8405,7 @@ border-right: medium none;
     }
 
     .e-treegrid .e-treegridexpand {
-        margin-top: 5px;
+        margin-top: 4px;
         margin-left: 2px;
     }
 
@@ -8233,6 +8482,7 @@ border-right: medium none;
 
     .e-treegrid .e-treegridcollapse {
         margin-top: 4px;
+        margin-left:2px;
     }
 
     .e-treegrid .e-treegridtoolbar li {
@@ -8585,7 +8835,7 @@ border-right: medium none;
         background-attachment: scroll;
         background-position: 0 0;
         border-bottom-style: solid;
-        border-bottom-width: 3px;
+        border-bottom-width: 1px;
         .gantt-border-boxSizing();
     }
 
@@ -8701,6 +8951,63 @@ border-right: medium none;
     .e-treegrid .e-footersummaryrow td:last-child {
         border-width: 0px 1px 0px 0px;
     }
+
+     .e-columnMenuListDiv label {
+        width: 175px;
+        margin-left: 15px;
+        display: inline-block;
+        margin-bottom: 0px;
+        font-weight: inherit;
+    }
+
+    .e-columnMenuListDiv {
+        line-height: 1.9;
+        white-space: nowrap;
+        padding: 0px 8px 3px;
+    }
+     .e-columnmenu-ascending:before {
+        content: "\e714";
+    }
+
+    .e-columnmenu-descending:before {
+        content: "\e713";
+    }
+
+    .e-columnchooser-icon:before {
+        content: "\e76e";
+    }
+    .e-treegrid .e-frozencontentdiv, .e-treegrid .e-frozenheaderdiv, .e-treegrid .e-frozenfooterdiv {
+      float:left;
+    }
+    .e-treegrid .e-frozencontentdiv .e-table, .e-treegrid .e-movablecontentdiv .e-table {
+        position: relative;
+    }
+    .e-treegrid .e-movablecontainer, .e-treegrid .e-movableheader, .e-treegrid .e-movablefooter {
+        border-left-width:1px;
+        border-left-style:solid;
+    }
+    .e-treegrid .e-movablecontent, .e-treegrid .e-movableheader, .e-treegrid .e-movablefooter {
+      overflow:hidden;
+    }
+    .e-freezecolumn-icon:before {
+        content: "\e7da";
+    }
+    .e-unfreezecolumn-icon:before {
+        content: "\e7d9";
+    }
+    .e-freezecolumnbefore-icon:before {
+        content: "\e7db";
+    }
+    .e-treegrid .e-scrollcss .e-footercontainer {
+         border-right-style: solid;
+         border-right-width: 1px;
+    }
+    .e-treegrid .e-lastsummaryrow {
+         border-bottom-width:1px!important;
+    }
+    .e-columnmenuitem .e-icon {
+         font-size:16px!important;
+    }
 }
 
 .mixin(@widget) when (@widget = ganttchart), (@widget = none) {
@@ -8727,7 +9034,7 @@ border-right: medium none;
         overflow-x: hidden;
         overflow-y: hidden;
         height: 45px;
-        border-bottom-width: 3px;
+        border-bottom-width: 1px;
         border-bottom-style: solid;
     }
 
@@ -9143,9 +9450,9 @@ border-right: medium none;
     .e-ganttchart .e-striplinespan {
         color: white;
         white-space: nowrap;
-        padding: 2px;
+        padding: 3px;
         position: absolute;
-        height: 16px;
+        height: auto;
         width: auto;
         font-size: 0.8em;
         top: 27px;
@@ -9353,17 +9660,32 @@ border-right: medium none;
         float: left;
     }
 
-    .e-schedule .e-schedulerepeat:before {
-        content: "\e784";
-        font-size: 17px;
+    .e-schedule .e-schedulerepeat:before,
+	.e-schedule .e-recurapp:before {
+        content: "\e7b7";
+        font-size: 12px;
     }
 
-    .e-schedule .e-schedulerepeat {
+    .e-schedule .e-appup:before {
+        content: "\e667";
+        font-size: 16px;
+    }
+
+    .e-schedule .e-appdown:before {
+        content: "\e666";
+        font-size: 16px;
+    }
+    .e-schedule .e-schedulerepeat,
+	.e-schedule .e-schedulerepeatedit {
         display: inline-block;
-        margin: 0 5px 0 -2px;
+        margin: 3px 5px 0 -2px;
         vertical-align: middle;
     }
-
+    .e-schedule .e-schedulerepeatedit:before,
+	 .e-schedule .e-recureditapp:before {
+        content: "\e7b8";
+        font-size: 12px;
+    }
     .e-schedule .e-firstcolumn {
         border-left: none !important;
     }
@@ -9424,6 +9746,7 @@ border-right: medium none;
     }
 
     .e-schedule.e-rtl .e-schedulerepeat,
+	.e-schedule.e-rtl .e-schedulerepeatedit,
     .e-schedule.e-rtl .e-agendacolordiv {
         margin: 0 -2px 0 5px;
     }
@@ -9516,7 +9839,7 @@ border-right: medium none;
         margin: 0;
     }
 
-    .e-schedule .e-categorizeMenuSelected {
+    .e-categorizeMenuSelected {
         height: 18px;
         width: 18px;
     }
@@ -9624,6 +9947,52 @@ border-right: medium none;
         outline: none;
     }
 
+    .e-schedule .e-icon.e-topind:before {
+        content: "\e667";
+          font-size:12px;
+    }
+
+    .e-schedule .e-icon.e-bottomind:before {
+        content: "\e666";
+          font-size:12px;
+    }
+
+    .e-schedule .e-icon.e-bottomind {
+        position: absolute;
+        width: 100%;
+        background-size: 19px;
+        bottom: 0;
+        left:1px;
+    }
+
+    .e-schedule .e-icon.e-leftind:before {
+        content: "\e665";
+          font-size:12px;
+    }
+
+    .e-schedule .e-icon.e-leftind {
+        position: absolute;
+        background-size: 20px;
+        top:3px;
+    }
+
+    .e-schedule.e-rtl .e-icon.e-leftind {
+        left:3px;
+        top:3px;
+        }
+
+    .e-schedule .e-icon.e-rightind:before {
+        content: "\e664";
+          font-size:12px;
+    }
+
+    .e-schedule .e-icon.e-rightind {
+        position: absolute;
+        right: 0px;
+        background-size: 19px;
+        top: 3px;
+    }
+
     .e-schedule .e-singleview {
         border-radius: 6px;
     }
@@ -9681,6 +10050,9 @@ border-right: medium none;
     .e-schedule .e-workcellstab tr:last-child td {
         border-bottom: none;
     }
+    .e-schedule .e-lastcell {
+        border-bottom: none !important;
+     }
 
     .e-schedule .e-worktable {
         height: 100%;
@@ -10005,7 +10377,7 @@ border-right: medium none;
     }
 
     .e-alldayappointment .e-appointinnertext {
-        margin-top: -3px;
+        margin-top: -1px;
     }
 
     .e-schedule .e-mobileNavigation {
@@ -10267,10 +10639,13 @@ border-right: medium none;
     .e-scheduledialog.e-rtl .e-recureditbtns {
         bottom: -1em;
         clear: both;
-        padding: 0 7px 12px;
+        padding: 0 7px 35px;
         text-align: left;
     }
-
+	.e-scheduledialog.e-rtl .e-recureditbtns .e-editonly{
+	   float:right;
+	   margin-left:10px;
+	}
     .e-scheduledialog .e-recureditbtns .e-editonly {
         margin-right: 10px;
     }
@@ -10391,7 +10766,7 @@ border-right: medium none;
         text-align: right;
     }
 
-    + .e-scheduledialog.e-rtl .e-editseries {
+    .e-scheduledialog.e-rtl .e-editseries {
         float: left;
         text-align: right;
     }
@@ -10432,6 +10807,7 @@ border-right: medium none;
     .e-scheduledialog .e-pointercursor,
     .e-schedule .e-resourceicon {
         cursor: pointer;
+        outline: medium none;
     }
 
     .e-scheduledialog .e-quickstartendtime {
@@ -10453,6 +10829,14 @@ border-right: medium none;
         background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
         position: relative;
         padding-bottom: 12px;
+        padding-top:0px;
+        top:-3px;
+    }
+
+    .e-scheduledialog .e-tablePosition {
+        padding-bottom: 0px;
+        padding-top:5px;
+        top:0px;
     }
 
     .e-scheduledialog.e-rtl .e-appdetails {
@@ -10475,6 +10859,11 @@ border-right: medium none;
         right: 3px;
     }
 
+    .e-schedule .e-alldayappointment .e-priority, 
+    .e-schedule .e-monthappointment .e-priority  {
+    	top: -2px;
+    }
+
     .e-schedule.e-rtl .e-priority {
         right: auto;
         left: 3px;
@@ -10493,7 +10882,7 @@ border-right: medium none;
     .e-high,
     .e-medium,
     .e-low {
-        background: url('common-images/schedule_priority.png');
+        background: url('@{font-path}/schedule_priority.png');
         height: 12px;
         width: 20px;
         float: left;
@@ -10530,16 +10919,19 @@ border-right: medium none;
     }
 
     .e-schedule .e-resourceexpand:before {
-        content: "\e628";
+        content: "\e664";
     }
 
     .e-schedule .e-resourcecollapse:before {
-        content: "\e627";
+        content: "\e67c";
     }
 
     .e-schedule .e-resourceicon {
         font-family: "ej-webfont";
         font-size: 12px;
+    }
+    .e-schedule .e-resourcecollapse {
+	    font-size: 9px;
     }
 
     .e-scheduledialog .e-scheduledelete:before {
@@ -10569,7 +10961,7 @@ border-right: medium none;
     }
 
     .e-schedule .e-icon.e-schedulemouseclose {
-        top: 6px;
+        top: 5px;
         display: none;
         position: absolute;
         z-index: 1;
@@ -10660,6 +11052,7 @@ border-right: medium none;
         border: 1px solid black;
         background-color: #DBDBDE;
         overflow: hidden;
+		z-index:1;
     }
 
     .e-scheduletooltip {
@@ -10673,11 +11066,72 @@ border-right: medium none;
         box-shadow: 0 0 9px rgba(0,0,0,.4);
         width: auto;
     }
-
+    .e-schedule .e-upicon,
+    .e-schedule .e-downicon {
+    	height:20px;
+    	position:absolute;
+    	z-index:1;
+    }
+    .e-schedule .e-appup,
+    .e-schedule .e-appdown {
+        float: right;
+        margin-right: 2px;
+        opacity: 0.5;
+    }
+    .e-schedule.e-rtl .e-appup,
+    .e-schedule.e-rtl .e-appdown {
+        float: left;
+        margin-left: 2px;
+        opacity: 0.5;
+    }
+    .e-schedule .e-recurapp,
+	.e-schedule .e-recureditapp {
+        display: inline-block;
+        margin: 1px 5px 0 -1px;
+        vertical-align: middle;
+		float:left;
+    }
+	.e-schedule.e-rtl .e-recurapp,
+	.e-schedule.e-rtl .e-recureditapp
+	{
+        margin: 1px 0 0 5px;
+		float:right;
+	}
     .e-schedule .e-scheduleAppGlassy {
-        filter: alpha(opacity=40);
-        -moz-opacity: 0.4;
-        opacity: 0.4;
+        filter: alpha(opacity=60);
+        -moz-opacity: 0.6;
+        opacity: 0.6;
+    }
+
+    .e-scheduledialog div.e-error {
+        position: absolute;
+        z-index: 9999;
+    }
+    .e-scheduledialog div.e-error .e-errortail {
+        height: 0;
+        width: 0;
+        position: relative;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid;
+    }
+    .e-scheduledialog div.e-error .e-toparrow {
+        left: 10%;
+        border-top-width: 2px;
+        display: block;
+    }
+    .e-scheduledialog.e-rtl div.e-error .e-toparrow {
+        right: 10%;
+    }
+    .e-scheduledialog .e-error div.e-field-validation-error {
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 4px;
+    }
+    .e-scheduleAppGlassy {  /*While enable external drag and drop the appointment rendered in body tag. The class applies only external drag and drop*/
+        filter: alpha(opacity=60);
+        -moz-opacity: 0.6;
+        opacity: 0.6;
     }
 }
 
@@ -10704,6 +11158,9 @@ border-right: medium none;
         vertical-align: middle;
         border: 1px solid;
         border-bottom: none !important;
+        -webkit-user-select: none; 
+		-ms-user-select: none;
+		-moz-user-select: none;
     }
 
     .e-reportviewer-toolbarul {
@@ -10875,6 +11332,9 @@ border-right: medium none;
     .e-reportviewer-viewerblockcellcontent {
         border: 0;
         vertical-align: middle;
+         -webkit-user-select: none; 
+		 -ms-user-select: none;
+		 -moz-user-select: none;
     }
 
     .e-reportviewer-viewreport {
@@ -10987,15 +11447,15 @@ border-right: medium none;
     }
 
     .e-reportviewer-expandtoggle {
-        background: url(common-images/reports/plus.jpg) no-repeat center;
+        background: url('@{font-path}/reports/plus.png') no-repeat center;
     }
 
     .e-reportviewer-collapsetoggle {
-        background: url(common-images/reports/minus.jpg) no-repeat center;
+        background: url('@{font-path}/reports/minus.png') no-repeat center;
     }
 
     .e-reportviewer-sortingUpDown {
-        background: url(common-images/reports/updown.png);
+        background: url('@{font-path}/reports/updown.png');
         background-repeat: no-repeat;
         background-origin: padding-box;
         background-position: center;
@@ -11004,7 +11464,7 @@ border-right: medium none;
     }
 
     .e-reportviewer-sortingUp {
-        background: url(common-images/reports/up.png);
+        background: url('@{font-path}/reports/up.png');
         background-repeat: no-repeat;
         background-origin: padding-box;
         background-position: center;
@@ -11013,7 +11473,7 @@ border-right: medium none;
     }
 
     .e-reportviewer-sortingDown {
-        background: url(common-images/reports/down.png);
+        background: url('@{font-path}/reports/down.png');
         background-repeat: no-repeat;
         background-origin: padding-box;
         background-position: center;
@@ -11131,6 +11591,386 @@ border-right: medium none;
     }
 
     .e-reportviewer-lispan {
+        text-decoration: none;
+        white-space: nowrap;
+        padding: 2px !important;
+        vertical-align: text-bottom;
+    }
+}
+
+.mixin(@widget) when (@widget = pdfviewer), (@widget = none) {
+    .e-pdfviewer-icon {
+        font-family: 'ej-webfont';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-align: center;
+        vertical-align: middle;
+        line-height: normal !important;
+        font-size: 17px;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: default;
+    }
+
+    .e-pdfviewer-toolbarcontainer {
+        height: 56px;
+        vertical-align: middle;
+        border-width: 1px;
+        border-style: solid;
+        border-bottom: none !important;
+        -webkit-user-select: none; 
+		-ms-user-select: none;
+		-moz-user-select: none;
+    }
+
+    .e-pdfviewer-toolbarul {
+        height: 34px;
+        margin: .75px !important;
+        position:relative;
+        left:10px;
+        top:10px;
+    }
+
+    .e-pdfviewer-toolbarli {
+        margin: 2px 0px;
+        width: 20px;
+        height: 20px;
+        padding: 4px !important;
+    }
+
+    .e-pdfviewer-tbdiv {
+        width: 16px;
+        height: 16px;
+        border: 1px solid;
+        border-color: transparent;
+        margin: 4px 0px;
+    }
+
+    .e-pdfviewer-outerborder {
+        background-color: transparent;
+        border: 1px solid;
+        border-color: transparent;
+        width: 28px;
+        height: 90%;
+        margin: 1px;
+        float: left;
+    }
+
+    .e-pdfviewer-outerborder:hover {
+        border: 1px solid;
+    }
+
+    .e-pdfviewer-tbdiv.e-pdfviewer-fittopagetip {
+        width: auto;
+        height: auto;
+        min-height: 30.5px;
+        min-width: 55px;
+        position: absolute;
+        padding: 1px;
+        word-wrap: break-word;
+        border: 1px solid;
+        margin: 10px auto;
+        z-index: 9999;
+    }
+
+    .e-pdfviewer-tbdiv.e-pdfviewer-tooltip {
+        width: auto;
+        height: auto;
+        min-height: 30.5px;
+        min-width: 35px;
+        position: absolute;
+        padding: 1px;
+        max-width: 250px;
+        word-wrap: break-word;
+        border: 1px solid;
+        margin: 10px auto;
+        z-index: 9999;
+    }
+
+    .e-pdfviewer-headerspan {
+        font-style: normal;
+        font-weight: bold;
+        padding: 1px;
+        margin: 1.5px;
+        word-wrap: break-word;
+    }
+
+    .e-pdfviewer-contentspan {
+        padding: 1px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+        margin: 0px 5px 5px 15px;
+        word-wrap: break-word;
+    }
+
+    .e-pdfviewer-ejdropdownlist {
+        width: auto;
+        height: 90%;
+        margin: 4.7px 2px 2px 2px;
+        float: left;
+        border: 1px solid transparent;
+    }
+	 .e-dropdownlist.e-input.e-pdfviewer-ddl, .e-ddl-popup.e-pdfviewer-ddl .e-ul li{
+		   text-align: center;
+           padding-left:0px;
+	   }
+    .e-pdfviewer-toolbarcontainer input.e-input, .e-pdfviewer-viewerblockcontent input.e-input {
+        line-height: normal !important;
+    }
+
+    .e-pdfviewer-print, .e-pdfviewer-emptyconetent,.e-pdfviewer-fitpage, .e-pdfviewer-fitwidth, .e-pdfviewer-gotonext, .e-pdfviewer-gotonext.e-pdfviewer-disabled, .e-pdfviewer-gotoprevious, .e-pdfviewer-gotoprevious.e-pdfviewer-disabled, .e-pdfviewer-gotofirst, .e-pdfviewer-gotofirst.e-pdfviewer-disabled, .e-pdfviewer-gotolast, .e-pdfviewer-gotolast.e-pdfviewer-disabled, .e-pdfviewer-zoomin, .e-pdfviewer-zoomout,  {
+        width: 20px;
+        height: 20px;
+        margin-top: 1px;
+    }
+
+    .e-pdfviewer-tbpage {
+        background-color: transparent;
+        float: left;
+        text-align: center;
+        margin-top: 4.6px;
+        width: auto;
+        height: 25px;
+    }
+
+    .e-pdfviewer-pagenumber {
+        min-height: 22px !important;
+        min-width: 25px !important;
+        height: 22px !important;
+        width: 28px !important;
+        text-align: center;
+        margin-top: 3.7px;
+        display: inline-block !important;
+    }
+
+    .e-pdfviewer-tbdiv.e-pdfviewer-zoomlist {
+        border: 1px solid;
+        margin: 4px 7px;
+        width: 60px;
+        height: 19px;
+    }
+
+    .e-pdfviewer-viewer {
+        width: 100%;
+        text-shadow: none !important;
+    }
+
+    .e-pdfviewer-viewerblock {
+        width: 100%;
+        border-top: 1px solid;
+        border-bottom: 0px solid;
+        border-left: 1px solid;
+        border-right: 1px solid;
+        overflow: auto;
+        font-size: 11pt;
+        color: #5B5B5B;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .e-pdfviewer-blockstyle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99.5%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    .e-pdfviewer-viewerblockcontent {
+        width: 100%;
+    }
+
+    .e-pdfviewer-viewerblockcellcontent {
+        border: 0;
+        vertical-align: middle;
+         -webkit-user-select: none; 
+		 -ms-user-select: none;
+		 -moz-user-select: none;
+    }
+
+    .e-pdfviewer-scrollcontainer {
+        line-height: normal !important;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        text-align: left;
+    }
+
+    .e-pdfviewer-pageviewcontainer {
+        width: auto;
+        height: auto;
+        border: 1px none;
+        margin: 0px auto;
+    }
+
+    .e-pdfviewer-pageouterline {
+        background-color: transparent;
+        position: relative;
+        border: 1px solid;
+        border-color: transparent;
+        margin: 0px auto;
+        padding: 10px;
+    }
+
+    .e-pdfviewer-pageview {
+        position: absolute;
+        -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.22);
+        -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.22);
+        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.22);
+    }
+
+    .e-pdfviewer-elementalignments {
+        border-width: 1px;
+        border-style: solid;
+        margin: 0;
+        padding: 1px !important;
+    }
+
+    .e-pdfviewer-viewercontainer {
+        border-width: 1px;
+        border-style: solid;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .e-pdfviewer-textbox {
+        height: 23px;
+        line-height: normal;
+        text-indent: 10px;
+        border: 1px solid;
+        vertical-align: middle;
+        padding: 0px;
+    }
+
+    .e-pdfviewer-label, .e-pdfviewer-labelpageno {
+        border: none;
+    }
+
+    .e-pdfviewer-pagepopupinfo {
+        height: 30px;
+        width: auto;
+        /*height: auto;*/
+        min-width: 65px;
+        position: absolute;
+        padding: 1px;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid;
+        margin: 10px auto;
+        z-index: 9999;
+        opacity: .5;
+    }
+
+    .e-pdfviewer-popuppageno {
+        min-width: 20px;
+        height: 15px;
+        display: table-cell;
+    }
+
+    .e-pdfviewer-popuptotalpage {
+        /*display: table-cell;*/
+        /*vertical-align: middle;*/
+    }
+
+    .e-pdfviewer-fitwidth:before {
+        content: "\e7d8";
+    }
+    .e-pdfviewer-disabled-fitWidthButton:before {
+        content: "\e7d8";        
+    }
+
+    .e-pdfviewer-fitpage:before {
+        content: "\e7d7";
+    }
+   .e-pdfviewer-disabled-fitPageButton:before {
+        content: "\e7d7";
+    }
+
+    .e-pdfviewer-pagefittopage:before {
+        content: "\e657";
+    }
+
+    .e-pdfviewer-emptyconetent:before {
+        content: "\00a0 \00a0";
+    }
+
+    .e-pdfviewer-print:before {
+        content: "\e7d0";
+    }
+
+    .e-pdfviewer-gotonext:before {
+        content: "\e7d3";
+    }
+
+    .e-pdfviewer-gotonext.e-pdfviewer-disabled:before {
+        content: "\e7d3";
+    }
+
+    .e-pdfviewer-gotoprevious:before {
+        content: "\e7d2";
+    }
+
+    .e-pdfviewer-gotoprevious.e-pdfviewer-disabled {
+        content: "\e7d2";
+    }
+
+    .e-pdfviewer-gotofirst:before {
+        content: "\e7d1";
+    }
+
+    .e-pdfviewer-gotolast:before {
+        content: "\e7d4";
+    }
+
+    .e-pdfviewer-gotolast.e-pdfviewer-disabled {
+        content: "\e7d4";
+    }
+
+    .e-pdfviewer-gotofirst.e-pdfviewer-disabled {
+        content: "\e7d1";
+    }
+
+    .e-pdfviewer-zoomin:before {
+        content: "\e7d5";
+    }
+
+    .e-pdfviewer-zoomout:before {
+        content: "\e7d6";
+    }
+
+    div[id*='toolbar_zoomSelection_popup'] {
+        max-height: none !important;
+    }
+
+    div[id*='toolbar_zoomSelection_popup'] > div > ul {
+        text-align: center !important;
+    }
+
+    .e-pdfviewer-popupli {
+        border: 0 none;
+        float: none;
+        position: relative;
+        line-height: normal;
+        cursor: pointer;
+        list-style-type: none;
+        text-align: left;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 4px;
+    }
+
+    .e-pdfviewer-lispan {
         text-decoration: none;
         white-space: nowrap;
         padding: 2px !important;
@@ -11446,11 +12286,11 @@ border-right: medium none;
     }
 
     .e-radialmenu .e-radialimage {
-        background-image: url(common-images/radialmenu/radial.png);
+        background-image: url('@{font-path}/radialmenu/radial.png');
     }
 
     .e-radialmenu .e-backimage {
-        background-image: url(common-images/radialmenu/back.png);
+        background-image: url('@{font-path}/radialmenu/back.png');
     }
 
 
@@ -11963,7 +12803,7 @@ slideRight Animate
         height: 28px;
         outline: 0 none;
         position: relative;
-        width: 37px;
+        width: 35px;
     }
 
     .e-colorwidget .e-in-wrap .e-input {
@@ -12111,7 +12951,7 @@ slideRight Animate
         width: 82%;
     }
 
-    .e-colorpicker .e-buttons .e-groupButton {
+    .e-colorpicker .e-buttons .e-grpbtn {
         width: 93%;
         border-radius: 5px;
         border-style: solid;
@@ -12127,7 +12967,7 @@ slideRight Animate
         width: 93%;
     }
 
-    .e-colorpicker .e-buttons .e-groupButton .e-btn.e-select {
+    .e-colorpicker .e-buttons .e-grpbtn .e-btn.e-select {
         font-size: 12px;
     }
 
@@ -12135,7 +12975,7 @@ slideRight Animate
         display: none;
     }
 
-    .e-colorpicker .e-buttons .e-groupButton .e-rgbButton, .e-colorpicker .e-buttons .e-groupButton .e-hexButton, .e-colorpicker .e-buttons .e-groupButton .e-hsvButton {
+    .e-colorpicker .e-buttons .e-grpbtn .e-rgbButton, .e-colorpicker .e-buttons .e-grpbtn .e-hexButton, .e-colorpicker .e-buttons .e-grpbtn .e-hsvButton {
         border-radius: 5px;
         height: 25px;
         border: 0px;
@@ -12143,14 +12983,14 @@ slideRight Animate
         width: 32%;
     }
 
-    .e-colorpicker .e-buttons .e-groupButton .e-click {
+    .e-colorpicker .e-buttons .e-grpbtn .e-click {
         border-radius: 5px;
         font-weight: bold;
         height: 25px;
         margin-left: 1px;
     }
 
-    .e-colorpicker .e-buttons .e-groupButton .e-btn.e-select.e-click:hover {
+    .e-colorpicker .e-buttons .e-grpbtn .e-btn.e-select.e-click:hover {
         font-weight: bold;
     }
 
@@ -12201,12 +13041,6 @@ slideRight Animate
         padding: 0px;
     }
 	
-	.e-colorpicker .e-handle .e-handle-wrapper{
-	    height: inherit;
-		width: inherit;
-		
-	}
-
     .e-colorpicker .e-recent-color, .e-presetWrapper .e-presets-table .e-tablerow {
         padding: 0px;
     }
@@ -12487,6 +13321,11 @@ slideRight Animate
         max-width: 14.5px;
     }
 
+    .e-colorpicker .e-row .e-item.e-filter{
+        border:1px solid white;
+        outline:1px solid black;
+    }
+
     .e-colorpicker .e-row .e-item:first-child {
         margin-left: 0;
     }
@@ -12544,6 +13383,11 @@ slideRight Animate
         height: 100%;
         width: 13px;
     }
+	.e-colorpicker .e-handle .e-handle-wrapper {
+	    height: inherit;
+		width: inherit;
+		
+	}
 }
 
 .mixin(@widget) when (@widget = captcha), (@widget = none) {
@@ -12640,7 +13484,6 @@ slideRight Animate
         border: 1px solid red;
     }
 }
-
 .mixin(@widget) when (@widget = ribbon), (@widget = none) {
     /*------------------------------Ribbon Start-------------------------------*/
 	.e-ribbon.e-js.e-widget{
@@ -12761,7 +13604,8 @@ slideRight Animate
     }
 
     .e-ribbon .e-resizediv {
-        border: 1px solid;
+        border-width:0 1px 1px 1px;
+        border-style: solid; 
         width: 100%;
         z-index: 1002;
         position: absolute;
@@ -12909,21 +13753,22 @@ slideRight Animate
     }
 
     .e-ribbon .e-groupexpander {
-        height: 10px;
-        width: 10px;
+        height: 14px;
+        width: 14px;
         cursor: pointer;
         display: table-cell;
-        left: 3px;
+        left: -1px;
         line-height: 2;
         position: relative;
         text-align: right;
-        top: -2px;
+        top: -14px;
+		float:right;
     }
 
     .e-ribbon .e-contentbottom {
         width: 100%;
-        height: 14px;
-        display: table;
+        height: 11px;
+        display: inline-block;
     }
 
     .e-ribbon .e-small {
@@ -12975,8 +13820,8 @@ slideRight Animate
     }
 
     .e-ribbon .e-galleryexpand:before {
-        content: "\e76f";
-        font-size: 7px;
+        content: "\e7cd";
+        font-size: 6px;
         margin-left: 3px;
         margin-top: 7px;
     }
@@ -13046,13 +13891,15 @@ slideRight Animate
 
     .e-ribbon .e-header > li {
         display: inline-table;
-        padding-top: 20px;
+        padding-top: 0px;
+        margin-top: 20px !important;
         margin-right: 2px;
         border-right: 0;
     }
 
     .e-ribbon .e-header .e-contextli, .e-ribbon .e-header .e-contextliset {
-        padding-top: 17px;
+       padding-top: 0px;
+       margin-top: 17px !important;
     }
 
     .e-ribbon.e-js .e-header .e-active.e-tab a,.e-ribbon.e-js .e-header .e-active.e-contextualtabset a {
@@ -13096,9 +13943,10 @@ slideRight Animate
 
     .e-ribbon .e-tooltipdiv {
         position: absolute;
-        z-index: 100001;
+        z-index: 1000001;
         width: 170px;
-        border: 1px solid;
+        border-width:0 1px 1px 1px;
+        border-style: solid; 
     }
 
     .e-ribbon .e-tooltipdivwithimg {
@@ -13259,6 +14107,85 @@ slideRight Animate
         position: relative;
         top: 3px;
     }
+   .e-ribbon.e-rbnwithqat .e-rbnquickaccessbar{
+        height:30px;
+   }
+   .e-ribbon.e-rbnwithqat .e-splitbtnqatdiv,.e-ribbon.e-rbnwithqat .e-qatooldiv,.e-ribbon.e-rbnwithqat .e-qaresizebtndiv{
+       display:table-cell;
+	   padding:3px;
+   }
+  .e-ribbon.e-rbnwithqat .e-qatexpand:before {
+      content: "\e7cd";
+      font-size: 6px;    
+	  height:auto;
+	  width:auto;
+}
+ .e-ribbon.e-rbnwithqat .e-rbnqatmenu{
+     border:1px solid;
+     position:relative;
+     padding:3px;
+     z-index:100001;
+	 display:table;    
+     width: auto;
+  }
+.e-ribbon.e-rbnwithqat .e-qaresizediv{
+    border:1px solid;
+    position:absolute;
+    z-index:100001;
+}    
+.e-ribbon.e-rbnwithqat .e-rbnqatmenu .e-removemenuli p{
+    display: inline-block;
+    padding-left: 15px;
+}  
+.e-ribbon.e-rbnwithqat .e-rbnqatmenu .e-qatmenuli p{
+  margin-bottom: 0px;
+}
+.e-ribbon.e-rbnwithqat .e-rbnqatmenu .e-removemenuli:before{
+    content: "\e7cf";    
+	display: inline-block;
+    font-family: "ej-webfont";
+    font-size: 9px;
+    padding-left: 7px;
+    position:relative;
+    bottom:1px;
+}
+.e-ribbon.e-rbnwithqat .e-rbnqatmenu div{
+    padding:3px;
+}
+.e-ribbon.e-rbnwithqat .e-qatmorecommands,.e-ribbon.e-rbnwithqat .e-rbnshowbelow,.e-ribbon.e-rbnwithqat .e-rbnshowabove,.e-ribbon.e-rbnwithqat .e-addmenuli{
+   padding-left:33px;
+}
+.e-ribbon.e-rbnwithqat .e-qatmenuli{
+   list-style:none;
+   margin: 3px;
+   cursor:default;
+   text-transform: capitalize;
+} 
+.e-ribbon.e-rbnwithqat .e-qatseparator{
+   height:1px;
+   list-style:none;
+   text-align:center;
+   cursor:default;
+   margin-left:36px;
+}
+.e-ribbon.e-rbnwithqat .e-qaresizebtnicon:before {
+  content: "\e7ce";
+  font-size: 5px;  
+  padding-top: 35%;
+}
+.e-ribbon.e-rbnwithqat.e-js > .e-header {
+  height: 68px;
+}
+.e-ribbon.e-rbnwithqat .e-header > li {
+  padding-top: 0px;
+  margin-top: 35px !important;
+}
+.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar.e-rbnabove{
+  position: absolute;
+  z-index: 100001;    
+  left: 1px;
+  top: 1px;
+}	
     /*------------------------------Ribbon End-------------------------------*/
 }
 
@@ -13290,7 +14217,7 @@ slideRight Animate
     }
 
     .e-fileexplorer .e-statusbar .e-itemStaus, .e-fileexplorer input, input.e-fe-dialog-text, .e-fileexplorer .e-treeview .e-text, .e-fe-toolbar.e-responsive-toolbar input {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .e-fileexplorer .e-grid .e-headercelldiv, .e-fileexplorer .e-grid .e-gridcontent tr, .e-fileexplorer .e-tileview .e-tilenode .e-name {
@@ -13310,7 +14237,7 @@ slideRight Animate
         width: 9px;
         border-width: 0px 0px 0px 1px;
     }
-	
+
     .e-fileexplorer .e-splitter .e-splitbar .e-icon{
 	    visibility: hidden;
 	}	
@@ -13324,6 +14251,10 @@ slideRight Animate
         height: 100%;
     }
 
+    .e-fileexplorer .e-grid .e-rowcell {
+        text-overflow: ellipsis;
+    }
+
     .e-imageViewer-wrap .e-vscrollbar {
         display: none;
     }
@@ -13331,6 +14262,7 @@ slideRight Animate
     .e-fileexplorer .e-addressBar {
         width: 260px;
         padding: 0px;
+        margin: 0;
         text-indent: 27px;
     }
 
@@ -13345,19 +14277,28 @@ slideRight Animate
         font-family: inherit;
     }
 
-    .e-dialog.e-rtl .e-fe-dialog .e-fe-dialog-label, .e-dialog.e-rtl .e-fe-table tr td, .e-dialog.e-rtl .e-fe-table table tr .e-readonly {
+    .e-dialog.e-rtl .e-fe-dialog .e-fe-dialog-label, .e-dialog.e-rtl .e-fe-table tr td, .e-dialog.e-rtl .e-fe-table table tr .e-readonly,
+    .e-fileexplorer.e-rtl .e-tilenode .e-file-name, .e-fileexplorer.e-rtl .e-tilenode .e-file-type, .e-fileexplorer.e-rtl .e-tilenode .e-file-size,
+    .e-fileexplorer.e-rtl .e-grid .e-rowcell, .e-fileexplorer.e-rtl .e-treeview .e-text {
         direction: ltr;
+    }
+
+    .e-fileexplorer.e-rtl .e-tileInfo-view .e-tilenode .e-file-name, .e-fileexplorer.e-rtl .e-tileInfo-view .e-tilenode .e-file-type, .e-fileexplorer.e-rtl .e-tileInfo-view .e-tilenode .e-file-size{
         text-align: right;
     }
+
+    .e-fileexplorer .e-toolbar > ul > li .e-splitbutton.e-btn{
+		vertical-align: top;
+	}
 
     .e-fileexplorer .e-switchView .e-btn.e-btn-normal {
         height: auto;
     }
 
-    .e-fileexplorer.e-rtl .e-grid .e-rowcell, .e-fileexplorer.e-rtl .e-tilenode .e-name, .e-fileexplorer.e-rtl .e-treeview .e-text {
-        direction: ltr;
+    .e-fileexplorer.e-rtl .e-grid .e-chkbox-wrap, .e-fileexplorer .e-tileInfo-view.e-rtl .e-name.e-name-in-wrap,
+    .e-fileexplorer.e-rtl .e-grid .e-rowcell.e-grid-image, .e-fileexplorer.e-rtl .e-grid .e-rowcell.e-col-check {
+        direction: rtl;
     }
-
 
     .e-fileexplorer .e-toolbar.e-toolbarspan {
         width: auto;
@@ -13383,11 +14324,10 @@ slideRight Animate
     }
 
     .e-fileexplorer .e-statusbar .e-itemStaus {
-        margin: 4px 0 0 18px;
+        margin: 4px 8px 0 8px;
     }
 
     .e-rtl.e-fileexplorer .e-statusbar .e-itemStaus {
-        margin: 4px 18px 0 0;
         direction: initial;
     }
 
@@ -13543,7 +14483,7 @@ slideRight Animate
     }
 
     .e-fileexplorer .e-statusbar {
-        height: 25px;
+        height: 24px;
         border-top: 1px solid;
     }
 
@@ -13552,11 +14492,6 @@ slideRight Animate
         border-left: 0 none;
         border-top: 0 none;
         border-right: 0 none;
-    }
-
-    .e-fileexplorer .e-grid .e-gridheader, .e-fileexplorer .e-grid .e-gridcontent .e-table {
-        padding-left: 10px;
-        padding-right: 10px;
     }
 
     .e-fileexplorer .e-grid .e-headercell {
@@ -13626,16 +14561,18 @@ slideRight Animate
     }
 
     .e-fileexplorer .e-statusbar .e-switchView {
-        margin: 0 6px 0 0;
+        margin: 0 8px 0 0;
     }
 
     .e-rtl.e-fileexplorer .e-statusbar .e-switchView {
-        margin: 0 0 0 6px;
+        margin: 0 0 0 8px;
     }
 
     .e-rtl.e-fileexplorer .e-toolbar > .e-horizontal.e-ul, .e-rtl.e-fileexplorer .e-statusbar .e-itemStaus,
     .e-fileexplorer .e-statusbar .e-switchView, .e-rtl.e-fileexplorer .e-toolbar > .e-horizontal.e-ul > li,
-    .e-fileexplorer .e-toolbar .e-ul-searchBar {
+     
+    .e-fileexplorer .e-toolbar .e-ul-searchBar, .e-fileexplorer .e-tileInfo-view.e-rtl .e-align,
+    .e-fileexplorer.e-rtl .e-treeview .e-fe-folder {
         float: right;
     }
 
@@ -13648,23 +14585,6 @@ slideRight Animate
     .e-fe-toolbar.e-responsive-toolbar .e-feItem-Addressbar, .e-fe-toolbar.e-responsive-toolbar .e-feItem-Searchbar {
         padding-left: 0px;
         padding-right: 0px;
-    }
-
-    .e-fileexplorer .e-switchGridView-icon, .e-fileexplorer .e-swithListView-icon {
-        height: 17px;
-        width: 20px;
-        font-family: 'ej-webfont';
-    }
-
-    .e-fileexplorer .e-switchGridView-icon:before {
-        padding-top: 1px;
-        font-size: 16px;
-        content: "\e601";
-    }
-
-    .e-fileexplorer .e-swithListView-icon:before {
-        font-size: 16px;
-        content: "\e6f0";
     }
 
     .e-fileexplorer-toolbar-icon, .e-fileexplorer .e-tree-foldericon, .e-fileexplorer .e-addressbar-foldericon {
@@ -13696,7 +14616,7 @@ slideRight Animate
         content: "\e768";
     }
 
-    .e-fileexplorer .e-minus ~ .e-tree-foldericon:before, .e-fileexplorer-toolbar-icon.Open:before {
+    .e-fileexplorer .e-minus ~ .e-tree-foldericon:before, .e-fileexplorer-toolbar-icon.Open:before, .e-fileexplorer-toolbar-icon.OpenFolderLocation:before {
         content: "\e769";
     }
 
@@ -13766,38 +14686,9 @@ slideRight Animate
         content: "\e61f";
     }
 
-    .e-fileexplorer .e-nonImage-icon, .e-fileexplorer .e-folder-icon {
-        height: 85px;
-        width: 96px;
-        font-family: 'ej-webfont';
-        display: block;
-        padding: 4px;
-    }
-
-    .e-fileexplorer .e-folder-icon {
-        font-size: 85px;
-    }
-
-    .e-fileexplorer .e-nonImage-icon {
-        font-size: 85px;
-        text-align: center;
-    }
-
-    .e-fileexplorer .e-folder-icon:before {
-        position: relative;
-        top: -12px;
-        left: 6px;
-        content: "\e769";
-    }
-
-    .e-rtl.e-fileexplorer .e-folder-icon:before {
-        left: -5px;
-    }
-
-    .e-fileexplorer .e-nonImage-icon:before {
-        position: relative;
-        top: -15px;
-        content: "\e6b5";
+    .e-fileexplorer .e-tile-wrapper .e-thumbImage.e-fe-icon {
+        width: 67px;
+        height: 67px;
     }
 
     .e-fileexplorer .e-tile-wrapper.e-js, .e-fileexplorer.e-js, .e-fileexplorer .e-gridcontent,
@@ -13823,6 +14714,7 @@ slideRight Animate
     }
 
     .e-fe-dialog-centerbtn {
+        padding: 1px;
         width: 70%;
         float: right;
     }
@@ -13832,18 +14724,18 @@ slideRight Animate
         float: left;
     }
 
-    .e-fe-btn-ok,
+    .e-fe-btn-ok, .e-fe-btn-skip,
     .e-fe-btn-cancel {
         width: 45%;
         height: 27px;
     }
 
-    .e-fe-dialog-centerbtn .e-fe-btn-ok, .e-fe-dialog-btn .e-fe-btn-ok {
+    .e-fe-dialog-centerbtn .e-fe-btn-ok, .e-fe-dialog-btn .e-fe-btn-ok, .e-fe-dialog-centerbtn .e-fe-btn-skip, .e-fe-dialog-btn .e-fe-btn-skip {
         margin-left: 0px;
         margin-right: 14px;
     }
 
-    .e-rtl .e-fe-dialog-centerbtn .e-fe-btn-ok, .e-rtl .e-fe-dialog-btn .e-fe-btn-ok {
+    .e-rtl .e-fe-dialog-centerbtn .e-fe-btn-ok, .e-rtl .e-fe-dialog-btn .e-fe-btn-ok, .e-rtl .e-fe-dialog-centerbtn .e-fe-btn-skip, .e-rtl .e-fe-dialog-btn .e-fe-btn-skip {
         margin-left: 14px;
         margin-right: 0px;
     }
@@ -13865,27 +14757,115 @@ slideRight Animate
         float: left;
     }
 
-    .e-fe-dialog-centerbtn,
+    .e-fe-dialog-centerbtn, .e-fileexplorer .e-grid .emptyrecord,
     .e-fe-center {
         text-align: center;
     }
 
-    .e-fileexplorer .e-toolbar .e-ul-searchBar {
-        margin-right: 4px;
+    .e-fileexplorer .e-tileInfo-view .e-align {
+        float: left;
     }
 
-    .e-rtl .e-fileexplorer .e-toolbar .e-ul-searchBar {
-        margin-left: 4px;
-        margin-right: 0px;
+    .e-fileexplorer .e-tileInfo-view .e-tilenode {
+        padding: 0px;
+        width: 252px;
+        height: 60px;
+        overflow: hidden;
     }
 
-    .e-fileexplorer .e-toolbar .e-ul-creation {
-        margin-left: 4px;
+    .e-fileexplorer .e-tileInfo-view .e-name {
+        display: table-cell;
+        vertical-align: middle;
+        height: 60px;
+        width: 112px;
+        padding: 0px 5px;
+        word-wrap: break-word;
     }
 
-    .e-rtl .e-fileexplorer .e-toolbar .e-ul-creation {
-        margin-left: 0px;
-        margin-right: 4px;
+    .e-fileexplorer .e-tileInfo-view .e-name-wrap {
+        display: table;
+        height: 60px;
+        width: 184px;
+        overflow: hidden;
+    }
+
+    .e-fileexplorer .e-tileInfo-view .e-name.e-name-in-wrap {
+        vertical-align: middle;
+        text-align: inherit;
+        display: table-cell;
+        word-wrap: break-word;
+    }
+
+    .e-fileexplorer .e-tileInfo-view .e-name.e-name-in-wrap p {
+        margin: 0;
+    }
+
+    .e-fileexplorer .e-tileInfo-view .e-thumb-image.e-image .e-thumbImage {
+        max-height: 52px;
+		max-width: 58px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-thumb-image.e-image img.e-thumbImage{
+		height: auto;
+		width: auto;
+	}	
+
+    .e-fileexplorer .e-tileInfo-view .e-thumbImage {
+        padding: 4px;
+        display: block;
+        max-width: 59px;
+        margin: 0;
+    }
+
+    .e-fileexplorer .e-tileInfo-view .e-tilenode .e-image {
+        display: table-cell;
+        vertical-align: middle;
+        width: auto;
+        padding-top: 0px;
+        height: 60px;
+    }
+
+    .e-fileexplorer .e-tileInfo-view .e-name-wrap .e-name.e-name-in-wrap div {
+        width: 168px;
+    }
+
+    .e-fileexplorer .e-tileview .e-name-wrap .e-name.e-name-in-wrap div {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .e-fileexplorer .e-tileInfo-view .e-file-name {
+        font-weight: bold;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-thumbImage {
+        height: 52px;
+        width: 60px;
+    }
+
+    .e-fileexplorer .e-tileInfo-view span.e-file-type, .e-fileexplorer .e-tileInfo-view span.e-file-size {
+        font-size: 13px;
+    }
+
+    .e-fileexplorer .e-fe-view-icon:before {
+        content: "\e76b";
+        font-size: 16px;
+        width: 22px;
+        height: 100%;
+    }
+
+    .e-fe-activeicon:before {
+        content: "\e657";
+        width: 100%;
+        text-indent: 1px;
+        height: 100%;
+        margin-top: 2px;
+        margin-left: 1px;
+    }
+
+    .e-fileexplorer .e-toolbar > ul > li {
+        padding:0px;
     }
 
     .e-fileexplorer .e-treeview > ul {
@@ -13894,6 +14874,7 @@ slideRight Animate
 
     .e-fileexplorer .e-toolbar .e-searchBar {
         padding: 0;
+        margin: 0;
         width: 138px;
     }
 
@@ -13916,16 +14897,12 @@ slideRight Animate
         opacity: 0;
     }
 
-    .e-fileexplorer .e-thumbImage {
-        padding-bottom: 0px;
-    }
-
     .e-fe-dialog.e-dialog > .e-titlebar {
         padding: .3em .25em .25em 1em;
         border-width: 0 0 2px 0;
     }
     .e-fileexplorer .e-uploadbox .e-scrollbar.e-hscrollbar {
-        top:0;
+        top: 0;
     }
 
     .e-fe-dialog.e-dialog.e-rtl > .e-titlebar, .e-fileexplorer .e-uploadbox.e-dialog.e-rtl .e-titlebar {
@@ -13937,7 +14914,7 @@ slideRight Animate
     }
 
     .e-fileexplorer .e-uploadbox .e-file-upload {
-        padding:0;
+        padding: 0;
     }
 
     .e-fileexplorer .e-uploadbox .e-file-upload .e-action-container {
@@ -13988,18 +14965,22 @@ slideRight Animate
         padding-right: 32px;
     }
 
+    .fe-context-menu.e-menu.e-context{
+	    width: 160px;
+	}
+
     .e-fileexplorer .e-treeview-wrap .e-item div > span {
         margin-right: 0px;
         display: inline-table;
         vertical-align: middle;
     }
 
-    .e-fileexplorer .e-grid tr td:first-child, .e-fileexplorer .e-grid.e-rtl tr td.e-last-rowcell {
+    .e-fileexplorer .e-grid tr td:first-child, .e-fileexplorer.e-rtl .e-grid tr td.e-last-rowcell {
         border-left: 1px solid transparent;
         border-right: 0;
     }
 
-    .e-fileexplorer .e-grid tr td.e-last-rowcell, .e-fileexplorer .e-grid.e-rtl tr td:first-child {
+    .e-fileexplorer .e-grid tr td.e-last-rowcell, .e-fileexplorer.e-rtl .e-grid tr td:first-child {
         border-right: 1px solid transparent;
         border-left: 0;
     }
@@ -14008,7 +14989,7 @@ slideRight Animate
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
         border-width: 1px 0;
-        padding: 0.6em;
+        padding: 0.4em;
     }
 
     .e-fileexplorer .e-grid .e-gridcontent tr:first-child td {
@@ -14024,7 +15005,7 @@ slideRight Animate
         filter: alpha(opacity= 60);
     }
 
-    .e-fileexplorer .e-grid .e-rowcell, .e-fileexplorer .e-tileview .e-tilenode .e-name, .e-fileexplorer .e-treeview .e-text,
+    .e-fileexplorer .e-tileview .e-tilenode .e-name, .e-fileexplorer .e-treeview .e-text,
     .e-dialog.e-imageViewer-wrap .e-title, .e-fe-dialog.e-content, .e-fileexplorer .e-statusbar .e-itemStaus {
         white-space: pre-wrap;
     }
@@ -14034,7 +15015,7 @@ slideRight Animate
         word-wrap: break-word;
     }
 
-    .e-fe-dialog.e-dialog, .e-fe-dialog.e-dialog .e-close, .e-fileexplorer .e-uploadbox .e-file-cancel, .e-fileexplorer .e-uploadbox.e-dialog .e-titlebar>.e-dialog-icon .e-close {
+    .e-fe-dialog.e-dialog, .e-fe-dialog.e-dialog .e-close, .e-fileexplorer .e-uploadbox .e-file-cancel, .e-fileexplorer .e-uploadbox.e-dialog .e-titlebar > .e-dialog-icon .e-close {
         font-size: 12px;
     }
 
@@ -14049,6 +15030,7 @@ slideRight Animate
 
     .e-fileexplorer .e-toolbar {
         border-bottom: 3px solid;
+        padding: 0 4px;
     }
 
     .e-fileexplorer .e-toolbar .e-icon.e-toolbar-res-arrow:before {
@@ -14097,7 +15079,7 @@ slideRight Animate
         border-bottom: 1px solid;
     }
 
-    .e-fileexplorer .e-grid .e-rowcell, .e-fileexplorer .e-treeview .e-text,
+    .e-fileexplorer .e-treeview .e-text,
     .e-dialog.e-imageViewer-wrap .e-title, .e-fileexplorer .e-statusbar .e-itemStaus {
         white-space: pre;
     }
@@ -14105,9 +15087,425 @@ slideRight Animate
     .e-fileexplorer .e-tileview .e-tilenode .e-name, .e-fe-dialog.e-content {
         white-space: pre-wrap;
     }
+
+    .e-fileexplorer .e-grid .e-gridcontent .e-rowcell.e-grid-image {
+        padding: 2px;
+    }
+
+    .e-fileexplorer .e-fe-icon 
+    {
+        background-repeat: no-repeat;
+        background-image: url('@{font-path}/tools/file_icons.png');
+    }
+
+    .e-fileexplorer .e-grid .e-gridcontent .e-rowcell.e-grid-image .e-fe-icon {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+
+    .e-fileexplorer .e-treeview .e-fe-folder, .e-fileexplorer .e-toolbar .e-fe-folder {
+        background-position: -245px -21px;
+    }
+
+    .e-fileexplorer .e-treeview .e-text {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .e-fileexplorer .e-treeview-wrap>.e-ul{
+	    overflow: visible;
+	}
+
+    .e-fileexplorer.e-rtl .e-treeview .e-text {
+        padding-left: 4px;
+        padding-right: 20px;
+    }
+
+    .e-fileexplorer .e-treeview .e-fe-icon, .e-fileexplorer .e-toolbar .e-fe-icon {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+    }
+
+    .e-fileexplorer .e-treeview .e-fe-folder {
+        left: 2px;
+        top: @fe-treeview-image-top;
+    }
+
+    .e-fileexplorer.e-rtl .e-treeview .e-fe-icon {
+        right: 2px;
+        left: inherit;
+    }
+
+    .e-fileexplorer .e-toolbar .e-fe-folder {
+        top: 5px;
+        left: 8px;
+    }
+
+    .e-fileexplorer.e-rtl .e-toolbar .e-fe-folder {
+        left: 0px;
+        right: 8px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-doc, .e-fileexplorer .e-grid .e-fe-docx {
+        background-position: -196px -20px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-ppt, .e-fileexplorer .e-grid .e-fe-pptx {
+        background-position: -196px -48px;
+    }
+    
+    .e-fileexplorer .e-grid .e-fe-xls, .e-fileexplorer .e-grid .e-fe-xlsx {
+        background-position: -196px -76px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-pdf {
+        background-position: -196px -104px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-images {
+        background-position: -196px -132px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-rar {
+        background-position: -196px -160px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-zip {
+        background-position: -196px -188px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-txt {
+        background-position: -196px -216px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-audio {
+        background-position: -196px -244px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-video {
+        background-position: -196px -272px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-js {
+        background-position: -196px -300px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-css {
+        background-position: -196px -328px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-html {
+        background-position: -196px -356px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-php {
+        background-position: -196px -384px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-exe {
+        background-position: -196px -412px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-msi {
+        background-position: -196px -440px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-unknown {
+        background-position: -196px -468px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-rtf {
+        background-position: -196px -496px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-xml {
+        background-position: -196px -524px;
+    }
+
+    .e-fileexplorer .e-grid .e-fe-folder {
+        background-position: -196px -552px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-doc, .e-fileexplorer .e-tile-wrapper .e-fe-docx {
+        background-position: -21px -17px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-ppt, .e-fileexplorer .e-tile-wrapper .e-fe-pptx {
+        background-position: -21px -94px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-xls, .e-fileexplorer .e-tile-wrapper .e-fe-xlsx {
+        background-position: -21px -171px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-pdf {
+        background-position: -21px -248px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-images {
+        background-position: -21px -325px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-rar {
+        background-position: -21px -402px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-zip {
+        background-position: -21px -479px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-txt {
+        background-position: -21px -556px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-audio {
+        background-position: -21px -633px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-video {
+        background-position: -21px -710px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-js {
+        background-position: -21px -787px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-css {
+        background-position: -21px -864px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-html {
+        background-position: -21px -941px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-php {
+        background-position: -21px -1018px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-exe {
+        background-position: -21px -1095px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-msi {
+        background-position: -21px -1172px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-unknown {
+        background-position: -21px -1249px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-rtf {
+        background-position: -21px -1326px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-xml {
+        background-position: -21px -1403px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper .e-fe-folder {
+        background-position: -21px -1480px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-doc, .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-docx {
+        background-position: -116px -17px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-ppt, .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-pptx {
+        background-position: -116px -79px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-xls, .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-xlsx {
+        background-position: -116px -141px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-pdf {
+        background-position: -116px -203px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-images {
+        background-position: -116px -265px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-rar {
+        background-position: -116px -327px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-zip {
+        background-position: -116px -389px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-txt {
+        background-position: -116px -451px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-audio {
+        background-position: -116px -513px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-video {
+        background-position: -116px -575px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-js {
+        background-position: -116px -637px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-css {
+        background-position: -116px -699px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-html {
+        background-position: -116px -761px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-php {
+        background-position: -116px -823px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-exe {
+        background-position: -116px -885px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-msi {
+        background-position: -116px -947px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-unknown {
+        background-position: -116px -1009px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-rtf {
+        background-position: -116px -1071px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-xml {
+        background-position: -116px -1133px;
+    }
+
+    .e-fileexplorer .e-tile-wrapper.e-tileInfo-view .e-fe-folder {
+        background-position: -116px -1195px;
+    }
+
+    .e-fileexplorer.e-rtl .e-gridcontent tr td.e-grid-image {
+        text-indent: -68px;
+    }
+
+    .e-fileexplorer .e-grid .e-headercell.e-grid-image .e-descending, .e-fileexplorer .e-grid .e-headercell.e-grid-image .e-ascending {
+        padding: 0 2px;
+    }
+
+    .e-fe-split-context.e-menu.e-context > .e-list > a > span {
+        padding: 0 4px;
+        margin: 0;
+    }
+
+    .e-fileexplorer .e-icon.e-fe-grid:before, .e-fe-split-context .e-icon.e-fe-grid:before {
+        content: "\e7b9";
+    }
+
+    .e-fileexplorer .e-icon.e-fe-largeicons:before, .e-fe-split-context .e-icon.e-fe-largeicons:before {
+        content: "\e7bb";
+    }
+
+    .e-fileexplorer .e-icon.e-fe-tile:before, .e-fe-split-context .e-icon.e-fe-tile:before {
+        content: "\e7be";
+    }
+
+    .e-fileexplorer .e-tile-content {
+        position: relative;
+    }
+
+    .e-fileexplorer .e-tilenode .e-chkbox-wrap {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        padding: 0px 2px 0px 2px;
+    }
+
+    .e-fileexplorer .e-gridcontent .e-chkbox-wrap {
+        visibility: hidden;
+    } 
+
+    .e-fileexplorer .e-tilenode.e-hover .e-chkbox-wrap , .e-fileexplorer .e-tilenode.e-active .e-chkbox-wrap, .e-fileexplorer .e-gridcontent .e-active .e-chkbox-wrap, .e-fileexplorer .e-gridcontent .e-hover .e-chkbox-wrap {
+        visibility: visible;
+    }
+
+    .e-fileexplorer .e-grid .e-chkbox-wrap .e-chk-image.e-chk-activeicon:before {
+        text-indent: 0px;
+    }
+
+    .e-fileexplorer .e-gridcontent .e-chkbox-wrap .e-chkbox-small>span {
+        top: 1px;
+    }
+
+    .e-fileexplorer .e-grid .e-headercell,.e-fileexplorer .e-grid .e-headercell-hover {
+        height:30px;
+    }
+
+    .e-fileexplorer .e-tilenode .e-chkbox-wrap .e-chkbox-small>span {
+        height: 13px;
+    }
+
+    .e-fileexplorer .e-grid .e-table {
+        padding: 0 6px;
+    }
+
+    .e-fileexplorer .e-gridheader .e-headercell .e-headercelldiv {
+        padding : 0px 3px;
+        margin: 0px ;
+    }
+
+    .e-fileexplorer .e-gridheader .e-headercell {
+        padding: 0px;
+    }
+
+    .e-fileexplorer th.e-headercell.e-default.e-col-check.e-defaultcursor {	    
+        text-align: center;
+    }
+
+    .e-fileexplorer .e-grid .e-gridcontent .e-rowcell {
+        padding-left: 3px;
+        padding-right: 3px;
+        line-height: 12px;
+        text-overflow: ellipsis;
+    }
+
+    .e-fileexplorer .e-grid .e-col-check input {
+        height:initial;
+        line-height:initial;
+        margin-top: 0px;
+    }
+	.e-fileexplorer.e-rtl .e-addressBar {
+		direction: ltr;
+		text-align: right;
+		padding-right: 27px;
+		width: 233px;
+	}
+    .e-fileexplorer.e-corner-all .e-item .e-text, .e-fileexplorer.e-corner-all .e-tilenode, .e-fileexplorer.e-corner-all input,
+	.e-fe-dialog.e-corner input, .e-fe-dialog.e-corner button,
+	.e-fileexplorer.e-corner-all .e-scrollbar .e-vhandle, .e-fileexplorer.e-corner-all .e-scrollbar .e-hhandle{
+		border-radius: 4px 4px 4px 4px;
+	}
+	.e-fileexplorer.e-corner-all .e-grid tr td:first-child, .e-fileexplorer.e-rtl.e-corner-all .e-grid tr td.e-last-rowcell{
+		border-radius: 4px 0 0 4px;
+	}
+	.e-fileexplorer.e-corner-all .e-grid tr td.e-last-rowcell, .e-fileexplorer.e-rtl.e-corner-all .e-grid tr td:first-child{
+		border-radius: 0 4px 4px 0;
+	}
+    .e-fileexplorer .e-toolbar .e-splitbutton > div:first-child {
+        display: table;
+    }
+    .e-fileexplorer .e-toolbar .e-splitbutton > div:first-child .e-icon {
+        width: 14px;
+        height: 14px;
+        padding: 0 3px;
+    }
 }
 
 .mixin(@widget) when (@widget = spreadsheet), (@widget = none) {
+    /*------------------------------FileExplorer End-------------------------------*/
     /* validation message */
     .e-validation-error {
         font-size: 14px;
@@ -14124,6 +15522,25 @@ slideRight Animate
         border: 1px solid;
     }
 
+	.e-spreadsheet h6
+	{
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+	.e-spreadsheet label,
+	.e-ss-dialog label
+	{
+		font-size: 14px;
+	}
+
+	.e-ss-dialog input[type="submit"],
+	.e-ss-dialog input[type="button"],
+	.e-ss-dialog button
+	{
+		font-weight: normal;
+	}
+
     .e-spreadsheet .e-spreadsheetcolumnheader {
         border-bottom: 1px solid;
     }
@@ -14138,7 +15555,7 @@ slideRight Animate
         padding: 0 0.25em 0 0;
         text-align: center;
         text-overflow: ellipsis;
-        cursor: url(common-images/spreadsheet/Down_Arrow.cur),auto;
+        cursor: url('@{font-path}/spreadsheet/Down_Arrow.cur'),auto;
     }
 
     .e-spreadsheet .e-headercontent {
@@ -14156,7 +15573,7 @@ slideRight Animate
         display: table-cell;
         border-width: 0 1px 1px 0;
         border-style: solid;
-        cursor: url(common-images/spreadsheet/Right_Arrow.cur),auto;
+        cursor: url('@{font-path}/spreadsheet/Right_Arrow.cur'),auto;
         font-size: 11pt;
         line-height: 14px;
         padding: 0 1px 3px 1px;
@@ -14176,13 +15593,55 @@ slideRight Animate
         border-style: solid;
         line-height: normal;
         width: auto;
-        overflow: hidden;
-        white-space: pre;
+        overflow: visible;
         vertical-align: bottom;
         padding: 0px 1px 0px 2px;
-        text-overflow: ellipsis;
     }
+	.e-spreadsheet .e-wrapword {
+		white-space: pre;
+	}
 
+	.e-spreadsheet .e-rowcell.e-overflow {
+		overflow: hidden;
+        text-overflow: clip;
+	}
+	
+	.e-spreadsheet .e-rowcell.e-freezeOverflow{
+		overflow: hidden;
+		text-overflow: clip;
+	}
+	
+	.e-spreadsheet .e-cellreadonly {
+		vertical-align: top;
+		text-align: center;
+		margin-top: 2px;
+		padding: 0px;
+	}
+	
+	.e-spreadsheet .e-cellreadonly .e-chkbox-wrap .e-chkbox-small > span {
+		height: 13px;
+		top: 2px;
+		margin: 0 2px 0 2px;
+	}
+	
+	.e-spreadsheet .e-rowcell > button {
+		font-size: 9px;
+	}
+	
+	.e-spreadsheet .e-cellreadonly .e-datewidget .e-icon{
+		font-size : 19px;
+		margin-top : -10px;
+		padding-left: 0.5px;
+	}
+	
+	.e-spreadsheet .e-cellreadonly .e-datewidget .e-select{
+		border: 0px;
+	}
+	
+	.e-spreadsheet .e-cellreadonly .e-ddl .e-select{
+		border: 0px;
+	}
+	
     .e-ss-cursor {
         cursor: cell;
     }
@@ -14220,6 +15679,10 @@ slideRight Animate
     .e-spreadsheet .e-calign {
         text-align: center;
     }
+	.e-spreadsheet .e-ss-virtualtop, .e-spreadsheet .e-ss-virtualbottom {
+		height: 0px;
+		display: block;
+	}
     /*---------------------------- Spreadhsheet Scroller Start----------------------------------------*/
     .e-spreadsheetcontentcontainer .e-scrollbar.e-hscrollbar {
         float: left;
@@ -14326,6 +15789,7 @@ slideRight Animate
         width: 4px;
         height: 4px;
         border: 1px solid white;
+        background-clip: content-box;
         position: absolute;
         cursor: crosshair;
     }
@@ -14368,10 +15832,6 @@ slideRight Animate
         border-bottom: solid;
     }
 
-    .e-spreadsheet .e-pager .e-icon{
-        display:inline-block;
-    }
-
     .e-spreadsheet .e-pager .e-numericitem {
         padding-right:9px;
         padding-left:9px;
@@ -14386,7 +15846,7 @@ slideRight Animate
     .e-spreadsheet .e-pager .e-lastpage,
     .e-spreadsheet .e-pager .e-nextpagedisabled,
     .e-spreadsheet .e-pager .e-lastpagedisabled {
-        padding: 8px 3px 1px 8px;
+        padding: 7px 3px 1px 7px;
     }
 
     .e-spreadsheet .e-pager .e-pagercontainer {
@@ -14425,7 +15885,7 @@ slideRight Animate
         word-wrap: break-word;
     }
 
-    .e-spreadsheetpanel,
+    .e-spreadsheetmainpanel,
     .e-spreadsheetactpanel {
         float: left;
         font-family: Calibri;
@@ -14521,9 +15981,11 @@ slideRight Animate
     }
 
     .e-spreadsheet .e-ss-input {
+        position:absolute;           
+        overflow: hidden;
         text-indent: 0px;
         width: 100%;
-        padding-left: 2px;
+		padding: 0px 0px 0px 2px;
     }
 
     .e-spreadsheet .e-editedcell {
@@ -14544,6 +16006,9 @@ slideRight Animate
     }
 
     .e-spreadsheet .e-ss-findselect {
+        height: 29px;
+    }
+    .e-spreadsheet .e-ss-calcopt{
         height: 29px;
     }
     /*------ Dialog CSS-------*/
@@ -14597,6 +16062,9 @@ slideRight Animate
         font-size: 14px;
         padding: 7px;
     }
+	.e-spreadsheet .e-ss-editinput , .e-cell-ac>.e-in-wrap {
+        display: none;
+    }
 
     div.e-dlg-field-validation-error {
         border-radius: 7px;
@@ -14635,8 +16103,8 @@ slideRight Animate
     /* -------------------Font Icons ------------------- */
     @font-face {
         font-family: 'ej-xlfont';
-        src: url('common-images/spreadsheet/ejxlicons.eot?-dzszjm');
-        src: url('common-images/spreadsheet/ejxlicons.eot?#iefix-dzszjm') format('embedded-opentype'), url('common-images/spreadsheet/ejxlicons.woff?-dzszjm') format('woff'), url('common-images/spreadsheet/ejxlicons.ttf?-dzszjm') format('truetype'), url('common-images/spreadsheet/ejxlicons.svg?-dzszjm#ejssicons') format('svg');
+        src: url('@{font-path}/spreadsheet/ejxlicons.eot?-dzszjm');
+        src: url('@{font-path}/spreadsheet/ejxlicons.eot?#iefix-dzszjm') format('embedded-opentype'), url('@{font-path}/spreadsheet/ejxlicons.woff?-dzszjm') format('woff'), url('@{font-path}/spreadsheet/ejxlicons.ttf?-dzszjm') format('truetype'), url('@{font-path}/spreadsheet/ejxlicons.svg?-dzszjm#ejssicons') format('svg');
         font-weight: normal;
         font-style: normal;
     }
@@ -14718,6 +16186,11 @@ slideRight Animate
         text-align: left;
         width: 42px;
     }
+    
+    .e-spreadsheet .e-coptbtn .e-btntxt {
+        line-height: 14px;
+        text-indent: -1px;
+    }
 
     .e-spreadsheet .e-deletesbtn .e-btntxt,
     .e-spreadsheet .e-insertsbtn .e-btntxt {
@@ -14731,7 +16204,8 @@ slideRight Animate
     .e-spreadsheet .e-ssr-charttype + .e-btntxt,
     .e-spreadsheet .e-ssr-srcolumn + .e-btntxt,
     .e-spreadsheet .e-formatastablebtn .e-btntxt,
-    .e-spreadsheet .e-ssr-namemngr + .e-btntxt {
+    .e-spreadsheet .e-ssr-namemngr + .e-btntxt ,
+    .e-spreadsheet .e-ssr-protectsheet + .e-btntxt{
         line-height: 14px;
     }
 
@@ -14809,7 +16283,9 @@ slideRight Animate
     .e-spreadsheet .e-ssr-definename + .e-btntxt {
         text-indent: -6px;
     }
-
+    .e-spreadsheet .e-ss-calcsheet + .e-btntxt {
+        text-indent: 2px;
+    }
     .e-spreadsheet .e-useinformulabtn .e-btntxt {
         text-indent: -9px;
     }
@@ -14883,7 +16359,7 @@ slideRight Animate
     }
 
     .e-ss-fpcursor {
-        cursor: url(common-images/spreadsheet/Format_Painter.cur),auto;
+        cursor: url('@{font-path}/spreadsheet/Format_Painter.cur'),auto;
     }
     /* -------------------Editing Font Icons ------------------- */
     .e-spreadsheet .e-new:before {
@@ -14949,26 +16425,26 @@ slideRight Animate
         text-indent: -3px;
     }
     /* -------------------Border Font Icons ------------------- */
-    .e-ss-bottomborder:before, .e-ss-topborder:before, .e-ss-leftborder:before, .e-ss-rightborder:before, .e-ss-noborder:before, .e-ss-allborder:before, .e-ss-outsideborder:before, .e-ss-thickboxborder:before, .e-ss-thickbottomborder:before, .e-ss-topandbottomborder:before, .e-ss-topandthickbottomborder:before, .e-ss-drawborder:before, .e-ss-drawbordergrid:before {
+    .e-ss-bottom:before, .e-ss-top:before, .e-ss-left:before, .e-ss-right:before, .e-ss-noborder:before, .e-ss-allborder:before, .e-ss-outside:before, .e-ss-thickbox:before, .e-ss-thickbottom:before, .e-ss-topandbottom:before, .e-ss-topandthickbottom:before, .e-ss-drawborder:before, .e-ss-drawbordergrid:before {
         font-family: "ej-xlfont";
         font-size: 15px;
         line-height: 13px;
         text-indent: 2px;
     }
 
-    .e-ss-bottomborder:before {
+    .e-ss-bottom:before {
         content: "\e63d";
     }
 
-    .e-ss-topborder:before {
+    .e-ss-top:before {
         content: "\e63e";
     }
 
-    .e-ss-leftborder:before {
+    .e-ss-left:before {
         content: "\e63f";
     }
 
-    .e-ss-rightborder:before {
+    .e-ss-right:before {
         content: "\e640";
     }
 
@@ -14980,23 +16456,23 @@ slideRight Animate
         content: "\e642";
     }
 
-    .e-ss-outsideborder:before {
+    .e-ss-outside:before {
         content: "\e643";
     }
 
-    .e-ss-thickboxborder:before {
+    .e-ss-thickbox:before {
         content: "\e644";
     }
 
-    .e-ss-thickbottomborder:before {
+    .e-ss-thickbottom:before {
         content: "\e645";
     }
 
-    .e-ss-topandbottomborder:before {
+    .e-ss-topandbottom:before {
         content: "\e646";
     }
 
-    .e-ss-topandthickbottomborder:before {
+    .e-ss-topandthickbottom:before {
         content: "\e647";
     }
 
@@ -15009,11 +16485,11 @@ slideRight Animate
     }
 
     .e-ss-drwbrdrcursor {
-        cursor: url(common-images/spreadsheet/Draw_Border.cur),auto;
+        cursor: url('@{font-path}/spreadsheet/Draw_Border.cur'),auto;
     }
 
     .e-ss-drwbrdrgridcursor {
-        cursor: url(common-images/spreadsheet/Draw_Border_Grid.cur),auto;
+        cursor: url('@{font-path}/spreadsheet/Draw_Border_Grid.cur'),auto;
     }
 
     .e-ss-borderstyle:before,
@@ -15083,14 +16559,14 @@ slideRight Animate
         font-family: "ej-xlfont";
         font-size: 18px;
         text-indent: -2px;
-        line-height: 16px;
+        line-height: 13px;
     }
 
     .e-ss-italic:before {
         content: "\e60a";
         font-family: "ej-xlfont";
         font-size: 18px;
-        text-indent: -2px;
+        text-indent: -3px;
         line-height: 15px;
     }
 
@@ -15700,11 +17176,11 @@ slideRight Animate
 
     .e-ss-resetpicture:before {
         content: "\e693";
-    font-family: "ej-xlfont";
-    text-indent: -1px;
-    line-height: 16px;
-    font-size: 18px;
-}
+        font-family: "ej-xlfont";
+        text-indent: -1px;
+    	line-height: 16px;
+        font-size: 18px;
+    }
 
     .e-spreadsheet .e-ssr-pictureborder:before {
         content: "\e696";
@@ -15807,6 +17283,34 @@ slideRight Animate
         height: 30px;
     }
 
+    .e-ss-calcopt:before{
+        content:"\e6ad";
+        font-family: "ej-xlfont";
+        font-size: 32px;
+        line-height: 34px;
+        text-indent: -4px;
+    }
+    .e-ss-calcauto:before{
+        content:"\e6aa";
+        font-family: "ej-xlfont";
+        font-size: 10px;
+        line-height: 20px;
+        text-indent: 8px;
+    }
+    .e-ss-calcnow:before{
+        content:"\e6ab";
+        font-family: "ej-xlfont";
+        font-size: 18px;
+        line-height: 14px;
+        text-indent: -4px;
+    }
+    .e-ss-calcsheet:before{
+        content:"\e6ac";
+        font-family: "ej-xlfont";
+        font-size: 18px;
+        line-height:15px;
+        text-indent: 1px;
+    }
     .e-ss-find:before {
         content: "\e67e";
         font-family: "ej-xlfont";
@@ -16100,7 +17604,7 @@ slideRight Animate
         font-family: "ej-xlfont";
         font-size: 16px;
         text-indent: -14px;
-        line-height: 14px;
+        line-height: 12px;
     }
 
     .e-ss-dlgcolumnchart:before {
@@ -16182,14 +17686,14 @@ slideRight Animate
     }
 
     .e-ss-autofill:before {
-       content: "\e6a6";
-       font-family: "ej-xlfont";
-       font-size: 16px;
-	   text-indent:-2px;
+        content: "\e6a6";
+        font-family: "ej-xlfont";
+        font-size: 16px;
+        text-indent: -2px;
 	   line-height:13px;
-}
+    }
 /*-------------------------------------Find replace ------------------------*/
-.e-lblreplace {
+    .e-lblreplace {
         position: relative;
         top: -11px;
     }
@@ -16314,7 +17818,7 @@ slideRight Animate
     }
     /*-----------------cellstyles-----------------------------------------------------*/
     .e-formatastablecell div {
-        background: url(common-images/spreadsheet/sprites.png) no-repeat;
+        background: url('@{font-path}/spreadsheet/sprites.png') no-repeat;
         width: 63px;
         height: 48px;
     }
@@ -16499,7 +18003,7 @@ slideRight Animate
         top: 6px;
         height: 70px;
         width: 130px;
-		 font-style: normal;
+		font-style: normal;
     }
     /*-------------Spreadsheet Hyperlink Dialog------------------------*/
     .e-ss-hlbtndiv {
@@ -16620,7 +18124,7 @@ slideRight Animate
     }
 
     .e-spreadsheet .e-ss-blank {
-        background: url(common-images/spreadsheet/blank.png) no-repeat;
+        background: url('@{font-path}/spreadsheet/blank.png') no-repeat;
         height: 113px;
         width: 143px;
     }
@@ -16773,7 +18277,7 @@ slideRight Animate
     }
 
     .e-ss-chartimg {
-        background: url(common-images/spreadsheet/charttab-sprites.png) no-repeat;
+        background: url('@{font-path}/spreadsheet/charttab-sprites.png') no-repeat;
         height: 28px;
         width: 28px;
     }
@@ -16919,7 +18423,7 @@ slideRight Animate
         box-sizing: border-box;
         display: inline-block;
         padding: 20px 22px;
-        background: url(common-images/spreadsheet/chart-sprites.png) no-repeat;
+        background: url('@{font-path}/spreadsheet/chart-sprites.png') no-repeat;
         width: 32px;
         height: 32px;
     }
@@ -17038,7 +18542,10 @@ slideRight Animate
         white-space: normal;
         padding-top: 12px;
     }
-
+    .e-spreadsheet .e-ssr-protectsheet + span,
+    .e-spreadsheet .e-ssr-protect + span{
+      white-space:normal;
+    }
     .e-spreadsheet .e-ssr-charttype + span,
     .e-spreadsheet .e-ssr-selectdata + span {
         white-space: normal;
@@ -17108,7 +18615,7 @@ slideRight Animate
     .e-chartimg {
         display: inline-block;
         padding: 25px;
-        background: url(common-images/spreadsheet/charttype-sprites.png) no-repeat;
+        background: url('@{font-path}/spreadsheet/charttype-sprites.png') no-repeat;
         width: 35px;
         height: 35px;
         margin: 5px;
@@ -17366,6 +18873,11 @@ slideRight Animate
         line-height: 15px;
     }
 
+	.e-ss-frdlg .e-dlg-btnctnr input
+	{
+		margin-right: 0px;
+	}
+
     .e-frow {
         border-bottom: 1px solid;
         position: absolute;
@@ -17532,6 +19044,10 @@ slideRight Animate
         text-indent: 19px;
         height: 22px;
     }
+    .e-spreadsheet.e-coptbtn > .e-split-btn-div{
+        text-indent: 29px;
+        height: 22px;
+    }
 
     .e-spreadsheet.e-pagesizebtn > .e-split-btn-div {
         text-indent: 0px;
@@ -17557,7 +19073,7 @@ slideRight Animate
     }
 
     .e-spreadsheet .e-ssr-horizontalprt .e-split-btn-div .e-down-arrow:before {
-        text-indent: -9px;
+        text-indent: -8px;
         line-height: 14px;
     }
 
@@ -17774,6 +19290,51 @@ slideRight Animate
 	}
 	.e-spreadsheet.e-dlgcontainer .e-dlgBtns .e-filter {
 		padding: 3px;
+	}
+	.e-ssr-protect:before {
+       content: "\e6a7";
+       font-family: "ej-xlfont";
+       font-size: 32px;
+       text-indent: -9px;
+       line-height: 18px;
+}
+	.e-spreadsheet .e-rowcell.e-ofbrdr {
+        border-right: 0px;
+    }
+	.e-spreadsheet .e-rmanchor{
+		cursor: cell;
+		pointer-events: none;
+	}
+    .e-spreadsheet .e-ssr-protectsheet:before{
+        content: "\e6a8";
+        font-family: "ej-xlfont";
+        font-size: 32px;
+        line-height: 18px;
+        text-indent: -10px;
+    }
+    .e-spreadsheet .e-ss-cmenuprotect:before {
+		content: "\e6a9";
+		font-family: "ej-xlfont";
+		font-size: 16px;
+    }
+	.e-ssr-protlockcell:before{
+		content: "\e6ae";
+		font-family: "ej-xlfont";
+		font-size: 20px;
+		line-height:12px;
+		text-indent:-4px;
+	}
+	.e-ssr-protunlockcell:before{
+		content: "\e6af";
+		font-family: "ej-xlfont";
+		font-size: 20px;
+		line-height:12px;
+		text-indent:-4px;
+	}
+	.e-spreadsheet, .e-spreadsheetcolumnheader, .e-spreadsheet .e-inputbox, .e-spreadsheet .e-autofill{
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
 	}
     /*-------------------------------------SpreadSheet End -----------------------*/
 }

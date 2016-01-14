@@ -27,9 +27,6 @@
         text-overflow: ellipsis;
         width: 45px; 
     }
-    .e-tab.e-js {
-        min-width:250px;
-    }
 }
 
 @media (min-width: 480px) and (max-width:767px) {
@@ -106,7 +103,7 @@
        }
      .e-menu li.e-list>ul li.e-list > a, .e-menu li.e-list > ul li.e-list > span {
         padding: 0px 18px 0px 30px;
-        line-height: 27px;
+        line-height: 32px;
       }
       .e-menu-res-wrap .e-icon.e-check-wrap:before{
 		content:"\e76b";
@@ -114,6 +111,13 @@
 		width:30px;
 		height:100%;
 	  }
+    .e-menu-wrap .e-menu > li.e-separator {
+        border:0;
+        border-bottom:1px solid #c8c8c8;
+    }
+    .e-menu-wrap .e-menu.e-horizontal .e-list:hover {
+        border-color:#c8c8c8;
+    }
       /*------------------------Responsive Menu RTL-----------------------------------*/
     .e-menu-wrap.e-menu-rtl {
         direction: rtl;
