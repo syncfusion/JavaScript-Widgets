@@ -194,11 +194,8 @@
     content: "\e181";
     font-size: 15px;
     position: relative;
-    right: -2px; 
+    right: 0px; 
     top: -6px;
-}
-.e-ribbon .e-Alignment:before{
-    text-indent: 13px;
 }
 .e-ribbon .e-colorwidget .e-tool-icon .e-selected-color {
     bottom: 0;    
@@ -210,7 +207,7 @@
     content: "\e180";
     font-size: 15px;
     position: relative;
-    right: -2px; 
+    right: 0px; 
     top: -6px;
 }
 .e-ribbon .e-sort:before {
