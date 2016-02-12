@@ -2072,6 +2072,7 @@
 
     .e-tab.e-js > .e-header {
         width: 99.9%;
+        font-size:0px;
     }
 
     .e-tab .e-header li {
@@ -2993,7 +2994,12 @@
 
     .e-dropedStatus {
         float: left;
-        margin: 2px 5px;
+        margin: 3px 5px 0 5px;
+    }
+
+    .e-icon.e-dropedStatus {
+        width: 14px;
+        height: 14px;
     }
 
     .e-treeview ul {
@@ -5131,11 +5137,15 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-grid.e-wrap .e-columnheader .e-headercelldiv,
-    .e-grid.e-wrap .e-rowcell, .e-grid.e-wrap.e-responsive .e-rowcell {
+    .e-grid.e-wrap .e-rowcell, .e-grid.e-wrap.e-responsive .e-rowcell,
+    .e-grid .e-columnheader.e-wrap .e-headercelldiv, 
+    .e-grid .e-gridcontent.e-wrap .e-rowcell,
+    .e-grid.e-responsive .e-gridcontent.e-wrap .e-rowcell  
+     {
         height: Auto;
         white-space: normal;
         line-height: 18px;
-    }
+     }
 
     .e-grid.e-wrap .e-columnheader .e-headercelldiv {
         margin-bottom: 2px;
@@ -14186,6 +14196,12 @@ slideRight Animate
    cursor:default;
    text-transform: capitalize;
 } 
+.e-ribbon.e-rbnwithqat .e-qatmenuli.e-rbnshowbelow{
+   text-transform: none;
+}
+.e-ribbon.e-rbnwithqat .e-qatmenuli.e-rbnshowabove{
+   text-transform: none;
+}
 .e-ribbon.e-rbnwithqat .e-qatseparator{
    height:1px;
    list-style:none;
@@ -15541,6 +15557,10 @@ slideRight Animate
         height: auto;
         outline: none;
         line-height: 1.428571429;
+		-webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        -o-user-select: none;
     }
 
     .e-spreadsheet {
@@ -15860,7 +15880,7 @@ slideRight Animate
     .e-spreadsheet .e-pager .e-numericitem {
         padding-right:9px;
         padding-left:9px;
-        padding-bottom: 4px;
+        padding-bottom: 5px;
         padding-top: 3px;
     }
     .e-spreadsheet .e-pager .e-firstpage,
@@ -19330,6 +19350,9 @@ slideRight Animate
 		cursor: cell;
 		pointer-events: none;
 	}
+	.e-spreadsheet .e-btnhgt{
+		height:100%;
+	}
     .e-spreadsheet .e-ssr-protectsheet:before{
         content: "\e6a8";
         font-family: "ej-xlfont";
@@ -19361,6 +19384,14 @@ slideRight Animate
 		-moz-box-sizing: content-box;
 		box-sizing: content-box;
 	}
+
+     /*--------textarea------------*/
+   
+    .e-ss-textarea,.e-ss-textarea:focus, .e-ss-textarea:hover{
+        outline : none;
+        border-width:1px;
+    }
+
     /*-------------------------------------SpreadSheet End -----------------------*/
 }
 

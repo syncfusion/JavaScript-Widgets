@@ -613,6 +613,7 @@
 @ssbtntgle-end-color:lighten(@active-bg-stcolor, 18%);
 @ss-chartmenu-bgcolor:lighten( @default-bg-stcolor, 7% );
 @ss-chartmenu-color:@default-font-color;
+@ss-textarea-color:@default-border-color;
 .spread-toggle-gradient(){
   .custom-gradient(@active-gradient-color,@ssbtntgle-start-color, @ssbtntgle-end-color, 18%, 0%);
 }
@@ -1411,7 +1412,7 @@ e-schedule .e-datedisplay {
 }
 
 .e-schedule .e-selectedAppointment {
-    border: 2px solid black;
+    border : 1px solid black;
 }
 
 .e-schedule .e-selectedCell,
@@ -2802,6 +2803,9 @@ color:#5c5c5c;
 .e-dialog.e-disable .e-dialog-icon:hover {
     background:transparent;
 }
+.e-dialog .e-dialog-icon:before {
+    line-height: 1.5;
+ } 
 .e-dialog > .e-header {
 	.header-gradient();
     color: @header-font-color;
@@ -2881,7 +2885,8 @@ color:#5c5c5c;
 .e-ddl-popup .e-active {
 	.active-gradient();
     color: @active-font-color;
-    border-color: @active-bg-stcolor;
+    border-bottom: 1px solid rgb(255,255,255);
+    border-bottom: 1px solid rgba(255,255,255,0.3);    
 }
 .e-ddl .e-select, .e-ddl.e-rtl .e-select,.e-ddl .e-disable.e-select:hover {
 	    .bs-default-gradient();
@@ -2901,19 +2906,19 @@ color:#5c5c5c;
     background-position: center center;
     background-repeat: no-repeat;
 }
-.e-ddl-popup .e-resize-handle:before {
+.e-ddl-popup .e-resize-handle {
   cursor: se-resize;
   float: right;
   padding: 4px 3px 0 0;
   margin-right: 2px;
 }
-.e-ddl-popup .e-resize-handle.e-rtl-resize:before {
+.e-ddl-popup .e-resize-handle.e-rtl-resize {
   float: left;
   cursor: sw-resize;
   transform: rotate(90deg); 
   padding: 3px 0 0 3px;
 }
-.e-ddl-popup .e-icon.e-resize-handle {
+.e-ddl-popup .e-resizebar {
     .bs-default-gradient();
    border-top: 1px solid @content-bg-color;
    height: 20px;
@@ -3703,7 +3708,6 @@ background-image:url(images/rotator-icon.png);
 {
     font-family: Segoe UI;
     border: none;
-	font-size: 0px;
 }
 
 .e-tab.e-js > .e-header,.e-tab.e-js .e-header > .e-select.e-disable:hover,.e-tab.e-js > .e-left,.e-tab.e-js > .e-right,.e-tab.e-disable .e-select:hover
@@ -4798,6 +4802,12 @@ margin-left: 25px;
 		stroke-width:1px;
 		zoom:1;
 }
+.e-treemap-leaflabel{
+    font-size:14px;
+    font-weight:normal;
+    font-family:Segoe UI;
+    color:white;
+}
 
 
 .e-pivotgrid table {
@@ -5234,7 +5244,7 @@ content:"\e6a0";
     background: none repeat scroll 0 0 @oclient-bgcolor;
     font-size: 12px;
     float: right;
-	position:relative;
+	position:static;
     border: 1px solid @oclient-border-color;
 	font-family:Segoe UI;
 }
@@ -7242,13 +7252,16 @@ opacity: 1 !important;
 .e-ribbon.e-js .e-header > .e-select,.e-ribbon.e-js .e-header > .e-active,.e-ribbon.e-js .e-left > .e-active,.e-ribbon.e-js .e-right > .e-active,.e-ribbon.e-js .e-left > .e-select,.e-ribbon.e-js .e-right > .e-select{
     background:transparent;
 	border:none;
-	filter:none;
 }
-.e-ribbon.e-js .e-header > .e-select:not(.e-apptab) a {
+.e-ribbon.e-js .e-header > .e-select:not(.e-apptab) a,
+.e-ribbon.e-tab.e-js .e-header .e-select.e-disable a:hover {
     color:@rbncontent-font-color;
 }
 .e-ribbon.e-js .e-header li.e-select:not(.e-apptab) a:hover {
     color:@rbn-bg-color;
+}
+.e-ribbon .e-apptab .e-menu ul > li >a{
+    color:@rbncontent-font-color !important;
 }
 
 .e-ribbon .e-header > .e-apptab  .e-menu {
@@ -7301,6 +7314,7 @@ opacity: 1 !important;
 .e-ribbon .e-disable{
    background: @rbncontent-content-bg-color;
    opacity: 0.35;
+   filter: alpha(opacity=35);
 }
 .e-ribbon .e-modelDiv{
    background: @rbncontent-content-bg-color;
@@ -7358,6 +7372,12 @@ opacity: 1 !important;
   .ribbon-hover-gradient();
   border-color:@rbngallery-select-color;
   }
+ .e-ribbon .e-groupdiv .e-movedowndiv:hover ~ .e-expgallerydiv,.e-ribbon .e-groupdiv .e-moveupdiv:hover ~ .e-movedowndiv{
+border-top-color: @rbngallery-select-color;
+}
+.e-ribbon .e-groupdiv .e-disablegrymovebtn:hover ~ .e-expgallerydiv,.e-ribbon .e-groupdiv .e-disablegrymovebtn:hover ~ .e-movedowndiv{
+border-top-color:@rbncontent-border-color;
+}
 .e-ribbon .e-groupdiv .e-gallerymovediv >.e-disablegrymovebtn,.e-ribbon .e-groupdiv .e-gallerymovediv >.e-disablegrymovebtn:hover,
 .e-ribbon .e-resizediv .e-gallerymovediv >.e-disablegrymovebtn,.e-ribbon .e-resizediv .e-gallerymovediv >.e-disablegrymovebtn:hover
 {
@@ -7369,7 +7389,7 @@ opacity: 1 !important;
     background:@rbngallery-bg-color;
 }
 .e-ribbon .e-tooltipdiv .e-tooltiptitle,.e-ribbon .e-tooltipdiv .e-tooltipcontent,.e-ribbon .e-tooltipdiv .e-tooltipcntwithimg{
-   color:@rbn-text-color;
+   color:@rbncontent-font-color;
 }
 .e-ribbon .e-resizediv{
     border-color:@rbncontent-border-color;
@@ -7455,7 +7475,7 @@ background:none;
   color:@hover-font-color;
 }
 .e-ribbon.e-rbnwithqat .e-rbnquickaccessbar,.e-ribbon.e-rbnwithqat .e-rbnquickaccessbar .e-btn{
-  .header-gradient();
+  background:transparent;
 }
 .e-ribbon.e-js .e-tbtn.e-active,.e-ribbon.e-js .e-btn.e-resizebtnselect,.e-ribbon.e-rbnwithqat.e-js .e-tbtn.e-active{
     .ribbon-toggle-gradient();
@@ -7723,7 +7743,7 @@ background:none;
     background-color: @sscontent-active-color;
 }
 .e-ss-autocomplete.e-atc-popup ul li {
-    color: @sscontent-color;
+    color: @ssheader-content-color;
 }
 .e-spreadsheet .e-inputbox > input {
     color: @sscontent-color;
@@ -7921,7 +7941,7 @@ div.e-dlg-field-validation-error:before {
 .e-spreadsheet .e-split.e-active .e-box .e-btn .e-icon, .e-spreadsheet .e-split .e-btn.e-select:active .e-icon{
     color: @default-icon-color;
 }
-.e-spreadsheet .e-rowcell.e-hborder {
+.e-spreadsheet .e-hborder {
     border-color: transparent;
 }
 .e-spreadsheet .e-content.e-viewbrdr {
@@ -7975,6 +7995,12 @@ div.e-dlg-field-validation-error:before {
    color:@ssrow-filterhiglight-color;
 }
 
+/***********************SpreadsheetTextArea***********************************/
+
+   .e-ss-textarea, .e-ss-textarea:focus, .e-ss-textarea:hover{
+        border-color:@ss-textarea-color;
+    }
+
 /*-------------------------------------SpreadsheetCellType--------------------*/
 .e-spreadsheet .e-cellreadonly .e-datewidget .e-select{
 	 background:@ssheader-bgcolor;
@@ -8027,11 +8053,11 @@ div.e-dlg-field-validation-error:before {
 
 .e-ganttchart .milestone-top{
     
-    border-bottom-color:@gantt-milestone-bg-color !important;
+    border-bottom-color:@gantt-milestone-bg-color;
 }
 
 .e-ganttchart .milestone-bottom {
-    border-top-color:@gantt-milestone-bg-color !important;
+    border-top-color:@gantt-milestone-bg-color;
 }
 
 .e-ganttchart .e-taskbarname {
@@ -8104,7 +8130,7 @@ div.e-dlg-field-validation-error:before {
 }
 
 .e-ganttchart .e-gantt-parenttaskbar-progress {
-    .gantt-parent-progress-background();
+     background: rgb(red(@gantt-parent-task-bg-color),green(@gantt-parent-task-bg-color),blue(@gantt-parent-task-bg-color));
 }
 
 .e-ganttchart .e-gantt-parenttaskbar-innerdiv {

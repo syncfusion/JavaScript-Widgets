@@ -6,13 +6,13 @@
   font-weight: normal;
   font-style: normal;
 }
-.e-ribbon .clearAll:before {
+.e-ribbon .e-icon.clearAll:before {
     font-family: 'ej-ribbonfont';
     content: "\e161";
     font-size: 16px;
 }
 
-.e-ribbon .strikethrough:before {
+.e-ribbon .e-icon.strikethrough:before {
     font-family: 'ej-ribbonfont';
     content: "\e17d";
     font-size: 16px;
@@ -21,7 +21,7 @@
     top: -2px;
 }
 
-.e-ribbon .bold:before {
+.e-ribbon .e-icon.bold:before {
     font-family: 'ej-ribbonfont';
     content: "\e15a";    
 	font-size: 16px;
@@ -30,7 +30,7 @@
     top: -2px;
 }
 
-.e-ribbon .alignleft:before {
+.e-ribbon .e-icon.alignleft:before {
     font-family: 'ej-ribbonfont';
     content: "\e156";
     font-size: 16px;
@@ -39,7 +39,7 @@
     top: -2px;
 }
 
-.e-ribbon .aligncenter:before {
+.e-ribbon .e-icon.aligncenter:before {
     font-family: 'ej-ribbonfont';
     content: "\e155";
     font-size: 16px;
@@ -48,7 +48,7 @@
     top: -2px;
 }
 
-.e-ribbon .alignright:before {
+.e-ribbon .e-icon.alignright:before {
     font-family: 'ej-ribbonfont';
     content: "\e157";
     font-size: 16px;    
@@ -57,7 +57,7 @@
     top: -2px;
 }
 
-.e-ribbon .justify:before {
+.e-ribbon .e-icon.justify:before {
     font-family: 'ej-ribbonfont';
     content: "\e164";
     font-size: 16px;
@@ -65,15 +65,15 @@
     position: relative;
     top: -2px;
 }
-.e-ribbon .e-fontcolor:before {
+.e-ribbon .e-icon.e-fontcolor:before {
     font-family: 'ej-ribbonfont';
     content: "\e181";
 }
-.e-ribbon .e-fillcolor:before {
+.e-ribbon .e-icon.e-fillcolor:before {
     font-family: 'ej-ribbonfont';
     content: "\e180";
 }
-.e-ribbon .e-ribbonpaste:before {
+.e-ribbon .e-icon.e-ribbonpaste:before {
     font-family: 'ej-ribbonfont';
     content: "\e169";
     font-size: 36px;
@@ -82,7 +82,7 @@
     top: -4px;
 }
 
-.e-ribbon .e-ribboncut:before {
+.e-ribbon .e-icon.e-ribboncut:before {
     font-family: 'ej-ribbonfont';
     content: "\e15f";
     font-size: 16px;
@@ -90,13 +90,13 @@
     right: 4px;
 }
 
-.e-ribbon .e-ribboncopy:before {
+.e-ribbon .e-icon.e-ribboncopy:before {
     font-family: 'ej-ribbonfont';
     content: "\e15e";
     font-size: 16px;
 }
 
-.e-ribbon .e-ribbonitalic:before {
+.e-ribbon .e-icon.e-ribbonitalic:before {
     font-family: 'ej-ribbonfont';
     content: "\e163";
     font-size: 16px;
@@ -113,7 +113,7 @@
     top: -1px;
 }
 
-.e-ribbon .e-superscripticon:before {
+.e-ribbon .e-icon.e-superscripticon:before {
     font-family: 'ej-ribbonfont';
     content: "\e171";
     font-size: 16px;    
@@ -121,13 +121,13 @@
     top: -4px;
 }
 
-.e-ribbon .e-subscripticon:before {
+.e-ribbon .e-icon.e-subscripticon:before {
     font-family: 'ej-ribbonfont';
     content: "\e170";
     font-size: 16px;
 }
 
-.e-ribbon .e-indent:before {
+.e-ribbon .e-icon.e-indent:before {
     font-family: 'ej-ribbonfont';
     content: "\e174";
     font-size: 16px;   
@@ -136,7 +136,7 @@
     top: -2px;
 }
 
-.e-ribbon .e-outdent:before {
+.e-ribbon .e-icon.e-outdent:before {
     font-family: 'ej-ribbonfont';
     content: "\e175";
     font-size: 16px;   
@@ -145,7 +145,7 @@
     top: -2px;
 }
 
-.e-ribbon .e-bullet:before {
+.e-ribbon .e-icon.e-bullet:before {
     font-family: 'ej-ribbonfont';
     content: "\e15b";
     font-size: 16px;    
@@ -154,7 +154,7 @@
     top: -2px;
 }
 
-.e-ribbon .e-numbericon:before {
+.e-ribbon .e-icon.e-numbericon:before {
     font-family: 'ej-ribbonfont';
     content: "\e168";
     font-size: 16px;   
@@ -163,7 +163,7 @@
     top: -3px;
 }
 
-.e-ribbon .e-table:before {
+.e-ribbon .e-icon.e-table:before {
     font-family: 'ej-ribbonfont';
     content: "\e172";
     font-size: 30px;
@@ -171,7 +171,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-uppercase:before {
+.e-ribbon .e-icon.e-uppercase:before {
     font-family: 'ej-ribbonfont';
     content: "\e17e";
     font-size: 16px;   
@@ -180,7 +180,7 @@
     top: -2px;
 }
 
-.e-ribbon .e-lowercase:before {
+.e-ribbon .e-icon.e-lowercase:before {
     font-family: 'ej-ribbonfont';
     content: "\e17c";
     font-size: 16px;   
@@ -197,7 +197,7 @@
     right: -2px; 
     top: -6px;
 }
-.e-ribbon .e-Alignment:before{
+.e-ribbon .e-icon.e-Alignment:before{
     text-indent: 13px;
 }
 .e-ribbon .e-colorwidget .e-tool-icon .e-selected-color {
@@ -213,7 +213,7 @@
     right: -2px; 
     top: -6px;
 }
-.e-ribbon .e-sort:before {
+.e-ribbon .e-icon.e-sort:before {
     font-family: 'ej-ribbonfont';
     content: "\e17a";
     font-size: 16px;
@@ -221,7 +221,7 @@
     position: relative;
     top: -2px;
 }
-.e-ribbon .e-border:before {
+.e-ribbon .e-icon.e-border:before {
     font-family: 'ej-ribbonfont';
     content: "\e17b";
     font-size: 16px;
@@ -230,7 +230,7 @@
     top: -2px;
 }
 
-.e-ribbon .e-picture:before {
+.e-ribbon .e-icon.e-picture:before {
     font-family: 'ej-ribbonfont';
     content: "\e16a";
     font-size: 30px;
@@ -238,7 +238,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-video:before {
+.e-ribbon .e-icon.e-video:before {
     font-family: 'ej-ribbonfont';
     content: "\e179";
     font-size: 30px;
@@ -246,7 +246,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-chart:before {
+.e-ribbon .e-icon.e-chart:before {
     font-family: 'ej-ribbonfont';
     content: "\e15c";
     font-size: 30px;
@@ -254,7 +254,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-shape:before {
+.e-ribbon .e-icon.e-shape:before {
     font-family: 'ej-ribbonfont';
     content: "\e16e";
     font-size: 30px;
@@ -262,7 +262,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-comment:before {
+.e-ribbon .e-icon.e-comment:before {
     font-family: 'ej-ribbonfont';
     content: "\e15d";
     font-size: 30px;
@@ -270,7 +270,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-text:before {
+.e-ribbon .e-icon.e-text:before {
     font-family: 'ej-ribbonfont';
     content: "\e173";
     font-size: 30px;
@@ -278,7 +278,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-hyperlink:before {
+.e-ribbon .e-icon.e-hyperlink:before {
     font-family: 'ej-ribbonfont';
     content: "\e162";
     font-size: 30px;
@@ -286,7 +286,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-datetimenew:before {
+.e-ribbon .e-icon.e-datetimenew:before {
     font-family: 'ej-ribbonfont';
     content: "\e160";
     font-size: 30px;
@@ -294,7 +294,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-print:before {
+.e-ribbon .e-icon.e-print:before {
     font-family: 'ej-ribbonfont';
     content: "\e16b";
     font-size: 30px;
@@ -302,7 +302,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-equation:before {
+.e-ribbon .e-icon.e-equation:before {
     font-family: 'ej-ribbonfont';
     content: "\e158";
     font-size: 30px;
@@ -310,7 +310,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-save:before {
+.e-ribbon .e-icon.e-save:before {
     font-family: 'ej-ribbonfont';
     content: "\e16d";
     font-size: 30px;
@@ -318,7 +318,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-printlayout:before {
+.e-ribbon .e-icon.e-printlayout:before {
     font-family: 'ej-ribbonfont';
     content: "\e16c";
     font-size: 30px;
@@ -326,7 +326,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-new:before {
+.e-ribbon .e-icon.e-new:before {
     font-family: 'ej-ribbonfont';
     content: "\e167";
     font-size: 30px;
@@ -334,7 +334,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-zoomin:before {
+.e-ribbon .e-icon.e-zoomin:before {
     font-family: 'ej-ribbonfont';
     content: "\e185";
     font-size: 28px;
@@ -342,7 +342,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-zoomout:before {
+.e-ribbon .e-icon.e-zoomout:before {
     font-family: 'ej-ribbonfont';
     content: "\e186";
     font-size: 28px;
@@ -350,7 +350,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-fullscreen:before {
+.e-ribbon .e-icon.e-fullscreen:before {
     font-family: 'ej-ribbonfont';
     content: "\e183";
     font-size: 28px;
@@ -358,7 +358,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-undo:before {
+.e-ribbon .e-icon.e-undo:before {
     font-family: 'ej-ribbonfont';
     content: "\e184";
     font-size: 28px;
@@ -366,7 +366,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-redo:before { 
+.e-ribbon .e-icon.e-redo:before { 
     font-family: 'ej-ribbonfont';
     content: "\e182";
     font-size: 28px;
@@ -374,7 +374,7 @@
 	text-indent:-8px;
 }
 
-.e-ribbon .e-dot:before {
+.e-ribbon .e-icon.e-dot:before {
     font-family: 'ej-ribbonfont';
     content: "\e17f";
 }

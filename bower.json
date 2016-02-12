@@ -1,6 +1,6 @@
 {
   "name": "syncfusion-javascript",
-  "version": "13.4.0.53",
+  "version": "13.4.0.58",
   "description": "Bower package of Syncfusion.JavaScript.",
   "dependencies": {
     "jquery": "*",
