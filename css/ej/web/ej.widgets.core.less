@@ -5049,7 +5049,11 @@ background-image: url('../@{font-path}/icons-white.png');
         width: auto;
         vertical-align: middle;
     }
-
+	
+	.e-grid .e-rowcell:empty {
+		height:14px !important;
+	}
+	
     .e-grid .e-verticallines .e-rowcell,
     .e-grid .e-verticallines .e-normaledit td.e-rowcell,
     .e-grid .e-verticallines .e-detailrowcollapse,
@@ -5575,6 +5579,9 @@ background-image: url('../@{font-path}/icons-white.png');
         font-weight: lighter;
         text-align: center;
         border-top-width: @border-size;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
     }
 
     .e-grid .e-cloneproperties {
@@ -10800,7 +10807,7 @@ border-right: medium none;
     .e-scheduledialog .e-quicksubject {
         padding-bottom: 4px;
         height: auto;
-        width: 90%;
+        width: 220px;
         float: left;
     }
 
@@ -14118,11 +14125,11 @@ slideRight Animate
         top: 3px;
     }
    .e-ribbon.e-rbnwithqat .e-rbnquickaccessbar{
-        height:30px;
+       height: 36px;
    }
    .e-ribbon.e-rbnwithqat .e-splitbtnqatdiv,.e-ribbon.e-rbnwithqat .e-qatooldiv,.e-ribbon.e-rbnwithqat .e-qaresizebtndiv{
        display:table-cell;
-	   padding:3px;
+	   padding: 3px 3px 2px 3px;
    }
   .e-ribbon.e-rbnwithqat .e-qatexpand:before {
       content: "\e7cd";
@@ -14189,10 +14196,10 @@ slideRight Animate
   font-size: 5px;  
   padding-top: 35%;
 }
-.e-ribbon.e-rbnwithqat.e-js > .e-header {
+.e-ribbon.e-rbnwithqatabove.e-js > .e-header {
   height: 68px;
 }
-.e-ribbon.e-rbnwithqat .e-header > li {
+.e-ribbon.e-rbnwithqatabove .e-header > li {
   padding-top: 0px;
   margin-top: 35px !important;
 }
@@ -17237,7 +17244,7 @@ slideRight Animate
         overflow: unset;
     }
 
-    .e-ss-hlcellrules:before, .e-ss-greaterthan:before, .e-ss-lessthan:before, .e-ss-between:before, .e-ss-equalto:before, .e-ss-textcontains:before, .e-ss-dateoccur:before, .e-ss-clearrules:before {
+    .e-ss-hlcellrules:before, .e-ss-greaterthan:before, .e-ss-lessthan:before, .e-ss-between:before, .e-ss-equalto:before, .e-ss-textcontains:before, .e-ss-dateoccur:before, .e-ss-clearrules:before , .e-ss-createrule:before {
         font-family: "ej-xlfont";
         font-size: 13px;
         text-indent: 3px;
@@ -17277,7 +17284,12 @@ slideRight Animate
         content: "\e654";
         font-size: 15px;
     }
-
+     
+	 .e-ss-createrule:before {
+        content: "\e6b0";
+        font-size: 15px;
+    }
+	
     .e-ss-goto:before {
         content: "\e67f";
         font-family: "ej-xlfont";
@@ -17941,7 +17953,7 @@ slideRight Animate
     /*--------------------------------- Format as table ----------------------------------*/
     .e-menu-wrap .e-formatastable {
         width: 329px;
-        height: 330px;
+        height: 50%;
         overflow-x: hidden;
     }
 

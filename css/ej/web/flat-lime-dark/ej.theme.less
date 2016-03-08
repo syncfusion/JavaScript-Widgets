@@ -345,7 +345,7 @@
 }
 
 .gantt-parent-progress-background() {
-    @temp-gradient:@gantt-parent-progress-stbg-color, @gantt-parent-progress-enbg-color;
+    @temp-gradient:none;
     .custom-gradient(@temp-gradient, @gantt-parent-progress-stbg-color, @gantt-parent-progress-enbg-color, 0%, 0% );
 }
 
@@ -2260,10 +2260,17 @@ color:#5c5c5c;
 
 
 /*------------DatePicker themes -------------*/
-.e-datepicker table td.e-hidedate
+.e-datepicker table td.e-disable ,
+.e-datepicker.e-dp-restrict-show table td.e-hidedate
 {
+    opacity:1;
+    color:@disable-datepicker-text;
+    visibility:visible;
+}
+.e-datepicker table td.e-hidedate{
     visibility: hidden;
 }
+
 .e-datewidget .e-in-wrap
 {
  border-color: @content-border-color;
@@ -2353,7 +2360,8 @@ color:#5c5c5c;
 	box-shadow: 0 0 0 transparent inset;
 }
 
-.e-datepicker table td.e-disable:hover {
+.e-datepicker table td.e-disable:hover,
+.e-datepicker table td.e-hidedate:hover {
     background: none;
     border-color: none;
     color: @disable-datepicker-text;
@@ -2450,7 +2458,10 @@ color:#5c5c5c;
 }
 
 .e-datepicker.e-popup.e-disable table td.e-disable:hover,
-.e-datepicker.e-popup.e-disable .e-disable.e-select:hover {
+.e-datepicker.e-popup.e-disable table td.e-hidedate:hover,
+.e-datepicker.e-popup.e-disable .e-disable.e-select:hover,
+.e-datepicker.e-popup.e-disable .e-hidedate.e-select:hover
+ {
     background: none;
     border-color: none;
     color: @disable-datepicker-text;
@@ -8132,7 +8143,7 @@ div.e-dlg-field-validation-error:before {
 }
 
 .e-ganttchart .e-gantt-parenttaskbar-progress {
-     background: rgb(red(@gantt-parent-task-bg-color),green(@gantt-parent-task-bg-color),blue(@gantt-parent-task-bg-color));
+     .gantt-parent-progress-background();
 }
 
 .e-ganttchart .e-gantt-parenttaskbar-innerdiv {
