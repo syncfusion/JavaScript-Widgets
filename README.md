@@ -1,4 +1,4 @@
-## About Syncfusion JavaScript
+﻿## About Syncfusion JavaScript
 
 Syncfusion Essential JavaScript is a comprehensive collection of over 80+ enterprise-grade HTML5 JavaScript components for building modern web applications. It includes all the UI controls that are typically required for building line-of-business (LOB) applications including charts, grids, gantt, scheduler, diagram and much more.
 ## Configure the Syncfusion JavaScript Bower
@@ -99,7 +99,7 @@ In case of any questions regarding the use of Syncfusion JavaScript, please [con
 
 ## Release Notes
 
-Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes at Syncfusion](http://help.syncfusion.com/js/release-notes/v13.4.0.53# "").
+Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes at Syncfusion](http://help.syncfusion.com/js/release-notes/v13.4.0.63# "").
 
 ## License Information
 
