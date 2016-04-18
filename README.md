@@ -91,7 +91,7 @@ Take a look at the Syncfusion JavaScript Web and Mobile live demos.
 
 ### Offline Demos
 
-Download our JavaScript Platform installer from here <https://www.syncfusion.com/downloads/javascript/>
+Download our JavaScript Platform installer from [here](https://www.syncfusion.com/downloads/javascript/).
 
 ## Support
 
@@ -103,4 +103,4 @@ Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes a
 
 ## License Information
 
-For licensing information about Syncfusion JavaScript, see the [Syncfusion License Agreements](https://www.syncfusion.com/sales/licensing# "") page.
+For licensing information about Syncfusion JavaScript, Download the Syncfusion License Agreements from [here](https://www.syncfusion.com/content/downloads/syncfusion_license.pdf).
