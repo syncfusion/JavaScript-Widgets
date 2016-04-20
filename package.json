@@ -1,0 +1,50 @@
+{
+    "name": "syncfusion-javascript",
+    "description": "Essential Studio for Javascript",
+    "version": "14.1.0.41",
+    "registry": "github",
+    "keywords": [
+        "syncfusion",
+        "essential javascript",
+        "essential studio"
+    ],
+    "homepage": "http://www.syncfusion.com/products/javascript",
+    "author": "Syncfusion",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/syncfusion/JavaScript-Widgets.git"
+    },
+    "bugs": {
+        "url": "https://www.syncfusion.com/support"
+    },
+    "license": "Syncfusion",
+    "engines": {
+        "node": ">=0.10.1"
+    },
+    "files": [
+        "Scripts/",
+        "Content/"
+    ],
+    "jspm": {
+        "main": "false",
+        "format": "amd",
+        "shim": {
+            "Scripts/**/*": {
+                "deps": [
+                    "jquery",
+                    "jquery-easing",
+                    "jsrender"
+                ]
+            }
+        },
+        "files": [
+            "Scripts",
+            "Content"
+        ],
+        "dependencies": {
+            "jquery": "npm:jquery@^2.2.3",
+            "jquery-easing": "npm:jquery.easing@^1.3.2",
+            "jsrender": "npm:jsrender@^0.9.75"
+        }
+    }
+}
