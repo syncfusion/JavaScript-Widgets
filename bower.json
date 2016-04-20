@@ -8,5 +8,8 @@
     "jquery.easing": "*",
     "Microsoft.jQuery.Unobtrusive.Ajax": "*",
     "Microsoft.jQuery.Unobtrusive.Validation": "*"
-  }
+  },
+  "ignore": [
+    "package.json"
+  ]
 }
