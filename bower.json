@@ -1,13 +1,38 @@
+
+
 {
+
   "name": "syncfusion-javascript",
+
   "version": "14.1.41",
-    "description": "Bower package of Syncfusion.JavaScript.",
-    "ignore": [ "package.json","Scripts/jquery.unobtrusive-ajax.min.js", "Scripts/jquery.validate.unobtrusive.min" ],
+
+  "description": "Bower package of Syncfusion.JavaScript.",
+
+  "ignore": [
+
+    ".npmignore",
+
+    "package.json",
+
+    "Scripts/jquery.unobtrusive-ajax.min.js",
+
+    "Scripts/jquery.validate.unobtrusive.min.js"
+
+  ],
+
   "dependencies": {
+
     "jquery": "*",
+
     "jquery-validation": "*",
+
     "jquery.easing": "*",
+
     "Microsoft.jQuery.Unobtrusive.Ajax": "*",
+
     "Microsoft.jQuery.Unobtrusive.Validation": "*"
+
   }
+
 }
+
