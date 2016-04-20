@@ -1,0 +1,54 @@
+
+
+{
+
+  "name": "syncfusion-javascript",
+
+  "version": "14.1.41",
+
+  "description": "Npm package of Syncfusion.JavaScript.",
+
+  "repository": {
+
+    "type": "git",
+
+    "url": "git+https://github.com/syncfusion/JavaScript-Widgets.git"
+
+  },
+
+  "keywords": [
+
+    "syncfusion",
+
+    "ej",
+
+    "essential",
+
+    "javascript"
+
+  ],
+
+  "author": "Syncfusion Inc",
+
+  "license": "SEE LICENSE IN README.md",
+
+  "dependencies": {
+
+    "jquery": "*",
+
+    "jquery-validation": "*",
+
+    "jquery.easing": "*"
+
+  },
+
+  "bugs": {
+
+    "url": "https://github.com/syncfusion/JavaScript-Widgets/issues"
+
+  },
+
+  "homepage": "https://github.com/syncfusion/JavaScript-Widgets#readme"
+
+}
+
