@@ -1,7 +1,7 @@
 /*!
 *  filename: ej.theme.css
-*  version : 14.1.0.41
-*  Copyright Syncfusion Inc. 2001 - 2014. All rights reserved.
+*  version : 14.1.0.46
+*  Copyright Syncfusion Inc. 2001 - 2016. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
 *  licensing@syncfusion.com. Any infringement will be prosecuted under
@@ -249,6 +249,12 @@
 }
 .e-grid .e-rowcell.e-updatedtd.e-active {
   color: white;
+}
+.e-activefocusout.e-grid .e-numericitem.e-active,
+.e-activefocusout.e-grid .e-groupdroparea,
+.e-activefocusout.e-grid td.e-active,
+.e-activefocusout.e-grid td.e-cellselectionbackground {
+  background: #8c8c8c;
 }
 .e-grid td.e-active,
 .e-grid .e-form-titlebar {
@@ -571,7 +577,7 @@
   color: #dddddd;
   vertical-align: baseline;
 }
-.e-ejinputtext:focus {
+.e-grid .e-ejinputtext:focus {
   box-shadow: 0 0 5px #ababab;
 }
 .e-grid .e-summaryrow {
@@ -9114,8 +9120,8 @@ input.e-fe-dialog-text,
 }
 .e-olapclient .orderLbl,
 .e-olapclient .sortingLbl {
-  margin-top: -23px;
-  position: absolute;
+  position: relative;
+  padding-top: 12px;
 }
 .e-olapclient .filterValueLbl {
   margin-top: -5px !important;
@@ -9134,7 +9140,7 @@ input.e-fe-dialog-text,
   position: absolute;
 }
 .e-olapclient .e-olapclient .filterLbl {
-  margin-top: -40px;
+  margin-top: -23px;
 }
 .e-olapclient .measureListLbl {
   margin-top: 3px;
@@ -9240,9 +9246,6 @@ input.e-fe-dialog-text,
 .e-olapclient .editorPara {
   margin: 0 0 7px;
 }
-.e-olapclient .dialogPara {
-  margin-top: 15px;
-}
 .e-olapclient .loadReportTbl {
   margin: 10px 0px 20px 0px;
 }
@@ -9251,7 +9254,7 @@ input.e-fe-dialog-text,
 }
 .e-olapclient .dialogInput {
   float: right;
-  margin-top: -31px;
+  margin: 10px 0px 17px 7px;
 }
 .e-olapclient .checkAll,
 .e-olapclient .unCheckAll {
@@ -11088,6 +11091,9 @@ ej-ribbon {
   background: black;
   border-color: #494949;
 }
+.e-ribbon.e-rtl .e-groupdiv .e-gallerycontent {
+  border-right-color: #494949;
+}
 .e-ribbon .e-groupdiv .e-gallscrollcontent .e-content,
 .e-ribbon .e-resizediv .e-gallscrollcontent .e-content {
   background: black;
@@ -11679,15 +11685,15 @@ ej-ribbon {
 .e-kanban .e-headercell .e-totalcard {
   color: white;
 }
-.e-kanban .e-headercell .e-limits,
+.e-kanban .e-limits,
 .e-kanban .e-rowcell .e-shrinklabel {
   color: white;
 }
 .e-kanban .e-swimlanerow .e-slcount {
   color: white;
 }
-.e-kanban .e-headercell .e-minlimit,
-.e-kanban .e-headercell .e-maxlimit {
+.e-kanban .e-minlimit,
+.e-kanban .e-maxlimit {
   color: #dddddd;
 }
 .e-kanban .e-headercell .e-totalcount,
@@ -11887,6 +11893,15 @@ ej-ribbon {
 }
 .e-kanban.e-rtl .e-kanbancard {
   border-color: #494949 #30c5f9 #494949 #494949;
+}
+.e-kanban .e-customaddbutton {
+  border-color: #cee292;
+}
+.e-kanban .e-columnadd {
+  color: #cee292;
+}
+.e-kanban .e-customtoolbarseparator {
+  border-right: 1px solid #777777;
 }
 
 /* need verify with UX team*/
@@ -12551,6 +12566,11 @@ div.e-dlg-field-validation-error:before {
 }
 .e-spreadsheet .e-cellreadonly .e-ddl .e-select {
   background: black;
+}
+/*----------------------------Activation Panel-------------------------*/
+
+.e-spreadsheet .e-spreadsheetactpanel {
+  border-left-color: #494949;
 }
 /*-------------------------------------SpreadSheet End -----------------------*/
 
