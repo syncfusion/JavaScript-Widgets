@@ -55,7 +55,8 @@
         "Content/"
     ],
     "jspm": {
-        "main": "false",
+        "registry" : "github",
+        "main": false,
         "format": "amd",
         "files": [
             "Scripts",
