@@ -55,7 +55,6 @@
         "Content/"
     ],
     "jspm": {
-        "registry" : "github",
         "main": false,
         "format": "amd",
         "files": [
@@ -63,9 +62,9 @@
             "Content"
         ],
         "dependencies": {
-            "jquery": "npm:jquery@^2.2.3",
-            "jquery-easing": "npm:jquery.easing@^1.3.2",
-            "jsrender": "npm:jsrender@^0.9.75"
+            "jquery": "*",
+            "jquery-easing": "*",
+            "jsrender": "*"
         }
     }
 }
