@@ -38,7 +38,7 @@
 
     "jquery-validation": "*",
 
-    "jquery.easing": "*"
+    "jquery-easing": "*"
 
   },
 
