@@ -57,20 +57,24 @@
     "jspm": {
         "main": false,
         "format": "amd",
+        "registry" : "npm",
         "files": [
             "Scripts",
             "Content"
         ],
         "dependencies": {
             "jquery": "*",
-            "jquery-easing": "github:gdsmith/jquery.easing",
+            "jquery-easing": "*",
             "jsrender": "*"
         },
         "ignore": [
           "Scripts/jquery.unobtrusive-ajax.min.js",
-          "Scripts/jquery.validate.unobtrusive.min.js",          
+          "Scripts/jquery.validate.unobtrusive.min.js",
+          "Scripts/jsrender.min.js",    
+          "Scripts/ej.widgets.all*.js",
+          "Scripts/ej.widgets.all.min.map",
           "Scripts/web/ej.web.all*.js",
-          "Scripts/web/ej.web.all*.map"
+          "Scripts/web/ej.web.all.min.map"
        ]
     }
 }
