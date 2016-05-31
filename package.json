@@ -65,7 +65,9 @@
         "dependencies": {
             "jquery": "*",
             "jquery-easing": "*",
-            "jsrender": "*"
+            "jsrender": "*",
+            "jquery-validation": "*",
+            "jquery-validation-unobtrusive": "*"
         },
         "ignore": [
           "Scripts/jquery.unobtrusive-ajax.min.js",
