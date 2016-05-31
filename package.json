@@ -63,20 +63,14 @@
         ],
         "dependencies": {
             "jquery": "*",
-            "jquery-easing": "*",
+            "jquery-easing": "github:gdsmith/jquery.easing",
             "jsrender": "*"
         },
         "ignore": [
-
-          ".npmignore",
-
-          "package.json",
-
           "Scripts/jquery.unobtrusive-ajax.min.js",
-
-          "Scripts/jquery.validate.unobtrusive.min.js",
-          
-          "Scripts/web/ej.web.all.*.js"
+          "Scripts/jquery.validate.unobtrusive.min.js",          
+          "Scripts/web/ej.web.all*.js",
+          "Scripts/web/ej.web.all*.map"
        ]
     }
 }
