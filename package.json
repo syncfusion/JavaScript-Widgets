@@ -73,6 +73,12 @@
           "Scripts/jsrender.min.js",    
           "Scripts/ej.widgets.all*.js",
           "Scripts/ej.widgets.all.min.map",
+          "Scripts/common/ej.webform.min.js",
+          "Scripts/common/ej.webform.min.map",
+          "Scripts/common/ej.widget.angular.min.js",
+          "Scripts/common/ej.widget.angular.min.map",
+          "Scripts/common/ej.widget.ko.min.js",
+          "Scripts/common/ej.widget.ko.min.map",
           "Scripts/web/ej.web.all*.js",
           "Scripts/web/ej.web.all.min.map"
        ]
