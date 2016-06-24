@@ -4,7 +4,7 @@
 
   "name": "syncfusion-javascript",
 
-  "version": "14.1.46",
+  "version": "14.2.26",
 
   "description": "Bower package of Syncfusion.JavaScript.",
 
@@ -22,7 +22,7 @@
 
   "dependencies": {
 
-    "jquery": "*",
+    "jquery": "1.7.0-2.2.4",
 
     "jquery-validation": "*",
 

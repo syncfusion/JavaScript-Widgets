@@ -4,7 +4,7 @@
 
   "name": "syncfusion-javascript",
 
-  "version": "14.1.46",
+  "version": "14.2.26",
 
   "description": "Npm package of Syncfusion.JavaScript.",
 
@@ -34,7 +34,7 @@
 
   "dependencies": {
 
-    "jquery": "*",
+    "jquery": ">=1.7.0 <3.0.0",
 
     "jquery-validation": "*",
 
