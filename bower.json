@@ -22,7 +22,7 @@
 
   "dependencies": {
 
-    "jquery": "1.7.0 <= 2.2.4",
+    "jquery": "2.2.4",
 
     "jquery-validation": "*",
 
