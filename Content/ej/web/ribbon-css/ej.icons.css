@@ -11,7 +11,7 @@
     font-family: 'ej-ribbonfont';
     content: "\e932";
     font-size: 24px;
-    text-indent: -6px;
+    text-indent: -7px;
     position: relative;
     top: -6px;
 }
@@ -20,7 +20,7 @@
     font-family: 'ej-ribbonfont';
     content: "\e933";
     font-size: 24px;
-    text-indent: -6px;
+    text-indent: -7px;
     position: relative;
     top: -6px;
 }
@@ -29,26 +29,27 @@
     font-family: 'ej-ribbonfont';
     content: "\e934";
     font-size: 24px;
-    text-indent: -6px;
+    text-indent: -7px;
     position: relative;
     top: -6px;    
 }
 .e-ribbon .e-resaligncenter:before {
     font-family: 'ej-ribbonfont';
-    content: "\e902";
-    font-size: 24px;
+    content: "\e90d";
+    font-size: 21px;
     position: relative;
-    top: -6px;
+    top: -4px;
     left: -5px;
 }
 
 .e-ribbon .e-resalignleft:before {
     left: -5px;
     font-family: 'ej-ribbonfont';
-    content: "\e900";
-    font-size: 24px;
+    content: "\e910";
+    font-size: 18px;
     position: relative;
-    top: -6px;
+    top: -4px;
+	left:-5px;
 }
 /**/
 
@@ -130,7 +131,39 @@
     position: relative;
     top: -5px;
 }
-
+.e-ribbon .e-rescut:before{
+	font-family: 'ej-ribbonfont';
+    content: "\e916";
+    position: relative;
+    right: 4px;
+	font-size: 21px;
+    text-indent: 4px;
+    top: -1px;
+}
+.e-ribbon .e-rescopy:before{
+font-family: 'ej-ribbonfont';
+    content: "\e915";
+    font-size: 21px;
+    text-indent: -3px;
+    top: -2px;
+    position: relative;
+}
+.e-ribbon .e-resclearAll:before{
+	font-family: 'ej-ribbonfont';
+    content: "\e914";
+    position: relative;
+	font-size: 21px;
+    text-indent: -3px;
+    top: -2px;
+}
+.e-ribbon .e-respaste:before{
+	font-family: 'ej-ribbonfont';
+    content: "\e917";
+    font-size: 28px;
+    position: relative;
+    left: -7px;
+    top: -6px;
+}
 .e-ribbon .e-restable:before {
     font-family: 'ej-ribbonfont';
     content: "\e92d";
@@ -158,13 +191,14 @@
     text-indent: -6px;    
     position: relative;
     top: -6px;
+	 left: -3px;
 }
 .e-ribbon .e-resindent:before {
     font-family: 'ej-ribbonfont';
     content: "\e944";
     font-size: 24px;
     text-indent: -6px;
-    left: 0;
+    left: -3px;
     position: relative;
     top: -6px;
 }
@@ -174,7 +208,7 @@
     content: "\e943";
     font-size: 24px;
     text-indent: -6px;
-    left: 0;
+    left: -3px;
     position: relative;
     top: -6px;
 }
@@ -184,7 +218,7 @@
     content: "\e942";
     font-size: 24px;
     text-indent: -6px;
-    left: 0;
+    left: -3px;
     position: relative;
     top: -6px;
 }
@@ -194,7 +228,7 @@
     content: "\e941";
     font-size: 24px;
     text-indent: -6px;
-    left: 0;
+    left: -3px;
     position: relative;
     top: -6px;
 }
@@ -239,13 +273,6 @@
 }
 
 
-.e-ribbon.e-responsive .e-resaligncenter:before, .e-ribbon.e-responsive .e-resalignleft:before {
-    left: -5px;
-}
-
-.e-ribbon.e-responsive .e-resizebtn .e-Print.e-icon:before {
-    top: 8px;
-}
 
 .e-ribbon.e-responsive .e-resfillcolor:before {
     font-family: 'ej-ribbonfont';
@@ -359,10 +386,6 @@
 .e-ribbon .e-icon.e-fillcolor:before {
     font-family: 'ej-ribbonfont';
     content: "\e180";
-}
-
-.e-ribbon.e-responsive .e-icon.e-ribbonpaste:before {
-    font-size: 28px !important;
 }
 
 .e-ribbon .e-icon.e-ribbonpaste:before {
@@ -794,6 +817,40 @@
         margin: 20px;
     }
 
+	  .e-ribbon.e-responsive .e-resborder:before,
+        .e-ribbon.e-responsive .e-resoutdent:before,
+        .e-ribbon.e-responsive .e-resindent:before,
+        .e-ribbon.e-responsive .e-resbullet:before {
+            font-size: 32px;
+            top: -10px;
+        }
+
+        .e-ribbon.e-responsive .e-icon.e-table:before {
+            line-height: 16px;
+            text-indent: -11px;
+        }
+        .e-ribbon.e-responsive .e-icon.e-comment:before {
+            position: relative;
+            left: -4px;
+            top: 6px;
+        }
+        .e-ribbon.e-responsive .e-table  {
+                margin-right:  8px;
+                margin-top:  6px;
+        }
+        .e-ribbon.e-responsive .e-responsivecontent .e-resnew:before,
+        .e-ribbon.e-responsive .e-responsivecontent .e-resredo:before,
+        .e-ribbon.e-responsive .e-responsivecontent .e-resundo:before,
+        .e-ribbon.e-responsive .e-responsivecontent .e-resshape:before,
+        .e-ribbon.e-responsive .e-responsivecontent .e-reschart:before,
+        .e-ribbon.e-responsive .e-responsivecontent .e-resprintlayout:before,
+        .e-ribbon.e-responsive .e-responsivecontent .e-respicture:before,
+        .e-ribbon.e-responsive .e-responsivecontent .e-resvideo:before {
+            font-size: 33px;
+            text-indent: -10px;
+            top: -9px;
+        }
+	
 .e-headings {
     background-color: white;
     border: 1px solid #a0a0a0;
@@ -878,10 +935,6 @@
 
 .lighttheme .e-ribbon .e-icon {
     color: #515151;
-}
-
-.darktheme .e-ribbon .e-icon {
-    color: #BABABA;
 }
 
 .darktheme .e-contenteditor {

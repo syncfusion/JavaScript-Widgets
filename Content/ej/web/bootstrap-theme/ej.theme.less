@@ -637,7 +637,7 @@
 @kanban-select-cardhead-border:lighten(@default-border-color,3%);
 @kanban-cardhead-border:lighten(@default-border-color,3%);
 @kanban-toolbar-border:@default-border-color;
-
+@kanban-filter-done-stcolor: @active-bg-stcolor;
 .kanban-cell-bg(){
 	.custom-gradient(@default-gradient-color, lighten(@default-bg-stcolor, 4%), @default-bg-endcolor, 0%, 0%);
 }
@@ -1024,6 +1024,10 @@ color: white;
  .row-Hover();
  color:@hover-font-color;
  //background-color:@hover-bg-endcolor;
+}
+.e-grid tr.e-traverse  {
+ .row-Hover();
+ color:@hover-font-color;
 }
 .e-grid .e-scrollcss {
  .gheader-gradient();
@@ -2104,7 +2108,7 @@ color:#5c5c5c;
 {
 	box-shadow: 0 0 2px @shadow-bg-color;   
 }
-.e-btn.e-select,.e-btn.e-disable.e-select:hover,.e-tbtn.e-disable
+.e-btn.e-select,.e-btn.e-ntouch.e-disable.e-select:hover, .e-btn.e-disable.e-select:hover,.e-tbtn.e-disable
 {
     .bs-default-gradient();
     color: @default-font-color;
@@ -2114,27 +2118,27 @@ color:#5c5c5c;
 .e-btn.e-disable,.e-btn.e-disable .e-icon{
     cursor:default;
 }
-.e-btn.e-select:hover
+.e-btn.e-ntouch.e-select:hover
 {
     .hover-gradient();
     border-color: @hover-border-color;
     color:  @hover-font-color;
 }
-.e-btn.e-select:active ,.e-btn.e-disable.e-active.e-select:hover, .e-tbtn.e-active
+.e-btn.e-ntouch.e-select:active, .e-btn.e-select:active ,.e-btn.e-ntouch.e-disable.e-active.e-select:hover, .e-btn.e-disable.e-active.e-select:hover, .e-tbtn.e-active
 {
     .active-gradient();
     border-color: @active-border-color;
     color:  @active-font-color;
 }
-.e-drp-btn.e-select,.e-btn.e-select .e-icon,.e-btn.e-select.e-disable:hover,.e-btn.e-select.e-disable:hover .e-icon
+.e-drp-btn.e-select,.e-btn.e-select .e-icon,.e-btn.e-ntouch.e-select.e-disable:hover,.e-btn.e-select.e-disable:hover,.e-btn.e-ntouch.e-select.e-disable:hover .e-icon, .e-btn.e-ntouch.e-select.e-disable:hover .e-icon
 {
     color: @default-icon-color;
 }
-.e-drp-btn.e-select:hover,.e-btn.e-select:hover .e-icon
+.e-drp-btn.e-ntouch.e-select:hover,.e-btn.e-ntouch.e-select:hover .e-icon, .e-drp-btn.e-select:hover,.e-btn.e-ntouch.e-select:hover .e-icon
 {
     color:  @hover-icon-color;
 }
-.e-drp-btn.e-select:active,.e-btn.e-select:active .e-icon,.e-btn.e-active .e-icon,.e-btn.e-disable.e-select.e-active:hover .e-icon
+.e-drp-btn.e-ntouch.e-select:active, .e-drp-btn.e-select:active,.e-btn.e-ntouch.e-select:active .e-icon, .e-btn.e-select:active .e-icon,.e-btn.e-active .e-icon,.e-btn.e-ntouch.e-disable.e-select.e-active:hover .e-icon,.e-btn.e-ntouch.e-disable.e-select.e-active:hover .e-icon
 {
     color:  @active-icon-color;
 }
@@ -2305,6 +2309,7 @@ color:#5c5c5c;
 .e-colorpicker .e-color-image, .e-presetWrapper .e-color-image, .e-presetWrapper.e-menu.e-context .e-color-image.e-mhover {
     background-image: @colorpicker-image;
     background-color: transparent;
+    filter: none;
 }
 
 .e-presetWrapper .e-presetHeader, .e-colorpicker .e-element .e-icon:before {
@@ -2333,6 +2338,12 @@ color:#5c5c5c;
 .e-presetWrapper.e-menu.e-context li.e-list {
     background: @content-bg-color;
 }
+
+.e-colorpicker .e-context.e-menu .e-mhover > a, .e-colorpicker .e-context.e-menu .e-mhover > span,
+.e-colorpicker .e-context.e-menu .e-mfocused, .e-colorpicker .e-context.e-menu .e-mfocused > a, .e-colorpicker .e-context.e-menu .e-mfocused > span {
+    background: transparent;
+}
+ 
 
 
 
@@ -2942,7 +2953,7 @@ color:#5c5c5c;
 
 
 .svg-rotate-ie {
-     cursor: url("../common-images/Rotate.cur"), url("/themes/common-images/Rotate.cur"), url("../themes/common-images/Rotate.cur"), default;
+     cursor: url("../common-images/Rotate.cur"), default;
     }
 .svg-rotate {
      cursor: url("../common-images/Rotate.cur"), default;
@@ -3576,7 +3587,7 @@ word-break: break-all;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   border-color: @content-border-color;
 }
-.e-menu.e-horizontal > .e-list > ul:after {
+.e-menu.e-horizontal > .e-list.e-active.e-menu-arrow:after {
     border-color: transparent transparent @content-bg-color;
     border-style: @border-type;
 }
@@ -6214,8 +6225,7 @@ content:"\e6a0";
 {
     padding: 0 6px 6px;
 }
-.e-pivotschemadesigner .expandSchema {
-    background: url("../images/expand.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+.e-pivotschemadesigner .expandSchema {    
     display: block;
     float: right;
     height: 25px;
@@ -6227,8 +6237,7 @@ content:"\e6a0";
 .e-pivotschemadesigner .collapseSchema {
     float: right;
     height: 25px;
-    position: relative;
-    background-image:url("../images/colapse.png");
+    position: relative;    
     top: -615px;
     width: 23px;
 }
@@ -8029,7 +8038,7 @@ background-color:@hover-bg-stcolor !important;
   content:@gantt-edit-icon-content;
 }
 
-.e-treegrid .e-treegrid-delete:before{
+.e-treegrid .e-treegrid-delete.e-delete:before{
   content:@gantt-delete-icon-content;
 }
 
@@ -8548,6 +8557,9 @@ box-shadow: -1px 0 10px 0 black;
 .e-kanban .e-rowcell .e-shrinkheader {
 	color:@active-bg-stcolor;
 }
+.e-kanban-context .e-checkbox .e-checkmark {
+    color:@active-bg-stcolor! important;
+}
 .e-kanban .e-kanbanheader.e-slheader .e-headercell,.e-kanban.e-swimlane-responsive .e-columnrow .e-rowcell{
     border-bottom: 4px solid @default-bg-stcolor;
 }
@@ -8615,6 +8627,10 @@ box-shadow: -1px 0 10px 0 black;
 {
 	color:@content-font-color;
 }
+.e-kanbanfilter-window .e-filter-scrollcontent, .e-kbnfilterwindow-head
+{
+   color:@content-font-color;
+}
 .e-kanban .e-slexpand, .e-kanban .e-slcollapse
 {
 	color: @default-icon-color;
@@ -8635,6 +8651,10 @@ box-shadow: -1px 0 10px 0 black;
  .e-kanban .e-kanbancard.e-cardselection .e-cardcollapse:before, .e-kanban .e-kanbancard.e-cardselection .e-cardexpand:before
  {
 	color: @active-icon-color;
+ }
+ .e-kanban .e-kanbancard.e-cardselection.e-hover .e-cardcollapse:before, .e-kanban .e-kanbancard.e-cardselection.e-hover .e-cardexpand:before
+ {
+    color: @hover-icon-color;
  }
 .e-kanban .e-headercell .e-totalcard
 {
@@ -8700,6 +8720,9 @@ box-shadow: -1px 0 10px 0 black;
 .e-kanban .e-kanbantoolbar .e-select .e-text {
    color: @active-font-color;
 }
+.e-kanban .e-kanbantoolbar .e-select.e-hover a{
+   color: @content-font-color;
+}
 .e-kanban .e-kanbantoolbar .e-text,.e-kanban .e-kanbantoolbar .e-quickfilter .e-text
 {
 	color:@content-font-color;
@@ -8713,6 +8736,7 @@ box-shadow: -1px 0 10px 0 black;
 }
 .e-kanban .e-rowcell.e-exceed {
     background: @kanban-cell-exceed;
+	filter: none! important;
 }
 .e-kanban .e-rowcell.e-deceed {
     background: @kanban-cell-deceed;
@@ -8803,8 +8827,8 @@ box-shadow: -1px 0 10px 0 black;
 .e-kanban.e-responsive .e-kanbantoolbar:not(.e-adaptive-search) .e-searchitem:hover{
 	.hover-gradient();
 }
-.e-kanban.e-responsive .e-filter-done:hover{
-   color:@hover-bg-stcolor;
+.e-kanbanfilter-window .e-filter-done:hover{
+   color:@kanban-filter-done-stcolor;
 }
 .e-kanban.e-responsive .e-filter-done{
   color:@active-bg-stcolor;
@@ -9610,7 +9634,7 @@ div.e-dlg-field-validation-error:before {
     color: @active-font-color;
 }
 
-.e-tile .e-tile-image {
+.e-tile .e-image-parent, .e-tile-image {
     .tile-bg-gradient;
 }
 

@@ -99,7 +99,7 @@ In case of any questions regarding the use of Syncfusion JavaScript, please [con
 
 ## Release Notes
 
-Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes at Syncfusion](http://help.syncfusion.com/js/release-notes/v13.4.0.63# "").
+Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes at Syncfusion](http://help.syncfusion.com/js/release-notes/v14.2.0.28# "").
 
 ## License Information
 
