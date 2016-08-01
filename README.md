@@ -33,17 +33,17 @@ Perform the below steps to install Syncfusion bower Package via command prompt i
 >To install a particular version of a bower package, you need to provide the version as suffix of the package name while installing. For instance, run the below command,
  
 >~~~
->bower install syncfusion-javascript#13.3.0.18
+>bower install syncfusion-javascript#14.2.28
 >~~~
 
->To install the package of version 13.3.0.18.
+>To install the package of version 14.2.28.
 
 #### Using bower.json file
 
 In another way, you can add the packages to the bower.json file by simply specify the package name. This will install/restore the packages to your project.
 
 ~~~ 
-“syncfusion-javascript” : “13.3.0.18”
+“syncfusion-javascript” : “14.2.28”
 ~~~
 
 >**Note**
