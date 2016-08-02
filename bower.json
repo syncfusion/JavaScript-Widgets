@@ -28,6 +28,8 @@
 
     "jquery.easing": "*",
 
+    "jsrender": "*",
+
     "Microsoft.jQuery.Unobtrusive.Ajax": "*",
 
     "Microsoft.jQuery.Unobtrusive.Validation": "*"
