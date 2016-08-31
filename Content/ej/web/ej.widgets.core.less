@@ -475,14 +475,11 @@
         padding: 0px;
     }
     .e-tooltip-wrap .e-arrowTip{
-		bottom: -1px;
 		height: 10px;
-		transform: rotate(0deg);
 		left: 50%;
 		top : 100%;
 		overflow: hidden;
-		position: absolute;
-		visibility: visible;
+		position: absolute;		
 		width: 20px;
 	}
     .e-tooltip-wrap .e-tipContainer {
@@ -2622,6 +2619,7 @@
         overflow: hidden;
         height: 100%;
         width: 100%;
+		display: block;
         border: 1px solid;
     }
 
@@ -6430,12 +6428,13 @@ background-image: url('../@{font-path}/icons-white.png');
         float: right;
     }
 
-    .e-grid.e-rtl .e-headercontent {
+    .e-grid.e-rtl .e-scrollcss >.e-headercontent  {
         border-left-width: @border-size;
         border-left-style: @border-type;
-        border-right-width: 0px;
     }
-
+    .e-grid.e-rtl .e-headercontent {
+	     border-right-width: 0px;
+	}
     .e-grid.e-rtl .e-headercell .e-filtericon, .e-grid.e-rtl .e-headercell .e-filteredicon {
         margin: -17px -4px -1px -5px;
     }
@@ -6494,6 +6493,7 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-grid.e-rtl .e-headercelldiv {
         text-align: right;
         padding: 0 0.7em;
+		direction:ltr;
     }
 
     .e-grid.e-rtl .e-headercelldiv:not(:only-child) {
@@ -6520,7 +6520,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
     .e-grid.e-rtl .e-scrollcss {
         padding-right: 0px;
-        padding-left: 18px;
+        padding-left: 17px;
     }
 
     .e-grid .e-widget .e-pager.e-rtl {
@@ -12811,6 +12811,10 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e7d5";
     }
 
+	.e-pdfviewer-download:before {
+        content: "\e81f";
+    }
+	
     .e-pdfviewer-zoomout:before {
         content: "\e7d6";
     }

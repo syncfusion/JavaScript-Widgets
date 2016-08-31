@@ -1937,6 +1937,10 @@ color: @default-font-color;
 {
     color: @default-font-color;
 }
+.e-acrdn .e-select:first-child 
+{
+   border-top-color:@default-border-color;
+}
 .e-acrdn > .e-select:first-child
 {
     border-top-color:@default-border-color;
@@ -3155,6 +3159,8 @@ color:#5c5c5c;
 }
 .e-corner.e-dialog-top{
     border-radius:3px 3px 0px 0px;
+} .e-dialog .e-scrollbar .e-icon {
+    display: block;
 }
 
 
@@ -3275,23 +3281,24 @@ color:#5c5c5c;
     border: @border-size @border-type @content-border-color;
 }
 .e-tooltip-wrap .e-arrowTipOuter{
-
-    border-color: @content-border-color transparent;
-    border-image: none;
-    border-style: solid;
-    border-width: 9px 9px 0;
-    left: 0;
-    position: absolute;
-    top: 0;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  left :0px;
+  top : 0px;
+  border-top: 10px solid @content-border-color;
+  position : absolute;
 }
 .e-tooltip-wrap .e-arrowTipInner{
-    border-color: @content-bg-color transparent;
-    border-image: none;
-    border-style: solid;
-    border-width: 8px 8px 0;
-    left: 1px;
-    position: absolute;
-    top: 0;
+    width: 0; 
+    height: 0; 
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid @content-bg-color;
+    left : 1px;
+    top : 0px;
+    position : absolute;
 }
 
 .e-def{
@@ -3425,6 +3432,9 @@ word-break: break-all;
 .e-lv.e-parentlv > .e-lv.subpage{
     border:none;
 }
+.e-nb .e-lv .subpage .e-content{
+            float:none;
+        }
 .e-lv > .e-header:hover >.e-icon:before{
     color:@hover-icon-color;
 }

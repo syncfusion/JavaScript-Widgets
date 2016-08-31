@@ -218,6 +218,11 @@ getValue:function(){
 /// Returns the current selected value from the Autocomplete textbox.
 /// </summary>
 },
+getActiveText:function(){
+/// <summary>
+/// Returns the current active text value in the Autocomplete suggestion list.
+/// </summary>
+},
 search:function(){
 /// <summary>
 /// Search the entered text and show it in the suggestion list if available.
@@ -314,6 +319,27 @@ jQuery.fn.ejAutocomplete = function (options) {
 ///Minimum number of character to be entered in the Autocomplete textbox to show the suggestion list.
 ///<br/>minCharacter-number	default-1
 ///<br/><br/>
+///An Autocomplete column collection can be defined and customized through the multiColumnSettings property.Column's header, field, and stringFormat can be define via multiColumnSettings properties.
+///<br/>multiColumnSettings-MultiColumnSettings	default-
+///<br/><br/>
+///Allow list of data to be displayed in several columns.
+///<br/>enable-boolean	default-false
+///<br/><br/>
+///Allow header text to be displayed in corresponding columns.
+///<br/>showHeader-boolean	default-true
+///<br/><br/>
+///Displayed selected value and autocomplete search based on mentioned column value specified in that format.
+///<br/>stringFormat-string	default-
+///<br/><br/>
+///Field and Header Text collections can be defined and customized through columns field.
+///<br/>columns-Array&lt;any&gt;	default-
+///<br/><br/>
+///Get or set a value that indicates to display the columns in the autocomplete mapping with column name of the dataSource.
+///<br/>field-string	default-
+///<br/><br/>
+///Get or set a value that indicates to display the title of that particular column.
+///<br/>headerText-string	default-
+///<br/><br/>
 ///Enables or disables selecting multiple values from the suggestion list. Multiple values can be selected through either of the following options,
 ///<br/>multiSelectMode-ej.Autocomplete.MultiSelectMode|string	default-ej.MultiSelectMode.None
 ///<br/><br/>
@@ -343,6 +369,9 @@ jQuery.fn.ejAutocomplete = function (options) {
 ///<br/><br/>
 ///Enables or disables rounded corner.
 ///<br/>showRoundedCorner-boolean	default-false
+///<br/><br/>
+///Enables or disables reset icon to clear the textbox values.
+///<br/>showResetIcon-boolean	default-false
 ///<br/><br/>
 ///Sort order specifies whether the suggestion list values has to be displayed in ascending or descending order.
 ///<br/>sortOrder-ej.Autocomplete.SortOrder|string	default-ej.SortOrder.Ascending
@@ -1948,7 +1977,7 @@ jQuery.fn.ejChart = function (options) {
 ///Name of the vertical axis used for indicator. Primary Y axis is used when y axis name is not specified
 ///<br/>yAxisName-string	default-
 ///<br/><br/>
-///Controls whether Chart has to be responsive or not.
+///Controls whether Chart has to be responsive while resizing.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
 ///Options to customize the legend items and legend title.
@@ -4536,7 +4565,16 @@ jQuery.fn.ejColorPicker = function (options) {
 /// <summary><br/>
 ///The ColorPicker control provides you a rich visual interface for color selection. You can select the color from the professionally designed palettes or custom color. By clicking a point on the color, you can change the active color to the color that is located under the pointer.<br/><br/>
 ///The ColorPicker control allows to define the customized text to displayed in button elements. Using the property to achieve the customized culture values.
-///<br/>buttonText-any	default-buttonText.apply= Apply, buttonText.cancel= Cancel,buttonText.swatches=Swatches
+///<br/>buttonText-ButtonText	default-{ apply: Apply, cancel: Cancel, swatches: Swatches }
+///<br/><br/>
+///Sets the text for the apply button.
+///<br/>apply-string	default-
+///<br/><br/>
+///Sets the text for the cancel button.
+///<br/>cancel-string	default-
+///<br/><br/>
+///Sets the header text for the swatches area.
+///<br/>swatches-string	default-
 ///<br/><br/>
 ///Allows to change the mode of the button. Please refer below to know available button mode
 ///<br/>buttonMode-ej.ButtonMode|string	default-ej.ButtonMode.Split
@@ -4596,7 +4634,55 @@ jQuery.fn.ejColorPicker = function (options) {
 ///<br/>toolIcon-string	default-null
 ///<br/><br/>
 ///This property allows to define the customized text or content to displayed when mouse over the following elements. This property also allows to use the culture values.
-///<br/>tooltipText-any	default-tooltipText: { switcher: Switcher, addbutton: Add Color, basic: Basic, monochrome: Mono Chrome, flatcolors: Flat Color, seawolf: Sea Wolf, webcolors: Web Colors, sandy: Sandy, pinkshades: Pink Shades, misty: Misty, citrus: Citrus, vintage: Vintage, moonlight: Moon Light, candycrush: Candy Crush, currentcolor: Current Color, selectedcolor: Selected Color }
+///<br/>tooltipText-TooltipText	default-{ switcher: Switcher, addbutton: Add Color, basic: Basic, monochrome: Mono Chrome, flatcolors: Flat Color, seawolf: Sea Wolf, webcolors: Web Colors, sandy: Sandy, pinkshades: Pink Shades, misty: Misty, citrus: Citrus, vintage: Vintage, moonlight: Moon Light, candycrush: Candy Crush, currentcolor: Current Color, selectedcolor: Selected Color }
+///<br/><br/>
+///Sets the tooltip text for the switcher button.
+///<br/>switcher-string	default-
+///<br/><br/>
+///Sets the tooltip text for the add button.
+///<br/>addbutton-string	default-
+///<br/><br/>
+///Sets the tooltip text for the basic preset.
+///<br/>basic-string	default-
+///<br/><br/>
+///Sets the tooltip text for the mono chrome preset.
+///<br/>monochrome-string	default-
+///<br/><br/>
+///Sets the tooltip text for the flat colors preset.
+///<br/>flatcolors-string	default-
+///<br/><br/>
+///Sets the tooltip text for the sea wolf preset.
+///<br/>seawolf-string	default-
+///<br/><br/>
+///Sets the tooltip text for the web colors preset.
+///<br/>webcolors-string	default-
+///<br/><br/>
+///Sets the tooltip text for the sandy preset.
+///<br/>sandy-string	default-
+///<br/><br/>
+///Sets the tooltip text for the pink shades preset.
+///<br/>pinkshades-string	default-
+///<br/><br/>
+///Sets the tooltip text for the misty preset.
+///<br/>misty-string	default-
+///<br/><br/>
+///Sets the tooltip text for the citrus preset.
+///<br/>citrus-string	default-
+///<br/><br/>
+///Sets the tooltip text for the vintage preset.
+///<br/>vintage-string	default-
+///<br/><br/>
+///Sets the tooltip text for the moon light preset.
+///<br/>moonlight-string	default-
+///<br/><br/>
+///Sets the tooltip text for the candy crush preset.
+///<br/>candycrush-string	default-
+///<br/><br/>
+///Sets the tooltip text for the current color area.
+///<br/>currentcolor-string	default-
+///<br/><br/>
+///Sets the tooltip text for the selected color area.
+///<br/>selectedcolor-string	default-
 ///<br/><br/>
 ///Specifies the color value for color picker control, the value is in hexadecimal form with prefix of "#".
 ///<br/>value-string	default-null
@@ -4705,10 +4791,13 @@ jQuery.fn.ejDatePicker = function (options) {
 ///allow or restrict the drill down to multiple levels of view (month/year/decade) in DatePicker calendar
 ///<br/>allowDrillDown-boolean	default-true
 ///<br/><br/>
+///Disable the list of specified date value.
+///<br/>blackoutDates-any	default-{}
+///<br/><br/>
 ///Sets the specified text value to the today button in the DatePicker calendar.
 ///<br/>buttonText-string	default-Today
 ///<br/><br/>
-///Sets the root CSS class for Accordion theme, which is used customize.
+///Sets the root CSS class for DatePicker theme, which is used customize.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Formats the value of the DatePicker in to the specified date format. If this API is not specified, dateFormat will be set based on the current culture of DatePicker.
@@ -4749,6 +4838,9 @@ jQuery.fn.ejDatePicker = function (options) {
 ///<br/><br/>
 ///Specifies the tooltip to special dates.
 ///<br/>tooltip-string	default-
+///<br/><br/>
+///Specifies the CSS class to customize the date.
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Specifies the header format to be displayed in the DatePicker calendar.
 ///<br/>headerFormat-string	default-MMMM yyyy
@@ -5380,6 +5472,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///A collection of JSON objects where each object represents a label.
 ///<br/>labels-Array&lt;any&gt;	default-[]
 ///<br/><br/>
+///Defines how the label should be aligned with respect to the segment
+///<br/>alignment-ej.datavisualization.Diagram.Alignment|string	default-ej.datavisualization.Diagram.Alignment.Center
+///<br/><br/>
 ///Enables/disables the bold style
 ///<br/>bold-boolean	default-false
 ///<br/><br/>
@@ -5388,6 +5483,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///Sets the border width of the label
 ///<br/>borderWidth-number	default-0
+///<br/><br/>
+///Defines whether the label should be aligned within the connector boundaries
+///<br/>boundaryConstraints-boolean	default-true
 ///<br/><br/>
 ///Sets the fill color of the text area
 ///<br/>fillColor-string	default-transparent
@@ -5419,11 +5517,20 @@ jQuery.fn.ejDiagram = function (options) {
 ///Sets the fraction/ratio(relative to connector) that defines the position of the label
 ///<br/>offset-any	default-ej.datavisualization.Diagram.Point(0.5, 0.5)
 ///<br/><br/>
+///Defines the transparency of labels
+///<br/>opacity-number	default-1
+///<br/><br/>
 ///Defines whether the label is editable or not
 ///<br/>readOnly-boolean	default-false
 ///<br/><br/>
+///Defines whether the label should be positioned whether relative to segments or connector boundaries
+///<br/>relativeMode-ej.datavisualization.Diagram.LabelRelativeMode|string	default-ej.datavisualization.Diagram.LabelRelativeMode.SegmentPath
+///<br/><br/>
 ///Defines the angle to which the label needs to be rotated
 ///<br/>rotateAngle-number	default-0
+///<br/><br/>
+///Sets the position of the label with respect to the total segment length
+///<br/>segmentOffset-string	default-0.5
 ///<br/><br/>
 ///Defines the label text
 ///<br/>text-string	default-
@@ -5508,6 +5615,30 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///Describes the length and angle between the second control point and end point of bezier segment
 ///<br/>vector2-any	default-null
+///<br/><br/>
+///Defines the role/meaning of the connector
+///<br/>shape-any	default-null
+///<br/><br/>
+///Sets the type of the connector
+///<br/>type-ej.datavisualization.Diagram.ConnectorShapes|string	default-ej.datavisualization.Diagram.ConnectorShapes.BPMN
+///<br/><br/>
+///Sets the type of the flow in a BPMN Process
+///<br/>flow-ej.datavisualization.Diagram.BPMNFlows|string	default-ej.datavisualization.Diagram.BPMNFlows.Sequence
+///<br/><br/>
+///Sets the type of the Association in a BPMN Process
+///<br/>association-ej.datavisualization.Diagram.AssociationFlows|string	default-ej.datavisualization.Diagram.AssociationFlows.Default
+///<br/><br/>
+///Sets the type of the message flow. Applicable, if the connector is of type "BPMN"
+///<br/>message-ej.datavisualization.Diagram.BPMNMessageFlows|string	default-ej.datavisualization.Diagram.BPMNMessageFlows.Default
+///<br/><br/>
+///Sets the type of BPMN sequence flow
+///<br/>sequence-ej.datavisualization.Diagram.BPMNSequenceFlows|string	default-ej.datavisualization.Diagram.BPMNSequenceFlows.Normal
+///<br/><br/>
+///Defines the role of the connector in a UML Class Diagram. Applicable, if the type of the connector is "classifier".
+///<br/>relationship-string	default-ej.datavisualization.Diagram.ClassifierShapes.Association
+///<br/><br/>
+///Defines the multiplicity of a relationship in UML class diagram
+///<br/>multiplicity-string	default-
 ///<br/><br/>
 ///Defines the source decorator of the connector
 ///<br/>sourceDecorator-any	default-{ shape:arrow, width: 8, height:8, borderColor:black, fillColor:black }
@@ -5725,6 +5856,27 @@ jQuery.fn.ejDiagram = function (options) {
 ///To maintain additional information about nodes
 ///<br/>addInfo-any	default-{}
 ///<br/><br/>
+///Defines the additional information of a process. It is not directly related to the message flows or sequence flows of the process.
+///<br/>annotation-any	default-ej.datavisualization.Diagram.BPMNTextAnnotation()
+///<br/><br/>
+///Sets the angle between the BPMN shape and the annotation
+///<br/>angle-number	default-0
+///<br/><br/>
+///Sets the direction of the text annotation
+///<br/>direction-ej.datavisualization.Diagram.BPMNAnnotationDirection|string	default-ej.datavisualization.Diagram.BPMNAnnotationDirections.Left
+///<br/><br/>
+///Sets the height of the text annotation
+///<br/>height-number	default-20
+///<br/><br/>
+///Sets the distance between the BPMN shape and the annotation
+///<br/>length-number	default-0
+///<br/><br/>
+///Defines the additional information about the flow object in a BPMN Process
+///<br/>text-string	default-
+///<br/><br/>
+///Sets the  width of the text annotation
+///<br/>width-number	default-20
+///<br/><br/>
 ///Sets the border color of node
 ///<br/>borderColor-string	default-black
 ///<br/><br/>
@@ -5740,8 +5892,32 @@ jQuery.fn.ejDiagram = function (options) {
 ///Array of JSON objects where each object represents a child node/connector
 ///<br/>children-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Defines whether the BPMN data object is a collection or not
-///<br/>collection-boolean	default-false
+///Sets the type of UML classifier. Applicable, if the node is a UML Class Diagram shape.
+///<br/>classifier-ej.datavisualization.Diagram.ClassifierShapes|string	default-ej.datavisualization.Diagram.ClassifierShapes.Class
+///<br/><br/>
+///Defines the name, attributes and methods of a Class. Applicable, if the node is a Class.
+///<br/>class-any	default-null
+///<br/><br/>
+///Sets the name of class.
+///<br/>name-string	default-
+///<br/><br/>
+///Defines the collection of attributes
+///<br/>attributes-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Sets the name of the attribute
+///<br/>name-string	default-
+///<br/><br/>
+///Sets the data type of attribute
+///<br/>type-string	default-
+///<br/><br/>
+///Defines the visibility of the attribute
+///<br/>scope-string	default-ej.datavisualization.Diagram.ScopeValueDefaults.Public
+///<br/><br/>
+///Defines the collection of methods of a Class.
+///<br/>methods-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Sets the visibility of the method.
+///<br/>scope-string	default-ej.datavisualization.Diagram.ScopeValueDefaults.Public
 ///<br/><br/>
 ///Defines the distance to be left between a node and its connections(In coming and out going connections).
 ///<br/>connectorPadding-number	default-0
@@ -5763,6 +5939,27 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///Configures the styles of shapes
 ///<br/>cssClass-string	default-
+///<br/><br/>
+///Defines the BPMN data object
+///<br/>data-any	default-
+///<br/><br/>
+///Sets the type of the BPMN Data object
+///<br/>type-ej.datavisualization.Diagram.BPMNDataObjects|string	default-ej.datavisualization.Diagram.BPMNDataObjects.None
+///<br/><br/>
+///Defines whether the BPMN data object is a collection or not
+///<br/>collection-boolean	default-false
+///<br/><br/>
+///Defines an Enumeration in a UML Class Diagram
+///<br/>enumeration-any	default-null
+///<br/><br/>
+///Sets the name of the Enumeration
+///<br/>name-string	default-
+///<br/><br/>
+///Defines the collection of enumeration members
+///<br/>members-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Sets the name of the enumeration member
+///<br/>name-string	default-
 ///<br/><br/>
 ///Sets the type of the BPMN Events. Applicable, if the node is a BPMN event.
 ///<br/>event-ej.datavisualization.Diagram.BPMNEvents|string	default-ej.datavisualization.Diagram.BPMNEvents.Start
@@ -5827,6 +6024,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///Describes the transparency level of the region
 ///<br/>opacity-number	default-1
 ///<br/><br/>
+///Sets the type of the BPMN Shapes as group. Applicable, if the node is a BPMN.
+///<br/>group-any	default-ej.datavisualization.Diagram.BPMNShapes
+///<br/><br/>
 ///Defines the header of a swimlane/lane
 ///<br/>header-any	default-{ text: Title, fontSize: 11 }
 ///<br/><br/>
@@ -5838,6 +6038,30 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///A read only collection of the incoming connectors/edges of the node
 ///<br/>inEdges-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Defines an interface in a UML Class Diagram
+///<br/>interface-any	default-null
+///<br/><br/>
+///Sets the name of the interface
+///<br/>name-string	default-
+///<br/><br/>
+///Defines a collection of attributes of the interface
+///<br/>attributes-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Sets the name of the attribute
+///<br/>name-string	default-
+///<br/><br/>
+///Sets the type of the attribute
+///<br/>type-string	default-
+///<br/><br/>
+///Sets the visibility of the attribute
+///<br/>scope-string	default-
+///<br/><br/>
+///Defines the collection of public methods of an interface
+///<br/>methods-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Sets the visibility of the method
+///<br/>scope-string	default-
 ///<br/><br/>
 ///Defines whether the sub tree of the node is expanded or collapsed
 ///<br/>isExpanded-boolean	default-true
@@ -5886,6 +6110,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///Sets the fraction/ratio(relative to node) that defines the position of the label
 ///<br/>offset-any	default-ej.datavisualization.Diagram.Point(0.5, 0.5)
+///<br/><br/>
+///Defines the transparency of the labels
+///<br/>opacity-number	default-1
 ///<br/><br/>
 ///Defines whether the label is editable or not
 ///<br/>readOnly-boolean	default-false
@@ -6094,6 +6321,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///Sets the angle to which the node should be rotated
 ///<br/>rotateAngle-number	default-0
 ///<br/><br/>
+///Defines how the node should be scaled/stretched
+///<br/>scale-ej.datavisualization.Diagram.ScaleConstraints |string	default-ej.datavisualization.Diagram.ScaleConstraints.Meet
+///<br/><br/>
 ///Defines the opacity and the position of shadow
 ///<br/>shadow-any	default-ej.datavisualization.Diagram.Shadow()
 ///<br/><br/>
@@ -6124,10 +6354,25 @@ jQuery.fn.ejDiagram = function (options) {
 ///Sets whether the BPMN subprocess is triggered as a compensation of a specific activity
 ///<br/>compensation-boolean	default-false
 ///<br/><br/>
+///Sets whether the BPMN subprocess is triggered as a collapsed of a specific activity
+///<br/>collapsed-boolean	default-true
+///<br/><br/>
+///Sets the type of the event by which the sub-process will be triggered
+///<br/>event-ej.datavisualization.Diagram.BPMNEvents|string	default-ej.datavisualization.Diagram.BPMNEvents.Start
+///<br/><br/>
+///Defines the collection of events that need to be appended with BPMN Sub-Process
+///<br/>events-Array&lt;any&gt;	default-
+///<br/><br/>
 ///Defines the loop type of a sub process.
 ///<br/>loop-ej.datavisualization.Diagram.BPMNLoops|string	default-ej.datavisualization.Diagram.BPMNLoops.None
 ///<br/><br/>
-///Defines the task of the bpmn activity. Applicable, if the type of activity is set as task.
+///Defines the type of the event trigger
+///<br/>trigger-ej.datavisualization.Diagram.BPMNTriggers|string	default-ej.datavisualization.Diagram.BPMNTriggers.Message
+///<br/><br/>
+///Defines the type of a sub process
+///<br/>type-ej.datavisualization.Diagram.BPMNSubProcessTypes|string	default-ej.datavisualization.Diagram.BPMNSubProcessTypes.None
+///<br/><br/>
+///Defines the task of the BPMN activity. Applicable, if the type of activity is set as task.
 ///<br/>task-any	default-ej.datavisualization.Diagram.BPMNTask()
 ///<br/><br/>
 ///To set whether the task is a global task or not
@@ -6505,7 +6750,7 @@ jQuery.fn.ejDialog = function (options) {
 ///The CSS class name to display the favicon in the dialog header. In order to display favicon, you need to setÂ showHeaderÂ as true since the favicon will be displayed in the dialog header.
 ///<br/>faviconCSS-string	default-
 ///<br/><br/>
-///Sets the height for the dialog widget. It accepts both string and integer values. For example, it can accepts values like â€œautoâ€, â€œ100%â€, â€œ100pxâ€ as string type and â€œ100â€, â€œ500â€ as integer type. The unit of integer type value is â€œpxâ€.
+///Sets the height for the dialog widget. It accepts both string and integer values. For example, it can accepts values like â€œautoâ€, â€œ100%â€, â€œ100pxâ€ as string type and â€œ100â€, â€œ500â€ as integer type.
 ///<br/>height-string|number	default-
 ///<br/><br/>
 ///Enable or disables responsive behavior.
@@ -6547,7 +6792,7 @@ jQuery.fn.ejDialog = function (options) {
 ///Add or configure the tooltip text for actionButtons in the dialog header.
 ///<br/>tooltip-any	default-
 ///<br/><br/>
-///Sets the height for the dialog widget. It accepts both string and integer values. For example, it can accepts values like â€œautoâ€, â€œ100%â€, â€œ100pxâ€ as string type and â€œ100â€, â€œ500â€ as integer type. The unit of integer type value is â€œpxâ€.
+///Sets the height for the dialog widget. It accepts both string and integer values. For example, it can accepts values like â€œautoâ€, â€œ100%â€, â€œ100pxâ€ as string type and â€œ100â€, â€œ500â€ as integer type.
 ///<br/>width-string|number	default-
 ///<br/><br/>
 ///Sets the z-index value for the Dialog widget.
@@ -6743,7 +6988,7 @@ ej.Draggable.prototype={
 
 _destroy:function(){
 /// <summary>
-/// destroy in the dragable.
+/// destroy in the draggable.
 /// </summary>
 },
 };
@@ -6902,6 +7147,9 @@ return this;
 jQuery.fn.ejDropDownList = function (options) {
 /// <summary><br/>
 ///The DropDownList control provides a list of options to choose an item from the list. It can including other HTML elements such as images, textboxes, check box, radio buttons, and so on.<br/><br/>
+///The Virtual Scrolling(lazy loading) feature is used to display a large amount of data that you require without buffering the entire load of a huge database records in the DropDownList, that is, when scrolling, an AJAX request is sent to fetch some amount of data from the server dynamically. To achieve this scenario with DropDownList, set the allowVirtualScrolling to true.
+///<br/>allowVirtualScrolling-boolean	default-false
+///<br/><br/>
 ///The cascading DropDownLists is a series of two or more DropDownLists in which each DropDownList is filtered according to the previous DropDownListâ€™s value.
 ///<br/>cascadeTo-string	default-null
 ///<br/><br/>
@@ -6988,6 +7236,9 @@ jQuery.fn.ejDropDownList = function (options) {
 ///<br/><br/>
 ///Data can be fetched in the DropDownList control by using the DataSource, specifying the number of items.
 ///<br/>itemsCount-number	default-5
+///<br/><br/>
+///Allows the user to set the particular country or region language for the DropDownList.
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Defines the maximum height of the suggestion box. This property restricts the maximum height of the popup when resize is enabled.
 ///<br/>maxPopupHeight-string|number	default-null
@@ -7142,13 +7393,13 @@ return this;
 jQuery.fn.ejFileExplorer = function (options) {
 /// <summary><br/>
 ///FileExplorer provides a Windows Explorer-like functionality for any web application. It allows end-users to browse, select and upload files or change the folder structure by renaming, moving and deleting files or folders. File and folder management capabilities are fully customizable and can be disabled when necessary.<br/><br/>
-///Sets the URL of server side Ajax handling method that handles file operation like Read, Remove, Rename, Create, Upload, Download, Copy and Move in FileExplorer.
+///Sets the URL of server side AJAX handling method that handles file operation like Read, Remove, Rename, Create, Upload, Download, Copy and Move in FileExplorer.
 ///<br/>ajaxAction-string	default-
 ///<br/><br/>
-///Specifies the data type of server side Ajax handling method.
+///Specifies the data type of server side AJAX handling method.
 ///<br/>ajaxDataType-string	default-json
 ///<br/><br/>
-///By using ajaxSettings property, you can customize the Ajax configurations. Normally you can customize the following option in Ajax handling data, url, type, async, contentType, dataType and success. For upload, download and getImage API, you can only customize url.
+///By using ajaxSettings property, you can customize the AJAX configurations. Normally you can customize the following option in AJAX handling data, URL, type, async, contentType, dataType and success. For upload, download and getImage API, you can only customize URL.
 ///<br/>ajaxSettings-any	default-{ read: {}, createFolder: {}, remove: {}, rename: {}, paste: {}, getDetails: {}, download: {}, upload: {}, getImage: {}, search: {}}
 ///<br/><br/>
 ///The FileExplorer allows to select multiple files by enabling the allowMultiSelection property. You can perform multi selection by pressing the Ctrl key or Shift key.
@@ -7616,9 +7867,6 @@ jQuery.fn.ejGantt = function (options) {
 ///<br/><br/>
 ///Specifies start date of the Gantt schedule. By default, start date will be rounded to its previous Sunday.
 ///<br/>scheduleStartDate-string	default-null
-///<br/><br/>
-///Specifies the selected row index in Gantt
-///<br/>selectedItem-number	default-null
 ///<br/><br/>
 ///Specifies the selected row Index in Gantt , the row with given index will highlighted
 ///<br/>selectedRowIndex-number	default--1
@@ -8512,7 +8760,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>inlineFormTemplateID-string	default-null
 ///<br/><br/>
 ///This specifies to set the position of an adding new row either in the top or bottom of the grid
-///<br/>rowPosition-ej.Grid.RowPosition|string	default-ej.Grid.RowPosition.top
+///<br/>rowPosition-ej.Grid.RowPosition|string	default-ej.Grid.RowPosition.Top
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the confirm dialog has to be shown while saving or discarding the batch changes
 ///<br/>showConfirmDialog-boolean	default-true
@@ -8833,7 +9081,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>showToolbar-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add the default editing actions as a toolbar items
-///<br/>toolbarItems-ej.Grid.ToolBarItems|string	default-[]
+///<br/>toolbarItems-Array&lt;any&gt;	default-[]
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -8936,7 +9184,7 @@ jQuery.fn.ejGroupButton = function (options) {
 ///Sets the specified class to GroupButton wrapper element, which allows for custom skinning option in ejGroupButton control.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///To set the local JSON data, define a JSON array and initialize the GroupButton with dataSource property. Specify the column names in the fieldsâ€™ property.
+///To set the local JSON data, define a JSON array and initialize the GroupButton with dataSource property. Specify the column names in the fields property.
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
 ///Displays the ejGroupButton in Right to Left direction.
@@ -8945,7 +9193,7 @@ jQuery.fn.ejGroupButton = function (options) {
 ///Used to enable or disable the ejGroupButton control.
 ///<br/>enabled-boolean	default-true
 ///<br/><br/>
-///Gets or sets a value that indicates to display the values of the data
+///Gets or sets a value that indicates to display the values of the data.
 ///<br/>fields-any	default-null
 ///<br/><br/>
 ///Sets the GroupButton behavior to works as Checkbox mode/ radio button mode based on the specified option.
@@ -9161,7 +9409,10 @@ jQuery.fn.ejKanban = function (options) {
 ///Gets or sets a value that indicates the list of items needs to be disable from default context menu
 ///<br/>disableDefaultItems-Array&lt;any&gt;	default-array
 ///<br/><br/>
-///Gets or sets a value that indicates whether to add custom contextMenu items
+///sets a value that indicates whether to add default Menu items.
+///<br/>menuItems-Array&lt;any&gt;	default-array
+///<br/><br/>
+///Gets or sets a value that indicates whether to add custom contextMenu items.
 ///<br/>customMenuItems-Array&lt;any&gt;	default-array
 ///<br/><br/>
 ///Sets context menu to target element.
@@ -9229,6 +9480,9 @@ jQuery.fn.ejKanban = function (options) {
 ///<br/><br/>
 ///Gets or sets the data to render the Kanban with card.
 ///<br/>dataSource-any	default-null
+///<br/><br/>
+///To perform kanban functionalities with touch interaction.
+///<br/>enableTouch-boolean	default-true
 ///<br/><br/>
 ///Align content in the Kanban control from right to left by setting the property as true.
 ///<br/>enableRTL-boolean	default-false
@@ -11052,10 +11306,10 @@ jQuery.fn.ejMap = function (options) {
 ///Specifies the datasource for the shape layer
 ///<br/>dataSource-any	default-
 ///<br/><br/>
-///Specifies the datapath of shape
+///Specifies the data path of shape
 ///<br/>shapeDataPath-string	default-
 ///<br/><br/>
-///Specifies the datapath of shape
+///Specifies the data path of shape
 ///<br/>shapePropertyPath-string	default-
 ///<br/><br/>
 ///Enables or disables the shape mouse hover
@@ -11079,7 +11333,7 @@ jQuery.fn.ejMap = function (options) {
 ///set the labelPath property
 ///<br/>labelPath-string	default-null
 ///<br/><br/>
-///The property specifies wheather to show labels or not.
+///The property specifies whether to show labels or not.
 ///<br/>showLabels-boolean	default-false
 ///<br/><br/>
 ///set the smartLabelSize property
@@ -11281,7 +11535,7 @@ jQuery.fn.ejMaskEdit = function (options) {
 ///Specifies whether hide the prompt characters with spaces on blur. Prompt chars will be shown again on focus the textbox.
 ///<br/>hidePromptOnLeave-boolean	default-false
 ///<br/><br/>
-///Specifies the list of html attributes to be added to mask edit textbox.
+///Specifies the list of HTML attributes to be added to mask edit textbox.
 ///<br/>htmlAttributes-any	default-{}
 ///<br/><br/>
 ///Specify the inputMode for mask edit textbox control. See InputMode
@@ -11299,7 +11553,7 @@ jQuery.fn.ejMaskEdit = function (options) {
 ///Specifies whether the error will show until correct value entered in the mask edit textbox control.
 ///<br/>showError-boolean	default-false
 ///<br/><br/>
-///when showPromptChar is true, the hide the prompt characters are shown in focus of the control and hides in focusout of the control.
+///when showPromptChar is true, the hide the prompt characters are shown in focus of the control and hides in focus out of the control.
 ///<br/>showPromptChar-boolean	default-true
 ///<br/><br/>
 ///MaskEdit input is displayed in rounded corner style when this property is set to true.
@@ -11341,7 +11595,7 @@ disableItem:function(itemtext){
 /// </summary>
 /// <param name="itemtext"	type="string">Specifies the Menu Item Text to be disabled.</param>
 },
-disableItembyID:function(itemid){
+disableItemByID:function(itemid){
 /// <summary>
 /// Specifies the Menu Item to be disabled by using the Menu Item Id.
 /// </summary>
@@ -11358,7 +11612,7 @@ enableItem:function(itemtext){
 /// </summary>
 /// <param name="itemtext"	type="string">Specifies the Menu Item Text to be enabled.</param>
 },
-enableItembyID:function(itemid){
+enableItemByID:function(itemid){
 /// <summary>
 /// Specifies the Menu Item to be enabled by using the Menu Item Id.
 /// </summary>
@@ -11459,7 +11713,7 @@ jQuery.fn.ejMenu = function (options) {
 ///It receives datasource as Essential DataManager object and JSON object.
 ///<br/>dataSource-any	default-
 ///<br/><br/>
-///Specifies the HTML attributes to â€œliâ€ item list.
+///Specifies the HTML attributes to â€œLIâ€ item list.
 ///<br/>htmlAttribute-string	default-
 ///<br/><br/>
 ///Specifies the id to menu items list
@@ -11480,7 +11734,7 @@ jQuery.fn.ejMenu = function (options) {
 ///It receives query to retrieve data from the table (query is same as SQL).
 ///<br/>query-any	default-
 ///<br/><br/>
-///Specifies the sprite CSS class to â€œliâ€ item list.
+///Specifies the sprite CSS class to â€œLIâ€ item list.
 ///<br/>spriteCssClass-string	default-
 ///<br/><br/>
 ///It receives table name to execute query on the corresponding table.
@@ -13219,11 +13473,23 @@ jQuery.fn.ejRadialSlider = function (options) {
 ///Specifies the file name of center circle icon
 ///<br/>innerCircleImageUrl-string	default-null
 ///<br/><br/>
+///Specifies the Space between the radial slider element and the label.
+///<br/>labelSpace-number	default-30
+///<br/><br/>
 ///Specifies the radius of radial slider
 ///<br/>radius-number	default-200
 ///<br/><br/>
+///To show the RadialSlider inner circle.
+///<br/>showInnerCircle-boolean	default-true
+///<br/><br/>
+///Specifies the endAngle value for radial slider circle.
+///<br/>startAngle-number	default-0
+///<br/><br/>
 ///Specifies the  strokeWidth for customize the needle, outer circle and inner circle.
 ///<br/>strokeWidth-number	default-2
+///<br/><br/>
+///Specifies the value of radial slider
+///<br/>value-number	default-10
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -14144,7 +14410,7 @@ jQuery.fn.ejResizable = function (options) {
 ///Sets the min Width for resizing
 ///<br/>minWidth-number	default-10
 ///<br/><br/>
-///Used to group sets of resizeable items.
+///Used to group sets of resizable items.
 ///<br/>scope-string	default-&#39;default&#39;
 ///</summary>
 ///<param name="options" type="Object">
@@ -14599,6 +14865,13 @@ slidePrevious:function(){
 /// This method is used to move to the previous slide from the current slide. If the current slide is the first slide, then the last slide will be treated as the previous slide.
 /// </summary>
 },
+updateTemplateById:function(index, id){
+/// <summary>
+/// This method is used to update/modify the slide content of template rotator by using id based on index value.
+/// </summary>
+/// <param name="index"	type="number">index of an slide</param>
+/// <param name="id"	type="string">id of a new updated slide</param>
+},
 };
 jQuery.fn.ejRotator=function(){
 this.data("ejRotator",new	ej.Rotator());
@@ -14705,6 +14978,9 @@ jQuery.fn.ejRotator = function (options) {
 ///<br/><br/>
 ///Pause the auto play while hover on the rotator content.
 ///<br/>stopOnHover-boolean	default-false
+///<br/><br/>
+///The template to display the Rotator widget with customized appearance.
+///<br/>template-string	default-null
 ///<br/><br/>
 ///Specifies the source for thumbnail elements.
 ///<br/>thumbnailSourceID-any	default-null
@@ -15709,6 +15985,9 @@ return this;
 jQuery.fn.ejSlider = function (options) {
 /// <summary><br/>
 ///The Slider provides support to select a value from a particular range as well as selects a range value. The Slider has a sliding base on which the handles are moved. There are three types of Sliders such as default Slider, min-range Slider and range Slider.<br/><br/>
+///Specifies the allowMouseWheel of the slider.
+///<br/>allowMouseWheel-boolean	default-false
+///<br/><br/>
 ///Specifies the animationSpeed of the slider.
 ///<br/>animationSpeed-number	default-500
 ///<br/><br/>
@@ -15996,7 +16275,7 @@ enable:function(){
 },
 hide:function(){
 /// <summary>
-/// To Hide the list content of the split button.
+/// To hide the list content of the split button.
 /// </summary>
 },
 show:function(){
@@ -16133,7 +16412,7 @@ jQuery.fn.ejSplitter = function (options) {
 ///Specify the orientation for splitter control. See orientation
 ///<br/>orientation-ej.Orientation|string	default-ej.orientation.Horizontal or &#226;€œhorizontal&#226;€
 ///<br/><br/>
-///Specify properties for each pane like paneSize, minSize, maxSize, collapsible, resizable.
+///Specify properties for each pane like paneSize, minSize, maxSize, collapsible, expandable, resizable.
 ///<br/>properties-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Specify width for splitter control.
@@ -16201,10 +16480,10 @@ clearRangeData:function(range, property, cells, skipHiddenRow, status, skipCell)
 },
 copySheet:function(fromIdx, toIdx, isCopySheet){
 /// <summary>
-/// This method is used to copy sheets in Spreadsheet.
+/// This method is used to copy or move the sheets in Spreadsheet.
 /// </summary>
-/// <param name="fromIdx"	type="number">Pass the sheet index that you want to copy.</param>
-/// <param name="toIdx"	type="number">Pass the position index where you want to copy.</param>
+/// <param name="fromIdx"	type="number">Pass the sheet index that you want to copy or move.</param>
+/// <param name="toIdx"	type="number">Pass the position index where you want to copy or move.</param>
 /// <param name="isCopySheet"	type="boolean">Pass true,If you want to copy sheet or else it will move sheet.</param>
 },
 deleteEntireColumn:function(startCol, endCol){
@@ -16353,7 +16632,7 @@ hideColumn:function(startCol, endCol){
 /// This method is used to hide the entire columns from the specified range (startCol, endCol) in Spreadsheet.
 /// </summary>
 /// <param name="startCol"	type="number">Index of the start column.</param>
-/// <param name="endCol"	type="number">Index of the end column.</param>
+/// <param name="endCol"	type="number">Optional. Index of the end column.</param>
 },
 hideFormulaBar:function(){
 /// <summary>
@@ -16365,7 +16644,7 @@ hideRow:function(startRow, endRow){
 /// This method is used to hide the rows, based on the specified row index in Spreadsheet.
 /// </summary>
 /// <param name="startRow"	type="number">Index of the start row.</param>
-/// <param name="endRow"	type="number">Index of the end row.</param>
+/// <param name="endRow"	type="number"> Optional. Index of the end row.</param>
 },
 hideSheet:function(sheetIdx){
 /// <summary>
@@ -16437,13 +16716,6 @@ mergeCells:function(range, alertStatus){
 /// </summary>
 /// <param name="range"	type="string">Optional.  To pass the cell range or selected cells are process.</param>
 /// <param name="alertStatus"	type="boolean">Optional.  If pass true it does not show alert.</param>
-},
-moveSheet:function(fromIdx, toIdx){
-/// <summary>
-/// This method is used to move sheets in Spreadsheet.
-/// </summary>
-/// <param name="fromIdx"	type="number">Pass the sheet index that you want to move.</param>
-/// <param name="toIdx"	type="number">Pass the position index where you want to move.</param>
 },
 protectSheet:function(isProtected){
 /// <summary>
@@ -16534,7 +16806,7 @@ setWidthToColumns:function(widthColl){
 /// <summary>
 /// This method is used to set the width for the columns in the Spreadsheet.
 /// </summary>
-/// <param name="widthColl"	type="Array&lt;any&gt;|any">Pass the cell index and width of the cells.</param>
+/// <param name="widthColl"	type="Array&lt;any&gt;|any">Pass the column index and width of the columns.</param>
 },
 sheetRename:function(sheetName){
 /// <summary>
@@ -16553,19 +16825,31 @@ showColumn:function(startColIdx, endColIdx){
 /// This method is used to show the hidden columns within the specified range in the Spreadsheet.
 /// </summary>
 /// <param name="startColIdx"	type="number">Index of the start column.</param>
-/// <param name="endColIdx"	type="number">Index of the end column.</param>
+/// <param name="endColIdx"	type="number">Optional. Index of the end column.</param>
 },
 showFormulaBar:function(){
 /// <summary>
 /// This method is used to show the formula bar in Spreadsheet.
 /// </summary>
 },
+showGridlines:function(status){
+/// <summary>
+/// This method is used to show/hide gridlines in active sheet in the Spreadsheet.
+/// </summary>
+/// <param name="status"	type="boolean">Pass true to show the gridlines</param>
+},
+showHeadings:function(startRow){
+/// <summary>
+/// This method is used to show/hide the headers in active sheet in the Spreadsheet.
+/// </summary>
+/// <param name="startRow"	type="boolean">Pass true to show the sheet headers.</param>
+},
 showRow:function(startRow, endRow){
 /// <summary>
 /// This method is used to show the hidden rows in the specified range in the Spreadsheet.
 /// </summary>
 /// <param name="startRow"	type="number">Index of the start row.</param>
-/// <param name="endRow"	type="number">Index of the end row.</param>
+/// <param name="endRow"	type="number">Optional. Index of the end row.</param>
 },
 showWaitingPopUp:function(){
 /// <summary>
@@ -16878,7 +17162,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Gets or sets a value that indicates to enable or disable animation while selection.Note: allowSelection must be true while using this property.
 ///<br/>enableAnimation-boolean	default-false
 ///<br/><br/>
-///Gets or sets a value that indicates to set selection type in Spreadsheet. It has three types which are Column, Row and default.
+///Gets or sets a value that indicates to set selection type in Spreadsheet. It has three types which are Column, Row and Default.
 ///<br/>selectionType-ej.Spreadsheet.SelectionType|string	default-ej.Spreadsheet.SelectionType.Default
 ///<br/><br/>
 ///Gets or sets a value that indicates to set selection unit in Spreadsheet. It has three types which are Single, Range and MultiRange.
@@ -16908,7 +17192,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Specifies the primary key for the datasource in Spreadsheet.
 ///<br/>primaryKey-string	default-
 ///<br/><br/>
-///Specifies the query for the datasource in Spreadsheet.
+///Specifies the query for the dataSource in Spreadsheet.
 ///<br/>query-any	default-null
 ///<br/><br/>
 ///Specifies single range or multiple range settings for a sheet in Spreadsheet.
@@ -17382,11 +17666,12 @@ jQuery.fn.ejEditor = function (options) {
 ej.Tile=function(){};
 ej.Tile.prototype={
 
-updateTemplate:function(name){
+updateTemplate:function(id, index){
 /// <summary>
 /// Update the image template of tile item to another one.
 /// </summary>
-/// <param name="name"	type="string">UpdateTemplate by using id</param>
+/// <param name="id"	type="string">UpdateTemplate by using id</param>
+/// <param name="index"	type="number">index of the tile</param>
 },
 };
 jQuery.fn.ejTile=function(){
@@ -17463,13 +17748,13 @@ jQuery.fn.ejTile = function (options) {
 ///<br/>enabled-boolean	default-false
 ///<br/><br/>
 ///Specifies liveTile images in CSS classes.
-///<br/>imageClass-string	default-null
+///<br/>imageClass-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Specifies liveTile images in templates.
-///<br/>imageTemplateId-string	default-null
+///<br/>imageTemplateId-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Specifies liveTile images in CSS classes.
-///<br/>imageUrl-string	default-null
+///<br/>imageUrl-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Specifies liveTile type for Tile. See orientation
 ///<br/>type-ej.Tile.liveTileType|string	default-flip
@@ -17493,7 +17778,7 @@ jQuery.fn.ejTile = function (options) {
 ///<br/>allowSelection-boolean	default-false
 ///<br/><br/>
 ///Sets the background color to  tile.
-///<br/>backgroundColor-string	default-false
+///<br/>backgroundColor-string	default-null
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -17542,6 +17827,9 @@ jQuery.fn.ejTimePicker = function (options) {
 ///The TimePicker control for JavaScript allows users to select a time value. The available times can be restricted to a range by setting minimum and maximum time values. The TimePicker sets the time as a mask to prevent users from entering invalid values.<br/><br/>
 ///Sets the root CSS class for the TimePicker theme, which is used to customize.
 ///<br/>cssClass-string	default-
+///<br/><br/>
+///Specifies the list of time range to be disabled.
+///<br/>disableTimeRanges-any	default-{}
 ///<br/><br/>
 ///Specifies the animation behavior in TimePicker.
 ///<br/>enableAnimation-boolean	default-true
@@ -18152,6 +18440,9 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///Shows/hides the context menu.
 ///<br/>showContextMenu-boolean	default-false
 ///<br/><br/>
+///Specify the CSS class for TreeGrid to achieve custom theme.
+///<br/>cssClass-string	default-
+///<br/><br/>
 ///Specifies hierarchical or self-referential data to populate the TreeGrid.
 ///<br/>dataSource-Array&lt;any&gt;	default-null
 ///<br/><br/>
@@ -18218,7 +18509,7 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///This specifies the number of rows to display in each page.
 ///<br/>pageSize-number	default-12
 ///<br/><br/>
-///Get the value of records which is bound to TreeGrid. The totalRecordsCount value is calculated based on the datasoure bound to TreeGrid.
+///Get the value of records which is bound to TreeGrid. The totalRecordsCount value is calculated based on the datasource bound to TreeGrid.
 ///<br/>totalRecordsCount-number	default-null
 ///<br/><br/>
 ///Specifies the current page to display at load time.
@@ -18364,8 +18655,17 @@ jQuery.fn.ejTreeMap = function (options) {
 ///Enable/Disable the drillDown for treemap
 ///<br/>enableDrillDown-boolean	default-false
 ///<br/><br/>
+///Controls whether Treemap has to be responsive while resizing the window.
+///<br/>isResponsive-boolean	default-true
+///<br/><br/>
 ///Specifies whether treemap need to resize when container is resized
 ///<br/>enableResize-boolean	default-true
+///<br/><br/>
+///This property is used to select treemap items while clicking and dragging
+///<br/>draggingOnSelection-boolean	default-false
+///<br/><br/>
+///This property is used to select group of treemap items while clicking and dragging
+///<br/>draggingGroupOnSelection-boolean	default-false
 ///<br/><br/>
 ///Specifies the group color mapping of the treemap
 ///<br/>groupColorMapping-Array&lt;GroupColorMapping&gt;	default-[]
@@ -18454,14 +18754,20 @@ jQuery.fn.ejTreeMap = function (options) {
 ///Specifies the to value for rangeColorMapping.
 ///<br/>to-number	default--1
 ///<br/><br/>
+///Specifies the selection mode of treemap item. Accepted selection mode values are Default and Multiple.
+///<br/>selectionMode-ej.datavisualization.TreeMap.selectionMode|string	default-default
+///<br/><br/>
 ///Specifies the selection mode of the treemap. Accepted selection mode values are Default and Multiple.
 ///<br/>groupSelectionMode-ej.datavisualization.TreeMap.groupSelectionMode|string	default-default
 ///<br/><br/>
 ///Specifies the legend visibility status of the treemap
 ///<br/>showLegend-boolean	default-false
 ///<br/><br/>
-///Specifies whether treemap tooltip need to be visible
-///<br/>showTooltip-boolean	default-false
+///Specifies whether gradient color has to be applied for treemap items
+///<br/>enableGradient-boolean	default-false
+///<br/><br/>
+///Specifies whether treemap showTooltip need to be visible
+///<br/>showTooltip-boolean	default-
 ///<br/><br/>
 ///Specifies the tooltip template of the treemap
 ///<br/>tooltipTemplate-string	default-null
@@ -18884,7 +19190,7 @@ jQuery.fn.ejTreeView = function (options) {
 ///Its allow us to indicate whether the node has child or not in load on demand
 ///<br/>hasChild-boolean	default-
 ///<br/><br/>
-///Specifies the HTML Attributes to â€œliâ€ item list.
+///Specifies the HTML Attributes to "li" item list.
 ///<br/>htmlAttribute-any	default-
 ///<br/><br/>
 ///Specifies the id to TreeView node items list.
@@ -18893,7 +19199,7 @@ jQuery.fn.ejTreeView = function (options) {
 ///Specifies the image attribute to â€œimgâ€ tag inside items list
 ///<br/>imageAttribute-any	default-
 ///<br/><br/>
-///Specifies the HTML Attributes to â€œliâ€ item list.
+///Specifies the HTML Attributes to "li" item list.
 ///<br/>imageUrl-string	default-
 ///<br/><br/>
 ///If its true Checkbox node will be checked when rendered with checkbox.
@@ -18911,7 +19217,7 @@ jQuery.fn.ejTreeView = function (options) {
 ///Allow us to specify the node to be in selected state
 ///<br/>selected-boolean	default-
 ///<br/><br/>
-///Specifies the sprite CSS class to â€œliâ€ item list.
+///Specifies the sprite CSS class to "li" item list.
 ///<br/>spriteCssClass-string	default-
 ///<br/><br/>
 ///It receives the table name to execute query on the corresponding table.

@@ -2,7 +2,9 @@
     .e-grid.e-responsive > [id*='Dlg_wrapper'] {
         width: 130px !important;
     }
-
+    .e-grid.e-responsive .e-gridtoolbar .e-gridresponsiveicons {
+        display: inline !important;
+    }
     .e-grid.e-responsive .e-rowcell {
         display: block;
         height: 27px;
