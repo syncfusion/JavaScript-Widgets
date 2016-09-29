@@ -46,10 +46,10 @@
     left: -5px;
     font-family: 'ej-ribbonfont';
     content: "\e910";
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
     top: -4px;
-	left:-5px;
+    left: -5px;
 }
 /**/
 
@@ -188,29 +188,29 @@ font-family: 'ej-ribbonfont';
     font-family: 'ej-ribbonfont';
     content: "\e945";
     font-size: 25px;
-    text-indent: -6px;    
+    text-indent: -12px;    
     position: relative;
     top: -6px;
-	 left: -3px;
+	 left: 3px;
 }
 .e-ribbon .e-resindent:before {
-    font-family: 'ej-ribbonfont';
-    content: "\e944";
-    font-size: 24px;
-    text-indent: -6px;
+   font-family: 'ej-ribbonfont';
+    content: "\e919";
+    font-size: 22px;
+    text-indent: -3px;
     left: -3px;
     position: relative;
-    top: -6px;
+    top: -5px;
 }
 
 .e-ribbon .e-resoutdent:before {
-    font-family: 'ej-ribbonfont';
-    content: "\e943";
-    font-size: 24px;
-    text-indent: -6px;
+       font-family: 'ej-ribbonfont';
+    content: "\e919";
+    font-size: 21px;
+    text-indent: -1px;
     left: -3px;
     position: relative;
-    top: -6px;
+    top: -4px;
 }
 
 .e-ribbon.e-responsive .e-resnumbericon:before {
@@ -226,11 +226,11 @@ font-family: 'ej-ribbonfont';
 .e-ribbon .e-resbullet:before {
     font-family: 'ej-ribbonfont';
     content: "\e941";
-    font-size: 24px;
-    text-indent: -6px;
-    left: -3px;
+    font-size: 44px;
+    text-indent: -13px;
+    left: -2px;
     position: relative;
-    top: -6px;
+    top: -16px;
 }
 .e-ribbon .e-resundo:before {
     font-family: 'ej-ribbonfont';
@@ -817,10 +817,7 @@ font-family: 'ej-ribbonfont';
         margin: 20px;
     }
 
-	  .e-ribbon.e-responsive .e-resborder:before,
-        .e-ribbon.e-responsive .e-resoutdent:before,
-        .e-ribbon.e-responsive .e-resindent:before,
-        .e-ribbon.e-responsive .e-resbullet:before {
+	  .e-ribbon.e-responsive .e-resborder:before{
             font-size: 32px;
             top: -10px;
         }

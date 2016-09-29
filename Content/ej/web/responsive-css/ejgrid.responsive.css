@@ -3,7 +3,7 @@
         width: 130px !important;
     }
     .e-grid.e-responsive .e-gridtoolbar .e-gridresponsiveicons {
-        display: inline !important;
+      display : inline !important;
     }
     .e-grid.e-responsive .e-rowcell {
         display: block;

@@ -4,7 +4,7 @@
 
   "name": "syncfusion-javascript",
 
-  "version": "14.2.32",
+  "version": "14.3.49",
 
   "description": "Npm package of Syncfusion.JavaScript.",
 
@@ -34,11 +34,9 @@
 
   "dependencies": {
 
-    "jquery": ">=1.7.0 <3.0.0",
+    "jquery": "*",
 
     "jquery-validation": "*",
-
-    "jquery-easing": "*",
 
     "jsrender": "*"
 
@@ -66,7 +64,6 @@
         ],
         "dependencies": {
             "jquery": "*",
-            "jquery-easing": "*",
             "jsrender": "*",
             "jquery-validation": "*",
             "jquery-validation-unobtrusive": "*"
@@ -74,7 +71,6 @@
         "ignore": [
           "Scripts/jquery.unobtrusive-ajax.min.js",
           "Scripts/jquery.validate.unobtrusive.min.js",
-          "Scripts/jsrender.min.js",    
           "Scripts/ej.widgets.all*.js",
           "Scripts/ej.widgets.all.min.map",
           "Scripts/common/ej.unobtrusive.min.js",
