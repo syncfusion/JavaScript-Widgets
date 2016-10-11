@@ -1642,7 +1642,7 @@ jQuery.fn.ejChart = function (options) {
 ///Name of the property in the datasource that contains close value for the series.
 ///<br/>close-string	default-null
 ///<br/><br/>
-///zOrder of the series.
+///Z-order of the series.
 ///<br/>zOrder-number	default-0
 ///<br/><br/>
 ///Name of the property in the datasource that contains the size value for the bubble series.
@@ -3403,7 +3403,7 @@ jQuery.fn.ejChart = function (options) {
 ///Name of the property in the datasource that contains fill color for the series.
 ///<br/>pointColorMappingName-string	default-null
 ///<br/><br/>
-///zOrder of the series.
+///Z-order of the series.
 ///<br/>zOrder-number	default-0
 ///<br/><br/>
 ///Name of the property in the datasource that contains the size value for the bubble series.
@@ -9115,10 +9115,10 @@ jQuery.fn.ejGrid = function (options) {
 ///Query the dataSource from the table for Grid.
 ///<br/>query-any	default-null
 ///<br/><br/>
-///Gets or sets an object that indicates whether to modify the resizing behaviour.
+///Gets or sets an object that indicates whether to modify the resizing behavior.
 ///<br/>resizeSettings-ResizeSettings	default-
 ///<br/><br/>
-///Gets or sets a value that indicates whether to define the mode of resizing.Accepting types are "normal", "nextcolumn" and "control".
+///Gets or sets a value that indicates whether to define the mode of resizing.
 ///<br/>resizeMode-ej.Grid.ResizeMode|string	default-ej.Grid.ResizeMode.Normal
 ///<br/><br/>
 ///Gets or sets a value that indicates to render the grid with template rows. The template row must be a table row. That table row must have the JavaScript render binding format ({{:columnName}}) then the grid data source binds the data to the corresponding table row of the template.
@@ -17251,7 +17251,7 @@ getFrozenColumns:function(sheetIdx){
 },
 getFrozenRows:function(sheetIdx){
 /// <summary>
-/// This method is used to get the frozen rowï¿½s index in Spreadsheet.
+/// This method is used to get the frozen row index in Spreadsheet.
 /// </summary>
 /// <param name="sheetIdx"	type="number">Pass the sheet index.</param>
 },
@@ -17714,7 +17714,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Gets or sets a value that indicates to define the common width for each column in the Spreadsheet.
 ///<br/>columnWidth-number	default-64
 ///<br/><br/>
-///Gets or sets a value to add root css class for customizing Spreadsheet skins.
+///Gets or sets a value to add root CSS class for customizing Spreadsheet skins.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates custom formulas in Spreadsheet.
@@ -17744,7 +17744,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Gets or sets a value that indicates to define password while export to excel format.
 ///<br/>password-string	default-null
 ///<br/><br/>
-///Gets or sets a value that indicates to define pdfUrl for export to pdf format.
+///Gets or sets a value that indicates to define pdfUrl for export to PDF format.
 ///<br/>pdfUrl-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the format behavior in the Spreadsheet.
@@ -17816,7 +17816,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Gets or sets a value that indicates whether to enable or disable isAppend property in ribbon settings.
 ///<br/>isAppend-boolean	default-false
 ///<br/><br/>
-///Specifies the data source to append in applicationtab.
+///Specifies the data source to append in application tab.
 ///<br/>dataSource-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the number of rows to be displayed in the sheet.
@@ -19372,7 +19372,7 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///Enables or disables the responsiveness of TreeGrid
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
-///Specifies the name of the field in the dataSource, which contains the parentâ€™s id. This is necessary to form a parent-child hierarchy, if the dataSource contains self-referential data.
+///Specifies the name of the field in the dataSource, which contains the parentï¿½s id. This is necessary to form a parent-child hierarchy, if the dataSource contains self-referential data.
 ///<br/>parentIdMapping-string	default-
 ///<br/><br/>
 ///Specifies the options for customizing the pager.
@@ -19420,7 +19420,7 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///Enables/disables the options for inserting , deleting and renaming  columns.
 ///<br/>showColumnOptions-boolean	default-false
 ///<br/><br/>
-///Controls the visibility of the menu button, which is displayed on the column header. Clicking on this button will show a popup menu. When you choose â€œColumnsâ€ item from this popup, a list box with column names will be shown, from which you can select/deselect a column name to control the visibility of the respective columns.
+///Controls the visibility of the menu button, which is displayed on the column header. Clicking on this button will show a popup menu. When you choose ï¿½Columnsï¿½ item from this popup, a list box with column names will be shown, from which you can select/deselect a column name to control the visibility of the respective columns.
 ///<br/>showColumnChooser-boolean	default-false
 ///<br/><br/>
 ///Specifies the visibility of details view
@@ -19587,7 +19587,7 @@ jQuery.fn.ejTreeMap = function (options) {
 ///Specifies the template for legendSettings
 ///<br/>template-string	default-null
 ///<br/><br/>
-///Specifies the mode for legendSettings whether defaul or interactive mode
+///Specifies the mode for legendSettings whether default or interactive mode
 ///<br/>mode-string	default-default
 ///<br/><br/>
 ///Specifies the title text for legend
