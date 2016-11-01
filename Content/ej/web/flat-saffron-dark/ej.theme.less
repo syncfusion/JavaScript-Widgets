@@ -2541,6 +2541,9 @@ color:#5c5c5c;
 .e-btn.e-txt{
     .material-buttonText-alignment();
 }
+.e-menu.e-split.e-context .e-list>.e-menulink{
+    color:@default-font-color;
+}
 /*------------------------------------- Captcha -------------------------------------------*/
 
 .e-captcha .refresh {		
@@ -3066,7 +3069,7 @@ color:#5c5c5c;
     border-bottom: @border-size @border-type @header-border-color;
 }
 .e-datepicker .e-header:hover > span {
-     color: @header-font-color;
+     color: @hover-font-color;
 }
 .e-datepicker .e-footer
 {
@@ -3082,13 +3085,13 @@ color:#5c5c5c;
 }
 .e-datepicker .e-text
 {    
-    color: @hover-font-color;   
+    color: @header-font-color;   
     .material-headerHoverStylefor-datepicker();
 }
 .e-datepicker .e-week-header,.e-ntouch.e-datepicker .e-week-header:hover
 {
     .default-gradient();
-    color: @content-font-color;
+    color: @default-font-color;
     border-bottom: @border-size @border-type transparent;
 }
 .e-ntouch.e-datepicker table td:hover,.e-datepicker td.e-state-hover,.e-ntouch.e-datepicker .current-month.e-state-default.e-special-day:hover
@@ -3330,7 +3333,7 @@ color:#5c5c5c;
     .bs-default-gradient();
     border: @border-size @border-type @content-border-color;
     .switch-datetimepick-button-text;
-    color: @content-font-color;
+    color: @default-font-color;
 }
 
 .e-datetime-popup .e-dt-button:active {
@@ -3359,6 +3362,13 @@ color:#5c5c5c;
     color: @header-font-color;
     font-size: @header-font-size;
     font-weight: @header-font-weight;
+}
+
+.e-drillDowncontainer .e-timepicker.e-popup .e-header:hover >span,
+.e-drillDowncontainer .e-timepicker.e-popup .e-mins-header:hover >span,
+.e-drillDowncontainer .e-timepicker.e-popup .e-header-am:hover >span,
+.e-drillDowncontainer .e-timepicker.e-popup .e-header-pm:hover >span{
+    color:@hover-font-color;
 }
 
 .e-drillDowncontainer .e-timepicker.e-popup .e-header {
@@ -3459,7 +3469,7 @@ color:#5c5c5c;
 
 
 .svg-rotate-ie {
-  cursor: url("../../common-images/Rotate.cur"),url("../content/ejthemes/common-images/Rotate.cur"),url("../../content/ejthemes/common-images/Rotate.cur"),default;
+     cursor: url("../common-images/Rotate.cur"), default;
     }
 .svg-rotate {
      cursor: url("../common-images/Rotate.cur"), default;
@@ -5696,6 +5706,12 @@ vertical-align:baseline;
     border-color:@default-border-color;
     .border-selection();
 }
+.e-groupbutton-hSmall{
+    min-height:26px;
+}
+.e-groupbutton>.e-ul>.e-grp-btn-item .e-btn-content.e-groupBtn-padding{
+    padding:0px;
+}
 
 .e-groupbutton.e-focus {
     box-shadow: 0 0 2px @shadow-bg-color;
@@ -7113,7 +7129,6 @@ content:"\e6a0";
     padding: 0 6px 6px;
 }
 .e-pivotschemadesigner .expandSchema {
-    background: url("../images/expand.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     display: block;
     float: right;
     height: 25px;
@@ -7126,7 +7141,6 @@ content:"\e6a0";
     float: right;
     height: 25px;
     position: relative;
-    background-image:url("../images/colapse.png");
     top: -615px;
     width: 23px;
 }
@@ -11093,5 +11107,7 @@ div.e-dlg-field-validation-error:before {
     border-color:@content-border-color;
     background-color:@content-bg-color;
 }
-
+.e-spellcheckparent .e-suggestionlist {
+  border-color:@content-border-color;
+}
 
