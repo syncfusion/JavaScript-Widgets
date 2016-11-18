@@ -22,7 +22,9 @@
 
   "dependencies": {
 
-    "jquery": "*",
+    "syncfusion-ej-global": "*",
+	
+	"jquery": "*",
 
     "jquery-validation": "*",
 

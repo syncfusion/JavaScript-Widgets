@@ -34,7 +34,9 @@
 
   "dependencies": {
 
-    "jquery": "*",
+    "syncfusion-ej-global": "*",
+	
+	"jquery": "*",
 
     "jquery-validation": "*",
 
@@ -63,6 +65,7 @@
             "Content"
         ],
         "dependencies": {
+			"syncfusion-ej-global": "*",
             "jquery": "*",
             "jsrender": "*",
             "jquery-validation": "*",
