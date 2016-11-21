@@ -12,6 +12,7 @@
 @header-border-color: #c8c8c8;
 @header-font-color: #282827;
 @header-icon-color: #232323;
+@filtermenu-color: #c8c8c8;
 
 @tooltip-line-height : 18px;
 
@@ -242,6 +243,7 @@
 @treegrid-totalsummaryrow-backgroundcolor: lighten(@default-bg-stcolor, 1%);
 @treegrid-summaryrow-textcolor: @content-font-color;
 @treegrid-summaryrow-border-color: @content-border-color;
+@filtermenudialog-color:@filtermenu-color;
 
 @colorpicker-image: url(../common-images/colorpicker_light.png);
 @colorpicker-bg-color: @content-bg-color;
@@ -810,6 +812,7 @@
 .high-contrast-gantt-toolbar-icon-border() {
     @hover-border-color: transparent;
 }
+.high-contrast-stylefor-daterange(){}
 .high-contrast-stylefor-silder-active() {}
 .high-contrast-checkbox-bordercolor() {}
 .high-contrast-radio-bordercolor() {}
@@ -875,6 +878,9 @@
 .office-upload-btn-hover-color(){}
 .office-tab-header-bghover-color{}
 .office-upload-button-border(){}
+.office-tab-border-left-right(){
+    border: none;
+}
 /*------------------ material theme ---------------------*/
 
 .material-tab-border() {
@@ -882,6 +888,25 @@
 }
 .material-tab-borderbottom() {
     border-top: 3px @border-type @active-bg-stcolor;
+}
+
+.material-tab-right-border(){ 
+  border-left: transparent;
+}
+.material-tab-right-bottom-border(){
+    border-right: 3px @border-type @active-bg-stcolor;
+}
+.material-tab-left-border(){
+    border-right: transparent;
+}
+.material-tab-left-bottom-border(){
+    border-left: 3px @border-type @active-bg-stcolor;
+}
+.material-tab-bottom-border(){
+    border-top: transparent;
+}
+.material-tab-bottom-border-bottom(){
+    border-bottom: 3px @border-type @active-bg-stcolor;
 }
 
 .material-datepick-header-icon-color() {}
@@ -963,6 +988,8 @@
 .material-rte-splitbtn-radius(){}
 /*-----------------------HeatMap Definition-----------------*/
 @hmp-border-color: #c8c8c8;
+@hmp-font-color:black;
+@hmp-background-color:white;
 /* Common style */
 
 .e-content-area{
@@ -1017,6 +1044,10 @@ color: @header-icon-color;
 .e-grid .e-gridheader .e-icon{
  .switch-grid-header-icon;   
  color: @header-icon-color;
+}
+.e-grid .e-dialog > .e-dialog-scroller,
+.e-grid .e-excelfilter.e-dlgcontainer {
+  border:@border-size @border-type @content-border-color \9;
 }
 .e-grid .e-icon.e-animatebutton {
  .switch-animate-icon-color;
@@ -1377,21 +1408,26 @@ color: @hover-icon-color;
     background-color: @content-bg-color;
 }
 
+
 .e-heatmap.e-grid {
-    display:block;
+    display: block;
 }
+
 .e-heatmaplegend {
-    display:block;
+    display: block;
 }
+
 .e-heatmap.e-grid .e-alt_row,
 .e-heatmap.e-grid td.e-cellselectionbackground,
 .e-heatmap.e-grid .e-headercell, .e-heatmap.e-grid .e-grouptopleftcell {
     background: white;
 }
+
 .e-heatmap.e-js.e-grid .e-headercelldiv {
     font-weight: 600;
-	font-size: 12px;
+    font-size: 12px;
 }
+
 .e-heatmap.e-js.e-grid.e-responsive .e-rowcell {
     font-size: 12px;
 }
@@ -1404,6 +1440,10 @@ color: @hover-icon-color;
 .e-heatmap.e-js.e-grid.e-responsive .e-alt_row td:first-child {
     font-weight: 600;
     font-size: 12px;
+}
+
+.e-heatmap.e-js.e-grid .e-gridheader {
+    border-bottom-width: 1px;
 }
 
 .e-heatmap.e-js.e-grid,
@@ -1421,9 +1461,37 @@ color: @hover-icon-color;
     border-color: @hmp-border-color;
 }
 
-    .e-heatmap.e-js.e-grid.e-responsive .e-rowcell {
-        border-bottom: none;
-    }
+.e-heatmap.e-js.e-grid.e-responsive .e-rowcell {
+    border-bottom: none;
+}
+
+.e-heatmaplegend.e-js .sf-ht-label,
+.e-heatmap.e-js.e-grid .e-rowcell.sf-ht-heatmapcell,
+.e-heatmap.e-js.e-grid .e-headercelldiv {
+    color: @hmp-font-color;
+}
+
+.e-heatmap.e-js.e-grid .e-alt_row,
+.e-heatmap.e-js.e-grid .e-row,
+.e-heatmap.e-js.e-grid .e-headercell.e-default.e-headertemplate,
+.e-heatmap.e-js.e-grid .e-cellselectionbackground .e-activecell,
+.e-heatmap.e-grid td.e-cellselectionbackground {
+    background-color: @hmp-background-color;
+}
+
+.e-heatmaplegend.e-js .sf-ht-label,
+.e-heatmap.e-js.e-grid .e-rowcell.sf-ht-heatmapcell,
+.e-heatmap.e-js.e-grid .e-headercelldiv {
+    color: @hmp-font-color;
+}
+
+.e-heatmap.e-js.e-grid .e-alt_row,
+.e-heatmap.e-js.e-grid .e-row,
+.e-heatmap.e-js.e-grid .e-headercell.e-default.e-headertemplate,
+.e-heatmap.e-js.e-grid .e-cellselectionbackground .e-activecell,
+.e-heatmap.e-grid td.e-cellselectionbackground {
+    background-color: @hmp-background-color;
+}
 
 
 
@@ -1452,8 +1520,7 @@ color: @hover-icon-color;
 }
 .e-excelfilter.e-dlgcontainer,
 .e-excelfilter.e-dlgcustom .e-fieldset,
-.e-excelfilter .e-menu.e-vertical .e-list > ul,
-.e-excelfilter .e-btncontainer input {
+.e-excelfilter .e-menu.e-vertical .e-list > ul{
     border-width: @border-size;
     border-style: @border-type;
     border-color: @scroll-bg-color;
@@ -1476,8 +1543,8 @@ color: @hover-icon-color;
 .e-excelfilter .e-select:hover .e-icon{
 color: @hover-icon-color;
 }
-.e-excelfilter.e-dlgcustom input {
-line-height: normal;
+.e-excelfilter.e-dlgcustom .e-input{
+line-height: 1.7em;
 }
 .e-excelfilter{
     -moz-user-select: none;
@@ -2762,7 +2829,7 @@ color:#5c5c5c;
     .material-stylefor-bordertop();
 }
 
-.e-fileexplorer input, .e-fileexplorer .e-treeview .e-text,
+.e-fileexplorer input,
 .e-fileexplorer .e-grid .e-headercelldiv, .e-fileexplorer .e-grid .e-gridcontent tr,
 .e-fileexplorer .e-tileview .e-tilenode .e-name, input.e-fe-dialog-text,
 .e-fe-toolbar.e-responsive-toolbar input
@@ -2815,11 +2882,6 @@ color:#5c5c5c;
 .e-fileexplorer.e-js .e-statusbar .e-active .e-icon
 {
     color: @active-bg-stcolor;
-}
-
-.e-fileexplorer.e-js .e-treeview .e-text.e-active
-{
-    color: @active-font-color;
 }
 
 .e-fileexplorer.e-js .e-treeview .e-text:hover,
@@ -3481,8 +3543,198 @@ color:#5c5c5c;
 
 
 
+/*------------DateRangePicker themes -------------*/
+
+.e-daterangepicker-popup {
+    border: 1px solid @content-border-color;
+    background-color: @content-bg-color;
+    font-family: @font-family;
+    font-weight: @content-font-weight;
+    color: @content-font-color;
+}
+.e-daterangewidget .e-input  {
+	background-color: @content-bg-color;
+    font-family: @font-family;
+    font-weight: @content-font-weight;
+    color: @content-font-color;
+}
+.e-daterangewidget .e-in-wrap, .e-daterangepicker-popup {
+    border-color: @content-border-color;
+}
+
+.e-daterangewidget.e-widget:hover .e-in-wrap {
+    .material-normal-box-shadow;
+    .focus-border-color();
+}
+
+.e-daterangewidget.e-focus .e-in-wrap, .e-daterangewidget .e-focus {
+    box-shadow: 0 0 @shadow-bg-size @bs-shadow-bg-color;
+    .material-normal-box-shadow;
+}
+
+.e-daterangewidget.e-focus .e-in-wrap, .e-daterangewidget .e-focus .e-in-wrap {
+    .focus-border-color();
+}
+
+.e-daterangewidget .e-select,
+.e-daterangewidget .e-drpbuttons .e-disable:hover,
+.e-ntouch.e-daterangewidget .e-disable.e-select:hover {
+    .bs-default-gradient();
+    background-color: @content-bg-color;
+    border-color: @content-border-color;
+    color: @default-icon-color;
+    .border-selection();
+}
+
+.e-daterangewidget .e-select,
+.e-ntouch.e-daterangewidget .e-disable.e-select:hover {
+    .office-button-bg-color();
+}
+
+.e-ntouch.e-daterangewidget .e-select:hover {
+    .hover-gradient();
+    color: @hover-icon-color;
+}
+
+.e-daterangepicker-popup .e-custom-dateranges {
+    border-left: 1px solid @content-border-color;
+}
+
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-start-date,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.today.e-start-date,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-active.e-start-date,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-start-date:hover,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-active.e-start-date:hover,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-state-hover.e-start-date,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-end-date,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.today.e-end-date,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-active.e-end-date,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-state-hover.e-end-date,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.in-range.e-end-date {
+    .active-gradient();
+    color: @active-font-color;
+}
+
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default:hover,
+.e-daterangepicker-popup .e-ntouch.e-datepicker table td.e-state-default:hover {
+    background: @content-bg-color;
+    color: @active-bg-stcolor;
+    font-weight: @header-font-weight;
+}
+
+.e-daterangepicker-popup .e-val-error .e-in-wrap {
+    border: 1px solid red;
+}
+
+.e-daterangepicker-popup .e-drpbuttons .e-drp-apply.e-disable {
+    cursor: default;
+}
+
+
+
+
+.e-custom-dateranges li {
+    box-shadow: 0 0 5px @default-bg-stcolor;
+    background: @content-bg-color;
+    border: 1px solid @content-border-color;
+}
+
+.e-custom-dateranges li.e-active {
+    .active-gradient();
+    border-color: @active-border-color;
+    color: @active-font-color;
+    border-color: @active-border-color;
+}
+
+.e-custom-dateranges li:hover {
+    .hover-gradient();
+    color: @hover-font-color;
+    border-color: @hover-border-color;
+}
+
+.e-daterange-responsive .e-custom-dateranges {
+    border-top: 1px solid @content-border-color;
+}
+
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.in-range.e-active,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-active,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.in-range.e-state-hover,
+.e-daterangepicker-popup .e-ntouch.e-datepicker .e-datepicker-days .e-state-default.in-range:hover {
+.high-contrast-stylefor-daterange();
+    background: @default-bg-stcolor;
+}
+
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-state-hover,
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.today {
+    background: @content-bg-color;
+    color: @content-font-color;
+}
+
+.e-daterangepicker-popup .e-custom-dateranges li:hover {
+    .hover-gradient();
+    background-color: #179bd7;
+    color: @hover-font-color;
+}
+
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.in-range + .e-end-date {
+.high-contrast-stylefor-daterange();
+    box-shadow: -12px 0 0 0 @default-bg-stcolor;
+}
+
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-start-date.showrange {
+.high-contrast-stylefor-daterange();
+
+    box-shadow: 12px 0 0 0 @default-bg-stcolor;
+}
+
+.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.in-range {
+
+    color: @default-font-color;
+.high-contrast-stylefor-daterange();
+    background: @default-bg-stcolor;
+    border-color: @content-border-color;
+    box-shadow: 0 0 0 transparent inset;
+}
+/*button css*/
+.e-daterangepicker-popup .e-drpbuttons {
+    border-top: 1px solid @default-border-color;
+    .bs-default-gradient();
+    border-color: @default-border-color;
+    .switch-datetimepick-button-text;
+    color: @default-font-color;
+}
+
+.e-daterangepicker-popup .e-drpbuttons div {
+    .bs-default-gradient();
+    color: @default-font-color;
+    border-color: @default-border-color;
+}
+
+.e-daterangepicker-popup .e-drpbuttons div:hover {
+    .hover-gradient();
+    color: @hover-font-color;
+    border-color: @hover-border-color;
+}
+
+.e-daterangepicker-popup .e-drpbuttons .e-active {
+    .active-gradient();
+    border-color: @active-border-color;
+    color: @content-font-color;
+    border-color: @active-border-color;
+}
+
+.e-daterangepicker-popup .e-datewidget.e-error .e-in-wrap {
+    border-color: @content-border-color;
+}
+
+.e-daterangepicker-popup .e-datewidget.e-error {
+    color: white;
+}
+
+
+
 .svg-rotate-ie {
-     cursor: url("../common-images/Rotate.cur"), default;
+  cursor: url("../../common-images/Rotate.cur"),url("../content/ejthemes/common-images/Rotate.cur"),url("../../content/ejthemes/common-images/Rotate.cur"),default;
     }
 .svg-rotate {
      cursor: url("../common-images/Rotate.cur"), default;
@@ -4034,7 +4286,20 @@ color:#5c5c5c;
     .focus-border-color();
 }
 
-.e-numeric .e-in-wrap , .e-percent .e-in-wrap ,
+.e-numeric.e-disable-wrap:hover .e-in-wrap, .e-percent.e-disable-wrap:hover .e-in-wrap,
+.e-currency.e-disable-wrap:hover .e-in-wrap, .e-mask.e-disable-wrap:hover .e-in-wrap
+{
+    border-color: @content-border-color;
+	box-shadow: none;
+}
+
+.e-numeric.e-disable-wrap:hover .e-in-wrap input.e-input, .e-percent.e-disable-wrap:hover .e-in-wrap input.e-input,
+.e-currency.e-disable-wrap:hover .e-in-wrap input.e-input, .e-mask.e-disable-wrap:hover .e-in-wrap input.e-input
+{
+    box-shadow: none;
+}
+
+.e-numeric .e-in-wrap , .e-percent .e-in-wrap,
 .e-currency .e-in-wrap, .e-mask .e-in-wrap
 {
     border-color: @content-border-color;
@@ -4334,6 +4599,16 @@ color:#5c5c5c;
 .e-menu.e-vertical .e-active > .e-menulink,.e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover
 {
      .material-menu-active-bg-color;
+}
+.e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:hover {
+    .hover-gradient();
+     color: @active-font-color;
+     border-color: @hover-bg-stcolor;
+}
+.e-menu-res-wrap .e-menu-res-in-wrap .e-icon.e-check-wrap:active {
+    .active-gradient();
+     color: @active-font-color;
+     border-color: @hover-bg-stcolor;
 }
 
 
@@ -4751,7 +5026,7 @@ background-image:url(images/rotator-icon.png);
 .e-tab.e-js > .e-header,.e-tab.e-js .e-header > .e-select.e-disable:hover,.e-tab.e-js > .e-left,.e-tab.e-js > .e-right,.e-tab.e-disable .e-select:hover
 {
     .header-gradient();   
-    border: none;
+    .office-tab-border-left-right;   
 }
 
 .e-tab.e-js > .e-header, .e-tab.e-js .e-header > .e-select.e-disable:hover, .e-tab.e-js > .e-left, .e-tab.e-js > .e-right, .e-tab.e-disable .e-select:hover {
@@ -4777,12 +5052,12 @@ background-image:url(images/rotator-icon.png);
 }
 .e-tab.e-js .e-left .e-item.e-active,.e-tab.e-js .e-left .e-item.e-active:hover{
   margin-right: -1px; 
-  border-right: transparent ;
+  .material-tab-left-border; 
    outline:0 none;
 }
 .e-tab.e-js .e-right .e-item.e-active,.e-tab.e-js .e-right .e-item.e-active:hover{
   margin-left: -1px; 
-  border-left: transparent;
+  .material-tab-right-border;
    outline:0 none;
 }
 .e-scrolltab.e-js .e-header>.e-bottom-line.e-item.e-active,.e-scrolltab.e-js .e-header>.e-bottom-line.e-item.e-active:hover {
@@ -4802,7 +5077,7 @@ background-image:url(images/rotator-icon.png);
 }
 .e-tab.e-js .e-header > .e-top-line.e-active,.e-tab.e-js .e-header > .e-top-line.e-active:hover{
    padding-top:1px;
-   border-top: transparent ;
+   .material-tab-bottom-border; 
    outline:0 none;
    
 }
@@ -4931,13 +5206,13 @@ border-bottom: @border-size @border-type @tab-background-color;
     .material-tab-borderbottom();
 }
 .e-tab .e-header.e-addbordertop .e-active {
-    border-bottom:3px @border-type @active-bg-stcolor;
+    .material-tab-bottom-border-bottom; 
 }
 .e-tab .e-right.e-addborderright .e-active{
-    border-right:3px @border-type @active-bg-stcolor;
+    .material-tab-right-bottom-border; 
 }
 .e-tab .e-left.e-addborderleft .e-active{
-     border-left:3px @border-type @active-bg-stcolor;
+    .material-tab-left-bottom-border; 
 }
  
 
@@ -5183,6 +5458,7 @@ border-bottom: @border-size @border-type @tab-background-color;
 .e-treeview .e-text
 {
     color: @content-font-color;
+    background-color: transparent;
 }
 .e-dragedNode
 {
@@ -5194,7 +5470,7 @@ border-bottom: @border-size @border-type @tab-background-color;
     color: @active-icon-color;
     float: left;
 }
-.e-treeview .e-active
+.e-treeview .e-active, .e-fullrow-wrap .e-li-active > .e-fullrow
 {
     .active-gradient();
     color: @active-font-color;
@@ -5202,7 +5478,7 @@ border-bottom: @border-size @border-type @tab-background-color;
     border-image: initial;
 }
 .e-treeview .e-node-hover,
-.e-treeview .e-node-focus
+.e-treeview .e-node-focus, .e-fullrow-wrap .e-li-hover > .e-fullrow, .e-fullrow-wrap .e-li-focus > .e-fullrow
 {
 	.hover-gradient();
     color: @hover-font-color;
@@ -5257,6 +5533,14 @@ border-bottom: @border-size @border-type @tab-background-color;
     background-color: @default-icon-color;
     border-color: @content-bg-color;
     color: @content-bg-color;
+}
+
+.e-fullrow-wrap .e-item.e-li-active > .e-text-wrap > .e-icon {
+    color: @active-icon-color;
+}
+
+.e-fullrow-wrap .e-item.e-li-hover > .e-text-wrap > .e-icon {
+    color: @default-icon-color;
 }
 
 /*------------------------------------- Upload Box -------------------------------------------*/
@@ -5598,6 +5882,11 @@ vertical-align:baseline;
 .e-rte .e-rteItem-orderedList .e-split, .e-rte .e-rteItem-unorderedList .e-split{
     .material-rte-splitbtn-radius;
 }
+.e-responsive-toolbar .e-rte-lists.e-ul .e-rteItem-unorderedList.e-tooltxt .e-split, 
+.e-responsive-toolbar .e-rte-lists.e-ul .e-rteItem-orderedList.e-tooltxt .e-split{ 
+    height: 24px !important;
+    width: 36px !important;
+} 
 /*---------------- RTE Theme End------------------*/
 
 
@@ -5875,10 +6164,10 @@ margin-left: 34px;
 }
 
 .e-innerDecrement:hover {
-   background-image:url(../common-images/maps/Zoom-Out_hover.png);
+   background-image:url(../common-images/maps/Zoom-out_hover.png);
    }
 .e-innerDecrement {
-   background-image:url(../common-images/maps/Zoom-Out.png);
+   background-image:url(../common-images/maps/Zoom-out.png);
     height:25px;
     width:25px;    
 }
@@ -6182,7 +6471,7 @@ background-color:@hover-bg-stcolor !important;
 .e-pivotgrid .summary {
   white-space: nowrap;
   text-align: left;
-  font-weight: bold;
+  font-weight: bold !important;
 }
 .e-pivotgrid .colheader, .e-pivotgrid .rowheader,.e-pivotgrid .calc {
   font-weight: bold;
@@ -6427,6 +6716,10 @@ content:"\e6a0";
 .e-pivotgrid .dialogOKBtn {
     width: 69px;
     margin-left: 83px;
+}
+.e-pivotgrid.e-rtl .dialogOKBtn {
+  margin-left: 10px;
+  margin-right: 73px;
 }
 .e-pivotgrid .dialogCancelBtn {
     width: 69px;
@@ -7173,7 +7466,7 @@ content:"\e6a0";
 
 .e-pivotschemadesigner .ddlGroupWrap,.e-pivotgrid .ddlGroupWrap {
     font-weight: bold;
-    padding: 10px;
+    padding:5px 0px 5px 8px;
 }
 
 .e-pivotschemadesigner .ascOrder, .e-pivotschemadesigner .descOrder,.e-pivotgrid .ascOrder, .e-pivotgrid .descOrder {
@@ -7257,8 +7550,8 @@ content:"\e6a0";
 }
 
 .e-pivotschemadesigner .advancedFilter, .e-pivotgrid .advancedFilter {
-    margin-left: 38px;
-    margin-right: 15px;
+    margin-left: 9px;
+    margin-right: 5px;
 }
 
 .e-pivotschemadesigner .activeFilter:before, .e-pivotgrid .activeFilter:before {
@@ -7275,11 +7568,11 @@ content:"\e6a0";
     margin-top: 0px;
 }
 .e-pivotschemadesigner .separator, .e-pivotgrid  .separator {
-    width: 81%;
+    width: 84%;
     height: 1px;
     background-color: @default-border-color;
     margin-top: 7px;
-    margin-left: 36px;
+    margin-left: 35px;
 }
 .e-pivotschemadesigner .filterElementTag a,.e-pivotgrid .filterElementTag a
 {
@@ -7303,6 +7596,14 @@ content:"\e6a0";
 {
     margin-left: 10px;
 }
+.e-pivotschemadesigner .memberFilter.filterState, .e-pivotgrid .memberFilter.filterState 
+{
+    margin-left : 0px!important;
+    margin-top :5px;
+    position: absolute;
+    float: left;
+}
+
 .e-pivotschemadesigner .filterDialog div,.e-pivotgrid .filterDialog div
  {
     padding-bottom: 5px;
@@ -7314,7 +7615,7 @@ content:"\e6a0";
 {
      height:20px;
 }
-.e-pivotgrid #clientDialog_wrapper .e-scroller:not([id$="_fieldCollection_container"]), .e-pivotschemadesigner #clientDialog_wrapper .e-scroller {
+.e-pivotgrid #clientDialog_wrapper.advancedFilterDlg .e-scroller:not([id$="_fieldCollection_container"]), .e-pivotschemadesigner #clientDialog_wrapper.advancedFilterDlg .e-scroller {
     overflow: visible;
     border:none;
  }
@@ -7421,7 +7722,13 @@ color:@oclient-treeview-text-hover;
 color:@active-font-color;
 background:@oclient-treeview-active;
 }
+.e-pivotclient .e-splitter .e-splitbar.e-h-bar{
+width:4px;
+}
 
+.e-pivotclient .e-pane{
+overflow:initial;
+}
  .e-olapclient .nextPageDiv {
     float: right;
     margin-top: 10px;
@@ -7592,6 +7899,18 @@ font-size: 20px;
 content:"\e671";
 font-size: 20px;
     margin-right: 7px;
+}
+.e-pivotclient .e-pivotschemadesigner .fieldTable
+{
+    background: @bg-table-color !important;
+    border-collapse: collapse !important;
+    margin: 10px 0px 8px !important;
+}
+.e-pivotclient .e-pivotschemadesigner .fieldEnSplitTable{
+margin: 10px 0px 8px !important;
+}
+.e-pivotclient .e-pivotschemadesigner .fieldDisSplitTable{
+margin: 6px 10px 8px !important;
 }
 
 .e-pivotclient .toggleText{
@@ -7911,6 +8230,9 @@ font-size:16px;
 .e-pivotclient .bubble:before {
   content:"\e7dc";
 }
+.e-pivotclient .waterfall:before {
+  content: "\e838";
+}
 .e-pivotclient .treemap:before {
   content:"\e810";
 }
@@ -8227,21 +8549,25 @@ opacity: 1 !important;
 .e-pivotclient .e-pivotschemadesigner .axisTd2 {
     float: left !important;
 }
-.e-pivotclient .e-pivotschemadesigner .fieldTable {
+
+.e-pivotclient .e-pivotschemadesigner .axisTable {
+    margin-top: 6px;
+}
+.e-pivotclient .e-pivotschemadesigner .addedFieldTable {
 width: 45% !important;
 margin: 6px 7px 8px 5px;
 width: 44% !important;
 }
-.e-pivotclient .e-pivotschemadesigner .axisTable {
-    margin-top: 6px;
-    width: 52% !important;
-}
+
 .e-pivotclient .e-pivotschemadesigner .clientFieldTable{
     float: right !important;
 }
+.e-pivotclient .e-pivotschemadesigner .clientAxisSplitterTable{
+      margin-left: 0px !important;
+}
 .e-pivotclient .e-pivotschemadesigner .clientAxisTable{
     width: 50% !important;
-    margin-left: 10px !important;
+    margin-left: 0px !important;
 }
 .e-pivotclient .e-pivotschemadesigner #axisTd {
     margin-top: 0px !important;
@@ -8279,7 +8605,7 @@ width: 44% !important;
     height: 16px;
     width: 16px;
 }
-.e-pivotclient #clientDialog_wrapper .e-scroller {
+.e-pivotclient #clientDialog_wrapper.advancedFilterDlg .e-scroller {
     overflow: visible!important;
     border: none;
 }
@@ -9152,6 +9478,12 @@ background-color:@hover-bg-stcolor !important;
     color:@gantt-header-font-color;
     font-family: @font-family;
 }
+.e-filterMenuDiv {
+  border-color: @filtermenudialog-color !important;
+  font-family: @font-family;
+  min-height: 0px !important;
+}
+
 .e-treegrid .e-headercelldiv .e-descending, .e-treegrid .e-headercelldiv .e-ascending ,.e-treegrid .e-headercell .e-columnmenu-icon {
     color: @header-icon-color;
 }
@@ -9177,7 +9509,9 @@ background-color:@hover-bg-stcolor !important;
 .e-treegrid .e-extendcolumn {
     border-color: @gantt-content-border-color;
 }
-
+.e-treegrid .e-tableLastCell {
+    border-right-color: @gantt-content-border-color!important;
+}
 .e-treegrid .e-detailsiconcell:hover,
 .e-treegrid .e-detailsinfoiconhide {
     background-color: @treegrid-detailicon-shadow-color;
@@ -9419,6 +9753,15 @@ background-color:@hover-bg-stcolor !important;
 }
 .e-treegrid .e-footercontainer {
     border-right-color:@gantt-header-border-color;
+}
+.e-headervline {    
+    border-color: @active-bg-stcolor !important;   
+}
+
+.e-headertooltip {    
+    color: @gantt-header-font-color;         
+    background-color:@gantt-header-endbg-color;  
+    border-color:@gantt-header-border-color;
 }
 
 
@@ -9837,7 +10180,12 @@ box-shadow: -1px 0 10px 0 black;
 .e-kanban-context .e-checkbox .e-checkmark {
     color: @active-bg-stcolor !important;
 }
-
+.e-kanban .e-kanbantoolbar .e-searchdiv{
+  background: @content-bg-color;
+}
+.e-kanban .e-search.e-tooltxt:hover .e-searchdiv{
+  background: @content-bg-color;
+}
 .e-kanban .e-kanbanheader.e-slheader .e-headercell, .e-kanban.e-swimlane-responsive .e-columnrow .e-rowcell {
     border-bottom: 4px solid @default-bg-stcolor;
 }
@@ -10488,6 +10836,7 @@ box-shadow: -1px 0 10px 0 black;
 .e-spreadsheet .e-pager .e-currentitem:hover {
     background: @ssheader-select-bgcolor;
     color: @ssfroze-highlight-color;
+    filter:none;   /* IE9 only*/
 }
 .e-spreadsheet .e-pager .e-numericitem:hover {
   color: @ssfroze-highlight-color;
@@ -10779,6 +11128,14 @@ div.e-dlg-field-validation-error:before {
 	background-color: @content-bg-color;
 	border-color: @header-border-color;
 }
+/*---------------------------Pivot Table-------------------------------*/
+.e-spreadsheet .e-ss-pivottableheader {
+     background-color: @ssheader-select-bgcolor;
+     border-color: @ssheader-border-color;
+    color: @ssheader-content-color;
+
+}
+
 /*-------------------------------------SpreadSheet End -----------------------*/
 
 

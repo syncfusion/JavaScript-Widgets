@@ -4,7 +4,7 @@
 
   "name": "syncfusion-javascript",
 
-  "version": "14.3.52",
+  "version": "14.4.15",
 
   "description": "Npm package of Syncfusion.JavaScript.",
 
@@ -34,7 +34,9 @@
 
   "dependencies": {
 
-    "jquery": "*",
+    "syncfusion-ej-global": "*",
+	
+	"jquery": "*",
 
     "jquery-validation": "*",
 
@@ -63,6 +65,7 @@
             "Content"
         ],
         "dependencies": {
+			"syncfusion-ej-global": "*",
             "jquery": "*",
             "jsrender": "*",
             "jquery-validation": "*",

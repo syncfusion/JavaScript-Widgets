@@ -2869,6 +2869,387 @@ ejChart :function (options) {
 ///Position of the zoomed axis. Value ranges from 0 to 1.
 ///<br/>zoomPosition-number	default-0
 ///<br/><br/>
+///To override x axis for particular series, create an axis object by providing unique name by using name property and add it to axes array. Then, assign the name to the seriesâ€™s xAxisName property to link both axis and series.
+///<br/>axes-Array&lt;Axes&gt;	default-
+///<br/><br/>
+///Options for customizing axis alternate grid band.
+///<br/>alternateGridBand-any	default-
+///<br/><br/>
+///Options for customizing even grid band.
+///<br/>even-any	default-
+///<br/><br/>
+///Fill color for the even grid bands.
+///<br/>fill-string	default-transparent
+///<br/><br/>
+///Opacity of the even grid band.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Options for customizing odd grid band.
+///<br/>odd-any	default-
+///<br/><br/>
+///Fill color of the odd grid bands
+///<br/>fill-string	default-transparent
+///<br/><br/>
+///Opacity of odd grid band
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Specifies where axis should intersect the vertical axis or vice versa. Value should be provided in axis co-ordinates. If provided value is greater than the maximum value of crossing axis, then axis will be placed at the opposite side.
+///<br/>crossesAt-number	default-null
+///<br/><br/>
+///Category axis can also plot points based on index value of data points. Index based plotting can be enabled by setting â€˜isIndexedâ€™ property to true.
+///<br/>isIndexed-boolean	default-false
+///<br/><br/>
+///Options for customizing the axis line.
+///<br/>axisLine-any	default-
+///<br/><br/>
+///Pattern of dashes and gaps to be applied to the axis line.
+///<br/>dashArray-string	default-null
+///<br/><br/>
+///Padding for axis line. Normally, it is used along with plotOffset to pad the plot area.
+///<br/>offset-number	default-null
+///<br/><br/>
+///Show/hides the axis line.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Width of axis line.
+///<br/>width-number	default-1
+///<br/><br/>
+///Specifies the index of the column where the axis is associated, when the chart area is divided into multiple plot areas by using columnDefinitions.
+///<br/>columnIndex-number	default-null
+///<br/><br/>
+///Specifies the number of columns or plot areas an axis has to span horizontally.
+///<br/>columnSpan-number	default-null
+///<br/><br/>
+///Options to customize the crosshair label.
+///<br/>crosshairLabel-any	default-
+///<br/><br/>
+///Show/hides the crosshair label associated with this axis.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///With this setting, you can request axis to calculate intervals approximately equal to your desired interval.
+///<br/>desiredIntervals-number	default-null
+///<br/><br/>
+///Specifies the placement of labels.
+///<br/>labelPlacement-ej.datavisualization.Chart.LabelPlacement|string	default-ej.datavisualization.Chart.LabelPlacement.BetweenTicks. See LabelPlacement
+///<br/><br/>
+///Specifies the position of labels at the edge of the axis.
+///<br/>edgeLabelPlacement-ej.datavisualization.Chart.EdgeLabelPlacement|string	default-ej.datavisualization.Chart.EdgeLabelPlacement.None. See EdgeLabelPlacement
+///<br/><br/>
+///Specifies whether to trim the axis label when the width of the label exceeds the maximumLabelWidth.
+///<br/>enableTrim-boolean	default-false
+///<br/><br/>
+///Options for customizing the font of the axis Labels.
+///<br/>font-any	default-
+///<br/><br/>
+///Font family of labels.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style of labels.
+///<br/>fontStyle-ej.datavisualization.Chart.FontStyle|string	default-ej.datavisualization.Chart.FontStyle.Normal. See FontStyle
+///<br/><br/>
+///Font weight of the label.
+///<br/>fontWeight-ej.datavisualization.Chart.FontWeight|string	default-ej.datavisualization.Chart.FontWeight.Regular. See FontWeight
+///<br/><br/>
+///Opacity of the axis labels.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Font size of the axis labels.
+///<br/>size-string	default-13px
+///<br/><br/>
+///Specifies the type of interval in date time axis.
+///<br/>intervalType-ej.datavisualization.Chart.IntervalType|string	default-null. See IntervalType
+///<br/><br/>
+///Specifies whether to inverse the axis.
+///<br/>isInversed-boolean	default-false
+///<br/><br/>
+///Custom formatting for axis label and supports all standard formatting type of numerical and date time values.
+///<br/>labelFormat-string	default-null
+///<br/><br/>
+///Specifies the action to take when the axis labels are overlapping with each other.
+///<br/>labelIntersectAction-ej.datavisualization.Chart.LabelIntersectAction|string	default-ej.datavisualization.Chart.LabelIntersectAction.None. See LabelIntersectAction
+///<br/><br/>
+///Specifies the position of the axis labels.
+///<br/>labelPosition-ej.datavisualization.Chart.LabelPosition|string	default-outside. See LabelPosition
+///<br/><br/>
+///Specifies the position of the axis labels.
+///<br/>alignment-ej.datavisualization.Chart.LabelAlignment|string	default-center. See Alignment
+///<br/><br/>
+///Angle in degrees to rotate the axis labels.
+///<br/>labelRotation-number	default-null
+///<br/><br/>
+///Logarithmic base value. This is applicable only for logarithmic axis.
+///<br/>logBase-number	default-10
+///<br/><br/>
+///Options for customizing major gird lines.
+///<br/>majorGridLines-any	default-
+///<br/><br/>
+///Pattern of dashes and gaps used to stroke the major grid lines.
+///<br/>dashArray-string	default-null
+///<br/><br/>
+///Color of the major grid line.
+///<br/>color-string	default-null
+///<br/><br/>
+///Opacity of major grid lines.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Show/hides the major grid lines.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Width of the major grid lines.
+///<br/>width-number	default-1
+///<br/><br/>
+///Options for customizing the major tick lines.
+///<br/>majorTickLines-any	default-
+///<br/><br/>
+///Length of the major tick lines.
+///<br/>size-number	default-5
+///<br/><br/>
+///Show/hides the major tick lines.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Width of the major tick lines.
+///<br/>width-number	default-1
+///<br/><br/>
+///Maximum number of labels to be displayed in every 100 pixels.
+///<br/>maximumLabels-number	default-3
+///<br/><br/>
+///Maximum width of the axis label. When the label exceeds the width, the label gets trimmed when the enableTrim is set to true.
+///<br/>maximumLabelWidth-number	default-34
+///<br/><br/>
+///Options for customizing the minor grid lines.
+///<br/>minorGridLines-any	default-
+///<br/><br/>
+///Patterns of dashes and gaps used to stroke the minor grid lines.
+///<br/>dashArray-string	default-null
+///<br/><br/>
+///Show/hides the minor grid lines.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Width of the minorGridLines.
+///<br/>width-number	default-1
+///<br/><br/>
+///Options for customizing the minor tick lines.
+///<br/>minorTickLines-any	default-
+///<br/><br/>
+///Length of the minor tick lines.
+///<br/>size-number	default-5
+///<br/><br/>
+///Show/hides the minor tick lines.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Width of the minor tick line.
+///<br/>width-number	default-1
+///<br/><br/>
+///Specifies the number of minor ticks per interval.
+///<br/>minorTicksPerInterval-number	default-null
+///<br/><br/>
+///Unique name of the axis. To associate an axis with the series, you have to set this name to the xAxisName/yAxisName property of the series.
+///<br/>name-string	default-null
+///<br/><br/>
+///Specifies whether to render the axis at the opposite side of its default position.
+///<br/>opposedPosition-boolean	default-false
+///<br/><br/>
+///Specifies the padding for the plot area.
+///<br/>plotOffset-number	default-10
+///<br/><br/>
+///Options to customize the range of the axis.
+///<br/>range-any	default-
+///<br/><br/>
+///Minimum value of the axis range.
+///<br/>min-number	default-null
+///<br/><br/>
+///Maximum value of the axis range.
+///<br/>max-number	default-null
+///<br/><br/>
+///Interval of the axis range.
+///<br/>interval-number	default-null
+///<br/><br/>
+///Specifies the padding for the axis range.
+///<br/>rangePadding-ej.datavisualization.Chart.RangePadding|string	default-None. See RangePadding
+///<br/><br/>
+///Rounds the number to the given number of decimals.
+///<br/>roundingPlaces-number	default-null
+///<br/><br/>
+///Options for customizing the multi level labels.
+///<br/>multiLevelLabels-Array&lt;any&gt;	default-[ ]
+///<br/><br/>
+///Visibility of the multi level labels.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///Text of the multi level labels.
+///<br/>text-string	default-
+///<br/><br/>
+///Starting value of the multi level labels.
+///<br/>start-number	default-null
+///<br/><br/>
+///Ending value of the multi level labels.
+///<br/>end-number	default-null
+///<br/><br/>
+///Specifies the level of multi level labels.
+///<br/>level-number	default-0
+///<br/><br/>
+///Specifies the maximum width of the text in multi level labels.
+///<br/>maximumTextWidth-number	default-null
+///<br/><br/>
+///Specifies the alignment of the text in multi level labels.
+///<br/>textAlignment-ej.datavisualization.Chart.TextAlignment|string	default-center. See TextAlignment
+///<br/><br/>
+///Specifies the handling of text over flow in multi level labels.
+///<br/>textOverflow-ej.datavisualization.Chart.TextOverflow|string	default-center. See TextOverflow
+///<br/><br/>
+///Options for customizing the font of the text.
+///<br/>font-any	default-
+///<br/><br/>
+///Font color of the multi level labels text.
+///<br/>color-string	default-null
+///<br/><br/>
+///Font family of the multi level labels text.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style of the multi level labels text.
+///<br/>fontStyle-ej.datavisualization.Chart.FontStyle|string	default-Normal
+///<br/><br/>
+///Font weight of the multi level label text.
+///<br/>fontWeight-string	default-regular
+///<br/><br/>
+///Opacity of the multi level label text.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Font size of the multi level label text.
+///<br/>size-string	default-12px
+///<br/><br/>
+///Options for customizing the border of the series.
+///<br/>border-any	default-
+///<br/><br/>
+///Border color of the multi level labels.
+///<br/>color-string	default-null
+///<br/><br/>
+///Border width of the multi level labels.
+///<br/>width-number	default-1
+///<br/><br/>
+///Border type of the multi level labels.
+///<br/>type-ej.datavisualization.Chart.MultiLevelLabelsBorderType|string	default-rectangle. See Type
+///<br/><br/>
+///Options for customizing the strip lines.
+///<br/>stripLine-Array&lt;any&gt;	default-[ ]
+///<br/><br/>
+///Border color of the strip line.
+///<br/>borderColor-string	default-gray
+///<br/><br/>
+///Background color of the strip line.
+///<br/>color-string	default-gray
+///<br/><br/>
+///End value of the strip line.
+///<br/>end-number	default-null
+///<br/><br/>
+///Options for customizing the font of the text.
+///<br/>font-any	default-
+///<br/><br/>
+///Font color of the strip line text.
+///<br/>color-string	default-black
+///<br/><br/>
+///Font family of the strip line text.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style of the strip line text.
+///<br/>fontStyle-ej.datavisualization.Chart.FontStyle|string	default-Normal
+///<br/><br/>
+///Font weight of the strip line text.
+///<br/>fontWeight-string	default-regular
+///<br/><br/>
+///Opacity of the strip line text.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Font size of the strip line text.
+///<br/>size-string	default-12px
+///<br/><br/>
+///Start value of the strip line.
+///<br/>start-number	default-null
+///<br/><br/>
+///Indicates whether to render the strip line from the minimum/start value of the axis. This property does not work when start property is set.
+///<br/>startFromAxis-boolean	default-false
+///<br/><br/>
+///Specifies text to be displayed inside the strip line.
+///<br/>text-string	default-stripLine
+///<br/><br/>
+///Specifies the alignment of the text inside the strip line.
+///<br/>textAlignment-ej.datavisualization.Chart.TextAlignment|string	default-middlecenter. See TextAlignment
+///<br/><br/>
+///Show/hides the strip line.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///Width of the strip line.
+///<br/>width-number	default-0
+///<br/><br/>
+///Specifies the order where the strip line and the series have to be rendered. When Z-order is â€œbehindâ€, strip line is rendered under the series and when it is â€œoverâ€, it is rendered above the series.
+///<br/>zIndex-ej.datavisualization.Chart.ZIndex|string	default-over. See ZIndex
+///<br/><br/>
+///Specifies the position of the axis tick lines.
+///<br/>tickLinesPosition-ej.datavisualization.Chart.TickLinesPosition|string	default-outside. See TickLinesPosition
+///<br/><br/>
+///Options for customizing the border of the labels.
+///<br/>labelBorder-any	default-
+///<br/><br/>
+///Specifies the color of the label border.
+///<br/>color-string	default-null
+///<br/><br/>
+///Specifies the width of the label border.
+///<br/>width-number	default-1
+///<br/><br/>
+///Options for customizing the axis title.
+///<br/>title-any	default-
+///<br/><br/>
+///Specifies whether to trim the axis title when it exceeds the chart area or the maximum width of the title.
+///<br/>enableTrim-boolean	default-false
+///<br/><br/>
+///Options for customizing the title font.
+///<br/>font-any	default-
+///<br/><br/>
+///Font family of the title text.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style of the title text.
+///<br/>fontStyle-ej.datavisualization.Chart.FontStyle|string	default-ej.datavisualization.Chart.FontStyle.Normal
+///<br/><br/>
+///Font weight of the title text.
+///<br/>fontWeight-ej.datavisualization.Chart.FontWeight|string	default-ej.datavisualization.Chart.FontWeight.Regular. See FontWeight
+///<br/><br/>
+///Opacity of the axis title text.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Font size of the axis title.
+///<br/>size-string	default-16px
+///<br/><br/>
+///Maximum width of the title, when the title exceeds this width, the title gets trimmed, when enableTrim is true.
+///<br/>maximumTitleWidth-number	default-34
+///<br/><br/>
+///Title for the axis.
+///<br/>text-string	default-
+///<br/><br/>
+///Controls the visibility of axis title.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///offset value for axis title.
+///<br/>offset-number	default-0
+///<br/><br/>
+///Specifies the position of the axis title.
+///<br/>position-ej.datavisualization.Chart.LabelPosition|string	default-outside. See Position
+///<br/><br/>
+///Specifies the position of the axis title.
+///<br/>alignment-ej.datavisualization.Chart.TextAlignment|string	default-center. See Alignment
+///<br/><br/>
+///Specifies the type of data the axis is handling.
+///<br/>valueType-ej.datavisualization.Chart.ValueType|string	default-null. See ValueType
+///<br/><br/>
+///Show/hides the axis.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///The axis is scaled by this factor. When zoomFactor is 0.5, the chart is scaled by 200% along this axis. Value ranges from 0 to 1.
+///<br/>zoomFactor-number	default-1
+///<br/><br/>
+///Position of the zoomed axis. Value ranges from 0 to 1.
+///<br/>zoomPosition-number	default-0
+///<br/><br/>
 ///This is a vertical axis that contains options to configure axis. This is the primary y axis for all the series in series array. To override y axis for particular series, create an axis object by providing unique name by using name property and add it to axes array. Then, assign the name to the seriesâ€™s yAxisName property to link both axis and series.
 ///<br/>primaryYAxis-PrimaryYAxis	default-
 ///<br/><br/>
@@ -5368,6 +5749,9 @@ ejColorPicker :function (options) {
 ///It allows to define the characteristics of the ColorPicker control. It will helps to extend the capability of an HTML element.
 ///<br/>htmlAttributes-any	default-{}
 ///<br/><br/>
+///Defines the localized text values in button and tooltip.
+///<br/>locale-string	default-en-US
+///<br/><br/>
 ///Specifies the model type to be rendered initially in the color picker control. See below to get available ModelType
 ///<br/>modelType-ej.ColorPicker.ModelType|string	default-ej.ColorPicker.ModelType.Default
 ///<br/><br/>
@@ -6481,10 +6865,10 @@ ejDiagram :function (options) {
 /// <summary><br/>
 ///The diagram control provides 2D surface to visualize the data as shapes, lines, text and images. It can be configured to DOM element such as DIV.<br/><br/>
 ///Defines the background color of diagram elements
-///<br/>backgroundColor-String	default-transparent
+///<br/>backgroundColor-string	default-transparent
 ///<br/><br/>
 ///Defines the path of the background image of diagram elements
-///<br/>backgroundImage-String	default-
+///<br/>backgroundImage-string	default-
 ///<br/><br/>
 ///Defines how to align the background image over the diagram area.
 ///<br/>alignment-ej.datavisualization.Diagram.ImageAlignment |string	default-ej.datavisualization.Diagram.ImageAlignment.XMidYMid
@@ -6523,16 +6907,16 @@ ejDiagram :function (options) {
 ///<br/>addInfo-any	default-null
 ///<br/><br/>
 ///Defines the width of the line bridges
-///<br/>bridgeSpace-Number	default-10
+///<br/>bridgeSpace-number	default-10
 ///<br/><br/>
 ///Enables or disables the behaviors of connectors.
 ///<br/>constraints-ej.datavisualization.Diagram.ConnectorConstraints|string	default-ej.datavisualization.Diagram.ConnectorConstraints.Default
 ///<br/><br/>
 ///Defines the radius of the rounded corner
-///<br/>cornerRadius-Number	default-0
+///<br/>cornerRadius-number	default-0
 ///<br/><br/>
 ///Configures the styles of shapes
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Sets the horizontal alignment of the connector. Applicable, if the parent of the connector is a container.
 ///<br/>horizontalAlign-ej.datavisualization.Diagram.HorizontalAlignment|string	default-ej.datavisualization.Diagram.HorizontalAlignment.Left
@@ -6547,25 +6931,25 @@ ejDiagram :function (options) {
 ///<br/>bold-Boolean	default-false
 ///<br/><br/>
 ///Sets the border color of the label
-///<br/>borderColor-String	default-transparent
+///<br/>borderColor-string	default-transparent
 ///<br/><br/>
 ///Sets the border width of the label
-///<br/>borderWidth-Number	default-0
+///<br/>borderWidth-number	default-0
 ///<br/><br/>
 ///Defines whether the label should be aligned within the connector boundaries
 ///<br/>boundaryConstraints-Boolean	default-true
 ///<br/><br/>
 ///Sets the fill color of the text area
-///<br/>fillColor-String	default-transparent
+///<br/>fillColor-string	default-transparent
 ///<br/><br/>
 ///Sets the font color of the text
-///<br/>fontColor-String	default-black
+///<br/>fontColor-string	default-black
 ///<br/><br/>
 ///Sets the font family of the text
-///<br/>fontFamily-String	default-Arial
+///<br/>fontFamily-string	default-Arial
 ///<br/><br/>
 ///Defines the font size of the text
-///<br/>fontSize-Number	default-12
+///<br/>fontSize-number	default-12
 ///<br/><br/>
 ///Sets the horizontal alignment of the label.
 ///<br/>horizontalAlignment-ej.datavisualization.Diagram.HorizontalAlignment|string	default-ej.datavisualization.Diagram.HorizontalAlignment.Center
@@ -6577,7 +6961,7 @@ ejDiagram :function (options) {
 ///<br/>mode-ej.datavisualization.Diagram.LabelEditMode|string	default-ej.datavisualization.Diagram.LabelEditMode.Edit
 ///<br/><br/>
 ///Sets the unique identifier of the label
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Sets the fraction/ratio(relative to connector) that defines the position of the label
 ///<br/>offset-any	default-ej.datavisualization.Diagram.Point(0.5, 0.5)
@@ -6598,7 +6982,7 @@ ejDiagram :function (options) {
 ///<br/>bottom-number	default-0
 ///<br/><br/>
 ///Defines the transparency of labels
-///<br/>opacity-Number	default-1
+///<br/>opacity-number	default-1
 ///<br/><br/>
 ///Defines whether the label is editable or not
 ///<br/>readOnly-Boolean	default-false
@@ -6607,13 +6991,13 @@ ejDiagram :function (options) {
 ///<br/>relativeMode-ej.datavisualization.Diagram.LabelRelativeMode|string	default-ej.datavisualization.Diagram.LabelRelativeMode.SegmentPath
 ///<br/><br/>
 ///Defines the angle to which the label needs to be rotated
-///<br/>rotateAngle-Number	default-0
+///<br/>rotateAngle-number	default-0
 ///<br/><br/>
 ///Sets the position of the label with respect to the total segment length
-///<br/>segmentOffset-String	default-0.5
+///<br/>segmentOffset-string	default-0.5
 ///<br/><br/>
 ///Defines the label text
-///<br/>text-String	default-
+///<br/>text-string	default-
 ///<br/><br/>
 ///Defines how to align the text inside the label.
 ///<br/>textAlign-ej.datavisualization.Diagram.TextAlign|string	default-ej.datavisualization.Diagram.TextAlign.Center
@@ -6628,55 +7012,55 @@ ejDiagram :function (options) {
 ///<br/>visible-Boolean	default-true
 ///<br/><br/>
 ///Sets the width of the label(the maximum value of label width and the connector width will be considered as label width)
-///<br/>width-Number	default-50
+///<br/>width-number	default-50
 ///<br/><br/>
 ///Defines how the label text needs to be wrapped.
 ///<br/>wrapping-ej.datavisualization.Diagram.TextWrapping|string	default-ej.datavisualization.Diagram.TextWrapping.WrapWithOverflow
 ///<br/><br/>
 ///Sets the stroke color of the connector
-///<br/>lineColor-String	default-black
+///<br/>lineColor-string	default-black
 ///<br/><br/>
 ///Sets the pattern of dashes and gaps used to stroke the path of the connector
-///<br/>lineDashArray-String	default-
+///<br/>lineDashArray-string	default-
 ///<br/><br/>
 ///Defines the padding value to ease the interaction with connectors
-///<br/>lineHitPadding-Number	default-10
+///<br/>lineHitPadding-number	default-10
 ///<br/><br/>
 ///Sets the width of the line
-///<br/>lineWidth-Number	default-1
+///<br/>lineWidth-number	default-1
 ///<br/><br/>
 ///Defines the minimum space to be left between the bottom of parent bounds and the connector. Applicable, if the parent is a container.
-///<br/>marginBottom-Number	default-0
+///<br/>marginBottom-number	default-0
 ///<br/><br/>
 ///Defines the minimum space to be left between the left of parent bounds and the connector. Applicable, if the parent is a container.
-///<br/>marginLeft-Number	default-0
+///<br/>marginLeft-number	default-0
 ///<br/><br/>
 ///Defines the minimum space to be left between the right of parent bounds and the connector. Applicable, if the parent is a container.
-///<br/>marginRight-Number	default-0
+///<br/>marginRight-number	default-0
 ///<br/><br/>
 ///Defines the minimum space to be left between the top of parent bounds and the connector. Applicable, if the parent is a container.
-///<br/>marginTop-Number	default-0
+///<br/>marginTop-number	default-0
 ///<br/><br/>
 ///Sets a unique name for the connector
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Defines the transparency of the connector
-///<br/>opacity-Number	default-1
+///<br/>opacity-number	default-1
 ///<br/><br/>
 ///Defines the size and preview size of the node to add that to symbol palette. To explore palette item, refer Palette Item
 ///<br/>paletteItem-any	default-null
 ///<br/><br/>
 ///Sets the parent name of the connector.
-///<br/>parent-String	default-
+///<br/>parent-string	default-
 ///<br/><br/>
 ///An array of JSON objects where each object represents a segment
 ///<br/>segments-Array&lt;any&gt;	default-[ { type:straight } ]
 ///<br/><br/>
 ///Sets the direction of orthogonal segment
-///<br/>direction-String	default-
+///<br/>direction-string	default-
 ///<br/><br/>
 ///Describes the length of orthogonal segment
-///<br/>length-Number	default-undefined
+///<br/>length-number	default-undefined
 ///<br/><br/>
 ///Describes the end point of bezier/straight segment
 ///<br/>point-ej.datavisualization.Diagram.ConnectorsSourcePoint|string	default-Diagram.Point()
@@ -6730,10 +7114,10 @@ ejDiagram :function (options) {
 ///<br/>optional-boolean	default-true
 ///<br/><br/>
 ///Defines the source label to connector. Applicable, if the connector is of type "UML"
-///<br/>lowerBounds-Number	default-null
+///<br/>lowerBounds-number	default-null
 ///<br/><br/>
 ///Defines the source label to connector. Applicable, if the connector is of type "UML"
-///<br/>upperBounds-Number	default-null
+///<br/>upperBounds-number	default-null
 ///<br/><br/>
 ///Defines the target label to connector. Applicable, if the connector is of type "UML"
 ///<br/>target-ej.datavisualization.Diagram.ConnectorsShapeMultiplicitySource|string	default-true
@@ -6742,76 +7126,76 @@ ejDiagram :function (options) {
 ///<br/>sourceDecorator-any	default-{ shape:arrow, width: 8, height:8, borderColor:black, fillColor:black }
 ///<br/><br/>
 ///Sets the border color of the source decorator
-///<br/>borderColor-String	default-black
+///<br/>borderColor-string	default-black
 ///<br/><br/>
 ///Sets the border width of the decorator
-///<br/>borderWidth-Number	default-1
+///<br/>borderWidth-number	default-1
 ///<br/><br/>
 ///Sets the fill color of the source decorator
-///<br/>fillColor-String	default-black
+///<br/>fillColor-string	default-black
 ///<br/><br/>
 ///Sets the height of the source decorator
-///<br/>height-Number	default-8
+///<br/>height-number	default-8
 ///<br/><br/>
 ///Defines the custom shape of the source decorator
-///<br/>pathData-String	default-
+///<br/>pathData-string	default-
 ///<br/><br/>
 ///Defines the shape of the source decorator.
 ///<br/>shape-ej.datavisualization.Diagram.DecoratorShapes|string	default-ej.datavisualization.Diagram.DecoratorShapes.Arrow
 ///<br/><br/>
 ///Defines the width of the source decorator
-///<br/>width-Number	default-8
+///<br/>width-number	default-8
 ///<br/><br/>
 ///Sets the source node of the connector
-///<br/>sourceNode-String	default-
+///<br/>sourceNode-string	default-
 ///<br/><br/>
 ///Defines the space to be left between the source node and the source point of a connector
-///<br/>sourcePadding-Number	default-0
+///<br/>sourcePadding-number	default-0
 ///<br/><br/>
 ///Describes the start point of the connector
 ///<br/>sourcePoint-any	default-ej.datavisualization.Diagram.Point()
 ///<br/><br/>
 ///Defines the x-coordinate of a position
-///<br/>x-Number	default-0
+///<br/>x-number	default-0
 ///<br/><br/>
 ///Defines the y-coordinate of a position
-///<br/>y-Number	default-0
+///<br/>y-number	default-0
 ///<br/><br/>
 ///Sets the source port of the connector
-///<br/>sourcePort-String	default-
+///<br/>sourcePort-string	default-
 ///<br/><br/>
 ///Defines the target decorator of the connector
 ///<br/>targetDecorator-any	default-{ shape:arrow, width: 8, height:8, borderColor:black, fillColor:black }
 ///<br/><br/>
 ///Sets the border color of the decorator
-///<br/>borderColor-String	default-black
+///<br/>borderColor-string	default-black
 ///<br/><br/>
 ///Sets the color with which the decorator will be filled
-///<br/>fillColor-String	default-black
+///<br/>fillColor-string	default-black
 ///<br/><br/>
 ///Defines the height of the target decorator
-///<br/>height-Number	default-8
+///<br/>height-number	default-8
 ///<br/><br/>
 ///Defines the custom shape of the target decorator
-///<br/>pathData-String	default-
+///<br/>pathData-string	default-
 ///<br/><br/>
 ///Defines the shape of the target decorator.
 ///<br/>shape-ej.datavisualization.Diagram.DecoratorShapes|string	default-ej.datavisualization.Diagram.DecoratorShapes.Arrow
 ///<br/><br/>
 ///Defines the width of the target decorator
-///<br/>width-Number	default-8
+///<br/>width-number	default-8
 ///<br/><br/>
 ///Sets the target node of the connector
-///<br/>targetNode-String	default-
+///<br/>targetNode-string	default-
 ///<br/><br/>
 ///Defines the space to be left between the target node and the target point of the connector
-///<br/>targetPadding-Number	default-0
+///<br/>targetPadding-number	default-0
 ///<br/><br/>
 ///Describes the end point of the connector
 ///<br/>targetPoint-ej.datavisualization.Diagram.ConnectorsSourcePoint|string	default-ej.datavisualization.Diagram.Point()
 ///<br/><br/>
 ///Sets the targetPort of the connector
-///<br/>targetPort-String	default-
+///<br/>targetPort-string	default-
 ///<br/><br/>
 ///Defines the tooltip that should be shown when the mouse hovers over connector. For tooltip properties, refer Tooltip
 ///<br/>tooltip-any	default-null
@@ -6823,7 +7207,7 @@ ejDiagram :function (options) {
 ///<br/>visible-Boolean	default-true
 ///<br/><br/>
 ///Sets the z-index of the connector
-///<br/>zOrder-Number	default-0
+///<br/>zOrder-number	default-0
 ///<br/><br/>
 ///Binds the custom JSON data with connector properties
 ///<br/>connectorTemplate-any	default-null
@@ -6847,19 +7231,19 @@ ejDiagram :function (options) {
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
 ///Sets the unique id of the data source items
-///<br/>id-String	default-
+///<br/>id-string	default-
 ///<br/><br/>
 ///Defines the parent id of the data source item
-///<br/>parent-String	default-&#39;&#39;
+///<br/>parent-string	default-&#39;&#39;
 ///<br/><br/>
 ///Describes query to retrieve a set of data from the specified datasource
-///<br/>query-String	default-null
+///<br/>query-string	default-null
 ///<br/><br/>
 ///Sets the unique id of the root data source item
-///<br/>root-String	default-
+///<br/>root-string	default-
 ///<br/><br/>
 ///Describes the name of the table on which the specified query has to be executed
-///<br/>tableName-String	default-null
+///<br/>tableName-string	default-null
 ///<br/><br/>
 ///Initializes the default values for nodes and connectors
 ///<br/>defaultSettings-DefaultSettings	default-{}
@@ -6883,7 +7267,7 @@ ejDiagram :function (options) {
 ///<br/>enableContextMenu-Boolean	default-true
 ///<br/><br/>
 ///Specifies the height of the diagram
-///<br/>height-String	default-null
+///<br/>height-string	default-null
 ///<br/><br/>
 ///Customizes the undo redo functionality
 ///<br/>historyManager-HistoryManager	default-
@@ -6907,7 +7291,7 @@ ejDiagram :function (options) {
 ///<br/>redoStack-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///The stackLimit property used to restrict the undo and redo actions to a certain limit.
-///<br/>stackLimit-Number	default-null
+///<br/>stackLimit-number	default-null
 ///<br/><br/>
 ///A method that starts to group the changes to revert/restore them in a single undo or redo
 ///<br/>startGroupAction-Function	default-
@@ -6925,13 +7309,13 @@ ejDiagram :function (options) {
 ///<br/>bounds-any	default-ej.datavisualization.Diagram.Rectangle()
 ///<br/><br/>
 ///Defines the fixed node with reference to which, the layout will be arranged and fixed node will not be repositioned
-///<br/>fixedNode-String	default-
+///<br/>fixedNode-string	default-
 ///<br/><br/>
 ///Customizes the orientation of trees/sub trees. For orientations, see Chart Orientations. For chart types, see Chart Types
 ///<br/>getLayoutInfo-any	default-null
 ///<br/><br/>
 ///Sets the space to be horizontally left between nodes
-///<br/>horizontalSpacing-Number	default-30
+///<br/>horizontalSpacing-number	default-30
 ///<br/><br/>
 ///Defines the space to be left between layout bounds and layout.
 ///<br/>margin-any	default-ej.datavisualization.Diagram.Margin()
@@ -6949,10 +7333,10 @@ ejDiagram :function (options) {
 ///<br/>type-ej.datavisualization.Diagram.LayoutTypes|string	default-ej.datavisualization.Diagram.LayoutTypes.None
 ///<br/><br/>
 ///Sets the space to be vertically left between nodes
-///<br/>verticalSpacing-Number	default-30
+///<br/>verticalSpacing-number	default-30
 ///<br/><br/>
 ///Defines the current culture of diagram
-///<br/>locale-String	default-en-US
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Array of JSON objects where each object represents a node
 ///<br/>nodes-Array&lt;Nodes&gt;	default-[]
@@ -6967,31 +7351,31 @@ ejDiagram :function (options) {
 ///<br/>annotation-any	default-ej.datavisualization.Diagram.BPMNTextAnnotation()
 ///<br/><br/>
 ///Sets the angle between the BPMN shape and the annotation
-///<br/>angle-Number	default-0
+///<br/>angle-number	default-0
 ///<br/><br/>
 ///Sets the direction of the text annotation
 ///<br/>direction-ej.datavisualization.Diagram.BPMNAnnotationDirection|string	default-ej.datavisualization.Diagram.BPMNAnnotationDirections.Left
 ///<br/><br/>
 ///Sets the height of the text annotation
-///<br/>height-Number	default-20
+///<br/>height-number	default-20
 ///<br/><br/>
 ///Sets the distance between the BPMN shape and the annotation
-///<br/>length-Number	default-0
+///<br/>length-number	default-0
 ///<br/><br/>
 ///Defines the additional information about the flow object in a BPMN Process
-///<br/>text-String	default-
+///<br/>text-string	default-
 ///<br/><br/>
 ///Sets the  width of the text annotation
-///<br/>width-Number	default-20
+///<br/>width-number	default-20
 ///<br/><br/>
 ///Sets the border color of node
-///<br/>borderColor-String	default-black
+///<br/>borderColor-string	default-black
 ///<br/><br/>
 ///Sets the pattern of dashes and gaps to stroke the border
-///<br/>borderDashArray-String	default-
+///<br/>borderDashArray-string	default-
 ///<br/><br/>
 ///Sets the border width of the node
-///<br/>borderWidth-Number	default-1
+///<br/>borderWidth-number	default-1
 ///<br/><br/>
 ///Defines whether the group can be ungrouped or not
 ///<br/>canUngroup-Boolean	default-true
@@ -7006,40 +7390,40 @@ ejDiagram :function (options) {
 ///<br/>class-any	default-null
 ///<br/><br/>
 ///Sets the name of class.
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Defines the collection of attributes
 ///<br/>attributes-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Sets the name of the attribute
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Sets the data type of attribute
-///<br/>type-String	default-
+///<br/>type-string	default-
 ///<br/><br/>
 ///Defines the visibility of the attribute
-///<br/>scope-String	default-ej.datavisualization.Diagram.ScopeValueDefaults.Public
+///<br/>scope-string	default-ej.datavisualization.Diagram.ScopeValueDefaults.Public
 ///<br/><br/>
 ///Defines the collection of methods of a Class.
 ///<br/>methods-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Sets the visibility of the method.
-///<br/>scope-String	default-ej.datavisualization.Diagram.ScopeValueDefaults.Public
+///<br/>scope-string	default-ej.datavisualization.Diagram.ScopeValueDefaults.Public
 ///<br/><br/>
 ///Defines the state of the node is collapsed.
 ///<br/>collapseIcon-any	default-
 ///<br/><br/>
 ///Sets the border color for collapse icon of node
-///<br/>borderColor-String	default-black
+///<br/>borderColor-string	default-black
 ///<br/><br/>
 ///Sets the border width for collapse icon of node
-///<br/>borderWidth-Number	default-1
+///<br/>borderWidth-number	default-1
 ///<br/><br/>
 ///Sets the fill color for collapse icon of node
-///<br/>fillColor-String	default-white
+///<br/>fillColor-string	default-white
 ///<br/><br/>
 ///Defines the height for collapse icon of node
-///<br/>height-Number	default-15
+///<br/>height-number	default-15
 ///<br/><br/>
 ///Sets the horizontal alignment of the icon.
 ///<br/>horizontalAlignment-ej.datavisualization.Diagram.HorizontalAlignment|string	default-ej.datavisualization.Diagram.HorizontalAlignment.Center
@@ -7057,7 +7441,7 @@ ejDiagram :function (options) {
 ///<br/>verticalAlignment-ej.datavisualization.Diagram.VerticalAlignment|string	default-ej.datavisualization.Diagram.VerticalAlignment.Center
 ///<br/><br/>
 ///Defines the distance to be left between a node and its connections(In coming and out going connections).
-///<br/>connectorPadding-Number	default-0
+///<br/>connectorPadding-number	default-0
 ///<br/><br/>
 ///Enables or disables the default behaviors of the node.
 ///<br/>constraints-ej.datavisualization.Diagram.NodeConstraints|string	default-ej.datavisualization.Diagram.NodeConstraints.Default
@@ -7066,16 +7450,16 @@ ejDiagram :function (options) {
 ///<br/>container-any	default-null
 ///<br/><br/>
 ///Defines the orientation of the container. Applicable, if the group is a container.
-///<br/>orientation-String	default-vertical
+///<br/>orientation-string	default-vertical
 ///<br/><br/>
 ///Sets the type of the container. Applicable if the group is a container.
 ///<br/>type-ej.datavisualization.Diagram.ContainerType|string	default-ej.datavisualization.Diagram.ContainerType.Canvas
 ///<br/><br/>
 ///Defines the corner radius of rectangular shapes.
-///<br/>cornerRadius-Number	default-0
+///<br/>cornerRadius-number	default-0
 ///<br/><br/>
 ///Configures the styles of shapes
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Defines the BPMN data object
 ///<br/>data-any	default-
@@ -7090,13 +7474,13 @@ ejDiagram :function (options) {
 ///<br/>enumeration-any	default-null
 ///<br/><br/>
 ///Sets the name of the Enumeration
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Defines the collection of enumeration members
 ///<br/>members-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Sets the name of the enumeration member
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Sets the type of the BPMN Events. Applicable, if the node is a BPMN event.
 ///<br/>event-ej.datavisualization.Diagram.BPMNEvents|string	default-ej.datavisualization.Diagram.BPMNEvents.Start
@@ -7108,16 +7492,16 @@ ejDiagram :function (options) {
 ///<br/>expandIcon-any	default-
 ///<br/><br/>
 ///Sets the border color for expand icon of node
-///<br/>borderColor-String	default-black
+///<br/>borderColor-string	default-black
 ///<br/><br/>
 ///Sets the border width for expand icon of node
-///<br/>borderWidth-Number	default-1
+///<br/>borderWidth-number	default-1
 ///<br/><br/>
 ///Sets the fill color for expand icon of node
-///<br/>fillColor-String	default-white
+///<br/>fillColor-string	default-white
 ///<br/><br/>
 ///Defines the height for expand icon of node
-///<br/>height-Number	default-15
+///<br/>height-number	default-15
 ///<br/><br/>
 ///Sets the horizontal alignment of the icon.
 ///<br/>horizontalAlignment-ej.datavisualization.Diagram.HorizontalAlignment|string	default-ej.datavisualization.Diagram.HorizontalAlignment.Center
@@ -7135,7 +7519,7 @@ ejDiagram :function (options) {
 ///<br/>verticalAlignment-ej.datavisualization.Diagram.VerticalAlignment|string	default-ej.datavisualization.Diagram.VerticalAlignment.Center
 ///<br/><br/>
 ///Defines the fill color of the node
-///<br/>fillColor-String	default-white
+///<br/>fillColor-string	default-white
 ///<br/><br/>
 ///Sets the type of the BPMN Gateway. Applicable, if the node is a BPMN gateway.
 ///<br/>gateway-ej.datavisualization.Diagram.BPMNGateways|string	default-ej.datavisualization.Diagram.BPMNGateways.None
@@ -7150,31 +7534,31 @@ ejDiagram :function (options) {
 ///<br/>stops-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Defines the left most position(relative to node) of the rectangular region that needs to be painted
-///<br/>x1-Number	default-0
+///<br/>x1-number	default-0
 ///<br/><br/>
 ///Defines the right most position(relative to node) of the rectangular region that needs to be painted
-///<br/>x2-Number	default-0
+///<br/>x2-number	default-0
 ///<br/><br/>
 ///Defines the top most position(relative to node) of the rectangular region that needs to be painted
-///<br/>y1-Number	default-0
+///<br/>y1-number	default-0
 ///<br/><br/>
 ///Defines the bottom most position(relative to node) of the rectangular region that needs to be painted
-///<br/>y2-Number	default-0
+///<br/>y2-number	default-0
 ///<br/><br/>
 ///Paints the node with radial color transitions. A focal point defines the beginning of the gradient, and a circle defines the end point of the gradient.
 ///<br/>RadialGradient-any	default-
 ///<br/><br/>
 ///Defines the position of the outermost circle
-///<br/>cx-Number	default-0
+///<br/>cx-number	default-0
 ///<br/><br/>
 ///Defines the outer most circle of the radial gradient
-///<br/>cy-Number	default-0
+///<br/>cy-number	default-0
 ///<br/><br/>
 ///Defines the innermost circle of the radial gradient
-///<br/>fx-Number	default-0
+///<br/>fx-number	default-0
 ///<br/><br/>
 ///Defines the innermost circle of the radial gradient
-///<br/>fy-Number	default-0
+///<br/>fy-number	default-0
 ///<br/><br/>
 ///Defines the different colors and the region of color transitions.
 ///<br/>stops-Array&lt;any&gt;	default-[]
@@ -7183,13 +7567,13 @@ ejDiagram :function (options) {
 ///<br/>Stop-any	default-
 ///<br/><br/>
 ///Sets the color to be filled over the specified region
-///<br/>color-String	default-
+///<br/>color-string	default-
 ///<br/><br/>
 ///Sets the position where the previous color transition ends and a new color transition starts
-///<br/>offset-Number	default-0
+///<br/>offset-number	default-0
 ///<br/><br/>
 ///Describes the transparency level of the region
-///<br/>opacity-Number	default-1
+///<br/>opacity-number	default-1
 ///<br/><br/>
 ///Sets the type of the BPMN Shapes as group. Applicable, if the node is a BPMN.
 ///<br/>group-any	default-ej.datavisualization.Diagram.BPMNShapes
@@ -7198,7 +7582,7 @@ ejDiagram :function (options) {
 ///<br/>header-any	default-{ text: Title, fontSize: 11 }
 ///<br/><br/>
 ///Defines the height of the node
-///<br/>height-Number	default-0
+///<br/>height-number	default-0
 ///<br/><br/>
 ///Sets the horizontal alignment of the node. Applicable, if the parent of the node is a container.
 ///<br/>horizontalAlign-ej.datavisualization.Diagram.HorizontalAlignment|string	default-ej.datavisualization.Diagram.HorizontalAlignment.Left
@@ -7210,25 +7594,25 @@ ejDiagram :function (options) {
 ///<br/>interface-any	default-null
 ///<br/><br/>
 ///Sets the name of the interface
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Defines a collection of attributes of the interface
 ///<br/>attributes-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Sets the name of the attribute
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Sets the type of the attribute
-///<br/>type-String	default-
+///<br/>type-string	default-
 ///<br/><br/>
 ///Sets the visibility of the attribute
-///<br/>scope-String	default-
+///<br/>scope-string	default-
 ///<br/><br/>
 ///Defines the collection of public methods of an interface
 ///<br/>methods-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Sets the visibility of the method
-///<br/>scope-String	default-
+///<br/>scope-string	default-
 ///<br/><br/>
 ///Defines whether the sub tree of the node is expanded or collapsed
 ///<br/>isExpanded-Boolean	default-true
@@ -7243,22 +7627,22 @@ ejDiagram :function (options) {
 ///<br/>bold-Boolean	default-false
 ///<br/><br/>
 ///Sets the border color of the label
-///<br/>borderColor-String	default-transparent
+///<br/>borderColor-string	default-transparent
 ///<br/><br/>
 ///Sets the border width of the label
-///<br/>borderWidth-Number	default-0
+///<br/>borderWidth-number	default-0
 ///<br/><br/>
 ///Sets the fill color of the text area
-///<br/>fillColor-String	default-transparent
+///<br/>fillColor-string	default-transparent
 ///<br/><br/>
 ///Sets the font color of the text
-///<br/>fontColor-String	default-black
+///<br/>fontColor-string	default-black
 ///<br/><br/>
 ///Sets the font family of the text
-///<br/>fontFamily-String	default-Arial
+///<br/>fontFamily-string	default-Arial
 ///<br/><br/>
 ///Defines the font size of the text
-///<br/>fontSize-Number	default-12
+///<br/>fontSize-number	default-12
 ///<br/><br/>
 ///Sets the horizontal alignment of the label.
 ///<br/>horizontalAlignment-ej.datavisualization.Diagram.HorizontalAlignment|string	default-ej.datavisualization.Diagram.HorizontalAlignment.Center
@@ -7273,22 +7657,22 @@ ejDiagram :function (options) {
 ///<br/>mode-ej.datavisualization.Diagram.LabelEditMode|string	default-ej.datavisualization.Diagram.LabelEditMode.Edit
 ///<br/><br/>
 ///Sets the unique identifier of the label
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Sets the fraction/ratio(relative to node) that defines the position of the label
 ///<br/>offset-any	default-ej.datavisualization.Diagram.Point(0.5, 0.5)
 ///<br/><br/>
 ///Defines the transparency of the labels
-///<br/>opacity-Number	default-1
+///<br/>opacity-number	default-1
 ///<br/><br/>
 ///Defines whether the label is editable or not
 ///<br/>readOnly-Boolean	default-false
 ///<br/><br/>
 ///Defines the angle to which the label needs to be rotated
-///<br/>rotateAngle-Number	default-0
+///<br/>rotateAngle-number	default-0
 ///<br/><br/>
 ///Defines the label text
-///<br/>text-String	default-
+///<br/>text-string	default-
 ///<br/><br/>
 ///Defines how to align the text inside the label.
 ///<br/>textAlign-ej.datavisualization.Diagram.TextAlign|string	default-ej.datavisualization.Diagram.TextAlign.Center
@@ -7303,7 +7687,7 @@ ejDiagram :function (options) {
 ///<br/>visible-Boolean	default-true
 ///<br/><br/>
 ///Sets the width of the label(the maximum value of label width and the node width will be considered as label width)
-///<br/>width-Number	default-50
+///<br/>width-number	default-50
 ///<br/><br/>
 ///Defines how the label text needs to be wrapped.
 ///<br/>wrapping-ej.datavisualization.Diagram.TextWrapping|string	default-ej.datavisualization.Diagram.TextWrapping.WrapWithOverflow
@@ -7327,7 +7711,7 @@ ejDiagram :function (options) {
 ///<br/>children-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Defines the fill color of the lane
-///<br/>fillColor-String	default-white
+///<br/>fillColor-string	default-white
 ///<br/><br/>
 ///Defines the header of the lane
 ///<br/>header-any	default-{ text: Function, fontSize: 11 }
@@ -7336,64 +7720,64 @@ ejDiagram :function (options) {
 ///<br/>isLane-Boolean	default-false
 ///<br/><br/>
 ///Sets the unique identifier of the lane
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Sets the orientation of the lane.
-///<br/>orientation-String	default-vertical
+///<br/>orientation-string	default-vertical
 ///<br/><br/>
 ///Defines the minimum space to be left between the bottom of parent bounds and the node. Applicable, if the parent is a container.
-///<br/>marginBottom-Number	default-0
+///<br/>marginBottom-number	default-0
 ///<br/><br/>
 ///Defines the minimum space to be left between the left of parent bounds and the node. Applicable, if the parent is a container.
-///<br/>marginLeft-Number	default-0
+///<br/>marginLeft-number	default-0
 ///<br/><br/>
 ///Defines the minimum space to be left between the right of the parent bounds and the node. Applicable, if the parent is a container.
-///<br/>marginRight-Number	default-0
+///<br/>marginRight-number	default-0
 ///<br/><br/>
 ///Defines the minimum space to be left between the top of parent bounds and the node. Applicable, if the parent is a container.
-///<br/>marginTop-Number	default-0
+///<br/>marginTop-number	default-0
 ///<br/><br/>
 ///Defines the maximum height limit of the node
-///<br/>maxHeight-Number	default-0
+///<br/>maxHeight-number	default-0
 ///<br/><br/>
 ///Defines the maximum width limit of the node
-///<br/>maxWidth-Number	default-0
+///<br/>maxWidth-number	default-0
 ///<br/><br/>
 ///Defines the minimum height limit of the node
-///<br/>minHeight-Number	default-0
+///<br/>minHeight-number	default-0
 ///<br/><br/>
 ///Defines the minimum width limit of the node
-///<br/>minWidth-Number	default-0
+///<br/>minWidth-number	default-0
 ///<br/><br/>
 ///Sets the unique identifier of the node
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Defines the position of the node on X-Axis
-///<br/>offsetX-Number	default-0
+///<br/>offsetX-number	default-0
 ///<br/><br/>
 ///Defines the position of the node on Y-Axis
-///<br/>offsetY-Number	default-0
+///<br/>offsetY-number	default-0
 ///<br/><br/>
 ///Defines the opaque of the node
-///<br/>opacity-Number	default-1
+///<br/>opacity-number	default-1
 ///<br/><br/>
 ///Defines the orientation of nodes. Applicable, if the node is a swimlane.
-///<br/>orientation-String	default-vertical
+///<br/>orientation-string	default-vertical
 ///<br/><br/>
 ///A read only collection of outgoing connectors/edges of the node
 ///<br/>outEdges-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Defines the minimum padding value to be left between the bottom most position of a group and its children. Applicable, if the group is a container.
-///<br/>paddingBottom-Number	default-0
+///<br/>paddingBottom-number	default-0
 ///<br/><br/>
 ///Defines the minimum padding value to be left between the left most position of a group and its children. Applicable, if the group is a container.
-///<br/>paddingLeft-Number	default-0
+///<br/>paddingLeft-number	default-0
 ///<br/><br/>
 ///Defines the minimum padding value to be left between the right most position of a group and its children. Applicable, if the group is a container.
-///<br/>paddingRight-Number	default-0
+///<br/>paddingRight-number	default-0
 ///<br/><br/>
 ///Defines the minimum padding value to be left between the top most position of a group and its children. Applicable, if the group is a container.
-///<br/>paddingTop-Number	default-0
+///<br/>paddingTop-number	default-0
 ///<br/><br/>
 ///Defines the size and preview size of the node to add that to symbol palette
 ///<br/>paletteItem-any	default-null
@@ -7402,25 +7786,25 @@ ejDiagram :function (options) {
 ///<br/>enableScale-Boolean	default-true
 ///<br/><br/>
 ///Defines the height of the symbol
-///<br/>height-Number	default-0
+///<br/>height-number	default-0
 ///<br/><br/>
 ///Defines the margin of the symbol item
 ///<br/>margin-any	default-{ left: 4, right: 4, top: 4, bottom: 4 }
 ///<br/><br/>
 ///Defines the preview height of the symbol
-///<br/>previewHeight-Number	default-undefined
+///<br/>previewHeight-number	default-undefined
 ///<br/><br/>
 ///Defines the preview width of the symbol
-///<br/>previewWidth-Number	default-undefined
+///<br/>previewWidth-number	default-undefined
 ///<br/><br/>
 ///Defines the width of the symbol
-///<br/>width-Number	default-0
+///<br/>width-number	default-0
 ///<br/><br/>
 ///Sets the name of the parent group
-///<br/>parent-String	default-
+///<br/>parent-string	default-
 ///<br/><br/>
 ///Sets the path geometry that defines the shape of a path node
-///<br/>pathData-String	default-
+///<br/>pathData-string	default-
 ///<br/><br/>
 ///An array of objects, where each object represents a smaller region(phase) of a swimlane.
 ///<br/>phases-Array&lt;any&gt;	default-[]
@@ -7429,28 +7813,28 @@ ejDiagram :function (options) {
 ///<br/>label-any	default-null
 ///<br/><br/>
 ///Defines the line color of the splitter that splits adjacent phases.
-///<br/>lineColor-String	default-#606060
+///<br/>lineColor-string	default-#606060
 ///<br/><br/>
 ///Sets the dash array that used to stroke the phase splitter
-///<br/>lineDashArray-String	default-3,3
+///<br/>lineDashArray-string	default-3,3
 ///<br/><br/>
 ///Sets the lineWidth of the phase
-///<br/>lineWidth-Number	default-1
+///<br/>lineWidth-number	default-1
 ///<br/><br/>
 ///Sets the unique identifier of the phase
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Sets the length of the smaller region(phase) of a swimlane
-///<br/>offset-Number	default-100
+///<br/>offset-number	default-100
 ///<br/><br/>
 ///Sets the orientation of the phase
-///<br/>orientation-String	default-horizontal
+///<br/>orientation-string	default-horizontal
 ///<br/><br/>
 ///Sets the type of the object as phase
-///<br/>type-String	default-phase
+///<br/>type-string	default-phase
 ///<br/><br/>
 ///Sets the height of the phase headers
-///<br/>phaseSize-Number	default-0
+///<br/>phaseSize-number	default-0
 ///<br/><br/>
 ///Sets the ratio/ fractional value relative to node, based on which the node will be transformed(positioning, scaling and rotation)
 ///<br/>pivot-any	default-ej.datavisualization.Diagram.Points(0.5,0.5)
@@ -7462,58 +7846,58 @@ ejDiagram :function (options) {
 ///<br/>ports-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Sets the border color of the port
-///<br/>borderColor-String	default-#1a1a1a
+///<br/>borderColor-string	default-#1a1a1a
 ///<br/><br/>
 ///Sets the stroke width of the port
-///<br/>borderWidth-Number	default-1
+///<br/>borderWidth-number	default-1
 ///<br/><br/>
 ///Defines the space to be left between the port bounds and its incoming and outgoing connections.
-///<br/>connectorPadding-Number	default-0
+///<br/>connectorPadding-number	default-0
 ///<br/><br/>
 ///Defines whether connections can be created with the port
 ///<br/>constraints-ej.datavisualization.Diagram.PortConstraints|string	default-ej.datavisualization.Diagram.PortConstraints.Connect
 ///<br/><br/>
 ///Sets the fill color of the port
-///<br/>fillColor-String	default-white
+///<br/>fillColor-string	default-white
 ///<br/><br/>
 ///Sets the unique identifier of the port
-///<br/>name-String	default-
+///<br/>name-string	default-
 ///<br/><br/>
 ///Defines the position of the port as fraction/ ratio relative to node
 ///<br/>offset-any	default-ej.datavisualization.Diagram.Point(0, 0)
 ///<br/><br/>
 ///Defines the path data to draw the port. Applicable, if the port shape is path.
-///<br/>pathData-String	default-
+///<br/>pathData-string	default-
 ///<br/><br/>
 ///Defines the shape of the port.
 ///<br/>shape-ej.datavisualization.Diagram.PortShapes|string	default-ej.datavisualization.Diagram.PortShapes.Square
 ///<br/><br/>
 ///Defines the size of the port
-///<br/>size-Number	default-8
+///<br/>size-number	default-8
 ///<br/><br/>
 ///Defines when the port should be visible.
 ///<br/>visibility-ej.datavisualization.Diagram.PortVisibility|string	default-ej.datavisualization.Diagram.PortVisibility.Default
 ///<br/><br/>
 ///Sets the angle to which the node should be rotated
-///<br/>rotateAngle-Number	default-0
+///<br/>rotateAngle-number	default-0
 ///<br/><br/>
 ///Defines the opacity and the position of shadow
 ///<br/>shadow-any	default-ej.datavisualization.Diagram.Shadow()
 ///<br/><br/>
 ///Defines the angle of the shadow relative to node
-///<br/>angle-Number	default-45
+///<br/>angle-number	default-45
 ///<br/><br/>
 ///Sets the distance to move the shadow relative to node
-///<br/>distance-Number	default-5
+///<br/>distance-number	default-5
 ///<br/><br/>
 ///Defines the opaque of the shadow
-///<br/>opacity-Number	default-0.7
+///<br/>opacity-number	default-0.7
 ///<br/><br/>
 ///Sets the shape of the node. It depends upon the type of node.
 ///<br/>shape-ej.datavisualization.Diagram.BasicShapes|string	default-ej.datavisualization.Diagram.BasicShapes.Rectangle
 ///<br/><br/>
 ///Sets the source path of the image. Applicable, if the type of the node is image.
-///<br/>source-String	default-
+///<br/>source-string	default-
 ///<br/><br/>
 ///Defines the sub process of a BPMN Activity. Applicable, if the type of the BPMN activity is sub process.
 ///<br/>subProcess-any	default-ej.datavisualization.Diagram.BPMNSubProcess()
@@ -7564,7 +7948,7 @@ ejDiagram :function (options) {
 ///<br/>type-ej.datavisualization.Diagram.BPMNTasks|string	default-ej.datavisualization.Diagram.BPMNTasks.None
 ///<br/><br/>
 ///Sets the id of svg/html templates. Applicable, if the node is HTML or native.
-///<br/>templateId-String	default-
+///<br/>templateId-string	default-
 ///<br/><br/>
 ///Defines the textBlock of a text node
 ///<br/>textBlock-any	default-null
@@ -7585,10 +7969,10 @@ ejDiagram :function (options) {
 ///<br/>visible-Boolean	default-true
 ///<br/><br/>
 ///Defines the width of the node
-///<br/>width-Number	default-0
+///<br/>width-number	default-0
 ///<br/><br/>
 ///Defines the z-index of the node
-///<br/>zOrder-Number	default-0
+///<br/>zOrder-number	default-0
 ///<br/><br/>
 ///Binds the custom JSON data with node properties
 ///<br/>nodeTemplate-any	default-null
@@ -7603,25 +7987,25 @@ ejDiagram :function (options) {
 ///<br/>multiplePage-Boolean	default-false
 ///<br/><br/>
 ///Defines the background color of diagram pages
-///<br/>pageBackgroundColor-String	default-#ffffff
+///<br/>pageBackgroundColor-string	default-#ffffff
 ///<br/><br/>
 ///Defines the page border color
-///<br/>pageBorderColor-String	default-#565656
+///<br/>pageBorderColor-string	default-#565656
 ///<br/><br/>
 ///Sets the border width of diagram pages
-///<br/>pageBorderWidth-Number	default-0
+///<br/>pageBorderWidth-number	default-0
 ///<br/><br/>
 ///Defines the height of a page
-///<br/>pageHeight-Number	default-null
+///<br/>pageHeight-number	default-null
 ///<br/><br/>
 ///Defines the page margin
-///<br/>pageMargin-Number	default-24
+///<br/>pageMargin-number	default-24
 ///<br/><br/>
 ///Sets the orientation of the page.
 ///<br/>pageOrientation-ej.datavisualization.Diagram.PageOrientations|string	default-ej.datavisualization.Diagram.PageOrientations.Portrait
 ///<br/><br/>
 ///Defines the height of a diagram page
-///<br/>pageWidth-Number	default-null
+///<br/>pageWidth-number	default-null
 ///<br/><br/>
 ///Defines the scrollable area of diagram. Applicable, if the scroll limit is "limited".
 ///<br/>scrollableArea-any	default-null
@@ -7639,22 +8023,22 @@ ejDiagram :function (options) {
 ///<br/>scrollSettings-ScrollSettings	default-
 ///<br/><br/>
 ///Allows to read the zoom value of diagram
-///<br/>currentZoom-Number	default-0
+///<br/>currentZoom-number	default-0
 ///<br/><br/>
 ///Sets the horizontal scroll offset
-///<br/>horizontalOffset-Number	default-0
+///<br/>horizontalOffset-number	default-0
 ///<br/><br/>
 ///Allows to extend the scrollable region that is based on the scroll limit
 ///<br/>padding-any	default-{left: 0, right: 0, top:0, bottom: 0}
 ///<br/><br/>
 ///Sets the vertical scroll offset
-///<br/>verticalOffset-Number	default-0
+///<br/>verticalOffset-number	default-0
 ///<br/><br/>
 ///Allows to read the view port height of the diagram
-///<br/>viewPortHeight-Number	default-0
+///<br/>viewPortHeight-number	default-0
 ///<br/><br/>
 ///Allows to read the view port width of the diagram
-///<br/>viewPortWidth-Number	default-0
+///<br/>viewPortWidth-number	default-0
 ///<br/><br/>
 ///Defines the size and position of selected items and defines the appearance of selector
 ///<br/>selectedItems-SelectedItems	default-
@@ -7669,16 +8053,16 @@ ejDiagram :function (options) {
 ///<br/>getConstraints-any	default-null
 ///<br/><br/>
 ///Sets the height of the selected items
-///<br/>height-Number	default-0
+///<br/>height-number	default-0
 ///<br/><br/>
 ///Sets the x position of the selector
-///<br/>offsetX-Number	default-0
+///<br/>offsetX-number	default-0
 ///<br/><br/>
 ///Sets the y position of the selector
-///<br/>offsetY-Number	default-0
+///<br/>offsetY-number	default-0
 ///<br/><br/>
 ///Sets the angle to rotate the selected items
-///<br/>rotateAngle-Number	default-0
+///<br/>rotateAngle-number	default-0
 ///<br/><br/>
 ///Sets the angle to rotate the selected items. For tooltip properties, refer Tooltip
 ///<br/>tooltip-any	default-ej.datavisualization.Diagram.Tooltip()
@@ -7687,25 +8071,25 @@ ejDiagram :function (options) {
 ///<br/>userHandles-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Defines the background color of the user handle
-///<br/>backgroundColor-String	default-#2382c3
+///<br/>backgroundColor-string	default-#2382c3
 ///<br/><br/>
 ///Sets the border color of the user handle
-///<br/>borderColor-String	default-transparent
+///<br/>borderColor-string	default-transparent
 ///<br/><br/>
 ///Defines whether the user handle should be added, when more than one element is selected
 ///<br/>enableMultiSelection-Boolean	default-false
 ///<br/><br/>
 ///Sets the stroke color of the user handle
-///<br/>pathColor-String	default-transparent
+///<br/>pathColor-string	default-transparent
 ///<br/><br/>
 ///Defines the custom shape of the user handle
-///<br/>pathData-String	default-
+///<br/>pathData-string	default-
 ///<br/><br/>
 ///Defines the position of the user handle
 ///<br/>position-ej.datavisualization.Diagram.UserHandlePositions |string	default-ej.datavisualization.Diagram.UserHandlePositions.BottomCenter
 ///<br/><br/>
 ///Defines the size of the user handle
-///<br/>size-Number	default-8
+///<br/>size-number	default-8
 ///<br/><br/>
 ///Defines the interactive behaviors of the user handle
 ///<br/>tool-any	default-
@@ -7714,7 +8098,7 @@ ejDiagram :function (options) {
 ///<br/>visible-Boolean	default-true
 ///<br/><br/>
 ///Sets the width of the selected items
-///<br/>width-Number	default-0
+///<br/>width-number	default-0
 ///<br/><br/>
 ///Enables or disables tooltip of diagram
 ///<br/>showTooltip-Boolean	default-true
@@ -7729,10 +8113,10 @@ ejDiagram :function (options) {
 ///<br/>horizontalGridLines-any	default-
 ///<br/><br/>
 ///Defines the line color of horizontal grid lines
-///<br/>lineColor-String	default-lightgray
+///<br/>lineColor-string	default-lightgray
 ///<br/><br/>
 ///Specifies the pattern of dashes and gaps used to stroke horizontal grid lines
-///<br/>lineDashArray-String	default-
+///<br/>lineDashArray-string	default-
 ///<br/><br/>
 ///A pattern of lines and gaps that defines a set of horizontal gridlines
 ///<br/>linesInterval-Array&lt;any&gt;	default-[1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75]
@@ -7741,22 +8125,22 @@ ejDiagram :function (options) {
 ///<br/>snapInterval-Array&lt;any&gt;	default-[20]
 ///<br/><br/>
 ///Defines the angle by which the object needs to be snapped
-///<br/>snapAngle-Number	default-5
+///<br/>snapAngle-number	default-5
 ///<br/><br/>
 ///Defines and sets the snapConstraints
 ///<br/>snapConstraints-ej.datavisualization.Diagram.SnapConstraints|string	default-
 ///<br/><br/>
 ///Defines the minimum distance between the selected object and the nearest object
-///<br/>snapObjectDistance-Number	default-5
+///<br/>snapObjectDistance-number	default-5
 ///<br/><br/>
 ///Defines the appearance of horizontal gridlines
 ///<br/>verticalGridLines-any	default-
 ///<br/><br/>
 ///Defines the line color of horizontal grid lines
-///<br/>lineColor-String	default-lightgray
+///<br/>lineColor-string	default-lightgray
 ///<br/><br/>
 ///Specifies the pattern of dashes and gaps used to stroke horizontal grid lines
-///<br/>lineDashArray-String	default-
+///<br/>lineDashArray-string	default-
 ///<br/><br/>
 ///A pattern of lines and gaps that defines a set of horizontal gridlines
 ///<br/>linesInterval-Array&lt;any&gt;	default-[1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75]
@@ -7786,13 +8170,13 @@ ejDiagram :function (options) {
 ///<br/>relativeMode-ej.datavisualization.Diagram.RelativeMode|string	default-ej.datavisualization.Diagram.RelativeMode.Object
 ///<br/><br/>
 ///Sets the svg/html template to be bound with tooltip
-///<br/>templateId-String	default-
+///<br/>templateId-string	default-
 ///<br/><br/>
 ///Specifies the width of the diagram
-///<br/>width-String	default-null
+///<br/>width-string	default-null
 ///<br/><br/>
 ///Sets the factor by which we can zoom in or zoom out
-///<br/>zoomFactor-Number	default-0.2
+///<br/>zoomFactor-number	default-0.2
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -8276,6 +8660,12 @@ getPageCount:function(){
 /// <signature>
 /// <summary>
 /// Gets the total number of pages in the document.
+/// </summary>
+},
+getSelectedText:function(){
+/// <signature>
+/// <summary>
+/// Gets the text of current selection in the document.
 /// </summary>
 },
 getZoomFactor:function(){
@@ -9185,6 +9575,9 @@ ejGantt :function (options) {
 ///<br/><br/>
 ///Specifies enabling or disabling multiple sorting for Gantt columns
 ///<br/>allowMultiSorting-boolean	default-false
+///<br/><br/>
+///Enables or disables the option for multiple exporting
+///<br/>allowMultipleExporting-boolean	default-false
 ///<br/><br/>
 ///Enables or disables the interactive selection of a row.
 ///<br/>allowSelection-boolean	default-true
@@ -10592,7 +10985,7 @@ ejGrid :function (options) {
 ///<br/>headerText-String	default-
 ///<br/><br/>
 ///This defines the text alignment of a particular column header cell value. See headerTextAlign
-///<br/>headerTextAlign-ej.TextAlign|string	default-ej.TextAlign.Left
+///<br/>headerTextAlign-ej.TextAlign|string	default-null
 ///<br/><br/>
 ///You can use this property to freeze selected columns in grid at the time of scrolling.
 ///<br/>isFrozen-Boolean	default-false
@@ -11027,7 +11420,7 @@ ejGrid :function (options) {
 ///<br/>showToolbar-Boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add the default editing actions as a toolbar items
-///<br/>toolbarItems-Array&lt;any&gt;	default-[]
+///<br/>toolbarItems-array&lt;ej.Grid.ToolBarItems|string&gt;	default-[]
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -11639,6 +12032,15 @@ ejKanban :function (options) {
 ///<br/><br/>
 ///To enable or disable DragAndDrop across swim lane.
 ///<br/>allowDragAndDrop-boolean	default-false
+///<br/><br/>
+///Customize the settings for unassigned category of swim lane.
+///<br/>unassignedGroup-boolean	default-Object
+///<br/><br/>
+///To enable or disable unassigned category change with swim lane key values.
+///<br/>enable-boolean	default-true
+///<br/><br/>
+///To set the user defined values which are need to categorized as unassigned category swim lane groups.
+///<br/>keys-boolean	default-[null,undefined,]
 ///<br/><br/>
 ///To enable or disable the column expand /collapse.
 ///<br/>allowToggleColumn-boolean	default-false
@@ -14638,6 +15040,9 @@ ejNavigationDrawer :function (options) {
 ///<br/><br/>
 ///Specifies the width of the control
 ///<br/>width-number	default-auto
+///<br/><br/>
+///Navigation pane opened initially when isPaneOpen property is true.
+///<br/>isPaneOpen-boolean	default-false
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -14714,13 +15119,13 @@ ejOverview :function (options) {
 /// <summary><br/>
 ///Overview control allows you to see a preview or an overall view of the entire content of a Diagram. This helps you to look at the overall picture of a large Diagram and also to navigate, pan, or zoom, on a particular position of the page.<br/><br/>
 ///The sourceId property of overview should be set with the corresponding Diagram ID for you need the overall view.
-///<br/>sourceID-String	default-null
+///<br/>sourceID-string	default-null
 ///<br/><br/>
 ///Defines the height of the overview
-///<br/>height-Number	default-400
+///<br/>height-number	default-400
 ///<br/><br/>
 ///Defines the width of the overview
-///<br/>width-Number	default-250
+///<br/>width-number	default-250
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -14841,6 +15246,30 @@ print:function(){
 /// <signature>
 /// <summary>
 /// Prints the PDF document.
+/// </summary>
+},
+abortPrint:function(){
+/// <signature>
+/// <summary>
+/// Abort the printing function and restores the PDF Viewer.
+/// </summary>
+},
+showPrintTools:function(){
+/// <signature>
+/// <summary>
+/// Shows/hides the print icon in the tool bar.
+/// </summary>
+},
+download:function(){
+/// <signature>
+/// <summary>
+/// Downloads the PDF document being loaded in the ejPdfViewer control.
+/// </summary>
+},
+showDownloadTool:function(){
+/// <signature>
+/// <summary>
+/// Shows/hides the download tool in the tool bar.
 /// </summary>
 },
 showPageNavigationTools:function(){
@@ -16163,6 +16592,9 @@ ejPivotGrid :function (options) {
 ///Specifies the CSS class to PivotGrid to achieve custom theme.
 ///<br/>cssClass-string	default-&#226;€œ&#226;€
 ///<br/><br/>
+///Connects the PivotSchemaDesigner with the specified ID to the PivotGrid Control.
+///<br/>pivotTableFieldListID-string	default-&#226;€œ&#226;€
+///<br/><br/>
 ///Initializes the data source for the PivotGrid widget, when it functions completely on client-side.
 ///<br/>dataSource-DataSource	default-{}
 ///<br/><br/>
@@ -17252,71 +17684,99 @@ showMenu:function(){
 /// To show menu items
 /// </summary>
 },
-enableItemByIndex:function(){
+enableItemByIndex:function(itemIndex){
 /// <signature>
 /// <summary>
 /// To enable menu item using index
 /// </summary>
+/// <param name="itemIndex"	type="number">Index of the Radialmenu to be enabled.</param>
+/// </signature>
 },
-enableItemsByIndices:function(){
+enableItemsByIndices:function(itemIndices){
 /// <signature>
 /// <summary>
 /// To enable menu items using indices
 /// </summary>
+/// <param name="itemIndices"	type="Array&lt;any&gt;">Index of the Radialmenu to be enabled.</param>
+/// </signature>
 },
-disableItemByIndex:function(){
+disableItemByIndex:function(itemIndex){
 /// <signature>
 /// <summary>
 /// To disable menu item using index
 /// </summary>
+/// <param name="itemIndex"	type="number">Index of the Radialmenu to be disabled.</param>
+/// </signature>
 },
-disableItemsByIndices:function(){
+disableItemsByIndices:function(itemIndices){
 /// <signature>
 /// <summary>
 /// To disable menu items using indices
 /// </summary>
+/// <param name="itemIndices"	type="Array&lt;any&gt;">items of the Radialmenu to disable.</param>
+/// </signature>
 },
-enableItem:function(){
+enableItem:function(item){
 /// <signature>
 /// <summary>
 /// To enable menu item using item text
 /// </summary>
+/// <param name="item"	type="String">item of the Radialmenu item to enable.</param>
+/// </signature>
 },
-disableItem:function(){
+disableItem:function(item){
 /// <signature>
 /// <summary>
 /// To disable menu item using item text
 /// </summary>
+/// <param name="item"	type="String">item of the Radialmenu item to disable.</param>
+/// </signature>
 },
-enableItems:function(){
+enableItems:function(items){
 /// <signature>
 /// <summary>
 /// To enable menu items using item texts
 /// </summary>
+/// <param name="items"	type="Array&lt;any&gt;">items of the Radialmenu item to enable.</param>
+/// </signature>
 },
-disableItems:function(){
+disableItems:function(items){
 /// <signature>
 /// <summary>
 /// To disable menu items using item texts
 /// </summary>
+/// <param name="items"	type="Array&lt;any&gt;">items of the Radialmenu item to disable.</param>
+/// </signature>
 },
-updateBadgeValue:function(){
+updateBadgeValue:function(index, value){
 /// <signature>
 /// <summary>
 /// To update menu item badge value
 /// </summary>
+/// <param name="index"	type="number">The index value to add the given items at the specified index. If index is not specified, the given value will not be updated.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To update menu item badge value
+/// </summary>
+/// <param name="value"	type="number">The Value to be updated in the badge. It will be updated based on the given index</param>
+/// </signature>
 },
-showBadge:function(){
+showBadge:function(index){
 /// <signature>
 /// <summary>
 /// To show menu item badge
 /// </summary>
+/// <param name="index"	type="number">Index of the Radialmenu item to be shown badge.</param>
+/// </signature>
 },
-hideBadge:function(){
+hideBadge:function(index){
 /// <signature>
 /// <summary>
 /// To hide menu item badge
 /// </summary>
+/// <param name="index"	type="number">Index of the Radialmenu item to hide the badge.</param>
+/// </signature>
 },
 });
 return instance;
@@ -18836,7 +19296,7 @@ updateBackStageItem:function(index, item){
 /// <param name="item"	type="any">select the object to add the backstage item</param>
 /// </signature>
 },
-removeTabGroupContent:function(tabIndex, groupIndex, subGroupIndex){
+removeTabGroupContent:function(tabIndex, groupText, subGroupIndex){
 /// <signature>
 /// <summary>
 /// To customize whole content from Tab Group.
@@ -18847,7 +19307,7 @@ removeTabGroupContent:function(tabIndex, groupIndex, subGroupIndex){
 /// <summary>
 /// To customize whole content from Tab Group.
 /// </summary>
-/// <param name="groupIndex"	type="string">ribbon group index.</param>
+/// <param name="groupText"	type="string">ribbon group text.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -18885,9 +19345,6 @@ ejRibbon :function (options) {
 ///When set to true, adapts the Ribbon layout to fit the screen size of devices on which it renders.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
-///When isMobileOnly is true,its shows in mobile toolbar.
-///<br/>isMobileOnly-boolean	default-false
-///<br/><br/>
 ///Specifies the height, width, enableRTL, showRoundedCorner,enabled,cssClass property to the controls in the ribbon commonly andit will work only when those properties are not defined in buttonSettings and content defaults.
 ///<br/>buttonDefaults-any	default-object
 ///<br/><br/>
@@ -18902,6 +19359,12 @@ ejRibbon :function (options) {
 ///<br/><br/>
 ///Specifies the custom tooltip for collapse pin.Refer to ejRibbon#tabs->groups->content->groups->customToolTip for its inner properties.
 ///<br/>customToolTip-any	default-Object
+///<br/><br/>
+///Set enableOnDemand as true to load ribbon tab and backstage contents while corresponding item clicked.
+///<br/>enableOnDemand-boolean	default-false
+///<br/><br/>
+///Set collapsible property as true to render ribbon in initially collapsed state.
+///<br/>collapsible-boolean	default-false
 ///<br/><br/>
 ///Align content in the ribbon control from right to left by setting the property as true.
 ///<br/>enableRTL-any	default-false
@@ -19010,6 +19473,9 @@ ejRibbon :function (options) {
 ///<br/><br/>
 ///Specifies the controls such as Syncfusion button, split button, dropdown list, toggle button, gallery, custom controls in the subgroup of the ribbon tab .
 ///<br/>groups-Array&lt;any&gt;	default-array
+///<br/><br/>
+///When isMobileOnly is true,its shows in mobile toolbar.isResponsive should be true for using this property.
+///<br/>isMobileOnly-boolean	default-false
 ///<br/><br/>
 ///Specifies the Syncfusion button members, events by using this buttonSettings.
 ///<br/>buttonSettings-any	default-object
@@ -19348,6 +19814,9 @@ ejRotator :function (options) {
 ///<br/><br/>
 ///The template to display the Rotator widget with customized appearance.
 ///<br/>template-string	default-null
+///<br/><br/>
+///The templateId enables to bind multiple customized template items in Rotator.
+///<br/>templateId-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Specifies the source for thumbnail elements.
 ///<br/>thumbnailSourceID-any	default-null
@@ -23918,8 +24387,14 @@ ejToolbar :function (options) {
 ///Specifies dataSource value for the Toolbar control during initialization.
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
+///Disables an Item or set of Items that are enabled in the Toolbar
+///<br/>disabledItemIndices-Array&lt;any&gt;	default-[]
+///<br/><br/>
 ///Specifies the Toolbar control state.
 ///<br/>enabled-boolean	default-true
+///<br/><br/>
+///Enables an Item or set of Items that are disabled in the Toolbar
+///<br/>enabledItemIndices-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Specifies enableRTL property to align the Toolbar control from right to left direction.
 ///<br/>enableRTL-boolean	default-false
@@ -24327,6 +24802,20 @@ sortColumn:function(columnName, columnSortDirection){
 /// <param name="columnSortDirection"	type="string">you can pass a sort direction to sort the column.</param>
 /// </signature>
 },
+reorderColumn:function(fieldName, targetIndex){
+/// <signature>
+/// <summary>
+/// To reorder the column with field name and target index values
+/// </summary>
+/// <param name="fieldName"	type="string">you can pass a name of column to reorder.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To reorder the column with field name and target index values
+/// </summary>
+/// <param name="targetIndex"	type="string">you can pass a target column index to be inserted.</param>
+/// </signature>
+},
 });
 return instance;
 };
@@ -24344,6 +24833,9 @@ ejTreeGrid :function (options) {
 ///Custom Design for HTML TreeGrid control.<br/><br/>
 ///Enables or disables the ability to resize the column width interactively.
 ///<br/>allowColumnResize-boolean	default-false
+///<br/><br/>
+///Enables or disables the option for column reordering
+///<br/>allowColumnReordering-boolean	default-false
 ///<br/><br/>
 ///Enables or disables the ability to drag and drop the row interactively to reorder the rows.
 ///<br/>allowDragAndDrop-boolean	default-false
@@ -24495,11 +24987,20 @@ ejTreeGrid :function (options) {
 ///Specifies whether to render only the visual elements that are visible in the UI. When you enable this property, it will reduce the loading time for loading large number of records.
 ///<br/>enableVirtualization-boolean	default-false
 ///<br/><br/>
+///Specifies the settings for column resize
+///<br/>columnResizeSettings-ColumnResizeSettings	default-
+///<br/><br/>
+///Specifies the mode for column resizing
+///<br/>columnResizeMode-string	default-normal
+///<br/><br/>
 ///Options for filtering and customizing filter actions.
 ///<br/>filterSettings-FilterSettings	default-
 ///<br/><br/>
 ///Specifies the mode on which column filtering should start
 ///<br/>filterBarMode-string	default-immediate
+///<br/><br/>
+///Specifies the type of column filtering.
+///<br/>filterType-string	default-filterbar
 ///<br/><br/>
 ///Specifies the column collection for filtering the TreeGrid content on initial load
 ///<br/>filteredColumns-Array&lt;any&gt;	default-[]
@@ -25510,6 +26011,9 @@ ejTreeView :function (options) {
 ///<br/><br/>
 ///Specifies the text of TreeView node items list.
 ///<br/>text-string	default-
+///<br/><br/>
+///Gets or sets a value that indicates whether to enable full row selection support for TreeView.
+///<br/>fullRowSelect-boolean	default-false
 ///<br/><br/>
 ///Defines the height of the TreeView.
 ///<br/>height-string|number	default-Null
