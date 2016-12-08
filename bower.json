@@ -7,6 +7,14 @@
   "version": "14.4.15",
 
   "description": "Bower package of Syncfusion.JavaScript.",
+	
+  "authors": [
+    "Syncfusion Inc"
+  ],
+  
+  "license": "SEE LICENSE IN README.md",
+	
+  "homepage": "https://github.com/syncfusion/JavaScript-Widgets#readme",
 
   "ignore": [
 
