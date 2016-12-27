@@ -36,10 +36,10 @@
 min-width:48px !important;
 min-height:48px !important;
 }
-.e-ribbon.e-responsive  .e-respmobcontent .e-mobribgroup .e-button .e-icon,
-.e-ribbon.e-responsive  .e-respmobcontent .e-mobribgroup .e-togglebutton .e-icon,
-.e-ribbon.e-responsive  .e-responsivecontent .e-button .e-icon,
-.e-ribbon.e-responsive  .e-responsivecontent .e-togglebutton .e-icon
+.e-ribbon.e-responsive  .e-respmobcontent .e-mobribgroup .e-rbn-button.e-button .e-icon,
+.e-ribbon.e-responsive  .e-respmobcontent .e-mobribgroup .e-rbn-button.e-togglebutton .e-icon,
+.e-ribbon.e-responsive  .e-responsivecontent .e-rbn-button.e-button .e-icon,
+.e-ribbon.e-responsive  .e-responsivecontent .e-rbn-button.e-togglebutton .e-icon
 {
 display:inherit;
 }
@@ -150,12 +150,12 @@ display:table !important;
 	padding:12px;
 }
 
-.e-ribbon.e-responsive  .e-resgroupheader .e-btntxt{
+.e-ribbon.e-responsive  .e-resgroupheader .e-rbn-button .e-btntxt{
 	display:table-cell;
 }
 
 
-.e-ribbon.e-responsive  .e-responsiveqat .e-btn
+.e-ribbon.e-responsive  .e-responsiveqat .e-btn.e-rbn-button
 {
 	width:32px !Important;
 }
@@ -527,6 +527,10 @@ padding-bottom:7px;
 {
 	display:inline-block !important;
 }
+.e-ribbon.e-ribwithout-apptab.e-responsive .e-header.e-resheader
+{
+	display:table !important;
+}
 .e-ribbon.e-responsive .e-header li
 {
 	margin-top:0px !important;
@@ -540,7 +544,7 @@ padding-bottom:7px;
     display:inline-block;
     top:6px;
 }
-.e-ribbon.e-responsive  .e-responsiveqat .e-btn{
+.e-ribbon.e-responsive  .e-responsiveqat .e-rbn-button.e-btn{
     border-top:0px !important;
 }
 

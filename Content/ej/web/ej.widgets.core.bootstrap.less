@@ -170,7 +170,7 @@
         .e-numeric .e-in-wrap, .e-numeric .e-in-wrap .e-input,
         .e-percent .e-in-wrap, .e-percent .e-in-wrap .e-input,
         .e-currency .e-in-wrap, .e-currency .e-in-wrap .e-input,
-        .e-mask .e-in-wrap, .e-mask .e-in-wrap .e-input, .e-textbox,
+        .e-mask .e-in-wrap, .e-mask .e-in-wrap .e-input, .e-textbox, .e-textarea,
         .e-menu,
         .e-tab,
         .e-time-popup.e-popup, .e-timewidget .e-in-wrap, .e-timewidget .e-in-wrap .e-input,
@@ -405,7 +405,7 @@
 
     .e-input, .e-tooltipbox, .e-btn, .e-time-popup, .e-datepicker.e-calendar, .e-menu, .e-uploadbox .e-file-name-txt, .e-uploadbox .e-selectpart,
     .e-uploadbox .e-uploadbtn, .e-waitpopup-pane .e-text, .e-tagcloud, .e-toolbar, .e-progressbar, .e-scale .e-tick .tick-value, .e-datetime-popup .e-dt-button, .e-grid, .e-ejinputtext, .e-pager,
-    .e-fileexplorer, .e-textbox {
+    .e-fileexplorer, .e-textbox, .e-textarea {
         font-family: @font-family;
         font-size: @font-size;
     }
@@ -441,7 +441,7 @@
         line-height: 1.908em\9;
     }
 
-    .e-rtl input.e-input, .e-rtl input[type="text"].e-input, .e-rtl .e-input.e-placeholder, .e-textbox.e-rtl {
+    .e-rtl input.e-input, .e-rtl input[type="text"].e-input, .e-rtl .e-input.e-placeholder, .e-textbox.e-rtl, .e-textarea.e-rtl {
         text-align: right;
         padding-left: 0;
         padding-right: 0.857em;
@@ -465,7 +465,7 @@
         box-sizing: content-box; /* Opera/IE 8+ */
     }
 
-    .e-widget.e-box, .e-widget .e-box, .e-widget button.e-btn, button.e-btn.e-widget, input.e-btn.e-widget, input.e-input, input[type="text"].e-input, .e-input.e-placeholder, .e-widget input.e-input, .e-lv.e-js .e-header.e-box, .e-textbox {
+    .e-widget.e-box, .e-widget .e-box, .e-widget button.e-btn, button.e-btn.e-widget, input.e-btn.e-widget, input.e-input, input[type="text"].e-input, .e-input.e-placeholder, .e-widget input.e-input, .e-lv.e-js .e-header.e-box, .e-textbox, .e-textarea {
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box; /* Firefox, other Gecko */
         box-sizing: border-box; /* Opera/IE 8+ */
@@ -509,19 +509,19 @@
         opacity: 1 !important;
     }
 
-    .e-input::-webkit-input-placeholder {
+    .e-input::-webkit-input-placeholder ,.e-textbox::-webkit-input-placeholder, .e-textarea::-webkit-input-placeholder {
         .watermerk-style();
     }
 
-    .e-input::-moz-placeholder {
+    .e-input::-moz-placeholder,.e-textbox::-moz-placeholder, .e-textarea::-moz-placeholder {
         .watermerk-style();
     }
 
-    .e-input:-moz-placeholder {
+    .e-input:-moz-placeholder,.e-textbox:-moz-placeholder, .e-textarea:-moz-placeholder {
         .watermerk-style();
     }
 
-    .e-input:-ms-input-placeholder {
+    .e-input:-ms-input-placeholder,.e-textbox:-ms-input-placeholder, .e-textarea:-ms-input-placeholder {
         .watermerk-style();
     }
 
@@ -545,6 +545,9 @@
 
     .e-textbox {
         height: @input-height;
+    }
+
+    .e-textbox, .e-textarea {
         width: 100%;
         padding-left: 0.857em;
         line-height: 1.908em\9;
@@ -7068,6 +7071,10 @@ background-image: url('../@{font-path}/icons-white.png');
         line-height: 18px;
     }
 
+    .e-grid .e-rowcell.e-nowrap, 
+    .e-grid .e-wrap .e-rowcell.e-nowrap {
+        white-space: nowrap;
+    }
     .e-grid.e-wrap .e-columnheader .e-headercelldiv {
         margin-bottom: 2px;
         margin-top: 0px;
@@ -8173,7 +8180,7 @@ background-image: url('../@{font-path}/icons-white.png');
         padding-bottom: 9px;
     }
 
-    .e-spreadsheet .e-pager .e-icon {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-icon {
         display: inline-block;
         box-sizing: content-box;
     }
@@ -17505,8 +17512,8 @@ slideRight Animate
         display: block;
     }
 
-    .e-ribbon .e-groupdiv .e-gallerybtn, .e-ribbon .e-groupdiv .e-gallerybtn:hover, .e-ribbon .e-groupdiv .e-galleryselect,
-    .e-ribbon .e-resizediv .e-gallerybtn, .e-ribbon .e-resizediv .e-gallerybtn:hover, .e-ribbon .e-resizediv .e-galleryselect {
+    .e-ribbon .e-groupdiv .e-rbn-button.e-gallerybtn, .e-ribbon .e-groupdiv .e-rbn-button.e-gallerybtn:hover, .e-ribbon .e-groupdiv .e-rbn-button.e-galleryselect,
+    .e-ribbon .e-resizediv .e-rbn-button.e-gallerybtn, .e-ribbon .e-resizediv .e-rbn-button.e-gallerybtn:hover, .e-ribbon .e-resizediv .e-rbn-button.e-galleryselect {
         border: 3px solid;
         overflow: hidden;
     }
@@ -17555,8 +17562,8 @@ slideRight Animate
         border-top: 1px solid;
     }
 
-    .e-ribbon .e-groupdiv .e-galleryextrabtn,
-    .e-ribbon .e-resizediv .e-galleryextrabtn {
+    .e-ribbon .e-groupdiv .e-rbn-button.e-galleryextrabtn,
+    .e-ribbon .e-resizediv .e-rbn-button.e-galleryextrabtn {
         overflow: hidden;
         display: table;
         width: 100%;
@@ -17645,7 +17652,7 @@ slideRight Animate
         left: -2px;
     }
 
-    .e-ribbon.e-rtl .e-button .e-icon {
+    .e-ribbon.e-rtl .e-rbn-button.e-button .e-icon {
         float: none;
     }
 
@@ -17700,7 +17707,7 @@ slideRight Animate
         padding: 6px 8px 0 3px;
     }
 
-    .e-ribbon .e-btn {
+    .e-ribbon .e-rbn-button.e-btn {
         border: none;
     }
 
@@ -17723,7 +17730,7 @@ slideRight Animate
         border: none;
     }
 
-    .e-ribbon .e-ddl .e-select {
+    .e-ribbon .e-rbn-ddl.e-ddl .e-select {
         background: none repeat scroll 0 0;
         border: medium none;
     }
@@ -18109,12 +18116,12 @@ slideRight Animate
         border-style: solid;
     }
 
-    .e-ribbon .e-js.e-colorSplit.e-splitbutton.e-split-btn {
+    .e-ribbon .e-js.e-colorSplit.e-splitbutton.e-split-btn.e-rbn-button{
         border: 1px solid;
         border-right: none;
     }
 
-    .e-ribbon .e-split-btn.e-drp-btn.e-rht-btn {
+    .e-ribbon .e-split-btn.e-drp-btn.e-rht-btn.e-rbn-button {
         border: 1px solid;
     }
 
@@ -18169,11 +18176,11 @@ slideRight Animate
         padding-top: 3px;
     }
 
-    .e-ribbon .e-content .e-split-btn, .e-ribbon .e-header .e-apptab .e-menu {
+    .e-ribbon .e-content .e-rbn-button.e-split-btn, .e-ribbon .e-header .e-apptab .e-menu {
         white-space: normal;
     }
 
-    .e-ribbon .e-content .e-split-btn,
+    .e-ribbon .e-content .e-rbn-button.e-split-btn,
     .e-ribbon .e-header .e-apptab .e-menu {
         white-space: normal;
     }
@@ -20064,11 +20071,11 @@ slideRight Animate
         font-weight: normal;
     }
 
-    .e-spreadsheet .e-spreadsheetcolumnheader {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetcolumnheader {
         border-bottom: 1px solid;
     }
 
-    .e-spreadsheet .e-headercell {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-headercell {
         height: 20px;
         background: none repeat scroll 0 0;
         border-width: 0 1px 1px 0;
@@ -20080,12 +20087,12 @@ slideRight Animate
         text-overflow: ellipsis;
     }
 
-    .e-spreadsheet .e-headercontent {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-headercontent {
         border-right: 1px solid;
         border-left: 1px solid;
     }
 
-	.e-spreadsheet .e-headercontent.e-rmvrghtbdr,
+	.e-spreadsheet .e-spreadsheetmainpanel .e-headercontent.e-rmvrghtbdr,
 	.e-spreadsheet .e-spreadsheetcontentcontainer .e-content.e-rmvrghtbdr td:last-child {
 	  border-right-color: transparent;
 	}
@@ -20120,7 +20127,7 @@ slideRight Animate
         border-spacing: 0;
     }
 
-    .e-spreadsheet .e-rowcell {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-rowcell {
         border-width: 0 1px 1px 0;
         border-style: solid;
         line-height: normal;
@@ -20157,7 +20164,7 @@ slideRight Animate
         margin: 0 2px 0 2px;
     }
 
-    .e-spreadsheet .e-rowcell > button {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-rowcell > button {
         font-size: 9px;
     }
 
@@ -20200,10 +20207,10 @@ slideRight Animate
         box-sizing: content-box;
     }
 
-    .e-spreadsheet .e-headercontent,
-    .e-spreadsheet .e-rowheadercontent,
-    .e-spreadsheet .e-headercell,
-    .e-spreadsheet .e-spreadsheetcontentcontainer {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-headercontent,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-rowheadercontent,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-headercell,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetcontentcontainer {
         overflow: hidden;
         position: relative;
     }
@@ -20260,53 +20267,53 @@ slideRight Animate
     }
     /*---------------------------- Spreadhsheet Scroller End----------------------------------------*/
     /*-------------------- Borders ------------------------ */
-    .e-spreadsheet td.e-bborderright,
-    .e-spreadsheet td.e-rborderright,
-    .e-spreadsheet td.e-vborderright,
-    .e-spreadsheet td.e-gborderright,
-    .e-spreadsheet td.e-pborderright,
-    .e-spreadsheet td.e-oborderright,
-    .e-spreadsheet td.e-bctrlborderright,
-    .e-spreadsheet td.e-rctrlborderright,
-    .e-spreadsheet td.e-vctrlborderright,
-    .e-spreadsheet td.e-gctrlborderright,
-    .e-spreadsheet td.e-pctrlborderright,
-    .e-spreadsheet td.e-octrlborderright {
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-bborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-rborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-vborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-gborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-pborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-oborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-bctrlborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-rctrlborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-vctrlborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-gctrlborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-pctrlborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-octrlborderright {
         border-right: 1px dashed;
     }
 
-    .e-spreadsheet td.e-bborderbottom,
-    .e-spreadsheet td.e-rborderbottom,
-    .e-spreadsheet td.e-vborderbottom,
-    .e-spreadsheet td.e-gborderbottom,
-    .e-spreadsheet td.e-pborderbottom,
-    .e-spreadsheet td.e-oborderbottom,
-    .e-spreadsheet td.e-bctrlborderbottom,
-    .e-spreadsheet td.e-rctrlborderbottom,
-    .e-spreadsheet td.e-vctrlborderbottom,
-    .e-spreadsheet td.e-gctrlborderbottom,
-    .e-spreadsheet td.e-pctrlborderbottom,
-    .e-spreadsheet td.e-octrlborderbottom {
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-bborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-rborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-vborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-gborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-pborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-oborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-bctrlborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-rctrlborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-vctrlborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-gctrlborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-pctrlborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-octrlborderbottom {
         border-bottom: 1px dashed;
     }
     /*--------------------- Chart Borders -----------------------*/
-    .e-spreadsheet td.e-bcbright,
-    .e-spreadsheet td.e-vcbright,
-    .e-spreadsheet td.e-rcbright {
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-bcbright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-vcbright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-rcbright {
         border-right: 1px solid;
     }
 
-    .e-spreadsheet td.e-bcbbottom,
-    .e-spreadsheet td.e-vcbbottom,
-    .e-spreadsheet td.e-rcbbottom {
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-bcbbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-vcbbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-rcbbottom {
         border-bottom: 1px solid;
     }
     /*--------------------- Border -------------------------- */
-    .e-spreadsheet .e-thinright {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-thinright {
         border-right: 1px solid;
     }
 
-    .e-spreadsheet .e-thinbottom {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-thinbottom {
         border-bottom: 1px solid;
     }
     /*--------------------- Selection -------------------------- */
@@ -20355,15 +20362,15 @@ slideRight Animate
         cursor: crosshair;
     }
     /*--------------------- Cut and Copy ------------------------ */
-    .e-spreadsheet td.e-cutright {
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-cutright {
         border-right: 1px dashed;
     }
 
-    .e-spreadsheet td.e-cutbottom {
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-cutbottom {
         border-bottom: 1px dashed;
     }
     /*------------------------- Pager------------------------- */
-    .e-spreadsheet .e-pager .e-mediaforward {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-mediaforward {
         border-right: solid 1px;
         border-radius: 0;
     }
@@ -20372,46 +20379,46 @@ slideRight Animate
         position: absolute;
     }
 
-    .e-spreadsheet .e-pager .e-new {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-new {
         height: 100%;
         padding: 0 4px 2px 8px;
         vertical-align: middle;
     }
 
-    .e-spreadsheet .e-pager {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager {
         padding-bottom: 0px;
         padding-top: 0px;
         outline: 0px;
     }
 
-    .e-spreadsheet .e-pager,
-    .e-spreadsheet .e-pager .e-pagercontainer {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-pagercontainer {
         border-style: none;
     }
 
-    .e-spreadsheet .e-pager .e-currentitem {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-currentitem {
         border-bottom: solid;
     }
 
-    .e-spreadsheet .e-pager .e-numericitem {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-numericitem {
         padding-right: 9px;
         padding-left: 9px;
         padding-bottom: 4px;
         padding-top: 3px;
     }
 
-    .e-spreadsheet .e-pager .e-firstpage,
-    .e-spreadsheet .e-pager .e-prevpage,
-    .e-spreadsheet .e-pager .e-firstpagedisabled,
-    .e-spreadsheet .e-pager .e-prevpagedisabled,
-    .e-spreadsheet .e-pager .e-nextpage,
-    .e-spreadsheet .e-pager .e-lastpage,
-    .e-spreadsheet .e-pager .e-nextpagedisabled,
-    .e-spreadsheet .e-pager .e-lastpagedisabled {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-firstpage,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-prevpage,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-firstpagedisabled,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-prevpagedisabled,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-nextpage,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-lastpage,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-nextpagedisabled,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-lastpagedisabled {
         padding: 7px 3px 0px 7px;
     }
 
-    .e-spreadsheet .e-pager .e-pagercontainer {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-pager .e-pagercontainer {
         overflow: visible;
         height: 24px;
     }
@@ -20575,11 +20582,11 @@ slideRight Animate
         padding: 0px 0px 0px 2px;
     }
 
-    .e-spreadsheet .e-editedcell {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-editedcell {
         padding: 0px 1px 0px 0px;
     }
 
-    .e-spreadsheet .e-editedcell.e-msie-edit {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-editedcell.e-msie-edit {
         padding: 0px;
     }
     /*------------------------- Validation---------------------- */
@@ -22701,11 +22708,11 @@ slideRight Animate
         box-sizing: content-box;
     }
 
-    .e-spreadsheet .e-headercell.e-ss-colresize {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-headercell.e-ss-colresize {
         cursor: col-resize;
     }
 
-    .e-spreadsheet .e-rowheader.e-ss-rowresize {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-rowheader.e-ss-rowresize {
         cursor: row-resize;
     }
 
@@ -23475,13 +23482,13 @@ slideRight Animate
         border: medium none;
     }
 
-    .e-spreadsheet .e-colselected,
-    .e-spreadsheet .e-colhighlight {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-colselected,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-colhighlight {
         font-weight: bold;
     }
 
-    .e-spreadsheet .e-rowselected,
-    .e-spreadsheet .e-rowhighlight {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-rowselected,
+    .e-spreadsheet .e-spreadsheetmainpanel .e-rowhighlight {
         font-weight: bold;
     }
 
@@ -24019,7 +24026,7 @@ slideRight Animate
         border-width: 1px;
     }
     /*------VS2010-MVC3-site.css dialog-table-css-override------*/
-    .e-spreadsheet .e-ribbon table td, .e-ss-dialog table td {
+    .e-spreadsheet .e-ribbon .e-content-item table td, .e-ss-dialog table td {
         border: none;
         padding: 0px;
     }
