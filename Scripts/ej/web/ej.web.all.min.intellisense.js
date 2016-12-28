@@ -344,52 +344,52 @@ ejAutocomplete :function (options) {
 /// <summary><br/>
 ///The AutoComplete control is a textbox control that provides a list of suggestions based on the user query.When the users enters the text in the text box, the control performs a search operation and provides a list of results in the suggestion pop up. There are several filter types available to perform the search.<br/><br/>
 ///Customize "Add New" text (label) to be added in the autocomplete popup list for the entered text when there are no suggestions for it.
-///<br/>addNewText-Boolean	default-Add New
+///<br/>addNewText-boolean	default-Add New
 ///<br/><br/>
 ///Allows new values to be added to the autocomplete input other than the values in the suggestion list. Normally, when there are no suggestions it will display â€œNo suggestionsâ€ label in the popup.
-///<br/>allowAddNew-Boolean	default-false
+///<br/>allowAddNew-boolean	default-false
 ///<br/><br/>
 ///Enables or disables the sorting of suggestion list item. The default sort order is ascending order. You customize sort order.
-///<br/>allowSorting-Boolean	default-true
+///<br/>allowSorting-boolean	default-true
 ///<br/><br/>
 ///Enables or disables selecting the animation style for the popup list. Animation types can be selected through either of the following options,
 ///<br/>animateType-ej.Autocomplete.Animation|string	default-slide
 ///<br/><br/>
 ///To focus the items in the suggestion list when the popup is shown. By default first item will be focused.
-///<br/>autoFocus-Boolean	default-false
+///<br/>autoFocus-boolean	default-false
 ///<br/><br/>
 ///Enables or disables the case sensitive search.
-///<br/>caseSensitiveSearch-Boolean	default-false
+///<br/>caseSensitiveSearch-boolean	default-false
 ///<br/><br/>
 ///The root class for the Autocomplete textbox widget which helps in customizing its theme.
-///<br/>cssClass-String	default-&#226;€&#226;€
+///<br/>cssClass-string	default-&#226;€&#226;€
 ///<br/><br/>
 ///The data source contains the list of data for the suggestions list. It can be a string array or JSON array.
 ///<br/>dataSource-any|Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///The time delay (in milliseconds) after which the suggestion popup will be shown.
-///<br/>delaySuggestionTimeout-Number	default-200
+///<br/>delaySuggestionTimeout-number	default-200
 ///<br/><br/>
 ///The special character which acts as a separator for the given words for multi-mode search i.e. the text after the delimiter are considered as a separate word or query for search operation.
-///<br/>delimiterChar-String	default-&#226;€™,&#226;€™
+///<br/>delimiterChar-string	default-&#226;€™,&#226;€™
 ///<br/><br/>
 ///The text to be displayed in the popup when there are no suggestions available for the entered text.
-///<br/>emptyResultText-String	default-&#226;€œNo suggestions&#226;€
+///<br/>emptyResultText-string	default-&#226;€œNo suggestions&#226;€
 ///<br/><br/>
 ///Fills the autocomplete textbox with the first matched item from the suggestion list automatically based on the entered text when enabled.
-///<br/>enableAutoFill-Boolean	default-false
+///<br/>enableAutoFill-boolean	default-false
 ///<br/><br/>
 ///Enables or disables the Autocomplete textbox widget.
-///<br/>enabled-Boolean	default-true
+///<br/>enabled-boolean	default-true
 ///<br/><br/>
 ///Enables or disables displaying the duplicate names present in the search result.
-///<br/>enableDistinct-Boolean	default-false
+///<br/>enableDistinct-boolean	default-false
 ///<br/><br/>
 ///Allows the current model values to be saved in local storage or browser cookies for state maintenance when it is set to true. While refreshing the page, it retains the model value from browser cookies or local storage.
-///<br/>enablePersistence-Boolean	default-false
+///<br/>enablePersistence-boolean	default-false
 ///<br/><br/>
 ///Displays the Autocomplete widgetâ€™s content from right to left when enabled.
-///<br/>enableRTL-Boolean	default-false
+///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
 ///Mapping fields for the suggestion items of the Autocomplete textbox widget.
 ///<br/>fields-Fields	default-null
@@ -407,22 +407,22 @@ ejAutocomplete :function (options) {
 ///<br/>text-string	default-
 ///<br/><br/>
 ///Specifies the search filter type. There are several types of search filter available such as â€˜startswithâ€™, â€˜containsâ€™, â€˜endswithâ€™, â€˜lessthanâ€™, â€˜lessthanorequalâ€™, â€˜greaterthanâ€™, â€˜greaterthanorequalâ€™, â€˜equalâ€™, â€˜notequalâ€™.
-///<br/>filterType-String	default-ej.filterType.StartsWith
+///<br/>filterType-string	default-ej.filterType.StartsWith
 ///<br/><br/>
 ///The height of the Autocomplete textbox.
-///<br/>height-String	default-null
+///<br/>height-string	default-null
 ///<br/><br/>
 ///The search text can be highlighted in the AutoComplete suggestion list when enabled.
-///<br/>highlightSearch-Boolean	default-false
+///<br/>highlightSearch-boolean	default-false
 ///<br/><br/>
 ///Number of items to be displayed in the suggestion list.
-///<br/>itemsCount-Number	default-0
+///<br/>itemsCount-number	default-0
 ///<br/><br/>
 ///Set the localization culture for Autocomplete Widget.
-///<br/>locale-String	default-
+///<br/>locale-string	default-
 ///<br/><br/>
 ///Minimum number of character to be entered in the Autocomplete textbox to show the suggestion list.
-///<br/>minCharacter-Number	default-1
+///<br/>minCharacter-number	default-1
 ///<br/><br/>
 ///An Autocomplete column collection can be defined and customized through the multiColumnSettings property.Column's header, field, and stringFormat can be define via multiColumnSettings properties.
 ///<br/>multiColumnSettings-MultiColumnSettings	default-
@@ -446,7 +446,7 @@ ejAutocomplete :function (options) {
 ///<br/>headerText-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to render the multicolumn with custom theme.
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Specifies the search data type. There are four types of data types available such as string, â€˜numberâ€™, â€˜booleanâ€™ and â€˜dateâ€™.
 ///<br/>type-ej.Type|string	default-ej.Type.String
@@ -464,40 +464,40 @@ ejAutocomplete :function (options) {
 ///<br/>multiSelectMode-ej.Autocomplete.MultiSelectMode|string	default-ej.MultiSelectMode.None
 ///<br/><br/>
 ///The height of the suggestion list.
-///<br/>popupHeight-String	default-&#226;€œ152px&#226;€
+///<br/>popupHeight-string	default-&#226;€œ152px&#226;€
 ///<br/><br/>
 ///The width of the suggestion list.
-///<br/>popupWidth-String	default-&#226;€œauto&#226;€
+///<br/>popupWidth-string	default-&#226;€œauto&#226;€
 ///<br/><br/>
 ///The query to retrieve the data from the data source.
 ///<br/>query-ej.Query	default-null
 ///<br/><br/>
 ///Indicates that the autocomplete textbox values can only be readable.
-///<br/>readOnly-Boolean	default-false
+///<br/>readOnly-boolean	default-false
 ///<br/><br/>
 ///Sets the value for the Autocomplete textbox based on the given input key value.
-///<br/>selectValueByKey-Number	default-
+///<br/>selectValueByKey-number	default-
 ///<br/><br/>
 ///Enables or disables showing the message when there are no suggestions for the entered text.
-///<br/>showEmptyResultText-Boolean	default-true
+///<br/>showEmptyResultText-boolean	default-true
 ///<br/><br/>
 ///Enables or disables the loading icon to intimate the searching operation. The loading icon is visible when there is a time delay to perform the search.
-///<br/>showLoadingIcon-Boolean	default-true
+///<br/>showLoadingIcon-boolean	default-true
 ///<br/><br/>
 ///Enables the showPopup button in autocomplete textbox. When the showPopup button is clicked, it displays all the available data from the data source.
-///<br/>showPopupButton-Boolean	default-false
+///<br/>showPopupButton-boolean	default-false
 ///<br/><br/>
 ///Enables or disables rounded corner.
-///<br/>showRoundedCorner-Boolean	default-false
+///<br/>showRoundedCorner-boolean	default-false
 ///<br/><br/>
 ///Enables or disables reset icon to clear the textbox values.
-///<br/>showResetIcon-Boolean	default-false
+///<br/>showResetIcon-boolean	default-false
 ///<br/><br/>
 ///Sort order specifies whether the suggestion list values has to be displayed in ascending or descending order.
 ///<br/>sortOrder-ej.Autocomplete.SortOrder|string	default-ej.SortOrder.Ascending
 ///<br/><br/>
 ///The template to display the suggestion list items with customized appearance.
-///<br/>template-String	default-null
+///<br/>template-string	default-null
 ///<br/><br/>
 ///The jQuery validation error message to be displayed on form validation.
 ///<br/>validationMessage-any	default-null
@@ -506,16 +506,16 @@ ejAutocomplete :function (options) {
 ///<br/>validationRules-any	default-null
 ///<br/><br/>
 ///The value to be displayed in the autocomplete textbox.
-///<br/>value-String	default-null
+///<br/>value-string	default-null
 ///<br/><br/>
 ///Enables or disables the visibility of the autocomplete textbox.
-///<br/>visible-Boolean	default-true
+///<br/>visible-boolean	default-true
 ///<br/><br/>
 ///The text to be displayed when the value of the autocomplete textbox is empty.
-///<br/>watermarkText-String	default-null
+///<br/>watermarkText-string	default-null
 ///<br/><br/>
 ///The width of the Autocomplete textbox.
-///<br/>width-String	default-null
+///<br/>width-string	default-null
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -947,6 +947,9 @@ ejBulletGraph :function (options) {
 ///<br/><br/>
 ///Feature measure render till the specified value.
 ///<br/>value-number	default-null
+///<br/><br/>
+///Contains property to add dataSource and dataSource fields.
+///<br/>fields-any	default-null
 ///<br/><br/>
 ///Contains property to customize the fields.
 ///<br/>fields-any	default-
@@ -1779,6 +1782,9 @@ ejChart :function (options) {
 ///<br/><br/>
 ///Background shape of the data label.
 ///<br/>shape-ej.datavisualization.Chart.Shape|string	default-none. See Shape
+///<br/><br/>
+///Custom template to format the data label content. Use â€œpoint.xâ€ and â€œpoint.yâ€ as a placeholder text to display the corresponding data pointâ€™s x and y value.
+///<br/>template-string	default-
 ///<br/><br/>
 ///Name of a field in data source, where datalabel text is displayed.
 ///<br/>textMappingName-string	default-
@@ -4516,6 +4522,9 @@ ejChart :function (options) {
 ///Specifies whether to allow zooming the chart vertically or horizontally or in both ways.
 ///<br/>type-string	default-&#39;x,y&#39;
 ///<br/><br/>
+///Toggles the visibility of the scrollbar, which will be displayed while zooming.
+///<br/>enableScrollbar-boolean	default-false
+///<br/><br/>
 ///To display user specified buttons in zooming toolbar.
 ///<br/>toolbarItems-Array&lt;any&gt;	default-[zoomIn, zoomOut, zoom, pan, reset]
 ///</summary>
@@ -5435,6 +5444,9 @@ ejCircularGauge :function (options) {
 ///<br/><br/>
 ///Specify opacity value for pointer of circular gauge
 ///<br/>opacity-number	default-1
+///<br/><br/>
+///Specify radius value for pointer of circular gauge
+///<br/>radius-number	default-null
 ///<br/><br/>
 ///Specify pointer Placement value of circular gauge. See PointerPlacement
 ///<br/>placement-ej.datavisualization.CircularGauge.Placement|string	default-Near
@@ -8462,130 +8474,130 @@ ejDialog :function (options) {
 /// <summary><br/>
 ///The Dialog control displays a Dialog window within a web page. The Dialog enables a message to be displayed, such as supplementary content like images and text, and an interactive content like forms.<br/><br/>
 ///Adds action buttons like close, minimize, pin, maximize in the dialog header.
-///<br/>actionButtons-String[]	default-
+///<br/>actionButtons-string[]	default-
 ///<br/><br/>
 ///Specifies the ajaxSettings option to load the content to the Dialog control.
 ///<br/>ajaxSettings-AjaxSettings	default-null
 ///<br/><br/>
 ///It specifies, whether to enable or disable asynchronous request.
-///<br/>async-Boolean	default-
+///<br/>async-boolean	default-
 ///<br/><br/>
 ///It specifies the page will be cached in the web browser.
-///<br/>cache-Boolean	default-
+///<br/>cache-boolean	default-
 ///<br/><br/>
 ///It specifies the type of data is send in the query string.
-///<br/>contentType-String	default-
+///<br/>contentType-string	default-
 ///<br/><br/>
 ///It specifies the data as an object, will be passed in the query string.
 ///<br/>data-any	default-
 ///<br/><br/>
 ///It specifies the type of data that you're expecting back from the response.
-///<br/>dataType-String	default-
+///<br/>dataType-string	default-
 ///<br/><br/>
 ///It specifies the HTTP request type.
-///<br/>type-String	default-
+///<br/>type-string	default-
 ///<br/><br/>
 ///Enables or disables draggable.
-///<br/>allowDraggable-Boolean	default-
+///<br/>allowDraggable-boolean	default-
 ///<br/><br/>
 ///Enables or disables keyboard interaction.
-///<br/>allowKeyboardNavigation-Boolean	default-
+///<br/>allowKeyboardNavigation-boolean	default-
 ///<br/><br/>
 ///Customizes the Dialog widget animations. The Dialog widget can be animated while opening and closing the dialog. In order to customize animation effects, you need to set â€œenableAnimationâ€ as true. It contains the following sub properties.
 ///<br/>animation-any	default-
 ///<br/><br/>
 ///Closes the dialog widget on pressing the ESC key when it is set to true.
-///<br/>closeOnEscape-Boolean	default-
+///<br/>closeOnEscape-boolean	default-
 ///<br/><br/>
 ///The selector for the container element. If the property is set, then dialog will append to the selected element and it is restricted to move only within the specified container element.
-///<br/>containment-String	default-
+///<br/>containment-string	default-
 ///<br/><br/>
 ///The content type to load the dialog content at run time. The possible values are null, AJAX, iframe and image. When it is null (default value), the content inside dialog element will be displayed as content and when it is not null, the content will be loaded from the URL specified in the contentUrl property.
-///<br/>contentType-String	default-
+///<br/>contentType-string	default-
 ///<br/><br/>
 ///The URL to load the dialog content (such as AJAX, image, and iframe). In order to load content from URL, you need to set contentType as â€˜ajaxâ€™ or â€˜iframeâ€™ or â€˜imageâ€™.
-///<br/>contentUrl-String	default-
+///<br/>contentUrl-string	default-
 ///<br/><br/>
 ///The root class for the Dialog widget to customize the existing theme.
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Enable or disables animation when the dialog is opened or closed.
-///<br/>enableAnimation-Boolean	default-
+///<br/>enableAnimation-boolean	default-
 ///<br/><br/>
 ///Enables or disables the Dialog widget.
-///<br/>enabled-Boolean	default-
+///<br/>enabled-boolean	default-
 ///<br/><br/>
 ///Enable or disables modal dialog. The modal dialog acts like a child window that is displayed on top of the main window/screen and disables the main window interaction until it is closed.
-///<br/>enableModal-Boolean	default-
+///<br/>enableModal-boolean	default-
 ///<br/><br/>
 ///Allows the current model values to be saved in local storage or browser cookies for state maintenance when it is set to true.
-///<br/>enablePersistence-Boolean	default-
+///<br/>enablePersistence-boolean	default-
 ///<br/><br/>
 ///Allows the dialog to be resized. The dialog cannot be resized less than the minimum height, width values and greater than the maximum height and width.
-///<br/>enableResize-Boolean	default-
+///<br/>enableResize-boolean	default-
 ///<br/><br/>
 ///Displays dialog content from right to left when set to true.
-///<br/>enableRTL-Boolean	default-
+///<br/>enableRTL-boolean	default-
 ///<br/><br/>
 ///The CSS class name to display the favicon in the dialog header. In order to display favicon, you need to setÂ showHeaderÂ as true since the favicon will be displayed in the dialog header.
-///<br/>faviconCSS-String	default-
+///<br/>faviconCSS-string	default-
 ///<br/><br/>
 ///Sets the height for the dialog widget. It accepts both string and integer values. For example, it can accepts values like â€œautoâ€, â€œ100%â€, â€œ100pxâ€ as string type and â€œ100â€, â€œ500â€ as integer type.
-///<br/>height-String|Number	default-
+///<br/>height-string|number	default-
 ///<br/><br/>
 ///Specifies the HTML Attributes of the Dialog.
 ///<br/>htmlAttributes-any	default-{}
 ///<br/><br/>
 ///Enable or disables responsive behavior.
-///<br/>isResponsive-Boolean	default-
+///<br/>isResponsive-boolean	default-
 ///<br/><br/>
 ///Default Value:{:.param}â€œen-USâ€
-///<br/>locale-Number	default-
+///<br/>locale-number	default-
 ///<br/><br/>
 ///Sets the maximum height for the dialog widget.
-///<br/>maxHeight-Number	default-
+///<br/>maxHeight-number	default-
 ///<br/><br/>
 ///Sets the maximum width for the dialog widget.
-///<br/>maxWidth-Number	default-
+///<br/>maxWidth-number	default-
 ///<br/><br/>
 ///Sets the minimum height for the dialog widget.
-///<br/>minHeight-Number	default-
+///<br/>minHeight-number	default-
 ///<br/><br/>
 ///Sets the minimum width for the dialog widget.
-///<br/>minWidth-Number	default-
+///<br/>minWidth-number	default-
 ///<br/><br/>
 ///Displays the Dialog widget at the given X and Y position.
 ///<br/>position-any	default-
 ///<br/><br/>
 ///Shows or hides the dialog header.
-///<br/>showHeader-Boolean	default-
+///<br/>showHeader-boolean	default-
 ///<br/><br/>
 ///The Dialog widget can be opened by default i.e. on initialization, when it is set to true.
-///<br/>showOnInit-Boolean	default-
+///<br/>showOnInit-boolean	default-
 ///<br/><br/>
 ///Enables or disables the rounder corner.
-///<br/>showRoundedCorner-Boolean	default-
+///<br/>showRoundedCorner-boolean	default-
 ///<br/><br/>
 ///The selector for the container element. If this property is set, the dialog will be displayed (positioned) based on its container.
-///<br/>target-String	default-
+///<br/>target-string	default-
 ///<br/><br/>
 ///The title text to be displayed in the dialog header. In order to set title, you need to set showHeader as true since the title will be displayed in the dialog header.
-///<br/>title-String	default-
+///<br/>title-string	default-
 ///<br/><br/>
 ///Add or configure the tooltip text for actionButtons in the dialog header.
 ///<br/>tooltip-any	default-
 ///<br/><br/>
 ///Sets the height for the dialog widget. It accepts both string and integer values. For example, it can accepts values like â€œautoâ€, â€œ100%â€, â€œ100pxâ€ as string type and â€œ100â€, â€œ500â€ as integer type.
-///<br/>width-String|Number	default-
+///<br/>width-string|number	default-
 ///<br/><br/>
 ///Sets the z-index value for the Dialog widget.
-///<br/>zIndex-Number	default-
+///<br/>zIndex-number	default-
 ///<br/><br/>
 ///Sets the Footer for the Dialog widget.
-///<br/>showFooter-Boolean	default-
+///<br/>showFooter-boolean	default-
 ///<br/><br/>
 ///Sets the FooterTemplate for the Dialog widget.
-///<br/>footerTemplateId-String	default-
+///<br/>footerTemplateId-string	default-
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -11836,7 +11848,7 @@ ejHeatMap :function (options) {
 ///<br/>height-any	default-null
 ///<br/><br/>
 ///Specifies the name of the heat map.
-///<br/>id-Number	default-null
+///<br/>id-number	default-null
 ///<br/><br/>
 ///Specifies the source data of the heat map.
 ///<br/>itemsSource-any	default-[]
@@ -11848,13 +11860,13 @@ ejHeatMap :function (options) {
 ///<br/>showContent-ej.datavisualization.HeatMap.CellVisibility|string	default-ej.HeatMap.CellVisibility.Visible
 ///<br/><br/>
 ///Specifies whether the cell color can be visible or not.
-///<br/>showColor-Boolean	default-true
+///<br/>showColor-boolean	default-true
 ///<br/><br/>
 ///Specifies can enable responsive mode or not for heat map.
-///<br/>isResponsive-Boolean	default-false
+///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
 ///Specifies whether the virtualization can be enable or not.
-///<br/>enableVirtualization-Boolean	default-false
+///<br/>enableVirtualization-boolean	default-false
 ///<br/><br/>
 ///Specifies the default column properties for all the column style not specified in column properties.
 ///<br/>defaultColumnStyle-DefaultColumnStyle	default-[]
@@ -11863,10 +11875,10 @@ ejHeatMap :function (options) {
 ///<br/>textAlign-any	default-ej.HeatMap.TextAlign.Center
 ///<br/><br/>
 ///Specifies the template id of the heat map column header.
-///<br/>headerTemplateID-String	default-
+///<br/>headerTemplateID-string	default-
 ///<br/><br/>
 ///Specifies the template id of all individual cell data of the heat map.
-///<br/>templateID-String	default-
+///<br/>templateID-string	default-
 ///<br/><br/>
 ///Specifies the no of legends can sync with heat map.
 ///<br/>legendCollection-Array&lt;any&gt;	default-[]
@@ -11878,7 +11890,7 @@ ejHeatMap :function (options) {
 ///<br/>columnStyle-any	default-null
 ///<br/><br/>
 ///Specifies the width of the heat map column.
-///<br/>width-Number	default-0
+///<br/>width-number	default-0
 ///<br/><br/>
 ///Specifies the text align mode of the heat map column.
 ///<br/>textAlign-string	default-ej.HeatMap.TextAlign.Center
@@ -11935,34 +11947,34 @@ ejHeatMap :function (options) {
 ///<br/>colorMappingCollection-Array&lt;ColorMappingCollection&gt;	default-[]
 ///<br/><br/>
 ///Specifies the color of the heat map column data.
-///<br/>color-String	default-white
+///<br/>color-string	default-white
 ///<br/><br/>
 ///Specifies the color values of the heat map column data.
-///<br/>value-Number	default-0
+///<br/>value-number	default-0
 ///<br/><br/>
 ///Specifies the label properties of the heat map color.
 ///<br/>label-any	default-null
 ///<br/><br/>
 ///Enables/disables the bold style of the heat map label.
-///<br/>bold-Boolean	default-false
+///<br/>bold-boolean	default-false
 ///<br/><br/>
 ///Enables/disables the italic style of the heat map label.
-///<br/>italic-Boolean	default-false
+///<br/>italic-boolean	default-false
 ///<br/><br/>
 ///specifies the text value of the heat map label.
-///<br/>text-String	default-
+///<br/>text-string	default-
 ///<br/><br/>
 ///Specifies the text style of the heat map label.
 ///<br/>textDecoration-ej.datavisualization.HeatMap.TextDecoration |string	default-ej.HeatMap.TextDecoration.None
 ///<br/><br/>
 ///Specifies the font size of the heat map label.
-///<br/>fontSize-Number	default-10
+///<br/>fontSize-number	default-10
 ///<br/><br/>
 ///Specifies the font family of the heat map label.
-///<br/>fontFamily-String	default-Arial
+///<br/>fontFamily-string	default-Arial
 ///<br/><br/>
 ///Specifies the font color of the heat map label.
-///<br/>fontColor-String	default-black
+///<br/>fontColor-string	default-black
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -12005,43 +12017,43 @@ ejHeatMapLegend :function (options) {
 ///<br/>height-any	default-null
 ///<br/><br/>
 ///Specifies can enable responsive mode or not for heatmap legend.
-///<br/>isResponsive-Boolean	default-false
+///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
 ///Specifies whether the cell label can be shown or not.
-///<br/>showLabel-Boolean	default-false
+///<br/>showLabel-boolean	default-false
 ///<br/><br/>
 ///Specifies the color values of the column data.
 ///<br/>colorMappingCollection-Array&lt;ColorMappingCollection&gt;	default-[]
 ///<br/><br/>
 ///Specifies the color of the heatmap legend data.
-///<br/>color-String	default-white
+///<br/>color-string	default-white
 ///<br/><br/>
 ///Specifies the color values of the heatmap legend column data.
-///<br/>value-Number	default-0
+///<br/>value-number	default-0
 ///<br/><br/>
 ///Specifies the label properties of the heatmap legend color.
 ///<br/>label-any	default-null
 ///<br/><br/>
 ///Enables/disables the bold style of the heatmap legend label.
-///<br/>bold-Boolean	default-false
+///<br/>bold-boolean	default-false
 ///<br/><br/>
 ///Enables/disables the italic style of the heatmap legend label.
-///<br/>italic-Boolean	default-false
+///<br/>italic-boolean	default-false
 ///<br/><br/>
 ///specifies the text value of the heatmap legend label.
-///<br/>text-String	default-
+///<br/>text-string	default-
 ///<br/><br/>
 ///Specifies the text style of the heatmap legend label.
 ///<br/>textDecoration-ej.datavisualization.HeatMap.TextDecoration|string	default-ej.HeatMap.TextDecoration.None
 ///<br/><br/>
 ///Specifies the font size of the heatmap legend label.
-///<br/>fontSize-Number	default-10
+///<br/>fontSize-number	default-10
 ///<br/><br/>
 ///Specifies the font family of the heatmap legend label.
-///<br/>fontFamily-String	default-Arial
+///<br/>fontFamily-string	default-Arial
 ///<br/><br/>
 ///Specifies the font color of the heatmap legend label.
-///<br/>fontColor-String	default-black
+///<br/>fontColor-string	default-black
 ///<br/><br/>
 ///Specifies the orientation of the heatmap legend
 ///<br/>orientation-ej.datavisualization.HeatMap.LegendOrientation|string	default-ej.HeatMap.LegendOrientation.Horizontal
@@ -12225,13 +12237,13 @@ ejKanban :function (options) {
 ///<br/>allowDragAndDrop-boolean	default-false
 ///<br/><br/>
 ///Customize the settings for unassigned category of swim lane.
-///<br/>unassignedGroup-boolean	default-Object
+///<br/>unassignedGroup-any	default-Object
 ///<br/><br/>
 ///To enable or disable unassigned category change with swim lane key values.
 ///<br/>enable-boolean	default-true
 ///<br/><br/>
 ///To set the user defined values which are need to categorized as unassigned category swim lane groups.
-///<br/>keys-boolean	default-[null,undefined,]
+///<br/>keys-Array&lt;any&gt;	default-[null,undefined,]
 ///<br/><br/>
 ///To enable or disable the column expand /collapse.
 ///<br/>allowToggleColumn-boolean	default-false
@@ -12264,13 +12276,13 @@ ejKanban :function (options) {
 ///<br/>enable-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates the list of items needs to be disable from default context menu items.
-///<br/>disableDefaultItems-Array&lt;any&gt;	default-array
+///<br/>disableDefaultItems-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Its used to add specific default context menu items.
-///<br/>menuItems-Array&lt;any&gt;	default-array
+///<br/>menuItems-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add custom contextMenu items.
-///<br/>customMenuItems-Array&lt;any&gt;	default-array
+///<br/>customMenuItems-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Its sets target element to custom context menu item.
 ///<br/>target-ej.Kanban.Target|string	default-ej.Kanban.Target.All
@@ -12279,10 +12291,10 @@ ejKanban :function (options) {
 ///<br/>text-string	default-null
 ///<br/><br/>
 ///Gets the template to render custom context menu item.
-///<br/>template-String	default-null
+///<br/>template-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates to render the Kanban with specified columns.
-///<br/>columns-Array&lt;Columns&gt;	default-array
+///<br/>columns-Array&lt;Columns&gt;	default-Array
 ///<br/><br/>
 ///Gets or sets an object that indicates to render the Kanban with specified columns header text.
 ///<br/>headerText-string	default-null
@@ -12303,7 +12315,7 @@ ejKanban :function (options) {
 ///<br/>isCollapsed-boolean	default-false
 ///<br/><br/>
 ///To customize the column level constraints with minimum ,maximum limit validation.
-///<br/>constraints-any	default-object
+///<br/>constraints-any	default-Object
 ///<br/><br/>
 ///It is used to specify the type of constraints as column or swimlane.
 ///<br/>type-string	default-null
@@ -12348,7 +12360,7 @@ ejKanban :function (options) {
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
 ///To perform kanban functionalities with touch interaction.
-///<br/>enableTouch-Boolean	default-true
+///<br/>enableTouch-boolean	default-true
 ///<br/><br/>
 ///Align content in the Kanban control align from right to left by setting the property as true.
 ///<br/>enableRTL-boolean	default-false
@@ -12366,7 +12378,7 @@ ejKanban :function (options) {
 ///<br/>allowAdding-boolean	default-false
 ///<br/><br/>
 ///This specifies the id of the template which is require to be edited using the Dialog Box.
-///<br/>dialogTemplate-String	default-null
+///<br/>dialogTemplate-string	default-null
 ///<br/><br/>
 ///Get or sets an object that indicates whether to customize the editMode of the Kanban.
 ///<br/>editMode-ej.Kanban.EditMode|string	default-ej.Kanban.EditMode.Dialog
@@ -12390,7 +12402,7 @@ ejKanban :function (options) {
 ///<br/>defaultValue-string|number	default-null
 ///<br/><br/>
 ///This specifies the id of the template which is require to be edited using the External edit form.
-///<br/>externalFormTemplate-String	default-null
+///<br/>externalFormTemplate-string	default-null
 ///<br/><br/>
 ///This specifies to set the position of an External edit form either in the right or bottom of the Kanban.
 ///<br/>formPosition-ej.Kanban.FormPosition|string	default-ej.Kanban.FormPosition.Bottom
@@ -12432,7 +12444,7 @@ ejKanban :function (options) {
 ///<br/>minWidth-number	default-0
 ///<br/><br/>
 ///To customize the filtering behavior based on queries given.
-///<br/>filterSettings-Array&lt;FilterSettings&gt;	default-array
+///<br/>filterSettings-Array&lt;FilterSettings&gt;	default-Array
 ///<br/><br/>
 ///Gets or sets an object of display name to filter queries.
 ///<br/>text-string	default-null
@@ -12501,7 +12513,7 @@ ejKanban :function (options) {
 ///<br/>template-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates to render the Kanban with specified workflows.
-///<br/>workflows-Array&lt;Workflows&gt;	default-array
+///<br/>workflows-Array&lt;Workflows&gt;	default-Array
 ///<br/><br/>
 ///Gets or sets an object that indicates to render the Kanban with specified workflows key.
 ///<br/>key-string|number	default-null
@@ -12510,7 +12522,7 @@ ejKanban :function (options) {
 ///<br/>allowedTransitions-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to customizing the user interface (UI) as locale-specific in order to display regional data i.e. in a language and culture specific to a particular country or region.
-///<br/>locale-String	default-en-US
+///<br/>locale-string	default-en-US
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -14294,22 +14306,22 @@ ejListView :function (options) {
 ///<br/>ajaxSettings-AjaxSettings	default-null
 ///<br/><br/>
 ///It specifies, whether to enable or disable asynchronous request.
-///<br/>async-Boolean	default-
+///<br/>async-boolean	default-
 ///<br/><br/>
 ///It specifies the page will be cached in the web browser.
-///<br/>cache-Boolean	default-
+///<br/>cache-boolean	default-
 ///<br/><br/>
 ///It specifies the type of data is send in the query string.
-///<br/>contentType-String	default-
+///<br/>contentType-string	default-
 ///<br/><br/>
 ///It specifies the data as an object, will be passed in the query string.
 ///<br/>data-any	default-
 ///<br/><br/>
 ///It specifies the type of data that you're expecting back from the response.
-///<br/>dataType-String	default-
+///<br/>dataType-string	default-
 ///<br/><br/>
 ///It specifies the HTTP request type.
-///<br/>type-String	default-
+///<br/>type-string	default-
 ///<br/><br/>
 ///Set the index values to be selected on intial loading. This works only when enableCheckMark is set true.
 ///<br/>checkedIndices-Array&lt;any&gt;	default-[]
@@ -14351,10 +14363,10 @@ ejListView :function (options) {
 ///<br/>headerTitle-string	default-Title
 ///<br/><br/>
 ///Specifies the height.
-///<br/>height-String|Number	default-null
+///<br/>height-string|number	default-null
 ///<br/><br/>
 ///Set the localization culture for ListView Widget.
-///<br/>locale-String	default-
+///<br/>locale-string	default-
 ///<br/><br/>
 ///Specifies whether to retain the selection of the item.
 ///<br/>persistSelection-boolean	default-false
@@ -14381,7 +14393,7 @@ ejListView :function (options) {
 ///<br/>templateId-string	default-null
 ///<br/><br/>
 ///Specifies the width.
-///<br/>width-String|Number	default-null
+///<br/>width-string|number	default-null
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -15248,22 +15260,22 @@ ejNavigationDrawer :function (options) {
 ///<br/>ajaxSettings-AjaxSettings	default-null
 ///<br/><br/>
 ///It specifies, whether to enable or disable asynchronous request.
-///<br/>async-Boolean	default-
+///<br/>async-boolean	default-
 ///<br/><br/>
 ///It specifies the page will be cached in the web browser.
-///<br/>cache-Boolean	default-
+///<br/>cache-boolean	default-
 ///<br/><br/>
 ///It specifies the type of data is send in the query string.
-///<br/>contentType-String	default-
+///<br/>contentType-string	default-
 ///<br/><br/>
 ///It specifies the data as an object, will be passed in the query string.
 ///<br/>data-any	default-
 ///<br/><br/>
 ///It specifies the type of data that you're expecting back from the response.
-///<br/>dataType-String	default-
+///<br/>dataType-string	default-
 ///<br/><br/>
 ///It specifies the HTTP request type.
-///<br/>type-String	default-
+///<br/>type-string	default-
 ///<br/><br/>
 ///Specifies the contentId for navigation drawer, where the AJAX content need to updated
 ///<br/>contentId-string	default-null
@@ -15830,6 +15842,12 @@ ejPivotChart :function (options) {
 ///<br/><br/>
 ///Specifies the CSS class to PivotChart to achieve custom theme.
 ///<br/>cssClass-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Options for enabling zooming feature of PivotChart.
+///<br/>zooming-Zooming	default-{}
+///<br/><br/>
+///Enables or disables horizontal scrollbar.
+///<br/>enableScrollbar-boolean	default-false
 ///<br/><br/>
 ///Options available to configure the properties of entire series. You can also override the options for specific series by using series collection.
 ///<br/>commonSeriesOptions-CommonSeriesOptions	default-{}
@@ -18160,49 +18178,49 @@ ejRadialSlider :function (options) {
 /// <summary><br/>
 ///The RadialSlider provides an optimized interface for selecting a numeric value using a touch interface. Value is returned based on direct needle selection or needle move. It can also be customized as a full circle, half circle, or any portion of a circle, based on startAngle and endAngle<br/><br/>
 ///To show the RadialSlider in initial render.
-///<br/>autoOpen-Boolean	default-false
+///<br/>autoOpen-boolean	default-false
 ///<br/><br/>
 ///Sets the root class for RadialSlider theme. This cssClass API helps to use custom skinning option for RadialSlider control. By defining the root class using this API, we need to include this root class in CSS.
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///To enable Animation for Radial Slider.
-///<br/>enableAnimation-Boolean	default-true
+///<br/>enableAnimation-boolean	default-true
 ///<br/><br/>
 ///Enable/Disable the Roundoff property of RadialSlider
-///<br/>enableRoundOff-Boolean	default-true
+///<br/>enableRoundOff-boolean	default-true
 ///<br/><br/>
 ///Specifies the endAngle value for radial slider circle.
-///<br/>endAngle-Number	default-360
+///<br/>endAngle-number	default-360
 ///<br/><br/>
 ///Specifies the inline for label show or not on given radius.
-///<br/>inline-Boolean	default-false
+///<br/>inline-boolean	default-false
 ///<br/><br/>
 ///Specifies innerCircleImageClass, using this property we can give images for center radial circle through CSS classes.
-///<br/>innerCircleImageClass-String	default-null
+///<br/>innerCircleImageClass-string	default-null
 ///<br/><br/>
 ///Specifies the file name of center circle icon
-///<br/>innerCircleImageUrl-String	default-null
+///<br/>innerCircleImageUrl-string	default-null
 ///<br/><br/>
 ///Specifies the Space between the radial slider element and the label.
-///<br/>labelSpace-Number	default-30
+///<br/>labelSpace-number	default-30
 ///<br/><br/>
 ///Specifies the radius of radial slider
-///<br/>radius-Number	default-200
+///<br/>radius-number	default-200
 ///<br/><br/>
 ///To show the RadialSlider inner circle.
-///<br/>showInnerCircle-Boolean	default-true
+///<br/>showInnerCircle-boolean	default-true
 ///<br/><br/>
 ///Specifies the endAngle value for radial slider circle.
-///<br/>startAngle-Number	default-0
+///<br/>startAngle-number	default-0
 ///<br/><br/>
 ///Specifies the  strokeWidth for customize the needle, outer circle and inner circle.
-///<br/>strokeWidth-Number	default-2
+///<br/>strokeWidth-number	default-2
 ///<br/><br/>
 ///Specifies the ticks value of radial slider
 ///<br/>ticks-Array&lt;any&gt;	default-
 ///<br/><br/>
 ///Specifies the value of radial slider
-///<br/>value-Number	default-10
+///<br/>value-number	default-10
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -19600,7 +19618,7 @@ ejRibbon :function (options) {
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
 ///Specifies the height, width, enableRTL, showRoundedCorner,enabled,cssClass property to the controls in the ribbon commonly andit will work only when those properties are not defined in buttonSettings and content defaults.
-///<br/>buttonDefaults-any	default-object
+///<br/>buttonDefaults-any	default-Object
 ///<br/><br/>
 ///Property to enable the ribbon quick access toolbar.
 ///<br/>showQAT-boolean	default-false
@@ -19621,7 +19639,7 @@ ejRibbon :function (options) {
 ///<br/>collapsible-boolean	default-false
 ///<br/><br/>
 ///Align content in the ribbon control from right to left by setting the property as true.
-///<br/>enableRTL-any	default-false
+///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
 ///Sets custom setting to the expandable pin in the ribbon.
 ///<br/>expandPinSettings-ExpandPinSettings	default-Object
@@ -19636,7 +19654,7 @@ ejRibbon :function (options) {
 ///<br/>applicationTab-ApplicationTab	default-Object
 ///<br/><br/>
 ///Specifies the ribbon backstage page items.
-///<br/>backstageSettings-any	default-object
+///<br/>backstageSettings-any	default-Object
 ///<br/><br/>
 ///Specifies the display text of application tab.
 ///<br/>text-string	default-null
@@ -19648,7 +19666,7 @@ ejRibbon :function (options) {
 ///<br/>width-string|number	default-null
 ///<br/><br/>
 ///Specifies the ribbon backstage page with its tab and button elements.
-///<br/>pages-Array&lt;any&gt;	default-array
+///<br/>pages-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Specifies the id for ribbon backstage page's tab and button elements.
 ///<br/>id-string	default-null
@@ -19672,13 +19690,13 @@ ejRibbon :function (options) {
 ///<br/>menuItemID-string	default-null
 ///<br/><br/>
 ///Specifies the menu members, events by using the menu settings for the menu in the application tab.
-///<br/>menuSettings-any	default-object
+///<br/>menuSettings-any	default-Object
 ///<br/><br/>
 ///Specifies the application menu or backstage page. Specify the type of application tab as "ej.Ribbon.ApplicationTabType.Menu" to render the application menu or "ej.Ribbon.ApplicationTabType.Backstage" to render backstage page in the ribbon control.
 ///<br/>type-ej.Ribbon.ApplicationTabType|string	default-ej.Ribbon.ApplicationTabType.Menu
 ///<br/><br/>
 ///Specifies the contextual tabs and tab set to the ribbon control with the background color and border color. Refer to the tabs section for adding tabs into the contextual tab and contextual tab set.
-///<br/>contextualTabs-Array&lt;ContextualTabs&gt;	default-array
+///<br/>contextualTabs-Array&lt;ContextualTabs&gt;	default-Array
 ///<br/><br/>
 ///Specifies the backgroundColor of the contextual tabs and tab set in the ribbon control.
 ///<br/>backgroundColor-string	default-null
@@ -19687,7 +19705,7 @@ ejRibbon :function (options) {
 ///<br/>borderColor-string	default-null
 ///<br/><br/>
 ///Specifies the tabs to present in the contextual tabs and tab set. Refer to the tabs section for adding tabs into the contextual tabs and tab set.
-///<br/>tabs-Array&lt;any&gt;	default-array
+///<br/>tabs-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Specifies the index or indexes to disable the given index tab or indexes tabs in the ribbon control.
 ///<br/>disabledItemIndex-Array&lt;any&gt;	default-0
@@ -19699,19 +19717,19 @@ ejRibbon :function (options) {
 ///<br/>selectedItemIndex-number	default-1
 ///<br/><br/>
 ///Specifies the tabs and its groups. Also specifies the control details that has to be placed in the tab area in the ribbon control.
-///<br/>tabs-Array&lt;Tabs&gt;	default-array
+///<br/>tabs-Array&lt;Tabs&gt;	default-Array
 ///<br/><br/>
 ///Specifies single group or multiple groups and its contents to each tab in the ribbon control.
-///<br/>groups-Array&lt;any&gt;	default-array
+///<br/>groups-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Specifies the alignment of controls in the groups in 'row' type or 'column' type. Value for row type is "ej.Ribbon.AlignType.Rows" and for column type is "ej.Ribbon.alignType.columns".
 ///<br/>alignType-ej.Ribbon.AlignType|string	default-ej.Ribbon.AlignType.Rows
 ///<br/><br/>
 ///Specifies the Syncfusion button, split button, dropdown list, toggle button, gallery, custom controls to the groups in the ribbon control.
-///<br/>content-Array&lt;any&gt;	default-array
+///<br/>content-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Specifies the height, width, type, isBig property to the controls in the group commonly.
-///<br/>defaults-any	default-object
+///<br/>defaults-any	default-Object
 ///<br/><br/>
 ///Specifies the controls height such as Syncfusion button,split button,dropdown list,toggle button in the subgroup of  the ribbon tab.
 ///<br/>height-string|number	default-null
@@ -19726,13 +19744,13 @@ ejRibbon :function (options) {
 ///<br/>isBig-boolean	default-false
 ///<br/><br/>
 ///Specifies the controls such as Syncfusion button, split button, dropdown list, toggle button, gallery, custom controls in the subgroup of the ribbon tab .
-///<br/>groups-Array&lt;any&gt;	default-array
+///<br/>groups-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///When isMobileOnly is true,its shows in mobile toolbar.isResponsive should be true for using this property.
 ///<br/>isMobileOnly-boolean	default-false
 ///<br/><br/>
 ///Specifies the Syncfusion button members, events by using this buttonSettings.
-///<br/>buttonSettings-any	default-object
+///<br/>buttonSettings-any	default-Object
 ///<br/><br/>
 ///It is used to set the count of gallery contents in a row.
 ///<br/>columns-number	default-null
@@ -19744,22 +19762,22 @@ ejRibbon :function (options) {
 ///<br/>cssClass-string	default-null
 ///<br/><br/>
 ///Specifies the Syncfusion button and menu as gallery extra items.
-///<br/>customGalleryItems-Array&lt;any&gt;	default-array
+///<br/>customGalleryItems-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Specifies the Syncfusion button members, events by using buttonSettings.
-///<br/>buttonSettings-any	default-object
+///<br/>buttonSettings-any	default-Object
 ///<br/><br/>
 ///Specifies the type as ej.Ribbon.CustomItemType.Menu or ej.Ribbon.CustomItemType.Button to render Syncfusion button and menu.
 ///<br/>customItemType-ej.Ribbon.CustomItemType|string	default-ej.Ribbon.CustomItemType.Button
 ///<br/><br/>
 ///Specifies the custom tooltip for gallery extra item's button. Refer to ejRibbon#tabs->groups->content->groups->customToolTip for its inner properties.
-///<br/>customToolTip-any	default-object
+///<br/>customToolTip-any	default-Object
 ///<br/><br/>
 ///Specifies the UL list id to render menu as gallery extra item.
 ///<br/>menuId-string	default-null
 ///<br/><br/>
 ///Specifies the Syncfusion menu members, events by using menuSettings.
-///<br/>menuSettings-any	default-object
+///<br/>menuSettings-any	default-Object
 ///<br/><br/>
 ///Specifies the text for gallery extra item's button.
 ///<br/>text-string	default-null
@@ -19780,7 +19798,7 @@ ejRibbon :function (options) {
 ///<br/>title-string	default-null
 ///<br/><br/>
 ///Specifies the Syncfusion dropdown list members, events by using this dropdownSettings.
-///<br/>dropdownSettings-any	default-object
+///<br/>dropdownSettings-any	default-Object
 ///<br/><br/>
 ///Specifies the separator to the control that is in row type group. The separator separates the control from the next control in the group. Set "true" to enable the separator.
 ///<br/>enableSeparator-boolean	default-false
@@ -19789,13 +19807,13 @@ ejRibbon :function (options) {
 ///<br/>expandedColumns-number	default-null
 ///<br/><br/>
 ///Defines each gallery content.
-///<br/>galleryItems-Array&lt;any&gt;	default-array
+///<br/>galleryItems-Array&lt;any&gt;	default-Array
 ///<br/><br/>
 ///Specifies the Syncfusion button members, events by using buttonSettings.
-///<br/>buttonSettings-any	default-object
+///<br/>buttonSettings-any	default-Object
 ///<br/><br/>
 ///Specifies the custom tooltip for gallery content. Refer to ejRibbon#tabs->groups->content->groups->customToolTip for its inner properties.
-///<br/>customToolTip-any	default-object
+///<br/>customToolTip-any	default-Object
 ///<br/><br/>
 ///Sets text for the gallery content.
 ///<br/>text-string	default-null
@@ -19816,13 +19834,13 @@ ejRibbon :function (options) {
 ///<br/>itemWidth-string|number	default-null
 ///<br/><br/>
 ///Specifies the Syncfusion split button members, events by using this splitButtonSettings.
-///<br/>splitButtonSettings-any	default-object
+///<br/>splitButtonSettings-any	default-Object
 ///<br/><br/>
 ///Specifies the text for button, split button, toggle button controls in the sub groups.
 ///<br/>text-string	default-null
 ///<br/><br/>
 ///Specifies the Syncfusion toggle button members, events by using toggleButtonSettings.
-///<br/>toggleButtonSettings-any	default-object
+///<br/>toggleButtonSettings-any	default-Object
 ///<br/><br/>
 ///Specifies the tooltip for button, split button, dropdown list, toggle button, custom controls in the sub groups.
 ///<br/>toolTip-string	default-null
@@ -21416,28 +21434,28 @@ ejSignature :function (options) {
 ///<br/>backgroundImage-string	default-
 ///<br/><br/>
 ///Enables or disables the Signature textbox widget.
-///<br/>enabled-Boolean	default-true
+///<br/>enabled-boolean	default-true
 ///<br/><br/>
 ///Sets the height of the Signature control.
 ///<br/>height-string	default-100%
 ///<br/><br/>
 ///Enables/disables responsive support for the signature control (i.e) maintain the signature drawing during the window resizing time.
-///<br/>isResponsive-Boolean	default-false
+///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
 ///Allows the type of the image format to be saved when the signature image is saved.
 ///<br/>saveImageFormat-ej.Signature.SaveImageFormat|string	default-
 ///<br/><br/>
 ///Allows the signature image to be saved along with its background.
-///<br/>saveWithBackground-Boolean	default-false
+///<br/>saveWithBackground-boolean	default-false
 ///<br/><br/>
 ///Enables or disables rounded corner.
-///<br/>showRoundedCorner-Boolean	default-true
+///<br/>showRoundedCorner-boolean	default-true
 ///<br/><br/>
 ///Sets the stroke color for the stroke of the signature.
 ///<br/>strokeColor-string	default-#000000
 ///<br/><br/>
 ///Sets the stroke width for the stroke of the signature.
-///<br/>strokeWidth-Number	default-2
+///<br/>strokeWidth-number	default-2
 ///<br/><br/>
 ///Sets the width of the Signature control.
 ///<br/>width-string	default-100%
@@ -23104,100 +23122,100 @@ ejSpreadsheet :function (options) {
 ///<br/>activeSheetIndex-Number	default-1
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable auto rendering of cell type in the Spreadsheet.
-///<br/>allowAutoCellType-Boolean	default-false
+///<br/>allowAutoCellType-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable auto fill feature in the Spreadsheet.
-///<br/>allowAutoFill-Boolean	default-true
+///<br/>allowAutoFill-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable auto sum feature in the Spreadsheet.
-///<br/>allowAutoSum-Boolean	default-true
+///<br/>allowAutoSum-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable cell format feature in the Spreadsheet. By enabling this, you can customize styles and number formats.
-///<br/>allowCellFormatting-Boolean	default-true
+///<br/>allowCellFormatting-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable cell type feature in the Spreadsheet.
-///<br/>allowCellType-Boolean	default-false
+///<br/>allowCellType-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable chart feature in the Spreadsheet. By enabling this feature, you can create and customize charts in Spreadsheet.
-///<br/>allowCharts-Boolean	default-true
+///<br/>allowCharts-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable clear feature in the Spreadsheet.
-///<br/>allowClear-Boolean	default-true
+///<br/>allowClear-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable clipboard feature in the Spreadsheet. By enabling this feature, you can perform cut/copy and paste operations in Spreadsheet.
-///<br/>allowClipboard-Boolean	default-true
+///<br/>allowClipboard-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable comment feature in the Spreadsheet. By enabling this, you can add/delete/modify comments in Spreadsheet.
-///<br/>allowComments-Boolean	default-true
+///<br/>allowComments-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable Conditional Format feature in the Spreadsheet. By enabling this, you can apply formatting to the selected range of cells based on the provided conditions (Greater than, Less than, Equal, Between, Contains, etc.).
-///<br/>allowConditionalFormats-Boolean	default-true
+///<br/>allowConditionalFormats-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable data validation feature in the Spreadsheet.
-///<br/>allowDataValidation-Boolean	default-true
+///<br/>allowDataValidation-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable the delete action in the Spreadsheet. By enabling this feature, you can delete existing rows, columns, cells and sheet.
-///<br/>allowDelete-Boolean	default-true
+///<br/>allowDelete-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable drag and drop feature in the Spreadsheet.
-///<br/>allowDragAndDrop-Boolean	default-true
+///<br/>allowDragAndDrop-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable the edit action in the Spreadsheet.
-///<br/>allowEditing-Boolean	default-true
+///<br/>allowEditing-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable filtering feature in the Spreadsheet. Filtering can be used to limit the data displayed using required criteria.
-///<br/>allowFiltering-Boolean	default-true
+///<br/>allowFiltering-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable table feature in the Spreadsheet. By enabling this, you can render table in selected range.
-///<br/>allowFormatAsTable-Boolean	default-true
+///<br/>allowFormatAsTable-boolean	default-true
 ///<br/><br/>
 ///Get or sets a value that indicates whether to enable or disable format painter feature in the Spreadsheet. By enabling this feature, you can copy the format from the selected range and apply it to another range.
-///<br/>allowFormatPainter-Boolean	default-true
+///<br/>allowFormatPainter-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable formula bar in the Spreadsheet.
-///<br/>allowFormulaBar-Boolean	default-true
+///<br/>allowFormulaBar-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable freeze pane support in Spreadsheet. After enabling this feature, you can use freeze top row, freeze first column and freeze panes options.
-///<br/>allowFreezing-Boolean	default-false
+///<br/>allowFreezing-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable hyperlink feature in the Spreadsheet. By enabling this feature, you can add hyperlink which is used to easily navigate to the cell reference from one sheet to another or a web page.
-///<br/>allowHyperlink-Boolean	default-true
+///<br/>allowHyperlink-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable import feature in the Spreadsheet. By enabling this feature, you can open existing Spreadsheet documents.
-///<br/>allowImport-Boolean	default-true
+///<br/>allowImport-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable the insert action in the Spreadsheet. By enabling this feature, you can insert new rows, columns, cells and sheet.
-///<br/>allowInsert-Boolean	default-true
+///<br/>allowInsert-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable keyboard navigation feature in the Spreadsheet.
-///<br/>allowKeyboardNavigation-Boolean	default-true
+///<br/>allowKeyboardNavigation-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable lock cell feature in the Spreadsheet.
-///<br/>allowLockCell-Boolean	default-true
+///<br/>allowLockCell-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable merge feature in the Spreadsheet.
-///<br/>allowMerging-Boolean	default-true
+///<br/>allowMerging-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable overflow feature in the Spreadsheet.
-///<br/>allowOverflow-Boolean	default-true
+///<br/>allowOverflow-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable resizing feature in the Spreadsheet. By enabling this feature, you can change the column width and row height by dragging its header boundaries.
-///<br/>allowResizing-Boolean	default-true
+///<br/>allowResizing-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable find and replace feature in the Spreadsheet. By enabling this, you can easily find and replace a specific value in the sheet or workbook. By using goto behavior, you can select and highlight all cells that contains specific data or data types.
-///<br/>allowSearching-Boolean	default-true
+///<br/>allowSearching-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable selection in the Spreadsheet. By enabling this feature, selected items will be highlighted.
-///<br/>allowSelection-Boolean	default-true
+///<br/>allowSelection-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the sorting feature in the Spreadsheet.
-///<br/>allowSorting-Boolean	default-true
+///<br/>allowSorting-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable undo and redo feature in the Spreadsheet.
-///<br/>allowUndoRedo-Boolean	default-true
+///<br/>allowUndoRedo-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable wrap text feature in the Spreadsheet. By enabling this, cell content can wrap to the next line, if the cell content exceeds the boundary of the cell.
-///<br/>allowWrap-Boolean	default-true
+///<br/>allowWrap-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the width of the activation panel in Spreadsheet.
 ///<br/>apWidth-Number	default-300
@@ -23209,7 +23227,7 @@ ejSpreadsheet :function (options) {
 ///<br/>fillType-ej.Spreadsheet.AutoFillOptions|string	default-ej.Spreadsheet.AutoFillOptions.FillSeries
 ///<br/><br/>
 ///Gets or sets a value that indicates to enable or disable auto fill options in the Spreadsheet.
-///<br/>showFillOptions-Boolean	default-true
+///<br/>showFillOptions-boolean	default-true
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the chart behavior in the Spreadsheet.
 ///<br/>chartSettings-ChartSettings	default-
@@ -23227,76 +23245,76 @@ ejSpreadsheet :function (options) {
 ///<br/>columnWidth-Number	default-64
 ///<br/><br/>
 ///Gets or sets a value to add root CSS class for customizing Spreadsheet skins.
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates custom formulas in Spreadsheet.
 ///<br/>customFormulas-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable context menu in the Spreadsheet.
-///<br/>enableContextMenu-Boolean	default-true
+///<br/>enableContextMenu-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable pivot table in the Spreadsheet.
-///<br/>enablePivotTable-Boolean	default-false
+///<br/>enablePivotTable-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable touch support in the Spreadsheet.
-///<br/>enableTouch-Boolean	default-true
+///<br/>enableTouch-boolean	default-true
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the exporting behavior in Spreadsheet.
 ///<br/>exportSettings-ExportSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable save feature in Spreadsheet. By enabling this feature, you can save existing Spreadsheet.
-///<br/>allowExporting-Boolean	default-true
+///<br/>allowExporting-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to define csvUrl for export to CSV format.
-///<br/>csvUrl-String	default-null
+///<br/>csvUrl-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to define excelUrl for export to excel format.
-///<br/>excelUrl-String	default-null
+///<br/>excelUrl-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to define password while export to excel format.
-///<br/>password-String	default-null
+///<br/>password-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to define pdfUrl for export to PDF format.
-///<br/>pdfUrl-String	default-null
+///<br/>pdfUrl-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the format behavior in the Spreadsheet.
 ///<br/>formatSettings-FormatSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable cell border feature in the Spreadsheet.
-///<br/>allowCellBorder-Boolean	default-true
+///<br/>allowCellBorder-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable decimal places in the Spreadsheet.
-///<br/>allowDecimalPlaces-Boolean	default-true
+///<br/>allowDecimalPlaces-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable font family feature in Spreadsheet.
-///<br/>allowFontFamily-Boolean	default-true
+///<br/>allowFontFamily-boolean	default-true
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the import behavior in the Spreadsheet.
 ///<br/>importSettings-ImportSettings	default-
 ///<br/><br/>
 ///Sets import mapper to perform import feature in Spreadsheet.
-///<br/>importMapper-String	default-
+///<br/>importMapper-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable import while initial loading.
-///<br/>importOnLoad-Boolean	default-false
+///<br/>importOnLoad-boolean	default-false
 ///<br/><br/>
 ///Sets import URL to access the online files in the Spreadsheet.
-///<br/>importUrl-String	default-
+///<br/>importUrl-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to define password while importing in the Spreadsheet.
-///<br/>password-String	default-
+///<br/>password-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable readonly support in the Spreadsheet.
-///<br/>isReadOnly-Boolean	default-false
+///<br/>isReadOnly-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to customizing the user interface (UI) as locale-specific in order to display regional data (i.e.) in a language and culture specific to a particular country or region.
-///<br/>locale-String	default-en-US
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the picture behavior in the Spreadsheet.
 ///<br/>pictureSettings-PictureSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable picture feature in Spreadsheet. By enabling this, you can add pictures in Spreadsheet.
-///<br/>allowPictures-Boolean	default-true
+///<br/>allowPictures-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to define height to picture in the Spreadsheet.
 ///<br/>height-Number	default-220
@@ -23308,13 +23326,13 @@ ejSpreadsheet :function (options) {
 ///<br/>printSettings-PrintSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable page setup support for printing in Spreadsheet.
-///<br/>allowPageSetup-Boolean	default-true
+///<br/>allowPageSetup-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable page size support for printing in Spreadsheet.
-///<br/>allowPageSize-Boolean	default-false
+///<br/>allowPageSize-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable print feature in the Spreadsheet.
-///<br/>allowPrinting-Boolean	default-true
+///<br/>allowPrinting-boolean	default-true
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the ribbon settings in Spreadsheet.
 ///<br/>ribbonSettings-RibbonSettings	default-
@@ -23329,7 +23347,7 @@ ejSpreadsheet :function (options) {
 ///<br/>menuSettings-any	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable isAppend property in ribbon settings.
-///<br/>isAppend-Boolean	default-false
+///<br/>isAppend-boolean	default-false
 ///<br/><br/>
 ///Specifies the data source to append in application tab.
 ///<br/>dataSource-Array&lt;any&gt;	default-[]
@@ -23344,37 +23362,37 @@ ejSpreadsheet :function (options) {
 ///<br/>scrollSettings-ScrollSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable scrolling in Spreadsheet.
-///<br/>allowScrolling-Boolean	default-true
+///<br/>allowScrolling-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable sheet on demand. By enabling this, it render only the active sheet element while paging remaining sheets are created one by one.
-///<br/>allowSheetOnDemand-Boolean	default-false
+///<br/>allowSheetOnDemand-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable virtual scrolling feature in the Spreadsheet.
-///<br/>allowVirtualScrolling-Boolean	default-true
+///<br/>allowVirtualScrolling-boolean	default-true
 ///<br/><br/>
 ///Gets or sets the value that indicates to define the height of spreadsheet.
-///<br/>height-Number|String	default-100%
+///<br/>height-Number|string	default-100%
 ///<br/><br/>
 ///Gets or sets the value that indicates whether to enable or disable responsive mode in the Spreadsheet.
-///<br/>isResponsive-Boolean	default-true
+///<br/>isResponsive-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to set scroll mode in Spreadsheet. It has two scroll modes, Normal and Infinite.
 ///<br/>scrollMode-ej.Spreadsheet.scrollMode|string	default-ej.Spreadsheet.scrollMode.Infinite
 ///<br/><br/>
 ///Gets or sets the value that indicates to define the height of the spreadsheet.
-///<br/>width-Number|String	default-100%
+///<br/>width-Number|string	default-100%
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the selection options in the Spreadsheet.
 ///<br/>selectionSettings-SelectionSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to define active cell in spreadsheet.
-///<br/>activeCell-String	default-
+///<br/>activeCell-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to define animation time while selection in the Spreadsheet.
 ///<br/>animationTime-Number	default-0.001
 ///<br/><br/>
 ///Gets or sets a value that indicates to enable or disable animation while selection.
-///<br/>enableAnimation-Boolean	default-false
+///<br/>enableAnimation-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to set selection type in Spreadsheet. It has three types which are Column, Row and Default.
 ///<br/>selectionType-ej.Spreadsheet.SelectionType|string	default-ej.Spreadsheet.SelectionType.Default
@@ -23395,10 +23413,10 @@ ejSpreadsheet :function (options) {
 ///<br/>type-ej.Spreadsheet.BorderType|string	default-
 ///<br/><br/>
 ///Specifies border color for range of cells in Spreadsheet.
-///<br/>color-String	default-
+///<br/>color-string	default-
 ///<br/><br/>
 ///To apply border for the specified range of cell.
-///<br/>range-String	default-
+///<br/>range-string	default-
 ///<br/><br/>
 ///Specifies the conditional formatting for the range of cell in Spreadsheet.
 ///<br/>cFormatRule-Array&lt;any&gt;	default-[]
@@ -23413,7 +23431,7 @@ ejSpreadsheet :function (options) {
 ///<br/>inputs-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Specifies the range for conditional formatting in Spreadsheet.
-///<br/>range-String	default-
+///<br/>range-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to define column count in the Spreadsheet.
 ///<br/>colCount-Number	default-21
@@ -23425,7 +23443,7 @@ ejSpreadsheet :function (options) {
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable field as column header in the Spreadsheet.
-///<br/>fieldAsColumnHeader-Boolean	default-false
+///<br/>fieldAsColumnHeader-boolean	default-false
 ///<br/><br/>
 ///Specifies the header styles for the headers in datasource range.
 ///<br/>headerStyles-any	default-null
@@ -23440,7 +23458,7 @@ ejSpreadsheet :function (options) {
 ///<br/>mergeCells-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Specifies the primary key for the datasource in Spreadsheet.
-///<br/>primaryKey-String	default-
+///<br/>primaryKey-string	default-
 ///<br/><br/>
 ///Specifies the query for the dataSource in Spreadsheet.
 ///<br/>query-any	default-null
@@ -23455,16 +23473,16 @@ ejSpreadsheet :function (options) {
 ///<br/>headerStyles-any	default-null
 ///<br/><br/>
 ///Specifies the primary key for the datasource in Spreadsheet.
-///<br/>primaryKey-String	default-
+///<br/>primaryKey-string	default-
 ///<br/><br/>
 ///Specifies the query for the datasource in Spreadsheet.
 ///<br/>query-any	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable the datasource header in Spreadsheet.
-///<br/>showHeader-Boolean	default-true
+///<br/>showHeader-boolean	default-true
 ///<br/><br/>
 ///Specifies the start cell for the datasource range in Spreadsheet.
-///<br/>startCell-String	default-A1
+///<br/>startCell-string	default-A1
 ///<br/><br/>
 ///Gets or sets a value that indicates to define row count in the Spreadsheet.
 ///<br/>rowCount-Number	default-20
@@ -23482,25 +23500,25 @@ ejSpreadsheet :function (options) {
 ///<br/>comment-any	default-null
 ///<br/><br/>
 ///Get or sets the value that indicates whether to show or hide comments in Spreadsheet.
-///<br/>isVisible-Boolean	default-false
+///<br/>isVisible-boolean	default-false
 ///<br/><br/>
 ///Specifies the value for the comment in Spreadsheet.
-///<br/>value-String	default-
+///<br/>value-string	default-
 ///<br/><br/>
 ///Specifies the format of a cell in Spreadsheet.
 ///<br/>format-any	default-null
 ///<br/><br/>
 ///Specifies the type of the format in Spreadsheet.
-///<br/>type-String	default-
+///<br/>type-string	default-
 ///<br/><br/>
 ///Specifies the hyperlink for a cell in Spreadsheet.
 ///<br/>hyperlink-any	default-null
 ///<br/><br/>
 ///Specifies the web address for the hyperlink of a cell.
-///<br/>webAddr-String	default-
+///<br/>webAddr-string	default-
 ///<br/><br/>
 ///Specifies the cell address for the hyperlink of a cell.
-///<br/>cellAddr-String	default-
+///<br/>cellAddr-string	default-
 ///<br/><br/>
 ///Specifies the sheet index to which the cell is referred.
 ///<br/>sheetIndex-Number	default-1
@@ -23512,43 +23530,43 @@ ejSpreadsheet :function (options) {
 ///<br/>style-any	default-null
 ///<br/><br/>
 ///Specifies the background color of a cell in the Spreadsheet.
-///<br/>backgroundColor-String	default-
+///<br/>backgroundColor-string	default-
 ///<br/><br/>
 ///Specifies the font color of a cell in the Spreadsheet.
-///<br/>color-String	default-
+///<br/>color-string	default-
 ///<br/><br/>
 ///Specifies the font weight of a cell in the Spreadsheet.
-///<br/>fontWeight-String	default-
+///<br/>fontWeight-string	default-
 ///<br/><br/>
 ///Specifies the value for a cell in Spreadsheet.
-///<br/>value-String	default-
+///<br/>value-string	default-
 ///<br/><br/>
 ///Gets or sets the index of a row in Spreadsheet.
 ///<br/>index-Number	default-0
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show or hide grid lines in the Spreadsheet.
-///<br/>showGridlines-Boolean	default-true
+///<br/>showGridlines-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable the datasource header in Spreadsheet.
-///<br/>showHeader-Boolean	default-true
+///<br/>showHeader-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show or hide headings in the Spreadsheet.
-///<br/>showHeadings-Boolean	default-true
+///<br/>showHeadings-boolean	default-true
 ///<br/><br/>
 ///Specifies the start cell for the datasource range in Spreadsheet.
-///<br/>startCell-String	default-A1
+///<br/>startCell-string	default-A1
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show or hide pager in the Spreadsheet.
-///<br/>showPager-Boolean	default-true
+///<br/>showPager-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show or hide ribbon in the Spreadsheet.
-///<br/>showRibbon-Boolean	default-true
+///<br/>showRibbon-boolean	default-true
 ///<br/><br/>
 ///This is used to set the number of undo-redo steps in the Spreadsheet.
 ///<br/>undoRedoStep-Number	default-20
 ///<br/><br/>
 ///Define the username for the Spreadsheet which is displayed in comment.
-///<br/>userName-String	default-User Name
+///<br/>userName-string	default-User Name
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -23585,10 +23603,10 @@ ejSymbolPalette :function (options) {
 /// <summary><br/>
 ///The symbol palette control allows to predefine the frequently used nodes and connectors and to drag and drop those nodes/connectors to drawing area<br/><br/>
 ///Defines whether the symbols can be dragged from palette or not
-///<br/>allowDrag-Boolean	default-true
+///<br/>allowDrag-boolean	default-true
 ///<br/><br/>
 ///Customizes the style of the symbol palette
-///<br/>cssClass-String	default-e-symbolpalette
+///<br/>cssClass-string	default-e-symbolpalette
 ///<br/><br/>
 ///Defines the default properties of nodes and connectors
 ///<br/>defaultSettings-DefaultSettings	default-
@@ -23600,19 +23618,19 @@ ejSymbolPalette :function (options) {
 ///<br/>connector-any	default-null
 ///<br/><br/>
 ///Sets the Id of the diagram, over which the symbols will be dropped
-///<br/>diagramId-String	default-null
+///<br/>diagramId-string	default-null
 ///<br/><br/>
 ///Sets the height of the palette headers
-///<br/>headerHeight-Number	default-30
+///<br/>headerHeight-number	default-30
 ///<br/><br/>
 ///Defines the height of the symbol palette
-///<br/>height-Number	default-400
+///<br/>height-number	default-400
 ///<br/><br/>
 ///Defines the height of the palette items
-///<br/>paletteItemHeight-Number	default-50
+///<br/>paletteItemHeight-number	default-50
 ///<br/><br/>
 ///Defines the width of the palette items
-///<br/>paletteItemWidth-Number	default-50
+///<br/>paletteItemWidth-number	default-50
 ///<br/><br/>
 ///An array of JSON objects, where each object represents a node/connector
 ///<br/>palettes-Array&lt;Palettes&gt;	default-[]
@@ -23627,19 +23645,19 @@ ejSymbolPalette :function (options) {
 ///<br/>items-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Defines the preview height of the symbols
-///<br/>previewHeight-Number	default-100
+///<br/>previewHeight-number	default-100
 ///<br/><br/>
 ///Defines the offset value to be left between the mouse cursor and symbol previews
 ///<br/>previewOffset-any	default-(110, 110)
 ///<br/><br/>
 ///Defines the width of the symbol previews
-///<br/>previewWidth-Number	default-100
+///<br/>previewWidth-number	default-100
 ///<br/><br/>
 ///Enable or disable the palette item text
-///<br/>showPaletteItemText-Boolean	default-true
+///<br/>showPaletteItemText-boolean	default-true
 ///<br/><br/>
 ///The width of the palette
-///<br/>width-Number	default-250
+///<br/>width-number	default-250
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
