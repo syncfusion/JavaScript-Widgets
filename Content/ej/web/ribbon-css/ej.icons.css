@@ -388,7 +388,7 @@ font-family: 'ej-ribbonfont';
     content: "\e180";
 }
 
-.e-ribbon .e-icon.e-ribbonpaste:before {
+.e-ribbon.e-js .e-icon.e-ribbonpaste.e-ribbon:before {
     font-family: 'ej-ribbonfont';
     content: "\e169";
     font-size: 36px;
@@ -397,7 +397,7 @@ font-family: 'ej-ribbonfont';
     top: -4px;
 }
 
-.e-ribbon.e-rtl .e-icon.e-ribbonpaste:before {
+.e-ribbon.e-rtl.e-js .e-icon.e-ribbonpaste:before {
     left: 12px;
 }
 

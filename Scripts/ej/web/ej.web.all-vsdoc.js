@@ -824,9 +824,6 @@ jQuery.fn.ejBulletGraph = function (options) {
 ///Feature measure render till the specified value.
 ///<br/>value-number	default-null
 ///<br/><br/>
-///Contains property to add dataSource and dataSource fields.
-///<br/>fields-any	default-null
-///<br/><br/>
 ///Contains property to customize the fields.
 ///<br/>fields-any	default-
 ///<br/><br/>
@@ -1357,6 +1354,9 @@ jQuery.fn.ejChart = function (options) {
 ///Enables or disables the visibility of legend item.
 ///<br/>visibleOnLegend-string	default-visible
 ///<br/><br/>
+///Group of the stacking collection series.
+///<br/>stackingGroup-string	default-
+///<br/><br/>
 ///Pattern of dashes and gaps used to stroke all the line type series.
 ///<br/>dashArray-string	default-
 ///<br/><br/>
@@ -1435,8 +1435,14 @@ jQuery.fn.ejChart = function (options) {
 ///Renders the chart vertically. This is applicable only for Cartesian type series.
 ///<br/>isTransposed-boolean	default-false
 ///<br/><br/>
+///Render the x mark in the center of the boxplot series type.x represents the average value of the boxplot series.
+///<br/>showMedian-boolean	default-true
+///<br/><br/>
 ///Position of the data label in pie/doughnut/pyramid/funnel series. OutsideExtended position is not applicable for pyramid/funnel.
 ///<br/>labelPosition-ej.datavisualization.Chart.LabelPosition|string	default-inside. See LabelPosition
+///<br/><br/>
+///Quartile calculation has been performed in three different formulas to render the boxplot series.
+///<br/>boxPlotMode-ej.datavisualization.Chart.boxPlotMode|string	default-exclusive
 ///<br/><br/>
 ///Specifies the line cap of the series.
 ///<br/>lineCap-ej.datavisualization.Chart.LineCap|string	default-butt. See LineCap
@@ -1582,6 +1588,21 @@ jQuery.fn.ejChart = function (options) {
 ///Opacity of the series.
 ///<br/>opacity-number	default-1
 ///<br/><br/>
+///Options for customizing the outlier of the series.
+///<br/>outlierSettings-any	default-
+///<br/><br/>
+///Specifies the shape of the outlier.
+///<br/>shape-ej.datavisualization.Chart.Shape|string	default-circle. See Shape
+///<br/><br/>
+///Options for customizing the size of the outlier shape.
+///<br/>size-any	default-
+///<br/><br/>
+///Height of the outlier shape.
+///<br/>height-number	default-6
+///<br/><br/>
+///Width of the outlier shape.
+///<br/>width-number	default-6
+///<br/><br/>
 ///Name of a field in data source, where the fill color for all the data points is generated.
 ///<br/>palette-string	default-
 ///<br/><br/>
@@ -1725,6 +1746,15 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///DashArray of the connector line.
 ///<br/>opacity-number	default-1
+///<br/><br/>
+///Options to customize the drag and drop in series.
+///<br/>dragSettings-any	default-
+///<br/><br/>
+///drag/drop the series
+///<br/>enable-boolean	default-false
+///<br/><br/>
+///Specifies the type of drag settings.
+///<br/>type-string	default-xy
 ///<br/><br/>
 ///Options to customize the error bar in series.
 ///<br/>errorBar-any	default-
@@ -1959,6 +1989,9 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Controls whether Chart has to be rendered as Canvas or SVG. Canvas rendering supports all functionalities in SVG rendering except 3D Charts.
 ///<br/>enableCanvasRendering-boolean	default-false
+///<br/><br/>
+///Controls whether the series has to be rendered at initial loading of chart, this will be useful in scenarios where chart is placed at the bottom of the web page and we need to render the series only when the chart is visible while scrolling to the top.
+///<br/>initSeriesRender-boolean	default-true
 ///<br/><br/>
 ///Controls whether 3D view has to be rotated on dragging. This property is applicable only for 3D view.
 ///<br/>enableRotation-boolean	default-false
@@ -2295,6 +2328,9 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Show/hides the axis line.
 ///<br/>visible-boolean	default-true
+///<br/><br/>
+///Default Value
+///<br/>color-string	default-
 ///<br/><br/>
 ///Width of axis line.
 ///<br/>width-number	default-1
@@ -2677,6 +2713,9 @@ jQuery.fn.ejChart = function (options) {
 ///Show/hides the axis line.
 ///<br/>visible-boolean	default-true
 ///<br/><br/>
+///Color of axis line.
+///<br/>color-string	default-
+///<br/><br/>
 ///Width of axis line.
 ///<br/>width-number	default-1
 ///<br/><br/>
@@ -3051,6 +3090,9 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Show/hides the axis line.
 ///<br/>visible-boolean	default-true
+///<br/><br/>
+///Color of axis line.
+///<br/>color-string	default-
 ///<br/><br/>
 ///Width of axis line.
 ///<br/>width-number	default-1
@@ -3442,6 +3484,9 @@ jQuery.fn.ejChart = function (options) {
 ///Spacing between columns of different series. Value ranges from 0 to 1
 ///<br/>columnSpacing-number	default-0
 ///<br/><br/>
+///To group the series of stacking collection.
+///<br/>stackingGroup-string	default-
+///<br/><br/>
 ///Pattern of dashes and gaps used to stroke the line type series.
 ///<br/>dashArray-string	default-
 ///<br/><br/>
@@ -3520,8 +3565,14 @@ jQuery.fn.ejChart = function (options) {
 ///Renders the chart vertically. This is applicable only for Cartesian type series.
 ///<br/>isTransposed-boolean	default-false
 ///<br/><br/>
+///Render the x mark in the center of the boxplot series type.x represents the average value of the boxplot series.
+///<br/>showMedian-boolean	default-true
+///<br/><br/>
 ///Position of the data label in pie/doughnut/pyramid/funnel series. OutsideExtended position is not applicable for pyramid/funnel.
 ///<br/>labelPosition-ej.datavisualization.Chart.LabelPosition|string	default-inside. See LabelPosition
+///<br/><br/>
+///Quartile calculation has been performed in three different formulas to render the boxplot series .
+///<br/>boxPlotMode-ej.datavisualization.Chart.LabelPosition|string	default-exclusive
 ///<br/><br/>
 ///Specifies the line cap of the series.
 ///<br/>lineCap-ej.datavisualization.Chart.LineCap|string	default-Butt. See LineCap
@@ -3673,6 +3724,21 @@ jQuery.fn.ejChart = function (options) {
 ///Opacity of the series.
 ///<br/>opacity-number	default-1
 ///<br/><br/>
+///Options for customizing the outlier of individual series.
+///<br/>outlierSettings-any	default-
+///<br/><br/>
+///Specifies the shape of the outlier.
+///<br/>shape-ej.datavisualization.Chart.Shape|string	default-circle. See Shape
+///<br/><br/>
+///Options for customizing the size of the outlier shape.
+///<br/>size-any	default-
+///<br/><br/>
+///Height of the outlier shape.
+///<br/>height-number	default-6
+///<br/><br/>
+///Width of the outlier shape.
+///<br/>width-number	default-6
+///<br/><br/>
 ///Name of a field in data source where fill color for all the data points is generated.
 ///<br/>palette-string	default-
 ///<br/><br/>
@@ -3720,6 +3786,15 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Opacity of the connector line.
 ///<br/>opacity-number	default-1
+///<br/><br/>
+///Options to customize the drag and drop in series.
+///<br/>dragSettings-any	default-
+///<br/><br/>
+///drag/drop the series
+///<br/>enable-boolean	default-false
+///<br/><br/>
+///Specifies the type of drag settings.
+///<br/>type-string	default-xy
 ///<br/><br/>
 ///Options to customize the error bar in series.
 ///<br/>errorBar-any	default-
@@ -5303,23 +5378,23 @@ hide:function(){
 /// Hides the ColorPicker popup, if in opened state.
 /// </summary>
 },
-HSVToRGB:function(hsv){
+HSVToRGB:function(HSV){
 /// <summary>
 /// Convert color value from HSV to RGB
 /// </summary>
-/// <param name="hsv"	type="any">Specified HSV code converted to RGB</param>
+/// <param name="HSV"	type="any">Specified HSV code converted to RGB</param>
 },
-RGBToHEX:function(rgb){
+RGBToHEX:function(RGB){
 /// <summary>
 /// Convert color value from RGB to HEX
 /// </summary>
-/// <param name="rgb"	type="any">Specified RGB code converted to HEX code</param>
+/// <param name="RGB"	type="any">Specified RGB code converted to HEX code</param>
 },
-RGBToHSV:function(rgb){
+RGBToHSV:function(RGB){
 /// <summary>
 /// Convert color value from RGB to HSV
 /// </summary>
-/// <param name="rgb"	type="any">Specified RGB code converted to HSV code</param>
+/// <param name="RGB"	type="any">Specified RGB code converted to HSV code</param>
 },
 show:function(){
 /// <summary>
@@ -5759,7 +5834,7 @@ jQuery.fn.ejDateRangePicker = function (options) {
 ///Formats the date value of the DateRangePicker in to the specified date format. If this API is not specified, dateFormat will be set based on the current culture of DateRangePicker.
 ///<br/>dateFormat-string	default-MM/dd/yyyy
 ///<br/><br/>
-///Allows to embed the Timepicker aling with the calendars in the page, two timepicker will be render, for selecting start and end date.
+///Allows to embed the Timepicker align with the calendars in the page, two timepicker will be render, for selecting start and end date.
 ///<br/>enableTimePicker-boolean	default-false
 ///<br/><br/>
 ///Enable or disable the DateRangePicker control.
@@ -5989,6 +6064,13 @@ addLabel:function(nodeName, newLabel){
 /// <param name="nodeName"	type="string">name of the node to which label will be added</param>
 /// <param name="newLabel"	type="any">JSON for the new label to be added</param>
 },
+addLane:function(lane, index){
+/// <summary>
+/// Add dynamic Lanes to swimlane at runtime
+/// </summary>
+/// <param name="lane"	type="any">JSON for the new lane to be added</param>
+/// <param name="index"	type="number">Index value to add the lane in swimlane</param>
+},
 addPhase:function(name, options){
 /// <summary>
 /// Add a phase to a swimlane at runtime
@@ -6062,7 +6144,7 @@ exportDiagram:function(options){
 /// <summary>
 /// Export the diagram as downloadable files or as data
 /// </summary>
-/// <param name="options"	type="Diagram.Options">options to export the desired region of diagram to the desired formats.NameTypeDescriptionfileNamestringname of the file to be downloaded.formatstringformat of the exported file/data. See [File Formats](/api/js/global#fileformats).modestringto set whether to export diagram as a file or as raw data. See [Export Modes](/api/js/global#exportmodes).regionstringto set the region of the diagram to be exported. See [Region](/api/js/global#region).boundsobjectto export any custom region of diagram.marginobjectto set margin to the exported data.</param>
+/// <param name="options"	type="Diagram.Options">options to export the desired region of diagram to the desired formats.</param>
 },
 findNode:function(name){
 /// <summary>
@@ -6281,11 +6363,11 @@ upgrade:function(data){
 /// </summary>
 /// <param name="data"	type="any">to be upgraded</param>
 },
-zoomTo:function(zoom){
+zoomTo:function(Zoom){
 /// <summary>
 /// Used to zoomIn/zoomOut diagram
 /// </summary>
-/// <param name="zoom"	type="any">options to zoom the diagram(zoom factor, zoomIn/zoomOut)</param>
+/// <param name="Zoom"	type="Diagram.Zoom">options to zoom the diagram(zoom factor, zoomIn/zoomOut)                </param>
 },
 };
 jQuery.fn.ejDiagram=function(){
@@ -6384,6 +6466,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///Sets the horizontal alignment of the label.
 ///<br/>horizontalAlignment-ej.datavisualization.Diagram.HorizontalAlignment|string	default-ej.datavisualization.Diagram.HorizontalAlignment.Center
+///<br/><br/>
+///Sets the hyperlink for the labels in the connectors.
+///<br/>hyperlink-string	default-none
 ///<br/><br/>
 ///Enables/disables the italic style
 ///<br/>italic-boolean	default-false
@@ -6553,6 +6638,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///Defines the target label to connector. Applicable, if the connector is of type "UML"
 ///<br/>target-ej.datavisualization.Diagram.ConnectorsShapeMultiplicitySource	default-true
 ///<br/><br/>
+///Defines the shape of UMLActivity to connector. Applicable, if the connector is of type UMLActivity
+///<br/>ActivityFlow-ej.datavisualization.Diagram.UMLActivityFlow|string	default-ej.datavisualization.Diagram.UMLActivityFlow.Control
+///<br/><br/>
 ///Defines the source decorator of the connector
 ///<br/>sourceDecorator-any	default-{ shape:arrow, width: 8, height:8, borderColor:black, fillColor:black }
 ///<br/><br/>
@@ -6652,6 +6740,12 @@ jQuery.fn.ejDiagram = function (options) {
 ///Defines the collection of context menu items
 ///<br/>items-Array&lt;any&gt;	default-[]
 ///<br/><br/>
+///Defines the image url for the collection of context menu items
+///<br/>imageUrl-string	default-null
+///<br/><br/>
+///Defines the CssClass for the collection of context menu items
+///<br/>cssClass-string	default-null
+///<br/><br/>
 ///To set whether to display the default context menu items or not
 ///<br/>showCustomMenuItemsOnly-boolean	default-false
 ///<br/><br/>
@@ -6732,6 +6826,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///The undoStack property is used to get the number of undo actions to be stored on the history manager. Its an read-only property and the collection should not be modified.
 ///<br/>undoStack-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Defines the type of the rendering mode of label.
+///<br/>labelRenderingMode-ej.datavisualization.Diagram.LabelRenderingMode|string	default-Html
 ///<br/><br/>
 ///Automatically arranges the nodes and connectors in a predefined manner.
 ///<br/>layout-Layout	default-
@@ -7096,6 +7193,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///Defines the transparency of the labels
 ///<br/>opacity-number	default-1
 ///<br/><br/>
+///Sets the overflowType of the labels
+///<br/>overflowType-ej.datavisualization.Diagram.OverflowType|string	default-ej.datavisualization.Diagram.OverflowType.Ellipsis
+///<br/><br/>
 ///Defines whether the label is editable or not
 ///<br/>readOnly-boolean	default-false
 ///<br/><br/>
@@ -7110,6 +7210,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///Sets how to decorate the label text.
 ///<br/>textDecoration-ej.datavisualization.Diagram.TextDecorations|string	default-ej.datavisualization.Diagram.TextDecorations.None
+///<br/><br/>
+///Defines the overflowed content is displayed or not.
+///<br/>textOverflow-boolean	default-false
 ///<br/><br/>
 ///Sets the vertical alignment of the label.
 ///<br/>verticalAlignment-ej.datavisualization.Diagram.VerticalAlignment|string	default-ej.datavisualization.Diagram.VerticalAlignment.Center
@@ -7325,7 +7428,7 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/>opacity-number	default-0.7
 ///<br/><br/>
 ///Sets the shape of the node. It depends upon the type of node.
-///<br/>shape-ej.datavisualization.Diagram.BasicShapes|string	default-ej.datavisualization.Diagram.BasicShapes.Rectangle
+///<br/>shape-ej.datavisualization.Diagram.BasicShapes | ej.datavisualization.Diagram.FlowShapes | ej.datavisualization.Diagram.BPMNShapes | ej.datavisualization.Diagram.UMLActivityShapes|string	default-ej.datavisualization.Diagram.BasicShapes.Rectangle
 ///<br/><br/>
 ///Sets the source path of the image. Applicable, if the type of the node is image.
 ///<br/>source-string	default-
@@ -9036,6 +9139,12 @@ jQuery.fn.ejGantt = function (options) {
 ///Specified the format for year view in schedule header
 ///<br/>yearHeaderFormat-string	default-yyyy
 ///<br/><br/>
+///Specifies the size of the lowest time unit along the timescale, with minimum value as "50%" and maximum value as "500%". It is also possble to set the value in pixels.
+///<br/>timscaleUnitSize-string	default-100%
+///<br/><br/>
+///Specifies the start day of the week in week timescale mode
+///<br/>weekStartDay-number	default-0
+///<br/><br/>
 ///Specifies start date of the Gantt schedule. By default, start date will be rounded to its previous Sunday.
 ///<br/>scheduleStartDate-string	default-null
 ///<br/><br/>
@@ -9521,6 +9630,11 @@ refreshBatchEditChanges:function(){
 /// It is used to refresh and reset the changes made in &quot;batch&quot; edit mode
 /// </summary>
 },
+refreshHeader:function(){
+/// <summary>
+/// It is used to refresh the grid header.
+/// </summary>
+},
 refreshContent:function(templateRefresh){
 /// <summary>
 /// Refresh the grid contents. The template refreshment is based on the argument passed along with this method
@@ -9994,6 +10108,15 @@ jQuery.fn.ejGrid = function (options) {
 ///To Disable the mouse swipe property as false.
 ///<br/>enableTouch-Boolean	default-true
 ///<br/><br/>
+///Act as mapper for the excel exporting URL.
+///<br/>exportToExcelAction-string	default-ExportToExcel
+///<br/><br/>
+///Act as mapper for the PDF exporting URL.
+///<br/>exportToPdfAction-string	default-ExportToPdf
+///<br/><br/>
+///Act as mapper for the Word exporting URL.
+///<br/>exportToWordAction-string	default-ExportToWord
+///<br/><br/>
 ///Gets or sets an object that indicates whether to customize the filtering behavior of the grid
 ///<br/>filterSettings-FilterSettings	default-
 ///<br/><br/>
@@ -10454,6 +10577,54 @@ jQuery.fn.ejHeatMap = function (options) {
 ///Specifies the name of the heat map.
 ///<br/>id-number	default-null
 ///<br/><br/>
+///Enables or disables tooltip of heatmap
+///<br/>showTooltip-boolean	default-true
+///<br/><br/>
+///Defines the tooltip that should be shown when the mouse hovers over rows/columns.
+///<br/>tooltipSettings-TooltipSettings	default-
+///<br/><br/>
+///Defines the tooltip that should be shown when the mouse hovers over rows/columns.
+///<br/>templateId-string	default-null
+///<br/><br/>
+///Defines the tooltip of associate that should be shown when the mouse hovers over rows/columns.
+///<br/>associate-ej.datavisualization.HeatMap.Associate|string	default-
+///<br/><br/>
+///Enables/ disables the balloon for the tooltip to be shown
+///<br/>isBalloon-boolean	default-true
+///<br/><br/>
+///Defines various attributes of the Tooltip position
+///<br/>position-any	default-
+///<br/><br/>
+///Sets the Tooltip position against target.
+///<br/>target-any	default-
+///<br/><br/>
+///Sets the arrow position again popup based on horizontal(x) value
+///<br/>horizontal-ej.datavisualization.HeatMap.Horizontal|string	default-center
+///<br/><br/>
+///Sets the arrow position again popup based on vertical(y) value
+///<br/>vertical-ej.datavisualization.HeatMap.Vertical|string	default-top
+///<br/><br/>
+///Sets the arrow position again popup.
+///<br/>stem-any	default-
+///<br/><br/>
+///Sets the arrow position again popup based on horizontal(x) value
+///<br/>horizontal-ej.datavisualization.HeatMap.Horizontal|string	default-center
+///<br/><br/>
+///Sets the arrow position again popup based on vertical(y) value
+///<br/>vertical-ej.datavisualization.HeatMap.Vertical|string	default-bottom
+///<br/><br/>
+///Defines the tooltip to be triggered.
+///<br/>trigger-ej.datavisualization.HeatMap.Trigger|string	default-hover
+///<br/><br/>
+///Defines the animation for the tooltip that should be shown when the mouse hovers over rows/columns.
+///<br/>animation-any	default-
+///<br/><br/>
+///Defines the animation effect for the tooltip that should be shown when the mouse hovers over rows/columns.
+///<br/>effect-ej.datavisualization.HeatMap.Effect|string	default-none
+///<br/><br/>
+///Defines the animation speed for the tooltip that should be shown when the mouse hovers over rows/columns.
+///<br/>speed-number	default-0
+///<br/><br/>
 ///Specifies the source data of the heat map.
 ///<br/>itemsSource-any	default-[]
 ///<br/><br/>
@@ -10833,10 +11004,10 @@ jQuery.fn.ejKanban = function (options) {
 ///<br/>key-string|number	default-null
 ///<br/><br/>
 ///To enable/disable allowDrop for specific column wise.
-///<br/>allowDrop-boolean	default-false
+///<br/>allowDrop-boolean	default-true
 ///<br/><br/>
 ///To enable/disable allowDrag for specific column wise.
-///<br/>allowDrag-boolean	default-false
+///<br/>allowDrag-boolean	default-true
 ///<br/><br/>
 ///To set column collapse or expand state
 ///<br/>isCollapsed-boolean	default-false
@@ -12567,7 +12738,7 @@ jQuery.fn.ejListView = function (options) {
 ///It specifies the HTTP request type.
 ///<br/>type-string	default-
 ///<br/><br/>
-///Set the index values to be selected on intial loading. This works only when enableCheckMark is set true.
+///Set the index values to be selected on initial loading. This works only when enableCheckMark is set true.
 ///<br/>checkedIndices-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Sets the root class for ListView theme. This cssClass API helps to use custom skinning option for ListView control. By defining the root class using this API, we need to include this root class in CSS.
@@ -13301,6 +13472,12 @@ jQuery.fn.ejMenu = function (options) {
 ///<br/><br/>
 ///Specifies the width of the main menu.
 ///<br/>width-string|number	default-auto
+///<br/><br/>
+///Specifies the popup menu height.
+///<br/>overflowHeight-string|number	default-auto
+///<br/><br/>
+///Specifies the popup menu width.
+///<br/>overflowWidth-string|number	default-auto
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -13504,15 +13681,17 @@ jQuery.fn.ejPager = function (options) {
 ej.PdfViewer=function(){};
 ej.PdfViewer.prototype={
 
-load:function(){
+load:function(fileName){
 /// <summary>
 /// Loads the document with the filename and displays it in PDF viewer.
 /// </summary>
+/// <param name="fileName"	type="string">File name to be loaded</param>
 },
-showToolbar:function(){
+showToolbar:function(show){
 /// <summary>
-/// Shows/hides the tool bar in the PDF viewer.
+/// Shows/hides the toolbar in the PDF viewer.
 /// </summary>
+/// <param name="show"	type="boolean">shows/hides the toolbar</param>
 },
 print:function(){
 /// <summary>
@@ -13521,33 +13700,37 @@ print:function(){
 },
 abortPrint:function(){
 /// <summary>
-/// Abort the printing function and restores the PDF Viewer.
+/// Abort the printing function and restores the PDF viewer.
 /// </summary>
 },
-showPrintTools:function(){
+showPrintTools:function(show){
 /// <summary>
-/// Shows/hides the print icon in the tool bar.
+/// Shows/hides the print icon in the toolbar.
 /// </summary>
+/// <param name="show"	type="boolean">shows/hides print button in the toolbar</param>
 },
 download:function(){
 /// <summary>
 /// Downloads the PDF document being loaded in the ejPdfViewer control.
 /// </summary>
 },
-showDownloadTool:function(){
+showDownloadTool:function(show){
 /// <summary>
-/// Shows/hides the download tool in the tool bar.
+/// Shows/hides the download tool in the toolbar.
 /// </summary>
+/// <param name="show"	type="boolean">shows/hides download button in the toolbar</param>
 },
-showPageNavigationTools:function(){
+showPageNavigationTools:function(show){
 /// <summary>
 /// Shows/hides the page navigation tools in the toolbar
 /// </summary>
+/// <param name="show"	type="boolean">shows/hides navigation tools in the toolbar</param>
 },
-goToPage:function(){
+goToPage:function(pageNumber){
 /// <summary>
 /// Navigates to the specific page in the PDF document. If the page is not available for the given pageNumber, PDF viewer retains the existing page in view.
 /// </summary>
+/// <param name="pageNumber"	type="number">navigates to the page number in the PDF document</param>
 },
 goToLastPage:function(){
 /// <summary>
@@ -13569,10 +13752,11 @@ goToPreviousPage:function(){
 /// Navigates to the previous page of the PDF document.
 /// </summary>
 },
-showMagnificationTools:function(){
+showMagnificationTools:function(show){
 /// <summary>
-/// Shows/hides the zoom tools in the tool bar.
+/// Shows/hides the zoom tools in the toolbar.
 /// </summary>
+/// <param name="show"	type="boolean">shows/hides zoom tools in the toolbar</param>
 },
 fitToPage:function(){
 /// <summary>
@@ -13594,9 +13778,15 @@ zoomOut:function(){
 /// Shrinks the page to the previous value in the magnification in the drop down list.
 /// </summary>
 },
-zoomTo:function(){
+zoomTo:function(zoomValue){
 /// <summary>
 /// Scales the page to the specified percentage ranging from 50 to 400. If the given zoomValue is less than 50 or greater than 400; the PDF viewer scales the page to 50 and 400 respectively.
+/// </summary>
+/// <param name="zoomValue"	type="number">zoom value for scaling the pages in the PDF Viewer</param>
+},
+unload:function(){
+/// <summary>
+/// Unloads the PDF document being displayed in the PDF viewer.
 /// </summary>
 },
 };
@@ -13606,30 +13796,48 @@ return this;
 };
 jQuery.fn.ejPdfViewer = function (options) {
 /// <summary><br/>
-///PDF Viewer JS is visualization component to view PDF documents. It is powered by HTML5/JavaScript and provides various control customizations.<br/><br/>
+///PDF viewer JS is visualization component to view PDF documents. It is powered by HTML5/JavaScript and provides various control customizations.<br/><br/>
 ///Specifies the locale information of the PDF viewer.
-///<br/>locale-String	default-
+///<br/>locale-string	default-
 ///<br/><br/>
 ///Specifies the toolbar settings.
 ///<br/>toolbarSettings-ToolbarSettings	default-
 ///<br/><br/>
 ///Shows or hides the tooltip of the toolbar items.
-///<br/>showToolTip-Boolean	default-
+///<br/>showToolTip-boolean	default-
 ///<br/><br/>
 ///Shows or hides the grouped items in the toolbar with the help of enum ej.PdfViewer.ToolbarItems
-///<br/>toolbarItems-ej.PdfViewer.ToolbarItems|string	default-
+///<br/>toolbarItem-ej.PdfViewer.ToolbarItems|string	default-
+///<br/><br/>
+///Specifies the name of the action method in the server.
+///<br/>serverActionSettings-ServerActionSettings	default-
+///<br/><br/>
+///Specifies the name of the action method used for loading the PDF document.
+///<br/>load-string	default-
+///<br/><br/>
+///Specifies the name of the action method used for uploading the PDF document to the PDF viewer control.
+///<br/>fileUpload-string	default-
+///<br/><br/>
+///Specifies the name of the action method used for printing the PDF document in the PDF viewer control.
+///<br/>print-string	default-
+///<br/><br/>
+///Specifies the name of the action method used for downloading the PDF document from the PDF viewer control.
+///<br/>download-string	default-
 ///<br/><br/>
 ///Sets the PDF Web API service URL
-///<br/>serviceUrl-String	default-
+///<br/>serviceUrl-string	default-
+///<br/><br/>
+///Sets the PDF document path for initial loading.
+///<br/>documentPath-string	default-
 ///<br/><br/>
 ///Gets the total number of pages in PDF document.
-///<br/>pageCount-Number	default-
+///<br/>pageCount-number	default-
 ///<br/><br/>
-///Gets the number of the page being displayed in the PDF Viewer.
-///<br/>currentPageNumber-Number	default-
+///Gets the number of the page being displayed in the PDF viewer.
+///<br/>currentPageNumber-number	default-
 ///<br/><br/>
 ///Gets the current zoom percentage of the PDF document in viewer.
-///<br/>zoomPercentage-Number	default-
+///<br/>zoomPercentage-number	default-
 ///<br/><br/>
 ///Specifies the location of the supporting PDF service
 ///<br/>pdfService-ej.PdfViewer.PdfService|string	default-
@@ -13637,8 +13845,20 @@ jQuery.fn.ejPdfViewer = function (options) {
 ///Specifies the open state of the hyperlink in the PDF document.
 ///<br/>hyperlinkOpenState-ej.PdfViewer.LinkTarget|string	default-
 ///<br/><br/>
-///Enables or disables the responsive support for PDF Viewer control during the window resizing time.
-///<br/>isResponsive-Boolean	default-
+///Enables or disables the hyperlinks in PDF document.
+///<br/>enableHyperlink-boolean	default-
+///<br/><br/>
+///Enables or disables the text selection in PDF document.
+///<br/>enableTextSelection-boolean	default-
+///<br/><br/>
+///Enables or disables the responsiveness of the PDF viewer control during the window resize.
+///<br/>isResponsive-boolean	default-
+///<br/><br/>
+///Checks whether the PDF document is edited.
+///<br/>isDocumentEdited-boolean	default-
+///<br/><br/>
+///Enables or disables the buffering of the PDF pages in the client side.
+///<br/>allowClientBuffering-boolean	default-
 ///<br/><br/>
 ///Gets the name of the PDF document which loaded in the ejPdfViewer control for downloading.
 ///<br/>fileName-string	default-
@@ -14217,6 +14437,9 @@ jQuery.fn.ejPivotClient = function (options) {
 ///<br/><br/>
 ///Sets the display mode (Only Chart/Only Grid/Both) in PivotClient.
 ///<br/>mode-ej.PivotClient.DisplayMode|string	default-ej.PivotClient.DisplayMode.ChartAndGrid
+///<br/><br/>
+///Enables the splitter option for resizing the elements inside the control.
+///<br/>enableSplitter-boolean	default-false
 ///<br/><br/>
 ///Enables the advanced filtering options Value Filtering, Label Filtering and Sorting for each dimensions on binding OLAP data in server mode.
 ///<br/>enableAdvancedFilter-boolean	default-false
@@ -14861,6 +15084,18 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Allows to set the page number in series axis to be loaded by default.
 ///<br/>seriesCurrentPage-number	default-1
 ///<br/><br/>
+///Holds the neccessary properties for value sorting.
+///<br/>valueSortSettings-ValueSortSettings	default-{}
+///<br/><br/>
+///Contains the headers of the specific column to which value sorting is applied.
+///<br/>headerText-string	default-
+///<br/><br/>
+///Allows the user to set the string for separating column headers provided in the above property headerText.
+///<br/>headerDelimiters-string	default-
+///<br/><br/>
+///Allows the user to set the sorting order of the values of the field.
+///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
+///<br/><br/>
 ///Object that holds the settings of frozen headers.
 ///<br/>frozenHeaderSettings-FrozenHeaderSettings	default-{}
 ///<br/><br/>
@@ -14885,7 +15120,7 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Enables the cell selection for a specific range of value cells.
 ///<br/>enableCellSelection-boolean	default-false
 ///<br/><br/>
-///Enables the Drill-Through feature which retrieves the raw items that are used to create the specific cell in PivotGrid. This is only applicable in server mode component.
+///Enables the Drill-Through feature which retrieves the raw items that are used to create the specific cell in PivotGrid.
 ///<br/>enableDrillThrough-boolean	default-false
 ///<br/><br/>
 ///Allows user to get the cell details in JSON format on double clicking the cell.
@@ -17517,6 +17752,24 @@ jQuery.fn.ejRTE = function (options) {
 ///Enables the tab key action with the RichTextEditor content.
 ///<br/>enableTabKeyNavigation-boolean	default-True
 ///<br/><br/>
+///This API allows to enable url and fileName for pdf export.
+///<br/>exportToPdfSettings-ExportToPdfSettings	default-null
+///<br/><br/>
+///This API is used to receive the server-side handler for export related operations.
+///<br/>url-string	default-
+///<br/><br/>
+///Specifies the file name for the exported pdf file.
+///<br/>fileName-string	default-
+///<br/><br/>
+///This API allows to enable url and fileName for word export.
+///<br/>exportToWordSettings-ExportToWordSettings	default-null
+///<br/><br/>
+///This API is used to receive the server-side handler for export related operations.
+///<br/>url-string	default-
+///<br/><br/>
+///Specifies the file name for the exported word file.
+///<br/>fileName-string	default-
+///<br/><br/>
 ///Load the external CSS file inside Iframe.
 ///<br/>externalCSS-string	default-null
 ///<br/><br/>
@@ -17561,6 +17814,12 @@ jQuery.fn.ejRTE = function (options) {
 ///<br/><br/>
 ///Specifies the directory to perform operations like create, delete and rename folder and files, and upload the selected images to the current directory.
 ///<br/>filePath-string	default-
+///<br/><br/>
+///This API allows to enable the url for connecting to RTE import.
+///<br/>importSettings-ImportSettings	default-null
+///<br/><br/>
+///This API is used to receive the server-side handler for import operations.
+///<br/>url-string	default-
 ///<br/><br/>
 ///Enables/disables responsive support for the RTE control toolbar items during the window resizing time.
 ///<br/>isResponsive-boolean	default-false
@@ -17687,6 +17946,9 @@ jQuery.fn.ejRTE = function (options) {
 ///<br/><br/>
 ///Specifies the print tools and the display order of this tool in the RTE toolbar.
 ///<br/>print-Array&lt;any&gt;	default-
+///<br/><br/>
+///Specifies the importExport tools and the display order of this tool in the RTE toolbar.
+///<br/>importExport-Array&lt;any&gt;	default-
 ///<br/><br/>
 ///Specifies the customOrderedList tools and the display order of this tool in the RTE toolbar.
 ///<br/>customOrderedList-Array&lt;any&gt;	default-
@@ -18894,6 +19156,12 @@ jQuery.fn.ejSpellCheck = function (options) {
 ///<br/><br/>
 ///When set to true, ignoring the file address path from the error word consideration.
 ///<br/>ignoreFileNames-boolean	default-true
+///<br/><br/>
+///When set to true, allows the spellcheck to render based upon screen size.
+///<br/>isResponsive-boolean	default-true
+///<br/><br/>
+///It allows to spell check the multiple target HTML element's texts and correct its error words.
+///<br/>controlsToValidate-string	default-null
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -19118,9 +19386,14 @@ clearRangeData:function(range, property, cells, skipHiddenRow, status, skipCell)
 /// <param name="range"	type="Array&lt;any&gt;|string">Optional. If range is specified, it will clear data for the specified range else it will use the current selected range. </param>
 /// <param name="property"	type="string">Optional. If property is specified, it will remove the specified property in the range else it will remove default properties </param>
 /// <param name="cells"	type="any">Optional.</param>
-/// <param name="skipHiddenRow"	type="boolean">Optional. pass `true`, if you want to skip the hidden rows </param>
+/// <param name="skipHiddenRow"	type="boolean">Optional. pass {{'`true`' | markdownify}}, if you want to skip the hidden rows </param>
 /// <param name="status"	type="any">Optional. Pass the status to perform undo and redo operation.</param>
 /// <param name="skipCell"	type="any">Optional. It specifies whether to skip element processing or not.</param>
+},
+clearUndoRedo:function(){
+/// <summary>
+/// This method is used to clear undo and redo collections in the Spreadsheet.
+/// </summary>
 },
 copySheet:function(fromIdx, toIdx, isCopySheet){
 /// <summary>
@@ -19128,7 +19401,7 @@ copySheet:function(fromIdx, toIdx, isCopySheet){
 /// </summary>
 /// <param name="fromIdx"	type="number">Pass the sheet index that you want to copy or move.</param>
 /// <param name="toIdx"	type="number">Pass the position index where you want to copy or move.</param>
-/// <param name="isCopySheet"	type="boolean">Pass `true`,If you want to copy sheet or else it will move sheet.</param>
+/// <param name="isCopySheet"	type="boolean">Pass {{'`true`' | markdownify}},If you want to copy sheet or else it will move sheet.</param>
 },
 deleteEntireColumn:function(startCol, endCol){
 /// <summary>
@@ -19236,7 +19509,7 @@ getRange:function(range, sheetIdx, skipHiddenRow){
 /// </summary>
 /// <param name="range"	type="string">Pass the range that you want to get the cells.</param>
 /// <param name="sheetIdx"	type="number">Pass the index of the sheet.</param>
-/// <param name="skipHiddenRow"	type="boolean">Optional. Pass `true`, if you want to skip the hidden rows.</param>
+/// <param name="skipHiddenRow"	type="boolean">Optional. Pass {{'`true`' | markdownify}}, if you want to skip the hidden rows.</param>
 },
 getRangeData:function(options){
 /// <summary>
@@ -19262,12 +19535,17 @@ getSheetElement:function(sheetIdx){
 /// </summary>
 /// <param name="sheetIdx"	type="number">Pass the sheet index to get the sheet content.</param>
 },
+getSheets:function(){
+/// <summary>
+/// This method is used to get all the sheets in workbook.
+/// </summary>
+},
 gotoPage:function(sheetIdx, newSheet){
 /// <summary>
 /// This method is used to send a paging request to the specified sheet Index in the Spreadsheet.
 /// </summary>
 /// <param name="sheetIdx"	type="number">Pass the sheet index to perform paging at specified sheet index</param>
-/// <param name="newSheet"	type="boolean">Pass `true` to create a new sheet. If the specified sheet index is already exist, it navigate to that sheet else it create a new sheet.</param>
+/// <param name="newSheet"	type="boolean">Pass {{'`true`' | markdownify}} to create a new sheet. If the specified sheet index is already exist, it navigate to that sheet else it create a new sheet.</param>
 },
 hideColumn:function(startCol, endCol){
 /// <summary>
@@ -19349,21 +19627,28 @@ lockCells:function(range, isLocked){
 /// This method is used to lock/unlock the range of cells in active sheet. Lock cells are activated only after the sheet is protected. Once the sheet is protected it is unable to lock/unlock cells.
 /// </summary>
 /// <param name="range"	type="string|Array&lt;any&gt;">Pass the alpha range cells or array range of cells.</param>
-/// <param name="isLocked"	type="string">Optional. By default is `true`. If it is `false` locked cells are unlocked.</param>
+/// <param name="isLocked"	type="string">Optional. By default is {{'`true`' | markdownify}}. If it is {{'`false`' | markdownify}} locked cells are unlocked.</param>
 },
 mergeAcrossCells:function(range, alertStatus){
 /// <summary>
 /// This method is used to merge cells by across in the Spreadsheet.
 /// </summary>
 /// <param name="range"	type="string">Optional. To pass the cell range or selected cells are process.</param>
-/// <param name="alertStatus"	type="boolean">Optional. If pass `true` it does not show alert.</param>
+/// <param name="alertStatus"	type="boolean">Optional. If pass {{'`true`' | markdownify}} it does not show alert.</param>
 },
 mergeCells:function(range, alertStatus){
 /// <summary>
 /// This method is used to merge the selected cells in the Spreadsheet.
 /// </summary>
 /// <param name="range"	type="string|Array&lt;any&gt;">Optional. To pass the cell range or selected cells are process.</param>
-/// <param name="alertStatus"	type="boolean">Optional. If pass `true` it does not show alert.</param>
+/// <param name="alertStatus"	type="boolean">Optional. If pass {{'`true`' | markdownify}} it does not show alert.</param>
+},
+performSelection:function(startCell, endCell){
+/// <summary>
+/// This method is used to select a cell or range in the Spreadsheet.
+/// </summary>
+/// <param name="startCell"	type="any">Pass the start cell to perform selection.</param>
+/// <param name="endCell"	type="any">Pass the end cell to perform selection.</param>
 },
 protectSheet:function(isProtected){
 /// <summary>
@@ -19394,16 +19679,22 @@ removeHyperlink:function(range, isClearHLink, status, cells, skipHiddenRow){
 /// This method is used to remove the hyperlink from selected cells of current sheet.
 /// </summary>
 /// <param name="range"	type="string">Hyperlink remove from the specified range.</param>
-/// <param name="isClearHLink"	type="boolean">Optional. If it is `true`, It will clear link only not format.</param>
+/// <param name="isClearHLink"	type="boolean">Optional. If it is {{'`true`' | markdownify}}, It will clear link only not format.</param>
 /// <param name="status"	type="boolean">Optional. Pass the status to perform undo and redo operations.</param>
 /// <param name="cells"	type="any">Optional. Pass the cells that you want to remove hyperlink.</param>
-/// <param name="skipHiddenRow"	type="boolean">Optional. Pass `true`, if you want to skip the hidden rows.</param>
+/// <param name="skipHiddenRow"	type="boolean">Optional. Pass {{'`true`' | markdownify}}, if you want to skip the hidden rows.</param>
 },
 removeRange:function(rangeName){
 /// <summary>
 /// This method is used to remove the range data and its defined rangeSettings property based on the specified range name.
 /// </summary>
 /// <param name="rangeName"	type="string">Pass the defined rangeSetting property name.</param>
+},
+removeReadOnly:function(range){
+/// <summary>
+/// This method is used to remove the readonly option for the specified range.
+/// </summary>
+/// <param name="range"	type="string|Array&lt;any&gt;">Pass the range.</param>
 },
 saveAsJSON:function(){
 /// <summary>
@@ -19437,6 +19728,12 @@ setBorder:function(property, range){
 /// <param name="property"	type="any">Pass the border properties that you want to set.</param>
 /// <param name="range"	type="string">Optional. If range is specified, it will set border for the specified range else it will use the selected range.</param>
 },
+setHeightToRows:function(heightColl){
+/// <summary>
+/// This method is used to set the height for the rows in the Spreadsheet.
+/// </summary>
+/// <param name="heightColl"	type="Array&lt;any&gt;|any">Pass the row index and height of the rows.</param>
+},
 setHyperlink:function(range, link, sheetIdx){
 /// <summary>
 /// This method is used to set the hyperlink in selected cells of the current sheet.
@@ -19444,6 +19741,12 @@ setHyperlink:function(range, link, sheetIdx){
 /// <param name="range"	type="string|Array&lt;any&gt;">If range is specified, it will set the hyperlink in range of the cells.</param>
 /// <param name="link"	type="any">Pass cellAddress or webAddress</param>
 /// <param name="sheetIdx"	type="number">If we pass cellAddress then which sheet to be navigate in the applied link.</param>
+},
+setReadOnly:function(range){
+/// <summary>
+/// This method is used to set the readonly option for the specified range.
+/// </summary>
+/// <param name="range"	type="string|Array&lt;any&gt;">Pass the range.</param>
 },
 setSheetFocus:function(){
 /// <summary>
@@ -19484,13 +19787,19 @@ showGridlines:function(status){
 /// <summary>
 /// This method is used to show/hide gridlines in active sheet in the Spreadsheet.
 /// </summary>
-/// <param name="status"	type="boolean">Pass `true` to show the gridlines</param>
+/// <param name="status"	type="boolean">Pass {{'`true`' | markdownify}} to show the gridlines</param>
 },
 showHeadings:function(startRow){
 /// <summary>
 /// This method is used to show/hide the headers in active sheet in the Spreadsheet.
 /// </summary>
-/// <param name="startRow"	type="boolean">Pass `true` to show the sheet headers.</param>
+/// <param name="startRow"	type="boolean">Pass {{'`true`' | markdownify}} to show the sheet headers.</param>
+},
+showPager:function(status){
+/// <summary>
+/// This method is used to show/hide pager in the Spreadsheet.
+/// </summary>
+/// <param name="status"	type="boolean">Pass {{'`true`' | markdownify}} to show pager.</param>
 },
 showRow:function(startRow, endRow){
 /// <summary>
@@ -19546,6 +19855,12 @@ updateRange:function(sheetIdx, settings){
 /// <param name="sheetIdx"	type="number">Pass the sheet index that you want to update.</param>
 /// <param name="settings"	type="any">Pass the dataSource, startCell and showHeader values as settings.</param>
 },
+updateUndoRedoCollection:function(details){
+/// <summary>
+/// This method is used to update the details for custom undo and redo operations.
+/// </summary>
+/// <param name="details"	type="any">Pass the details to update undo and redo collection</param>
+},
 updateUniqueData:function(data, range, skipCell){
 /// <summary>
 /// This method is used to update the unique data for the specified range of cells in Spreadsheet.
@@ -19574,7 +19889,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 /// <summary><br/>
 ///The Spreadsheet can be easily configured to the DOM element, such as div. you can create a Spreadsheet with a highly customizable look and feel.<br/><br/>
 ///Gets or sets an active sheet index in the Spreadsheet. By defining this value, you can specify which sheet should be active in workbook.
-///<br/>activeSheetIndex-Number	default-1
+///<br/>activeSheetIndex-number	default-1
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable auto rendering of cell type in the Spreadsheet.
 ///<br/>allowAutoCellType-boolean	default-false
@@ -19673,7 +19988,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>allowWrap-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the width of the activation panel in Spreadsheet.
-///<br/>apWidth-Number	default-300
+///<br/>apWidth-number	default-300
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the auto fill behavior in the Spreadsheet.
 ///<br/>autoFillSettings-AutoFillSettings	default-
@@ -19688,16 +20003,16 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>chartSettings-ChartSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that defines the chart height in Spreadsheet.
-///<br/>height-Number	default-220
+///<br/>height-number	default-220
 ///<br/><br/>
 ///Gets or sets a value that defines the chart width in the Spreadsheet.
-///<br/>width-Number	default-440
+///<br/>width-number	default-440
 ///<br/><br/>
 ///Gets or sets a value that defines the number of columns displayed in the sheet.
-///<br/>columnCount-Number	default-21
+///<br/>columnCount-number	default-21
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the common width for each column in the Spreadsheet.
-///<br/>columnWidth-Number	default-64
+///<br/>columnWidth-number	default-64
 ///<br/><br/>
 ///Gets or sets a value to add root CSS class for customizing Spreadsheet skins.
 ///<br/>cssClass-string	default-
@@ -19772,10 +20087,10 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>allowPictures-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to define height to picture in the Spreadsheet.
-///<br/>height-Number	default-220
+///<br/>height-number	default-220
 ///<br/><br/>
 ///Gets or sets a value that indicates to define width to picture in the Spreadsheet.
-///<br/>width-Number	default-440
+///<br/>width-number	default-440
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the print option in Spreadsheet.
 ///<br/>printSettings-PrintSettings	default-
@@ -19808,10 +20123,10 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>dataSource-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the number of rows to be displayed in the sheet.
-///<br/>rowCount-Number	default-20
+///<br/>rowCount-number	default-20
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the common height for each row in the sheet.
-///<br/>rowHeight-Number	default-20
+///<br/>rowHeight-number	default-20
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the scroll options in the Spreadsheet.
 ///<br/>scrollSettings-ScrollSettings	default-
@@ -19826,7 +20141,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>allowVirtualScrolling-boolean	default-true
 ///<br/><br/>
 ///Gets or sets the value that indicates to define the height of spreadsheet.
-///<br/>height-Number|string	default-100%
+///<br/>height-number|string	default-100%
 ///<br/><br/>
 ///Gets or sets the value that indicates whether to enable or disable responsive mode in the Spreadsheet.
 ///<br/>isResponsive-boolean	default-true
@@ -19835,7 +20150,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>scrollMode-ej.Spreadsheet.scrollMode|string	default-ej.Spreadsheet.scrollMode.Infinite
 ///<br/><br/>
 ///Gets or sets the value that indicates to define the height of the spreadsheet.
-///<br/>width-Number|string	default-100%
+///<br/>width-number|string	default-100%
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the selection options in the Spreadsheet.
 ///<br/>selectionSettings-SelectionSettings	default-
@@ -19844,7 +20159,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>activeCell-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to define animation time while selection in the Spreadsheet.
-///<br/>animationTime-Number	default-0.001
+///<br/>animationTime-number	default-0.001
 ///<br/><br/>
 ///Gets or sets a value that indicates to enable or disable animation while selection.
 ///<br/>enableAnimation-boolean	default-false
@@ -19856,7 +20171,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>selectionUnit-ej.Spreadsheet.SelectionUnit|string	default-ej.Spreadsheet.SelectionUnit.MultiRange
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the number of sheets to be created at the initial load.
-///<br/>sheetCount-Number	default-1
+///<br/>sheetCount-number	default-1
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the sheet behavior in Spreadsheet.
 ///<br/>sheets-Array&lt;Sheets&gt;	default-
@@ -19889,10 +20204,10 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>range-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to define column count in the Spreadsheet.
-///<br/>colCount-Number	default-21
+///<br/>colCount-number	default-21
 ///<br/><br/>
 ///Gets or sets a value that indicates to define column width in the Spreadsheet.
-///<br/>columnWidth-Number	default-64
+///<br/>columnWidth-number	default-64
 ///<br/><br/>
 ///Gets or sets the data to render the Spreadsheet.
 ///<br/>dataSource-any	default-null
@@ -19940,13 +20255,13 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>startCell-string	default-A1
 ///<br/><br/>
 ///Gets or sets a value that indicates to define row count in the Spreadsheet.
-///<br/>rowCount-Number	default-20
+///<br/>rowCount-number	default-20
 ///<br/><br/>
 ///Specifies the rows for a sheet in Spreadsheet.
 ///<br/>rows-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets the height of a row in Spreadsheet.
-///<br/>height-Number	default-20
+///<br/>height-number	default-20
 ///<br/><br/>
 ///Specifies the cells of a row in Spreadsheet.
 ///<br/>cells-Array&lt;any&gt;	default-[]
@@ -19963,6 +20278,15 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Specifies the format of a cell in Spreadsheet.
 ///<br/>format-any	default-null
 ///<br/><br/>
+///Specifies the number of decimal places for the given input.
+///<br/>decimalPlaces-number	default-2
+///<br/><br/>
+///Specifies the string format for the given input.
+///<br/>formatStr-string	default-
+///<br/><br/>
+///Specifies the thousand separator for the given input.
+///<br/>thousandSeparator-boolean	default-false
+///<br/><br/>
 ///Specifies the type of the format in Spreadsheet.
 ///<br/>type-string	default-
 ///<br/><br/>
@@ -19976,10 +20300,13 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>cellAddr-string	default-
 ///<br/><br/>
 ///Specifies the sheet index to which the cell is referred.
-///<br/>sheetIndex-Number	default-1
+///<br/>sheetIndex-number	default-1
 ///<br/><br/>
 ///Specifies the index of a cell in Spreadsheet.
-///<br/>index-Number	default-0
+///<br/>index-number	default-0
+///<br/><br/>
+///Specifies whether to lock or unlock a particular cell.
+///<br/>isLocked-boolean	default-false
 ///<br/><br/>
 ///Specifies the styles of a cell in Spreadsheet.
 ///<br/>style-any	default-null
@@ -19997,7 +20324,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>value-string	default-
 ///<br/><br/>
 ///Gets or sets the index of a row in Spreadsheet.
-///<br/>index-Number	default-0
+///<br/>index-number	default-0
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show or hide grid lines in the Spreadsheet.
 ///<br/>showGridlines-boolean	default-true
@@ -20018,7 +20345,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/>showRibbon-boolean	default-true
 ///<br/><br/>
 ///This is used to set the number of undo-redo steps in the Spreadsheet.
-///<br/>undoRedoStep-Number	default-20
+///<br/>undoRedoStep-number	default-20
 ///<br/><br/>
 ///Define the username for the Spreadsheet which is displayed in comment.
 ///<br/>userName-string	default-User Name
@@ -20027,9 +20354,456 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///The widget configuration options
 ///</param>
 };
+ej.SunburstChart=function(){};
+ej.SunburstChart.prototype={
+
+redraw:function(){
+/// <summary>
+/// Redraws the entire sunburst. You can call this method whenever you update, add or remove points from the data source or whenever you want to refresh the UI.
+/// </summary>
+},
+_destroy:function(){
+/// <summary>
+/// destroy the sunburst
+/// </summary>
+},
+};
+jQuery.fn.ejSunburstChart=function(){
+this.data("ejSunburstChart",new	ej.SunburstChart());
+return this;
+};
+jQuery.fn.ejSunburstChart = function (options) {
+/// <summary><br/>
+///Essential Sunburst can be easily configured to the DOM element, such as div. You can create a Sunburst with highly customizable look and feel.<br/><br/>
+///Background color of the plot area.
+///<br/>background-string	default-null
+///<br/><br/>
+///Bind the data field from the data source.
+///<br/>valueMemberPath-string	default-null
+///<br/><br/>
+///Options for customizing the sunburst border.
+///<br/>border-Border	default-
+///<br/><br/>
+///Border color of the sunburst.
+///<br/>color-string	default-null
+///<br/><br/>
+///Width of the Sunburst border.
+///<br/>width-number	default-2
+///<br/><br/>
+///Options for customizing the sunburst segment border.
+///<br/>segmentBorder-SegmentBorder	default-
+///<br/><br/>
+///Segment Border color of the sunburst.
+///<br/>color-string	default-null
+///<br/><br/>
+///Width of the Sunburst segment border.
+///<br/>width-number	default-2
+///<br/><br/>
+///Specifies the dataSource to the sunburst.
+///<br/>dataSource-any	default-null
+///<br/><br/>
+///Palette color for the data points.
+///<br/>palette-string	default-null
+///<br/><br/>
+///Parent node of the data points.
+///<br/>parentNode-string	default-null
+///<br/><br/>
+///Name of the property in the datasource that contains x values.
+///<br/>xName-string	default-null
+///<br/><br/>
+///Name of the property in the datasource that contains y values.
+///<br/>yName-string	default-null
+///<br/><br/>
+///Controls wheather sunburst has to be responsive or not.
+///<br/>isResponsive-boolean	default-true
+///<br/><br/>
+///Options to customize the Sunburst size.
+///<br/>size-Size	default-
+///<br/><br/>
+///Height of the Sunburst.
+///<br/>height-string	default-&#39;&#39;
+///<br/><br/>
+///Width of the Sunburst.
+///<br/>width-string	default-&#39;&#39;
+///<br/><br/>
+///Controls the visibility of sunburst.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Options to customize the Sunburst tooltip.
+///<br/>tooltip-Tooltip	default-
+///<br/><br/>
+///tooltip visibility of the Sunburst.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Options for customizing the border of the sunburst tooltip.
+///<br/>border-any	default-
+///<br/><br/>
+///Border color of the tooltip.
+///<br/>color-string	default-null
+///<br/><br/>
+///Border width of the tooltip.
+///<br/>width-number	default-5
+///<br/><br/>
+///Fill color for the sunburst tooltip.
+///<br/>fill-string	default-null
+///<br/><br/>
+///Options for customizing the font of the tooltip.
+///<br/>font-any	default-
+///<br/><br/>
+///Font color of the text in the tooltip.
+///<br/>color-string	default-null
+///<br/><br/>
+///Font Family for the tooltip.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Specifies the font Style for the tooltip.
+///<br/>fontStyle-ej.datavisualization.Sunburst.FontStyle|string	default-Normal
+///<br/><br/>
+///Specifies the font weight for the tooltip.
+///<br/>fontWeight-ej.datavisualization.Sunburst.FontWeight|string	default-Regular
+///<br/><br/>
+///Opacity for text in the tooltip.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Font size for text in the tooltip.
+///<br/>size-string	default-12px
+///<br/><br/>
+///Custom template to the tooltip.
+///<br/>template-string	default-null
+///<br/><br/>
+///Options for customizing sunburst points.
+///<br/>points-Points	default-
+///<br/><br/>
+///Points x value of the sunburst.
+///<br/>x-string	default-null
+///<br/><br/>
+///Points y value of the sunburst.
+///<br/>y-number	default-null
+///<br/><br/>
+///Points text of the sunburst.
+///<br/>text-string	default-null
+///<br/><br/>
+///Points fill color of the sunburst.
+///<br/>fill-string	default-null
+///<br/><br/>
+///Sunburst rendering will start from the specified value
+///<br/>startAngle-number	default-null
+///<br/><br/>
+///Sunburst rendering will end at the specified value
+///<br/>endAngle-number	default-null
+///<br/><br/>
+///Sunburst outer radius value
+///<br/>radius-number	default-1
+///<br/><br/>
+///Sunburst inner radius value
+///<br/>innerRadius-number	default-0.4
+///<br/><br/>
+///Options to customize the Sunburst dataLabel.
+///<br/>dataLabelSettings-DataLabelSettings	default-
+///<br/><br/>
+///Datalabel visibility of the Sunburst.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///Alginment of sunburst datalabel
+///<br/>labelRotationMode-ej.datavisualization.Sunburst.SunburstLabelRotationMode|string	default-Angle. See DatalabelAlignment
+///<br/><br/>
+///Options for customizing the data label font.
+///<br/>font-any	default-
+///<br/><br/>
+///Font family of the data label.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style of the data label.
+///<br/>fontStyle-ej.datavisualization.Sunburst.FontStyle|string	default-normal. See FontStyle
+///<br/><br/>
+///Font weight of the data label.
+///<br/>fontWeight-ej.datavisualization.Sunburst.FontWeight|string	default-regular. See FontWeight
+///<br/><br/>
+///Opacity of the text.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Font color of the data label text.
+///<br/>color-string	default-null
+///<br/><br/>
+///Font size of the data label.
+///<br/>size-string	default-12px
+///<br/><br/>
+///Custome template for datalabel
+///<br/>template-string	default-null
+///<br/><br/>
+///Fill color for the datalable
+///<br/>fill-string	default-null
+///<br/><br/>
+///Datalabel overflow mode
+///<br/>labelOverflowMode-ej.datavisualization.Sunburst.SunburstLabelOverflowMode|string	default-Trim. See LabelOverflowMode
+///<br/><br/>
+///Options for customizing the title and subtitle of sunburst.
+///<br/>title-Title	default-
+///<br/><br/>
+///Title text for sunburst
+///<br/>text-string	default-
+///<br/><br/>
+///Title text visibility for sunburst
+///<br/>visible-string	default-true
+///<br/><br/>
+///Title text alignment
+///<br/>textAlignment-ej.datavisualization.Sunburst.SunburstAlignment|string	default-center. See TextAlignment
+///<br/><br/>
+///Options for customizing the font of sunburst title.
+///<br/>font-any	default-
+///<br/><br/>
+///Font family for Sunburst title.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style for Sunburst title.
+///<br/>fontStyle-ej.datavisualization.Sunburst.FontStyle|string	default-Normal. See FontStyle
+///<br/><br/>
+///Font weight for Sunburst title.
+///<br/>fontWeight-ej.datavisualization.Sunburst.FontWeight|string	default-Regular. See FontWeight
+///<br/><br/>
+///Opacity of the Sunburst title.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Font size for Sunburst title.
+///<br/>size-string	default-20px
+///<br/><br/>
+///Options to customize the sub title of Sunburst.
+///<br/>subtitle-any	default-
+///<br/><br/>
+///Subtitle text for sunburst
+///<br/>text-string	default-
+///<br/><br/>
+///Sub title text visibility for sunburst
+///<br/>visible-string	default-true
+///<br/><br/>
+///Sub title text alignment
+///<br/>textAlignment-ej.datavisualization.Sunburst.SunburstAlignment|string	default-far. See TextAlignment
+///<br/><br/>
+///Options for customizing the font of sub title.
+///<br/>font-any	default-
+///<br/><br/>
+///Font family of sub title.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style for sub title.
+///<br/>fontStyle-ej.datavisualization.Sunburst.FontStyle|string	default-Normal. See FontStyle
+///<br/><br/>
+///Font weight for sub title.
+///<br/>fontWeight-ej.datavisualization.Sunburst.FontWeight|string	default-Regular. See FontWeight
+///<br/><br/>
+///Opacity of the sub title.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Font size for sub title.
+///<br/>size-string	default-12px
+///<br/><br/>
+///Options for customizing the appearance of the levels or point while highlighting.
+///<br/>highlightSettings-HighlightSettings	default-
+///<br/><br/>
+///Enables/disables the ability to highlight the levels or point interactively.
+///<br/>enable-boolean	default-false
+///<br/><br/>
+///Specifies whether the levels or point has to be highlighted.
+///<br/>mode-ej.datavisualization.Sunburst.SunburstHighlightMode|string	default-point. See Mode
+///<br/><br/>
+///Color of the levels/point on highlight.
+///<br/>color-string	default-red
+///<br/><br/>
+///Opacity of the levels/point on highlight.
+///<br/>opacity-number	default-0.5
+///<br/><br/>
+///Specifies whether the levels or data point has to be highlighted.
+///<br/>type-ej.datavisualization.Sunburst.SunburstHighlightType|string	default-opacity. See Mode
+///<br/><br/>
+///Options for customizing the appearance of the levels or data point while selection.
+///<br/>selectionSettings-SelectionSettings	default-
+///<br/><br/>
+///Enables/disables the ability to select the levels or data point interactively.
+///<br/>enable-boolean	default-false
+///<br/><br/>
+///Specifies whether the levels or data point has to be selected.
+///<br/>mode-ej.datavisualization.Sunburst.SunburstHighlightMode|string	default-point. See Mode
+///<br/><br/>
+///Color of the levels/point on selection.
+///<br/>color-string	default-green
+///<br/><br/>
+///Opacity of the levels/point on selection.
+///<br/>opacity-number	default-0.5
+///<br/><br/>
+///Specifies whether the levels or data point has to be selected.
+///<br/>type-ej.datavisualization.Sunburst.SunburstHighlightType|string	default-opacity. See Mode
+///<br/><br/>
+///Specify levels of sunburst for grouped visualization of data
+///<br/>levels-Array&lt;Levels&gt;	default-[]
+///<br/><br/>
+///Specifies the group member path
+///<br/>groupMemberPath-string	default-null
+///<br/><br/>
+///Options to customize the legend items and legend title.
+///<br/>legend-Legend	default-
+///<br/><br/>
+///Visibility of the legend.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///Interactive action of legend items.
+///<br/>clickAction-ej.datavisualization.Sunburst.SunburstClickAction|string	default-toggleSegmentVisibility. See Alignment
+///<br/><br/>
+///Horizontal alignment of the legend.
+///<br/>alignment-ej.datavisualization.Sunburst.SunburstAlignment|string	default-Center. See Alignment
+///<br/><br/>
+///Options for customizing the legend border.
+///<br/>border-any	default-
+///<br/><br/>
+///Border color of the legend.
+///<br/>color-string	default-null
+///<br/><br/>
+///Border width of the legend.
+///<br/>width-number	default-1
+///<br/><br/>
+///Number of columns to arrange the legend items.
+///<br/>columnCount-number	default-null
+///<br/><br/>
+///Number of rows to arrange the legend items.
+///<br/>rowCount-number	default-null
+///<br/><br/>
+///Options to customize the font used for legend item text.
+///<br/>font-any	default-
+///<br/><br/>
+///Font family for legend item text.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style for legend item text.
+///<br/>fontStyle-ej.datavisualization.Sunburst.FontStyle|string	default-Normal. See FontStyle
+///<br/><br/>
+///Font weight for legend item text.
+///<br/>fontWeight-ej.datavisualization.Sunburst.FontWeight|string	default-Regular. See FontWeight
+///<br/><br/>
+///Font size for legend item text.
+///<br/>size-string	default-12px
+///<br/><br/>
+///Gap or padding between the legend items.
+///<br/>itemPadding-number	default-10
+///<br/><br/>
+///Options to customize the style of legend items.
+///<br/>itemStyle-any	default-
+///<br/><br/>
+///Height of the shape in legend items.
+///<br/>height-number	default-10
+///<br/><br/>
+///Width of the shape in legend items.
+///<br/>width-number	default-10
+///<br/><br/>
+///Options to customize the location of sunburst legend. Legend is placed in provided location only when value of position property is custom
+///<br/>location-any	default-
+///<br/><br/>
+///X value or horizontal offset to position the legend in chart.
+///<br/>x-number	default-0
+///<br/><br/>
+///Y value or vertical offset to position the legend.
+///<br/>y-number	default-0
+///<br/><br/>
+///Places the legend at specified position. Legend can be placed at left, right, top or bottom of the chart area.To manually specify the location of legend, set custom as value to this property.
+///<br/>position-ej.datavisualization.Sunburst.SunburstLegendPosition|string	default-Bottom. See Position
+///<br/><br/>
+///Shape of the legend items.
+///<br/>shape-ej.datavisualization.Sunburst.SunburstLegendShape|string	default-None. See Shape
+///<br/><br/>
+///Options to customize the size of the legend.
+///<br/>size-any	default-
+///<br/><br/>
+///Height of the legend. Height can be specified in either pixel or percentage.
+///<br/>height-string	default-null
+///<br/><br/>
+///Width of the legend. Width can be specified in either pixel or percentage.
+///<br/>width-string	default-null
+///<br/><br/>
+///Options to customize the legend title.
+///<br/>title-any	default-
+///<br/><br/>
+///Options to customize the font used for legend title
+///<br/>font-any	default-
+///<br/><br/>
+///Font family for the text in legend title.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style for legend title.
+///<br/>fontStyle-ej.datavisualization.Sunburst.FontStyle|string	default-normal. See FontStyle
+///<br/><br/>
+///Font weight for legend title.
+///<br/>fontWeight-ej.datavisualization.Sunburst.FontWeight|string	default-normal. See FontWeight
+///<br/><br/>
+///Font size for legend title.
+///<br/>size-string	default-12px
+///<br/><br/>
+///Enables or disables the legend title.
+///<br/>visible-string	default-true
+///<br/><br/>
+///Text to be displayed in legend title.
+///<br/>text-string	default-
+///<br/><br/>
+///Alignment of the legend title.
+///<br/>textAlignment-ej.datavisualization.Sunburst.SunburstAlignment|string	default-center. See Alignment
+///<br/><br/>
+///Specifies the theme for Sunburst.
+///<br/>theme-ej.datavisualization.Sunburst.SunburstTheme|string	default-Flatlight. See Theme
+///<br/><br/>
+///Options to customize the left, right, top and bottom margins of sunburst area.
+///<br/>margin-Margin	default-
+///<br/><br/>
+///Spacing for the left margin of chart area. Setting positive value decreases the width of the chart area from left side.
+///<br/>left-number	default-10
+///<br/><br/>
+///Spacing for the right margin of chart area. Setting positive value decreases the width of the chart area from right side.
+///<br/>right-number	default-10
+///<br/><br/>
+///Spacing for the top margin of chart area. Setting positive value decreases the height of the chart area from the top.
+///<br/>top-number	default-10
+///<br/><br/>
+///Spacing for the bottom margin of the chart area. Setting positive value decreases the height of the chart area from the bottom.
+///<br/>bottom-number	default-10
+///<br/><br/>
+///Enable/disable the animation for all the levels.
+///<br/>enableAnimation-boolean	default-false
+///<br/><br/>
+///Opacity of the levels.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Options for enable zooming feature of chart.
+///<br/>zoomSettings-ZoomSettings	default-
+///<br/><br/>
+///Enables or disables zooming.
+///<br/>enable-boolean	default-false
+///<br/><br/>
+///Toolbar horizontal alignment
+///<br/>toolbarHorizontalAlignment-ej.datavisualization.Sunburst.SunburstHorizontalAlignment|string	default-right. See Alignment
+///<br/><br/>
+///Toolbar vertical alignment
+///<br/>toolbarVerticalAlignment-ej.datavisualization.Sunburst.SunburstVerticalAlignment|string	default-top. See Alignment
+///<br/><br/>
+///Animation type of sunburst
+///<br/>animationType-ej.datavisualization.Sunburst.Animation|string	default-rotation. See Alignment
+///</summary>
+///<param name="options" type="Object">
+///The widget configuration options
+///</param>
+};
 ej.SymbolPalette=function(){};
 ej.SymbolPalette.prototype={
 
+addPaletteItem:function(paletteName, node){
+/// <summary>
+/// Add items to Palettes at runtime
+/// </summary>
+/// <param name="paletteName"	type="string">name of the Palette</param>
+/// <param name="node"	type="any">JSON for the new items to added in Palette</param>
+},
+removePaletteItem:function(paletteName, node){
+/// <summary>
+/// Remove items to Palettes at runtime
+/// </summary>
+/// <param name="paletteName"	type="string">name of the Palette</param>
+/// <param name="node"	type="any">JSON for the new node to removed in Palette</param>
+},
 };
 jQuery.fn.ejSymbolPalette=function(){
 this.data("ejSymbolPalette",new	ej.SymbolPalette());
@@ -20933,6 +21707,9 @@ jQuery.fn.ejToolbar = function (options) {
 ///Defines the tooltip text for the tag.
 ///<br/>tooltipText-string	default-
 ///<br/><br/>
+///Allows you to add  template as toolbar item
+///<br/>template-string	default-
+///<br/><br/>
 ///Specifies the height of the Toolbar.
 ///<br/>height-number|string	default-28
 ///<br/><br/>
@@ -20945,11 +21722,44 @@ jQuery.fn.ejToolbar = function (options) {
 ///Enables/Disables the responsive support for Toolbar items during the window resizing time.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
+///Specifies the items of  Toolbar
+///<br/>Items-Items	default-null
+///<br/><br/>
+///Defines the group name for the item.
+///<br/>group-string	default-
+///<br/><br/>
+///Defines the HTML attributes such as id, class, styles for the item .
+///<br/>htmlAttributes-any	default-
+///<br/><br/>
+///Defines id for the tag.
+///<br/>id-string	default-
+///<br/><br/>
+///Defines the image attributes such as height, width, styles and so on.
+///<br/>imageAttributes-string	default-
+///<br/><br/>
+///Defines the imageURL for the image location.
+///<br/>imageUrl-string	default-
+///<br/><br/>
+///Defines the sprite CSS for the image tag.
+///<br/>spriteCssClass-string	default-
+///<br/><br/>
+///Defines the text content for the tag.
+///<br/>text-string	default-
+///<br/><br/>
+///Defines the tooltip text for the tag.
+///<br/>tooltipText-string	default-
+///<br/><br/>
+///Allows to add template as toolbar item.
+///<br/>template-string	default-
+///<br/><br/>
 ///Specifies the Toolbar orientation. See orientation
 ///<br/>orientation-ej.Orientation|string	default-Horizontal
 ///<br/><br/>
 ///Specifies the query to retrieve the data from the online server. The query is used only when the online dataSource is used.
 ///<br/>query-any	default-null
+///<br/><br/>
+///Specifies the Toolbar responsive type.
+///<br/>responsiveType-ej.Toolbar.ResponsiveType|string	default-Popup
 ///<br/><br/>
 ///Displays the Toolbar with rounded corners.
 ///<br/>showRoundedCorner-boolean	default-false
@@ -21271,6 +22081,9 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///Controls the visibility of the column.
 ///<br/>visible-boolean	default-true
 ///<br/><br/>
+///Gets or sets a value for treegrid column width
+///<br/>width-Number	default-
+///<br/><br/>
 ///Specifies the header template value for the column header
 ///<br/>headerTemplateID-String	default-
 ///<br/><br/>
@@ -21384,6 +22197,9 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///<br/><br/>
 ///Specifies the localization information to customize the User Interface (UI) to support regional language and culture
 ///<br/>locale-string	default-en-US
+///<br/><br/>
+///Enables or disables internal parsing of a row. When disbaled this property, row will be displayed using the defined template without any internal event bindings.
+///<br/>parseRowTemplate-boolean	default-true
 ///<br/><br/>
 ///Specifies the name of the field in the dataSource, which contains the id of that row.
 ///<br/>idMapping-string	default-
@@ -21575,6 +22391,12 @@ jQuery.fn.ejTreeMap = function (options) {
 ///<br/><br/>
 ///specifies the drillDown selection color
 ///<br/>drillDownSelectionColor-string	default-&#39;#000000&#39;
+///<br/><br/>
+///Specifies whether datasource is hierarchical or not.
+///<br/>isHierarchicalDatasource-boolean	default-false
+///<br/><br/>
+///Specifies the header for parent item during drilldown. This is applicable only for hierarchical data source.
+///<br/>header-string	default-null
 ///<br/><br/>
 ///Enable/Disable the drillDown for treemap
 ///<br/>enableDrillDown-boolean	default-false
@@ -21798,7 +22620,7 @@ checkNode:function(element){
 /// <summary>
 /// To check a node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 collapseAll:function(levelUntil, excludeHiddenNodes){
 /// <summary>
@@ -21811,19 +22633,19 @@ collapseNode:function(element){
 /// <summary>
 /// To collapse a particular node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node|object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node|object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 disableNode:function(element){
 /// <summary>
 /// To disable the node in the TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 enableNode:function(element){
 /// <summary>
 /// To enable the node in the TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 ensureVisible:function(element){
 /// <summary>
@@ -21842,7 +22664,7 @@ expandNode:function(element){
 /// <summary>
 /// To expandNode particular node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 getCheckedNodes:function(){
 /// <summary>
@@ -21952,7 +22774,7 @@ hideNode:function(element){
 /// <summary>
 /// To hide particular node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 insertAfter:function(newNodeText, target){
 /// <summary>
@@ -22039,7 +22861,7 @@ removeNode:function(element){
 /// <summary>
 /// To remove a node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 selectAll:function(){
 /// <summary>
@@ -22061,7 +22883,7 @@ showNode:function(element){
 /// <summary>
 /// To show a node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 unCheckAll:function(){
 /// <summary>
@@ -22072,7 +22894,7 @@ uncheckNode:function(element){
 /// <summary>
 /// To uncheck a node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 },
 unselectAll:function(){
 /// <summary>
