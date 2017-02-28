@@ -11394,7 +11394,7 @@ vertical-align:baseline;
     }
     & when not (@skin= "material") {
         /*other*/  
-        border-right: @border-size dotted @content-border-color;
+        border-left: @border-size dotted @content-border-color;
     } 
 }
 /*.e-rte .e-toolbarspan ul:last-child*/
@@ -11427,7 +11427,10 @@ vertical-align:baseline;
     border-bottom: @tools-border-radius @border-type @active-bg-stcolor; 
 }
 .e-rte .e-toolbar .e-ul.e-horizontal.e-separator:first-child, .e-rte .e-toolbar>.e-horizontal.e-ul:first-child{
-    padding-left: 0px;
+    & when (@skin= "material") {
+        /*other*/  
+        padding-left: 0px;
+    }
 }
  .e-dialog .e-fieldseparate,.e-rte-toolbar .e-responsive-toolbar.e-toolbarspan
 {
@@ -11926,7 +11929,7 @@ content: "\e833";
     background-image: none;
     border-color: @content-border-color;
 	& when (@skin= "material") {
-		border-color: rgba(0,0,0,.54);
+	   		border-color:fade(@base-font-color,54%);
 	}
 }
 .e-radiobtn-wrap.e-disable > span , 
@@ -11935,7 +11938,7 @@ content: "\e833";
 .e-radiobtn-wrap.e-disable .e-circle_01,
 .e-radiobtn-wrap.e-disable > span:hover{
 & when (@skin= "material") {
-		border-color: rgba(0,0,0,.26);
+	   		border-color:fade(@base-font-color,26%);
 	}
 }
 .e-radiobtn-wrap > span.e-rad-active,.e-radiobtn-wrap > span.e-rad-active:hover {
@@ -11978,7 +11981,7 @@ content: "\e833";
 }
 .e-radiobtn-wrap.e-disable .e-circle_01, .e-radiobtn-wrap.e-disable .e-text {
 & when (@skin= "material") {
-		color:rgba(0,0,0,.26);
+		color:fade(@base-font-color,26%);
 	}
 }
 .e-radiobtn-wrap .e-text
@@ -12009,69 +12012,38 @@ content: "\e833";
 	}
 }
 
-@keyframes mediumCircle {
-	0% {
-		font-size:0px;
-		line-height:12px;
-		text-indent:4.5px;
-	}
-	100% {
-	font-size:12px;
-	line-height:12px;
-	text-indent:-1.5px;
-
-	}
-}
+& when (@skin= "material") {
 @keyframes rippleEffect {
 	0% {
 		opacity: 1;
-     box-shadow: 0 0 0 0px rgba(255, 64, 129,1);
-	}
+		box-shadow: 0 0 0 0px @accent-color;
+		}
 
 	100% {
-		box-shadow: 0 0 0 15px rgba(255,255,255,0);
-		opacity: 0
+		box-shadow: 0 0 0 15px @content-bg-color;
+		opacity: 0;
+		}
 	}
 }
+& when (@skin= "material") {
+
 @keyframes back_rippleEffect {
+
 	0% {
-		box-shadow: 0 0 0 15px rgba(255,255,255,0);
-		opacity: 1
-	}
+		box-shadow: 0 0 0 15px @content-bg-color;
+		opacity: 1;
+		}
 
 	100% {
 		opacity: 0;
-     box-shadow: 0 0 0 0px rgba(255, 64, 129,1);
+		box-shadow: 0 0 0 0px @accent-color;
+		}
 	}
 }
-@keyframes smallerCircle {
-	0% {
-		font-size:0px;
-		line-height:15px;
-		text-indent:7px;
-	}
-	100% {
-	font-size:10px;
-	line-height:15px;
-	text-indent:1.2px;
 
-	}
-}
-@keyframes back_smallerCircle {
-	0% {
-		font-size:10px;
-		line-height:15px;
-		text-indent:1.2px;
-	}
-	100% {
-		font-size:0px;
-		line-height:15px;
-		text-indent:7px;
-	}
-}
 .e-radiobtn-wrap span.e-spanicon.e-rad-active {
+
 	& when (@skin= "material") {
-	display: block;
 	border-radius: 100%;
 	z-index: 1;
 	}
@@ -12287,7 +12259,7 @@ content: "\e833";
     }
 }
 
-.e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > a.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > span.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > div.e-btntxt {
+.e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > a.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > span.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > div.e-btntxt, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > a.e-icon, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > span.e-icon, .e-groupbutton > .e-ul > .e-grp-btn-item.e-active .e-btn-content > div.e-icon {
     & when not (@skin="material") {
         color: @active-font-color;
         text-decoration: none;
@@ -16926,6 +16898,7 @@ font-size: 20px;
         }
 
 .e-pivotpager .categPageCount, .e-pivotpager .seriesPageCount {
+			cursor: default;
             padding:0px 0px 0px 5px;
         }
 
@@ -16941,6 +16914,7 @@ font-size: 20px;
 }
 
 .e-pivotpager .pagerLabel {
+			cursor: default;
             display:inline-block;
             margin-left:5px;
 			margin-right: 5px;
