@@ -3518,7 +3518,7 @@
         }
 
         & when not(@skin="material") {
-            padding: 1px 18px 1px 28px;
+            padding: 3px 18px 3px 28px;
         }
 
         height: inherit;
@@ -4023,19 +4023,19 @@
     }
 
     .e-menu.e-context {
-        & when (@skin= "material") {
-            box-shadow: @box-shadow;
-            padding: 0px;
-            border: 0px solid;
-        }
-
-        & when not (@skin= "material") { 
-            padding: 1px;
-            border: 1px solid;
-        } 
         position: absolute;
         z-index: 9998;
         font-size: 13px;
+        & when (@skin= "material") {    
+            box-shadow: @box-shadow;
+            padding: 0px;
+            border: 0px solid;
+        } 
+        & when not (@skin= "material") { 
+            padding: 1px;
+            border: 1px solid;
+            width: 150px;
+        }
     }
 
     .e-menu.e-context .e-list > ul .e-list, .e-menu.e-context .e-list, .e-menu.e-context > li.e-list.e-separator {
@@ -4362,10 +4362,12 @@
 
 .mixin(@widget) when (@widget = radiobutton), (@widget = none) {
 
-    .e-radiobtn-wrap {
+ .e-radiobtn-wrap {
         vertical-align: middle;
-        margin-bottom: 3px;
     }
+	.e-radiobtn-wrap > span.e-radsmaller, .e-radiobtn-wrap > span.e-radmedium {
+		display:inline-block;
+	}
 
     .e-radiobtn-wrap .e-radiobtn {
         display: none;
@@ -4458,6 +4460,31 @@
             line-height: 15px;
         }
     }
+	.e-radiobtn-wrap .e-text {
+        margin-left:3px;
+		padding: 2px;
+		text-align: left;
+		top: 0;
+		cursor: pointer;
+		float:right;
+		vertical-align:middle;
+		line-height:12px;
+		& when (@skin= "material") {
+			line-height:20px;
+		}
+    }
+	.e-radiobtn-wrap.e-radmed .e-text {
+		
+		line-height:16px;
+		& when (@skin= "material") {
+			line-height:25px;
+		}
+	}
+	 .e-radiobtn-wrap.e-rtl .e-text {
+	 		float:left;
+
+	 }
+	
 }
 
 .mixin(@widget) when (@widget = tab), (@widget = none) {
@@ -12263,6 +12290,7 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-groupbutton {
         outline: 0 none;
         overflow: hidden;
+        display:block;
     }
 
     .e-groupbutton > .e-ul {
@@ -14536,7 +14564,7 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-gantt .e-dialog-icon .e-close {
-        position: absoloute;
+        position: absolute;
     }
 
     .e-gantt .e-icon.e-close {
@@ -16337,7 +16365,7 @@ background-image: url('../@{font-path}/icons-white.png');
         -ms-transform: rotate(270deg);
         /* Opera */
         -o-transform: rotate(270deg);
-        transform: rotate(270);
+        transform: rotate(270deg);
     }
 
     .e-ganttchart .e-striplinespan {
@@ -16414,7 +16442,6 @@ background-image: url('../@{font-path}/icons-white.png');
         -webkit-background-clip: content-box;
         -khtml-background-clip: content-box;
         -o-background-clip: content-box;
-        -moz-background-clip: content-box;
         background-clip: content-box;
     }
 
@@ -28695,6 +28722,10 @@ slideRight Animate
         box-sizing: border-box;
     }
 
+	.e-ss-auto {
+		display: "inline-block";
+	}
+	
     .e-spreadsheet-list {
         position: relative;
     }

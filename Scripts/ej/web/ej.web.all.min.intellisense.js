@@ -344,7 +344,7 @@ ejAutocomplete :function (options) {
 /// <summary><br/>
 ///The AutoComplete control is a textbox control that provides a list of suggestions based on the user query.When the users enters the text in the text box, the control performs a search operation and provides a list of results in the suggestion pop up. There are several filter types available to perform the search.<br/><br/>
 ///Customize "Add New" text (label) to be added in the autocomplete popup list for the entered text when there are no suggestions for it.
-///<br/>addNewText-boolean	default-Add New
+///<br/>addNewText-string	default-Add New
 ///<br/><br/>
 ///Allows new values to be added to the autocomplete input other than the values in the suggestion list. Normally, when there are no suggestions it will display â€œNo suggestionsâ€ label in the popup.
 ///<br/>allowAddNew-boolean	default-false
@@ -410,7 +410,7 @@ ejAutocomplete :function (options) {
 ///<br/>filterType-string	default-ej.filterType.StartsWith
 ///<br/><br/>
 ///The height of the Autocomplete textbox.
-///<br/>height-string	default-null
+///<br/>height-string|number	default-null
 ///<br/><br/>
 ///The search text can be highlighted in the AutoComplete suggestion list when enabled.
 ///<br/>highlightSearch-boolean	default-false
@@ -515,7 +515,7 @@ ejAutocomplete :function (options) {
 ///<br/>watermarkText-string	default-null
 ///<br/><br/>
 ///The width of the Autocomplete textbox.
-///<br/>width-string	default-null
+///<br/>width-string|number	default-null
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -1678,13 +1678,13 @@ ejChart :function (options) {
 ///Renders the chart vertically. This is applicable only for Cartesian type series.
 ///<br/>isTransposed-boolean	default-false
 ///<br/><br/>
-///Render the x mark in the center of the boxplot series type.x represents the average value of the boxplot series.
+///Render the x mark in the center of the box and whisker series type.x represents the average value of the box and whisker series.
 ///<br/>showMedian-boolean	default-true
 ///<br/><br/>
 ///Position of the data label in pie/doughnut/pyramid/funnel series. OutsideExtended position is not applicable for pyramid/funnel.
 ///<br/>labelPosition-ej.datavisualization.Chart.LabelPosition|string	default-inside. See LabelPosition
 ///<br/><br/>
-///Quartile calculation has been performed in three different formulas to render the boxplot series.
+///Quartile calculation has been performed in three different formulas to render the box and whisker series.
 ///<br/>boxPlotMode-ej.datavisualization.Chart.boxPlotMode|string	default-exclusive
 ///<br/><br/>
 ///Specifies the line cap of the series.
@@ -3808,7 +3808,7 @@ ejChart :function (options) {
 ///Renders the chart vertically. This is applicable only for Cartesian type series.
 ///<br/>isTransposed-boolean	default-false
 ///<br/><br/>
-///Render the x mark in the center of the boxplot series type.x represents the average value of the boxplot series.
+///Render the x mark in the center of the box and whisker series type.x represents the average value of the box and whisker series.
 ///<br/>showMedian-boolean	default-true
 ///<br/><br/>
 ///Position of the data label in pie/doughnut/pyramid/funnel series. OutsideExtended position is not applicable for pyramid/funnel.
@@ -6471,6 +6471,9 @@ ejDateTimePicker :function (options) {
 /// <signature>
 /// <summary><br/>
 ///The DateTimePicker control is used to input the date and time with a specific format. It combines the DatePicker and TimePicker controls so that users can select the date and time with their desired format.<br/><br/>
+///Used to allow or restrict the editing in DateTimePicker input field directly. By setting false to this API, You can only pick the date and time values from DateTimePicker popup.
+///<br/>allowEdit-boolean	default-true
+///<br/><br/>
 ///Displays the custom text for the buttons inside the DateTimePicker popup. when the culture value changed, we can change the buttons text based on the culture.
 ///<br/>buttonText-ButtonText	default-{ today: Today, timeNow: Time Now, done: Done, timeTitle: Time }
 ///<br/><br/>
@@ -7483,11 +7486,20 @@ ejDiagram :function (options) {
 ///Defines the collection of context menu items
 ///<br/>items-Array&lt;any&gt;	default-[]
 ///<br/><br/>
+///Defines the text for the collection of context menu item
+///<br/>text-string	default-null
+///<br/><br/>
+///Defines the name for the collection of context menu items
+///<br/>name-string	default-null
+///<br/><br/>
 ///Defines the image url for the collection of context menu items
 ///<br/>imageUrl-string	default-null
 ///<br/><br/>
 ///Defines the CssClass for the collection of context menu items
 ///<br/>cssClass-string	default-null
+///<br/><br/>
+///Defines the collection of sub items for the context menu items
+///<br/>subItems-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///To set whether to display the default context menu items or not
 ///<br/>showCustomMenuItemsOnly-boolean	default-false
@@ -9407,7 +9419,7 @@ ejDropDownList :function (options) {
 ///<br/>template-string	default-null
 ///<br/><br/>
 ///Defines the text value that is displayed in the DropDownList textbox.
-///<br/>text-string	default-null
+///<br/>text-string|number	default-null
 ///<br/><br/>
 ///Sets the jQuery validation error message in the DropDownList
 ///<br/>validationMessage-any	default-null
@@ -9993,6 +10005,9 @@ ejGantt :function (options) {
 ///Specifies the edit mode in Gantt, "normal" is for dialog editing ,"cellEditing" is for cell type editing
 ///<br/>editMode-string	default-normal
 ///<br/><br/>
+///Specifies the position where the new row has to be added.
+///<br/>rowPosition-ej.Gantt.RowPosition|string	default-ej.Gantt.RowPosition.BelowSelectedRow
+///<br/><br/>
 ///Enables or Disables enableAltRow row effect in Gantt
 ///<br/>enableAltRow-boolean	default-true
 ///<br/><br/>
@@ -10170,8 +10185,8 @@ ejGantt :function (options) {
 ///Specified the format for year view in schedule header
 ///<br/>yearHeaderFormat-string	default-yyyy
 ///<br/><br/>
-///Specifies the size of the lowest time unit along the timescale, with minimum value as "50%" and maximum value as "500%". It is also possble to set the value in pixels.
-///<br/>timscaleUnitSize-string	default-100%
+///Specifies the size of the lowest time unit along the timescale, with minimum value as "50%" and maximum value as "500%". It is also possible to set the value in pixels.
+///<br/>timescaleUnitSize-string	default-100%
 ///<br/><br/>
 ///Specifies the start day of the week in week timescale mode
 ///<br/>weekStartDay-number	default-0
@@ -10465,6 +10480,14 @@ deleteRecord:function(fieldName, data){
 /// <param name="data"	type="Array&lt;any&gt;">Pass the JSON data of record need to be delete.</param>
 /// </signature>
 },
+deleteRow:function($tr){
+/// <signature>
+/// <summary>
+/// Delete the row based on the given tr element in grid.
+/// </summary>
+/// <param name="$tr"	type="JQuery">Pass the tr element in grid content to get its row index</param>
+/// </signature>
+},
 destroy:function(){
 /// <signature>
 /// <summary>
@@ -10484,6 +10507,12 @@ editCell:function(index, fieldName){
 /// </summary>
 /// <param name="fieldName"	type="string">Pass the field name of the column to perform batch edit</param>
 /// </signature>
+},
+editFormValidate:function(){
+/// <signature>
+/// <summary>
+/// It returns a value and if the input field values of edit form is not based on the validation rules then it will show the validation message.
+/// </summary>
 },
 endEdit:function(){
 /// <signature>
@@ -10653,6 +10682,20 @@ getColumnIndexByField:function(fieldName){
 /// <param name="fieldName"	type="string">Pass the field name of the column to get the corresponding column index</param>
 /// </signature>
 },
+getColumnIndexByHeaderText:function(headerText, field){
+/// <signature>
+/// <summary>
+/// Get the column index of the given headerText of column in grid.
+/// </summary>
+/// <param name="headerText"	type="string">Pass the headerText of the column to get that column index</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Get the column index of the given headerText of column in grid.
+/// </summary>
+/// <param name="field"	type="string">optionalOptional Pass the field name of the column.</param>
+/// </signature>
+},
 getContent:function(){
 /// <signature>
 /// <summary>
@@ -10681,6 +10724,12 @@ getCurrentViewData:function(){
 /// <signature>
 /// <summary>
 /// Get the current page data source of grid.
+/// </summary>
+},
+getDataByIndex:function(){
+/// <signature>
+/// <summary>
+/// Get the data of given row index in grid.
 /// </summary>
 },
 getFieldNameByHeaderText:function(headerText){
@@ -10799,6 +10848,20 @@ getSelectedRecords:function(){
 /// Get the selected records details in grid.
 /// </summary>
 },
+getSelectedRows:function(){
+/// <signature>
+/// <summary>
+/// Get the selected row element details in grid.
+/// </summary>
+},
+getsortColumnByField:function(field){
+/// <signature>
+/// <summary>
+/// It accepts the string value and returns the field and sorted direction of the column in grid.
+/// </summary>
+/// <param name="field"	type="string">Pass the field of the column to get the sorted direction of the corresponding column in Grid.</param>
+/// </signature>
+},
 getSummaryValues:function(summaryCol, summaryData){
 /// <signature>
 /// <summary>
@@ -10907,6 +10970,20 @@ reorderColumns:function(fromFieldName, toFieldName){
 /// Re-order the column in grid
 /// </summary>
 /// <param name="toFieldName"	type="string">Pass the to field name of the column needs to be changed</param>
+/// </signature>
+},
+reorderRows:function(indexes, toindex){
+/// <signature>
+/// <summary>
+/// Re-order the row in grid
+/// </summary>
+/// <param name="indexes"	type="Array&lt;any&gt;">Pass the indexes of the rows needs to reorder.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Re-order the row in grid
+/// </summary>
+/// <param name="toindex"	type="number">Pass the index of a row where to be reorderd.</param>
 /// </signature>
 },
 resetModelCollections:function(){
@@ -11075,6 +11152,12 @@ setCellValue:function(Index, fieldName, value){
 /// <param name="value"	type="any">It is used to set the value for the selected cell.</param>
 /// </signature>
 },
+setDefaultData:function(){
+/// <signature>
+/// <summary>
+/// It sets the default data to the column in grid during adding record in batch edit mode.
+/// </summary>
+},
 setPhoneModeMaxWidth:function(Index){
 /// <signature>
 /// <summary>
@@ -11083,16 +11166,22 @@ setPhoneModeMaxWidth:function(Index){
 /// <param name="Index"	type="number">It is used to render grid rows as details view in mobile mode.</param>
 /// </signature>
 },
+setValidation:function(){
+/// <signature>
+/// <summary>
+/// Set validation to editform in the grid.
+/// </summary>
+},
 setValidationToField:function(fieldName, rules){
 /// <signature>
 /// <summary>
-/// Set validation to a field during editing.
+/// Set validation to a particular input field in a editfrom dynamically.
 /// </summary>
 /// <param name="fieldName"	type="string">Specify the field name of the column to set validation rules</param>
 /// </signature>
 /// <signature>
 /// <summary>
-/// Set validation to a field during editing.
+/// Set validation to a particular input field in a editfrom dynamically.
 /// </summary>
 /// <param name="rules"	type="any">Specify the validation rules for the field</param>
 /// </signature>
@@ -11296,6 +11385,9 @@ ejGrid :function (options) {
 ///Gets or sets a template that customize the filter control from default . See filterBarTemplate
 ///<br/>filterBarTemplate-any	default-null
 ///<br/><br/>
+///Gets or sets a value that indicates to render the excel or menu filter dialog to the grid columns. See filterType
+///<br/>filterType-ej.Grid.FilterType|string	default-null
+///<br/><br/>
 ///Gets or sets a value that indicates to define foreign key field name of the grid datasource.
 ///<br/>foreignKeyField-String	default-null
 ///<br/><br/>
@@ -11314,6 +11406,9 @@ ejGrid :function (options) {
 ///This defines the text alignment of a particular column header cell value. See headerTextAlign
 ///<br/>headerTextAlign-ej.TextAlign|string	default-null
 ///<br/><br/>
+///It accepts the string value and shows the tooltip for the Grid column header.
+///<br/>headerTooltip-String	default-null
+///<br/><br/>
 ///You can use this property to freeze selected columns in grid at the time of scrolling.
 ///<br/>isFrozen-Boolean	default-false
 ///<br/><br/>
@@ -11324,7 +11419,7 @@ ejGrid :function (options) {
 ///<br/>isPrimaryKey-Boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates the order of Column that are to be hidden or visible when Grid element is in responsive mode and could not occupy all columns.
-///<br/>priority-Number	default-null
+///<br/>priority-Number	default--1
 ///<br/><br/>
 ///Used to hide the particular column in column chooser by giving value as false.
 ///<br/>showInColumnChooser-Boolean	default-true
@@ -11407,13 +11502,13 @@ ejGrid :function (options) {
 ///This specifies the id of the template. This template can be used to display the data that you require to be edited using the External edit form
 ///<br/>externalFormTemplateID-String	default-null
 ///<br/><br/>
-///This specifies to set the position of an External edit form either in the top-right or bottom-left of the grid
+///This specifies to set the position of an External edit form either in the top-right or bottom-left of the grid. See formPosition
 ///<br/>formPosition-ej.Grid.FormPosition|string	default-ej.Grid.FormPosition.BottomLeft
 ///<br/><br/>
 ///This specifies the id of the template. This template can be used to display the data that you require to be edited using the Inline edit form
 ///<br/>inlineFormTemplateID-String	default-null
 ///<br/><br/>
-///This specifies to set the position of an adding new row either in the top or bottom of the grid
+///This specifies to set the position of an adding new row either in the top or bottom of the grid. See rowPosition
 ///<br/>rowPosition-ej.Grid.RowPosition|string	default-ej.Grid.RowPosition.Top
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the confirm dialog has to be shown while saving or discarding the batch changes
@@ -11452,6 +11547,9 @@ ejGrid :function (options) {
 ///To Disable the mouse swipe property as false.
 ///<br/>enableTouch-Boolean	default-true
 ///<br/><br/>
+///It sets a value that indicates whether to enable toolbar items, when allowEditing, allowAdding and allowDeleting property set as false in the grid.
+///<br/>enableToolbarItems-Boolean	default-false
+///<br/><br/>
 ///Act as mapper for the excel exporting URL.
 ///<br/>exportToExcelAction-string	default-ExportToExcel
 ///<br/><br/>
@@ -11467,7 +11565,10 @@ ejGrid :function (options) {
 ///Gets or sets a value that indicates to perform the filter operation with case sensitive in excel styled filter menu mode
 ///<br/>enableCaseSensitivity-Boolean	default-false
 ///<br/><br/>
-///This specifies the grid to starts the filter action while typing in the filterBar or after pressing the enter key. based on the filterBarMode. See filterBarMode
+///Gets or sets a value that indicates to define the interDeterminateState of checkbox in excel filter dialog.
+///<br/>enableInterDeterminateState-Boolean	default-true
+///<br/><br/>
+///This specifies the grid to starts the filter action while typing in the filterBar or after pressing the enter key. based on the filterBarMode. See filterBarMode.
 ///<br/>filterBarMode-ej.Grid.FilterBarMode|string	default-ej.Grid.FilterBarMode.Immediate
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the filtered columns details programmatically at initial load
@@ -11476,7 +11577,10 @@ ejGrid :function (options) {
 ///Gets or sets a value that indicates whether to define the field name of the column to be filter.
 ///<br/>field-string	default-
 ///<br/><br/>
-///Gets or sets a value that indicates whether to define the filter condition to filtered column.
+///Gets or sets a value that indicates whether to define the matchCase of given value to be filter.
+///<br/>matchCase-Boolean	default-
+///<br/><br/>
+///Gets or sets a value that indicates whether to define the filter condition to filtered column. See operator
 ///<br/>operator-ej.FilterOperators|string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the predicate as and/or.
@@ -11488,11 +11592,14 @@ ejGrid :function (options) {
 ///This specifies the grid to show the filterBar or filterMenu to the grid records. See filterType
 ///<br/>filterType-ej.Grid.FilterType|string	default-ej.Grid.FilterType.FilterBar
 ///<br/><br/>
+///This specifies the grid to delay the filter action while typing in the filterBar.
+///<br/>immediateModeDelay-Number	default-1500
+///<br/><br/>
 ///Gets or sets a value that indicates the maximum number of filter choices that can be showed in the excel styled filter menu.
 ///<br/>maxFilterChoices-Number	default-1000
 ///<br/><br/>
 ///This specifies the grid to show the filter text within the grid pager itself.
-///<br/>showFilterBarMessage-Boolean	default-true
+///<br/>showFilterBarStatus-Boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the predicate options in the filtering menu
 ///<br/>showPredicate-Boolean	default-false
@@ -11563,7 +11670,7 @@ ejGrid :function (options) {
 ///Get the value of total number of records which is bound to the grid. The totalRecordsCount value is calculated based on dataSource bound to the grid.
 ///<br/>totalRecordsCount-Number	default-null
 ///<br/><br/>
-///Gets or sets a value that indicates whether to define the number of pages to print
+///Gets or sets a value that indicates whether to define the number of pages to print. See printMode.
 ///<br/>printMode-ej.Grid.PrintMode|string	default-ej.Grid.PrintMode.AllPages
 ///<br/><br/>
 ///Query the dataSource from the table for Grid.
@@ -11617,6 +11724,9 @@ ejGrid :function (options) {
 ///This property is used to configure the selection behavior of the grid.
 ///<br/>selectionSettings-SelectionSettings	default-
 ///<br/><br/>
+///Gets or sets a value that indicates the cell selection actions based on the cell selection mode.
+///<br/>cellSelectionMode-String	default-flow
+///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the toggle selection behavior for row, cell and column.
 ///<br/>enableToggle-Boolean	default-false
 ///<br/><br/>
@@ -11632,6 +11742,12 @@ ejGrid :function (options) {
 ///This specify the grid to to view data that you require without buffering the entire load of a huge database
 ///<br/>allowVirtualScrolling-Boolean	default-false
 ///<br/><br/>
+///It accepts the boolean value and shows or hides the scrollbar while focus in or focus out of the Grid.
+///<br/>autoHide-Boolean	default-false
+///<br/><br/>
+///Specifies the height and width of button in the scrollbar.
+///<br/>buttonSize-Number	default-18
+///<br/><br/>
 ///This specify the grid to enable/disable touch control for scrolling.
 ///<br/>enableTouchScroll-Boolean	default-true
 ///<br/><br/>
@@ -11643,6 +11759,9 @@ ejGrid :function (options) {
 ///<br/><br/>
 ///This specify the grid to show the vertical scroll bar, to scroll and view the grid contents.
 ///<br/>height-String|Number	default-0
+///<br/><br/>
+///It accepts the integer value and sets the width of scrollbar.
+///<br/>scrollerSize-Number	default-18
 ///<br/><br/>
 ///This is used to define the mode of virtual scrolling in grid. See virtualScrollMode
 ///<br/>virtualScrollMode-ej.Grid.VirtualScrollMode|string	default-ej.Grid.VirtualScrollMode.Normal
@@ -11695,6 +11814,9 @@ ejGrid :function (options) {
 ///Gets or sets a value that indicates the text alignment of the corresponding headerText.
 ///<br/>textAlign-String	default-ej.TextAlign.Left
 ///<br/><br/>
+///Sets the template for tooltip for the Grid stackedHeaderColumns.
+///<br/>tooltip-String	default-null
+///<br/><br/>
 ///Gets or sets an object that indicates to managing the collection of summary rows for the grid.
 ///<br/>summaryRows-Array&lt;SummaryRows&gt;	default-[]
 ///<br/><br/>
@@ -11728,7 +11850,7 @@ ejGrid :function (options) {
 ///Gets or sets a value that indicates the text displayed after the summary column value
 ///<br/>suffix-String	default-null
 ///<br/><br/>
-///Gets or sets a value that indicates the type of calculations to be performed for the corresponding summary column
+///Gets or sets a value that indicates the type of calculations to be performed for the corresponding summary column. See summaryType.
 ///<br/>summaryType-ej.Grid.SummaryType|string	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates to add the template for the summary value of dataMember given.
@@ -11755,7 +11877,7 @@ ejGrid :function (options) {
 ///Gets or sets a value that indicates whether to enable toolbar in the grid.
 ///<br/>showToolbar-Boolean	default-false
 ///<br/><br/>
-///Gets or sets a value that indicates whether to add the default editing actions as a toolbar items
+///Gets or sets a value that indicates whether to add the default editing actions as a toolbar items. See toolbarItems.
 ///<br/>toolbarItems-array&lt;ej.Grid.ToolBarItems|string&gt;	default-[]
 ///</summary>
 ///<param name="options" type="Object">
@@ -12479,7 +12601,10 @@ ejKanban :function (options) {
 ///<br/>headerText-string	default-null
 ///<br/><br/>
 ///To customize the totalCount properties.
-///<br/>totalCount-string	default-false
+///<br/>totalCount-any	default-Object
+///<br/><br/>
+///To customize the totalCount text properties.
+///<br/>text-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates to render the Kanban with specified columns key.
 ///<br/>key-string|number	default-null
@@ -14820,6 +14945,9 @@ ejMap :function (options) {
 ///set the smartLabelSize property
 ///<br/>smartLabelSize-ej.datavisualization.Map.LabelSize|string	default-fixed
 ///<br/><br/>
+///Specifies the map view type.
+///<br/>geometryType-ej.datavisualization.Map.GeometryType|string	default-&#39;geographic&#39;
+///<br/><br/>
 ///Specifies the map type.
 ///<br/>layerType-ej.datavisualization.Map.LayerType|string	default-&#39;geometry&#39;
 ///<br/><br/>
@@ -16516,7 +16644,7 @@ ejPivotClient :function (options) {
 ///In connection with an OLAP database, this property contains the database name as string to fetch the data from the given connection string.
 ///<br/>catalog-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Allows user to filter the members (by its name and values) through advanced filtering (excel-like) option for OLAP data source in client-mode.
+///Allows user to filter the members (by its name and values) through advanced filtering (excel-like) option in client-mode.
 ///<br/>enableAdvancedFilter-boolean	default-false
 ///<br/><br/>
 ///Sets a name to the report bound to the control.
@@ -17346,6 +17474,9 @@ ejPivotGrid :function (options) {
 ///<br/><br/>
 ///Allows the user to format a specific set of cells based on the condition.
 ///<br/>enableConditionalFormatting-boolean	default-false
+///<br/><br/>
+///Enables the advanced filtering options Value Filtering, Label Filtering and Sorting for each fields in server mode.
+///<br/>enableAdvancedFilter-boolean	default-false
 ///<br/><br/>
 ///Allows the user to refresh the control on-demand and not during every UI operation.
 ///<br/>enableDeferUpdate-boolean	default-false
@@ -24016,7 +24147,7 @@ ejSunburstChart :function (options) {
 ///Name of the property in the datasource that contains y values.
 ///<br/>yName-string	default-null
 ///<br/><br/>
-///Controls wheather sunburst has to be responsive or not.
+///Controls whether sunburst has to be responsive or not.
 ///<br/>isResponsive-boolean	default-true
 ///<br/><br/>
 ///Options to customize the Sunburst size.
@@ -24106,7 +24237,7 @@ ejSunburstChart :function (options) {
 ///Datalabel visibility of the Sunburst.
 ///<br/>visible-boolean	default-false
 ///<br/><br/>
-///Alginment of sunburst datalabel
+///Alignment of sunburst datalabel
 ///<br/>labelRotationMode-ej.datavisualization.Sunburst.SunburstLabelRotationMode|string	default-Angle. See DatalabelAlignment
 ///<br/><br/>
 ///Options for customizing the data label font.
@@ -24130,10 +24261,10 @@ ejSunburstChart :function (options) {
 ///Font size of the data label.
 ///<br/>size-string	default-12px
 ///<br/><br/>
-///Custome template for datalabel
+///Custom template for datalabel
 ///<br/>template-string	default-null
 ///<br/><br/>
-///Fill color for the datalable
+///Fill color for the datalabel
 ///<br/>fill-string	default-null
 ///<br/><br/>
 ///Datalabel overflow mode
@@ -24892,6 +25023,9 @@ ejEditor :function (options) {
 /// <signature>
 /// <summary><br/>
 ///NumericTextBox is used to display only numeric values. It has Spin buttons to increase or decrease the values in the Text Box.<br/><br/>
+///Specifies the currency symbol of currency textbox, used when the user wants to overwrite the currency symbol commonly instead of the current culture symbol.
+///<br/>currencySymbol-string	default-Based on the culture
+///<br/><br/>
 ///Sets the root CSS class for Editors which allow us to customize the appearance.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
@@ -26184,7 +26318,7 @@ ejTreeGrid :function (options) {
 ///Specifies the localization information to customize the User Interface (UI) to support regional language and culture
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
-///Enables or disables internal parsing of a row. When disbaled this property, row will be displayed using the defined template without any internal event bindings.
+///Enables or disables internal parsing of a row. When disabled this property, row will be displayed using the defined template without any internal event bindings.
 ///<br/>parseRowTemplate-boolean	default-true
 ///<br/><br/>
 ///Specifies the name of the field in the dataSource, which contains the id of that row.
