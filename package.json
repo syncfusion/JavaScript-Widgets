@@ -71,8 +71,6 @@
             "jquery-validation": "*"
         },
         "ignore": [
-          "Scripts/jquery.unobtrusive-ajax.min.js",
-          "Scripts/jquery.validate.unobtrusive.min.js",
           "Scripts/ej.widgets.all*.js",
           "Scripts/ej.widgets.all.min.map",
           "Scripts/common/ej.unobtrusive.min.js",

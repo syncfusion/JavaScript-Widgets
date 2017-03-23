@@ -20,11 +20,7 @@
 
     ".npmignore",
 
-    "package.json",
-
-    "Scripts/jquery.unobtrusive-ajax.min.js",
-
-    "Scripts/jquery.validate.unobtrusive.min.js"
+    "package.json"
 
   ],
 
@@ -36,11 +32,7 @@
 
     "jquery-validation": "*",
 
-    "jsrender": "*",
-
-    "Microsoft.jQuery.Unobtrusive.Ajax": "*",
-
-    "Microsoft.jQuery.Unobtrusive.Validation": "*"
+    "jsrender": "*"
 
   }
 
