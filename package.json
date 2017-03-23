@@ -68,8 +68,7 @@
 			"syncfusion-ej-global": "*",
             "jquery": "*",
             "jsrender": "*",
-            "jquery-validation": "*",
-            "jquery-validation-unobtrusive": "*"
+            "jquery-validation": "*"
         },
         "ignore": [
           "Scripts/jquery.unobtrusive-ajax.min.js",
