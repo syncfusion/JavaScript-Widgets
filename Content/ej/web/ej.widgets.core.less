@@ -10742,7 +10742,7 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-grid .e-scrollcss {
-        padding-right: 18px;
+        padding-right: 17px;
     }
 
     .e-grid .e-animatebutton {
@@ -10827,7 +10827,7 @@ background-image: url('../@{font-path}/icons-white.png');
         padding: 0px;
     }
 
-    .e-grid .e-draganddrop {
+    .e-grid.e-draganddrop {
         background-color: #179bd7;
         border-color: #5396bc;
         border-width: 1px;
@@ -10841,7 +10841,7 @@ background-image: url('../@{font-path}/icons-white.png');
         background-color: rgba(255,255,255,0.3);
         opacity: 0.6;
     }
-    .e-grid .e-draganddrop .e-rowcell {
+    .e-grid.e-draganddrop .e-rowcell {
         border-color: #b4daef;
         color: #fff;
         & when not (@skin= "material") {
@@ -10853,7 +10853,7 @@ background-image: url('../@{font-path}/icons-white.png');
         cursor: url('@{font-path}/grid/dropPointer.cur'), default;
     }
 
-    .e-grid .e-draganddrop tr:first-child td {
+    .e-grid.e-draganddrop tr:first-child td {
         border-top-width: 0px;
     }
 
@@ -16510,7 +16510,7 @@ background-image: url('../@{font-path}/icons-white.png');
         position: relative;
     }
 
-    .e-schedule .e-scheduleoutertable td, e-schedule .e-scheduleoutertable tr {
+    .e-schedule .e-scheduleoutertable td, .e-schedule .e-scheduleoutertable tr {
         vertical-align: top;
     }
 
@@ -16822,7 +16822,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
     .e-schedule.e-rtl .e-agendahover {
         left: 0px;
-        right: initial;
+        right: inherit;
     }
 
     .e-schedule.e-rtl .e-editapp,
@@ -16938,8 +16938,8 @@ background-image: url('../@{font-path}/icons-white.png');
         width: 25px;
     }
 
-    .e-schedule .e-headerdays table tr:first td:first-child,
-    .e-schedule .e-headerdays table tr:last td:first-child {
+    .e-schedule .e-headerdays table tr:first-child td:first-child,
+    .e-schedule .e-headerdays table tr:last-child td:first-child {
         border-left: none !important;
     }
 
@@ -17895,24 +17895,24 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-        .e-scheduledialog.e-appointmentaddwindow {
-            & when (@skin= "material") {
+    .e-scheduledialog.e-appointmentaddwindow {
+        & when (@skin= "material") {
             padding: 20px 24px 14px 14px !important;
-            }            
         }
+    }
 
-        .e-scheduledialog .e-appwindow table td {
-            & when (@skin= "material") {
+    .e-scheduledialog .e-appwindow table td {
+        & when (@skin= "material") {
             padding: 10px !important;
-            }
         }
+    }
 
-        .e-scheduledialog .e-recurEditor table td {
-            & when (@skin= "material") {
+    .e-scheduledialog .e-recurEditor table td {
+        & when (@skin= "material") {
             padding: 10px !important;
-            }
         }
-   
+    }
+
 
     .e-scheduledialog .e-appwindow,
     .e-scheduledialog .e-recurwindow {
@@ -17977,20 +17977,20 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    
-        .e-scheduledialog button {
-            & when (@skin= "material") {
-            text-transform: uppercase;
-            }
-        }
 
-        .e-scheduledialog .e-btnmargin button {
-            & when (@skin= "material") {
+    .e-scheduledialog button {
+        & when (@skin= "material") {
+            text-transform: uppercase;
+        }
+    }
+
+    .e-scheduledialog .e-btnmargin button {
+        & when (@skin= "material") {
             width: 100% !important;
             text-transform: uppercase;
-            }
         }
-    
+    }
+
 
     .e-scheduledialog .e-textlabel {
         text-align: left;

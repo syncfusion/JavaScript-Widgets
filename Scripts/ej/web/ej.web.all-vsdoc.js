@@ -284,7 +284,7 @@ jQuery.fn.ejAutocomplete = function (options) {
 ///The root class for the Autocomplete textbox widget which helps in customizing its theme.
 ///<br/>cssClass-string	default-&#226;€&#226;€
 ///<br/><br/>
-///The data source contains the list of data for the suggestions list. It can be a string array or JSON array.
+///The data source contains the list of data for the suggestions list. It can be a string array or JSON array or service URL that returns JSON.
 ///<br/>dataSource-any|Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///The time delay (in milliseconds) after which the suggestion popup will be shown.
@@ -5548,42 +5548,49 @@ executeLocal:function(query){
 /// </summary>
 /// <param name="query"	type="ej.query">Sets the default query for the data source.</param>
 },
-executeQuery:function(query){
+executeQuery:function(query, done, fail, always){
 /// <summary>
 /// The executeQuery property is used to process the data based on the query on URL Binding.
 /// </summary>
 /// <param name="query"	type="ej.query">Sets the default query for the data source.</param>
+/// <param name="done"	type="Function">A function to be called if the request succeeds.</param>
+/// <param name="fail"	type="Function">A function to be called if the request fails.</param>
+/// <param name="always"	type="Function">A function to be called when the request finishes (after success and error callbacks are executed).</param>
 },
-insert:function(data, tableName){
+insert:function(data, tableName, query){
 /// <summary>
-/// It is a method used to inserts a new record in the table.
+/// Inserts a data item in the data table.
 /// </summary>
 /// <param name="data"	type="any">JSON data or JSON array</param>
-/// <param name="tableName"	type="string">name of the table</param>
+/// <param name="tableName"	type="string">Name of the table</param>
+/// <param name="query"	type="ej.query">Sets the default query for the data source.</param>
 },
-remove:function(keyField, value, tableName){
+remove:function(keyField, value, tableName, query){
 /// <summary>
 /// It is used to remove the data from the dataSource.
 /// </summary>
-/// <param name="keyField"	type="string">keyColumn to find the data</param>
-/// <param name="value"	type="string">specified value for the keyField</param>
-/// <param name="tableName"	type="string">name of the source table</param>
+/// <param name="keyField"	type="string">KeyColumn to find the data</param>
+/// <param name="value"	type="string">Specified value for the keyField</param>
+/// <param name="tableName"	type="string">Name of the source table</param>
+/// <param name="query"	type="ej.query">Sets the default query for the data source.</param>
 },
-saveChanges:function(changes, key, tableName){
+saveChanges:function(changes, key, tableName, query){
 /// <summary>
 /// This method is used to save the changes to the corresponding table. You can add a new record, edit an existing record, or delete a record by using this method.
 /// </summary>
-/// <param name="changes"	type="string"></param>
-/// <param name="key"	type="string"></param>
-/// <param name="tableName"	type="string"></param>
+/// <param name="changes"	type="any">Specified values for the Data Table</param>
+/// <param name="key"	type="string">KeyColumn to find the data</param>
+/// <param name="tableName"	type="string">Name of the source table</param>
+/// <param name="query"	type="ej.query">Sets the default query for the data source.</param>
 },
-update:function(keyField, value, tableName){
+update:function(keyField, value, tableName, query){
 /// <summary>
 /// Updates existing record and saves the changes to the table.
 /// </summary>
-/// <param name="keyField"	type="string"></param>
-/// <param name="value"	type="string"></param>
-/// <param name="tableName"	type="string"></param>
+/// <param name="keyField"	type="string">KeyColumn to find the data</param>
+/// <param name="value"	type="string">Specified value for the keyField</param>
+/// <param name="tableName"	type="string">Name of the source table</param>
+/// <param name="query"	type="ej.query">Sets the default query for the data source.</param>
 },
 };
 jQuery.fn.ejDataManager=function(){
@@ -9718,12 +9725,12 @@ reorderColumns:function(fromFieldName, toFieldName){
 /// <param name="fromFieldName"	type="string">Pass the from field name of the column needs to be changed</param>
 /// <param name="toFieldName"	type="string">Pass the to field name of the column needs to be changed</param>
 },
-reorderRows:function(indexes, toindex){
+reorderRows:function(indexes, toIndex){
 /// <summary>
 /// Re-order the row in grid
 /// </summary>
 /// <param name="indexes"	type="Array&lt;any&gt;">Pass the indexes of the rows needs to reorder.</param>
-/// <param name="toindex"	type="number">Pass the index of a row where to be reorderd.</param>
+/// <param name="toIndex"	type="number">Pass the index of a row where to be reordered.</param>
 },
 resetModelCollections:function(){
 /// <summary>
@@ -9837,12 +9844,12 @@ setPhoneModeMaxWidth:function(Index){
 },
 setValidation:function(){
 /// <summary>
-/// Set validation to editform in the grid.
+/// Set validation to edit form in the grid.
 /// </summary>
 },
 setValidationToField:function(fieldName, rules){
 /// <summary>
-/// Set validation to a particular input field in a editfrom dynamically.
+/// Set validation to a particular input field in a edit form dynamically.
 /// </summary>
 /// <param name="fieldName"	type="string">Specify the field name of the column to set validation rules</param>
 /// <param name="rules"	type="any">Specify the validation rules for the field</param>
@@ -10686,7 +10693,7 @@ jQuery.fn.ejHeatMap = function (options) {
 ///<br/>templateId-string	default-null
 ///<br/><br/>
 ///Defines the tooltip of associate that should be shown when the mouse hovers over rows/columns.
-///<br/>associate-ej.datavisualization.HeatMap.Associate|string	default-
+///<br/>associate-ej.datavisualization.HeatMap.Associate|string	default-mouseFollow
 ///<br/><br/>
 ///Enables/ disables the balloon for the tooltip to be shown
 ///<br/>isBalloon-boolean	default-true
@@ -10784,7 +10791,7 @@ jQuery.fn.ejHeatMap = function (options) {
 ///Specifies the value of the column or row.
 ///<br/>displayName-string	default-
 ///<br/><br/>
-///Specifies the property and display value of the heat map.row
+///Specifies the row property and display value of the heat map.
 ///<br/>row-any	default-null
 ///<br/><br/>
 ///Specifies the name of the column or row.
@@ -14537,9 +14544,6 @@ jQuery.fn.ejPivotClient = function (options) {
 ///Enables an option to enhance the space for PivotGrid and PivotChart by hiding Cube Browser and Axis Element Builder.
 ///<br/>enableTogglePanel-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable PivotClientâ€™s responsiveness in the browser layout.
-///<br/>isResponsive-boolean	default-false
-///<br/><br/>
 ///Sets the display mode (Only Chart/Only Grid/Both) in PivotClient.
 ///<br/>mode-ej.PivotClient.DisplayMode|string	default-ej.PivotClient.DisplayMode.ChartAndGrid
 ///<br/><br/>
@@ -14578,6 +14582,9 @@ jQuery.fn.ejPivotClient = function (options) {
 ///<br/><br/>
 ///Sets the summary layout for PivotGrid. Following are the ways in which summary can be positioned: normal summary (bottom), top summary, no summary and excel-like summary.
 ///<br/>gridLayout-ej.PivotGrid.Layout|string	default-ej.PivotGrid.Layout.Normal
+///<br/><br/>
+///Allows the user to enable PivotClientâ€™s responsiveness in the browser layout.
+///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
 ///Allows the user to set the localized language for the widget.
 ///<br/>locale-string	default-en-US
@@ -15189,7 +15196,7 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Allows to set the page number in series axis to be loaded by default.
 ///<br/>seriesCurrentPage-number	default-1
 ///<br/><br/>
-///Holds the neccessary properties for value sorting.
+///Holds the necessary properties for value sorting.
 ///<br/>valueSortSettings-ValueSortSettings	default-{}
 ///<br/><br/>
 ///Contains the headers of the specific column to which value sorting is applied.
@@ -17091,15 +17098,15 @@ addTabGroup:function(tabIndex, tabGroup, groupIndex){
 /// <param name="tabGroup"	type="any">group to be displayed in ribbon tab .</param>
 /// <param name="groupIndex"	type="number">index of the ribbon group,this is optional.</param>
 },
-addTabGroupContent:function(tabIndex, groupIndex, subGroupIndex, content, contentIndex){
+addTabGroupContent:function(tabIndex, groupIndex, content, contentIndex, subGroupIndex){
 /// <summary>
-/// Adds group content dynamically in the ribbon control with given tab index, group index, sub group index, content and content index position. When content index is null, content is added at the last index.
+/// Adds group content dynamically in the ribbon control with given tab index, group index, content, content index and sub group index position. When content index is null, content is added at the last index.
 /// </summary>
 /// <param name="tabIndex"	type="number">ribbon tab index.</param>
 /// <param name="groupIndex"	type="number">ribbon group index.</param>
-/// <param name="subGroupIndex"	type="number">sub group index in the ribbon group,</param>
 /// <param name="content"	type="any">content to be displayed in the ribbon group.</param>
-/// <param name="contentIndex"	type="number">ribbon content index .this is optional.</param>
+/// <param name="contentIndex"	type="number">ribbon content index. This is optional. If the value is not given, then by default contentIndex will be considered as 0.</param>
+/// <param name="subGroupIndex"	type="number">sub group index in the ribbon group. This is optional. If the value is not given, then by default contentIndex will be considered as 0.</param>
 },
 hideBackstage:function(){
 /// <summary>
@@ -17184,13 +17191,14 @@ updateBackStageItem:function(index, item){
 /// <param name="index"	type="number">index to the backstage item</param>
 /// <param name="item"	type="any">select the object to add the backstage item</param>
 },
-removeTabGroupContent:function(tabIndex, groupText, subGroupIndex){
+removeTabGroupContent:function(tabIndex, groupText, contentIndex, subGroupIndex){
 /// <summary>
 /// To customize whole content from Tab Group.
 /// </summary>
 /// <param name="tabIndex"	type="number">ribbon tab index.</param>
 /// <param name="groupText"	type="string">ribbon group text.</param>
-/// <param name="subGroupIndex"	type="number">sub group index in the ribbon group,</param>
+/// <param name="contentIndex"	type="number">ribbon content index. This is optional. If the value is not given, all content groups will be removed.</param>
+/// <param name="subGroupIndex"	type="number">sub group index in the ribbon group. This is optional. If the value is not given, all content groups will be removed.</param>
 },
 removeBackStageItem:function(index){
 /// <summary>
@@ -19762,7 +19770,7 @@ protectSheet:function(isProtected){
 /// <summary>
 /// This method is used to protect or unprotect active sheet.
 /// </summary>
-/// <param name="isProtected"	type="boolean">Optional. By default is `true`. If it is `false` active sheet is unprotected.</param>
+/// <param name="isProtected"	type="boolean">Optional. By default is {{'`true`' | markdownify}}. If it is {{'`false`' | markdownify}} active sheet is unprotected.</param>
 },
 refreshContent:function(sheetIdx){
 /// <summary>
@@ -19921,11 +19929,6 @@ showWaitingPopUp:function(){
 /// This method is used to show waiting pop-up in Spreadsheet.
 /// </summary>
 },
-unfreezePanes:function(){
-/// <summary>
-/// This method is used to unfreeze the frozen rows and columns in the Spreadsheet.
-/// </summary>
-},
 unhideSheet:function(sheetInfo){
 /// <summary>
 /// This method is used to unhide the sheet based on specified sheet name or sheet index.
@@ -19986,6 +19989,11 @@ wrapText:function(range){
 getExportProps:function(){
 /// <summary>
 /// This method is used to get the export properties in the Spreadsheet.
+/// </summary>
+},
+unfreezePanes:function(){
+/// <summary>
+/// This method is used to unfreeze the frozen rows and columns in the Spreadsheet.
 /// </summary>
 },
 };
@@ -20053,8 +20061,8 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Gets or sets a value that indicates whether to enable or disable formula bar in the Spreadsheet.
 ///<br/>allowFormulaBar-boolean	default-true
 ///<br/><br/>
-///Gets or sets a value that indicates whether to enable or disable freeze pane support in Spreadsheet. After enabling this feature, you can use freeze top row, freeze first column and freeze panes options.
-///<br/>allowFreezing-boolean	default-false
+///Gets or sets a value that indicates whether to enable or disable freeze pane support in Spreadsheet. By enabling this feature, you can use freeze top row, freeze first column and freeze panes options.
+///<br/>allowFreezing-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable hyperlink feature in the Spreadsheet. By enabling this feature, you can add hyperlink which is used to easily navigate to the cell reference from one sheet to another or a web page.
 ///<br/>allowHyperlink-boolean	default-true
@@ -20296,6 +20304,9 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///To apply border for the specified range of cell.
 ///<br/>range-string	default-
 ///<br/><br/>
+///Specifies the cell types for a cell or range in Spreadsheet.
+///<br/>cellTypes-Array&lt;any&gt;	default-[]
+///<br/><br/>
 ///Specifies the conditional formatting for the range of cell in Spreadsheet.
 ///<br/>cFormatRule-Array&lt;any&gt;	default-[]
 ///<br/><br/>
@@ -20322,6 +20333,12 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable field as column header in the Spreadsheet.
 ///<br/>fieldAsColumnHeader-boolean	default-false
+///<br/><br/>
+///Gets or sets a value to freeze rows in the Spreadsheet.
+///<br/>frozenRows-number	default-0
+///<br/><br/>
+///Gets or sets a value to freeze columns in the Spreadsheet.
+///<br/>frozenColumns-number	default-0
 ///<br/><br/>
 ///Specifies the header styles for the headers in datasource range.
 ///<br/>headerStyles-any	default-null
@@ -21559,7 +21576,7 @@ jQuery.fn.ejTimePicker = function (options) {
 ///Defines the width of the TimePicker popup.
 ///<br/>popupWidth-string|number	default-auto
 ///<br/><br/>
-///Toggles the readonly state of the TimePicker
+///Toggles the readonly state of the TimePicker. When the widget is readOnly, it doesnâ€™t allow your input.
 ///<br/>readOnly-boolean	default-false
 ///<br/><br/>
 ///Sets the step value for increment the seconds value through arrow keys or mouse scroll.
