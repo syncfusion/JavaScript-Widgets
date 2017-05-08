@@ -3,10 +3,16 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1920px) {
-    
+    .e-dialog.e-edittable
+         {
+         max-width:470px;
+    } 
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-    
+    .e-dialog.e-edittable
+         {
+         max-width:470px;
+    } 
 }
 @media (min-width: 320px) and (max-width:480px) {
 	.e-dialog.e-dialog-wrap.e-dialog-resize{
@@ -15,8 +21,48 @@
 		min-width:320px;
 	}
     .e-responsive-toolbar.e-normal{
-        width:200px !important;
+        width:200px ;
     } 
+	.e-rte .e-rte-tablefields
+	{
+	  width:32% ;
+	}
+	.e-rte .e-dialog .e-tab .e-img-border-field
+	{
+	  width:50% ;
+	  margin-top:2em;
+	}
+	.e-rte .e-dialog .e-tab .e-rte-stylefield
+	{
+	   margin-top:-2em;
+	   margin-right:-28px;
+	   padding: 0.2em;
+	}
+    .e-rte .e-inputtext
+	{
+	  width:90%;
+	}
+    .e-rte.e-findandreplace.e-dialog .e-widget-content .e-txtbox
+         {
+       margin:0px;
+    }
+	 .e-dialog.e-edittable
+         {
+       max-width:470px ;
+    }  
+    .e-rte .e-rte-video
+          {
+	   min-width:270px;
+	}
+	.e-rte.e-findandreplace.e-dialog .e-widget-content >span
+	{
+	height:55px;
+	}
+	.e-rte-explorer.e-rte-fileBrowser,.e-rte-explorer.e-rte-imgBrowser
+	{
+	width:auto !important;
+	}
+	
 }
   /*------------------------Responsive Ribbon-----------------------------------*/
 @media (min-width: 320px) and (max-width:480px) {
@@ -605,11 +651,12 @@ padding-bottom:7px;
   margin-top: 3px;
  }
  .e-kanbandialog .e-save,.e-kanbandialog .e-cancel{
-  width:93% !important;
+  width:100% !important;
   display:table;
-  margin-left: 11px;
-  margin-right: 13px;
  }
+ .e-kanbandialog .e-kanban-editdiv {
+    padding: 0 11px;
+}
 .e-rtl.e-kbnadapt-editdlg .e-dialog-content td.e-rowcell {
     text-align: right !important;
 }
@@ -766,6 +813,12 @@ padding-bottom:7px;
       height: 35px;
       width: 34px;
 	}
+    .e-kanban .e-kanbantoolbar li.e-printlist.e-tooltxt {
+      border: none;
+    }
+    .e-kanban .e-printlist {
+      background: none;
+    }
 	.e-kanban .e-kanbantoolbar .e-kbnclearfl-icon:before{
 	 content: "\e813";
 	}
@@ -810,7 +863,6 @@ padding-bottom:7px;
 	  display: inline;
       padding: 7px 5px 0px 10px;
 	  text-overflow: ellipsis;
-      width: 80%;
       display: block;
       overflow: hidden;
       white-space: nowrap;
@@ -820,7 +872,6 @@ padding-bottom:7px;
 	  margin-left:5px;
      top:0px;
      height: 35px;
-     width: 135px;
 	  }
 .e-swimlane-ddl .e-swimlane-arrow:before{
 	 content: "\e811";
@@ -859,7 +910,7 @@ padding-bottom:7px;
     position: relative;
     top: 4px;
     width: 90% !important;
-    left: -17px;
+    left: -12px;
 }
  .e-swimlane-ul li div:after {
     content: "";
@@ -913,7 +964,7 @@ padding-bottom:7px;
   float: left;
  }
 .e-kanban .e-adaptive-search .e-searchdiv .e-ejinputtext{
-	 width: 86%;
+	 width: 100%;
  }
 .e-kbnadapt-editdlg .kanbanform input.e-numerictextbox{  
     width: 100% !important;
@@ -955,6 +1006,17 @@ padding-bottom:7px;
      width: 10%;
 }
 }
+@media (max-width: 480px) ,(max-device-width: 600px)
+{
+    
+    .e-swimlane-ddl .e-swimlane-text {        
+        width: 80%;
+    }
+
+    .e-swimlane-ddl {       
+        width: 135px;
+    }
+}
 @media (min-width: 480px) and (max-width:600px),(min-device-width: 600px) and (max-device-width: 800px) {
   .e-kanban .e-adaptive-search .e-search.e-tooltxt{
     left: -26px !important;
@@ -967,12 +1029,22 @@ padding-bottom:7px;
 }
 @media (min-width: 600px) and (max-width:801px),(min-device-width: 800px) and (max-device-width: 1200px) {
  .e-kanban .e-adaptive-search .e-search.e-tooltxt{
-    left: -36px !important;
+    left: -28px !important;
+}
+.e-kanbandialog  .e-kanban-editdiv {
+	padding: 0px 11px;
 }
 .e-kanbandialog .e-save, .e-kanbandialog .e-cancel {
-    width: 97% !important;
-    margin-left: 10px;
+    width: 100% !important;
+    margin-left: 0;
 }
+.e-swimlane-ddl .e-swimlane-text {        
+        width: 100%;
+    }
+
+    .e-swimlane-ddl {       
+        width: 135px;
+    }
 }
 @media (min-width: 480px) and (max-width:767px) {
    
@@ -982,8 +1054,16 @@ padding-bottom:7px;
     }
 	
     .e-responsive-toolbar.e-normal{
-         width:250px !important;
+         width:250px ;
     } 
+	.e-dialog.e-edittable
+         {
+         max-width:470px;
+    }  
+	.e-rte-explorer.e-rte-fileBrowser,.e-rte-explorer.e-rte-imgBrowser
+	{
+	width:auto !important;
+	}
 }
 @media (max-width : 767px)
 {
@@ -1085,7 +1165,7 @@ padding-bottom:7px;
         display: none;
     }
    .e-responsive-toolbar.e-normal{
-        width:300px !important;
+        width:300px ;
     }
 }
 
@@ -1272,3 +1352,31 @@ padding-bottom:7px;
 		 display:inline-block;
 	 }
 }
+/*------------------------------------Menu End-------------------------------------*/
+@media (max-width : 420px) {
+	.e-ss-leftdiv, .e-ss-lefttopdiv {
+		display: none;
+	}
+	.e-ss-drpdiv {
+		display: block;
+	}
+    .e-ss-maindiv {
+		max-width: 418px;
+		min-height: 300px;
+	}
+	.e-ss-centerdiv {
+		min-height: 240px;
+	}
+    .e-ss-rightdiv, .e-ss-righttopdiv {
+		width: 100%;
+	}
+	.e-ss-nm-dlg-grid {
+		width: 280px;
+	}
+	.e-ss-cfdlg, .e-ss-nmdlg, .e-ss-fcdlg, .e-charttype-dlg, .e-ss-valdlg, .e-ss-hyperlinkdlg, .e-ss-frdlg, .e-ss-gotodlg {
+		width: 100% !important;
+		top: 0px !important;
+		left: 0px !important;
+	}
+}
+/*------------------------------------Spreadsheet End-------------------------------------*/

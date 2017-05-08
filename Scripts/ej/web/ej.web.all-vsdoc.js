@@ -1180,6 +1180,11 @@ animate:function(options){
 /// </summary>
 /// <param name="options"	type="any">If an array collection is passed as parameter, series and indicator objects passed in array collection are animated.ExampleIf a series or indicator object is passed to this method, then the specific series or indicator is animated.Example,</param>
 },
+print:function(){
+/// <summary>
+/// Prints the rendered chart.
+/// </summary>
+},
 export:function(type, URL, exportMultipleChart){
 /// <summary>
 /// Exports chart as an image or to an excel file. Chart can be exported as an image only when exportCanvasRendering option is set to true.
@@ -1441,6 +1446,9 @@ jQuery.fn.ejChart = function (options) {
 ///Position of the data label in pie/doughnut/pyramid/funnel series. OutsideExtended position is not applicable for pyramid/funnel.
 ///<br/>labelPosition-ej.datavisualization.Chart.LabelPosition|string	default-inside. See LabelPosition
 ///<br/><br/>
+///Specifies the mode for splitting the data points in pieOfPie series.
+///<br/>splitMode-ej.datavisualization.Chart.SplitMode|string	default-value. See SplitMode
+///<br/><br/>
 ///Quartile calculation has been performed in three different formulas to render the box and whisker series.
 ///<br/>boxPlotMode-ej.datavisualization.Chart.boxPlotMode|string	default-exclusive
 ///<br/><br/>
@@ -1608,6 +1616,15 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Controls the size of pie series. Value ranges from 0 to 1.
 ///<br/>pieCoefficient-number	default-0.8
+///<br/><br/>
+///Controls the size of the second pie in pieOfPie series. Value ranges from 0 to 1.
+///<br/>pieOfPieCoefficient-number	default-0.6
+///<br/><br/>
+///Split Value of pieofpie series.
+///<br/>splitValue-string	default-null
+///<br/><br/>
+///Distance between the two pie's in pieOfPie series.
+///<br/>gapWidth-number	default-50
 ///<br/><br/>
 ///Name of the property in the datasource that contains fill color for the series.
 ///<br/>pointColorMappingName-string	default-null
@@ -2551,6 +2568,9 @@ jQuery.fn.ejChart = function (options) {
 ///Border type of the multi level labels.
 ///<br/>type-ej.datavisualization.Chart.MultiLevelLabelsBorderType|string	default-rectangle. See Type
 ///<br/><br/>
+///Specifies whether the axis elements need to be placed nearby the axis line, while crossing.
+///<br/>showNextToAxisLine-boolean	default-true
+///<br/><br/>
 ///Options for customizing the strip lines.
 ///<br/>stripLine-Array&lt;any&gt;	default-[ ]
 ///<br/><br/>
@@ -2935,6 +2955,9 @@ jQuery.fn.ejChart = function (options) {
 ///Border type of the multi level labels.
 ///<br/>type-ej.datavisualization.Chart.MultiLevelLabelsBorderType|string	default-rectangle. See Type
 ///<br/><br/>
+///Specifies whether the axis elements need to be placed nearby the axis line, while crossing.
+///<br/>showNextToAxisLine-boolean	default-true
+///<br/><br/>
 ///Options for customizing the strip lines.
 ///<br/>stripLine-Array&lt;any&gt;	default-[ ]
 ///<br/><br/>
@@ -3316,6 +3339,9 @@ jQuery.fn.ejChart = function (options) {
 ///Border type of the multi level labels.
 ///<br/>type-ej.datavisualization.Chart.MultiLevelLabelsBorderType|string	default-rectangle. See Type
 ///<br/><br/>
+///Specifies whether the axis elements need to be placed nearby the axis line, while crossing.
+///<br/>showNextToAxisLine-boolean	default-true
+///<br/><br/>
 ///Options for customizing the strip lines.
 ///<br/>stripLine-Array&lt;any&gt;	default-[ ]
 ///<br/><br/>
@@ -3571,6 +3597,9 @@ jQuery.fn.ejChart = function (options) {
 ///Position of the data label in pie/doughnut/pyramid/funnel series. OutsideExtended position is not applicable for pyramid/funnel.
 ///<br/>labelPosition-ej.datavisualization.Chart.LabelPosition|string	default-inside. See LabelPosition
 ///<br/><br/>
+///Specifies the mode for splitting the data points in pieOfPie series.
+///<br/>splitMode-ej.datavisualization.Chart.SplitMode|string	default-value. See SplitMode
+///<br/><br/>
 ///Quartile calculation has been performed in three different formulas to render the boxplot series .
 ///<br/>boxPlotMode-ej.datavisualization.Chart.LabelPosition|string	default-exclusive
 ///<br/><br/>
@@ -3744,6 +3773,15 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Controls the size of pie series. Value ranges from 0 to 1.
 ///<br/>pieCoefficient-number	default-0.8
+///<br/><br/>
+///Controls the size of the second pie in pieOfPie series. Value ranges from 0 to 1.
+///<br/>pieOfPieCoefficient-number	default-0.6
+///<br/><br/>
+///Split Value of pieofpie series.
+///<br/>splitValue-string	default-null
+///<br/><br/>
+///Distance between the two pie's in pieOfPie series.
+///<br/>gapWidth-number	default-50
 ///<br/><br/>
 ///Options for customizing the empty point in the series.
 ///<br/>emptyPointSettings-any	default-
@@ -5211,6 +5249,9 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify backgroundColor for the ranges of circular gauge
 ///<br/>backgroundColor-string	default-#32b3c6
 ///<br/><br/>
+///Specify text for the ranges of circular gauge
+///<br/>legendText-string	default-null
+///<br/><br/>
 ///Specify border for ranges of circular gauge
 ///<br/>border-any	default-Object
 ///<br/><br/>
@@ -5321,6 +5362,84 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///<br/><br/>
 ///Specify the theme of circular gauge.
 ///<br/>theme-string	default-flatlight
+///<br/><br/>
+///Options to customize the legend.
+///<br/>legend-Legend	default-
+///<br/><br/>
+///Toggles the visibility of the legend.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///Specifies the alignment of the legend.
+///<br/>alignment-ej.datavisualization.CircularGauge.LegendAlignment|string	default-Center. See Alignment
+///<br/><br/>
+///Options for customizing the legend border.
+///<br/>border-any	default-
+///<br/><br/>
+///Border color of the legend.
+///<br/>color-string	default-transparent
+///<br/><br/>
+///Border width of the legend.
+///<br/>width-number	default-1
+///<br/><br/>
+///Fill color for the legend items. By using this property, it displays all legend item shapes in same color.Legend items representing invisible ranges is displayed in gray color.
+///<br/>fill-string	default-null
+///<br/><br/>
+///Gap or padding between the legend items.
+///<br/>itemPadding-number	default-20
+///<br/><br/>
+///Options to customize the style of legend items.
+///<br/>itemStyle-any	default-
+///<br/><br/>
+///Options for customizing the border of legend items.
+///<br/>border-any	default-
+///<br/><br/>
+///Border color of the legend items.
+///<br/>color-string	default-transparent
+///<br/><br/>
+///Border width of the legend items.
+///<br/>width-number	default-1
+///<br/><br/>
+///Height of the shape in legend items.
+///<br/>height-number	default-10
+///<br/><br/>
+///Width of the shape in legend items.
+///<br/>width-number	default-10
+///<br/><br/>
+///Opacity of the legend.
+///<br/>opacity-number	default-1
+///<br/><br/>
+///Places the legend at specified position. Legend can be placed at left, right, top or bottom of the circular gauge.
+///<br/>position-ej.datavisualization.CircularGauge.LegendPosition|string	default-Bottom. See Position
+///<br/><br/>
+///Shape of the legend items.
+///<br/>shape-ej.datavisualization.CircularGauge.LegendShape|string	default-Circle. See Shape
+///<br/><br/>
+///Options to customize the size of the legend.
+///<br/>size-any	default-
+///<br/><br/>
+///Height of the legend. Height can be specified in pixel.
+///<br/>height-string	default-null
+///<br/><br/>
+///Width of the legend. Width can be specified in pixel.
+///<br/>width-string	default-null
+///<br/><br/>
+///Options to customize the font used for legend item text.
+///<br/>font-any	default-
+///<br/><br/>
+///Font family for legend item text.
+///<br/>fontFamily-string	default-Segoe UI
+///<br/><br/>
+///Font style for legend item text.
+///<br/>fontStyle-string	default-Normal
+///<br/><br/>
+///Font weight for legend item text.
+///<br/>fontWeight-string	default-Regular
+///<br/><br/>
+///Font size for legend item text.
+///<br/>size-string	default-12px
+///<br/><br/>
+///Font color of the text for legend items.
+///<br/>color-string	default-null
 ///<br/><br/>
 ///Specify tooltip option of circular gauge
 ///<br/>tooltip-Tooltip	default-object
@@ -6166,8 +6285,8 @@ fitToPage:function(mode, region, margin){
 /// <summary>
 /// Fit the diagram content into diagram viewport
 /// </summary>
-/// <param name="mode"	type="string">to set the mode of fit to command. See [Fit Mode](/api/js/global#fitmode)</param>
-/// <param name="region"	type="string">to set whether the region to be fit will be based on diagram elements or page settings [Region](/api/js/global#region)</param>
+/// <param name="mode"	type="ej.datavisualization.Diagram.FitMode">to set the mode of fit to command.</param>
+/// <param name="region"	type="ej.datavisualization.Diagram.Region">to set whether the region to be fit will be based on diagram elements or page settings.</param>
 /// <param name="margin"	type="any">to set the required margin</param>
 },
 group:function(){
@@ -6789,6 +6908,69 @@ jQuery.fn.ejDiagram = function (options) {
 ///Describes the name of the table on which the specified query has to be executed
 ///<br/>tableName-string	default-null
 ///<br/><br/>
+///Specifies the method name which is used to get the updated data from client side to the server side
+///<br/>crudAction-any	default-null
+///<br/><br/>
+///Specifies the create method which is used to get the nodes to be added from client side to the server side
+///<br/>create-string	default-null
+///<br/><br/>
+///Specifies the update method which is used to get the updated data from client side to the server side
+///<br/>update-string	default-null
+///<br/><br/>
+///Specifies the destroy method which is used to get the deleted items data from client side to the server side
+///<br/>destroy-string	default-null
+///<br/><br/>
+///Specifies the read method to get the created nodes from client side to the server side
+///<br/>read-string	default-null
+///<br/><br/>
+///Specifies the customfields to get the updated data from client side to the server side
+///<br/>customFields-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Defines the data source either as a collection of objects or as an instance of ej.DataManager
+///<br/>connectionDataSource-any	default-null
+///<br/><br/>
+///Sets the datasource for the connection datasource settings items.
+///<br/>dataSource-string	default-null
+///<br/><br/>
+///Sets the unique id of the connection data source item
+///<br/>id-string	default-null
+///<br/><br/>
+///Sets the sourcenode of the connection data source item
+///<br/>sourceNode-string	default-null
+///<br/><br/>
+///Sets the targetnode of the connection data source item
+///<br/>targetNode-string	default-null
+///<br/><br/>
+///Sets the sourcepoint-x value of the connection data source item
+///<br/>sourcePointX-string	default-null
+///<br/><br/>
+///Sets the sourcePoint-y value of the connection data source item
+///<br/>sourcePointY-string	default-null
+///<br/><br/>
+///Sets the targetPoint-x value of the connection data source item
+///<br/>targetPointX-string	default-null
+///<br/><br/>
+///Sets the targetPoint-y value of the connection data source item
+///<br/>targetPointY-string	default-null
+///<br/><br/>
+///Specifies the method name which is used to get updated connectors from client side to the server side
+///<br/>crudAction-any	default-null
+///<br/><br/>
+///Specifies the create method which is used to get the connectors to be added from client side to the server side
+///<br/>create-string	default-null
+///<br/><br/>
+///Specifies the update method which is used to get the updated connectors from client side to the server side
+///<br/>update-string	default-null
+///<br/><br/>
+///Specifies the destroy method which is used to get the deleted items data from client side to the server side
+///<br/>destroy-string	default-null
+///<br/><br/>
+///Specifies the read method which is used to get the data from client side to the server side
+///<br/>read-string	default-null
+///<br/><br/>
+///Specifies the customfields to get the updated data from client side to the server side
+///<br/>customFields-Array&lt;any&gt;	default-[]
+///<br/><br/>
 ///Initializes the default values for nodes and connectors
 ///<br/>defaultSettings-DefaultSettings	default-{}
 ///<br/><br/>
@@ -6860,6 +7042,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///<br/><br/>
 ///Customizes the orientation of trees/sub trees. For orientations, see Chart Orientations. For chart types, see Chart Types
 ///<br/>getLayoutInfo-any	default-null
+///<br/><br/>
+///Defines a method to customize the segments based on source and target nodes.
+///<br/>getConnectorSegments-any	default-null
 ///<br/><br/>
 ///Sets the space to be horizontally left between nodes
 ///<br/>horizontalSpacing-number	default-30
@@ -8217,8 +8402,8 @@ jQuery.fn.ejDraggable = function (options) {
 ///Distance in pixels after mousedown the mouse must move before dragging should start. This option can be used to prevent unwanted drags when clicking on an element.
 ///<br/>distance-number	default-1
 ///<br/><br/>
-///The drag area is used to restrict the dragging element bounds.
-///<br/>dragArea-boolean	default-false
+///The drag area is used to restrict the dragging element bounds.Specify the id of the container within which the element should be dragged.
+///<br/>dragArea-boolean	default-null
 ///<br/><br/>
 ///If specified, restricts drag start click to the specified element(s).
 ///<br/>handle-string	default-null
@@ -8501,7 +8686,7 @@ jQuery.fn.ejDropDownList = function (options) {
 ///<br/>template-string	default-null
 ///<br/><br/>
 ///Defines the text value that is displayed in the DropDownList textbox.
-///<br/>text-string|number	default-null
+///<br/>text-string	default-null
 ///<br/><br/>
 ///Sets the jQuery validation error message in the DropDownList
 ///<br/>validationMessage-any	default-null
@@ -8804,6 +8989,14 @@ expandCollapseRecord:function(taskId){
 /// </summary>
 /// <param name="taskId"	type="number">Expand or Collapse a record based on task id.</param>
 },
+export:function(action, serverEvent, multipleExport){
+/// <summary>
+/// Export the Gantt content to excel or PDF document.
+/// </summary>
+/// <param name="action"	type="string">Pass the controller action name corresponding to exporting</param>
+/// <param name="serverEvent"	type="string">optionalASP server event name corresponding to exporting</param>
+/// <param name="multipleExport"	type="boolean">optionalPass the multiple exporting value as true/false</param>
+},
 hideColumn:function(headerText){
 /// <summary>
 /// To hide the column by using header text
@@ -8893,6 +9086,12 @@ jQuery.fn.ejGantt = function (options) {
 ///<br/><br/>
 ///Specifies the baseline background color in Gantt
 ///<br/>baselineColor-string	default-#fba41c
+///<br/><br/>
+///Specifies the mapping property path for the work field of a task in the data source. When it is mapped the end date and duration for a task will be calculated automatically.
+///<br/>workMapping-string	default-
+///<br/><br/>
+///Specifies the mapping property path for the expand status of a record in data source.
+///<br/>expandStateMapping-string	default-
 ///<br/><br/>
 ///Specifies the mapping property path for baseline end date in datasource
 ///<br/>baselineEndDateMapping-string	default-
@@ -9263,6 +9462,18 @@ jQuery.fn.ejGantt = function (options) {
 ///Specifies the list of toolbar items to be rendered in Gantt toolbar
 ///<br/>toolbarItems-Array&lt;any&gt;	default-[]
 ///<br/><br/>
+///Allows the user to insert custom toolbar items.
+///<br/>customToolbarItems-Array&lt;any&gt;	default-
+///<br/><br/>
+///Allows the user to insert the custom icons in toolbar using CSS class name selector.
+///<br/>text-string	default-
+///<br/><br/>
+///Allows the user to insert the custom icons in toolbar using script templates. Using this property we can bind HTML elements and other EJ controls to Gantt toolbar.
+///<br/>templateID-string	default-
+///<br/><br/>
+///Allows the user to display custom tooltip text for Gantt custom toolbar items.
+///<br/>tooltipText-string	default-
+///<br/><br/>
 ///Specifies the tree expander column in Gantt
 ///<br/>treeColumnIndex-number	default-0
 ///<br/><br/>
@@ -9389,7 +9600,7 @@ deleteRecord:function(fieldName, data){
 /// Delete a record in grid control when allowDeleting is set as true
 /// </summary>
 /// <param name="fieldName"	type="string">Pass the primary key field Name of the column</param>
-/// <param name="data"	type="Array&lt;any&gt;">Pass the JSON data of record need to be delete.</param>
+/// <param name="data"	type="any">Pass the JSON data of record need to be delete.</param>
 },
 deleteRow:function($tr){
 /// <summary>
@@ -10020,7 +10231,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>enableGroupByFormat-Boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to display the columns in the grid mapping with column name of the dataSource.
-///<br/>field-String	default-
+///<br/>field-string	default-
 ///<br/><br/>
 ///Gets or sets a template that customize the filter control from default . See filterBarTemplate
 ///<br/>filterBarTemplate-any	default-null
@@ -10029,19 +10240,19 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>filterType-ej.Grid.FilterType|string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to define foreign key field name of the grid datasource.
-///<br/>foreignKeyField-String	default-null
+///<br/>foreignKeyField-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to bind the field which is in foreign column datasource based on the foreignKeyField
-///<br/>foreignKeyValue-String	default-null
+///<br/>foreignKeyValue-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates the format for the text applied on the column
-///<br/>format-String	default-
+///<br/>format-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to add the template within the header element of the particular column.
-///<br/>headerTemplateID-String	default-null
+///<br/>headerTemplateID-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to display the title of that particular column.
-///<br/>headerText-String	default-
+///<br/>headerText-string	default-
 ///<br/><br/>
 ///This defines the text alignment of a particular column header cell value. See headerTextAlign
 ///<br/>headerTextAlign-ej.TextAlign|string	default-null
@@ -10431,10 +10642,10 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>sortedColumns-Array&lt;any&gt;	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the direction to sort the column.
-///<br/>direction-String	default-
+///<br/>direction-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the field name of the column to be sort
-///<br/>field-String	default-
+///<br/>field-string	default-
 ///<br/><br/>
 ///Gets or sets an object that indicates to managing the collection of stacked header rows for the grid.
 ///<br/>stackedHeaderRows-Array&lt;StackedHeaderRows&gt;	default-[]
@@ -10446,13 +10657,13 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>column-any	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates class to the corresponding stackedHeaderColumn.
-///<br/>cssClass-String	default-null
+///<br/>cssClass-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates the header text for the particular stacked header column.
-///<br/>headerText-String	default-null
+///<br/>headerText-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates the text alignment of the corresponding headerText.
-///<br/>textAlign-String	default-ej.TextAlign.Left
+///<br/>textAlign-string	default-ej.TextAlign.Left
 ///<br/><br/>
 ///Sets the template for tooltip for the Grid stackedHeaderColumns.
 ///<br/>tooltip-String	default-null
@@ -10473,22 +10684,22 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>summaryColumns-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates the text displayed in the summary column as a value
-///<br/>customSummaryValue-String	default-null
+///<br/>customSummaryValue-string	default-null
 ///<br/><br/>
 ///This specifies summary column used to perform the summary calculation
-///<br/>dataMember-String	default-null
+///<br/>dataMember-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the target column at which to display the summary.
-///<br/>displayColumn-String	default-null
+///<br/>displayColumn-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates the format for the text applied on the column
-///<br/>format-String	default-null
+///<br/>format-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates the text displayed before the summary column value
-///<br/>prefix-String	default-null
+///<br/>prefix-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates the text displayed after the summary column value
-///<br/>suffix-String	default-null
+///<br/>suffix-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates the type of calculations to be performed for the corresponding summary column. See summaryType.
 ///<br/>summaryType-ej.Grid.SummaryType|string	default-[]
@@ -10497,10 +10708,10 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>template-String	default-null
 ///<br/><br/>
 ///This specifies the grid to show the title for the summary rows.
-///<br/>title-String	default-
+///<br/>title-string	default-
 ///<br/><br/>
 ///This specifies the grid to show the title of summary row in the specified column.
-///<br/>titleColumn-String	default-null
+///<br/>titleColumn-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates whether to auto wrap the grid header or content or both
 ///<br/>textWrapSettings-TextWrapSettings	default-
@@ -12632,7 +12843,7 @@ jQuery.fn.ejListBox = function (options) {
 ///<br/>itemRequestCount-number	default-5
 ///<br/><br/>
 ///Loads data for the listbox by default (i.e. on initialization) when it is set to true. It creates empty ListBox if it is set to false.
-///<br/>loadDataOnInit-boolean	default-
+///<br/>loadDataOnInit-boolean	default-true
 ///<br/><br/>
 ///The query to retrieve required data from the data source.
 ///<br/>query-ej.Query	default-ej.Query()
@@ -12656,13 +12867,13 @@ jQuery.fn.ejListBox = function (options) {
 ///<br/>value-number	default-&#226;€œ&#226;€
 ///<br/><br/>
 ///Specifies the virtual scroll mode to load the list data on demand via scrolling behavior. There are two types of mode.
-///<br/>virtualScrollMode-ej.VirtualScrollMode|string	default-
+///<br/>virtualScrollMode-ej.VirtualScrollMode|string	default-ej.VirtualScrollMode.Normal
 ///<br/><br/>
 ///Defines the width of the ListBox widget.
 ///<br/>width-string	default-null
 ///<br/><br/>
 ///Specifies the targetID for the listbox items.
-///<br/>targetID-string	default-
+///<br/>targetID-string	default-null
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -12918,6 +13129,18 @@ jQuery.fn.ejListView = function (options) {
 ///<br/><br/>
 ///Specifies the width.
 ///<br/>width-string|number	default-null
+///<br/><br/>
+///Specifies the number of items to be fetched on each scroll. Note: This property works only with Virtual scrolling.
+///<br/>itemRequestCount-number	default-5
+///<br/><br/>
+///Specifies the maximum number of items to be fetched. Note: This will work only with Virtual scrolling
+///<br/>totalItemsCount-number	default-null
+///<br/><br/>
+///Loads the list data on demand via scrolling behavior to improve the applicationâ€™s performance. There are two ways to load data which can be defined using virtualScrollMode property.
+///<br/>allowVirtualScrolling-boolean	default-false
+///<br/><br/>
+///Specifies the virtual scroll mode to load the list data on demand via scrolling behavior. There are two types of mode.
+///<br/>virtualScrollMode-ej.VirtualScrollMode|string	default-ej.VirtualScrollMode.Normal
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -13488,6 +13711,9 @@ jQuery.fn.ejMenu = function (options) {
 ///<br/><br/>
 ///Specifies the target id of context menu. On right clicking the specified contextTarget element, context menu gets shown.
 ///<br/>contextMenuTarget-string	default-null
+///<br/><br/>
+///Specifies the container element selectors for submenuâ€™s collision. The submenu gets displayed based on spacing available with respect to container element.
+///<br/>container-string	default-null
 ///<br/><br/>
 ///Specify the CSS class to achieve custom theme.
 ///<br/>cssClass-string	default-
@@ -14221,6 +14447,9 @@ jQuery.fn.ejPivotChart = function (options) {
 ///Allows the user to view PivotChart from right to left.
 ///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
+///Allows user to render complete PivotChart on drill operation, that is, when expanding and collapsing members which are shown in multi-level labels.
+///<br/>enableMultiLevelLabels-boolean	default-false
+///<br/><br/>
 ///Allows the user to enable PivotChartâ€™s responsiveness in the browser layout.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
@@ -14546,6 +14775,60 @@ jQuery.fn.ejPivotClient = function (options) {
 ///<br/><br/>
 ///Sets the display mode (Only Chart/Only Grid/Both) in PivotClient.
 ///<br/>mode-ej.PivotClient.DisplayMode|string	default-ej.PivotClient.DisplayMode.ChartAndGrid
+///<br/><br/>
+///Allows user to set visibility of icons in toolbar panel.
+///<br/>toolbarIconSettings-ToolbarIconSettings	default-{}
+///<br/><br/>
+///Allows user to set the visibility of Add Report icon in toolbar panel.
+///<br/>enableAddReport-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of New Report icon in toolbar panel.
+///<br/>enableNewReport-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Rename Report icon in toolbar panel.
+///<br/>enableRenameReport-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of DB Manipulation icon in toolbar panel.
+///<br/>enableDBManipulation-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Word Export icon in toolbar panel.
+///<br/>enableWordExport-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Excel Export icon in toolbar panel.
+///<br/>enableExcelExport-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of PDF Export icon in toolbar panel.
+///<br/>enablePdfExport-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of MDX Query icon in toolbar panel.
+///<br/>enableMDXQuery-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Defer Update icon in toolbar panel.
+///<br/>enableDeferUpdate-boolean	default-false
+///<br/><br/>
+///Allows user to set the visibility of Full Screen icon in toolbar panel.
+///<br/>enableFullScreen-boolean	default-false
+///<br/><br/>
+///Allows user to set the visibility of Sort/Filter Column icon in toolbar panel.
+///<br/>enableSortOrFilterColumn-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Sort/Filter Row icon in toolbar panel.
+///<br/>enableSortOrFilterRow-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Toggle Axis icon in toolbar panel.
+///<br/>enableToggleAxis-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Chart Types icon in toolbar panel.
+///<br/>enableChartTypes-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Remove Report icon in toolbar panel.
+///<br/>enableRemoveReport-boolean	default-true
+///<br/><br/>
+///Allows user to set the visibility of Calculated Member icon in toolbar panel.
+///<br/>enableCalculatedMember-boolean	default-false
+///<br/><br/>
+///Allows user to show unique name on pivotbutton.
+///<br/>showUniqueNameOnPivotButton-boolean	default-false
 ///<br/><br/>
 ///Enables the splitter option for resizing the elements inside the control.
 ///<br/>enableSplitter-boolean	default-false
@@ -15220,6 +15503,21 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Allows the user to freeze both the row headers and column headers on scrolling.
 ///<br/>enableFrozenHeaders-boolean	default-false
 ///<br/><br/>
+///Allows user to set the size of the scrollbar (horizontal and vertical) visible in PivotGrid.
+///<br/>scrollerSize-number	default-18
+///<br/><br/>
+///Allows user to display header name in PivotGrid control.
+///<br/>headerSettings-HeaderSettings	default-{}
+///<br/><br/>
+///Allows user to enable/disable row header names in PivotGrid control.
+///<br/>showRowItems-boolean	default-false
+///<br/><br/>
+///Allows user to enable/disable column header names in PivotGrid control.
+///<br/>showColumnItems-boolean	default-false
+///<br/><br/>
+///Allows user to show appropriate unique name on Pivot button.
+///<br/>showUniqueNameOnPivotButton-boolean	default-false
+///<br/><br/>
 ///Object utilized to pass additional information between client-end and service-end on operating the control in server mode.
 ///<br/>customObject-any	default-null
 ///<br/><br/>
@@ -15655,6 +15953,59 @@ jQuery.fn.ejPivotTreeMap = function (options) {
 ///<br/><br/>
 ///Connects the service using the specified URL for any server updates.
 ///<br/>url-string	default-&#226;€œ&#226;€
+///</summary>
+///<param name="options" type="Object">
+///The widget configuration options
+///</param>
+};
+ej.Print=function(){};
+ej.Print.prototype={
+
+print:function(){
+/// <summary>
+/// Print the specific page or an element.
+/// </summary>
+},
+};
+jQuery.fn.ejPrint=function(){
+this.data("ejPrint",new	ej.Print());
+return this;
+};
+jQuery.fn.ejPrint = function (options) {
+/// <summary><br/>
+///A flexible widget that allows the user to print a complete page or a particular element in it with the required customizations.<br/><br/>
+///Append the custom HTML after the selected content.
+///<br/>append-string	default-null
+///<br/><br/>
+///A selector that specifies a particular element to be excluded from printing.
+///<br/>excludeSelector-string	default-null
+///<br/><br/>
+///Specifies whether the URL of an external stylesheet can be included to customize and print that page.
+///<br/>externalStyles-String	default-null
+///<br/><br/>
+///Prepend a doctype to the document frame.
+///<br/>docType-string	default-&amp;lt;!doctype html&amp;gt;
+///<br/><br/>
+///Specifies whether the global styles can be applied to the element to be printed.
+///<br/>globalStyles-Boolean	default-true
+///<br/><br/>
+///Sets the height of the print window.
+///<br/>height-Number	default-454
+///<br/><br/>
+///Prepends the custom HTML before the selected content.
+///<br/>prepend-string	default-null
+///<br/><br/>
+///Allows printing the content in a new window.
+///<br/>printInNewWindow-Boolean	default-false
+///<br/><br/>
+///Sets the period of time to wait before printing the content.
+///<br/>timeOutPeriod-Number	default-1000
+///<br/><br/>
+///Sets the title of the print document.
+///<br/>title-string	default-null
+///<br/><br/>
+///Defines the width of the print window.
+///<br/>width-Number	default-1024
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -17835,6 +18186,21 @@ jQuery.fn.ejRTE = function (options) {
 ///Based on the content size, its height is adjusted instead of adding the scrollbar.
 ///<br/>autoHeight-boolean	default-false
 ///<br/><br/>
+///This API holds configuration setting for paste clenaup behavior.
+///<br/>pasteCleanupSettings-PasteCleanupSettings	default-{ listConversion: false, cleanCSS: false,	removeStyles: false, cleanElements: false }
+///<br/><br/>
+///This API is used to convert the list elements pasted from word document to editor.
+///<br/>listConversion-boolean	default-false
+///<br/><br/>
+///This API is used to clean the unwanted css in the elements pasted from word document to editor.
+///<br/>cleanCSS-boolean	default-false
+///<br/><br/>
+///This API is used to remove all styles in the elements pasted from word document to editor.
+///<br/>removeStyles-boolean	default-false
+///<br/><br/>
+///This API is used to clean the unwanted elements pasted from word document to editor.
+///<br/>cleanElements-boolean	default-false
+///<br/><br/>
 ///Sets the colorCode to display the color of the fontColor and backgroundColor in the font tools of the RTE.
 ///<br/>colorCode-any	default-[000000, FFFFFF, C4C4C4, ADADAD, 595959, 262626, 4f81bd, dbe5f1, b8cce4, 95b3d7, 366092, 244061, c0504d, f2dcdb, e5b9b7, d99694, 953734,632423, 9bbb59, ebf1dd, d7e3bc, c3d69b, 76923c, 4f6128, 8064a2, e5e0ec, ccc1d9, b2a2c7, 5f497a, 3f3151, f79646, fdeada, fbd5b5, fac08f,e36c09, 974806]
 ///<br/><br/>
@@ -18110,6 +18476,9 @@ jQuery.fn.ejRTE = function (options) {
 ///<br/><br/>
 ///Specifies the list of groups and order of those groups displayed in the RTE toolbar.  The toolsList property is used to get the root group order and tools property is used to get the inner order of the corresponding groups displayed. When the value is not specified, it gets its default display order and tools.
 ///<br/>toolsList-Array&lt;any&gt;	default-[formatStyle, font, style, effects, alignment, lists, indenting, clipboard, doAction, clear, links, images, media, tables, casing,view, customTools,print,edit]
+///<br/><br/>
+///Specifies the overflow mode for RTE responsive toolbar
+///<br/>toolbarOverflowMode-ej.RTE.ToolbarOverflowMode|string	default-Popup
 ///<br/><br/>
 ///Display the hints for the tools in the Toolbar.
 ///<br/>tooltipSettings-any	default-{ associate: mouseenter, showShadow: true, position: { stem: { horizontal: left, vertical: top }  }, tip: { size: { width: 5, height: 5 }, isBalloon: false }
@@ -18499,6 +18868,9 @@ jQuery.fn.ejSchedule = function (options) {
 ///When set to true, displays the all-day row cells on the Schedule.
 ///<br/>showAllDayRow-boolean	default-true
 ///<br/><br/>
+///When set to false, hides the weekend days on all the Scheduler views.
+///<br/>showWeekend-boolean	default-true
+///<br/><br/>
 ///When set to true, displays the current time indicator on the Schedule.
 ///<br/>showCurrentTimeIndicator-boolean	default-true
 ///<br/><br/>
@@ -18795,10 +19167,11 @@ redo:function(){
 /// redo the last drawn stroke of the signature
 /// </summary>
 },
-save:function(){
+save:function(Filename){
 /// <summary>
 /// used to save the drawn image.
 /// </summary>
+/// <param name="Filename"	type="string">The file name of the signature to be downloaded.</param>
 },
 show:function(){
 /// <summary>
@@ -19663,6 +20036,11 @@ gotoPage:function(sheetIdx, newSheet){
 /// <param name="sheetIdx"	type="number">Pass the sheet index to perform paging at specified sheet index</param>
 /// <param name="newSheet"	type="boolean">Pass {{'`true`' | markdownify}} to create a new sheet. If the specified sheet index is already exist, it navigate to that sheet else it create a new sheet.</param>
 },
+hideActivationPanel:function(){
+/// <summary>
+/// This method is used to hide the pivot table activationPanel in the Spreadsheet.
+/// </summary>
+},
 hideColumn:function(startCol, endCol){
 /// <summary>
 /// This method is used to hide the entire columns from the specified range (startCol, endCol) in Spreadsheet.
@@ -20195,6 +20573,15 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to customizing the user interface (UI) as locale-specific in order to display regional data (i.e.) in a language and culture specific to a particular country or region.
 ///<br/>locale-string	default-en-US
+///<br/><br/>
+///Gets or sets a value that indicates name manager in Spreadsheet.
+///<br/>nameManager-Array&lt;NameManager&gt;	default-
+///<br/><br/>
+///Specifies the name for the cell or a range.
+///<br/>name-string	default-
+///<br/><br/>
+///Specifies the address for the cell or a range.
+///<br/>refersto-string	default-
 ///<br/><br/>
 ///Gets or sets an object that indicates to customize the picture behavior in the Spreadsheet.
 ///<br/>pictureSettings-PictureSettings	default-
@@ -22015,6 +22402,27 @@ jQuery.fn.ejTooltip = function (options) {
 ///Specified a selector for elements, within the container.
 ///<br/>target-string	default-null
 ///<br/><br/>
+///defines Tooltip size and gap between tooltip against the target element.
+///<br/>tip-Tip	default-
+///<br/><br/>
+///Sets the Tooltip size.
+///<br/>size-any	default-
+///<br/><br/>
+///Sets the Tooltip width.
+///<br/>width-number	default-20
+///<br/><br/>
+///Sets the Tooltip height.
+///<br/>height-number	default-10
+///<br/><br/>
+///Sets gap between tooltip against the target element.
+///<br/>adjust-any	default-
+///<br/><br/>
+///Sets horizontal gap between Tooltip and target element.
+///<br/>xValue-number	default-0
+///<br/><br/>
+///Sets vertical gap between Tooltip and target element.
+///<br/>yValue-number	default-0
+///<br/><br/>
 ///The title text to be displayed in the Tooltip header.
 ///<br/>title-string	default-null
 ///<br/><br/>
@@ -22176,6 +22584,9 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///Specifies the id of the template that has to be applied for alternate rows.
 ///<br/>altRowTemplateID-string	default-
 ///<br/><br/>
+///Specifies the mapping property path for the expand status of a record in data source.
+///<br/>expandStateMapping-string	default-
+///<br/><br/>
 ///Specifies the mapping property path for sub tasks in datasource
 ///<br/>childMapping-string	default-
 ///<br/><br/>
@@ -22197,13 +22608,25 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///Specifies the name of the field from the dataSource to bind with this column.
 ///<br/>field-string	default-
 ///<br/><br/>
+///Specifies the template string of the script element to enable column template for a column.
+///<br/>template-string	default-
+///<br/><br/>
+///Specifies the template ID of the script element to enable column template for a column.
+///<br/>templateID-string	default-
+///<br/><br/>
+///Specifies the template ID or the template string of the AngularJS script element to enable column template for a column.
+///<br/>angularTemplate-string	default-
+///<br/><br/>
 ///Specifies the type of the editor control to be used to filter the rows.
 ///<br/>filterEditType-ej.TreeGrid.EditingType|string	default-ej.TreeGrid.EditingType.String
 ///<br/><br/>
 ///Header text of the column.
 ///<br/>headerText-string	default-null
 ///<br/><br/>
-///Enables or disables the checkbox visibility in a column to make it as a checkbox column
+///Gets or sets a value that indicates to display a column value as checkbox or string
+///<br/>displayAsCheckbox-boolean	default-false
+///<br/><br/>
+///Enables or disables the checkbox visibility in a column for checkbox selection.
 ///<br/>showCheckbox-boolean	default-false
 ///<br/><br/>
 ///Controls the visibility of the column.
@@ -22230,11 +22653,23 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///Specifies the text alignment for the column
 ///<br/>textAlign-ej.TextAlign|string	default-ej.TextAlign.Left
 ///<br/><br/>
-///Specifies the template for the TreeGrid column
-///<br/>templateID-String	default-
-///<br/><br/>
 ///Enables or disables the ability to edit a row or cell.
 ///<br/>allowEditing-boolean	default-false
+///<br/><br/>
+///We can include or exclude particular column from column visibility list in column menu.
+///<br/>showInColumnChooser-boolean	default-true
+///<br/><br/>
+///Sets the clip mode for TreeGrid cell as ellipsis or clipped content(both header and content)
+///<br/>clipMode-ej.TreeGrid.ClipMode|string	default-ej.TreeGrid.ClipMode.Clip
+///<br/><br/>
+///Sets the tooltip template for the specific column.
+///<br/>tooltip-string	default-null
+///<br/><br/>
+///Sets the tooltip template for the column header
+///<br/>headerTooltip-string	default-null
+///<br/><br/>
+///specifies the conditions for saving data to the database while adding or editing the fields.
+///<br/>validationRules-any	default-
 ///<br/><br/>
 ///To Specify the column fields to be displayed in the dialog while inserting a column using column menu.
 ///<br/>columnDialogFields-Array&lt;any&gt;	default-[]
@@ -22292,6 +22727,9 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///<br/><br/>
 ///Specifies the position where the new row has to be added.
 ///<br/>rowPosition-ej.TreeGrid.RowPosition|string	default-top
+///<br/><br/>
+///Specifies the template ID for the custom dialog.
+///<br/>dialogEditorTemplateID-string	default-null
 ///<br/><br/>
 ///Specifies whether to render alternate rows in different background colors.
 ///<br/>enableAltRow-boolean	default-true
@@ -22445,6 +22883,18 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///<br/><br/>
 ///Specifies the list of toolbar items to be rendered in TreeGrid toolbar
 ///<br/>toolbarItems-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Allows the user to insert custom toolbar items.
+///<br/>customToolbarItems-Array&lt;any&gt;	default-
+///<br/><br/>
+///Allows the user to insert the custom icons in toolbar using CSS class name selector.
+///<br/>text-string	default-
+///<br/><br/>
+///Allows the user to insert the custom icons in toolbar using script templates. Using this property we can bind HTML elements and other EJ controls to TreeGrid toolbar.
+///<br/>templateID-string	default-
+///<br/><br/>
+///Allows the user to display custom tooltip text for TreeGrid custom toolbar items.
+///<br/>tooltipText-string	default-
 ///<br/><br/>
 ///Specifies the index of the column that needs to have the expander button. By default, cells in the first column contain the expander button.
 ///<br/>treeColumnIndex-number	default-0
