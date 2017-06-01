@@ -17047,8 +17047,8 @@ background-color:@hover-bg-stcolor !important;
     margin-left: 15px;
 }
 
-  input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button { 
+ .e-pivotgrid input.inputConditionMbl[type=number]::-webkit-inner-spin-button, 
+ .e-pivotgrid input.inputConditionMbl[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none !important; 
     margin: 0; 
 }
@@ -17500,10 +17500,11 @@ content:"\e6a0";
       margin-top: 24px;
     }
      & when not (@skin = "material") and not (@skin = "office-365") {
-      margin-top: 5px;
+      margin-top: 10px;
     }
     & when  (@skin = "office-365") {
       margin-top: 15px;
+       margin-bottom:10px;
     }
     border: 1px solid @default-border-color;
 }
@@ -18734,10 +18735,11 @@ content: "\e881";
       margin-top: 24px;
     }
     & when not (@skin = "material") and not (@skin = "office-365") {
-      margin-top: 5px;
+      margin-top: 10px;
     }
     & when  (@skin = "office-365") {
       margin-top: 15px;
+      margin-bottom:10px;
     }
     border: 1px solid @oclient-border-color;
 }
@@ -19164,6 +19166,163 @@ content: "\e881";
  .e-pivotschemadesigner #clientDialog_wrapper.advancedFilterDlg .clientDialog {
       overflow: visible !important;
  }
+ .e-pivotgrid .e-icon.searchEditorTree:before,.e-pivotschemadesigner .e-icon.searchEditorTree:before {
+    content: "\e812";
+    cursor: pointer;
+}
+
+.e-pivotgrid .e-dialog .e-icon.searchEditorTree,.e-pivotschemadesigner .e-dialog .e-icon.searchEditorTree{
+    display: inline-block;
+    position: absolute;
+    & when not (@skin = "material") and not (@skin = "office-365") {
+    top: 15px;
+    left: 232px;
+    }
+  & when (@skin = "material") {
+    top: 32px;
+    left: 222px;
+  }
+    & when (@skin = "office-365") {
+    top: 10px;
+    left: 220px;
+  }
+}
+
+.e-pivotgrid.e-rtl .e-dialog.e-rtl .e-icon.searchEditorTree,.e-pivotschemadesigner.e-rtl .e-dialog.e-rtl .e-icon.searchEditorTree{
+    display: inline-block;
+    position: absolute;
+   & when not (@skin = "material") and not (@skin = "office-365") {
+    top: 15px;
+    left: 13px;
+    }
+  & when (@skin = "material") {
+    top: 32px;
+    left: 25px;
+  }
+    & when (@skin = "office-365") {
+    top: 11px;
+    left: 27px;
+  }
+}
+
+.e-pivotgrid.e-rtl .e-dialog.advancedFilterDlg.e-rtl .e-icon.searchEditorTree,.e-pivotschemadesigner.e-rtl .e-dialog.advancedFilterDlg.e-rtl .e-icon.searchEditorTree{
+    display: inline-block;
+    position: absolute;
+       & when not (@skin = "material") and not (@skin = "office-365") {
+    top: 229px;
+    left: 12px;
+    }
+  & when (@skin = "material") {
+    top: 320px;
+    left: 12px;
+  }
+    & when (@skin = "office-365") {
+    top: 305px;
+    left: 12px;
+  }
+}
+
+.e-pivotschemadesigner .e-dialog.advancedFilterDlg .e-icon.searchEditorTree,.e-pivotgrid .e-dialog.advancedFilterDlg .e-icon.searchEditorTree{
+    display: inline-block;
+    position: absolute;
+       & when not (@skin = "material") and not (@skin = "office-365") {
+   top: 236px;
+    left: 235px;
+    }
+  & when (@skin = "material") {
+    top: 320px;
+    left: 240px;
+  }
+  & when (@skin = "office-365") {
+     top: 302px;
+    left: 235px;
+ }
+}
+.e-pivotschemadesigner .e-dialog.advancedFilterDlg.advancedFilterDlgOSM .e-icon.searchEditorTree,.e-pivotgrid .e-dialog.advancedFilterDlg.advancedFilterDlgOSM .e-icon.searchEditorTree{
+       & when not (@skin = "material") and not (@skin = "office-365") {
+   top: 236px;
+    left: 235px;
+    }
+  & when (@skin = "material") {
+    top: 320px;
+    left: 240px;
+  }
+  & when (@skin = "office-365") {
+     top: 302px;
+    left: 235px;
+ }
+}
+.e-pivotschemadesigner  .e-dialog .memberPager,.e-pivotgrid .e-dialog .memberPager {
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.e-pivotschemadesigner  .e-dialog .memberPager+div.dialogFooter,.e-pivotgrid .e-dialog .memberPager+div.dialogFooter  {
+        & when not (@skin = "material") and not (@skin = "office-365") {
+    margin-bottom:10px !important;
+    }
+    & when (@skin = "material") {
+    margin-bottom:0px !important;
+    }
+     & when (@skin = "office-365") {
+        margin-bottom:20px !important;
+      }
+}
+.e-pivotgrid .advancedFilterDlg .memberPager,.e-pivotschemadesigner .advancedFilterDlg .memberPager{
+    margin-left:12px;
+    margin-right:12px;
+}
+.e-pivotschemadesigner .firstPage.pageDisabled, .e-pivotschemadesigner .prevPage.pageDisabled, .e-pivotschemadesigner .nextPage.pageDisabled,.e-pivotschemadesigner .lastPage.pageDisabled,.e-pivotgrid .firstPage.pageDisabled, .e-pivotgrid .prevPage.pageDisabled, .e-pivotgrid .nextPage.pageDisabled,.e-pivotgrid .lastPage.pageDisabled{
+        & when not (@skin = "material") and not (@skin = "office-365") {
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        opacity: 0.5;
+      }
+        & when (@skin = "material"){
+        filter: alpha(opacity=100) !important;
+        -moz-opacity: 1 !important;
+        opacity: 1 !important;
+        color: fade(#000000, 24%);
+      }
+      & when (@skin = "office-365") {
+         filter: alpha(opacity=100) !important;
+        -moz-opacity: 1 !important;
+        opacity: 1 !important;
+         color: #c8c8c8;
+      }
+}
+.e-pivotschemadesigner .firstPage.pageEnabled:hover,.e-pivotschemadesigner .prevPage.pageEnabled:hover, .e-pivotschemadesigner .nextPage.pageEnabled:hover,.e-pivotschemadesigner .lastPage.pageEnabled:hover,.e-pivotgrid .firstPage.pageEnabled:hover, .e-pivotgrid .prevPage.pageEnabled:hover, .e-pivotgrid .nextPage.pageEnabled:hover,.e-pivotgrid .lastPage.pageEnabled:hover{
+       & when not (@skin = "material"){
+     background-color:@hover-bg-stcolor;
+    }
+
+}
+.e-pivotschemadesigner .firstPage.pageEnabled:active, .e-pivotschemadesigner .prevPage.pageEnabled:active, .e-pivotschemadesigner .nextPage.pageEnabled:active,.e-pivotschemadesigner .lastPage.pageEnabled:active ,.e-pivotgrid .firstPage.pageEnabled:active, .e-pivotgrid  .prevPage.pageEnabled:active, .e-pivotgrid .nextPage.pageEnabled:active,.e-pivotgrid .lastPage.pageEnabled:active{
+           & when not (@skin = "material"){
+    background-color:@active-bg-stcolor;
+    color:@active-font-color;
+   }
+}
+
+.e-pivotschemadesigner .firstPage, .e-pivotschemadesigner .prevPage, .e-pivotschemadesigner .nextPage,.e-pivotschemadesigner .lastPage,.e-pivotgrid .firstPage, .e-pivotgrid .prevPage, .e-pivotgrid .nextPage,.e-pivotgrid .lastPage {
+    width:24px;
+    height:24px;
+}
+.e-pivotschemadesigner .e-icon.e-media-backward_01:before,.e-pivotschemadesigner .e-icon.e-arrowhead-left:before,.e-pivotschemadesigner .e-icon.e-arrowhead-right:before,.e-pivotschemadesigner .e-icon.e-media-forward_01:before,.e-pivotgrid .e-icon.e-media-backward_01:before,.e-pivotgrid .e-icon.e-arrowhead-left:before,.e-pivotgrid .e-icon.e-arrowhead-right:before,.e-pivotgrid .e-icon.e-media-forward_01:before{
+    margin-top:5px;
+}
+.e-pivotschemadesigner .e-dialog .memberCurrentPage,.e-pivotgrid .e-dialog .memberCurrentPage{
+    margin-left:8px;
+    margin-right:6px;
+    outline:none;
+    text-indent:3px;
+}
+.e-pivotschemadesigner .e-dialog .memberPageCount,.e-pivotgrid .e-dialog .memberPageCount
+{
+    margin-right:8px;
+}
+.e-pivotschemadesigner .e-dialog .memberPager+div,.e-pivotgrid .e-dialog .memberPager+div{
+    margin: 0px 0px 6px !important;
+}
 
  /*---------------------------------------------------------- Material Theme and Office-365 -----------------------------------------------------------------------*/
 .e-pivotgrid .filter,.e-pivotgrid .values .removeBtn{
@@ -20122,6 +20281,138 @@ padding:6px 0 6px 40px;
      margin-right:0px;
     }
 }
+
+.e-pivotschemadesigner .e-icon.e-media-backward_01:before,.e-pivotgrid .e-icon.e-media-backward_01:before{
+  & when (@skin = "material"), (@skin = "office-365")  {
+   content:"\e83e";
+   }
+}
+.e-pivotschemadesigner .e-icon.e-arrowhead-left:before,.e-pivotgrid .e-icon.e-arrowhead-left:before{
+  & when (@skin = "material"), (@skin = "office-365")  {
+   content:"\e83f";
+   }
+}
+.e-pivotschemadesigner .e-icon.e-arrowhead-right:before,.e-pivotgrid .e-icon.e-arrowhead-right:before{
+      & when (@skin = "material") , (@skin = "office-365") {
+   content:"\e840";
+   }
+}
+.e-pivotgrid .e-icon.e-media-forward_01:before,.e-pivotschemadesigner .e-icon.e-media-forward_01:before{
+      & when (@skin = "material"), (@skin = "office-365")  {
+       content:"\e841";
+       }
+}
+.e-pivotschemadesigner .firstPage,.e-pivotgrid .firstPage{
+     & when (@skin = "material") {
+    margin-right:12px;
+    }
+    & when (@skin = "office-365") {
+    margin-right:1px;
+    }
+}
+.e-pivotschemadesigner .lastPage,.e-pivotgrid .lastPage{
+ & when (@skin = "material") {
+    margin-left:12px;
+}
+   & when (@skin = "office-365") {
+    margin-left:1px;
+    }
+}
+
+.e-pivotgrid .e-dialog .memberPager+div .e-btn.dialogOKBtn, e-pivotgrid .e-dialog .memberPager+div .e-btn.dialogCancelBtn,.e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogOKBtn, .e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogCancelBtn{
+  & when (@skin = "material") {
+      margin-top:0px;
+      margin-bottom:0px;
+   }
+}
+.e-pivotschemadesigner .e-dialog .memberPager+div .e-btn, .e-pivotschemadesigner .e-dialog .memberPager+div .e-btn,.e-pivotgrid .e-dialog .memberPager+div .e-btn, .e-pivotgrid .e-dialog .memberPager+div .e-btn{
+  & when (@skin = "material") {
+      margin-top:0px;
+      margin-bottom:0px;
+   }
+}
+.e-pivotschemadesigner .e-dialog .memberPager+div,.e-pivotgrid .e-dialog .memberPager+div{
+  & when (@skin = "material") {
+      margin-top:0px !important;
+      margin-bottom:20px !important;
+   }
+    & when (@skin = "office-365") {
+         margin-top:0px !important;
+      margin-bottom:20px !important;
+      }
+}
+.e-pivotschemadesigner .firstPage.pageEnabled, .e-pivotschemadesigner .prevPage.pageEnabled, .e-pivotschemadesigner .nextPage.pageEnabled,.e-pivotschemadesigner .lastPage.pageEnabled,.e-pivotgrid .firstPage.pageEnabled, .e-pivotgrid .prevPage.pageEnabled, .e-pivotgrid .nextPage.pageEnabled,.e-pivotgrid .lastPage.pageEnabled {
+      & when (@skin = "material") {
+          color: fade(#000000, 54%);
+      }
+            & when (@skin = "office-365") {
+          color: #666666;
+      }
+}
+.e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogOKBtn,.e-pivotgrid .e-dialog .memberPager+div .e-btn.dialogOKBtn{
+        & when (@skin = "office-365") {
+      margin-left:60px !important;
+      }
+}
+.e-pivotschemadesigner.e-rtl .e-dialog .memberPager+div .e-btn.dialogOKBtn,.e-pivotgrid.e-rtl .e-dialog .memberPager+div .e-btn.dialogOKBtn{
+            & when (@skin = "office-365") {
+      margin-right:60px !important;
+      }
+}
+.e-pivotgrid .e-dialog .memberPager .memberCurrentPage:hover,.e-pivotschemadesigner .e-dialog .memberPager .memberCurrentPage:hover{
+          & when (@skin = "material") {
+          border-color: fade(#000000, 26%);
+      }
+            & when (@skin = "office-365") {
+          border-color: @neutral-secondary-alt;
+      }
+}
+.e-pivotschemadesigner .e-dialog .memberPager .memberCurrentPage:active,.e-pivotschemadesigner .e-dialog .memberPager .memberCurrentPage:focus,.e-pivotgrid .e-dialog .memberPager .memberCurrentPage:active,.e-pivotgrid .e-dialog .memberPager .memberCurrentPage:focus{
+          & when (@skin = "material") {
+          border-color: fade(#000000, 54%);
+      }
+            & when (@skin = "office-365") {
+          border-color: @theme-primary;
+      }
+}
+.e-pivotgrid .e-dialog .memberPager .memberCurrentPage,.e-pivotschemadesigner .e-dialog .memberPager .memberCurrentPage{
+      & when (@skin = "material") {
+          color: fade(#000000, 87%);
+              font-family:'Roboto',Segoe UI;
+    font-size:12px;
+            border:1px solid fade(#000000, 26%);
+            width:22px !important;
+            height:15px !important;
+            border-radius:2px;
+      }
+      & when (@skin = "office-365") {
+         outline:none;
+         border:1px solid @neutral-tertiary-alt;
+      }
+}
+.e-pivotgrid .e-dialog .memberPager,.e-pivotschemadesigner .e-dialog .memberPager{
+   & when (@skin = "office-365") {
+    margin-top:0px;
+   }
+}
+.e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogOKBtn,.e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogCancelBtn,.e-pivotschemadesigner.e-rtl .e-dialog .memberPager+div .e-btn.dialogOKBtn,.e-pivotschemadesigner.e-rtl .e-dialog .memberPager+div .e-btn.dialogCancelBtn,.e-pivotgrid .e-dialog .memberPager+div .e-btn.dialogOKBtn,.e-pivotgrid .e-dialog .memberPager+div .e-btn.dialogCancelBtn,.e-pivotgrid.e-rtl .e-dialog .memberPager+div .e-btn.dialogOKBtn,.e-pivotgrid.e-rtl .e-dialog .memberPager+div .e-btn.dialogCancelBtn
+{
+        & when (@skin = "office-365") {
+      margin-bottom:0px !important;
+      }
+}
+.e-pivotschemadesigner .firstPage.pageEnabled:after, .e-pivotschemadesigner .prevPage.pageEnabled:after, .e-pivotschemadesigner .nextPage.pageEnabled:after, .e-pivotschemadesigner .lastPage.pageEnabled:after,.e-pivotgrid .firstPage.pageEnabled:after, .e-pivotgrid .prevPage.pageEnabled:after, .e-pivotgrid .nextPage.pageEnabled:after, .e-pivotgrid .lastPage.pageEnabled:after
+{
+   & when (@skin = "material") {
+    background-color:rgba(0,0,0,.12);
+   }
+}
+.e-pivotschemadesigner .firstPage,.e-pivotschemadesigner .prevPage, .e-pivotschemadesigner .nextPage, .e-pivotschemadesigner .lastPage,.memberCurrentPage,.memberPageCount,.e-pivotgrid .firstPage,.e-pivotgrid .prevPage, .e-pivotgrid .nextPage, .e-pivotgrid .lastPage,.memberCurrentPage,.memberPageCount
+ {
+   & when (@skin="material"), (@skin="office-365") {
+    vertical-align:middle;
+  }
+}
 /*.dragSchemaButtonClone{
   & when (@skin= "office-365") {
   font:14px Segoe UI;
@@ -20795,8 +21086,8 @@ background:@toolbar-bgcolor;
        margin-right:4px !important;
    }
 }
-  input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button { 
+  .e-pivotclient input.inputConditionMbl[type=number]::-webkit-inner-spin-button, 
+  .e-pivotclient input.inputConditionMbl[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none !important; 
     margin: 0; 
 }
@@ -22106,16 +22397,16 @@ width: 43% !important;
     display: inline-block;
     position: absolute;
        & when not (@skin = "material") and not (@skin = "office-365") {
-    top: 230px;
-    left: 240px;
+    top: 236px;
+    left: 235px;
     }
   & when (@skin = "material") {
     top: 320px;
     left: 240px;
   }
   & when (@skin = "office-365") {
-    top: 305px;
-    left: 240px;
+    top: 302px;
+    left: 235px;
   }
 }
 .e-pivotclient .e-dialog .calcMemberFooter{
@@ -22279,6 +22570,7 @@ width: 43% !important;
 .e-pivotclient .e-dialog .memberPager+div.dialogFooter {
         & when not (@skin = "material") and not (@skin = "office-365") {
     margin-bottom:10px !important;
+    margin-top:0px;
     }
     & when (@skin = "material") {
     margin-bottom:0px !important;
@@ -22286,6 +22578,10 @@ width: 43% !important;
      & when (@skin = "office-365") {
         margin-bottom:20px !important;
       }
+}
+.e-pivotclient .e-pivotschemadesigner .advancedFilterDlg .memberPager{
+    margin-left:12px;
+    margin-right:12px;
 }
 .e-pivotclient .firstPage.pageDisabled, .e-pivotclient .prevPage.pageDisabled, .e-pivotclient .nextPage.pageDisabled,.e-pivotclient .lastPage.pageDisabled {
         & when not (@skin = "material") and not (@skin = "office-365") {
@@ -22868,6 +23164,7 @@ width: 43% !important;
 .e-pivotclient .e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogOKBtn,.e-pivotclient .e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogCancelBtn,.e-pivotclient.e-rtl .e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogOKBtn,.e-pivotclient.e-rtl .e-pivotschemadesigner .e-dialog .memberPager+div .e-btn.dialogCancelBtn{
         & when (@skin = "office-365") {
       margin-bottom:0px !important;
+      margin-top:0px !important;
       }
 }
 .e-pivotclient .firstPage.pageEnabled:after, .e-pivotclient .prevPage.pageEnabled:after, .e-pivotclient .nextPage.pageEnabled:after, .e-pivotclient .lastPage.pageEnabled:after{
@@ -22889,6 +23186,47 @@ width: 43% !important;
    & when (@skin = "office-365"){
      margin-right:0px;
     }
+}
+ .e-pivotclient .ascImage:before{
+    content: "\e714";
+    font-size: 16px;
+    margin-left: 5px;
+}
+.e-pivotclient .descImage:before {
+    content: "\e713";
+    font-size: 16px;
+    margin-left: 5px;
+}
+.e-pivotclient .e-clrFilter:before {
+    content: "\e668";
+    font-size: 16px;
+    float: left;
+}
+.e-pivotclient .e-clrSort:before {
+    content: "\e754";
+    font-size: 19px;
+    float: left;
+    margin-top: 4px;
+}
+.e-pivotclient .ascOrder, .e-pivotclient .descOrder {
+    list-style: none;
+}
+.e-pivotclient .descImage, .e-pivotclient .ascImage {
+    display: inline-block;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 20px;
+}
+.e-pivotclient .filterState:before {
+    content: "\e80a";
+    height: 16px;
+    width: 16px;
+}
+.e-pivotclient .selectedSort {
+    border: 1px solid;
+    padding-top: 2px;
+    margin-top:-3px !important;
 }
 .maximumView
 {

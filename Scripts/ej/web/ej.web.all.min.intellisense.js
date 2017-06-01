@@ -885,6 +885,9 @@ ejBulletGraph :function (options) {
 ///Toggles the animation of bullet graph.
 ///<br/>enableAnimation-boolean	default-true
 ///<br/><br/>
+///Controls whether bullet graph has to be responsive while resizing.
+///<br/>enableResizing-boolean	default-true
+///<br/><br/>
 ///Specifies the direction of flow in bullet graph. Neither it may be backward nor forward.
 ///<br/>flowDirection-ej.datavisualization.BulletGraph.FlowDirection|string	default-forward
 ///<br/><br/>
@@ -893,6 +896,12 @@ ejBulletGraph :function (options) {
 ///<br/><br/>
 ///Sets a value whether to make the bullet graph responsive on resize.
 ///<br/>isResponsive-boolean	default-true
+///<br/><br/>
+///Specifies to convert the date object to string, using locale settings.
+///<br/>enableGroupSeparator-boolean	default-false
+///<br/><br/>
+///Name of the culture based on which bulletgraph should be localized.
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Bullet graph will render in the specified orientation.
 ///<br/>orientation-ej.datavisualization.BulletGraph.Orientation|string	default-horizontal
@@ -5301,6 +5310,12 @@ ejCircularGauge :function (options) {
 ///Specify animate value of circular gauge
 ///<br/>enableAnimation-boolean	default-true
 ///<br/><br/>
+///Specify to convert the  date object to  string, using locale settings.
+///<br/>enableGroupSeparator-boolean	default-false
+///<br/><br/>
+///Controls whether circular gauge has to be responsive while resizing.
+///<br/>enableResize-boolean	default-false
+///<br/><br/>
 ///Specify the frame of circular gauge
 ///<br/>frame-Frame	default-Object
 ///<br/><br/>
@@ -5331,6 +5346,9 @@ ejCircularGauge :function (options) {
 ///Specify isResponsive value of circular gauge
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
+///Name of the culture based on which circular gauge should be localized.
+///<br/>locale-string	default-en-US
+///<br/><br/>
 ///Specifies the maximum value of circular gauge.
 ///<br/>maximum-number	default-100
 ///<br/><br/>
@@ -5338,7 +5356,7 @@ ejCircularGauge :function (options) {
 ///<br/>minimum-number	default-0
 ///<br/><br/>
 ///Specify outerCustomLabelPosition value of circular gauge See OuterCustomLabelPosition
-///<br/>outerCustomLabelPosition-ej.datavisualization.CircularGauge.CustomLabelPositionType|string	default-bottom
+///<br/>outerCustomLabelPosition-ej.datavisualization.CircularGauge.OuterCustomLabelPosition|string	default-bottom
 ///<br/><br/>
 ///Specifies the radius of circular gauge.
 ///<br/>radius-number	default-180
@@ -5382,6 +5400,9 @@ ejCircularGauge :function (options) {
 ///Specify y-axis  position of labels.
 ///<br/>y-number	default-0
 ///<br/><br/>
+///Specify angle for the rotation of the custom labels in degrees.
+///<br/>textAngle-number	default-0
+///<br/><br/>
 ///Specify font for custom labels
 ///<br/>font-any	default-Object
 ///<br/><br/>
@@ -5393,6 +5414,9 @@ ejCircularGauge :function (options) {
 ///<br/><br/>
 ///Specify font size for custom labels.
 ///<br/>size-string	default-12px
+///<br/><br/>
+///Specifies the position of the  custom labels. See CustomLabelPositionType
+///<br/>positionType-ej.datavisualization.CircularGauge.CustomLabelPositionType|string	default-inner
 ///<br/><br/>
 ///Specify representing state of circular gauge
 ///<br/>indicators-Array&lt;any&gt;	default-Array
@@ -5769,10 +5793,10 @@ ejCircularGauge :function (options) {
 ///Border width of the legend items.
 ///<br/>width-number	default-1
 ///<br/><br/>
-///Height of the shape in legend items.
+///Specifies the height of the  legend item shapes.
 ///<br/>height-number	default-10
 ///<br/><br/>
-///Width of the shape in legend items.
+///Specifies the width of the  legend item shapes.
 ///<br/>width-number	default-10
 ///<br/><br/>
 ///Opacity of the legend.
@@ -5787,10 +5811,10 @@ ejCircularGauge :function (options) {
 ///Options to customize the size of the legend.
 ///<br/>size-any	default-
 ///<br/><br/>
-///Height of the legend. Height can be specified in pixel.
+///Specify the height of the legend. Height can be specified in pixel.
 ///<br/>height-string	default-null
 ///<br/><br/>
-///Width of the legend. Width can be specified in pixel.
+///Specify the width of the legend. Width can be specified in pixel.
 ///<br/>width-string	default-null
 ///<br/><br/>
 ///Options to customize the font used for legend item text.
@@ -8587,6 +8611,9 @@ ejDiagram :function (options) {
 ///A collection of frequently used commands that will be added around the selector
 ///<br/>userHandles-Array&lt;any&gt;	default-[]
 ///<br/><br/>
+///Defines the name of the user handle
+///<br/>name-string	default-
+///<br/><br/>
 ///Defines the background color of the user handle
 ///<br/>backgroundColor-string	default-#2382c3
 ///<br/><br/>
@@ -8856,6 +8883,9 @@ ejDialog :function (options) {
 ///Customizes the Dialog widget animations. The Dialog widget can be animated while opening and closing the dialog. In order to customize animation effects, you need to set â€œenableAnimationâ€ as true. It contains the following sub properties.
 ///<br/>animation-any	default-
 ///<br/><br/>
+///To Enable or disable the scrolling for background element of the modal dialog. This will work only with modal dialog.
+///<br/>backgroundScroll-boolean	default-
+///<br/><br/>
 ///Closes the dialog widget on pressing the ESC key when it is set to true.
 ///<br/>closeOnEscape-boolean	default-
 ///<br/><br/>
@@ -9070,6 +9100,9 @@ ejDigitalGauge :function (options) {
 ///<br/><br/>
 ///Specifies the resize option of the DigitalGauge.
 ///<br/>isResponsive-boolean	default-false
+///<br/><br/>
+///Specifies the responsiveness of the Digital gauge
+///<br/>enableResize-boolean	default-false
 ///<br/><br/>
 ///Specifies the items for the DigitalGauge.
 ///<br/>items-Array&lt;Items&gt;	default-null
@@ -9344,7 +9377,7 @@ intellisense.annotate(instance, {
 addItem:function(data){
 /// <signature>
 /// <summary>
-/// Adding a single item or an array of items into the DropDownList allows you to specify all the field attributes such as value, template, image URL, and HTML attributes for those items.
+/// Adding a single item or an array of items into the DropDownList allows you to specify all the field attributes such as value, template, image URL, and HTML attributes for those items.Grouping and sorting will not be supported when we add items through this method.
 /// </summary>
 /// <param name="data"	type="any|Array&lt;any&gt;"> this parameter should have field attributes with respect to mapped field attributes and it's corresponding values to fields</param>
 /// </signature>
@@ -9998,6 +10031,20 @@ setSplitterIndex:function(index){
 /// <param name="index"	type="number">Set the splitter position based on column index.</param>
 /// </signature>
 },
+sortColumn:function(mappingName, columnSortDirection){
+/// <signature>
+/// <summary>
+/// To sort the column in required direction
+/// </summary>
+/// <param name="mappingName"	type="string">Defines the column's mapping name in which sorting have to be performed</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To sort the column in required direction
+/// </summary>
+/// <param name="columnSortDirection"	type="string">Defines the sort direction whether the column has to sorted in ascending/descending order. By default it is sorting in an ascending order</param>
+/// </signature>
+},
 cancelEdit:function(){
 /// <signature>
 /// <summary>
@@ -10134,7 +10181,13 @@ ejGantt :function (options) {
 /// <summary><br/>
 ///The Essential JavaScript Gantt control is designed to visualize and edit the project schedule, and track the project progress.<br/><br/>
 ///Specifies the fields to be included in the add dialog in Gantt
-///<br/>addDialogFields-Array&lt;any&gt;	default-[]
+///<br/>addDialogFields-Array&lt;AddDialogFields&gt;	default-[]
+///<br/><br/>
+///Specifies mapping name to include required fields in Gantt
+///<br/>field-string	default-
+///<br/><br/>
+///Specifies editType of fields to be included in the add dialog in Gantt
+///<br/>editType-string	default-
 ///<br/><br/>
 ///Enables or disables the ability to resize column.
 ///<br/>allowColumnResize-boolean	default-false
@@ -10214,6 +10267,9 @@ ejGantt :function (options) {
 ///Specifies the dateFormat for Gantt , given format is displayed in tooltip , Grid .
 ///<br/>dateFormat-string	default-MM/dd/yyyy
 ///<br/><br/>
+///Specifies the customized working time for tasks in Gantt
+///<br/>dayWorkingTime-Array&lt;any&gt;	default-[{ from: 08:00 AM, to: 12:00 PM }, { from: 01:00 PM, to: 05:00 PM }]
+///<br/><br/>
 ///Specifies the mapping property path for duration of a task in datasource
 ///<br/>durationMapping-string	default-
 ///<br/><br/>
@@ -10221,7 +10277,13 @@ ejGantt :function (options) {
 ///<br/>durationUnit-ej.Gantt.DurationUnit|string	default-ej.Gantt.DurationUnit.Day
 ///<br/><br/>
 ///Specifies the fields to be included in the edit dialog in Gantt
-///<br/>editDialogFields-Array&lt;any&gt;	default-[]
+///<br/>editDialogFields-Array&lt;EditDialogFields&gt;	default-[]
+///<br/><br/>
+///Specifies mapping name to include required fields in Gantt
+///<br/>field-string	default-
+///<br/><br/>
+///Specifies editType of fields to be included in the edit dialog in Gantt
+///<br/>editType-string	default-
 ///<br/><br/>
 ///Enables or disables the responsiveness of Gantt
 ///<br/>isResponsive-boolean	default-false
@@ -10311,7 +10373,16 @@ ejGantt :function (options) {
 ///<br/>highlightWeekends-boolean	default-true
 ///<br/><br/>
 ///Collection of holidays with date, background and label information to be displayed in Gantt.
-///<br/>holidays-Array&lt;any&gt;	default-[]
+///<br/>holidays-Array&lt;Holidays&gt;	default-[]
+///<br/><br/>
+///Specifies holiday date to be displayed in Gantt
+///<br/>day-string	default-
+///<br/><br/>
+///Specifies the background color for holiday date in Gantt Schedule
+///<br/>background-string	default-
+///<br/><br/>
+///Specifies the label to be displayed for rendered holiday in Gantt
+///<br/>label-string	default-
 ///<br/><br/>
 ///Specifies whether to include weekends while calculating the duration of a task.
 ///<br/>includeWeekend-boolean	default-true
@@ -10385,9 +10456,6 @@ ejGantt :function (options) {
 ///Enables or Disables rendering baselines in Gantt , when enabled baseline is rendered in Gantt
 ///<br/>renderBaseline-boolean	default-false
 ///<br/><br/>
-///Enables or disables the schedule date validation while connecting a manually scheduled task with predecessor
-///<br/>validateManualTasksOnLinking-boolean	default-false
-///<br/><br/>
 ///Specifies the mapping property name for resource ID in resource Collection in Gantt
 ///<br/>resourceIdMapping-string	default-
 ///<br/><br/>
@@ -10413,7 +10481,7 @@ ejGantt :function (options) {
 ///<br/>scheduleHeaderSettings-ScheduleHeaderSettings	default-
 ///<br/><br/>
 ///Specified the format for day view in schedule header
-///<br/>dayHeaderFormat-string	default-ddd
+///<br/>dayHeaderFormat-string	default-
 ///<br/><br/>
 ///Specified the format for Hour view in schedule header
 ///<br/>hourHeaderFormat-string	default-HH
@@ -10434,7 +10502,7 @@ ejGantt :function (options) {
 ///<br/>weekendBackground-string	default-#F2F2F2
 ///<br/><br/>
 ///Specified the format for week view in schedule header
-///<br/>weekHeaderFormat-string	default-ddd
+///<br/>weekHeaderFormat-string	default-MMM dd , yyyy
 ///<br/><br/>
 ///Specified the format for year view in schedule header
 ///<br/>yearHeaderFormat-string	default-yyyy
@@ -10473,10 +10541,10 @@ ejGantt :function (options) {
 ///<br/>sizeSettings-SizeSettings	default-
 ///<br/><br/>
 ///Specifies the height of Gantt control
-///<br/>height-string	default-450px
+///<br/>height-string	default-
 ///<br/><br/>
 ///Specifies the width of Gantt control
-///<br/>width-string	default-1000px
+///<br/>width-string	default-
 ///<br/><br/>
 ///Specifies the selected cell information on rendering Gantt.
 ///<br/>selectedCellIndexes-Array&lt;SelectedCellIndexes&gt;	default-
@@ -10493,6 +10561,12 @@ ejGantt :function (options) {
 ///Specifies the sorted columns for Gantt
 ///<br/>sortedColumns-Array&lt;any&gt;	default-[]
 ///<br/><br/>
+///Specifies the field to be sorted in Gantt
+///<br/>field-string	default-
+///<br/><br/>
+///Specifies the sort direction in Gantt
+///<br/>direction-string	default-
+///<br/><br/>
 ///Specifies splitter position in Gantt.
 ///<br/>splitterPosition-string	default-null
 ///<br/><br/>
@@ -10500,7 +10574,22 @@ ejGantt :function (options) {
 ///<br/>startDateMapping-string	default-
 ///<br/><br/>
 ///Specifies the options for striplines
-///<br/>stripLines-Array&lt;any&gt;	default-[]
+///<br/>stripLines-Array&lt;StripLines&gt;	default-[]
+///<br/><br/>
+///Specifies date to render striplines in Gantt
+///<br/>day-string	default-
+///<br/><br/>
+///Specifies label to be displayed for striplines in Gantt
+///<br/>label-string	default-
+///<br/><br/>
+///Specifies line style for rendered striplines in Gantt
+///<br/>lineStyle-string	default-
+///<br/><br/>
+///Specifies the line color for rendered striplines in Gantt
+///<br/>lineColor-string	default-
+///<br/><br/>
+///Specifies the width of the stripline in Gantt
+///<br/>lineWidth-string	default-
 ///<br/><br/>
 ///Specifies the background of the taskbar in Gantt
 ///<br/>taskbarBackground-string	default-
@@ -10510,6 +10599,9 @@ ejGantt :function (options) {
 ///<br/><br/>
 ///Specifies the template Id for customized tooltip for taskbar editing in Gantt
 ///<br/>taskbarEditingTooltipTemplateId-string	default-
+///<br/><br/>
+///Specifies the height of taskBar in Gantt.
+///<br/>taskbarHeight-number	default-20
 ///<br/><br/>
 ///Specifies the template for tooltip on mouse action on taskbars
 ///<br/>taskbarTooltipTemplate-string	default-
@@ -10559,6 +10651,9 @@ ejGantt :function (options) {
 ///Specifies the type of selection whether to select row or cell.
 ///<br/>selectionMode-ej.Gantt.SelectionMode|string	default-ej.Gantt.SelectionMode.Row
 ///<br/><br/>
+///Enables or disables the schedule date validation while connecting a manually scheduled task with predecessor
+///<br/>validateManualTasksOnLinking-boolean	default-false
+///<br/><br/>
 ///Specifies the weekendBackground color in Gantt
 ///<br/>weekendBackground-string	default-#F2F2F2
 ///<br/><br/>
@@ -10590,6 +10685,14 @@ addIgnoreOnExport:function(propertyNames){
 /// Adds a grid model property which is to be ignored upon exporting.
 /// </summary>
 /// <param name="propertyNames"	type="Array&lt;any&gt;">Pass the array of parameters which need to be ignored on exporting </param>
+/// </signature>
+},
+addIgnoreOnToolbarServerClick:function(propertyNames){
+/// <signature>
+/// <summary>
+/// Adds a grid model property which is to be ignored upon OnServerToolbarClick.
+/// </summary>
+/// <param name="propertyNames"	type="Array&lt;any&gt;">Pass the array of parameters which need to be ignored on OnServerToolbarClick </param>
 /// </signature>
 },
 addRecord:function(){
@@ -10723,7 +10826,7 @@ dataSource:function(datasource, templateRefresh){
 /// <summary>
 /// Refresh the grid with new data source
 /// </summary>
-/// <param name="datasource"	type="Array&lt;any&gt;">Pass new data source to the grid</param>
+/// <param name="datasource"	type="any">Pass new data source to the grid</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -11622,7 +11725,7 @@ ejGrid :function (options) {
 ///<br/>customAttributes-any	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to bind the external datasource to the particular column when column editType as dropdownedit and also it is used to bind the datasource to the foreign key column while editing the grid. //Where data is array of JSON objects of text and value for the drop-down and array of JSON objects for foreign key column.
-///<br/>dataSource-Array&lt;any&gt;	default-null
+///<br/>dataSource-any	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to display the specified default value while adding a new record to the grid
 ///<br/>defaultValue-String|Number|Boolean|Date	default-
@@ -11963,6 +12066,9 @@ ejGrid :function (options) {
 ///This helps in mapping server-side action when rows are dropped in Grid.
 ///<br/>dropMapper-string	default-null
 ///<br/><br/>
+///Gets or sets a value that indicates whether to define the behavior for drag.
+///<br/>dragBehavior-ej.Grid.DragBehavior|string	default-ej.Grid.DragBehavior.Move
+///<br/><br/>
 ///Gets or sets an object that indicates whether to customize the searching behavior of the grid
 ///<br/>searchSettings-SearchSettings	default-
 ///<br/><br/>
@@ -12139,6 +12245,12 @@ ejGrid :function (options) {
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add custom toolbar items within the toolbar to perform any action in the grid
 ///<br/>customToolbarItems-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Gets or sets a value that indicates whether to add custom toolbar item as a template element.
+///<br/>templateID-string	default-
+///<br/><br/>
+///Gets or sets a value that indicates whether to add custom toolbar item with a custom tooltip.
+///<br/>tooltip-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable toolbar in the grid.
 ///<br/>showToolbar-Boolean	default-false
@@ -13644,6 +13756,12 @@ ejLinearGauge :function (options) {
 ///Specifies the can resize state.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
+///Used to Convert the date object to  string while using the  locale settings
+///<br/>enableGroupSeparator-boolean	default-false
+///<br/><br/>
+///Responsiveness of the linear gauge is controlled
+///<br/>enableResize-boolean	default-false
+///<br/><br/>
 ///Specify frame of linear gauge
 ///<br/>frame-Frame	default-null
 ///<br/><br/>
@@ -13661,6 +13779,9 @@ ejLinearGauge :function (options) {
 ///<br/><br/>
 ///Specifies the labelColor for Linear gauge.
 ///<br/>labelColor-string	default-null
+///<br/><br/>
+///Set the  localization culture  for the Linear gauge
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Specifies the maximum value of Linear gauge.
 ///<br/>maximum-number	default-100
@@ -13801,7 +13922,7 @@ ejLinearGauge :function (options) {
 ///<br/>height-number	default-30
 ///<br/><br/>
 ///Specifies the opacity in bar indicators
-///<br/>opacity-number	default-NaN
+///<br/>opacity-number	default-null
 ///<br/><br/>
 ///Specifies the position in bar indicators
 ///<br/>position-any	default-null
@@ -14624,6 +14745,9 @@ ejListBox :function (options) {
 ///<br/><br/>
 ///To display the ListBox container with rounded corners.
 ///<br/>showRoundedCorner-boolean	default-false
+///<br/><br/>
+///Set to sort ListBox items either by Ascending or Descending order. By default sortOrder is set as enum type of "None".You can use only below mentioned type for sorting purpose.
+///<br/>sortOrder-ej.ListBox.SortOrder|string	default-ej.SortOrder.None
 ///<br/><br/>
 ///The template to display the ListBox widget with customized appearance.
 ///<br/>template-string	default-null
@@ -18873,7 +18997,7 @@ intellisense.annotate(jQuery.fn,{
 ejRadialMenu :function (options) {
 /// <signature>
 /// <summary><br/>
-///$(element).ejRadialMenu()<br/><br/>
+///The RadialMenu control is a context that represents the menu items are arranged in a circular order with a centric button element in it. By default, only the center button is visible. The Radial Menu displays the root level menu item with rotational animation effects on clicking the center menu button.<br/><br/>
 ///To show the Radial in initial render.
 ///<br/>autoOpen-boolean	default-
 ///<br/><br/>
@@ -19204,6 +19328,9 @@ ejRangeNavigator :function (options) {
 ///Enable the scrollbar option in the rangenavigator.
 ///<br/>enableScrollbar-boolean	default-false
 ///<br/><br/>
+///Enable the resize option in the rangenavigator.
+///<br/>enableAutoResizing-boolean	default-false
+///<br/><br/>
 ///Toggles the direction of rendering the range navigator control.
 ///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
@@ -19352,7 +19479,7 @@ ejRangeNavigator :function (options) {
 ///<br/>font-any	default-
 ///<br/><br/>
 ///Specifies the label color. This color is applied to the labels in range navigator.
-///<br/>color-string	default-#FFFFFF
+///<br/>color-string	default-#333333
 ///<br/><br/>
 ///Specifies the label font family. Labels render with the specified font family.
 ///<br/>family-string	default-Segoe UI
@@ -19599,6 +19726,18 @@ ejRangeNavigator :function (options) {
 ///<br/><br/>
 ///Specifies width of the major tick lines.
 ///<br/>width-number	default-0
+///<br/><br/>
+///You can customize the range of the axis by setting minimum , maximum and interval.
+///<br/>range-any	default-
+///<br/><br/>
+///Default Value
+///<br/>min-number	default-null
+///<br/><br/>
+///Default Value
+///<br/>max-number	default-null
+///<br/><br/>
+///Default Value
+///<br/>interval-number	default-null
 ///<br/><br/>
 ///If the range is not given explicitly, range will be calculated automatically. You can customize the automatic range calculation using rangePadding.
 ///<br/>rangePadding-string	default-none
@@ -22549,6 +22688,9 @@ ejSparkline :function (options) {
 ///Range band color of the series.
 ///<br/>color-string	default-transparent
 ///<br/><br/>
+///Name of the culture based on which sparkline should be localized.
+///<br/>locale-string	default-en-US
+///<br/><br/>
 ///Name of a field in data source, where the fill color for all the data points is generated.
 ///<br/>palette-string	default-
 ///<br/><br/>
@@ -22557,6 +22699,9 @@ ejSparkline :function (options) {
 ///<br/><br/>
 ///Controls whether Sparkline has to be rendered as Canvas or SVG.Canvas rendering supports all functionalities in SVG rendering.
 ///<br/>enableCanvasRendering-boolean	default-false
+///<br/><br/>
+///Specify to convert the date object to string, using locale settings.
+///<br/>enableGroupSeparator-boolean	default-false
 ///<br/><br/>
 ///Specifies the dataSource for the series. It can be an array of JSON objects or an instance of ej.DataManager.
 ///<br/>dataSource-any	default-null
@@ -22870,6 +23015,9 @@ ejSpellCheck :function (options) {
 ///<br/><br/>
 ///When set to true, allows the spellcheck to render based upon screen size.
 ///<br/>isResponsive-boolean	default-true
+///<br/><br/>
+///Gets or sets a value that indicates whether to enable the spellcheck operation on Enter/Space key-press.
+///<br/>enableValidateOnType-boolean	default-false
 ///<br/><br/>
 ///It allows to spell check the multiple target HTML element's texts and correct its error words.
 ///<br/>controlsToValidate-string	default-null
@@ -26579,14 +26727,6 @@ saveCell:function(){
 /// To save the edited cell in TreeGrid
 /// </summary>
 },
-search:function(searchString){
-/// <signature>
-/// <summary>
-/// To search an item with search string provided at the run time
-/// </summary>
-/// <param name="searchString"	type="string">you can pass a searchString to search the tree grid</param>
-/// </signature>
-},
 showColumn:function(headerText){
 /// <signature>
 /// <summary>
@@ -26595,12 +26735,12 @@ showColumn:function(headerText){
 /// <param name="headerText"	type="string">you can pass a header text of a column to show.</param>
 /// </signature>
 },
-sortColumn:function(columnName, columnSortDirection){
+sortColumn:function(fieldName, columnSortDirection){
 /// <signature>
 /// <summary>
 /// To sorting the data based on the particular fields
 /// </summary>
-/// <param name="columnName"	type="string">you can pass a name of column to sort.</param>
+/// <param name="fieldName"	type="string">you can pass a name of column to sort.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -26680,14 +26820,23 @@ ejTreeGrid :function (options) {
 ///Enables or disables the ability to filter the rows based on this column.
 ///<br/>allowFiltering-boolean	default-false
 ///<br/><br/>
+///Enables the blanks option in ejDropDownList mapped in TreeGrid column
+///<br/>allowFilteringBlankContent-boolean	default-true
+///<br/><br/>
 ///Enables or disables the ability to sort the rows based on this column/field.
 ///<br/>allowSorting-boolean	default-false
 ///<br/><br/>
 ///Enables/disables cell selection.
 ///<br/>allowCellSelection-boolean	default-false
 ///<br/><br/>
+///To customize the ej controls defined in TreeGrid column with their native property.
+///<br/>editParams-any	default-
+///<br/><br/>
 ///Specifies the edit type of the column.
 ///<br/>editType-ej.TreeGrid.EditingType|string	default-ej.TreeGrid.EditingType.String
+///<br/><br/>
+///To bind the dropdown data for TreeGrid column mapped with ejDropDownList
+///<br/>dropdownData-string	default-
 ///<br/><br/>
 ///Specifies the name of the field from the dataSource to bind with this column.
 ///<br/>field-string	default-
@@ -26777,7 +26926,7 @@ ejTreeGrid :function (options) {
 ///<br/>dataSource-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Specifies whether to wrap the header text when it is overflown i.e., when it exceeds the header width.
-///<br/>headerTextOverflow-string	default-none
+///<br/>headerTextOverflow-ej.TreeGrid.HeaderTextOverflow|string	default-ej.TreeGrid.HeaderTextOverflow.None
 ///<br/><br/>
 ///Options for displaying and customizing the tooltip. This tooltip will show the preview of the row that is being dragged.
 ///<br/>dragTooltip-DragTooltip	default-
@@ -26831,7 +26980,10 @@ ejTreeGrid :function (options) {
 ///<br/>columnResizeSettings-ColumnResizeSettings	default-
 ///<br/><br/>
 ///Specifies the mode for column resizing
-///<br/>columnResizeMode-string	default-normal
+///<br/>columnResizeMode-ej.TreeGrid.ColumnResizeMode|string	default-ej.TreeGrid.ColumnResizeMode.Normal
+///<br/><br/>
+///Defines the common width for all the columns in TreeGrid
+///<br/>commonWidth-number	default-150
 ///<br/><br/>
 ///Options for filtering and customizing filter actions.
 ///<br/>filterSettings-FilterSettings	default-
@@ -26840,10 +26992,22 @@ ejTreeGrid :function (options) {
 ///<br/>filterBarMode-string	default-immediate
 ///<br/><br/>
 ///Specifies the type of column filtering.
-///<br/>filterType-string	default-filterbar
+///<br/>filterType-ej.TreeGrid.FilterType|string	default-ej.TreeGrid.FilterType.FilterBar
 ///<br/><br/>
 ///Specifies the column collection for filtering the TreeGrid content on initial load
 ///<br/>filteredColumns-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Specifies the value to be filtered in TreeGrid.
+///<br/>value-string	default-
+///<br/><br/>
+///Specifies the field where filtering has to be performed.
+///<br/>field-string	default-
+///<br/><br/>
+///Specifies the predicate(and/or) value to perform filtering.
+///<br/>predicate-string	default-
+///<br/><br/>
+///Specifies the filter condition to filtered column. See operator
+///<br/>operator-string	default-
 ///<br/><br/>
 ///Specifies the localization information to customize the User Interface (UI) to support regional language and culture
 ///<br/>locale-string	default-en-US
@@ -26896,6 +27060,15 @@ ejTreeGrid :function (options) {
 ///Specifies the index of the selected row.
 ///<br/>selectedRowIndex-number	default--1
 ///<br/><br/>
+///Specifies the selected cell information on rendering TreeGrid.
+///<br/>selectedCellIndexes-Array&lt;SelectedCellIndexes&gt;	default-
+///<br/><br/>
+///Specifies the row index of the cell to be selected in TreeGrid control
+///<br/>rowIndex-number	default-
+///<br/><br/>
+///Specifies the cell index to be selected in the row.
+///<br/>cellIndex-number	default- 
+///<br/><br/>
 ///Specifies the settings for row and cell selection.
 ///<br/>selectionSettings-SelectionSettings	default-
 ///<br/><br/>
@@ -26936,7 +27109,31 @@ ejTreeGrid :function (options) {
 ///<br/>showTotalSummary-boolean	default-false
 ///<br/><br/>
 ///Specifies the summary row collection object to be displayed
-///<br/>summaryRows-Array&lt;any&gt;	default-[]
+///<br/>summaryRows-Array&lt;SummaryRows&gt;	default-[]
+///<br/><br/>
+///Specifies the title for summary row collection in TreeGrid
+///<br/>title-string	default-
+///<br/><br/>
+///Specifies the summary columns in the summary rows.
+///<br/>summaryColumns-Array&lt;any&gt;	default-
+///<br/><br/>
+///Specifies the summary type to perform calculations in a corresponding summary column. See summaryType.
+///<br/>summaryType-ej.TreeGrid.SummaryType|string	default-
+///<br/><br/>
+///Specifies summary column used to perform the summary calculation.
+///<br/>dataMember-string	default-
+///<br/><br/>
+///Specifies the required column to display the summary.
+///<br/>displayColumn-string	default-
+///<br/><br/>
+///Specifies the text to be displayed before the summary column value.
+///<br/>prefix-string	default-
+///<br/><br/>
+///Specifies the text to be displayed after the summary column value.
+///<br/>suffix-string	default-
+///<br/><br/>
+///Specifies the format to be applied on the summary column value.
+///<br/>format-string	default-
 ///<br/><br/>
 ///Specifies whether to show tooltip when mouse is hovered on the cell.
 ///<br/>showGridCellTooltip-boolean	default-true
@@ -26958,6 +27155,12 @@ ejTreeGrid :function (options) {
 ///<br/><br/>
 ///Option to add columns based on which the rows have to be sorted recursively.
 ///<br/>sortedColumns-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Specifies the field to be sorted in TreeGrid
+///<br/>field-string	default-
+///<br/><br/>
+///Specifies the sort direction in TreeGrid
+///<br/>direction-string	default-
 ///<br/><br/>
 ///Options for displaying and customizing the toolbar items.
 ///<br/>toolbarSettings-ToolbarSettings	default-
@@ -27161,6 +27364,12 @@ ejTreeMap :function (options) {
 ///Specifies the items layout mode of the treemap. Accepted itemsLayoutMode values are Squarified, SliceAndDiceHorizontal, SliceAndDiceVertical and SliceAndDiceAuto
 ///<br/>itemsLayoutMode-ej.datavisualization.TreeMap.ItemsLayoutMode|string	default-Squarified
 ///<br/><br/>
+///Specify to convert the date object to string, using locale settings.
+///<br/>enableGroupSeparator-boolean	default-false
+///<br/><br/>
+///Name of the culture based on which Tree Map should be localized.
+///<br/>locale-string	default-en-US
+///<br/><br/>
 ///Specifies the leaf settings of the treemap
 ///<br/>leafItemSettings-LeafItemSettings	default-
 ///<br/><br/>
@@ -27169,6 +27378,9 @@ ejTreeMap :function (options) {
 ///<br/><br/>
 ///Specifies the border thickness of the leaf item.
 ///<br/>borderThickness-number	default-1
+///<br/><br/>
+///Specifies the space between the leaf items.
+///<br/>gap-number	default-0
 ///<br/><br/>
 ///Specifies the label template of the leaf item.
 ///<br/>itemTemplate-string	default-null
