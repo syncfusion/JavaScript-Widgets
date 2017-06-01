@@ -11926,7 +11926,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-grid.e-filterDialoge .e-input {
+    .e-grid.e-filterDialog .e-input {
         line-height: 20px;
     }
 
@@ -11958,7 +11958,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-grid.e-dlgcontainer.e-filterDialoge {
+    .e-grid.e-dlgcontainer.e-filterDialog {
         & when (@skin= "material") {
             padding-top: 24px !important;
         }
@@ -12426,8 +12426,10 @@ background-image: url('../@{font-path}/icons-white.png');
 
     }
 
-    .e-grid .e-inlineformedit form div,
-    .e-grid .e-externalformedit form div {
+    .e-grid .e-inlineformedit form div.e-gridFromDiv,
+    .e-grid .e-inlineformedit form div.e-gridFromDiv>div,
+    .e-grid .e-externalformedit form div.e-gridFromDiv,
+    .e-grid .e-externalformedit form div.e-gridFromDiv>div {
         display: inline-block;
         padding-left: 0px;
         padding-right: 0.7em;
@@ -12450,8 +12452,10 @@ background-image: url('../@{font-path}/icons-white.png');
         display: block;
     }
 
-    .e-grid .e-inlineformedit form table div,
-    .e-grid .e-externalformedit form table div {
+    .e-grid .e-inlineformedit form table div.e-gridFromDiv,
+    .e-grid .e-inlineformedit form table div.e-gridFromDiv>div,
+    .e-grid .e-externalformedit form table div.e-gridFromDiv,
+    .e-grid .e-externalformedit form table div.e-gridFromDiv>div{
         display: block;
         padding-left: 0px;
         padding-right: 0.7em;
@@ -39062,13 +39066,15 @@ slideRight Animate
         }
 	}
 	
-	.e-ss-dialog.e-ss-fcdlg .e-ss-rightdiv div {
+	.e-ss-dialog.e-ss-fcdlg .e-ss-rightdiv tr.e-fdlg-num-options td label {
 	& when not (@skin = "office-365") {
 	        padding-top:9px;
+			padding-bottom:9px;
 			}
 	}
 	.e-ss-dialog.e-ss-fcdlg .e-ss-rightdiv div button {
 	  float:right;
+	  margin-top: 5px;
 	}
 	
 	 .e-ss-dialog.e-ss-insdeldlg .e-dlgctndiv tr td label {
@@ -39248,6 +39254,12 @@ slideRight Animate
     .e-ss-dialog .e-radiobtn-wrap {
         & when (@skin = "material") {
             padding-right: 12px;
+        }
+    }
+	
+	.e-ss-dialog.e-ss-insdeldlg .e-radiobtn-wrap {
+	  & when not (@skin = "office-365") {
+            margin-bottom: -4px;
         }
     }
 
