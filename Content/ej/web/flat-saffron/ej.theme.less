@@ -1,5 +1,5 @@
 @skin: "flat-saffron";
-@font-family: Segoe UI;
+@font-family: Segoe UI,Helvetica Neue;
 @font-size: 12px;
 @border-size: 1px;
 @border-type: solid;
@@ -20742,12 +20742,22 @@ content:"\e6d0";
      	font-size: 20px;  
     }
 }
+.e-pivotclient .kpiCDB:before, .e-pivotclient .kpiGoalCDB:before, .e-pivotclient .kpiStatusCDB:before, .e-pivotclient .kpiTrendCDB:before, .e-pivotclient .kpiValueCDB:before, .e-pivotclient .kpiRootCDB:before{
+content:"\e6df";
+font-size: 18px;
+}
+.e-pivotclient .kpiCDB, .e-pivotclient .kpiGoalCDB, .e-pivotclient .kpiStatusCDB, .e-pivotclient .kpiTrendCDB, .e-pivotclient .kpiValueCDB, .e-pivotclient .kpiRootCDB{
+  height:16px;
+  width:16px;
+  display:inline-block;
+  vertical-align: text-top;
+ }
 .e-pivotclient .newReportImg,.e-pivotclient .addReportImg,.e-pivotclient .removeReportImg,.e-pivotclient .renameReportImg,
 .e-pivotclient .reportDBImg, .e-pivotclient .mdxImg,.e-pivotclient .maximizedView,.e-pivotclient .calcMemberImg,.e-pivotclient .excelExportImg,.e-pivotclient .wordExportImg,.e-pivotclient .pdfExportImg,.e-pivotclient .chartTypesImg,.e-pivotclient .rowSortFilterImg,.e-pivotclient .colSortFilterImg,.e-pivotclient .toggleExpandButton,
 .e-pivotclient .toggleCollapseButton,.e-pivotclient .dimensionCDB,.e-pivotclient .folderCDB,.e-pivotclient .hierarchyCDB,.e-pivotclient .attributeCDB,.e-pivotclient .chartCDB,
 .e-pivotclient .namedSetCDB,.e-pivotclient .level0,.e-pivotclient .level1,.e-pivotclient .level2,.e-pivotclient .level3,.e-pivotclient .level4,.e-pivotclient .level5,
 .e-pivotclient .level6,.e-pivotclient .level7,.e-pivotclient .level8,.e-pivotclient .level9,.e-pivotclient .level10, 
-.e-pivotclient .checkAll,.e-pivotclient .unCheckAll,.e-pivotclient .autoExecuteImg,.e-pivotclient .toggleaxisImg,.e-pivotclient .calcMemberCDB,.e-pivotclient .calcMemberGroupCDB
+.e-pivotclient .checkAll,.e-pivotclient .unCheckAll,.e-pivotclient .autoExecuteImg,.e-pivotclient .toggleaxisImg,.e-pivotclient .calcMemberCDB,.e-pivotclient .calcMemberGroupCDB, .e-pivotclient .kpiCDB, .e-pivotclient .kpiGoalCDB, .e-pivotclient .kpiStatusCDB, .e-pivotclient .kpiTrendCDB, .e-pivotclient .kpiValueCDB, .e-pivotclient .kpiRootCDB
 {
     & when not (@skin = "office-365") {
     color:@oclient-icons-color;
