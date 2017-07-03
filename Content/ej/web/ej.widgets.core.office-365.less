@@ -3103,7 +3103,9 @@
     }
 
     .e-timewidget .e-input {
-        letter-spacing: 1px;
+		& when not (@skin = "material"){
+			letter-spacing: 1px;
+		}
     }
 
     .e-timewidget .e-icon {
@@ -3119,7 +3121,9 @@
 
     .e-time-popup {
         font-weight: @content-font-weight;
-        letter-spacing: 1px;
+		& when not (@skin= "material") {
+			letter-spacing: 1px;
+		}
 
         & when (@skin= "material") {
             /*material*/
@@ -6864,6 +6868,8 @@
     .e-dragedNode {
         z-index: 10002;
         line-height: 1.42857143;
+        margin-left: 20px;
+        display: table;
 
         & when (@skin= "material") {
             font-size: 13px;
@@ -6921,6 +6927,9 @@
 
     .e-dragedNode .e-text {
         text-decoration: none;
+        display: table-cell; 
+        white-space: nowrap;
+        margin: 0 0 1px;
     }
 
     .e-treeview-wrap .e-sibling {
@@ -6989,6 +6998,7 @@
     .e-icon.e-dropedStatus {
         width: 14px;
         height: 14px;
+        display: table-cell;
 
         & when (@skin= "material") {
             padding-right: 5px;
@@ -28631,8 +28641,8 @@ slideRight Animate
     .e-colorpicker .e-slider-wrap .e-handle {
         background: transparent;
 		& when (@skin = "office-365"){
-        border: 3px solid #fff;
-        box-shadow: rgb(146, 146, 146) 0px 0px 5px inset;
+		border: 3px solid #fff;
+			box-shadow: rgb(146, 146, 146) 0px 0px 5px inset;
 		}
     }
 
@@ -34634,6 +34644,10 @@ slideRight Animate
 
 .mixin(@widget) when (@widget = spreadsheet), (@widget = none) {
     /*-------------------------------------SpreadSheet core -----------------------*/
+    ej-spreadsheet{
+        display: block;
+    }
+
     .e-spreadsheet {
         height: auto;
         outline: none;

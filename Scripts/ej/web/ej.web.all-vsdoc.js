@@ -99,25 +99,25 @@ jQuery.fn.ejAccordion = function (options) {
 ///<br/>ajaxSettings-AjaxSettings	default-null
 ///<br/><br/>
 ///It specifies, whether to enable or disable asynchronous request.
-///<br/>async-Boolean	default-
+///<br/>async-boolean	default-
 ///<br/><br/>
 ///It specifies the page will be cached in the web browser.
-///<br/>cache-Boolean	default-
+///<br/>cache-boolean	default-
 ///<br/><br/>
 ///It specifies the type of data is send in the query string.
-///<br/>contentType-String	default-
+///<br/>contentType-string	default-
 ///<br/><br/>
 ///It specifies the data as an object, will be passed in the query string.
 ///<br/>data-any	default-
 ///<br/><br/>
 ///It specifies the type of data that you're expecting back from the response.
-///<br/>dataType-String	default-
+///<br/>dataType-string	default-
 ///<br/><br/>
 ///It specifies the HTTP request type.
-///<br/>type-String	default-
+///<br/>type-string	default-
 ///<br/><br/>
 ///Accordion headers can be expanded and collapsed on keyboard action.
-///<br/>allowKeyboardNavigation-Boolean	default-true
+///<br/>allowKeyboardNavigation-boolean	default-true
 ///<br/><br/>
 ///To set the Accordion headers Collapse Speed.
 ///<br/>collapseSpeed-number	default-300
@@ -126,40 +126,40 @@ jQuery.fn.ejAccordion = function (options) {
 ///<br/>collapsible-boolean	default-false
 ///<br/><br/>
 ///Sets the root CSS class for Accordion theme, which is used customize.
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Allows you to set the custom header Icon. It accepts two key values â€œheaderâ€, â€selectedHeaderâ€.
 ///<br/>customIcon-CustomIcon	default-{ header: e-collapse, selectedHeader: e-expand }
 ///<br/><br/>
 ///This class name set to collapsing header.
-///<br/>header-String	default-
+///<br/>header-string	default-
 ///<br/><br/>
 ///This class name set to expanded (active) header.
-///<br/>selectedHeader-String	default-
+///<br/>selectedHeader-string	default-
 ///<br/><br/>
 ///Disables the specified indexed items in accordion.
 ///<br/>disabledItems-number[]	default-[]
 ///<br/><br/>
 ///Specifies the animation behavior in accordion.
-///<br/>enableAnimation-Boolean	default-true
+///<br/>enableAnimation-boolean	default-true
 ///<br/><br/>
 ///With this enabled property, you can enable or disable the Accordion.
-///<br/>enabled-Boolean	default-true
+///<br/>enabled-boolean	default-true
 ///<br/><br/>
 ///Used to enable the disabled items in accordion.
 ///<br/>enabledItems-number[]	default-[]
 ///<br/><br/>
 ///Multiple content panels to activate at a time.
-///<br/>enableMultipleOpen-Boolean	default-false
+///<br/>enableMultipleOpen-boolean	default-false
 ///<br/><br/>
 ///Save current model value to browser cookies for maintaining states. When refreshing the accordion control page, the model value is applied from browser cookies or HTML 5local storage.
-///<br/>enablePersistence-Boolean	default-false
+///<br/>enablePersistence-boolean	default-false
 ///<br/><br/>
 ///Display headers and panel text from right-to-left.
-///<br/>enableRTL-Boolean	default-false
+///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
 ///The events API binds the action for activating the accordion header. Users can activate the header by using mouse actions such as mouse-over, mouse-up, mouse-down, and soon.
-///<br/>events-String	default-click
+///<br/>events-string	default-click
 ///<br/><br/>
 ///To set the Accordion headers Expand Speed.
 ///<br/>expandSpeed-number	default-300
@@ -183,7 +183,7 @@ jQuery.fn.ejAccordion = function (options) {
 ///<br/>selectedItems-number[]	default-[0]
 ///<br/><br/>
 ///Used to determines the close button visibility an each accordion items. This close button helps to remove the accordion item from the control.
-///<br/>showCloseButton-Boolean	default-false
+///<br/>showCloseButton-boolean	default-false
 ///<br/><br/>
 ///Displays rounded corner borders on the Accordion control's panels and headers.
 ///<br/>showRoundedCorner-boolean	default-false
@@ -378,7 +378,7 @@ jQuery.fn.ejAutocomplete = function (options) {
 ///<br/>headerTextAlign-ej.TextAlign|string	default-ej.TextAlign.Left
 ///<br/><br/>
 ///Gets or sets a value that indicates to align the text within the column. See textAlign
-///<br/>textAlign- ej.TextAlign|string	default-ej.TextAlign.Left
+///<br/>textAlign-ej.TextAlign|string	default-ej.TextAlign.Left
 ///<br/><br/>
 ///Enables or disables selecting multiple values from the suggestion list. Multiple values can be selected through either of the following options,
 ///<br/>multiSelectMode-ej.Autocomplete.MultiSelectMode|string	default-ej.MultiSelectMode.None
@@ -764,7 +764,7 @@ jQuery.fn.ejBulletGraph = function (options) {
 ///Controls whether bullet graph has to be responsive while resizing.
 ///<br/>enableResizing-boolean	default-true
 ///<br/><br/>
-///Specifies the direction of flow in bullet graph. Neither it may be backward nor forward.
+///Specifies the direction of flow in bullet graph. Neither it may be backward nor forward. 
 ///<br/>flowDirection-ej.datavisualization.BulletGraph.FlowDirection|string	default-forward
 ///<br/><br/>
 ///Specifies the height of the bullet graph.
@@ -887,7 +887,7 @@ jQuery.fn.ejBulletGraph = function (options) {
 ///Specifies the horizontal/vertical padding of labels.
 ///<br/>offset-number	default-15
 ///<br/><br/>
-///Specifies the position of the labels to render either above or below the graph. See Position
+///Specifies the position of the labels to render either above or below the graph. See 
 ///<br/>position-ej.datavisualization.BulletGraph.LabelPosition|string	default-below
 ///<br/><br/>
 ///Specifies the Size of the labels.
@@ -1269,6 +1269,9 @@ jQuery.fn.ejChart = function (options) {
 ///Name of the vertical axis to be used for positioning the annotation.This property is applicable only when coordinateUnit is points.
 ///<br/>yAxisName-string	default-
 ///<br/><br/>
+///Sets the background color of the  chart.
+///<br/>background-string	default-transparent
+///<br/><br/>
 ///URL of the image to be used as chart background.
 ///<br/>backGroundImageUrl-string	default-null
 ///<br/><br/>
@@ -1356,7 +1359,7 @@ jQuery.fn.ejChart = function (options) {
 ///Border width of all series.
 ///<br/>width-number	default-1
 ///<br/><br/>
-///To render the column and bar type series in rectangle/cylinder shape. See ColumnFacet
+///To render the column and bar type series in rectangle/cylinder shape. See 
 ///<br/>columnFacet-ej.datavisualization.Chart.ColumnFacet|string	default-rectangle
 ///<br/><br/>
 ///Relative width of the columns in column type series. Value ranges from 0 to 1. Width also depends upon columnSpacing property.
@@ -1383,7 +1386,7 @@ jQuery.fn.ejChart = function (options) {
 ///Controls the size of the doughnut series. Value ranges from 0 to 1.
 ///<br/>doughnutSize-number	default-0.8
 ///<br/><br/>
-///Specifies the type of series to be drawn in radar or polar series.
+///Specifies the type of series to be drawn in radar or polar series. 
 ///<br/>drawType-ej.datavisualization.Chart.DrawType|string	default-line. See DrawType
 ///<br/><br/>
 ///Enable/disable the animation for all the series.
@@ -1461,7 +1464,19 @@ jQuery.fn.ejChart = function (options) {
 ///Quartile calculation has been performed in three different formulas to render the box and whisker series.
 ///<br/>boxPlotMode-ej.datavisualization.Chart.boxPlotMode|string	default-exclusive
 ///<br/><br/>
-///Specifies the line cap of the series.
+///Options for customizing the bubble options of the Bubble series
+///<br/>bubbleOptions-any	default-
+///<br/><br/>
+///Used for the calculation of the bubble radius based on the mode selected 
+///<br/>radiusMode-ej.datavisualization.Chart.RadiusMode|string	default-minmax
+///<br/><br/>
+///Used for the setting the minimum radius of the bubble
+///<br/>minRadius-number	default-1
+///<br/><br/>
+///Used for setting the maximum radius of the bubble
+///<br/>maxRadius-number	default-3
+///<br/><br/>
+///Specifies the line cap of the series. 
 ///<br/>lineCap-ej.datavisualization.Chart.LineCap|string	default-butt. See LineCap
 ///<br/><br/>
 ///Specifies the type of shape to be used where two lines meet.
@@ -1539,7 +1554,7 @@ jQuery.fn.ejChart = function (options) {
 ///Font size of the data label.
 ///<br/>size-string	default-12px
 ///<br/><br/>
-///Horizontal alignment of the data label.
+///Horizontal alignment of the data label. 
 ///<br/>horizontalTextAlignment-ej.datavisualization.Chart.HorizontalTextAlignment|string	default-center
 ///<br/><br/>
 ///Margin of the text to its background shape. The size of the background shape increases based on the margin applied to its text.
@@ -1560,7 +1575,16 @@ jQuery.fn.ejChart = function (options) {
 ///Opacity of the data label.
 ///<br/>opacity-number	default-1
 ///<br/><br/>
-///Background shape of the data label.
+///Options for customizing the datalabel positions
+///<br/>offset-any|number	default-
+///<br/><br/>
+///X value or horizontal offset to position the labels in chart.
+///<br/>x-number	default-0
+///<br/><br/>
+///Y value or vertical offset to position the labels.
+///<br/>y-number	default-0
+///<br/><br/>
+///Background shape of the data label. 
 ///<br/>shape-ej.datavisualization.Chart.Shape|string	default-none. See Shape
 ///<br/><br/>
 ///Custom template to format the data label content. Use â€œpoint.xâ€ and â€œpoint.yâ€ as a placeholder text to display the corresponding data pointâ€™s x and y value.
@@ -1572,7 +1596,7 @@ jQuery.fn.ejChart = function (options) {
 ///Specifies the position of the data label. This property can be used only for the series such as column, bar, stacked column, stacked bar, 100% stacked column, 100% stacked bar, candle and OHLC.
 ///<br/>textPosition-ej.datavisualization.Chart.TextPosition|string	default-top. See TextPosition
 ///<br/><br/>
-///Vertical alignment of the data label.
+///Vertical alignment of the data label. 
 ///<br/>verticalTextAlignment-ej.datavisualization.Chart.VerticalTextAlignment|string	default-center
 ///<br/><br/>
 ///Controls the visibility of the data labels.
@@ -1638,7 +1662,7 @@ jQuery.fn.ejChart = function (options) {
 ///Name of the property in the datasource that contains fill color for the series.
 ///<br/>pointColorMappingName-string	default-null
 ///<br/><br/>
-///Specifies the mode of the pyramid series.
+///Specifies the mode of the pyramid series. 
 ///<br/>pyramidMode-ej.datavisualization.Chart.PyramidMode|string	default-linear. See PyramidMode
 ///<br/><br/>
 ///Start angle from where the pie/doughnut series renders. By default it starts from 0.
@@ -1698,7 +1722,7 @@ jQuery.fn.ejChart = function (options) {
 ///Controls the visibility of the tooltip.
 ///<br/>visible-boolean	default-false
 ///<br/><br/>
-///Specifies the type of the series to render in chart.
+///Specifies the type of the series to render in chart. 
 ///<br/>type-ej.datavisualization.Chart.Type|string	default-column. See Type
 ///<br/><br/>
 ///Specifies the name of the x-axis that has to be associated with this series. Add an axis instance with this name to axes collection.
@@ -1842,6 +1866,9 @@ jQuery.fn.ejChart = function (options) {
 ///Show/hides the trendline.
 ///<br/>visibility-boolean	default-
 ///<br/><br/>
+///Show/hides the trendline legend.
+///<br/>visibleOnLegend-string	default-visible
+///<br/><br/>
 ///Specifies the type of the trendline for the series.
 ///<br/>type-string	default-linear. See TrendlinesType
 ///<br/><br/>
@@ -1871,6 +1898,42 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Specifies the moving average starting period value.
 ///<br/>period-number	default-2
+///<br/><br/>
+///Options for customizing the tooltip of the trendlines in the chart.
+///<br/>tooltip-any	default-
+///<br/><br/>
+///Options for customizing the border of the  trendline tooltip.
+///<br/>border-any	default-
+///<br/><br/>
+///Border color of the trendline tooltip.
+///<br/>color-string	default-null
+///<br/><br/>
+///Border width of the trendline tooltip.
+///<br/>width-number	default-1
+///<br/><br/>
+///Customize the corner radius of the trendline tooltip rectangle.
+///<br/>rx-number	default-0
+///<br/><br/>
+///Customize the corner radius of the trendline tooltip rectangle.
+///<br/>ry-number	default-0
+///<br/><br/>
+///Specifies the duration, the tooltip has to be displayed.
+///<br/>duration-string	default-500ms
+///<br/><br/>
+///Enables/disables the animation of the trendline tooltip when moving from one point to other.
+///<br/>enableAnimation-boolean	default-true
+///<br/><br/>
+///Background color of the trendline tooltip.
+///<br/>fill-string	default-null
+///<br/><br/>
+///Format of the tooltip content displayed in the trendlines.
+///<br/>format-string	default-#point.x# : #point.y#
+///<br/><br/>
+///Opacity of the trendline tooltip.
+///<br/>opacity-number	default-0.5
+///<br/><br/>
+///Specifies the intercept value of the trendlines.
+///<br/>intercept-number	default-null
 ///<br/><br/>
 ///Options for customizing the appearance of the series or data point while highlighting.
 ///<br/>highlightSettings-any	default-
@@ -1937,6 +2000,9 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Custom pattern for the series on selection.
 ///<br/>customPattern-string	default-
+///<br/><br/>
+///Options for displaying the chart along with selected points while loading
+///<br/>selectedDataPointIndexes-Array&lt;any&gt;	default-[ ]
 ///<br/><br/>
 ///Options for displaying and customizing the crosshair.
 ///<br/>crosshair-Crosshair	default-
@@ -2235,7 +2301,7 @@ jQuery.fn.ejChart = function (options) {
 ///Opacity of the legend.
 ///<br/>opacity-number	default-1
 ///<br/><br/>
-///Places the legend at specified position. Legend can be placed at left, right, top or bottom of the chart area.To manually specify the location of legend, set custom as value to this property.
+///Places the legend at specified position. Legend can be placed at **left**, **right**, **top** or **bottom** of the chart area. To manually specify the location of legend, set **custom** as value to this property.
 ///<br/>position-ej.datavisualization.Chart.Position|string	default-Bottom. See Position
 ///<br/><br/>
 ///Number of rows to arrange the legend items.
@@ -2285,6 +2351,9 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Controls the visibility of the legend.
 ///<br/>visible-boolean	default-true
+///<br/><br/>
+///Controls the selection through the legend.
+///<br/>toggleSeriesVisibility-boolean	default-true
 ///<br/><br/>
 ///Name of the culture based on which chart should be localized. Number and date time values are localized with respect to the culture name.String type properties like title text are not localized automatically. Provide localized text as value to string type properties.
 ///<br/>locale-string	default-en-US
@@ -2343,6 +2412,9 @@ jQuery.fn.ejChart = function (options) {
 ///Category axis can also plot points based on index value of data points. Index based plotting can be enabled by setting â€˜isIndexedâ€™ property to true.
 ///<br/>isIndexed-boolean	default-false
 ///<br/><br/>
+///Specifies the interval of the axis according to the zoomed data of the chart.
+///<br/>enableAutoIntervalOnZooming-boolean	default-true
+///<br/><br/>
 ///Options for customizing the axis line.
 ///<br/>axisLine-any	default-
 ///<br/><br/>
@@ -2376,10 +2448,10 @@ jQuery.fn.ejChart = function (options) {
 ///With this setting, you can request axis to calculate intervals approximately equal to your desired interval.
 ///<br/>desiredIntervals-number	default-null
 ///<br/><br/>
-///Specifies the placement of labels.
+///Specifies the placement of labels. 
 ///<br/>labelPlacement-ej.datavisualization.Chart.LabelPlacement|string	default-ej.datavisualization.Chart.LabelPlacement.BetweenTicks. See LabelPlacement
 ///<br/><br/>
-///Specifies the position of labels at the edge of the axis.
+///Specifies the position of labels at the edge of the axis. 
 ///<br/>edgeLabelPlacement-ej.datavisualization.Chart.EdgeLabelPlacement|string	default-ej.datavisualization.Chart.EdgeLabelPlacement.None. See EdgeLabelPlacement
 ///<br/><br/>
 ///Specifies whether to trim the axis label when the width of the label exceeds the maximumLabelWidth.
@@ -2412,7 +2484,7 @@ jQuery.fn.ejChart = function (options) {
 ///Custom formatting for axis label and supports all standard formatting type of numerical and date time values.
 ///<br/>labelFormat-string	default-null
 ///<br/><br/>
-///Specifies the action to take when the axis labels are overlapping with each other.
+///Specifies the action to take when the axis labels are overlapping with each other. 
 ///<br/>labelIntersectAction-ej.datavisualization.Chart.LabelIntersectAction|string	default-ej.datavisualization.Chart.LabelIntersectAction.None. See LabelIntersectAction
 ///<br/><br/>
 ///Specifies the position of the axis labels.
@@ -2495,6 +2567,9 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Specifies whether to render the axis at the opposite side of its default position.
 ///<br/>opposedPosition-boolean	default-false
+///<br/><br/>
+///Specifies the orientation of the axis line
+///<br/>orientation-ej.datavisualization.Chart.AxisOrientation|string	default-Horizontal
 ///<br/><br/>
 ///Specifies the padding for the plot area.
 ///<br/>plotOffset-number	default-10
@@ -2699,6 +2774,27 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Position of the zoomed axis. Value ranges from 0 to 1.
 ///<br/>zoomPosition-number	default-0
+///<br/><br/>
+///Options for customizing the axis scrollbar
+///<br/>scrollbarSettings-any	default-
+///<br/><br/>
+///Specifies to enables or disables the scroll bar.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///Controls whether scrollbar has to be responsive in the chart.
+///<br/>canResize-boolean	default-false
+///<br/><br/>
+///Options to customize the range for the scrollbar in the axis.
+///<br/>range-any	default-
+///<br/><br/>
+///Minimum value of the scrollbar range.
+///<br/>min-number	default-null
+///<br/><br/>
+///Maximum value for the scrollbar range .
+///<br/>max-number	default-null
+///<br/><br/>
+///The maximum number of points to be displayed in the scrollbar.
+///<br/>pointsLength-number	default-null
 ///<br/><br/>
 ///To override x axis for particular series, create an axis object by providing unique name by using name property and add it to axes array. Then, assign the name to the seriesâ€™s xAxisName property to link both axis and series.
 ///<br/>axes-Array&lt;Axes&gt;	default-
@@ -2772,6 +2868,9 @@ jQuery.fn.ejChart = function (options) {
 ///Specifies whether to trim the axis label when the width of the label exceeds the maximumLabelWidth.
 ///<br/>enableTrim-boolean	default-false
 ///<br/><br/>
+///Specifies the interval of the axis according to the zoomed data of the chart.
+///<br/>enableAutoIntervalOnZooming-boolean	default-true
+///<br/><br/>
 ///Options for customizing the font of the axis Labels.
 ///<br/>font-any	default-
 ///<br/><br/>
@@ -2882,6 +2981,9 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Specifies whether to render the axis at the opposite side of its default position.
 ///<br/>opposedPosition-boolean	default-false
+///<br/><br/>
+///Specifies the orientation of the axis line in the chart.
+///<br/>orientation-ej.datavisualization.Chart.AxisOrientation|string	default-&#39;horizontal&#39;
 ///<br/><br/>
 ///Specifies the padding for the plot area.
 ///<br/>plotOffset-number	default-10
@@ -3087,6 +3189,27 @@ jQuery.fn.ejChart = function (options) {
 ///Position of the zoomed axis. Value ranges from 0 to 1.
 ///<br/>zoomPosition-number	default-0
 ///<br/><br/>
+///Options for customizing the axis scrollbar.
+///<br/>scrollbarSettings-any	default-
+///<br/><br/>
+///Specifies to enable or disable the scrollbar.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///Controls whether scrollbar has to be responsive in the chart.
+///<br/>canResize-boolean	default-false
+///<br/><br/>
+///Options to customize the range for the scrollbar in the axis.
+///<br/>range-any	default-
+///<br/><br/>
+///Minimum value of the scrollbar range.
+///<br/>min-number	default-null
+///<br/><br/>
+///Maximum value for the scrollbar range .
+///<br/>max-number	default-null
+///<br/><br/>
+///The maximum number of points to be displayed in the scrollbar.
+///<br/>pointsLength-number	default-null
+///<br/><br/>
 ///This is a vertical axis that contains options to configure axis. This is the primary y axis for all the series in series array. To override y axis for particular series, create an axis object by providing unique name by using name property and add it to axes array. Then, assign the name to the seriesâ€™s yAxisName property to link both axis and series.
 ///<br/>primaryYAxis-PrimaryYAxis	default-
 ///<br/><br/>
@@ -3110,6 +3233,9 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Opacity of odd grid band.
 ///<br/>opacity-number	default-1
+///<br/><br/>
+///Specifies the interval of the axis according to the zoomed data of the chart.
+///<br/>enableAutoIntervalOnZooming-boolean	default-true
 ///<br/><br/>
 ///Options for customizing the axis line.
 ///<br/>axisLine-any	default-
@@ -3261,6 +3387,9 @@ jQuery.fn.ejChart = function (options) {
 ///Specifies whether to render the axis at the opposite side of its default position.
 ///<br/>opposedPosition-boolean	default-false
 ///<br/><br/>
+///Specifies the orientation of the axis line in the chart.
+///<br/>orientation-ej.datavisualization.Chart.AxisOrientation|string	default-Vertical
+///<br/><br/>
 ///Specifies the padding for the plot area.
 ///<br/>plotOffset-number	default-10
 ///<br/><br/>
@@ -3350,6 +3479,27 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Specifies whether the axis elements need to be placed nearby the axis line, while crossing.
 ///<br/>showNextToAxisLine-boolean	default-true
+///<br/><br/>
+///Options for customizing the axis scrollbar.
+///<br/>scrollbarSettings-any	default-
+///<br/><br/>
+///Specifies to enable or disable the scrollbar.
+///<br/>visible-boolean	default-false
+///<br/><br/>
+///Controls whether scrollbar has to be responsive in the chart.
+///<br/>canResize-boolean	default-false
+///<br/><br/>
+///Options to customize the range for the scrollbar in the axis.
+///<br/>range-any	default-
+///<br/><br/>
+///Minimum value of the scrollbar range.
+///<br/>min-number	default-null
+///<br/><br/>
+///Maximum value for the scrollbar range .
+///<br/>max-number	default-null
+///<br/><br/>
+///The maximum number of points to be displayed in the scrollbar.
+///<br/>pointsLength-number	default-null
 ///<br/><br/>
 ///Options for customizing the strip lines.
 ///<br/>stripLine-Array&lt;any&gt;	default-[ ]
@@ -3612,6 +3762,18 @@ jQuery.fn.ejChart = function (options) {
 ///Quartile calculation has been performed in three different formulas to render the boxplot series .
 ///<br/>boxPlotMode-ej.datavisualization.Chart.LabelPosition|string	default-exclusive
 ///<br/><br/>
+///Options for customizing the bubble options of the Bubble series
+///<br/>bubbleOptions-any	default-
+///<br/><br/>
+///Used for the calculation of the bubble radius based on the mode selected
+///<br/>radiusMode-ej.datavisualization.Chart.RadiusMode|string	default-minmax .See RadiusMode
+///<br/><br/>
+///Used for the setting the minimum radius of the bubble
+///<br/>minRadius-number	default-1
+///<br/><br/>
+///Used for setting the maximum radius of the bubble
+///<br/>maxRadius-number	default-3
+///<br/><br/>
 ///Specifies the line cap of the series.
 ///<br/>lineCap-ej.datavisualization.Chart.LineCap|string	default-Butt. See LineCap
 ///<br/><br/>
@@ -3729,8 +3891,14 @@ jQuery.fn.ejChart = function (options) {
 ///Custom template to format the data label content. Use â€œpoint.xâ€ and â€œpoint.yâ€ as a placeholder text to display the corresponding data pointâ€™s x and y value.
 ///<br/>template-string	default-
 ///<br/><br/>
-///Moves the label vertically by some offset.
-///<br/>offset-number	default-0
+///Options for customizing the datalabel positions
+///<br/>offset-any|number	default-
+///<br/><br/>
+///X value or horizontal offset to position the labels in chart.
+///<br/>x-number	default-0
+///<br/><br/>
+///Y value or vertical offset to position the labels.
+///<br/>y-number	default-0
 ///<br/><br/>
 ///Color of the marker shape.
 ///<br/>fill-string	default-null
@@ -4206,6 +4374,45 @@ jQuery.fn.ejChart = function (options) {
 ///Specifies the moving average starting period  value.
 ///<br/>period-number	default-2
 ///<br/><br/>
+///Options for customizing the trendline tooltip
+///<br/>tooltip-any	default-
+///<br/><br/>
+///Options for customizing the border of the trendline tooltip.
+///<br/>border-any	default-
+///<br/><br/>
+///Specify the Border color of the  trendline tooltip.
+///<br/>color-string	default-null
+///<br/><br/>
+///Border width of the trendline tooltip.
+///<br/>width-number	default-1
+///<br/><br/>
+///Customize the corner radius of the trendline tooltip rectangle.
+///<br/>rx-number	default-0
+///<br/><br/>
+///Customize the corner radius of the trendline tooltip rectangle.
+///<br/>ry-number	default-0
+///<br/><br/>
+///Specifies the duration of the trendline tooltip to be displayed.
+///<br/>duration-string	default-500ms
+///<br/><br/>
+///Enables/disables the animation of the trendline tooltip when moving from one point to other.
+///<br/>enableAnimation-boolean	default-true
+///<br/><br/>
+///Background color of the trendline tooltip.
+///<br/>fill-string	default-null
+///<br/><br/>
+///Format of the trendline tooltip content.
+///<br/>format-string	default-#point.x# : #point.y#
+///<br/><br/>
+///Opacity of the trendline tooltip.
+///<br/>opacity-number	default-0.5
+///<br/><br/>
+///Show/hides the trendline legend.
+///<br/>visibleOnLegend-string	default-visible
+///<br/><br/>
+///Specifies the trendline intercept value
+///<br/>intercept-number	default-null
+///<br/><br/>
 ///Options for customizing the appearance of the series or data point while highlighting.
 ///<br/>highlightSettings-any	default-
 ///<br/><br/>
@@ -4329,6 +4536,18 @@ jQuery.fn.ejChart = function (options) {
 ///Font size for Chart title.
 ///<br/>size-string	default-20px
 ///<br/><br/>
+///Controls the visibility of the Chart title
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Specifies whether to trim the Chart Title when the width of the title exceeds the maximumWidth.
+///<br/>enableTrim-boolean	default-false
+///<br/><br/>
+///Maximum width of the title, when the title exceeds this width, the title gets trimmed, when enableTrim is true.
+///<br/>maximumWidth-string	default-auto
+///<br/><br/>
+///Specifies the action taken when the Chart width is more than the titleWidth.
+///<br/>textOverflow-ej.datavisualization.Chart.TextOverflow|string	default-trim.
+///<br/><br/>
 ///Options to customize the sub title of Chart.
 ///<br/>subTitle-any	default-
 ///<br/><br/>
@@ -4373,6 +4592,18 @@ jQuery.fn.ejChart = function (options) {
 ///<br/><br/>
 ///Alignment of sub title text.
 ///<br/>textAlignment-ej.datavisualization.Chart.Alignment|string	default-far. See TextAlignment
+///<br/><br/>
+///Controls the visibility of the Chart SubTitle
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Specifies whether to trim the Chart SubTitle when the width of the Subtitle exceeds the maximumWidth.
+///<br/>enableTrim-boolean	default-false
+///<br/><br/>
+///Maximum width of the Subtitle, when the Subtitle exceeds this width, the Subtitle gets trimmed, when enableTrim is true.
+///<br/>maximumWidth-string	default-auto
+///<br/><br/>
+///Specifies the action taken when the Chart width is more than the SubTitleWidth.
+///<br/>textOverflow-ej.datavisualization.Chart.TextOverflow|string	default-trim.
 ///<br/><br/>
 ///Text to be displayed in Chart title.
 ///<br/>text-string	default-
@@ -4937,6 +5168,9 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify distanceFromCorner value of circular gauge
 ///<br/>distanceFromCorner-number	default-center
 ///<br/><br/>
+///Specify range zOrder placement of circular gauge.
+///<br/>rangeZOrder-ej.datavisualization.CircularGauge.RangeZOrderPlacement|string	default-Rear
+///<br/><br/>
 ///Specify animate value of circular gauge
 ///<br/>enableAnimation-boolean	default-true
 ///<br/><br/>
@@ -4952,7 +5186,7 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify the URL of the frame background image for circular gauge
 ///<br/>backgroundImageUrl-string	default-null
 ///<br/><br/>
-///Specifies the frameType of circular gauge. See Frame
+///Specifies the frameType of circular gauge. See 
 ///<br/>frameType-ej.datavisualization.CircularGauge.FrameType|string	default-FullCircle
 ///<br/><br/>
 ///Specifies the end angle for the half circular frame.
@@ -4985,7 +5219,7 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specifies the minimum value of circular gauge.
 ///<br/>minimum-number	default-0
 ///<br/><br/>
-///Specify outerCustomLabelPosition value of circular gauge See OuterCustomLabelPosition
+///Specify outerCustomLabelPosition value of circular gauge See 
 ///<br/>outerCustomLabelPosition-ej.datavisualization.CircularGauge.OuterCustomLabelPosition|string	default-bottom
 ///<br/><br/>
 ///Specifies the radius of circular gauge.
@@ -5009,7 +5243,7 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify border width of circular gauge
 ///<br/>width-number	default-1.5
 ///<br/><br/>
-///Specify scale direction of circular gauge. See Directions
+///Specify scale direction of circular gauge. See 
 ///<br/>direction-ej.datavisualization.CircularGauge.Direction|string	default-Clockwise
 ///<br/><br/>
 ///Specify the custom labels for the scales.
@@ -5045,7 +5279,7 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify font size for custom labels.
 ///<br/>size-string	default-12px
 ///<br/><br/>
-///Specifies the position of the  custom labels. See CustomLabelPositionType
+///Specifies the position of the  custom labels. See 
 ///<br/>positionType-ej.datavisualization.CircularGauge.CustomLabelPositionType|string	default-inner
 ///<br/><br/>
 ///Specify representing state of circular gauge
@@ -5090,7 +5324,7 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify value of the textColor as the indicator when the indicator style is set with the value "text" of circular gauge
 ///<br/>textColor-string	default-null
 ///<br/><br/>
-///Specify indicator style of circular gauge. See IndicatorType
+///Specify indicator style of circular gauge. See 
 ///<br/>type-ej.datavisualization.CircularGauge.IndicatorTypes|string	default-Circle
 ///<br/><br/>
 ///Specify indicator width of circular gauge
@@ -5129,10 +5363,10 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify opacity value for labels of circular gauge
 ///<br/>opacity-number	default-null
 ///<br/><br/>
-///Specify label placement of circular gauge. See LabelPlacement
+///Specify label placement of circular gauge. See 
 ///<br/>placement-ej.datavisualization.CircularGauge.Placement|string	default-Near
 ///<br/><br/>
-///Specify label Style of circular gauge. See LabelType
+///Specify label Style of circular gauge. See 
 ///<br/>type-ej.datavisualization.CircularGauge.LabelType|string	default-Major
 ///<br/><br/>
 ///Specify unitText of circular gauge
@@ -5204,10 +5438,10 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify pointer length of circular gauge
 ///<br/>length-number	default-150
 ///<br/><br/>
-///Specify marker Style value of circular gauge. See MarkerType
+///Specify marker Style value of circular gauge. See 
 ///<br/>markerType-ej.datavisualization.CircularGauge.MarkerType|string	default-Rectangle
 ///<br/><br/>
-///Specify needle Style value of circular gauge. See NeedleType
+///Specify needle Style value of circular gauge. See 
 ///<br/>needleType-ej.datavisualization.CircularGauge.NeedleType|string	default-Triangle
 ///<br/><br/>
 ///Specify opacity value for pointer of circular gauge
@@ -5255,7 +5489,7 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Specify showBackNeedle value of circular gauge
 ///<br/>showBackNeedle-boolean	default-false
 ///<br/><br/>
-///Specify pointer type value of circular gauge. See PointerType
+///Specify pointer type value of circular gauge. See 
 ///<br/>type-ej.datavisualization.CircularGauge.PointerType|string	default-Needle
 ///<br/><br/>
 ///Specify value of the pointer of circular gauge
@@ -5393,6 +5627,9 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Toggles the visibility of the legend.
 ///<br/>visible-boolean	default-false
 ///<br/><br/>
+///Toggles the visibility of the ranges.
+///<br/>toggleVisibility-boolean	default-true
+///<br/><br/>
 ///Specifies the alignment of the legend.
 ///<br/>alignment-ej.datavisualization.CircularGauge.LegendAlignment|string	default-Center. See Alignment
 ///<br/><br/>
@@ -5432,7 +5669,7 @@ jQuery.fn.ejCircularGauge = function (options) {
 ///Opacity of the legend.
 ///<br/>opacity-number	default-1
 ///<br/><br/>
-///Places the legend at specified position. Legend can be placed at left, right, top or bottom of the circular gauge.
+///Places the legend at specified position. Legend can be placed at **left**, **right**, **top** or **bottom** of the circular gauge.
 ///<br/>position-ej.datavisualization.CircularGauge.LegendPosition|string	default-Bottom. See Position
 ///<br/><br/>
 ///Shape of the legend items.
@@ -7550,6 +7787,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///Defines the height of the symbol
 ///<br/>height-number	default-0
 ///<br/><br/>
+///To display a name for nodes in the symbol palette
+///<br/>label-string	default-null
+///<br/><br/>
 ///Defines the margin of the symbol item
 ///<br/>margin-any	default-{ left: 4, right: 4, top: 4, bottom: 4 }
 ///<br/><br/>
@@ -8117,19 +8357,19 @@ jQuery.fn.ejDialog = function (options) {
 ///<br/>isResponsive-boolean	default-
 ///<br/><br/>
 ///Default Value:{:.param}â€œen-USâ€
-///<br/>locale-number	default-
+///<br/>locale-string	default-
 ///<br/><br/>
 ///Sets the maximum height for the dialog widget.
-///<br/>maxHeight-number	default-
+///<br/>maxHeight-string|number	default-
 ///<br/><br/>
 ///Sets the maximum width for the dialog widget.
-///<br/>maxWidth-number	default-
+///<br/>maxWidth-string|number	default-
 ///<br/><br/>
 ///Sets the minimum height for the dialog widget.
-///<br/>minHeight-number	default-
+///<br/>minHeight-string|number	default-
 ///<br/><br/>
 ///Sets the minimum width for the dialog widget.
-///<br/>minWidth-number	default-
+///<br/>minWidth-string|number	default-
 ///<br/><br/>
 ///Displays the Dialog widget at the given X and Y position.
 ///<br/>position-any	default-
@@ -9593,14 +9833,9 @@ addIgnoreOnToolbarServerClick:function(propertyNames){
 /// </summary>
 /// <param name="propertyNames"	type="Array&lt;any&gt;">Pass the array of parameters which need to be ignored on OnServerToolbarClick </param>
 },
-addRecord:function(){
-/// <summary>
-/// Add a new record in grid control when allowAdding is set as true.
-/// </summary>
-},
 addRecord:function(data, serverChange){
 /// <summary>
-/// Add a new record in grid control when allowAdding is set as true.
+/// Add a new record in grid control when allowAdding is set as true.Without passing parameters it will add empty row.
 /// </summary>
 /// <param name="data"	type="Array&lt;any&gt;">Pass the array of added Records</param>
 /// <param name="serverChange"	type="Array&lt;any&gt;">optionalIf we pass serverChange as true, send post to server side for server action.</param>
@@ -9748,14 +9983,6 @@ export:function(action, serverEvent, multipleExport, gridIds){
 /// <param name="serverEvent"	type="string">optionalASP server event name corresponding to exporting</param>
 /// <param name="multipleExport"	type="boolean">optionalPass the multiple exporting value as true/false</param>
 /// <param name="gridIds"	type="Array&lt;any&gt;">optionalPass the array of the gridIds to be filtered</param>
-},
-export:function(action, serverEvent, multipleExport){
-/// <summary>
-/// Export the grid content to excel, word or PDF document.
-/// </summary>
-/// <param name="action"	type="string">Pass the controller action name corresponding to exporting</param>
-/// <param name="serverEvent"	type="string">optionalASP server event name corresponding to exporting</param>
-/// <param name="multipleExport"	type="boolean">optionalPass the multiple exporting value as true/false</param>
 },
 filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchcase, actualFilterValue){
 /// <summary>
@@ -10054,14 +10281,9 @@ rowHeightRefresh:function(){
 /// Resolves row height issue when unbound column is used with FrozenColumn
 /// </summary>
 },
-saveCell:function(){
-/// <summary>
-/// Save the particular edited cell in grid.
-/// </summary>
-},
 saveCell:function(preventSaveEvent){
 /// <summary>
-/// We can prevent the client side cellSave event triggering by passing the preventSaveEvent argument as true.
+/// We can prevent the client side cellSave event triggering by passing the preventSaveEvent argument as true.Without argument it will save the particular edited grid cell.
 /// </summary>
 /// <param name="preventSaveEvent"	type="boolean">optionalIf we pass preventSaveEvent as true, it prevents the client side cellSave event triggering </param>
 },
@@ -10205,55 +10427,55 @@ jQuery.fn.ejGrid = function (options) {
 /// <summary><br/>
 ///The grid can be easily configured to the DOM element, such as div. you can create a grid with a highly customizable look and feel.<br/><br/>
 ///Gets or sets a value that indicates whether to customizing cell based on our needs.
-///<br/>allowCellMerging-Boolean	default-false
+///<br/>allowCellMerging-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable dynamic grouping behavior. Grouping can be done by drag on drop desired columns to gridâ€™s GroupDropArea. This can be further customized through â€œgroupSettingsâ€ property.
-///<br/>allowGrouping-Boolean	default-false
+///<br/>allowGrouping-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable keyboard support for performing grid actions. selectionType â€“ Gets or sets a value that indicates whether to enable single row or multiple rows selection behavior in grid. Multiple selection can be done through by holding CTRL and clicking the grid rows
-///<br/>allowKeyboardNavigation-Boolean	default-true
+///<br/>allowKeyboardNavigation-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable dynamic filtering behavior on grid. Filtering can be used to limit the records displayed using required criteria and this can be further customized through â€œfilterSettingsâ€ property
-///<br/>allowFiltering-Boolean	default-false
+///<br/>allowFiltering-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the dynamic sorting behavior on grid data. Sorting can be done through clicking on particular column header.
-///<br/>allowSorting-Boolean	default-false
+///<br/>allowSorting-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable multi columns sorting behavior in grid. Sort multiple columns by holding CTRL and click on the corresponding column header.
-///<br/>allowMultiSorting-Boolean	default-false
+///<br/>allowMultiSorting-boolean	default-false
 ///<br/><br/>
 ///This specifies the grid to show the paginated data. Also enables pager control at the bottom of grid for dynamic navigation through data source. Paging can be further customized through â€œpageSettingsâ€ property.
-///<br/>allowPaging-Boolean	default-false
+///<br/>allowPaging-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the columns reordering behavior in the grid. Reordering can be done through by drag and drop the particular column from one index to another index within the grid.
-///<br/>allowReordering-Boolean	default-false
+///<br/>allowReordering-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the column is non resizable. Column width is set automatically based on the content or header text which is large.
-///<br/>allowResizeToFit-Boolean	default-false
+///<br/>allowResizeToFit-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable dynamic resizable of columns. Resize the width of the columns by simply click and move the particular column header line
-///<br/>allowResizing-Boolean	default-false
+///<br/>allowResizing-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the rows reordering in Grid and drag & drop rows between multiple Grid.
-///<br/>allowRowDragAndDrop-Boolean	default-false
+///<br/>allowRowDragAndDrop-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the scrollbar in the grid and view the records by scroll through the grid manually
-///<br/>allowScrolling-Boolean	default-false
+///<br/>allowScrolling-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable dynamic searching behavior in grid. Currently search box can be enabled through â€œtoolbarSettingsâ€
-///<br/>allowSearching-Boolean	default-false
+///<br/>allowSearching-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether user can select rows on grid. On enabling feature, selected row will be highlighted.
-///<br/>allowSelection-Boolean	default-true
+///<br/>allowSelection-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the Content will wrap to the next line if the content exceeds the boundary of the Column Cells.
-///<br/>allowTextWrap-Boolean	default-false
+///<br/>allowTextWrap-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the multiple exporting behavior on grid data.
-///<br/>allowMultipleExporting-Boolean	default-false
+///<br/>allowMultipleExporting-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to define common width for all the columns in the grid.
-///<br/>commonWidth-Number	default-
+///<br/>commonWidth-number	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to enable the visibility of the grid lines.
 ///<br/>gridLines-ej.Grid.GridLines|string	default-ej.Grid.GridLines.Both
@@ -10271,19 +10493,19 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>columns-Array&lt;Columns&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable editing behavior for particular column.
-///<br/>allowEditing-Boolean	default-true
+///<br/>allowEditing-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable dynamic filtering behavior for particular column.
-///<br/>allowFiltering-Boolean	default-true
+///<br/>allowFiltering-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable dynamic grouping behavior for particular column.
-///<br/>allowGrouping-Boolean	default-true
+///<br/>allowGrouping-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable dynamic sorting behavior for particular column.
-///<br/>allowSorting-Boolean	default-true
+///<br/>allowSorting-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable dynamic resizable for particular column.
-///<br/>allowResizing-Boolean	default-true
+///<br/>allowResizing-boolean	default-true
 ///<br/><br/>
 ///Gets or sets an object that indicates to define a command column in the grid.
 ///<br/>commands-Array&lt;any&gt;	default-[]
@@ -10295,7 +10517,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>type-ej.Grid.UnboundType|string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to provide custom CSS for an individual column.
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates the attribute values to the td element of a particular column
 ///<br/>customAttributes-any	default-
@@ -10304,13 +10526,13 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to display the specified default value while adding a new record to the grid
-///<br/>defaultValue-String|Number|Boolean|Date	default-
+///<br/>defaultValue-string|number|boolean|Date	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to render the grid content and header with an HTML elements
-///<br/>disableHtmlEncode-Boolean	default-false
+///<br/>disableHtmlEncode-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to display a column value as checkbox or string
-///<br/>displayAsCheckBox-Boolean	default-true
+///<br/>displayAsCheckBox-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to customize ejNumericTextbox of an editable column. See editingType
 ///<br/>editParams-any	default-
@@ -10322,7 +10544,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>editType-ej.Grid.EditingType|string	default-ej.Grid.EditingType.String
 ///<br/><br/>
 ///Gets or sets a value that indicates to groups the column based on its column format.
-///<br/>enableGroupByFormat-Boolean	default-false
+///<br/>enableGroupByFormat-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to display the columns in the grid mapping with column name of the dataSource.
 ///<br/>field-string	default-
@@ -10352,43 +10574,43 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>headerTextAlign-ej.TextAlign|string	default-null
 ///<br/><br/>
 ///It accepts the string value and shows the tooltip for the Grid column header.
-///<br/>headerTooltip-String	default-null
+///<br/>headerTooltip-string	default-null
 ///<br/><br/>
 ///You can use this property to freeze selected columns in grid at the time of scrolling.
-///<br/>isFrozen-Boolean	default-false
+///<br/>isFrozen-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates the column has an identity in the database.
-///<br/>isIdentity-Boolean	default-false
+///<br/>isIdentity-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates the column is act as a primary key(read-only) of the grid. The editing is performed based on the primary key column
-///<br/>isPrimaryKey-Boolean	default-false
+///<br/>isPrimaryKey-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates the order of Column that are to be hidden or visible when Grid element is in responsive mode and could not occupy all columns.
-///<br/>priority-Number	default--1
+///<br/>priority-number	default--1
 ///<br/><br/>
 ///Used to hide the particular column in column chooser by giving value as false.
-///<br/>showInColumnChooser-Boolean	default-true
+///<br/>showInColumnChooser-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enables column template for a particular column.
-///<br/>template-Boolean|String	default-false
+///<br/>template-boolean|string	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to align the text within the column. See textAlign
-///<br/>textAlign- ej.TextAlign|string	default-ej.TextAlign.Left
+///<br/>textAlign-ej.TextAlign|string	default-ej.TextAlign.Left
 ///<br/><br/>
 ///Sets the template for Tooltip in Grid Columns(both header and content)
 ///<br/>tooltip-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to specify the data type of the specified columns.
-///<br/>type-String	default-
+///<br/>type-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to define constraints for saving data to the database.
 ///<br/>validationRules-any	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether this column is visible in the grid.
-///<br/>visible-Boolean	default-true
+///<br/>visible-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the width for a particular column in the grid.
-///<br/>width-Number	default-
+///<br/>width-number	default-
 ///<br/><br/>
 ///Gets or sets an object that indicates whether to customize the context menu behavior of the grid.
 ///<br/>contextMenuSettings-ContextMenuSettings	default-
@@ -10400,7 +10622,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>customContextMenuItems-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the context menu action in the grid.
-///<br/>enableContextMenu-Boolean	default-false
+///<br/>enableContextMenu-boolean	default-false
 ///<br/><br/>
 ///Used to get or set the subMenu to the corresponding custom context menu item.
 ///<br/>subContextMenu-Array&lt;any&gt;	default-
@@ -10412,88 +10634,88 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>subMenu-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to disable the default context menu items in the grid.
-///<br/>disableDefaultItems-Boolean	default-false
+///<br/>disableDefaultItems-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to render the grid with custom theme.
-///<br/>cssClass-String	default-
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Gets or sets the data to render the grid with records
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
 ///Default Value:
-///<br/>detailsTemplate-String	default-null
+///<br/>detailsTemplate-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates whether to customize the editing behavior of the grid.
 ///<br/>editSettings-EditSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable insert action in the editing mode.
-///<br/>allowAdding-Boolean	default-false
+///<br/>allowAdding-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the delete action in the editing mode.
-///<br/>allowDeleting-Boolean	default-false
+///<br/>allowDeleting-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the edit action in the editing mode.
-///<br/>allowEditing-Boolean	default-false
+///<br/>allowEditing-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the editing action while double click on the record
-///<br/>allowEditOnDblClick-Boolean	default-true
+///<br/>allowEditOnDblClick-boolean	default-true
 ///<br/><br/>
 ///This specifies the id of the template. This template can be used to display the data that you require to be edited using the Dialog Box
-///<br/>dialogEditorTemplateID-String	default-null
+///<br/>dialogEditorTemplateID-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the mode of editing See editMode
 ///<br/>editMode-ej.Grid.EditMode|string	default-ej.Grid.EditMode.Normal
 ///<br/><br/>
 ///This specifies the id of the template. This template can be used to display the data that you require to be edited using the External edit form
-///<br/>externalFormTemplateID-String	default-null
+///<br/>externalFormTemplateID-string	default-null
 ///<br/><br/>
 ///This specifies to set the position of an External edit form either in the top-right or bottom-left of the grid. See formPosition
 ///<br/>formPosition-ej.Grid.FormPosition|string	default-ej.Grid.FormPosition.BottomLeft
 ///<br/><br/>
 ///This specifies the id of the template. This template can be used to display the data that you require to be edited using the Inline edit form
-///<br/>inlineFormTemplateID-String	default-null
+///<br/>inlineFormTemplateID-string	default-null
 ///<br/><br/>
 ///This specifies to set the position of an adding new row either in the top or bottom of the grid. See rowPosition
 ///<br/>rowPosition-ej.Grid.RowPosition|string	default-ej.Grid.RowPosition.Top
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the confirm dialog has to be shown while saving or discarding the batch changes
-///<br/>showConfirmDialog-Boolean	default-true
+///<br/>showConfirmDialog-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the confirm dialog has to be shown while deleting record
-///<br/>showDeleteConfirmDialog-Boolean	default-false
+///<br/>showDeleteConfirmDialog-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the title for edit form is different from the primarykey column.
-///<br/>titleColumn-String	default-null
+///<br/>titleColumn-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to display the add new form by default in the grid.
-///<br/>showAddNewRow-Boolean	default-false
+///<br/>showAddNewRow-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the alternative rows differentiation in the grid records based on corresponding theme.
-///<br/>enableAltRow-Boolean	default-true
+///<br/>enableAltRow-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the save action in the grid through row selection
-///<br/>enableAutoSaveOnSelectionChange-Boolean	default-true
+///<br/>enableAutoSaveOnSelectionChange-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable mouse over effect on the corresponding column header cell of the grid
-///<br/>enableHeaderHover-Boolean	default-false
+///<br/>enableHeaderHover-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to persist the grid model state in page using applicable medium i.e., HTML5 localStorage or cookies
-///<br/>enablePersistence-Boolean	default-false
+///<br/>enablePersistence-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the grid rows has to be rendered as detail view in mobile mode
-///<br/>enableResponsiveRow-Boolean	default-false
+///<br/>enableResponsiveRow-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable mouse over effect on corresponding grid row.
-///<br/>enableRowHover-Boolean	default-true
+///<br/>enableRowHover-boolean	default-true
 ///<br/><br/>
 ///Align content in the grid control from right to left by setting the property as true.
-///<br/>enableRTL-Boolean	default-false
+///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
 ///To Disable the mouse swipe property as false.
-///<br/>enableTouch-Boolean	default-true
+///<br/>enableTouch-boolean	default-true
 ///<br/><br/>
 ///It sets a value that indicates whether to enable toolbar items, when allowEditing, allowAdding and allowDeleting property set as false in the grid.
-///<br/>enableToolbarItems-Boolean	default-false
+///<br/>enableToolbarItems-boolean	default-false
 ///<br/><br/>
 ///Act as mapper for the excel exporting URL.
 ///<br/>exportToExcelAction-string	default-ExportToExcel
@@ -10511,7 +10733,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>enableCaseSensitivity-Boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the interDeterminateState of checkbox in excel filter dialog.
-///<br/>enableInterDeterminateState-Boolean	default-true
+///<br/>enableInterDeterminateState-boolean	default-true
 ///<br/><br/>
 ///This specifies the grid to starts the filter action while typing in the filterBar or after pressing the enter key. based on the filterBarMode. See filterBarMode.
 ///<br/>filterBarMode-ej.Grid.FilterBarMode|string	default-ej.Grid.FilterBarMode.Immediate
@@ -10523,7 +10745,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>field-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the matchCase of given value to be filter.
-///<br/>matchCase-Boolean	default-
+///<br/>matchCase-boolean	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the filter condition to filtered column. See operator
 ///<br/>operator-ej.FilterOperators|string	default-
@@ -10538,16 +10760,16 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>filterType-ej.Grid.FilterType|string	default-ej.Grid.FilterType.FilterBar
 ///<br/><br/>
 ///This specifies the grid to delay the filter action while typing in the filterBar.
-///<br/>immediateModeDelay-Number	default-1500
+///<br/>immediateModeDelay-number	default-1500
 ///<br/><br/>
 ///Gets or sets a value that indicates the maximum number of filter choices that can be showed in the excel styled filter menu.
-///<br/>maxFilterChoices-Number	default-1000
+///<br/>maxFilterChoices-number	default-1000
 ///<br/><br/>
 ///This specifies the grid to show the filter text within the grid pager itself.
-///<br/>showFilterBarStatus-Boolean	default-true
+///<br/>showFilterBarStatus-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the predicate options in the filtering menu
-///<br/>showPredicate-Boolean	default-false
+///<br/>showPredicate-boolean	default-false
 ///<br/><br/>
 ///Gets or sets an object that indicates whether to customize the grouping behavior of the grid.
 ///<br/>groupSettings-GroupSettings	default-
@@ -10556,64 +10778,64 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>captionFormat-String	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable animation button option in the group drop area of the grid.
-///<br/>enableDropAreaAutoSizing-Boolean	default-false
+///<br/>enableDropAreaAutoSizing-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add grouped columns programmatically at initial load
 ///<br/>groupedColumns-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show the group drop area just above the column header. It can be used to avoid ungrouping the already grouped column using groupSettings.
-///<br/>showDropArea-Boolean	default-true
+///<br/>showDropArea-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to hide the grouped columns from the grid
-///<br/>showGroupedColumn-Boolean	default-false
+///<br/>showGroupedColumn-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show the group button image(toggle button)in the column header and also in the grouped column in the group drop area . It can be used to group/ungroup the columns by click on the toggle button.
-///<br/>showToggleButton-Boolean	default-false
+///<br/>showToggleButton-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the close button in the grouped column which is in the group drop area to ungroup the grouped column
-///<br/>showUngroupButton-Boolean	default-false
+///<br/>showUngroupButton-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether the grid design has be to made responsive.
-///<br/>isResponsive-Boolean	default-false
+///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
 ///This specifies to change the key in keyboard interaction to grid control
 ///<br/>keySettings-any	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to customizing the user interface (UI) as locale-specific in order to display regional data i.e. in a language and culture specific to a particular country or region.
-///<br/>locale-String	default-en-US
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to set the minimum width of the responsive grid while isResponsive property is true and enableResponsiveRow property is set as false.
-///<br/>minWidth-Number	default-0
+///<br/>minWidth-number	default-0
 ///<br/><br/>
 ///Gets or sets an object that indicates whether to modify the pager default configuration.
 ///<br/>pageSettings-PageSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define which page to display currently in the grid
-///<br/>currentPage-Number	default-1
+///<br/>currentPage-number	default-1
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to pass the current page information as a query string along with the URL while navigating to other page.
-///<br/>enableQueryString-Boolean	default-false
+///<br/>enableQueryString-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enables pager template for the grid.
-///<br/>enableTemplates-Boolean	default-false
+///<br/>enableTemplates-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the number of pages displayed in the pager for navigation
-///<br/>pageCount-Number	default-8
+///<br/>pageCount-number	default-8
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the number of records displayed per page
-///<br/>pageSize-Number	default-12
+///<br/>pageSize-number	default-12
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enables default pager for the grid.
-///<br/>showDefaults-Boolean	default-false
+///<br/>showDefaults-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to add the template as a pager template for grid.
-///<br/>template-String	default-null
+///<br/>template-string	default-null
 ///<br/><br/>
 ///Get the value of total number of pages in the grid. The totalPages value is calculated based on page size and total records of grid
-///<br/>totalPages-Number	default-null
+///<br/>totalPages-number	default-null
 ///<br/><br/>
 ///Get the value of total number of records which is bound to the grid. The totalRecordsCount value is calculated based on dataSource bound to the grid.
-///<br/>totalRecordsCount-Number	default-null
+///<br/>totalRecordsCount-number	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the number of pages to print. See printMode.
 ///<br/>printMode-ej.Grid.PrintMode|string	default-ej.Grid.PrintMode.AllPages
@@ -10628,7 +10850,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>resizeMode-ej.Grid.ResizeMode|string	default-ej.Grid.ResizeMode.Normal
 ///<br/><br/>
 ///Gets or sets a value that indicates to render the grid with template rows. The template row must be a table row. That table row must have the JavaScript render binding format ({{:columnName}}) then the grid data source binds the data to the corresponding table row of the template.
-///<br/>rowTemplate-String	default-null
+///<br/>rowTemplate-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates whether to customize the drag and drop behavior of the grid rows
 ///<br/>rowDropSettings-RowDropSettings	default-
@@ -10664,7 +10886,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>selectedRecords-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to select the row while initializing the grid
-///<br/>selectedRowIndex-Number	default--1
+///<br/>selectedRowIndex-number	default--1
 ///<br/><br/>
 ///Gets or sets a value that indicates the selected rows in grid
 ///<br/>selectedRowIndices-Array&lt;any&gt;	default-[]
@@ -10673,10 +10895,10 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>selectionSettings-SelectionSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates the cell selection actions based on the cell selection mode.
-///<br/>cellSelectionMode-String	default-flow
+///<br/>cellSelectionMode-ej.Grid.CellSelectionMode|string	default-ej.Grid.CellSelectionMode.Flow
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the toggle selection behavior for row, cell and column.
-///<br/>enableToggle-Boolean	default-false
+///<br/>enableToggle-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add the default selection actions as a selection mode.See selectionMode
 ///<br/>selectionMode-Array&lt;any&gt;	default-[row]
@@ -10688,49 +10910,49 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>scrollSettings-ScrollSettings	default-
 ///<br/><br/>
 ///This specify the grid to to view data that you require without buffering the entire load of a huge database
-///<br/>allowVirtualScrolling-Boolean	default-false
+///<br/>allowVirtualScrolling-boolean	default-false
 ///<br/><br/>
 ///It accepts the boolean value and shows or hides the scrollbar while focus in or focus out of the Grid.
-///<br/>autoHide-Boolean	default-false
+///<br/>autoHide-boolean	default-false
 ///<br/><br/>
 ///Specifies the height and width of button in the scrollbar.
-///<br/>buttonSize-Number	default-18
+///<br/>buttonSize-number	default-18
 ///<br/><br/>
 ///This specify the grid to enable/disable touch control for scrolling.
-///<br/>enableTouchScroll-Boolean	default-true
+///<br/>enableTouchScroll-boolean	default-true
 ///<br/><br/>
 ///This specify the grid to freeze particular columns at the time of scrolling.
-///<br/>frozenColumns-Number	default-0
+///<br/>frozenColumns-number	default-0
 ///<br/><br/>
 ///This specify the grid to freeze particular rows at the time of scrolling.
-///<br/>frozenRows-Number	default-0
+///<br/>frozenRows-number	default-0
 ///<br/><br/>
 ///This specify the grid to show the vertical scroll bar, to scroll and view the grid contents.
-///<br/>height-String|Number	default-0
+///<br/>height-string|number	default-0
 ///<br/><br/>
 ///It accepts the integer value and sets the width of scrollbar.
-///<br/>scrollerSize-Number	default-18
+///<br/>scrollerSize-number	default-18
 ///<br/><br/>
 ///This is used to define the mode of virtual scrolling in grid. See virtualScrollMode
 ///<br/>virtualScrollMode-ej.Grid.VirtualScrollMode|string	default-ej.Grid.VirtualScrollMode.Normal
 ///<br/><br/>
 ///This is used to enable the enhanced virtual scrolling in Grid.
-///<br/>enableVirtualization-Boolean	default-false
+///<br/>enableVirtualization-boolean	default-false
 ///<br/><br/>
 ///This specify the grid to show the horizontal scroll bar, to scroll and view the grid contents
-///<br/>width-String|Number	default-250
+///<br/>width-string|number	default-250
 ///<br/><br/>
 ///This specify the scroll down pixel of mouse wheel, to scroll mouse wheel and view the grid contents.
-///<br/>scrollOneStepBy-Number	default-57
+///<br/>scrollOneStepBy-number	default-57
 ///<br/><br/>
 ///Default Value:
 ///<br/>showColumnChooser-Boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates stacked header should be shown on grid layout when the property â€œstackedHeaderRowsâ€ is set.
-///<br/>showStackedHeader-Boolean	default-false
+///<br/>showStackedHeader-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates summary rows should be shown on grid layout when the property â€œsummaryRowsâ€ is set
-///<br/>showSummary-Boolean	default-false
+///<br/>showSummary-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to customize the sorting behavior of the grid.
 ///<br/>sortSettings-SortSettings	default-
@@ -10763,19 +10985,19 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>textAlign-string	default-ej.TextAlign.Left
 ///<br/><br/>
 ///Sets the template for tooltip for the Grid stackedHeaderColumns.
-///<br/>tooltip-String	default-null
+///<br/>tooltip-string	default-null
 ///<br/><br/>
 ///Gets or sets an object that indicates to managing the collection of summary rows for the grid.
 ///<br/>summaryRows-Array&lt;SummaryRows&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show the summary value within the group caption area for the corresponding summary column while grouping the column
-///<br/>showCaptionSummary-Boolean	default-false
+///<br/>showCaptionSummary-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show the group summary value for the corresponding summary column while grouping a column
-///<br/>showGroupSummary-Boolean	default-false
+///<br/>showGroupSummary-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show the total summary value the for the corresponding summary column. The summary row is added after the grid content.
-///<br/>showTotalSummary-Boolean	default-true
+///<br/>showTotalSummary-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add summary columns into the summary rows.
 ///<br/>summaryColumns-Array&lt;any&gt;	default-[]
@@ -10802,7 +11024,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>summaryType-ej.Grid.SummaryType|string	default-[]
 ///<br/><br/>
 ///Gets or sets a value that indicates to add the template for the summary value of dataMember given.
-///<br/>template-String	default-null
+///<br/>template-string	default-null
 ///<br/><br/>
 ///This specifies the grid to show the title for the summary rows.
 ///<br/>title-string	default-
@@ -10829,7 +11051,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>tooltip-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable toolbar in the grid.
-///<br/>showToolbar-Boolean	default-false
+///<br/>showToolbar-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add the default editing actions as a toolbar items. See toolbarItems.
 ///<br/>toolbarItems-array&lt;ej.Grid.ToolBarItems|string&gt;	default-[]
@@ -12129,7 +12351,7 @@ jQuery.fn.ejLinearGauge = function (options) {
 ///Specifies the orientation for Linear gauge.
 ///<br/>orientation-string	default-Vertical
 ///<br/><br/>
-///Specify labelPosition value of Linear gauge See OuterCustomLabelPosition
+///Specify labelPosition value of Linear gauge See 
 ///<br/>outerCustomLabelPosition-ej.datavisualization.LinearGauge.OuterCustomLabelPosition|string	default-bottom
 ///<br/><br/>
 ///Specifies the pointerGradient1 for Linear gauge.
@@ -12198,7 +12420,7 @@ jQuery.fn.ejLinearGauge = function (options) {
 ///Specifies the fontFamily in customLabels
 ///<br/>fontFamily-string	default-Arial
 ///<br/><br/>
-///Specifies the fontStyle in customLabels. See FontStyle
+///Specifies the fontStyle in customLabels. See 
 ///<br/>fontStyle-ej.datavisualization.LinearGauge.FontStyle|string	default-Bold
 ///<br/><br/>
 ///Specifies the font size in customLabels
@@ -12225,7 +12447,7 @@ jQuery.fn.ejLinearGauge = function (options) {
 ///Specifies the label Value in customLabels
 ///<br/>value-string	default-
 ///<br/><br/>
-///Specifies the scale Direction of the Scale. See Directions
+///Specifies the scale Direction of the Scale. See 
 ///<br/>direction-ej.datavisualization.LinearGauge.Direction|string	default-CounterClockwise
 ///<br/><br/>
 ///Specifies the indicator
@@ -12339,19 +12561,19 @@ jQuery.fn.ejLinearGauge = function (options) {
 ///Specifies the opacity of label.
 ///<br/>opacity-number	default-0
 ///<br/><br/>
-///Specifies the label Placement of label. See LabelPlacement
+///Specifies the label Placement of label. See 
 ///<br/>placement-ej.datavisualization.LinearGauge.PointerPlacement|string	default-Near
 ///<br/><br/>
 ///Specifies the textColor of font.
 ///<br/>textColor-string	default-null
 ///<br/><br/>
-///Specifies the label Style of label. See LabelType
+///Specifies the label Style of label. See 
 ///<br/>type-ej.datavisualization.LinearGauge.ScaleType|string	default-ej.datavisualization.LinearGauge.LabelType.Major
 ///<br/><br/>
 ///Specifies the unitText of label.
 ///<br/>unitText-string	default-
 ///<br/><br/>
-///Specifies the unitText Position of label.See UnitTextPlacement
+///Specifies the unitText Position of label.See 
 ///<br/>unitTextPlacement-ej.datavisualization.LinearGauge.UnitTextPlacement|string	default-Back
 ///<br/><br/>
 ///Specifies the scaleBar Length.
@@ -12390,7 +12612,7 @@ jQuery.fn.ejLinearGauge = function (options) {
 ///Specifies the pointer Placement of marker pointer See PointerPlacement
 ///<br/>placement-ej.datavisualization.LinearGauge.PointerPlacement|string	default-Far
 ///<br/><br/>
-///Specifies the marker Style of marker pointerSee MarkerType
+///Specifies the marker Style of marker pointerSee 
 ///<br/>type-ej.datavisualization.LinearGauge.MarkerType|string	default-Triangle
 ///<br/><br/>
 ///Specifies the value of marker pointer
@@ -12510,13 +12732,13 @@ jQuery.fn.ejLinearGauge = function (options) {
 ///Specifies the tick Placement in the tick. See TickPlacement
 ///<br/>placement-ej.datavisualization.LinearGauge.PointerPlacement|string	default-Near
 ///<br/><br/>
-///Specifies the tick Style in the tick. See TickType
+///Specifies the tick Style in the tick. See 
 ///<br/>type-ej.datavisualization.LinearGauge.TicksType|string	default-MajorInterval
 ///<br/><br/>
 ///Specifies the tick Width in the tick.
 ///<br/>width-number	default-3
 ///<br/><br/>
-///Specifies the scaleBar type .See ScaleType
+///Specifies the scaleBar type .See 
 ///<br/>type-ej.datavisualization.LinearGauge.ScaleType|string	default-Rectangle
 ///<br/><br/>
 ///Specifies the scaleBar width.
@@ -13318,6 +13540,9 @@ jQuery.fn.ejMap = function (options) {
 ///Specify the center position where map should be displayed
 ///<br/>centerPosition-any	default-[0,0]
 ///<br/><br/>
+///Controls the selection through dragging
+///<br/>draggingOnSelection-boolean	default-false
+///<br/><br/>
 ///Enables or Disables the map animation
 ///<br/>enableAnimation-boolean	default-false
 ///<br/><br/>
@@ -13329,6 +13554,9 @@ jQuery.fn.ejMap = function (options) {
 ///<br/><br/>
 ///Determines whether map need to resize when container is resized
 ///<br/>enableResize-boolean	default-true
+///<br/><br/>
+///Determines whether map need to resize when container is resized
+///<br/>isResponsive-boolean	default-true
 ///<br/><br/>
 ///Enables or Disables the Zooming for map.
 ///<br/>zoomSettings-ZoomSettings	default-
@@ -13368,6 +13596,9 @@ jQuery.fn.ejMap = function (options) {
 ///<br/><br/>
 ///Set the orientation value for navigation control
 ///<br/>orientation-ej.datavisualization.Map.LabelOrientation|string	default-vertical
+///<br/><br/>
+///Name of the culture based on which map should be localized. Labels are localized with respect to the culture name.String type properties like template text are not localized automatically. Provide localized text as value to string type properties.
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Layer for holding the map shapes
 ///<br/>layers-Array&lt;Layers&gt;	default-
@@ -13445,7 +13676,7 @@ jQuery.fn.ejMap = function (options) {
 ///<br/>labelSettings-any	default-
 ///<br/><br/>
 ///enable or disable the enableSmartLabel property
-///<br/>enableSmartLabel-Boolean	default-false
+///<br/>enableSmartLabel-boolean	default-false
 ///<br/><br/>
 ///set the labelLength property
 ///<br/>labelLength-number	default-&#39;2&#39;
@@ -13526,7 +13757,259 @@ jQuery.fn.ejMap = function (options) {
 ///<br/>mapItemsTemplate-string	default-
 ///<br/><br/>
 ///Specify markers for shape layer.
-///<br/>markers-Array&lt;any&gt;	default-[]
+///<br/>markers-Array&lt;any&gt;	default-
+///<br/><br/>
+///Specifies the map marker template for map layer.
+///<br/>markerTemplate-string	default-null
+///<br/><br/>
+///Specify selectedMapShapes for shape layer
+///<br/>selectedMapShapes-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Specifies the selection mode of the map. Accepted selection mode values are Default and Multiple.
+///<br/>selectionMode-ej.datavisualization.Map.SelectionMode|string	default-default
+///<br/><br/>
+///Specifies the shape data for the shape layer
+///<br/>shapeData-any	default-
+///<br/><br/>
+///Specifies the shape settings of map layer
+///<br/>shapeSettings-any	default-
+///<br/><br/>
+///Enables or Disables the auto fill colors for shape layer in map. When this property value set to true, shapes will be filled with palette colors.
+///<br/>autoFill-boolean	default-false
+///<br/><br/>
+///Specifies the colorMappings of the shape layer in map
+///<br/>colorMappings-any	default-null
+///<br/><br/>
+///Specifies the range colorMappings in the shape layer of map.
+///<br/>rangeColorMapping-Array&lt;any&gt;	default-null
+///<br/><br/>
+///Specifies the start range colorMappings in the shape layer of map.
+///<br/>from-number	default-null
+///<br/><br/>
+///Specifies the to range colorMappings in the shape layer of map.
+///<br/>to-number	default-null
+///<br/><br/>
+///Specifies the gradientColors in the shape layer of map.
+///<br/>gradientColors-Array&lt;any&gt;	default-null
+///<br/><br/>
+///Specifies the equalColorMapping in the shape layer of map.
+///<br/>equalColorMapping-Array&lt;any&gt;	default-null
+///<br/><br/>
+///Specifies the equalColorMapping value in the shape layer of map.
+///<br/>value-string	default-null
+///<br/><br/>
+///Specifies the equalColorMapping color in the shape layer of map.
+///<br/>color-string	default-null
+///<br/><br/>
+///Specifies the shape color palette value of the shape layer in map. Accepted colorPalette values are palette1, palette2, palette3 and custompalette.
+///<br/>colorPalette-ej.datavisualization.Map.ColorPalette|string	default-palette1
+///<br/><br/>
+///Specifies the shape color valuePath of the shape layer in map
+///<br/>colorValuePath-string	default-null
+///<br/><br/>
+///Enables or Disables the gradient colors for map shapes.
+///<br/>enableGradient-boolean	default-false
+///<br/><br/>
+///Specifies the shape fill color of the shape layer in map
+///<br/>fill-string	default-#E5E5E5
+///<br/><br/>
+///Specifies the mouse over width of the shape layer in map
+///<br/>highlightBorderWidth-number	default-1
+///<br/><br/>
+///Specifies the mouse hover color of the shape layer in map
+///<br/>highlightColor-string	default-gray
+///<br/><br/>
+///Specifies the mouse over stroke color of the shape layer in map
+///<br/>highlightStroke-string	default-#C1C1C1
+///<br/><br/>
+///Specifies the shape selection color of the shape layer in map
+///<br/>selectionColor-string	default-gray
+///<br/><br/>
+///Specifies the shape selection stroke color of the shape layer in map
+///<br/>selectionStroke-string	default-#C1C1C1
+///<br/><br/>
+///Specifies the shape selection stroke width of the shape layer in map
+///<br/>selectionStrokeWidth-number	default-1
+///<br/><br/>
+///Specifies the shape stroke color of the shape layer in map
+///<br/>stroke-string	default-#C1C1C1
+///<br/><br/>
+///Specifies the shape stroke thickness value of the shape layer in map
+///<br/>strokeThickness-number	default-0.2
+///<br/><br/>
+///Specifies the shape valuePath of the shape layer in map
+///<br/>valuePath-string	default-null
+///<br/><br/>
+///Shows or hides the map items.
+///<br/>showMapItems-boolean	default-false
+///<br/><br/>
+///Shows or hides the tooltip for shapes
+///<br/>showTooltip-boolean	default-false
+///<br/><br/>
+///Specifies the tooltip template for shapes.
+///<br/>tooltipTemplate-string	default-
+///<br/><br/>
+///Specifies the URL template for the OSM type map.
+///<br/>urlTemplate-string	default-&#39;http://a.tile.openstreetmap.org/level/tileX/tileY.png&#39;
+///<br/><br/>
+///Sublayer is the collection of shape Layer
+///<br/>sublayers-Array&lt;any&gt;	default-
+///<br/><br/>
+///to get the type of bing map.
+///<br/>bingMapType-ej.datavisualization.Map.BingMapType|string	default-aerial
+///<br/><br/>
+///Specifies the bubble settings for map
+///<br/>bubbleSettings-any	default-
+///<br/><br/>
+///Specifies the bubble Opacity value of bubbles for shape layer in map
+///<br/>bubbleOpacity-number	default-0.9
+///<br/><br/>
+///Specifies the mouse hover color of the shape layer in map
+///<br/>color-string	default-gray
+///<br/><br/>
+///Specifies the colorMappings of the shape layer in map
+///<br/>colorMappings-any	default-null
+///<br/><br/>
+///Specifies the range colorMappings in the bubble layer.
+///<br/>rangeColorMapping-Array&lt;any&gt;	default-null
+///<br/><br/>
+///Start range colorMappings in the bubble layer.
+///<br/>from-number	default-null
+///<br/><br/>
+///End range colorMappings in the bubble layer.
+///<br/>to-number	default-null
+///<br/><br/>
+///GradientColors in the bubble layer of map.
+///<br/>gradientColors-Array&lt;any&gt;	default-
+///<br/><br/>
+///Color of the bubble layer.
+///<br/>color-string	default-null
+///<br/><br/>
+///Specifies the bubble color valuePath of the shape layer in map
+///<br/>colorValuePath-string	default-null
+///<br/><br/>
+///Specifies the maximum size value of bubbles for shape layer in map
+///<br/>maxValue-number	default-20
+///<br/><br/>
+///Specifies the minimum size value of bubbles for shape layer in map
+///<br/>minValue-number	default-10
+///<br/><br/>
+///Specifies the showBubble visibility status map
+///<br/>showBubble-boolean	default-true
+///<br/><br/>
+///Specifies the tooltip visibility status of the shape layer in map
+///<br/>showTooltip-boolean	default-false
+///<br/><br/>
+///Specifies the bubble tooltip template of the shape layer in map
+///<br/>tooltipTemplate-string	default-null
+///<br/><br/>
+///Specifies the bubble valuePath of the shape layer in map
+///<br/>valuePath-string	default-null
+///<br/><br/>
+///Specifies the datasource for the shape layer
+///<br/>dataSource-any	default-
+///<br/><br/>
+///Specifies the data path of shape
+///<br/>shapeDataPath-string	default-
+///<br/><br/>
+///Specifies the data path of shape
+///<br/>shapePropertyPath-string	default-
+///<br/><br/>
+///Enables or disables the shape mouse hover
+///<br/>enableMouseHover-boolean	default-false
+///<br/><br/>
+///Enables or disables the shape selection
+///<br/>enableSelection-boolean	default-true
+///<br/><br/>
+///to get the key of bing map
+///<br/>key-string	default-null
+///<br/><br/>
+///Options for enabling and configuring labelSettings labelPath, smartLabelSize, labelLength etc.,
+///<br/>labelSettings-any	default-
+///<br/><br/>
+///enable or disable the enableSmartLabel property
+///<br/>enableSmartLabel-boolean	default-false
+///<br/><br/>
+///set the labelLength property
+///<br/>labelLength-number	default-&#39;2&#39;
+///<br/><br/>
+///set the labelPath property
+///<br/>labelPath-string	default-null
+///<br/><br/>
+///The property specifies whether to show labels or not.
+///<br/>showLabels-boolean	default-false
+///<br/><br/>
+///set the smartLabelSize property
+///<br/>smartLabelSize-ej.datavisualization.Map.LabelSize|string	default-fixed
+///<br/><br/>
+///Specifies the map view type.
+///<br/>geometryType-ej.datavisualization.Map.GeometryType|string	default-&#39;geographic&#39;
+///<br/><br/>
+///Specifies the map type.
+///<br/>layerType-ej.datavisualization.Map.LayerType|string	default-&#39;geometry&#39;
+///<br/><br/>
+///Options for enabling and configuring legendSettings position, height, width, mode, type etc.,
+///<br/>legendSettings-any	default-
+///<br/><br/>
+///Determines whether the legend should be placed outside or inside the map bounds
+///<br/>dockOnMap-boolean	default-false
+///<br/><br/>
+///Determines the legend placement and it is valid only when dockOnMap is true
+///<br/>dockPosition-ej.datavisualization.Map.DockPosition|string	default-top
+///<br/><br/>
+///height value for legend setting
+///<br/>height-number	default-0
+///<br/><br/>
+///to get icon value for legend setting
+///<br/>icon-ej.datavisualization.Map.LegendIcons|string	default-rectangle
+///<br/><br/>
+///icon height value for legend setting
+///<br/>iconHeight-number	default-20
+///<br/><br/>
+///icon Width value for legend setting
+///<br/>iconWidth-number	default-20
+///<br/><br/>
+///set the orientation of legend labels
+///<br/>labelOrientation-ej.datavisualization.Map.LabelOrientation|string	default-vertical
+///<br/><br/>
+///to get leftLabel value for legend setting
+///<br/>leftLabel-string	default-null
+///<br/><br/>
+///to get mode of legend setting
+///<br/>mode-ej.datavisualization.Map.Mode|string	default-default
+///<br/><br/>
+///set the position of legend settings
+///<br/>position-ej.datavisualization.Map.Position|string	default-topleft
+///<br/><br/>
+///x position value for legend setting
+///<br/>positionX-number	default-0
+///<br/><br/>
+///y position value for legend setting
+///<br/>positionY-number	default-0
+///<br/><br/>
+///to get rightLabel value for legend setting
+///<br/>rightLabel-string	default-null
+///<br/><br/>
+///Enables or Disables the showLabels
+///<br/>showLabels-boolean	default-false
+///<br/><br/>
+///Enables or Disables the showLegend
+///<br/>showLegend-boolean	default-false
+///<br/><br/>
+///to get title of legend setting
+///<br/>title-string	default-null
+///<br/><br/>
+///to get type of legend setting
+///<br/>type-ej.datavisualization.Map.LegendType|string	default-layers
+///<br/><br/>
+///width value for legend setting
+///<br/>width-number	default-0
+///<br/><br/>
+///Specifies the map items template for shapes.
+///<br/>mapItemsTemplate-string	default-
+///<br/><br/>
+///Specify markers for shape layer.
+///<br/>markers-Array&lt;any&gt;	default-
 ///<br/><br/>
 ///Specifies the map marker template for map layer.
 ///<br/>markerTemplate-string	default-null
@@ -14179,6 +14662,12 @@ showPageNavigationTools:function(show){
 /// </summary>
 /// <param name="show"	type="boolean">shows/hides navigation tools in the toolbar</param>
 },
+showTextMarkupAnnotationTools:function(show){
+/// <summary>
+/// Shows/hides the text markup annotation tools in the toolbar.
+/// </summary>
+/// <param name="show"	type="boolean">shows/hides text markup annotation tools in the toolbar</param>
+},
 goToPage:function(pageNumber){
 /// <summary>
 /// Navigates to the specific page in the PDF document. If the page is not available for the given pageNumber, PDF viewer retains the existing page in view.
@@ -14237,6 +14726,22 @@ zoomTo:function(zoomValue){
 /// </summary>
 /// <param name="zoomValue"	type="number">zoom value for scaling the pages in the PDF Viewer</param>
 },
+addAnnotation:function(annotationType){
+/// <summary>
+/// Adds annotations to the PDF document.
+/// </summary>
+/// <param name="annotationType"	type="ej.PdfViewer.AnnotationType">type of the annotation to be added in the PDF document.</param>
+},
+undo:function(){
+/// <summary>
+/// Performs undo function for the included annotations in the PDF document.
+/// </summary>
+},
+redo:function(){
+/// <summary>
+/// Performs redo function for the included annotations in the PDF document.
+/// </summary>
+},
 unload:function(){
 /// <summary>
 /// Unloads the PDF document being displayed in the PDF viewer.
@@ -14282,6 +14787,84 @@ jQuery.fn.ejPdfViewer = function (options) {
 ///<br/><br/>
 ///Sets the PDF document path for initial loading.
 ///<br/>documentPath-string	default-
+///<br/><br/>
+///Enables or disables the text markup annotations.
+///<br/>enableTextMarkupAnnotations-boolean	default-
+///<br/><br/>
+///Enables or disables the highlight annotation.
+///<br/>enableHighlightAnnotation-boolean	default-
+///<br/><br/>
+///Enables or disables the underline annotation.
+///<br/>enableUnderlineAnnotation-boolean	default-
+///<br/><br/>
+///Enables or disables the strikethrough annotation.
+///<br/>enableStrikethroughAnnotation-boolean	default-
+///<br/><br/>
+///Gets/sets the settings of the strikethrough annotation.
+///<br/>strikethroughSettings-StrikethroughSettings	default-
+///<br/><br/>
+///Gets/sets the color of the strikethrough annotation.
+///<br/>color-string	default-
+///<br/><br/>
+///Gets/sets the author of the strikethrough annotation.
+///<br/>author-string	default-
+///<br/><br/>
+///Gets/sets the opacity of the strikethrough annotation.
+///<br/>opacity-number	default-
+///<br/><br/>
+///Gets/sets the subject of the strikethrough annotation.
+///<br/>subject-string	default-
+///<br/><br/>
+///Gets/sets the modified Date of the strikethrough annotation.
+///<br/>modifiedDate-string	default-
+///<br/><br/>
+///Gets/sets the locked property of the strikethrough annotation.
+///<br/>isLocked-boolean	default-
+///<br/><br/>
+///Gets/sets the settings of the underline annotation.
+///<br/>underlineSettings-UnderlineSettings	default-
+///<br/><br/>
+///Gets/sets the color of the underline annotation.
+///<br/>color-string	default-
+///<br/><br/>
+///Gets/sets the author of the underline annotation.
+///<br/>author-string	default-
+///<br/><br/>
+///Gets/sets the opacity of the underline annotation.
+///<br/>opacity-number	default-
+///<br/><br/>
+///Gets/sets the subject of the underline annotation.
+///<br/>subject-string	default-
+///<br/><br/>
+///Gets/sets the modified Date of the underline annotation.
+///<br/>modifiedDate-string	default-
+///<br/><br/>
+///Gets/sets the locked property of the underline annotation.
+///<br/>isLocked-boolean	default-
+///<br/><br/>
+///Gets/sets the settings of the highlight annotation.
+///<br/>highlightSettings-HighlightSettings	default-
+///<br/><br/>
+///Gets/sets the color of the highlight  annotation.
+///<br/>color-string	default-
+///<br/><br/>
+///Gets/sets the author of the highlight annotation.
+///<br/>author-string	default-
+///<br/><br/>
+///Gets/sets the opacity of the highlight annotation.
+///<br/>opacity-number	default-
+///<br/><br/>
+///Gets/sets the subject of the highlight annotation.
+///<br/>subject-string	default-
+///<br/><br/>
+///Gets/sets the modified Date of the highlight annotation.
+///<br/>modifiedDate-string	default-
+///<br/><br/>
+///Gets/sets the locked property of the highlight annotation.
+///<br/>isLocked-boolean	default-
+///<br/><br/>
+///Specifies the type of the annotations.
+///<br/>annotationType-ej.PdfViewer.AnnotationType|string	default-
 ///<br/><br/>
 ///Gets the total number of pages in PDF document.
 ///<br/>pageCount-number	default-
@@ -14459,6 +15042,12 @@ jQuery.fn.ejPivotChart = function (options) {
 ///<br/><br/>
 ///Contains the respective cube name from OLAP database as string type.
 ///<br/>cube-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///To set the data source name to fetch data from that.
+///<br/>sourceInfo-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Set the provider name for PivotChart to identify whether the provider is SSAS or Mondrian.
+///<br/>providerName-string	default-ssas
 ///<br/><br/>
 ///Provides the raw data source for the PivotChart.
 ///<br/>data-any	default-null
@@ -14726,6 +15315,15 @@ jQuery.fn.ejPivotClient = function (options) {
 ///Shows/Hides the sub-total of the field in PivotGrid.
 ///<br/>showSubTotal-boolean	default-true
 ///<br/><br/>
+///Allows to set the format for the column headers.
+///<br/>format-string	default-
+///<br/><br/>
+///This property sets type of display of date.
+///<br/>formatString-string	default-
+///<br/><br/>
+///Allows to set the custom theme for the column headers.
+///<br/>cssClass-string	default-
+///<br/><br/>
 ///Allows the user to set the sorting order of the members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
@@ -14777,6 +15375,15 @@ jQuery.fn.ejPivotClient = function (options) {
 ///Shows/Hides the sub-total of the field.
 ///<br/>showSubTotal-boolean	default-true
 ///<br/><br/>
+///Allows to set the format for the row headers.
+///<br/>format-string	default-
+///<br/><br/>
+///This property sets type of display of date.
+///<br/>formatString-string	default-
+///<br/><br/>
+///Allows to set the custom theme for the row headers.
+///<br/>cssClass-string	default-
+///<br/><br/>
 ///Allows the user to set the sorting order of the members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
@@ -14822,6 +15429,9 @@ jQuery.fn.ejPivotClient = function (options) {
 ///This property sets type of display of date.
 ///<br/>formatString-string	default-
 ///<br/><br/>
+///Allows to set the custom theme for the values.
+///<br/>cssClass-string	default-
+///<br/><br/>
 ///Allows to set the formula for calculation of values for calculated members in Relational datasource.
 ///<br/>formula-string	default-
 ///<br/><br/>
@@ -14845,6 +15455,12 @@ jQuery.fn.ejPivotClient = function (options) {
 ///<br/><br/>
 ///Contains the respective cube name from OLAP database as string type.
 ///<br/>cube-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///To set the data source name to fetch data from that.
+///<br/>sourceInfo-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Set the provider name for PivotClient to identify whether the provider is SSAS or Mondrian.
+///<br/>providerName-string	default-ssas
 ///<br/><br/>
 ///Provides the raw data source for the PivotClient.
 ///<br/>data-any	default-null
@@ -14981,6 +15597,9 @@ jQuery.fn.ejPivotClient = function (options) {
 ///Sets the summary layout for PivotGrid. Following are the ways in which summary can be positioned: normal summary (bottom), top summary, no summary and excel-like summary.
 ///<br/>gridLayout-ej.PivotGrid.Layout|string	default-ej.PivotGrid.Layout.Normal
 ///<br/><br/>
+///Allows the user to hide PivotClient's Cube Browser and Axis Element Builder while initiate the widget.
+///<br/>collapseCubeBrowserByDefault-boolean	default-false
+///<br/><br/>
 ///Allows the user to enable PivotClientâ€™s responsiveness in the browser layout.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
@@ -15043,6 +15662,9 @@ jQuery.fn.ejPivotClient = function (options) {
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible on navigating between pages in paged PivotClient.
 ///<br/>paging-string	default-Paging
+///<br/><br/>
+///Allows the user to set the custom name for the service method responsible for updating report with calculated member.
+///<br/>calculatedMember-string	default-CalculatedMember
 ///<br/><br/>
 ///Sets the title for PivotClient widget.
 ///<br/>title-string	default-
@@ -15169,6 +15791,12 @@ jQuery.fn.ejPivotGauge = function (options) {
 ///<br/><br/>
 ///Contains the respective cube name from OLAP database as string type.
 ///<br/>cube-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///To set the data source name to fetch data from that.
+///<br/>sourceInfo-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Set the provider name for PivotGauge to identify whether the provider is SSAS or Mondrian.
+///<br/>providerName-string	default-ssas
 ///<br/><br/>
 ///Provides the raw data source for the PivotGauge.
 ///<br/>data-any	default-null
@@ -15447,6 +16075,15 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Shows/Hides the sub-total of the field in PivotGrid.
 ///<br/>showSubTotal-boolean	default-true
 ///<br/><br/>
+///Allows to set the format for the column headers.
+///<br/>format-string	default-
+///<br/><br/>
+///This property sets type of display of date.
+///<br/>formatString-string	default-
+///<br/><br/>
+///Allows to set the custom theme for the column headers.
+///<br/>cssClass-string	default-
+///<br/><br/>
 ///Allows the user to set the sorting order of the members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
@@ -15498,6 +16135,15 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Shows/Hides the sub-total of the field.
 ///<br/>showSubTotal-boolean	default-true
 ///<br/><br/>
+///Allows to set the format for the row headers.
+///<br/>format-string	default-
+///<br/><br/>
+///This property sets type of display of date.
+///<br/>formatString-string	default-
+///<br/><br/>
+///Allows to set the custom theme for the row headers.
+///<br/>cssClass-string	default-
+///<br/><br/>
 ///Allows the user to set the sorting order of the members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
@@ -15537,7 +16183,7 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Allows to set the type of PivotGrid summary calculation for the value field with Relational datasource.
 ///<br/>summaryType-ej.PivotAnalysis.SummaryType|string	default-ej.PivotAnalysis.SummaryType.Sum
 ///<br/><br/>
-///Allows to set the format of the values.
+///Allows to set the format for the values.
 ///<br/>format-string	default-
 ///<br/><br/>
 ///This property sets type of display of date.
@@ -15545,6 +16191,9 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///<br/><br/>
 ///Allows to set the formula for calculation of values for calculated members in Relational datasource.
 ///<br/>formula-string	default-
+///<br/><br/>
+///Allows to set the custom theme for the values.
+///<br/>cssClass-string	default-
 ///<br/><br/>
 ///Lists out the items which supports filtering of values without displaying the members in UI in PivotGrid.
 ///<br/>filters-Array&lt;any&gt;	default-[]
@@ -15566,6 +16215,12 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///<br/><br/>
 ///Contains the respective cube name from OLAP database as string type.
 ///<br/>cube-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///To set the data source name to fetch data from that.
+///<br/>sourceInfo-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Set the provider name for PivotGrid to identify whether the provider is SSAS or Mondrian.
+///<br/>providerName-string	default-ssas
 ///<br/><br/>
 ///Provides the raw data source for the PivotGrid.
 ///<br/>data-any	default-null
@@ -15671,6 +16326,12 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///<br/><br/>
 ///Enables the display of GroupingBar allowing you to filter, sort and remove fields obtained from datasource.
 ///<br/>enableGroupingBar-boolean	default-false
+///<br/><br/>
+///Enables/Disables paging in Member Editor for viewing the large count of members in pages.
+///<br/>enableMemberEditorPaging-boolean	default-false
+///<br/><br/>
+///Allows the user to set the number of members to be displayed in each page of Member Editor on applying paging in it.
+///<br/>memberEditorPageSize-number	default-100
 ///<br/><br/>
 ///Enables/Disables the display of grand total for rows and columns.
 ///<br/>enableGrandTotal-boolean	default-true
@@ -16096,31 +16757,31 @@ jQuery.fn.ejPrint = function (options) {
 ///<br/>excludeSelector-string	default-null
 ///<br/><br/>
 ///Specifies whether the URL of an external stylesheet can be included to customize and print that page.
-///<br/>externalStyles-String	default-null
+///<br/>externalStyles-string	default-null
 ///<br/><br/>
 ///Prepend a doctype to the document frame.
 ///<br/>docType-string	default-&amp;lt;!doctype html&amp;gt;
 ///<br/><br/>
 ///Specifies whether the global styles can be applied to the element to be printed.
-///<br/>globalStyles-Boolean	default-true
+///<br/>globalStyles-boolean	default-true
 ///<br/><br/>
 ///Sets the height of the print window.
-///<br/>height-Number	default-454
+///<br/>height-number	default-454
 ///<br/><br/>
 ///Prepends the custom HTML before the selected content.
 ///<br/>prepend-string	default-null
 ///<br/><br/>
 ///Allows printing the content in a new window.
-///<br/>printInNewWindow-Boolean	default-false
+///<br/>printInNewWindow-boolean	default-false
 ///<br/><br/>
 ///Sets the period of time to wait before printing the content.
-///<br/>timeOutPeriod-Number	default-1000
+///<br/>timeOutPeriod-number	default-1000
 ///<br/><br/>
 ///Sets the title of the print document.
 ///<br/>title-string	default-null
 ///<br/><br/>
 ///Defines the width of the print window.
-///<br/>width-Number	default-1024
+///<br/>width-number	default-1024
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -16466,6 +17127,9 @@ jQuery.fn.ejRadialMenu = function (options) {
 ///Specify the URL of the frame background image for radial menu item.
 ///<br/>imageUrl-string	default-
 ///<br/><br/>
+///Specifies the template property of RadialMenu for SVG icon.
+///<br/>prependTo-string	default-
+///<br/><br/>
 ///Specifies the text of RadialMenu item.
 ///<br/>text-string	default-
 ///<br/><br/>
@@ -16707,6 +17371,27 @@ jQuery.fn.ejRangeNavigator = function (options) {
 ///Fill color of the series.
 ///<br/>fill-string	default-null
 ///<br/><br/>
+///Specifies the  properties used for customizing all the range series.
+///<br/>seriesSettings-Array&lt;SeriesSettings&gt;	default-
+///<br/><br/>
+///Name of the property in the datasource that contains x value for the series.
+///<br/>xName-string	default-null
+///<br/><br/>
+///Name of the property in the datasource that contains y value for the series.
+///<br/>yName-string	default-null
+///<br/><br/>
+///Specifies the dataSource for the series. It can be an array of JSON objects or an instance of ej.DataManager.
+///<br/>dataSource-any	default-null
+///<br/><br/>
+///Specifies the type of the series to render in chart.
+///<br/>type-ej.datavisualization.RangeNavigator.Type|string	default-column. see Type
+///<br/><br/>
+///Enable/disable the animation of series.
+///<br/>enableAnimation-boolean	default-false
+///<br/><br/>
+///Fill color of the series.
+///<br/>fill-string	default-null
+///<br/><br/>
 ///Toggles the redrawing of chart on moving the sliders.
 ///<br/>enableDeferredUpdate-boolean	default-true
 ///<br/><br/>
@@ -16752,7 +17437,7 @@ jQuery.fn.ejRangeNavigator = function (options) {
 ///Specifies the width of grid lines in higher level.
 ///<br/>width-string	default-#B5B5B5
 ///<br/><br/>
-///Specifies the intervalType for higher level labels. See IntervalType
+///Specifies the intervalType for higher level labels. See 
 ///<br/>intervalType-ej.datavisualization.RangeNavigator.IntervalType|string	default-auto
 ///<br/><br/>
 ///Specifies the position of the labels to render either inside or outside of plot area
@@ -17707,6 +18392,9 @@ jQuery.fn.ejRibbon = function (options) {
 ///Property to enable the ribbon quick access toolbar.
 ///<br/>showQAT-boolean	default-false
 ///<br/><br/>
+///Sets the root CSS class for Ribbon which allow us to customize the appearance.
+///<br/>cssClass-string	default-
+///<br/><br/>
 ///Sets custom setting to the collapsible pin in the ribbon.
 ///<br/>collapsePinSettings-CollapsePinSettings	default-Object
 ///<br/><br/>
@@ -18174,10 +18862,13 @@ enableToolbarItem:function(){
 /// Enables the corresponding tool in the toolbar when the tool is disabled.
 /// </summary>
 },
-executeCommand:function(){
+executeCommand:function(cmdName, args, textnodeType){
 /// <summary>
 /// Performs the action value based on the given command.
 /// </summary>
+/// <param name="cmdName"	type="string">Command Name.</param>
+/// <param name="args"	type="any">Content to be inserted as argument.</param>
+/// <param name="textnodeType"	type="boolean">Boolean value to specify whether the argument is textnode or not, this is optional.</param>
 },
 focus:function(){
 /// <summary>
@@ -18731,6 +19422,9 @@ jQuery.fn.ejSchedule = function (options) {
 ///When set to true, Schedule allows the appointments to be dragged and dropped at required time.
 ///<br/>allowDragAndDrop-boolean	default-true
 ///<br/><br/>
+///When set to true, allows the user to create/edit appointments inline - simply through a single click made either on the Scheduler cells or on the existing appointmentâ€™s Subject text respectively. Pressing enter key after the new Subject text   typed onto the inline created text box, will save/update the appointments appropriately.
+///<br/>allowInline-boolean	default-false
+///<br/><br/>
 ///When set to true, Scheduler allows interaction through keyboard shortcut keys.
 ///<br/>allowKeyboardNavigation-boolean	default-true
 ///<br/><br/>
@@ -18748,6 +19442,9 @@ jQuery.fn.ejSchedule = function (options) {
 ///<br/><br/>
 ///When set to false, doesn't consider the time difference offset calculation on appointment time.
 ///<br/>applyTimeOffset-boolean	default-true
+///<br/><br/>
+///When set to true, introduces a new option to edit only the future occurrences of the appointments in a recurrence series from the currently selected appointment's date.
+///<br/>editFutureEventsOnly-boolean	default-false
 ///<br/><br/>
 ///Binds the id field name in dataSource to the id of Schedule appointments. It denotes the unique id assigned to appointments.
 ///<br/>id-string	default-null
@@ -19153,6 +19850,9 @@ jQuery.fn.ejSchedule = function (options) {
 ///<br/><br/>
 ///Binds the name of resourceId field in dataSource. Specifies the id of the resources, to which the time intervals are needed to be blocked.
 ///<br/>resourceId-string	default-null
+///<br/><br/>
+///Binds the name of groupId field in dataSource. Specifies the id of the resource group, to which the time intervals are needed to be blocked.
+///<br/>groupId-string	default-null
 ///<br/><br/>
 ///Binds the name of customStyle field in dataSource. It applies the custom CSS to the block intervals.
 ///<br/>customStyle-string	default-null
@@ -20821,7 +21521,7 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Specifies the border for the cell in the Spreadsheet.
 ///<br/>border-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-/// 
+///Specifies border type in the Spreadsheet.
 ///<br/>type-ej.Spreadsheet.BorderType|string	default-
 ///<br/><br/>
 ///Specifies border color for range of cells in Spreadsheet.
@@ -21013,7 +21713,7 @@ redraw:function(){
 /// Redraws the entire sunburst. You can call this method whenever you update, add or remove points from the data source or whenever you want to refresh the UI.
 /// </summary>
 },
-_destroy:function(){
+destroy:function(){
 /// <summary>
 /// destroy the sunburst
 /// </summary>
@@ -21121,6 +21821,12 @@ jQuery.fn.ejSunburstChart = function (options) {
 ///<br/><br/>
 ///Custom template to the tooltip.
 ///<br/>template-string	default-null
+///<br/><br/>
+///Setting the format for the data displayed in the tooltip
+///<br/>format-string	default-#point.x# : #point.y#
+///<br/><br/>
+///Sets the opacity of the dispalyed tooltip
+///<br/>opacity-number	default-0.95
 ///<br/><br/>
 ///Options for customizing sunburst points.
 ///<br/>points-Points	default-
@@ -21353,10 +22059,10 @@ jQuery.fn.ejSunburstChart = function (options) {
 ///Y value or vertical offset to position the legend.
 ///<br/>y-number	default-0
 ///<br/><br/>
-///Places the legend at specified position. Legend can be placed at left, right, top or bottom of the chart area.To manually specify the location of legend, set custom as value to this property.
+///Places the legend at specified position. Legend can be placed at **left**, **right**, **top** or **bottom** of the chart area. To manually specify the location of legend, set **custom** as value to this property.
 ///<br/>position-ej.datavisualization.Sunburst.SunburstLegendPosition|string	default-Bottom. See Position
 ///<br/><br/>
-///Shape of the legend items.
+///Shape of the legend items. 
 ///<br/>shape-ej.datavisualization.Sunburst.SunburstLegendShape|string	default-None. See Shape
 ///<br/><br/>
 ///Options to customize the size of the legend.
@@ -21950,7 +22656,7 @@ jQuery.fn.ejTile = function (options) {
 ///<br/>enablePersistence-boolean	default-false
 ///<br/><br/>
 ///Customize the tile size height.
-///<br/>height-number	default-null
+///<br/>height-string|number	default-null
 ///<br/><br/>
 ///Specifies Tile imageClass, using this property we can give images for each tile through CSS classes.
 ///<br/>imageClass-string	default-null
@@ -21965,7 +22671,7 @@ jQuery.fn.ejTile = function (options) {
 ///<br/>imageUrl-string	default-null
 ///<br/><br/>
 ///Set the localization culture for Tile Widget.
-///<br/>locale-String	default-
+///<br/>locale-string	default-
 ///<br/><br/>
 ///Section for liveTile specific functionalities.
 ///<br/>liveTile-LiveTile	default-
@@ -21995,7 +22701,7 @@ jQuery.fn.ejTile = function (options) {
 ///<br/>tileSize-ej.Tile.TileSize|string	default-small
 ///<br/><br/>
 ///Customize the tile size width.
-///<br/>width-number	default-null
+///<br/>width-string|number	default-null
 ///<br/><br/>
 ///Sets the rounded corner to  tile.
 ///<br/>showRoundedCorner-boolean	default-false
@@ -22775,10 +23481,10 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///<br/>visible-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value for treegrid column width
-///<br/>width-Number	default-
+///<br/>width-number	default-
 ///<br/><br/>
 ///Specifies the header template value for the column header
-///<br/>headerTemplateID-String	default-
+///<br/>headerTemplateID-string	default-
 ///<br/><br/>
 ///Specifies the display format of a column
 ///<br/>format-any	default-null
@@ -22950,6 +23656,9 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///<br/><br/>
 ///Specifies the mode of record count in a page, whether it should count all the records or the root to count zero level parent records.
 ///<br/>pageSizeMode-ej.TreeGrid.PageSizeMode|string	default-ej.TreeGrid.PageSizeMode.All
+///<br/><br/>
+///Specifies the mode of printing the control, whether it should print the all the records or the current page content.
+///<br/>printMode-ej.TreeGrid.PrintMode|string	default-ej.TreeGrid.PrintMode.AllPages
 ///<br/><br/>
 ///Specifies the Custom template for Pager control.
 ///<br/>template-string	default-null
@@ -23871,6 +24580,11 @@ enable:function(){
 refresh:function(){
 /// <summary>
 /// Refresh the Uploadbox control
+/// </summary>
+},
+upload:function(){
+/// <summary>
+/// Upload the selected files.
 /// </summary>
 },
 };

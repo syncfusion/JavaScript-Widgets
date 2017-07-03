@@ -235,6 +235,7 @@
     width: 100%;
     border-bottom: 1px solid #c4c4c4;
     text-align: center;
+    position: relative;
 }
 
 .e-resFIlterRigthIcon {
