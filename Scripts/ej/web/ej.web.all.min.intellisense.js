@@ -67,7 +67,7 @@ disableItems:function(index){
 /// <summary>
 /// Disable the accordion widget item based on specified header index.
 /// </summary>
-/// <param name="index"	type="Array&lt;any&gt;">index values to disable the panels</param>
+/// <param name="index"	type="any[]">index values to disable the panels</param>
 /// </signature>
 },
 enable:function(){
@@ -81,7 +81,7 @@ enableItems:function(index){
 /// <summary>
 /// Enable the accordion widget item based on specified header index.
 /// </summary>
-/// <param name="index"	type="Array&lt;any&gt;">index values to enable the panels</param>
+/// <param name="index"	type="any[]">index values to enable the panels</param>
 /// </signature>
 },
 expandAll:function(){
@@ -1591,6 +1591,9 @@ ejChart :function (options) {
 ///Options for configuring the properties of all the series. You can also override the options for specific series by using series collection.
 ///<br/>commonSeriesOptions-CommonSeriesOptions	default-
 ///<br/><br/>
+///Specifies animation duration for series rendering
+///<br/>animationDuration-string	default-null
+///<br/><br/>
 ///Options to customize the border of all the series.
 ///<br/>border-any	default-
 ///<br/><br/>
@@ -1623,6 +1626,9 @@ ejChart :function (options) {
 ///<br/><br/>
 ///Set the dataSource for all series. It can be an array of JSON objects or an instance of ej.DataManager.
 ///<br/>dataSource-any	default-null
+///<br/><br/>
+///Specifies spline tension value for cardianal spline type. Value ranges from 0 to 1.
+///<br/>cardinalSplineTension-number	default-0.5
 ///<br/><br/>
 ///Controls the size of the hole in doughnut series. Value ranges from 0 to 1
 ///<br/>doughnutCoefficient-number	default-0.4
@@ -1720,6 +1726,9 @@ ejChart :function (options) {
 ///Used for setting the maximum radius of the bubble
 ///<br/>maxRadius-number	default-3
 ///<br/><br/>
+///To render the spline series curve in different forms. 
+///<br/>splineType-ej.datavisualization.Chart.SplineType|string	default-natural. See SplineType
+///<br/><br/>
 ///Specifies the line cap of the series. 
 ///<br/>lineCap-ej.datavisualization.Chart.LineCap|string	default-butt. See LineCap
 ///<br/><br/>
@@ -1749,6 +1758,9 @@ ejChart :function (options) {
 ///<br/><br/>
 ///Enable the wrap option to the data label.
 ///<br/>enableWrap-boolean	default-false
+///<br/><br/>
+///Enables saturation to the data label.
+///<br/>enableContrastColor-boolean	default-false
 ///<br/><br/>
 ///Options for customizing the border of the data label.
 ///<br/>border-any	default-
@@ -2341,6 +2353,9 @@ ejChart :function (options) {
 ///Enables/disables the animation.
 ///<br/>enableAnimation-boolean	default-false
 ///<br/><br/>
+///Specifies animation duration for indicator rendering.
+///<br/>animationDuration-boolean	default-null
+///<br/><br/>
 ///Color of the technical indicator.
 ///<br/>fill-string	default-#00008B
 ///<br/><br/>
@@ -2846,10 +2861,10 @@ ejChart :function (options) {
 ///<br/>text-string	default-
 ///<br/><br/>
 ///Starting value of the multi level labels.
-///<br/>start-number	default-null
+///<br/>start-any	default-null
 ///<br/><br/>
 ///Ending value of the multi level labels.
-///<br/>end-number	default-null
+///<br/>end-any	default-null
 ///<br/><br/>
 ///Specifies the level of multi level labels.
 ///<br/>level-number	default-0
@@ -3260,10 +3275,10 @@ ejChart :function (options) {
 ///<br/>text-string	default-
 ///<br/><br/>
 ///Starting value of the multi level labels.
-///<br/>start-number	default-null
+///<br/>start-any	default-null
 ///<br/><br/>
 ///Ending value of the multi level labels.
-///<br/>end-number	default-null
+///<br/>end-any	default-null
 ///<br/><br/>
 ///Specifies the level of multi level labels.
 ///<br/>level-number	default-0
@@ -3901,6 +3916,9 @@ ejChart :function (options) {
 ///DashArray for border of the series.
 ///<br/>dashArray-string	default-null
 ///<br/><br/>
+///Specifies animation duration for series rendering.
+///<br/>animationDuration-string	default-null
+///<br/><br/>
 ///Color of the point, where the close is down in financial chart.
 ///<br/>bullFillColor-string	default-null
 ///<br/><br/>
@@ -3921,6 +3939,9 @@ ejChart :function (options) {
 ///<br/><br/>
 ///Specifies the dataSource for the series. It can be an array of JSON objects or an instance of ej.DataManager.
 ///<br/>dataSource-any	default-null
+///<br/><br/>
+///Specifies spline tension values for cardianal spline type.Value ranges from 0 to 1.
+///<br/>cardinalSplineTension-number	default-0.5
 ///<br/><br/>
 ///Controls the size of the hole in doughnut series. Value ranges from 0 to 1.
 ///<br/>doughnutCoefficient-number	default-0.4
@@ -4018,6 +4039,9 @@ ejChart :function (options) {
 ///Used for setting the maximum radius of the bubble
 ///<br/>maxRadius-number	default-3
 ///<br/><br/>
+///Specifies the different types of spline curve.
+///<br/>splineType-ej.datavisualization.Chart.SplineType|string	default-Natural. See SplineType
+///<br/><br/>
 ///Specifies the line cap of the series.
 ///<br/>lineCap-ej.datavisualization.Chart.LineCap|string	default-Butt. See LineCap
 ///<br/><br/>
@@ -4047,6 +4071,9 @@ ejChart :function (options) {
 ///<br/><br/>
 ///Enable the wrap option to the data label.
 ///<br/>enableWrap-boolean	default-false
+///<br/><br/>
+///Enables saturation to the data label.
+///<br/>enableContrastColor-boolean	default-false
 ///<br/><br/>
 ///Options for customizing the border of the data label.
 ///<br/>border-any	default-
@@ -6356,19 +6383,19 @@ executeQuery:function(query, done, fail, always){
 /// <summary>
 /// The executeQuery property is used to process the data based on the query on URL Binding.
 /// </summary>
-/// <param name="done"	type="Function">A function to be called if the request succeeds.</param>
+/// <param name="done"	type="() =&gt; void">A function to be called if the request succeeds.</param>
 /// </signature>
 /// <signature>
 /// <summary>
 /// The executeQuery property is used to process the data based on the query on URL Binding.
 /// </summary>
-/// <param name="fail"	type="Function">A function to be called if the request fails.</param>
+/// <param name="fail"	type="() =&gt; void">A function to be called if the request fails.</param>
 /// </signature>
 /// <signature>
 /// <summary>
 /// The executeQuery property is used to process the data based on the query on URL Binding.
 /// </summary>
-/// <param name="always"	type="Function">A function to be called when the request finishes (after success and error callbacks are executed).</param>
+/// <param name="always"	type="() =&gt; void">A function to be called when the request finishes (after success and error callbacks are executed).</param>
 /// </signature>
 },
 insert:function(data, tableName, query){
@@ -6677,6 +6704,9 @@ ejDatePicker :function (options) {
 ///Specifies the water mark text to be displayed in input text.
 ///<br/>watermarkText-string	default-Select date
 ///<br/><br/>
+///Allows to embed  a new column with the calendar in the popup, which will display the week number of every week in a calendar year.
+///<br/>weekNumber-boolean	default-false
+///<br/><br/>
 ///Specifies the width of the DatePicker input text.
 ///<br/>width-string	default-160px
 ///</summary>
@@ -6710,7 +6740,7 @@ addRanges:function(label, range){
 /// <summary>
 /// Add the preset ranges to DateRangePicker popup.
 /// </summary>
-/// <param name="range"	type="Array&lt;any&gt;">StartDate and endDate of range.</param>
+/// <param name="range"	type="any[]">StartDate and endDate of range.</param>
 /// </signature>
 },
 clearRanges:function(){
@@ -6731,7 +6761,7 @@ enable:function(){
 /// Enable the DateRangePicker control, if it is in disabled state.
 /// </summary>
 },
-getSelectedValue:function(){
+getSelectedRange:function(){
 /// <signature>
 /// <summary>
 /// Returns the startDate and endDate values in the selected ranges in the DateRangePicker control.
@@ -6802,6 +6832,9 @@ ejDateRangePicker :function (options) {
 ///<br/><br/>
 ///Used to add the preset ranges. Added ranges using this, will show in popup in right side for easy selection of different preset ranges.
 ///<br/>ranges-any	default-null
+///<br/><br/>
+///Used to seperate the two date strings of the value in the DateRangePicker popup.
+///<br/>separator-string	default--
 ///<br/><br/>
 ///Specifies the start date of the date ranges
 ///<br/>startDate-string|Date	default-null
@@ -6961,7 +6994,7 @@ ejDateTimePicker :function (options) {
 ///<br/>minDateTime-string|Date	default-new Date(1/1/1900 12:00:00 AM)
 ///<br/><br/>
 ///Specifies the popup position of DateTimePicker.See below to know available popup positions
-///<br/>popupPosition-string | ej.popupPosition	default-ej.DateTimePicker.Bottom
+///<br/>popupPosition-string | ej.popupPosition	default-ej.PopupPosition.Bottom
 ///<br/><br/>
 ///Indicates that the DateTimePicker value can only be read and canâ€™t change.
 ///<br/>readOnly-boolean	default-false
@@ -7100,7 +7133,7 @@ addPorts:function(name, ports){
 /// <summary>
 /// Add a collection of ports to the node specified by name
 /// </summary>
-/// <param name="ports"	type="Array&lt;any&gt;">a collection of ports to be added to the specified node</param>
+/// <param name="ports"	type="any[]">a collection of ports to be added to the specified node</param>
 /// </signature>
 },
 addSelection:function(node, clearSelection){
@@ -7311,6 +7344,34 @@ remove:function(node){
 /// Remove either the given node/connector or the selected element from diagram
 /// </summary>
 /// <param name="node"	type="any">the node/connector to be removed from diagram</param>
+/// </signature>
+},
+removePorts:function(name, ports){
+/// <signature>
+/// <summary>
+/// Add a collection of ports to the node specified by name
+/// </summary>
+/// <param name="name"	type="string">name of the node to which the ports have to be added</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Add a collection of ports to the node specified by name
+/// </summary>
+/// <param name="ports"	type="any[]">a collection of ports to be deleted from the specified node</param>
+/// </signature>
+},
+removeLabels:function(name, labels){
+/// <signature>
+/// <summary>
+/// Add a collection of ports to the node specified by name
+/// </summary>
+/// <param name="name"	type="string">name of the node to which the ports have to be added</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Add a collection of ports to the node specified by name
+/// </summary>
+/// <param name="labels"	type="any[]">a collection of labels to be deleted from the specified node</param>
 /// </signature>
 },
 removeSelection:function(node){
@@ -7665,6 +7726,21 @@ ejDiagram :function (options) {
 ///<br/><br/>
 ///To set the margin of the label in bottom direction
 ///<br/>bottom-number	default-0
+///<br/><br/>
+///Sets the value which is used to drag the label within certain bounds.
+///<br/>dragLimit-any	default-null
+///<br/><br/>
+///To set the drag limit of the label in right direction
+///<br/>right-number	default-10
+///<br/><br/>
+///To set the drag limit of the label in left direction
+///<br/>left-number	default-10
+///<br/><br/>
+///To set the drag limit of the label in top direction
+///<br/>top-number	default-10
+///<br/><br/>
+///To set the drag limit of the label in bottom direction
+///<br/>bottom-number	default-10
 ///<br/><br/>
 ///Defines the transparency of labels
 ///<br/>opacity-number	default-1
@@ -8106,6 +8182,9 @@ ejDiagram :function (options) {
 ///<br/><br/>
 ///Sets the space to be vertically left between nodes
 ///<br/>verticalSpacing-number	default-30
+///<br/><br/>
+///Sets the value is used to define the root node of the layout.
+///<br/>root-string	default-30
 ///<br/><br/>
 ///Defines the current culture of diagram
 ///<br/>locale-string	default-en-US
@@ -8887,6 +8966,60 @@ ejDiagram :function (options) {
 ///Enables or disables tooltip of diagram
 ///<br/>showTooltip-boolean	default-true
 ///<br/><br/>
+///Defines the properties of the both the horizontal and vertical gauge to measure the diagram area.
+///<br/>rulerSettings-RulerSettings	default-
+///<br/><br/>
+///Enables or disables both the horizontal and vertical ruler.
+///<br/>showRulers-boolean	default-false
+///<br/><br/>
+///Defines the appearance of horizontal ruler
+///<br/>horizontalRuler-any	default-
+///<br/><br/>
+///Defines the number of intervals to be present on the each segment of the horizontal ruler.
+///<br/>interval-number	default-5
+///<br/><br/>
+///Defines the textual description of the ruler segment, and the appearance of the ruler ticks of the horizontal ruler.
+///<br/>segmentWidth-number	default-100
+///<br/><br/>
+///Defines the method which used to position and arrange the tick elements of the horizontal ruler.
+///<br/>arrangeTick-any	default-null
+///<br/><br/>
+///Defines and sets the tick alignment of the ruler scale.
+///<br/>tickAlignment-ej.datavisualization.Diagram.TickAlignment|string	default-ej.datavisualization.Diagram.TickAlignment.RightOrBottom
+///<br/><br/>
+///Defines the color of the horizontal marker brush.
+///<br/>markerColor-string	default-red
+///<br/><br/>
+///Defines the width of the horizontal ruler.
+///<br/>length-number	default-null
+///<br/><br/>
+///Defines the height of the horizontal ruler.
+///<br/>thickness-number	default-25
+///<br/><br/>
+///Defines the appearance of vertical ruler
+///<br/>verticalRuler-any	default-
+///<br/><br/>
+///Defines the number of intervals to be present on the each segment of the vertical ruler.
+///<br/>interval-number	default-5
+///<br/><br/>
+///Defines the textual description of the ruler segment, and the appearance of the ruler ticks of the vertical ruler.
+///<br/>segmentWidth-number	default-100
+///<br/><br/>
+///Defines the method which used to position and arrange the tick elements of the vertical ruler.
+///<br/>arrangeTick-any	default-null
+///<br/><br/>
+///Defines and sets the tick alignment of the ruler scale.
+///<br/>tickAlignment-ej.datavisualization.Diagram.TickAlignment|string	default-ej.datavisualization.Diagram.TickAlignment.RightOrBottom
+///<br/><br/>
+///Defines the color of the vertical marker brush.
+///<br/>markerColor-string	default-red
+///<br/><br/>
+///Defines the height of the vertical ruler.
+///<br/>length-number	default-null
+///<br/><br/>
+///Defines the width of the vertical ruler.
+///<br/>thickness-number	default-25
+///<br/><br/>
 ///Defines the gridlines and defines how and when the objects have to be snapped
 ///<br/>snapSettings-SnapSettings	default-
 ///<br/><br/>
@@ -9556,7 +9689,7 @@ var wrapper=function(){
 var instance = new original();
 intellisense.annotate(instance, {
 
-_destroy:function(){
+destroy:function(){
 /// <signature>
 /// <summary>
 /// destroy in the draggable.
@@ -9619,7 +9752,7 @@ addItem:function(data){
 /// <summary>
 /// Adding a single item or an array of items into the DropDownList allows you to specify all the field attributes such as value, template, image URL, and HTML attributes for those items.Grouping and sorting will not be supported when we add items through this method.
 /// </summary>
-/// <param name="data"	type="any|Array&lt;any&gt;"> this parameter should have field attributes with respect to mapped field attributes and it's corresponding values to fields</param>
+/// <param name="data"	type="any|any[]"> this parameter should have field attributes with respect to mapped field attributes and it's corresponding values to fields</param>
 /// </signature>
 },
 checkAll:function(){
@@ -9651,7 +9784,7 @@ disableItemsByIndices:function(index){
 /// <summary>
 /// This property disables the set of items in the DropDownList.
 /// </summary>
-/// <param name="index"	type="string|number|Array&lt;any&gt;"> disable the given index list items</param>
+/// <param name="index"	type="string|number|any[]"> disable the given index list items</param>
 /// </signature>
 },
 enable:function(){
@@ -9665,7 +9798,7 @@ enableItemsByIndices:function(index){
 /// <summary>
 /// Enables an Item or set of Items that are disabled in the DropDownList
 /// </summary>
-/// <param name="index"	type="string|number|Array&lt;any&gt;"> enable the given index list items if it's disabled</param>
+/// <param name="index"	type="string|number|any[]"> enable the given index list items if it's disabled</param>
 /// </signature>
 },
 getItemDataByValue:function(value){
@@ -9705,7 +9838,7 @@ selectItemsByIndices:function(index){
 /// <summary>
 /// This method is used to select the list of items in the DropDownList through the Index of the items.
 /// </summary>
-/// <param name="index"	type="string|number|Array&lt;any&gt;"> select the given index list items</param>
+/// <param name="index"	type="string|number|any[]"> select the given index list items</param>
 /// </signature>
 },
 selectItemByText:function(index){
@@ -9713,7 +9846,7 @@ selectItemByText:function(index){
 /// <summary>
 /// This method is used to select an item in the DropDownList by using the given text value.
 /// </summary>
-/// <param name="index"	type="string|number|Array&lt;any&gt;"> select the list items relates to given text</param>
+/// <param name="index"	type="string|number|any[]"> select the list items relates to given text</param>
 /// </signature>
 },
 selectItemByValue:function(index){
@@ -9721,7 +9854,7 @@ selectItemByValue:function(index){
 /// <summary>
 /// This method is used to select an item in the DropDownList by using the given value.
 /// </summary>
-/// <param name="index"	type="string|number|Array&lt;any&gt;"> select the list items relates to given values</param>
+/// <param name="index"	type="string|number|any[]"> select the list items relates to given values</param>
 /// </signature>
 },
 showPopup:function(){
@@ -9741,7 +9874,7 @@ unselectItemsByIndices:function(index){
 /// <summary>
 /// This method is used to unselect the list of items in the DropDownList through Index of the items.
 /// </summary>
-/// <param name="index"	type="string|number|Array&lt;any&gt;"> unselect the given index list items</param>
+/// <param name="index"	type="string|number|any[]"> unselect the given index list items</param>
 /// </signature>
 },
 unselectItemByText:function(index){
@@ -9749,7 +9882,7 @@ unselectItemByText:function(index){
 /// <summary>
 /// This method is used to unselect an item in the DropDownList by using the given text value.
 /// </summary>
-/// <param name="index"	type="string|number|Array&lt;any&gt;"> unselect the list items relates to given text</param>
+/// <param name="index"	type="string|number|any[]"> unselect the list items relates to given text</param>
 /// </signature>
 },
 unselectItemByValue:function(index){
@@ -9757,7 +9890,7 @@ unselectItemByValue:function(index){
 /// <summary>
 /// This method is used to unselect an item in the DropDownList by using the given value.
 /// </summary>
-/// <param name="index"	type="string|number|Array&lt;any&gt;"> unselect the list items relates to given values</param>
+/// <param name="index"	type="string|number|any[]"> unselect the list items relates to given values</param>
 /// </signature>
 },
 });
@@ -9959,7 +10092,7 @@ var wrapper=function(){
 var instance = new original();
 intellisense.annotate(instance, {
 
-_destroy:function(){
+destroy:function(){
 /// <signature>
 /// <summary>
 /// destroy in the Droppable.
@@ -10168,6 +10301,9 @@ ejFileExplorer :function (options) {
 ///The property path denotes the filesystem path that are to be explored. The path for the filesystem can be physical path or relative path, but it has to be relevant to where the Web API is hosted.
 ///<br/>path-string	default-
 ///<br/><br/>
+///Sets the alias name of root folder name in FileExplorer. It is used to replace the actual root folder name in FileExplorer.
+///<br/>rootFolderName-string	default-
+///<br/><br/>
 ///The selectedFolder is used to select the specified folder of FileExplorer control.
 ///<br/>selectedFolder-string	default-
 ///<br/><br/>
@@ -10254,7 +10390,7 @@ selectCells:function(Indexes, preservePreviousSelectedCell){
 /// <summary>
 /// To select cell based on the cell and row index dynamically.
 /// </summary>
-/// <param name="Indexes"	type="Array&lt;any&gt;">array of cell indexes to be select</param>
+/// <param name="Indexes"	type="any[]">array of cell indexes to be select</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -10899,6 +11035,9 @@ ejGantt :function (options) {
 ///<br/><br/>
 ///Specifies the working time schedule of day
 ///<br/>workingTimeScale-ej.Gantt.workingTimeScale|string	default-ej.Gantt.workingTimeScale.TimeScale8Hours
+///<br/><br/>
+///Gets or sets the working days of a week in a project.
+///<br/>workWeek-Array&lt;any&gt;	default-[Monday,Tuesday,Wednesday,Thursday,Friday]
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -10924,7 +11063,7 @@ addIgnoreOnExport:function(propertyNames){
 /// <summary>
 /// Adds a grid model property which is to be ignored upon exporting.
 /// </summary>
-/// <param name="propertyNames"	type="Array&lt;any&gt;">Pass the array of parameters which need to be ignored on exporting </param>
+/// <param name="propertyNames"	type="any[]">Pass the array of parameters which need to be ignored on exporting </param>
 /// </signature>
 },
 addIgnoreOnToolbarServerClick:function(propertyNames){
@@ -10932,7 +11071,7 @@ addIgnoreOnToolbarServerClick:function(propertyNames){
 /// <summary>
 /// Adds a grid model property which is to be ignored upon OnServerToolbarClick.
 /// </summary>
-/// <param name="propertyNames"	type="Array&lt;any&gt;">Pass the array of parameters which need to be ignored on OnServerToolbarClick </param>
+/// <param name="propertyNames"	type="any[]">Pass the array of parameters which need to be ignored on OnServerToolbarClick </param>
 /// </signature>
 },
 addRecord:function(data, serverChange){
@@ -10940,13 +11079,13 @@ addRecord:function(data, serverChange){
 /// <summary>
 /// Add a new record in grid control when allowAdding is set as true.Without passing parameters it will add empty row.
 /// </summary>
-/// <param name="data"	type="Array&lt;any&gt;">Pass the array of added Records</param>
+/// <param name="data"	type="any[]">Pass the array of added Records</param>
 /// </signature>
 /// <signature>
 /// <summary>
 /// Add a new record in grid control when allowAdding is set as true.Without passing parameters it will add empty row.
 /// </summary>
-/// <param name="serverChange"	type="Array&lt;any&gt;">optionalIf we pass serverChange as true, send post to server side for server action.</param>
+/// <param name="serverChange"	type="any[]">optionalIf we pass serverChange as true, send post to server side for server action.</param>
 /// </signature>
 },
 batchCancel:function(){
@@ -11046,7 +11185,7 @@ columns:function(columnDetails, action){
 /// <summary>
 /// Add or remove columns in grid column collections
 /// </summary>
-/// <param name="columnDetails"	type="Array&lt;any&gt;|string">Pass array of columns or string of field name to add/remove the column in grid</param>
+/// <param name="columnDetails"	type="any[]|string">Pass array of columns or string of field name to add/remove the column in grid</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -11166,7 +11305,7 @@ export:function(action, serverEvent, multipleExport, gridIds){
 /// <summary>
 /// Export the grid content to excel, word or PDF document.
 /// </summary>
-/// <param name="gridIds"	type="Array&lt;any&gt;">optionalPass the array of the gridIds to be filtered</param>
+/// <param name="gridIds"	type="any[]">optionalPass the array of the gridIds to be filtered</param>
 /// </signature>
 },
 filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchcase, actualFilterValue){
@@ -11174,7 +11313,7 @@ filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchca
 /// <summary>
 /// Send a filtering request to filter one column in grid.
 /// </summary>
-/// <param name="fieldName"	type="Array&lt;any&gt;">Pass the field name of the column</param>
+/// <param name="fieldName"	type="any[]">Pass the field name of the column</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -11212,7 +11351,7 @@ filterColumn:function(filterQueries){
 /// <summary>
 /// Send a filtering request to filter single or multiple column in grid.
 /// </summary>
-/// <param name="filterQueries"	type="Array&lt;any&gt;">Pass array of filterColumn query for performing filter operation</param>
+/// <param name="filterQueries"	type="any[]">Pass array of filterColumn query for performing filter operation</param>
 /// </signature>
 },
 getBatchChanges:function(){
@@ -11486,7 +11625,7 @@ hideColumns:function(headerText){
 /// <summary>
 /// Hide columns from the grid based on the header text
 /// </summary>
-/// <param name="headerText"	type="Array&lt;any&gt;|string">you can pass either array of header text of various columns or a header text of a column to hide</param>
+/// <param name="headerText"	type="any[]|string">you can pass either array of header text of various columns or a header text of a column to hide</param>
 /// </signature>
 },
 print:function(){
@@ -11532,7 +11671,7 @@ removeSortedColumns:function(fieldName){
 /// <summary>
 /// Remove a column or collection of columns from a sorted column collections in grid.
 /// </summary>
-/// <param name="fieldName"	type="Array&lt;any&gt;|string">Pass array of field names of the columns to remove a collection of sorted columns or pass a string of field name to remove a column from sorted column collections</param>
+/// <param name="fieldName"	type="any[]|string">Pass array of field names of the columns to remove a collection of sorted columns or pass a string of field name to remove a column from sorted column collections</param>
 /// </signature>
 },
 render:function(){
@@ -11560,7 +11699,7 @@ reorderRows:function(indexes, toIndex){
 /// <summary>
 /// Re-order the row in grid
 /// </summary>
-/// <param name="indexes"	type="Array&lt;any&gt;">Pass the indexes of the rows needs to reorder.</param>
+/// <param name="indexes"	type="any[]">Pass the indexes of the rows needs to reorder.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -11680,7 +11819,7 @@ selectRows:function(from, to, target){
 /// <summary>
 /// Select specified rows in grid based on Index provided.
 /// </summary>
-/// <param name="from"	type="Array&lt;any&gt;|number">It is used to set the starting index of row for selecting rows.</param>
+/// <param name="from"	type="any[]|number">It is used to set the starting index of row for selecting rows.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -11700,7 +11839,7 @@ selectRows:function(rowIndexes){
 /// <summary>
 /// Select rows in grid.
 /// </summary>
-/// <param name="rowIndexes"	type="Array&lt;any&gt;">Pass array of rowIndexes for selecting rows</param>
+/// <param name="rowIndexes"	type="any[]">Pass array of rowIndexes for selecting rows</param>
 /// </signature>
 },
 setCellText:function(){
@@ -11768,7 +11907,7 @@ showColumns:function(headerText){
 /// <summary>
 /// Show columns in the grid based on the header text
 /// </summary>
-/// <param name="headerText"	type="Array&lt;any&gt;|string">you can pass either array of header text of various columns or a header text of a column to show</param>
+/// <param name="headerText"	type="any[]|string">you can pass either array of header text of various columns or a header text of a column to show</param>
 /// </signature>
 },
 sortColumn:function(columnName, sortingDirection){
@@ -11812,7 +11951,7 @@ updateRecord:function(fieldName, data){
 /// <summary>
 /// Update a edited record in grid control when allowEditing is set as true.
 /// </summary>
-/// <param name="data"	type="Array&lt;any&gt;">Pass the edited JSON data of record need to be update.</param>
+/// <param name="data"	type="any[]">Pass the edited JSON data of record need to be update.</param>
 /// </signature>
 },
 windowonresize:function(){
@@ -12235,6 +12374,9 @@ ejGrid :function (options) {
 ///Gets or sets a value that indicates whether to define the number of records displayed per page
 ///<br/>pageSize-number	default-12
 ///<br/><br/>
+///Gets or sets different page size values to the Dropdown in Grid Pager, by which number of records in a page can be changed dynamically.
+///<br/>pageSizeList-Array&lt;any&gt;	default-[]
+///<br/><br/>
 ///Gets or sets a value that indicates whether to enables default pager for the grid.
 ///<br/>showDefaults-boolean	default-false
 ///<br/><br/>
@@ -12273,9 +12415,6 @@ ejGrid :function (options) {
 ///<br/><br/>
 ///This helps in mapping server-side action when rows are dropped in Grid.
 ///<br/>dropMapper-string	default-null
-///<br/><br/>
-///Gets or sets a value that indicates whether to define the behavior for drag.
-///<br/>dragBehavior-ej.Grid.DragBehavior|string	default-ej.Grid.DragBehavior.Move
 ///<br/><br/>
 ///Gets or sets an object that indicates whether to customize the searching behavior of the grid
 ///<br/>searchSettings-SearchSettings	default-
@@ -12972,13 +13111,13 @@ columns:function(columndetails, keyvalue, action){
 /// <summary>
 /// Add or remove columns in Kanban columns collections.Default action is add.
 /// </summary>
-/// <param name="columndetails"	type="Array&lt;any&gt;|string">Pass array of columns or string of headerText to add/remove the column in Kanban</param>
+/// <param name="columndetails"	type="any[]|string">Pass array of columns or string of headerText to add/remove the column in Kanban</param>
 /// </signature>
 /// <signature>
 /// <summary>
 /// Add or remove columns in Kanban columns collections.Default action is add.
 /// </summary>
-/// <param name="keyvalue"	type="Array&lt;any&gt;|string">Pass array of columns or string of key value to add/remove the column in Kanban</param>
+/// <param name="keyvalue"	type="any[]|string">Pass array of columns or string of key value to add/remove the column in Kanban</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -12998,7 +13137,7 @@ dataSource:function(datasource){
 /// <summary>
 /// Refresh the Kanban with new data source.
 /// </summary>
-/// <param name="datasource"	type="Array&lt;any&gt;">Pass new data source to the Kanban</param>
+/// <param name="datasource"	type="any[]">Pass new data source to the Kanban</param>
 /// </signature>
 },
 toggleColumn:function(headerText){
@@ -13048,7 +13187,7 @@ hideColumns:function(headerText){
 /// <summary>
 /// Hide columns from the Kanban based on the header text
 /// </summary>
-/// <param name="headerText"	type="Array&lt;any&gt;|string">you can pass either array of header text of various columns or a header text of a column to hide</param>
+/// <param name="headerText"	type="any[]|string">you can pass either array of header text of various columns or a header text of a column to hide</param>
 /// </signature>
 },
 print:function(){
@@ -13076,7 +13215,7 @@ showColumns:function(headerText){
 /// <summary>
 /// Show columns in the Kanban based on the header text.
 /// </summary>
-/// <param name="headerText"	type="Array&lt;any&gt;|string">You can pass either array of header text of various columns or a header text of a column to show</param>
+/// <param name="headerText"	type="any[]|string">You can pass either array of header text of various columns or a header text of a column to show</param>
 /// </signature>
 },
 updateCard:function(key, data){
@@ -13090,7 +13229,7 @@ updateCard:function(key, data){
 /// <summary>
 /// Update a card in Kanban control based on key and JSON data given.
 /// </summary>
-/// <param name="data"	type="Array&lt;any&gt;">Pass the edited JSON data of card need to be update.</param>
+/// <param name="data"	type="any[]">Pass the edited JSON data of card need to be update.</param>
 /// </signature>
 },
 });
@@ -13323,6 +13462,15 @@ ejKanban :function (options) {
 ///<br/><br/>
 ///ImageUrl field has been Mapped into card image.
 ///<br/>imageUrl-string	default-null
+///<br/><br/>
+///Get or sets an object that indicates the options to map the cards to the collapsible area.
+///<br/>collapsibleCards-any	default-Object
+///<br/><br/>
+///It is used to specify the collapsible card's field mapping.
+///<br/>field-string	default-null
+///<br/><br/>
+///It is used to specify the collapsible card's key mapping which is available in datasource value of field mapped in collapsibleCards.field.
+///<br/>key-string	default-null
 ///<br/><br/>
 ///To map datasource field for column values mapping
 ///<br/>keyField-string	default-null
@@ -14585,7 +14733,7 @@ mergeData:function(data){
 /// <summary>
 /// Merges the given data with the existing data items in the listbox.
 /// </summary>
-/// <param name="data"	type="Array&lt;any&gt;">Data to merge in listbox.</param>
+/// <param name="data"	type="any[]">Data to merge in listbox.</param>
 /// </signature>
 },
 moveDown:function(){
@@ -14761,7 +14909,7 @@ showItemsByValues:function(values){
 /// <summary>
 /// Shows the hidden list items using its values.
 /// </summary>
-/// <param name="values"	type="Array&lt;any&gt;">Values of the listbox items to be shown.</param>
+/// <param name="values"	type="any[]">Values of the listbox items to be shown.</param>
 /// </signature>
 },
 hideItemsByValues:function(values){
@@ -14769,7 +14917,7 @@ hideItemsByValues:function(values){
 /// <summary>
 /// Hides the list item using its values.
 /// </summary>
-/// <param name="values"	type="Array&lt;any&gt;">Values of the listbox items to be hidden.</param>
+/// <param name="values"	type="any[]">Values of the listbox items to be hidden.</param>
 /// </signature>
 },
 showItemByValue:function(value){
@@ -16224,7 +16372,7 @@ remove:function(target){
 /// <summary>
 /// Remove Menu item.
 /// </summary>
-/// <param name="target"	type="any|Array&lt;any&gt;">Selector of target node or Object of target node.</param>
+/// <param name="target"	type="any|any[]">Selector of target node or Object of target node.</param>
 /// </signature>
 },
 show:function(locationX, locationY, targetElement, event){
@@ -16654,6 +16802,9 @@ ejPager :function (options) {
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to define the number of records displayed per page.
 ///<br/>pageSize-number	default-12
+///<br/><br/>
+///It allows to have multiple choices of pageSize values for Pager control. The "pageSize" API value of the pager will be updated depending upon the value being selected from the dropdown.
+///<br/>pageSizeList-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Get or sets a value of total number of pages in the pager. The totalPages value is calculated based on page size and total records.
 ///<br/>totalPages-number	default-null
@@ -19555,7 +19706,7 @@ enableItemsByIndices:function(itemIndices){
 /// <summary>
 /// To enable menu items using indices
 /// </summary>
-/// <param name="itemIndices"	type="Array&lt;any&gt;">Index of the Radialmenu to be enabled.</param>
+/// <param name="itemIndices"	type="any[]">Index of the Radialmenu to be enabled.</param>
 /// </signature>
 },
 disableItemByIndex:function(itemIndex){
@@ -19571,7 +19722,7 @@ disableItemsByIndices:function(itemIndices){
 /// <summary>
 /// To disable menu items using indices
 /// </summary>
-/// <param name="itemIndices"	type="Array&lt;any&gt;">items of the Radialmenu to disable.</param>
+/// <param name="itemIndices"	type="any[]">items of the Radialmenu to disable.</param>
 /// </signature>
 },
 enableItem:function(item){
@@ -19595,7 +19746,7 @@ enableItems:function(items){
 /// <summary>
 /// To enable menu items using item texts
 /// </summary>
-/// <param name="items"	type="Array&lt;any&gt;">items of the Radialmenu item to enable.</param>
+/// <param name="items"	type="any[]">items of the Radialmenu item to enable.</param>
 /// </signature>
 },
 disableItems:function(items){
@@ -19603,7 +19754,7 @@ disableItems:function(items){
 /// <summary>
 /// To disable menu items using item texts
 /// </summary>
-/// <param name="items"	type="Array&lt;any&gt;">items of the Radialmenu item to disable.</param>
+/// <param name="items"	type="any[]">items of the Radialmenu item to disable.</param>
 /// </signature>
 },
 updateBadgeValue:function(index, value){
@@ -19792,6 +19943,9 @@ ejRadialSlider :function (options) {
 ///<br/><br/>
 ///Specifies the Space between the radial slider element and the label.
 ///<br/>labelSpace-number	default-30
+///<br/><br/>
+///Change the Radial Slider ticks value based on the given culture.
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Specifies the radius of radial slider
 ///<br/>radius-number	default-200
@@ -20789,13 +20943,13 @@ ejReportViewer :function (options) {
 ///<br/>dataSources-Array&lt;DataSources&gt;	default-[]
 ///<br/><br/>
 ///Gets or sets the name of the data source.
-///<br/>name-String	default-empty
+///<br/>name-string	default-empty
 ///<br/><br/>
 ///Gets or sets the values of data source.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Enables or disables the page cache of report.
-///<br/>enablePageCache-Boolean	default-false
+///<br/>enablePageCache-boolean	default-false
 ///<br/><br/>
 ///Specifies the export settings.
 ///<br/>exportSettings-ExportSettings	default-
@@ -20810,10 +20964,10 @@ ejReportViewer :function (options) {
 ///<br/>wordFormat-ej.ReportViewer.WordFormats|string	default-ej.ReportViewer.WordFormats.Doc
 ///<br/><br/>
 ///When set to true, adapts the report layout to fit the screen size of devices on which it renders.
-///<br/>isResponsive-Boolean	default-true
+///<br/>isResponsive-boolean	default-true
 ///<br/><br/>
 ///Specifies the locale for report viewer.
-///<br/>locale-String	default-en-US
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Specifies the page settings.
 ///<br/>pageSettings-PageSettings	default-
@@ -20831,19 +20985,19 @@ ejReportViewer :function (options) {
 ///<br/>labels-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Gets or sets the name of the parameter.
-///<br/>name-String	default-empty
+///<br/>name-string	default-empty
 ///<br/><br/>
 ///Gets or sets whether the parameter allows nullable value or not.
-///<br/>nullable-Boolean	default-false
+///<br/>nullable-boolean	default-false
 ///<br/><br/>
 ///Gets or sets the prompt message associated with the specified parameter.
-///<br/>prompt-String	default-empty
+///<br/>prompt-string	default-empty
 ///<br/><br/>
 ///Gets or sets the parameter values.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Enables and disables the print mode.
-///<br/>printMode-Boolean	default-false
+///<br/>printMode-boolean	default-false
 ///<br/><br/>
 ///Specifies the print option of the report.
 ///<br/>printOptions-ej.ReportViewer.PrintOptions|string	default-ej.ReportViewer.PrintOptions.Default
@@ -20855,34 +21009,34 @@ ejReportViewer :function (options) {
 ///<br/>renderMode-ej.ReportViewer.RenderMode|string	default-ej.ReportViewer.RenderMode.Default
 ///<br/><br/>
 ///Gets or sets the path of the report file.
-///<br/>reportPath-String	default-empty
+///<br/>reportPath-string	default-empty
 ///<br/><br/>
 ///Gets or sets the reports server URL.
-///<br/>reportServerUrl-String	default-empty
+///<br/>reportServerUrl-string	default-empty
 ///<br/><br/>
 ///Specifies the report Web API service URL.
-///<br/>reportServiceUrl-String	default-empty
+///<br/>reportServiceUrl-string	default-empty
 ///<br/><br/>
 ///Specifies the toolbar settings.
 ///<br/>toolbarSettings-ToolbarSettings	default-
 ///<br/><br/>
 ///Fires when user click on toolbar item in the toolbar.
-///<br/>click-String	default-empty
+///<br/>click-string	default-empty
 ///<br/><br/>
 ///Specifies the toolbar items.
 ///<br/>items-ej.ReportViewer.ToolbarItems|string	default-ej.ReportViewer.ToolbarItems.All
 ///<br/><br/>
 ///Shows or hides the toolbar.
-///<br/>showToolbar-Boolean	default-true
+///<br/>showToolbar-boolean	default-true
 ///<br/><br/>
 ///Shows or hides the tooltip of toolbar items.
-///<br/>showTooltip-Boolean	default-true
+///<br/>showTooltip-boolean	default-true
 ///<br/><br/>
 ///Specifies the toolbar template ID.
-///<br/>templateId-String	default-empty
+///<br/>templateId-string	default-empty
 ///<br/><br/>
 ///Gets or sets the zoom factor for report viewer.
-///<br/>zoomFactor-Number	default-1
+///<br/>zoomFactor-number	default-1
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -20903,7 +21057,7 @@ var wrapper=function(){
 var instance = new original();
 intellisense.annotate(instance, {
 
-_destroy:function(){
+destroy:function(){
 /// <signature>
 /// <summary>
 /// destroy in the Resizable.
@@ -20933,16 +21087,16 @@ ejResizable :function (options) {
 ///If specified, restricts resize start click to the specified element(s).
 ///<br/>handle-string	default-null
 ///<br/><br/>
-///Sets the max height for resizing
+///Sets the max height till which an element has to be resized.
 ///<br/>maxHeight-number	default-null
 ///<br/><br/>
-///Sets the max width for resizing
+///Sets the max width till which an element has to be resized.
 ///<br/>maxWidth-number	default-null
 ///<br/><br/>
-///Sets the min Height for resizing
+///Sets the min Height below which an element cannot be resized.
 ///<br/>minHeight-number	default-10
 ///<br/><br/>
-///Sets the min Width for resizing
+///Sets the min Width below which an element cannot be resized.
 ///<br/>minWidth-number	default-10
 ///<br/><br/>
 ///Used to group sets of resizable items.
@@ -21006,7 +21160,7 @@ addTab:function(tabText, ribbonGroups, index){
 /// <summary>
 /// Adds tab dynamically in the ribbon control with given name, tab group array and index position. When index is null, ribbon tab is added at the last index.
 /// </summary>
-/// <param name="ribbonGroups"	type="Array&lt;any&gt;">groups to be displayed in ribbon tab .</param>
+/// <param name="ribbonGroups"	type="any[]">groups to be displayed in ribbon tab .</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -22350,7 +22504,7 @@ filterAppointments:function(filterConditions){
 /// <summary>
 /// Searches and filters the appointments from appointment list of Schedule control.
 /// </summary>
-/// <param name="filterConditions"	type="Array&lt;any&gt;">Holds array of one or more conditional objects for filtering the appointments based on it.</param>
+/// <param name="filterConditions"	type="any[]">Holds array of one or more conditional objects for filtering the appointments based on it.</param>
 /// </signature>
 },
 getAppointments:function(){
@@ -23831,6 +23985,9 @@ ejSplitButton :function (options) {
 ///Specifies the list content for Split Button while initialization
 ///<br/>targetID-string	default-
 ///<br/><br/>
+///Specifies the target of splitbutton menu while initialization with ID or class as a selector.
+///<br/>target-string	default-
+///<br/><br/>
 ///Specifies the text content for Split Button while initialization.
 ///<br/>text-string	default-
 ///<br/><br/>
@@ -23998,7 +24155,7 @@ clearAll:function(range){
 /// <summary>
 /// It is used to clear all the data and format in the specified range of cells in Spreadsheet.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">Optional. If range is specified, then it will clear all content in the specified range else it will use the current selected range. </param>
+/// <param name="range"	type="string|any[]">Optional. If range is specified, then it will clear all content in the specified range else it will use the current selected range. </param>
 /// </signature>
 },
 clearAllFormat:function(range){
@@ -24006,7 +24163,7 @@ clearAllFormat:function(range){
 /// <summary>
 /// This property is used to clear all the formats applied in the specified range in Spreadsheet.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">Optional. If range is specified, then it will clear all format in the specified range else it will use the current selected range. </param>
+/// <param name="range"	type="string|any[]">Optional. If range is specified, then it will clear all format in the specified range else it will use the current selected range. </param>
 /// </signature>
 },
 clearBorder:function(range){
@@ -24014,7 +24171,7 @@ clearBorder:function(range){
 /// <summary>
 /// Used to clear the applied border in the specified range in Spreadsheet.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">Optional. If range is specified, then it will clear border in the specified range else it will use the current selected range.</param>
+/// <param name="range"	type="string|any[]">Optional. If range is specified, then it will clear border in the specified range else it will use the current selected range.</param>
 /// </signature>
 },
 clearContents:function(range){
@@ -24022,7 +24179,7 @@ clearContents:function(range){
 /// <summary>
 /// This property is used to clear the contents in the specified range in Spreadsheet.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">Optional. If the range is specified, then it will clear the content in the specified range else it will use the current selected range. </param>
+/// <param name="range"	type="string|any[]">Optional. If the range is specified, then it will clear the content in the specified range else it will use the current selected range. </param>
 /// </signature>
 },
 clearRange:function(rangeName){
@@ -24038,7 +24195,7 @@ clearRangeData:function(range, property, cells, skipHiddenRow, status, skipCell)
 /// <summary>
 /// It is used to remove data in the specified range of cells based on the defined property.
 /// </summary>
-/// <param name="range"	type="Array&lt;any&gt;|string">Optional. If range is specified, it will clear data for the specified range else it will use the current selected range. </param>
+/// <param name="range"	type="any[]|string">Optional. If range is specified, it will clear data for the specified range else it will use the current selected range. </param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -24172,7 +24329,7 @@ editRange:function(rangeName, fn){
 /// <summary>
 /// This method is used to edit data in the specified range of cells based on its corresponding rangeSettings.
 /// </summary>
-/// <param name="fn"	type="Function">Pass the function that you want to perform range edit.</param>
+/// <param name="fn"	type="() =&gt; void">Pass the function that you want to perform range edit.</param>
 /// </signature>
 },
 getActivationPanel:function(){
@@ -24470,7 +24627,7 @@ lockCells:function(range, isLocked){
 /// <summary>
 /// This method is used to lock/unlock the range of cells in active sheet. Lock cells are activated only after the sheet is protected. Once the sheet is protected it is unable to lock/unlock cells.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">Pass the alpha range cells or array range of cells.</param>
+/// <param name="range"	type="string|any[]">Pass the alpha range cells or array range of cells.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -24498,7 +24655,7 @@ mergeCells:function(range, alertStatus){
 /// <summary>
 /// This method is used to merge the selected cells in the Spreadsheet.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">Optional. To pass the cell range or selected cells are process.</param>
+/// <param name="range"	type="string|any[]">Optional. To pass the cell range or selected cells are process.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -24602,7 +24759,7 @@ removeReadOnly:function(range){
 /// <summary>
 /// This method is used to remove the readonly option for the specified range.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">Pass the range.</param>
+/// <param name="range"	type="string|any[]">Pass the range.</param>
 /// </signature>
 },
 saveAsJSON:function(){
@@ -24666,7 +24823,7 @@ setHeightToRows:function(heightColl){
 /// <summary>
 /// This method is used to set the height for the rows in the Spreadsheet.
 /// </summary>
-/// <param name="heightColl"	type="Array&lt;any&gt;|any">Pass the row index and height of the rows.</param>
+/// <param name="heightColl"	type="any[]|any">Pass the row index and height of the rows.</param>
 /// </signature>
 },
 setHyperlink:function(range, link, sheetIdx){
@@ -24674,7 +24831,7 @@ setHyperlink:function(range, link, sheetIdx){
 /// <summary>
 /// This method is used to set the hyperlink in selected cells of the current sheet.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">If range is specified, it will set the hyperlink in range of the cells.</param>
+/// <param name="range"	type="string|any[]">If range is specified, it will set the hyperlink in range of the cells.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -24694,7 +24851,7 @@ setReadOnly:function(range){
 /// <summary>
 /// This method is used to set the readonly option for the specified range.
 /// </summary>
-/// <param name="range"	type="string|Array&lt;any&gt;">Pass the range.</param>
+/// <param name="range"	type="string|any[]">Pass the range.</param>
 /// </signature>
 },
 setSheetFocus:function(){
@@ -24708,7 +24865,7 @@ setWidthToColumns:function(widthColl){
 /// <summary>
 /// This method is used to set the width for the columns in the Spreadsheet.
 /// </summary>
-/// <param name="widthColl"	type="Array&lt;any&gt;|any">Pass the column index and width of the columns.</param>
+/// <param name="widthColl"	type="any[]|any">Pass the column index and width of the columns.</param>
 /// </signature>
 },
 sheetRename:function(sheetName){
@@ -24812,7 +24969,7 @@ unWrapText:function(range){
 /// <summary>
 /// This method is used to unwrap the selected range of cells in the Spreadsheet.
 /// </summary>
-/// <param name="range"	type="Array&lt;any&gt;|string">Optional. If the range is specified, then it will update unwrap in the specified range else it will use the current selected range.</param>
+/// <param name="range"	type="any[]|string">Optional. If the range is specified, then it will update unwrap in the specified range else it will use the current selected range.</param>
 /// </signature>
 },
 updateData:function(data, range){
@@ -24826,7 +24983,7 @@ updateData:function(data, range){
 /// <summary>
 /// This method is used to update the data for the specified range of cells in the Spreadsheet.
 /// </summary>
-/// <param name="range"	type="Array&lt;any&gt;|string">Optional. If range is specified, it will update data for the specified range  else it will use the current selected range. </param>
+/// <param name="range"	type="any[]|string">Optional. If range is specified, it will update data for the specified range  else it will use the current selected range. </param>
 /// </signature>
 },
 updateFormulaBar:function(){
@@ -24868,7 +25025,7 @@ updateUniqueData:function(data, range, skipCell){
 /// <summary>
 /// This method is used to update the unique data for the specified range of cells in Spreadsheet.
 /// </summary>
-/// <param name="range"	type="Array&lt;any&gt;|string">Optional. If range is specified, it will update data for the specified range else it will use the current selected range.</param>
+/// <param name="range"	type="any[]|string">Optional. If range is specified, it will update data for the specified range else it will use the current selected range.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -24882,7 +25039,7 @@ wrapText:function(range){
 /// <summary>
 /// This method is used to wrap the selected range of cells in the Spreadsheet.
 /// </summary>
-/// <param name="range"	type="Array&lt;any&gt;|string">Optional. If the range is specified, then it will update wrap in the specified  range else it will use the current selected range.</param>
+/// <param name="range"	type="any[]|string">Optional. If the range is specified, then it will update wrap in the specified  range else it will use the current selected range.</param>
 /// </signature>
 },
 getExportProps:function(){
@@ -25376,6 +25533,9 @@ ejSpreadsheet :function (options) {
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to show or hide headings in the Spreadsheet.
 ///<br/>showHeadings-boolean	default-true
+///<br/><br/>
+///Specifies the name for sheet in the Spreadsheet.
+///<br/>sheetName-string	default-string
 ///<br/><br/>
 ///Specifies the start cell for the datasource range in Spreadsheet.
 ///<br/>startCell-string	default-A1
@@ -27144,7 +27304,7 @@ hide:function(effect, func){
 /// <summary>
 /// Hide the Tooltip popup.
 /// </summary>
-/// <param name="func"	type="Function"> optional custom effect takes place when hiding the tooltip.</param>
+/// <param name="func"	type="() =&gt; void"> optional custom effect takes place when hiding the tooltip.</param>
 /// </signature>
 },
 show:function(effect, func, target){
@@ -27158,7 +27318,7 @@ show:function(effect, func, target){
 /// <summary>
 /// Shows the Tooltip popup for the given target element with the specified effect.
 /// </summary>
-/// <param name="func"	type="Function">optional custom effect takes place when showing the tooltip.</param>
+/// <param name="func"	type="() =&gt; void">optional custom effect takes place when showing the tooltip.</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -27333,7 +27493,7 @@ selectCells:function(Indexes, preservePreviousSelectedCell){
 /// <summary>
 /// To select cell based on the cell and row index dynamically.
 /// </summary>
-/// <param name="Indexes"	type="Array&lt;any&gt;">array of cell indexes to be select</param>
+/// <param name="Indexes"	type="any[]">array of cell indexes to be select</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -27399,7 +27559,7 @@ refresh:function(dataSource, query){
 /// <summary>
 /// To refresh the changes in tree grid
 /// </summary>
-/// <param name="dataSource"	type="Array&lt;any&gt;">Pass which data source you want to show in tree grid</param>
+/// <param name="dataSource"	type="any[]">Pass which data source you want to show in tree grid</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -27514,6 +27674,9 @@ ejTreeGrid :function (options) {
 ///Enables/disables pagination of rows in TreeGrid
 ///<br/>allowPaging-boolean	default-false
 ///<br/><br/>
+///Gets or sets a value that indicates whether the Content will wrap to the next line if the content exceeds the boundary of the Column Cells.
+///<br/>allowTextWrap-boolean	default-false
+///<br/><br/>
 ///Specifies the id of the template that has to be applied for alternate rows.
 ///<br/>altRowTemplateID-string	default-
 ///<br/><br/>
@@ -27540,6 +27703,9 @@ ejTreeGrid :function (options) {
 ///<br/><br/>
 ///To customize the ej controls defined in TreeGrid column with their native property.
 ///<br/>editParams-any	default-
+///<br/><br/>
+///Gets or sets a template that displays a custom editor for editing the column values.
+///<br/>editTemplate-any	default-null
 ///<br/><br/>
 ///Specifies the edit type of the column.
 ///<br/>editType-ej.TreeGrid.EditingType|string	default-ej.TreeGrid.EditingType.String
@@ -27598,6 +27764,15 @@ ejTreeGrid :function (options) {
 ///Enables or disables the ability to edit a row or cell.
 ///<br/>allowEditing-boolean	default-false
 ///<br/><br/>
+///Gets or sets an object to define a command column in TreeGrid.
+///<br/>commands-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Gets or sets an object to customize command button with available ejButton properties.
+///<br/>buttonOptions-any	default-
+///<br/><br/>
+///Gets or sets a value that define the command column buttons to be displayed.
+///<br/>type-ej.TreeGrid.UnboundType|string	default-
+///<br/><br/>
 ///We can include or exclude particular column from column visibility list in column menu.
 ///<br/>showInColumnChooser-boolean	default-true
 ///<br/><br/>
@@ -27612,6 +27787,9 @@ ejTreeGrid :function (options) {
 ///<br/><br/>
 ///specifies the conditions for saving data to the database while adding or editing the fields.
 ///<br/>validationRules-any	default-
+///<br/><br/>
+///Gets or sets the priority value of the column. It is used to show/hide TreeGrid columns in responsive mode.
+///<br/>priority-number	default--1
 ///<br/><br/>
 ///To Specify the column fields to be displayed in the dialog while inserting a column using column menu.
 ///<br/>columnDialogFields-Array&lt;any&gt;	default-[]
@@ -28103,6 +28281,9 @@ ejTreeMap :function (options) {
 ///Specifies the position of the leaf labels.
 ///<br/>labelPosition-ej.datavisualization.TreeMap.Position|string	default-center
 ///<br/><br/>
+///Specifies the overflow options for leaf labels.
+///<br/>textOverflow-ej.datavisualization.TreeMap.TextOverflow|string	default-none
+///<br/><br/>
 ///Specifies the mode of label visibility
 ///<br/>labelVisibilityMode-ej.datavisualization.TreeMap.VisibilityMode|string	default-visible
 ///<br/><br/>
@@ -28181,6 +28362,9 @@ ejTreeMap :function (options) {
 ///Specifies the position of the labels.
 ///<br/>labelPosition-ej.datavisualization.TreeMap.Position|string	default-center
 ///<br/><br/>
+///Specifies the overflow options for leaf labels.
+///<br/>textOverflow-ej.datavisualization.TreeMap.TextOverflow|string	default-none
+///<br/><br/>
 ///Specifies the label template for tree map level.
 ///<br/>labelTemplate-string	default-null
 ///<br/><br/>
@@ -28234,7 +28418,7 @@ addNodes:function(collection, target){
 /// <summary>
 /// To add a collection of nodes in TreeView. If target tree node is specified, then the given nodes are added as child of target tree node, otherwise nodes are added in TreeView.
 /// </summary>
-/// <param name="collection"	type="any|Array&lt;any&gt;">New node details in JSON object</param>
+/// <param name="collection"	type="any|any[]">New node details in JSON object</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -28254,7 +28438,7 @@ checkNode:function(element){
 /// <summary>
 /// To check a node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 collapseAll:function(levelUntil, excludeHiddenNodes){
@@ -28276,7 +28460,7 @@ collapseNode:function(element){
 /// <summary>
 /// To collapse a particular node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node|object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node|object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 disableNode:function(element){
@@ -28284,7 +28468,7 @@ disableNode:function(element){
 /// <summary>
 /// To disable the node in the TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 enableNode:function(element){
@@ -28292,7 +28476,7 @@ enableNode:function(element){
 /// <summary>
 /// To enable the node in the TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 ensureVisible:function(element){
@@ -28322,7 +28506,7 @@ expandNode:function(element){
 /// <summary>
 /// To expandNode particular node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 getCheckedNodes:function(){
@@ -28466,7 +28650,7 @@ hideNode:function(element){
 /// <summary>
 /// To hide particular node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 insertAfter:function(newNodeText, target){
@@ -28604,7 +28788,7 @@ removeNode:function(element){
 /// <summary>
 /// To remove a node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 selectAll:function(){
@@ -28618,7 +28802,7 @@ selectNode:function(element){
 /// <summary>
 /// This method is used to select a node in TreeView control. If you want to select the collection of nodes in TreeView control then we need to enable allowMultiSelection property.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/ collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/ collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 show:function(){
@@ -28632,7 +28816,7 @@ showNode:function(element){
 /// <summary>
 /// To show a node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 unCheckAll:function(){
@@ -28646,7 +28830,7 @@ uncheckNode:function(element){
 /// <summary>
 /// To uncheck a node in TreeView.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 unselectAll:function(){
@@ -28660,7 +28844,7 @@ unselectNode:function(element){
 /// <summary>
 /// This method is used to unselect a node in TreeView control. If you want to unselect the collection of nodes in TreeView control then we need to enable allowMultiSelection property.
 /// </summary>
-/// <param name="element"	type="string|any|Array&lt;any&gt;">ID of TreeView node/object of TreeView node/ collection of ID/object of TreeView nodes</param>
+/// <param name="element"	type="string|any|any[]">ID of TreeView node/object of TreeView node/ collection of ID/object of TreeView nodes</param>
 /// </signature>
 },
 updateText:function(target, newText){

@@ -1216,8 +1216,7 @@ padding-bottom:7px;
     }
 
     .e-scheduledialog.e-scheduleresponsive {
-        height: auto;
-        /*max-height: 100%;*/
+        height: 100% !important;
     }
 
     .e-scheduledialog.e-scheduleresponsive .e-btnmargin {
@@ -1324,8 +1323,18 @@ padding-bottom:7px;
         height: 45px !important;
     }
 
+    .e-schedule.e-scheduleresponsive .e-vertical .e-workcells,
+    .e-schedule.e-scheduleresponsive .e-vertical .e-monthcells {
+        width: auto !important;
+    }
+
     .e-scheduledialog.e-scheduleresponsive .e-windowmargin {
         margin: 0px !important;
+    }
+
+    .e-scheduledialog.e-scheduleresponsive .e-appointmentaddwindow.e-dialog {
+        height: 100% !important;
+        overflow: scroll;
     }
 
     .e-scheduledialog.e-scheduleresponsive .e-widget-content {
@@ -1380,3 +1389,9 @@ padding-bottom:7px;
 	}
 }
 /*------------------------------------Spreadsheet End-------------------------------------*/
+@media (min-width: 320px) and (max-width:480px) {
+	.e-spellcheck.e-dialog.e-dialog-wrap.e-dialog-resize{
+		width:100% !important;
+	}
+}
+/*------------------------------------SpellCheck End-------------------------------------*/
