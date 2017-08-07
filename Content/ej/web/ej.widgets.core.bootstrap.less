@@ -239,7 +239,7 @@
 		}
 	& when (@skin="office-365"){
       border-radius:0px;
-	}	
+	}
     }
 
     .border-radius(@radius) when not(@radius = 0px) {
@@ -298,7 +298,7 @@
 	}
     & when not (@skin="office-365") {
 	   border-radius: 0 4px 4px 0;
-	} 
+	}
     }
 
     .e-corner.e-tab > ul.e-addborderleft .e-item, .e-corner.e-tab .e-addborderright.e-content-item,
@@ -547,16 +547,16 @@
         }
     }
 
-    .e-menu, input.e-input, input[type="text"].e-input, .e-mask, .e-ul, .e-btn div, .e-tbtn.e-chkbx-hidden, .e-datepicker table, .e-datepicker table th, .e-datepicker table td,
+    .e-menu, input.e-input, input[type="text"].e-input, .e-mask, .e-ul, .e-btn .e-btn-span, .e-tbtn.e-chkbx-hidden, .e-datepicker table, .e-datepicker table th, .e-datepicker table td,
     .e-menu.e-horizontal > .e-list, .e-menu.e-vertical > li.e-separator, .e-menu.e-context > li.e-separator, .e-tab.e-js > .e-header, .e-uploadbox .e-action-perform,
-    .e-uploadbox .uploaddialog.e-dialog.e-dialog-content, .e-tagcloud .e-load, .e-scale, .e-select, .e-input.e-placeholder {
+    .e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content, .e-tagcloud .e-load, .e-scale, .e-select, .e-input.e-placeholder {
         margin: 0;
         padding: 0;
         outline: 0 none;
         line-height: normal;
     }
 
-    .e-btn, .e-btn div, .e-datepicker .e-header .e-next, .e-datepicker .e-header .e-prev, .e-datepicker .e-header .e-text, .e-menu > .e-list > a > img, .e-menu > .e-list > span > img,
+    .e-btn, .e-btn .e-btn-span, .e-datepicker .e-header .e-next, .e-datepicker .e-header .e-prev, .e-datepicker .e-header .e-text, .e-menu > .e-list > a > img, .e-menu > .e-list > span > img,
     .e-menu > .e-list > a > div, .e-menu > .e-list > span > div, .e-menu > .e-list > a > span, .e-menu > .e-list > span > span, .e-menu .e-list > a span.e-icon, .e-menu .e-list > span span.e-icon, .e-menu.e-horizontal > .e-list,
     .e-menu.e-vertical, .e-menu.e-context, .e-chkbox-wrap, .e-radiobtn-wrap, .e-chkbox-wrap div, .e-chkbox-wrap .e-text, .e-radiobtn-wrap .e-text,
     .e-tab.e-js > .e-header, .e-tab .e-header li, .e-tab .e-header li a, .e-dialog .e-dialog-icon, .e-dialog .e-icon, .e-uploadbox .e-selectpart, .e-uploadbox .e-file-list,
@@ -647,7 +647,7 @@
             height: 22px;
             box-sizing: border-box;
         }
-        
+
         & when (@skin= "office-365") {
             font-size: 12px;
             padding: 0px 12px;
@@ -669,40 +669,40 @@
             box-sizing: content-box;
         }
     }
-    
+
     .e-slider-wrap.e-default-wrap.e-horizontal.e-scale-wrap .e-slider.e-js {
         & when (@skin="office-365") {
             border-top: 4px solid;
             border-bottom: 4px solid;
         }
     }
-    
+
     .e-slider-wrap.e-horizontal.e-default-wrap .e-scale.e-h-scale {
         & when (@skin="office-365") {
             margin-top: -6px;
             height: 26px !important;
         }
     }
-    
+
     .e-slider-wrap.e-horizontal.e-default-wrap .e-scale .e-tick:not(.e-large) {
         & when (@skin="office-365") {
             height: 20px !important;
             top: -3px !important;
         }
     }
-    
+
     .e-slider-wrap.e-horizontal .e-scale.e-h-scale {
         & when (@skin="office-365") {
             margin-top: -3px;
         }
     }
-    
+
     .e-slider-wrap.e-default-wrap.e-horizontal .e-scale.e-h-scale {
         & when (@skin="office-365") {
             margin-top: -5px;
         }
     }
-    
+
     .e-slider-wrap.e-vertical.e-scale-wrap .e-slider.e-js {
         & when (@skin="office-365") {
             border-left: 3px solid;
@@ -710,34 +710,34 @@
             box-sizing: content-box;
         }
     }
-    
+
     .e-slider-wrap.e-default-wrap.e-vertical.e-scale-wrap .e-slider.e-js {
         & when (@skin="office-365") {
             border-left: 4px solid;
             border-right: 4px solid;
         }
     }
-    
+
     .e-slider-wrap.e-default-wrap.e-vertical .e-scale.e-v-scale {
         & when (@skin="office-365") {
             margin-left: 3px;
             width: 26px !important;
         }
     }
-    
+
     .e-slider-wrap.e-vertical .e-scale.e-v-scale {
         & when (@skin="office-365") {
             margin-left: 3px;
         }
     }
-    
+
     .e-slider-wrap.e-vertical.e-default-wrap .e-scale .e-tick:not(.e-large) {
         & when (@skin="office-365") {
             width: 20px !important;
             left: 3px !important;
         }
     }
-    
+
     .e-slider-wrap.e-vertical .e-scale .e-tick .e-tick-value {
         & when (@skin="office-365") {
             margin-right: 2px;
@@ -1260,7 +1260,7 @@
     }
 
     .e-tooltip-wrap .e-tipContainer .e-tooltipHeader .e-tooltipTitle {
-        
+
         overflow: hidden;
         text-overflow: ellipsis;
 		& when (@skin= "office-365") {
@@ -1313,7 +1313,7 @@
 			& when not (@skin= "office-365") {
 				padding: 5px 7px;
 			}
-            
+
         }
     }
 
@@ -1350,7 +1350,7 @@
         text-decoration: none;
         border: medium none;
         box-shadow: @button-box-shadow;
-		 & when (@skin="office-365") { 
+		 & when (@skin="office-365") {
 			font-family:Segoe UI Semibold;
 			font-weight:600;
 			font-size:14px;
@@ -1363,7 +1363,7 @@
         }
     }
 
-    .e-btn, .e-btn div {
+    .e-btn, .e-btn .e-btn-span {
         vertical-align: middle;
         border-spacing: 0;
     }
@@ -1421,15 +1421,15 @@
     .e-btn.e-txt {
         & when not (@skin="material") {
             padding: 0.1em 0.4em 0.3em;
-        } 
+        }
     }
-	 .e-split .e-splitarrowright .e-splitbutton.e-corner, 
-	 .e-split .e-splitarrowleft .e-corner+.e-drp-btn, 
-	 .e-rtl.e-split .e-splitarrowleft .e-splitbutton.e-corner, 
+	 .e-split .e-splitarrowright .e-splitbutton.e-corner,
+	 .e-split .e-splitarrowleft .e-corner+.e-drp-btn,
+	 .e-rtl.e-split .e-splitarrowleft .e-splitbutton.e-corner,
 	 .e-rtl.e-split .e-splitarrowright .e-corner+.e-drp-btn {
          & when (@skin="office-365") {
            border-radius:0px;
-        }		
+        }
 	 }
 	 .e-split .e-btn.e-txt {
 	     padding: 0.1em 0.4em 0.3em;
@@ -1452,7 +1452,7 @@
 		& when (@skin="office-365") {
 		padding:0px;
 		}
-		
+
     }
 
     .e-btn.e-btn-normal, .e-tbtn.e-btn-normal {
@@ -1475,7 +1475,7 @@
         & when not (@skin="material") {
             height: 28px;
             width: 63px;
-        }        
+        }
     }
 
     .e-btn.e-btn-small, .e-tbtn.e-btn-small {
@@ -1487,7 +1487,7 @@
         & when not (@skin="material") {
             height: 32px;
             width: 89px;
-        }        
+        }
     }
 
     .e-btn.e-select.e-btn-medium, .e-tbtn.e-select.e-btn-medium {
@@ -1499,7 +1499,7 @@
         & when not (@skin="material") {
             height: 36px;
             width: 113px;
-        }        
+        }
     }
 
     .e-btn.e-btn-large, .e-tbtn.e-btn-large {
@@ -1511,7 +1511,7 @@
         & when not (@skin="material") {
             height: 40px;
             width: 130px;
-        }        
+        }
     }
 
     .e-btn.e-btn-normal, .e-tbtn.e-btn-normal, .e-btn-normal .e-split-btn.e-select, .e-btn-arrowsplit-normal .e-split-btn.e-select {
@@ -1819,7 +1819,7 @@
 	.e-split.e-btn-normal .e-splitarrowright .e-split-btn.e-rht-btn,.e-split.e-btn-normal .e-splitarrowright .e-split-btn.e-btn-txt {
 		& when (@skin="office-365") {
 			height: 32px;
-		}	
+		}
 	}
 
     .e-splitarrowright .e-split-btn.e-left-btn {
@@ -1891,6 +1891,10 @@
         & when not(@skin="material") {
             margin-top: -10px;
         }
+    }
+
+    .e-splitbutton.e-btn{
+        box-sizing: border-box;
     }
 
     .e-rtl .e-droparrowleft .e-split-btn-div {
@@ -2003,17 +2007,17 @@
         border-radius: 100%;
     }
 
-    .e-flat-icon-btn.e-btn.e-select.e-icon > div, .e-icon-btn.e-btn.e-select.e-icon > div, .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon > div, .e-float-btn.e-btn.e-select.e-icon > div, .e-primary-icon-btn.e-btn.e-select.e-icon > div {
+    .e-flat-icon-btn.e-btn.e-select.e-icon > .e-btn-span, .e-icon-btn.e-btn.e-select.e-icon > .e-btn-span, .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon > .e-btn-span, .e-float-btn.e-btn.e-select.e-icon > .e-btn-span, .e-primary-icon-btn.e-btn.e-select.e-icon > .e-btn-span {
         display: none;
     }
 
-    .e-split-btn.e-btn div {
+    .e-split-btn.e-btn .e-btn-span {
         & when (@skin="material") {
             padding: 0px;
         }
     }
 
-    .e-split-btn.e-btn.e-droparrowright div.e-split-btn-div span.e-icon, .e-split-btn.e-btn.e-droparrowleft div.e-split-btn-div span.e-icon {
+    .e-split-btn.e-btn.e-droparrowright .e-btn-span.e-split-btn-div span.e-icon, .e-split-btn.e-btn.e-droparrowleft .e-btn-span.e-split-btn-div span.e-icon {
         & when (@skin="material") {
             padding: 0px 2px;
         }
@@ -2107,9 +2111,10 @@
         }
     }
 
-    .e-split.e-widget.e-disable:hover, .e-split.e-widget.e-disable:focus {
+    .e-split.e-widget.e-disable:hover, .e-split.e-widget.e-disable:focus,.e-split.e-widget.e-disable:hover:focus {
         & when (@skin="material") {
             background-color: transparent;
+            box-shadow:none;
         }
     }
 
@@ -2123,7 +2128,7 @@
 		border-radius:0px;
 		}
 	}
-	
+
 	.e-split.e-menu.e-context .e-list {
 		& when (@skin= "office-365") {
             line-height: 34px;
@@ -2676,7 +2681,7 @@
         overflow: visible;
 		width: 143px;
         outline: 0 none;
-         & when (@skin= "office-365") { 
+         & when (@skin= "office-365") {
             height: 32px;
         }
          & when not (@skin= "office-365") {
@@ -2697,13 +2702,20 @@
     .e-ddl .e-icon {
         display: block;
         position: absolute;
-		& when (@skin= "office-365") { 
+		& when (@skin= "office-365") {
 			width: 12px;
-			padding: 9px;
+			padding-left: 9px;
+			padding-right: 9px;
 		}
-		& when not (@skin= "office-365") { 
+		& when not (@skin= "office-365") {
 			top: 50%;
 			width: 100%;
+		}
+    }
+    .e-ddl .e-icon.e-arrow-sans-down{
+        & when (@skin= "office-365") {
+			top: 50%;
+            margin-top: -6px
 		}
     }
 
@@ -2716,7 +2728,7 @@
         width: 23px;
         height: 100%;
         text-align: left;
-        & when (@skin= "office-365") { 
+        & when (@skin= "office-365") {
 			border-left: 0px solid;
         }
         & when not (@skin= "office-365") {
@@ -2776,7 +2788,7 @@
 		100% {
 			 opacity: 1;
 		}
-	}    
+	}
 	@keyframes slideDownIn20{
 		0% {
 		  -webkit-transform: translate3d(0,-20px,0);
@@ -2786,7 +2798,7 @@
 			-webkit-transform: translate3d(0,0,0);
 		   transform: translate3d(0,0,0);
 		}
-	 }   
+	 }
     .e-ddl-popup div > ul li, .e-ddl-popup div > .e-listbox li {
         min-height: 1.3em;
 
@@ -3026,7 +3038,7 @@
 				height: 14px;
 				width: 14px;
 			}
-           
+
         }
 
         position: relative;
@@ -3083,7 +3095,7 @@
 
         & when (@skin= "material") {
             /*material*/
-            height: 34px;            
+            height: 34px;
             width: 143px;
         }
         & when (@skin= "office-365") {
@@ -3118,7 +3130,7 @@
         cursor: pointer;
         display: block;
         position: absolute;
-        right: 0;       
+        right: 0;
         top: 0px;
 
         & when (@skin= "material") {
@@ -3218,7 +3230,7 @@
         }
           & when (@skin="office-365"){
             padding:9px 12px 9px 2px;
-        }   
+        }
         & when not (@skin= "material") and not (@skin="office-365") {
             /*other*/
             padding: 2px 0.857em 2px 2px;
@@ -3306,7 +3318,7 @@
 
         border-left: none;
     }
-    
+
 
     .e-datewidget.e-rtl .e-in-wrap.e-padding {
         padding: 0 0 0 24px;
@@ -3522,8 +3534,8 @@
     .e-datepicker .e-footer.e-footer-disable{
         pointer-events: none;
     }
-    
-    .e-datepicker table th {
+
+    .e-datepicker table th,.e-datepicker .e-week-header:hover,.e-datepicker table td.e-weeknumber, .e-datepicker table td.e-weeknumber:hover {
         cursor: default;
         font-weight: @content-font-weight;
         text-align: center;
@@ -3539,6 +3551,11 @@
             font-size: inherit;
         }
     }
+    .e-datepicker table td.e-weeknumber,.e-datepicker table td.e-weeknumber:hover{
+        font-weight:300;
+        font-style:italic;
+        border-radius:0px;
+    }
 
     .e-datepicker table td {
         cursor: pointer;
@@ -3550,12 +3567,20 @@
     .e-datepicker .e-dp-viewdays .e-current-month:hover {
         border-radius: 4px;
     }
+    .e-datepicker .e-dp-viewdays {
+        cellspacing: 2;
 
+    }
     .e-rtl .e-select {
         right: auto;
         left: 0;
     }
-
+     .e-datepicker.e-js.e-input.e-disable,.e-timepicker.e-js.e-input.e-disable,.e-daterangepicker.e-js.e-input.e-disable,.e-datetimepicker.e-js.e-input.e-disable {
+        -webkit-user-select: none;
+        -moz-user-select: none; 
+        -ms-user-select: none; 
+        user-select: none;
+    }
     .e-datepicker.e-icons table .e-datepicker-days td, .e-datepicker.e-icons table th {
         text-align: center;
         & when not (@skin = "office-365") and not (@skin = "material") {
@@ -3572,7 +3597,10 @@
 
     .e-datepicker.e-calendar {
         position: absolute;
-
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
         & when not (@skin = "office-365") {
             width: 18em;
         }
@@ -3694,7 +3722,7 @@
         display: block;
         position: absolute;
         top: 0;
-        right: 0;       
+        right: 0;
         height: 100%;
         text-align: left;
         border-left: 1px solid;
@@ -3723,7 +3751,7 @@
     }
     .e-left-datepicker.e-left-timepicker .e-datewidget,.e-right-datepicker.e-right-timepicker .e-datewidget  {
          width:117px;
-		 & when (@skin= "office-365") {	
+		 & when (@skin= "office-365") {
             width:110px;
         }
 	}
@@ -3828,6 +3856,29 @@
         display: inline-flex;
     }
 
+    .e-daterangepicker-popup.e-daterange-responsive .e-custom-dateranges .e-dateranges-ul li.rangeItem {
+     text-align:center;
+     padding: 0px 25px;
+     & when (@skin= "material") {
+       padding:9px 65px;
+       }
+     & when (@skin="office-365") {
+           padding:3px 80px;
+       }
+    }
+
+    .e-daterangepicker-popup.e-daterange-responsive .e-drp-button.e-select.e-flat {
+    float:none;
+    margin:5px 5px;
+     & when (@skin= "material") {
+    padding:5px 25px;
+      }
+   }
+
+   .e-daterangepicker-popup.e-daterange-responsive .e-drpbuttons {
+        max-width:none;
+    }
+
     .e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default {
         height: 30px;
     }
@@ -3847,7 +3898,7 @@
         & when(@skin="office-365") {
         border-radius: 0px;
         }
-		
+
     }
 
     .e-dateranges {
@@ -4092,7 +4143,7 @@
         height: auto;
         position: relative;
     }
-	.e-menu .e-list>.e-menulink>span.e-icon.e-arrowhead-down, 
+	.e-menu .e-list>.e-menulink>span.e-icon.e-arrowhead-down,
 	.e-menu.e-rtl .e-list>.e-menulink>span.e-icon.e-arrowhead-down {
 		& when (@skin="office-365") {
 			margin-left: 8px;
@@ -4101,12 +4152,12 @@
 	}
 	.e-menu .e-list>.e-menulink>span.e-icon.e-arrowhead-right {
 		& when (@skin="office-365") {
-			margin: 12px; 
+			margin: 12px;
             top: 0%;
 		}
 	}
     .e-menu.e-context .e-list>.e-menulink>span.e-icon.e-arrowhead-right{
-        & when (@skin="office-365") { 
+        & when (@skin="office-365") {
             top: 2px;
 		}
     }
@@ -4117,7 +4168,7 @@
 	}
 	.e-menu.e-vertical .e-list>.e-menulink>span.e-icon.e-arrowhead-right {
 		& when (@skin= "office-365") {
-			margin: 14px; 
+			margin: 14px;
 		}
 	}
 	.e-menu.e-horizontal .e-list > .e-menulink {
@@ -4125,7 +4176,7 @@
 			padding: 15px 24px 15px 10px;
 		}
 	}
-	
+
 	.e-menu.e-horizontal .e-list>ul .e-list > .e-menulink{
 		& when (@skin="office-365") {
 			padding: 10px 18px 10px 28px;
@@ -4137,7 +4188,7 @@
         }
 
         &when not(@skin="material") {
-			
+
 			&when not(@skin="office-365") {
 				padding: 3px 18px 3px 28px;
 			}
@@ -4146,7 +4197,7 @@
         height: inherit;
         white-space: nowrap;
     }
-	
+
 	.e-menu li.e-list > ul>li.e-list .e-menulink > img,
 	.e-menu li.e-list > ul>li.e-list .e-menulink > div,
 	.e-menu li.e-list > ul>li.e-list .e-menulink > span {
@@ -4170,7 +4221,7 @@
         position: absolute;
         vertical-align: middle;
         border: 0 none;
-       
+
     }
 	.e-menu .e-list > .e-menulink > span.e-icon.e-arrowhead-down {
 		& when (@skin="office-365") {
@@ -4403,7 +4454,7 @@
 			line-height: @menu-horizontal-line-height;
 		}
         height: 100%;
-        
+
     }
 
     .e-menu.e-horizontal .e-list > ul {
@@ -4460,7 +4511,7 @@
         }
 
         & when not (@skin= "material") {
-			
+
 			& when not (@skin= "office-365") {
 				padding-right: 24px;
 			}
@@ -4933,11 +4984,11 @@
 			border-bottom: 1px solid;
 		}
     }
-	
+
     .e-acrdn > .e-select {
         & when (@skin= "material") {
             /*material*/
-            padding: 12.5px 0px 12.5px 16px; 
+            padding: 12.5px 0px 12.5px 16px;
 			line-height: 23px;
         }
 
@@ -4958,7 +5009,7 @@
 			padding: 0.5em;
         }
 
-        
+
     }
 
     .e-acrdn .e-select a {
@@ -5248,8 +5299,8 @@
             border-radius: 15px;
             -moz-border-radius: 15px;
             -webkit-border-radius: 15px;
-        }         
-    
+        }
+
     }
 
     .e-radiobtn-wrap .e-radmedium .e-rad-icon {
@@ -5276,12 +5327,12 @@
           & when (@skin="office-365")  {
             height: 10px;
             width: 10px;
-        }   
+        }
           & when not (@skin= "material") and not (@skin="office-365") {
         /*other*/
          height: 9px;
             width: 9px;
-        }   
+        }
         margin: 24% auto;
     }
 
@@ -5492,10 +5543,10 @@
     .e-tab > .e-header .e-icon {
         float: right;
         cursor: pointer;
-        
+
         background-color: transparent;
         background-image: none;
-        
+
 
         & when (@skin= "material") {
 			height: 16px;
@@ -5532,7 +5583,7 @@
         margin-right: 0;
     }
 
-    .e-tab.e-rtl .e-icon, .e-tab .e-left, .e-tab.e-vertical .e-right .e-icon {
+    .e-tab.e-rtl .e-header .e-icon, .e-tab .e-left, .e-tab.e-vertical .e-right .e-icon {
         float: left;
     }
 
@@ -5856,7 +5907,7 @@
         }
         & when not (@skin= "office-365") {
             border-style: dotted;
-        } 
+        }
     }
 
     .e-splitter {
@@ -6020,7 +6071,7 @@
 			& when (@skin="office-365") {
 				margin: 0px 25px 0px auto;
 				float: right;
-				
+
 			}
 			& when not (@skin="office-365") {
 				margin: 0px auto 8px auto;
@@ -6371,7 +6422,7 @@
 			}
             float: left;
             margin-top: 11px;
-            
+
         }
     }
 
@@ -6447,7 +6498,7 @@
         }
     }
 
-    .e-uploadbox .uploaddialog.e-dialog.e-dialog-content {
+    .e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content {
         position: relative;
         border: 0;
         background: none;
@@ -6991,7 +7042,7 @@
 
     .e-dragedNode .e-text {
         text-decoration: none;
-        display: table-cell; 
+        display: table-cell;
         white-space: nowrap;
         margin: 0 0 1px;
     }
@@ -7504,7 +7555,7 @@
     .e-treeview .e-draggable {
         touch-action:none;
     }
-        
+
 }
 
 .mixin(@widget) when (@widget = waitingpopup), (@widget = none) {
@@ -7526,13 +7577,13 @@
 
         & when not (@skin= "material") {
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             height: 55px;
             width: 55px;
             border-radius: 50%;
         }
         & when not (@skin= "office-365") {
-            /*other*/   
+            /*other*/
             height: 70px;
             width: 70px;
             border-radius: 15px 15px 15px 15px;
@@ -7583,7 +7634,7 @@
             }
             & when not (@skin= "office-365") {
             box-shadow: @box-shadow;
-            border: 1px solid; 
+            border: 1px solid;
             padding: 10px 6px 10px 11px;
             }
         }
@@ -7667,7 +7718,7 @@
         }
     }
 
-    
+
 
     .e-toolbar.e-toolbarspan {
         width: 100%;
@@ -7683,7 +7734,7 @@
             height: auto;
             box-shadow: none;
             padding-left: 10px;
-            padding-right: 10px; 
+            padding-right: 10px;
             }
             & when not (@skin= "office-365") {
             height: auto;
@@ -7719,7 +7770,7 @@
             & when not (@skin= "office-365") {
             border: @border-size @border-type transparent;
             padding: @toolbar-padding;
-            } 
+            }
         }
     }
 
@@ -7822,10 +7873,10 @@
             /*other*/
         & when (@skin= "office-365") {
             border: 0px @border-type transparent;
-        }       
+        }
         & when not (@skin= "office-365") {
             border: @border-size @border-type transparent;
-        } 
+        }
         }
     }
 
@@ -7836,10 +7887,10 @@
     .e-toolbar > ul > li {
         & when (@skin= "office-365") {
         margin-right: 2px;
-        }       
+        }
         & when not (@skin= "office-365") {
         margin-right: @toolbar-margin-right;
-        }   
+        }
     }
 
     .e-toolbar .e-icon.e-res-pos.e-arrow-sans-down {
@@ -7902,10 +7953,10 @@
         cursor: pointer;
          & when (@skin= "office-365") {
         margin-top: 9px;
-        }       
+        }
         & when not (@skin= "office-365") {
         margin-top: @toolbar-res-margin-top;
-        } 
+        }
     }
 
     .e-toolbar .e-display-none, .e-toolbar.e-display-none {
@@ -8082,7 +8133,7 @@
             position: absolute;
             text-align: center;
             width: 100%;
-        } 
+        }
         }
     }
 }
@@ -8118,7 +8169,7 @@
     .e-slider.e-corner, .e-slider.e-corner .e-handle, .e-slider.e-corner .e-range {
         border-radius: @slider-border-radius;
     }
-    
+
     .e-slider.e-js, .e-slider.e-js .e-range{
         & when (@skin= "material"), (@skin= "office-365") {
             border-radius: @slider-border-radius;
@@ -8158,8 +8209,8 @@
 			top: -6px;
         }
     }
-    
-    
+
+
     .e-slider .e-handle.e-hover {
         & when (@skin= "material") {
             -webkit-transform: scale(1.333);
@@ -8293,7 +8344,7 @@
             border-radius: 2px;
         }
         & when (@skin= "office-365") {
-            margin-top: -1px;   
+            margin-top: -1px;
             -webkit-animation: e-fadeIn 365ms cubic-bezier(.1,.9,.2,1);
             -moz-animation: e-fadeIn 365ms cubic-bezier(.1,.9,.2,1);
             -o-animation: e-fadeIn 365ms cubic-bezier(.1,.9,.2,1);
@@ -8605,7 +8656,7 @@ background-image: url('../@{font-path}/icons-white.png');
 		& when not (@skin= "office-365") {
 			content: "\e623";
 		}
-		
+
     }
     /*Map*/
     /* common icon position */
@@ -10625,7 +10676,15 @@ background-image: url('../@{font-path}/icons-white.png');
             height: 21px;
         }
 
-        margin-top: -10px;
+        & when (@skin= "office-365") {
+            /*office-365*/
+            margin-top: -10px;
+        }
+
+        & when not (@skin= "office-365") {
+            /*others*/
+            margin-top: -11px;
+        }
     }
 
     .e-datetime-popup {
@@ -11094,6 +11153,10 @@ background-image: url('../@{font-path}/icons-white.png');
         display: block;
     }
 
+    .e-grid *:focus{
+        outline: none;
+    }
+
     .e-grid .e-filtertext::-webkit-search-cancel-button,
     .e-grid .e-responsesearch .e-ejinputtext::-webkit-search-cancel-button {
         -webkit-appearance: none;
@@ -11144,7 +11207,7 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-grid .e-gridcontent, .e-grid .e-groupdroparea, .e-grid .e-headercell, .e-grid .e-headercell-hover, .e-grid .e-headercelldiv,
     .e-grid .e-groupheadercell, .e-grid .e-groupheadercell:hover, .e-grid .e-rowcell, .e-grid .e-indentcell, .e-grid .e-recordpluscollapse,
     .e-grid .e-recordplusexpand, .e-grid .e-filterbarcell, .e-grid .e-filterbarcelldisabled, .e-grid .e-summaryrow,
-    .e-grid .e-headercontent, .e-grid .e-gridheader, .e-grid .e-gridfooter {
+    .e-grid .e-headercontent, .e-grid .e-gridheader, .e-grid .e-gridfooter, .e-grid .e-footercontent {
         overflow: hidden;
         vertical-align: middle;
     }
@@ -11206,8 +11269,16 @@ background-image: url('../@{font-path}/icons-white.png');
         border-top-style: none;
     }
 
-    .e-grid > .e-gridcontent > div > .e-table, .e-grid > .e-gridheader > div > .e-table, .e-grid > .e-gridfooter > .e-gridsummary, .e-grid .e-tabletd .e-table {
-        border-spacing: 0px;
+    .e-grid > .e-gridcontent > div > .e-table,
+    .e-grid > .e-gridheader > div > .e-table,
+    .e-grid > .e-gridfooter .e-gridsummary,
+    .e-grid .e-tabletd .e-table,
+    .e-grid .e-normaledit .e-table,
+    .e-grid > .e-gridcontent .e-movablecontentdiv > .e-table,
+    .e-grid > .e-gridcontent .e-frozencontentdiv > .e-table,
+    .e-grid > .e-gridheader .e-frozenheaderdiv > .e-table,
+    .e-grid > .e-gridheader .e-movableheaderdiv > .e-table {
+      border-spacing: 0px;
     }
 
     .e-grid table th:first-child .e-headercell-hover {
@@ -11220,7 +11291,7 @@ background-image: url('../@{font-path}/icons-white.png');
         border-top: 0 none;
     }
 
-    .e-grid .e-gridcontent .e-addedrow.e-normaledit .e-lastrowcell,.e-grid .e-detailrowcollapse, 
+    .e-grid .e-gridcontent .e-addedrow.e-normaledit .e-lastrowcell,.e-grid .e-detailrowcollapse,
     .e-grid .e-gridcontent .e-editedrow .e-normaledit tr:first-child td:first-child,
     .e-grid .e-gridcontent tr:last-child.e-addedrow.e-normaledit:not(:only-child) td:first-child {
         border-top-width: 1px;
@@ -11260,7 +11331,7 @@ background-image: url('../@{font-path}/icons-white.png');
         margin-top: 0px;
     }
 
-    .e-grid .e-columnheader {
+    .e-grid .e-columnheader:not(.e-stackedHeaderRow) {
         cursor: pointer;
     }
 
@@ -11574,7 +11645,7 @@ background-image: url('../@{font-path}/icons-white.png');
             font-weight: normal;
             text-overflow: ellipsis;
         }
-        
+
         & when (@skin= "office-365") {
             /*material*/
             padding:0 8px;
@@ -11647,7 +11718,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
           & when (@skin= "office-365") {
             padding: 0 8px 0 8px;
-           
+
         }
     }
 
@@ -11771,11 +11842,11 @@ background-image: url('../@{font-path}/icons-white.png');
             padding-left: 0.7em;
         }
     }
-    
+
 	.e-grid .e-normaledit .e-templatecell {
 	        padding:1px .7em
 	}
-	
+
     .e-grid .e-normaledit .e-unboundcell {
         & when not (@skin= "material") {
             padding: 0.7em;
@@ -11912,7 +11983,7 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             border-width: 0 0 1px 0;
         }
-        
+
         & when (@skin= "office-365") {
            height:28px;
         }
@@ -11928,7 +11999,7 @@ background-image: url('../@{font-path}/icons-white.png');
         padding-left: 7px;
         padding-right: 9px;
 
-        
+
          & when (@skin= "office-365") {
             /*border-width: 0 0 @border-size 0;*/
             padding-left: 8px;
@@ -12271,7 +12342,7 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-grid.e-rtl .e-detailindentcell {
     border-left-width: 1px;
     border-left-style: solid;
-    border-left-color:#c8c8c8; 
+    border-left-color:#c8c8c8;
     }
 
     .e-grid.e-rtl .e-headercellfilter {
@@ -12734,7 +12805,8 @@ background-image: url('../@{font-path}/icons-white.png');
         border-bottom-style: solid !important;
     }
 
-    .e-grid .e-frozenrow + tr > td {
+    .e-grid .e-frozenrow + tr > td,
+    .e-grid .e-content .e-frozenrow + tr > td	{
         border-top-width: 0px;
     }
 
@@ -12856,7 +12928,7 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             text-indent: 0px;
         }
-        
+
         & when (@skin= "office-365") {
             padding-top: 2px;
             padding-bottom: 2px;
@@ -12985,7 +13057,11 @@ background-image: url('../@{font-path}/icons-white.png');
         padding-left: 6px;
         text-align: left;
     }
-
+     
+	.e-grid .e-pager.e-rtl .e-pagercontainer{
+	    float: none;
+	}
+	 
     .e-grid .e-rtl .e-parentmsgbar {
         float: left;
         padding-left: 6px;
@@ -13185,10 +13261,10 @@ background-image: url('../@{font-path}/icons-white.png');
         width: 100%;
         white-space: normal;
     }
-	.e-grid .e-pagerstatusbar,
-	.e-grid .e-pager {
-		border-width:@border-size 0px 0px ;
-	}
+    .e-grid .e-pagerstatusbar,
+    .e-grid .e-pager {
+        border-width: @border-size 0px 0px;
+    }
     .e-grid .e-widget .e-pagercontainer > .e-icon {
         box-sizing: content-box;
     }
@@ -13199,12 +13275,12 @@ background-image: url('../@{font-path}/icons-white.png');
             padding-right: 24px;
             padding-top: 11px;
         }
-         & when (@skin= "office-365") {        
-         padding-top:10px;
-         padding-right:10px;
-         margin-right:10px;
-         }
-    & when not (@skin= "material") and not (@skin="office-365"){
+        & when (@skin= "office-365") {
+            padding-top: 10px;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
             /*other*/
             padding-right: 6px;
             padding-top: 4px;
@@ -13229,7 +13305,7 @@ background-image: url('../@{font-path}/icons-white.png');
             line-height: 10px;
             position: relative;
         }
-        & when (@skin= "office-365") {        
+        & when (@skin= "office-365") {
          font-size: 12px;
          }
         & when not (@skin= "material") and not (@skin="office-365") {
@@ -13237,8 +13313,8 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 	.e-pager .e-numeric.e-gototextbox {
-		margin:5px;
-	}
+        margin: 5px;
+    }
 
     .e-pager .e-numericitem {
         border-right-width: @border-size;
@@ -13282,16 +13358,32 @@ background-image: url('../@{font-path}/icons-white.png');
             /*material*/
             padding: 6px 1px 6px 1px;
         }
-         & when (@skin= "office-365") {        
-         padding:0;
-         }
-         & when not (@skin= "material") and not (@skin="office-365") {
+        & when (@skin= "office-365") {
+            padding: 0;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
             /*other*/
             padding: 6px 1px 7px 2px;
         }
 
         cursor: pointer;
         text-decoration: none;
+    }
+    .e-pager.e-disable .e-spacing,
+    .e-pager.e-disable .e-numericitem:hover,
+    .e-pager.e-disable .e-currentitem,.e-pager.e-disable .e-nextpage:hover,.e-pager.e-disable .e-lastpage:hover {
+         cursor:default;
+     }
+
+
+    .e-pager .e-customtext .e-spacing,
+    .e-pager .e-customtext .e-numericitem:hover,
+    .e-pager .e-customtext .e-currentitem {
+
+        & when not (@skin= "material") and not (@skin="office-365") {
+            /*other*/
+            padding: 8px;
+        }
     }
 
     .e-pager .e-currentitem {
@@ -13309,9 +13401,9 @@ background-image: url('../@{font-path}/icons-white.png');
         -webkit-user-select: none;
         -o-user-select: none;
         user-select: none;
-        & when (@skin= "office-365") {    
-        display: inline-block;
-    }
+        & when (@skin= "office-365") {
+            display: inline-block;
+        }
     }
 
     .e-pager .e-icon:before {
@@ -13375,24 +13467,27 @@ background-image: url('../@{font-path}/icons-white.png');
         border-style: @border-type;
         border-radius: 4px 4px 4px 4px;
         margin: 0 6px 0 6px;
-         & when (@skin= "office-365") {    
-          margin: 0 6px 0 10px;
-          }
+        @media (max-width: 270px) {
+        min-width: 200px;
+        }
+        & when (@skin= "office-365") {
+            margin: 0 6px 0 10px;
+        }
     }
 
-    .e-pager .e-nextpage:hover,
-    .e-pager .e-lastpage:hover,
-    .e-pager .e-firstpage:hover,
-    .e-pager .e-prevpage:hover {
+    .e-pager .e-nextpage.e-hover,
+    .e-pager .e-lastpage.e-hover,
+    .e-pager .e-firstpage.e-hover,
+    .e-pager .e-prevpage.e-hover {
         cursor: pointer;
         text-decoration: none;
     }
 
-    .e-pager .e-lastpage:Hover {
+    .e-pager .e-lastpage.e-hover {
         border-radius: 0px 4px 4px 0px;
     }
 
-    .e-pager .e-firstpage:Hover {
+    .e-pager .e-firstpage.e-hover {
         border-radius: 4px 0px 0px 4px;
     }
 
@@ -13404,10 +13499,10 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             float: none;
         }
-         & when (@skin= "office-365") {        
-          float: none;
-          }
-        & when not (@skin= "material") and not (@skin="office-365"){
+        & when (@skin= "office-365") {
+            float: none;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
             float: right;
         }
     }
@@ -13424,12 +13519,12 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-pager.e-rtl .e-pagercontainer {
-        float: none;
+        float: right;
         margin-right: 6px;
         padding: 0px;
-         & when (@skin= "office-365") {        
-         margin-right:10px;
-    }
+        & when (@skin= "office-365") {
+            margin-right: 10px;
+        }
     }
 
     .e-pager.e-rtl .e-firstpage,
@@ -13447,10 +13542,10 @@ background-image: url('../@{font-path}/icons-white.png');
             height: 12px;
             width: 14px;
         }
-         & when (@skin= "office-365") {        
-         padding:0;
-         -webkit-padding-after: 0px;
-    }
+        & when (@skin= "office-365") {
+            padding: 0;
+            -webkit-padding-after: 0px;
+        }
     }
 
     .e-pager.e-rtl .e-firstpage:before,
@@ -13458,10 +13553,10 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             content: "\e841";
         }
-        & when (@skin= "office-365") {        
-          content: "\e841";
-    }
-       & when not (@skin= "material") and not (@skin="office-365") {
+        & when (@skin= "office-365") {
+            content: "\e841";
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
             content: "\e65e";
         }
 
@@ -13472,10 +13567,10 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             content: "\e840";
         }
-         & when (@skin= "office-365") {        
-          content: "\e840";
-    }
-       & when not (@skin= "material") and not (@skin="office-365") {
+        & when (@skin= "office-365") {
+            content: "\e840";
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
             content: "\e664";
         }
 
@@ -13486,10 +13581,10 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             content: "\e83f";
         }
-        & when (@skin= "office-365") {        
-          content: "\e83f";
-    }
-       & when not (@skin= "material") and not (@skin="office-365") {
+        & when (@skin= "office-365") {
+            content: "\e83f";
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
             content: "\e665";
         }
     }
@@ -13499,10 +13594,10 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             content: "\e83e";
         }
-        & when (@skin= "office-365") {        
-          content: "\e83e";
-    }
-       & when not (@skin= "material") and not (@skin="office-365") {
+        & when (@skin= "office-365") {
+            content: "\e83e";
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
             content: "\e65f";
         }
 
@@ -13562,21 +13657,21 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             border-radius: 50%;
         }
-         & when (@skin= "office-365") {        
-         border-radius:0;
-         }
+        & when (@skin= "office-365") {
+            border-radius: 0;
+        }
         & when not (@skin= "material") and not (@skin="office-365") {
             border-radius: 0px 4px 4px 0px;
         }
     }
 
-    .e-pager.e-rtl .e-lastpage:hover {
+    .e-pager.e-rtl .e-lastpage.e-hover {
         & when (@skin= "material") {
             border-radius: 50%;
         }
-         & when (@skin= "office-365") {        
-         border-radius:0;
-         }
+        & when (@skin= "office-365") {
+            border-radius: 0;
+        }
         & when not (@skin= "material") and not (@skin="office-365") {
             border-radius: 4px 0px 0px 4px;
         }
@@ -13612,10 +13707,10 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             padding: 6px 1px 6px;
         }
-         & when (@skin= "office-365") {        
-         padding:0;
-         }
-        & when not (@skin= "material") and not (@skin="office-365"){
+        & when (@skin= "office-365") {
+            padding: 0;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
             padding: 6px 1px 7px;
         }
     }
@@ -13624,67 +13719,68 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             content: "\e83e";
         }
-        & when (@skin= "office-365") {        
-          content: "\e83e";
-    }
+        & when (@skin= "office-365") {
+            content: "\e83e";
+        }
     }
 
     .e-pager .e-arrowheadleft-2x:before {
         & when (@skin= "material") {
             content: "\e83f";
         }
-         & when (@skin= "office-365") {        
-         content: "\e83f";
-    }
+        & when (@skin= "office-365") {
+            content: "\e83f";
+        }
     }
 
     .e-pager .e-arrowheadright-2x:before {
         & when (@skin= "material") {
             content: "\e840";
         }
-        & when (@skin= "office-365") {        
-         content: "\e840";
-    }
+        & when (@skin= "office-365") {
+            content: "\e840";
+        }
     }
 
     .e-pager .e-mediaforward:before {
         & when (@skin= "material") {
             content: "\e841";
         }
-         & when (@skin= "office-365") {        
-         content: "\e841";
+        & when (@skin= "office-365") {
+            content: "\e841";
+        }
     }
+
+    .e-pagercontainer {
+        float: left;
     }
 
-		.e-pagercontainer {
-    float: left;
-	}
-	
-	.e-grid .e-pagercontainer {
-	    float: none;
-	}
-	
-	.e-pager div.e-pager-goto-res  {
-		margin-top:4px;
-		float:left;
-	  }
-	 
-	.e-pager div.e-parentmsgbar.e-msg-res {
-		margin-top:1px;
-	  }
-	.e-pager .e-parentmsgbar.e-msg-res {
-		float: left;	
-		padding-left:5px;
-	}
-	.e-pager input.e-textbox.e-pager-goto-res {
-		margin-top:0px;
+    .e-grid .e-pagercontainer {
+        float: none;
+    }
 
-	}
-	.e-pager input.e-textbox	{
-		margin-top:-4px;
-	}
+    .e-pager div.e-pager-goto-res {
+        margin-top: 4px;
+        float: left;
+    }
 
-			
+    .e-pager div.e-parentmsgbar.e-msg-res {
+        margin-top: 1px;
+    }
+    .e-pager .e-parentmsgbar.e-msg-res {
+        float: left;
+        padding-left: 5px;
+    }
+    .e-pager input.e-textbox.e-pager-goto-res {
+        margin-top: 0px;
+    }
+
+    .e-pager input.e-textbox {
+        margin-top: -4px;
+        margin-right: 10px;
+    }
+
+
     .e-pager div.e-drpdwndiv {
         border: 1px solid;
         overflow: hidden;
@@ -13694,9 +13790,9 @@ background-image: url('../@{font-path}/icons-white.png');
         display: inline-block;
         overflow: visible;
         border-radius: 4px 4px 4px 4px;
-		&when(@skin="office-365") {
-        height: 32px;
-    }
+        &when(@skin="office-365") {
+            height: 32px;
+        }
     }
 
     .e-pager .e-drpdwn {
@@ -13707,15 +13803,13 @@ background-image: url('../@{font-path}/icons-white.png');
         font-size: 13px;
         position: absolute;
         top: 28px;
-        border-radius: 4px 4px 4px 4px;
 		&when(@skin="office-365") {
         top: 32px;
     }
     }
-.e-pager .e-drpdwn li{       
+.e-pager .e-drpdwn li{
 padding:5px;
 width:40px;
-	border-radius:4px 4px 4px 4px;
 
 }
 .e-drpdwndiv:before {
@@ -13746,12 +13840,26 @@ width:40px;
 		margin-left:-25%;
     }
 }
-
+.e-pager.e-rtl .e-pager-itemsinterval span.e-text {
+	position: inherit;
+	float: left;
+	&when(@skin="office-365") {
+        padding-left: 12.5;
+		margin-left:0px;
+    }
+}
 .e-pager .e-pager-itemsinterval {
 display:inline-block;
 height:28px;
 padding-left: 5px;
 }
+
+@media (max-width: 270px) {
+    .e-pager.e-js {
+        min-width: 177px;
+    }
+}
+
 .e-interval-msg {
 float:right;
 margin:0px 5px;
@@ -14144,7 +14252,7 @@ line-height:28px;
         }
     }
 
-    .e-groupbutton .e-grp-btn-item.e-hover *{
+    .e-groupbutton .e-grp-btn-item.e-hover * {
         cursor: pointer;
     }
 
@@ -14171,11 +14279,11 @@ line-height:28px;
 
     .e-groupbutton.e-corner > .e-vertical.e-ul > li.e-grp-btn-item:first-child {
         & when not(@skin="material") {
-                border-radius: 4px 4px 0px 0;
+            border-radius: 4px 4px 0px 0;
         }
 
         & when(@skin="material") {
-                border-radius: 2px 2px 0px 0;
+            border-radius: 2px 2px 0px 0;
         }
     }
 
@@ -15390,7 +15498,7 @@ line-height:28px;
         }
     }
 
-    .e-fe-toolbar .e-splitbutton>div:first-child .e-icon{
+    .e-fe-toolbar .e-splitbutton>span:first-child .e-icon{
         & when (@skin="office-365"){
             width: 14px;
             height: 14px;
@@ -15500,7 +15608,7 @@ line-height:28px;
         & when not (@skin= "office-365") {
             margin-right: 14px;
         }
-        
+
     }
 
     .e-rtl .e-fe-dialog-centerbtn .e-fe-btn-ok, .e-rtl .e-fe-dialog-btn .e-fe-btn-ok, .e-rtl .e-fe-dialog-centerbtn .e-fe-btn-skip, .e-rtl .e-fe-dialog-btn .e-fe-btn-skip {
@@ -15701,9 +15809,9 @@ line-height:28px;
     .e-fe-toolbar:not(.e-rtl).e-toolbar.e-js .e-feItem-Layout .e-split-btn-div{
         & when (@skin="office-365") {
             left: 16px;
-        }  
+        }
     }
-    
+
     .e-fileexplorer:not(.e-rtl) .e-toolbar.e-js .e-feItem-SortBy .e-split-btn-div,
     .e-fe-toolbar:not(.e-rtl).e-toolbar.e-js .e-feItem-SortBy .e-split-btn-div{
         & when (@skin="office-365") {
@@ -16950,11 +17058,11 @@ line-height:28px;
         border-radius: 0 4px 4px 0;
     }
 
-    .e-fileexplorer .e-toolbar .e-splitbutton > div:first-child {
+    .e-fileexplorer .e-toolbar .e-splitbutton > span:first-child {
         display: table;
     }
 
-    .e-fileexplorer .e-toolbar .e-splitbutton > div:first-child .e-icon {
+    .e-fileexplorer .e-toolbar .e-splitbutton > span:first-child .e-icon {
         width: 14px;
         height: 14px;
         padding: 0 3px;
@@ -17324,13 +17432,13 @@ line-height:28px;
         & when not (@skin= "material") {
             /*other*/
         & when (@skin= "office-365") {
-            /*office-365*/   
+            /*office-365*/
             margin-top: 0px;
         }
         & when not (@skin= "office-365") {
-            /*other*/   
+            /*other*/
             margin-top: 5px;
-        } 
+        }
         }
     }
 
@@ -17437,18 +17545,26 @@ line-height:28px;
 		border-left:0px;
 		border-bottom:0px;
 	 }
-    .e-rte .e-toolbar .e-icon.e-toolbar-res-arrow:before { 
+    .e-rte .e-toolbar .e-icon.e-toolbar-res-arrow:before {
         width: 21px;
         height: 21px;
     & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
        margin-top: 9px;
     }
-    & when not (@skin= "office-365") {
-            /*office-365*/ 
+    & when (@skin= "material") {
+            /*material*/
        margin-top: @rte-toolbar-res-margin-top;
+
+    }
+    & when not (@skin= "material") {
+            /*other*/
+            & when not (@skin= "office-365") {
+                margin-top: 0px;
+                padding-top:2px;
     }
     }
+	}
 
     .e-rte .e-split.e-btn-normal .e-drp-btn .e-split-btn-div {
         & when (@skin= "material") {
@@ -17474,7 +17590,7 @@ line-height:28px;
 
     .e-rteItem-unorderedList.e-tooltxt .e-split.e-btn-normal{
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
            height: 38px !important;
     }
     }
@@ -17482,7 +17598,7 @@ line-height:28px;
     .e-rteItem-orderedList.e-tooltxt.e-active .e-splitbutton.e-btn.e-left-btn:focus, .e-rteItem-orderedList.e-tooltxt.e-active .e-split-btn.e-btn.e-select.e-drp-btn:focus
     {
   & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
            border: 0px;
     }
     }
@@ -17576,15 +17692,15 @@ line-height:28px;
         & when not (@skin= "material") {
             /*other*/
         & when (@skin= "office-365") {
-       /*material*/  
+       /*material*/
            height: 16px;
             width: 16px;
         }
     & when not (@skin= "office-365") {
-        /*other*/  
+        /*other*/
 	       height: 24px;
            width: 24px;
-    }   
+    }
         }
     }
 
@@ -17601,7 +17717,7 @@ line-height:28px;
         & when not (@skin= "material") {
             /*other*/
         & when (@skin= "office-365") {
-        /*other*/  
+        /*other*/
             margin-right: 8px;
     }
         }
@@ -17627,30 +17743,30 @@ line-height:28px;
         }
     }
 
-    .e-rte.e-rte-wrapper .e-horizontal { 
+    .e-rte.e-rte-wrapper .e-horizontal {
         & when (@skin= "material") {
             /*other*/
             padding-left: 0px;
             padding-right: 0px;
             margin-bottom: 4px;
-            margin-top: 4px; 
+            margin-top: 4px;
         }
 
         & when not (@skin= "material") {
             /*other*/
         & when (@skin= "office-365") {
-            /*office-365*/  
+            /*office-365*/
             padding-left: 0px;
             padding-right: 0px;
             margin-bottom: 0px;
             margin-top: 0px;
         }
         & when not (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             padding-left: 4px;
             padding-right: 4px;
             margin-bottom: 4px;
-            margin-top: 4px; 
+            margin-top: 4px;
         }
         }
     }
@@ -17660,12 +17776,12 @@ line-height:28px;
     .e-rte .e-toolbar .e-rte-lists {
         margin: 2px 0;
          & when (@skin= "office-365") {
-            /*office-365*/   
+            /*office-365*/
             padding-left: 0px;
             padding-right: 0px;
         }
         & when not (@skin= "office-365") {
-            /*office-365*/  
+            /*office-365*/
             padding-left: 2px;
             padding-right: 2px;
         }
@@ -17683,23 +17799,23 @@ line-height:28px;
         & when not (@skin= "material") {
             /*other*/
              & when (@skin= "office-365") {
-            /*office-365*/  
+            /*office-365*/
             border-width: 0px;
             padding: 1px;
         }
         & when not (@skin= "office-365") {
-            /*office-365*/  
+            /*office-365*/
             border-width: 1px;
             padding: 1px;
         }
         }
     }
     .e-rte .e-toolbar .e-rte-fontgroup > li.e-rteItem-fontColor,
-    .e-rte .e-toolbar .e-rte-fontgroup > li.e-rteItem-backgroundColor,
-    .e-rte .e-toolbar .e-rte-lists > li {
+    .e-rte .e-toolbar .e-rte-fontgroup > li.e-rteItem-backgroundColor
+	{
         & when not (@skin= "office-365") {
-            /*office-365*/   
-            padding: 0px;
+            /*office-365*/
+            padding: 1px;
         }
     }
 
@@ -17924,7 +18040,7 @@ line-height:28px;
         content: "\e632";
         margin-top: 4px;
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin-left: 2px;
     }
     }
@@ -17956,18 +18072,18 @@ line-height:28px;
             width: 32px;
             height: 32px;
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin: -2px auto;
         }
         & when not (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin: 0px;
         }
     }
     }
     .e-rte-listitems:before{
      & when (@skin= "office-365") {
-       /*office-365*/ 
+       /*office-365*/
         font-size: 20px;
         margin: 0px 6px;
     }
@@ -18054,11 +18170,11 @@ line-height:28px;
         & when not (@skin= "material") {
             /*material*/
         & when (@skin= "office-365") {
-           /*office-365*/ 
+           /*office-365*/
             padding: 0px;
         }
         & when not (@skin= "office-365") {
-       /*office-365*/ 
+       /*office-365*/
             padding: 4px 4px 4px 4px;
         }
     }
@@ -18189,11 +18305,11 @@ line-height:28px;
         margin-left: 1px;
         width: 16px;
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
         margin-top: 1px;
         }
         & when not (@skin= "office-365") {
-            /*other*/   
+            /*other*/
         margin-top: -5px;
         }
     }
@@ -18345,7 +18461,7 @@ line-height:28px;
         & when not (@skin= "material") {
             /*other*/
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             padding-top: 20px;
         }
             bottom: -1em;
@@ -18408,11 +18524,11 @@ line-height:28px;
         & when not (@skin= "material") {
             /*other*/
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             width: 205px;
         }
         & when not (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             width: 230px;
         }
             border: 1px solid #c8c8c8;
@@ -18478,11 +18594,11 @@ line-height:28px;
         & when not (@skin= "material") {
             /*material*/
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin: 20px 0px 0px 9px;
         }
         & when not (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin: 0px 0px 0px 9px;
         }
     }
@@ -18499,25 +18615,25 @@ line-height:28px;
         & when not (@skin= "material") {
             /*material*/
             & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin: 20px 0px 0px 0px;
         }
         & when not (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin: 0px 16px 0px 0px;
         }
     }
     }
 
-    .e-rte.e-findandreplace.e-dialog .e-widget-content .e-btn { 
+    .e-rte.e-findandreplace.e-dialog .e-widget-content .e-btn {
         & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin: 0px 0px 0px 7px;
             max-width: 72px;
             padding: 0px;
         }
         & when not (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             max-width: 85px;
             margin: 13px 0px 13px 7px;
         }
@@ -18552,11 +18668,11 @@ line-height:28px;
 
     .e-rte.e-findandreplace.e-dialog .e-widget-content .e-maincontent {
          & when (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
            height: 110px;
         }
          & when not (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             margin: 23px 0px 0px 15px;
             height: 110px;
         }
@@ -18579,10 +18695,10 @@ line-height:28px;
         & when not (@skin= "material") {
             /*material*/
         & when not (@skin= "office-365") {
-            /*office-365*/ 
+            /*office-365*/
             padding: 0px;
         }
-            
+
         }
     }
 
@@ -18886,7 +19002,7 @@ line-height:28px;
     }
 
     .e-tile.e-tile-badge.e-tile-badge-value::after {
-        content: attr(badgeValue);
+        content: attr(data-ej-badgeValue);
         font-size: 14px;
         text-align: center;
     }
@@ -18933,7 +19049,7 @@ line-height:28px;
     }
 
     .e-tile-caption-text::before {
-        content: attr(text);
+        content: attr(data-ej-text);
         width: 100%;
     }
 
@@ -19230,6 +19346,9 @@ line-height:28px;
 
 .mixin(@widget) when (@widget = gantt), (@widget = none) {
 
+    ej-gantt{
+        display: block;
+    }
 
     .e-gantt *:focus {
         outline: none;
@@ -19792,6 +19911,7 @@ line-height:28px;
         & when not (@skin= "material") and not (@skin= "office-365") {
             height: 25px;
         }
+        padding: 1px 4px 1px 0px;
     }
 
     .e-gantt .e-search .e-ejinputtext {
@@ -19950,13 +20070,31 @@ line-height:28px;
         }
     }
 
+    .e-ganttdialog .e-editform-btn input {
+        & when (@skin= "material") {
+            font-size: 14px;
+            margin-right: 0px;
+        }
+
+        & when (@skin= "office-365") {
+            font-size: 14px;
+            margin-right: 0px;
+        }
+
+        & when not (@skin= "material") and not (@skin= "office-365") {
+            font-size: 14px;
+            font-weight: normal;
+            margin-right: 0px;
+        }
+    }
+
     .e-ganttdialog .e-btn.e-select, .e-ganttdialog .e-btn.e-select:hover, .e-ganttdialog .e-btn.e-select:active {
         & when (@skin = "material") {
             font-weight: 500;
         }
     }
 
-    .e-ganttdialog .e-general-edit-div .editLabel {
+    .e-ganttdialog .e-general-edit-div .e-editLabel {
         & when (@skin= "office-365") {
             padding-bottom: 8px;
             font-size: 12px;
@@ -19971,30 +20109,33 @@ line-height:28px;
         font-weight: normal;
     }
 
-    .e-ganttdialog .e-general-edit-div .editLabel label {
+    .e-ganttdialog .e-general-edit-div .e-editLabel label {
         & when (@skin= "material") {
             font-weight: normal;
             margin-bottom: 0px;
+            font-size: 14px;
         }
 
         & when (@skin= "office-365") {
             font-weight: normal;
             margin-bottom: 0px;
+            font-size: 12px;
         }
 
         & when not (@skin= "material") and not (@skin= "office-365") {
             font-weight: normal;
             margin-bottom: 0px;
+            font-size: 14px;
         }
     }
 
     .e-ganttdialog .e-general-edit-div .e-editValue {
         & when (@skin = "office-365") {
-            padding-bottom: 8px !important;
+            padding: 0px 0px 8px 0px!important;
         }
 
         & when not (@skin= "office-365") {
-            padding-bottom: 1px;
+            padding: 0px 0px 1px 0px;
         }
     }
 
@@ -20024,6 +20165,11 @@ line-height:28px;
 }
 
 .mixin(@widget) when (@widget = treegrid), (@widget = none) {
+
+    ej-treegrid{
+        display: block;
+    }
+
     .e-treegrid-core {
         border-collapse: collapse;
         font-size: @gantt-content-font-size;
@@ -20055,6 +20201,30 @@ line-height:28px;
         outline: none;
     }
 
+    .e-treegrid .e-unboundcelldiv > button {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .e-treegrid .e-unboundcelldiv button {
+        margin: 0px 0px 0px 7px;
+        padding: 0px;
+    }
+
+    .e-treegrid .e-textwrapcell {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+    }
+
+    .e-treegrid .e-textwrapcolumnicon {
+        margin-top: -20px !important;
+    }
+
+    .e-treegrid .e-textwrapheaderdiv {
+        word-wrap: break-word;
+    }
+
     .e-treegrid .e-treegridexpand:before {
         content: "\e67c";
         font-size: 7px !important;
@@ -20071,6 +20241,22 @@ line-height:28px;
         & when not (@skin= "material") and not (@skin= "office-365") {
             padding-top: 8px;
         }
+    }
+
+	.e-treegrid .e-icon.e-printIcon:before {
+        content: "\e741";
+    }
+
+    .e-treegrid .e-pager .e-numericitem,
+    .e-treegrid .e-pager .e-firstpage,
+    .e-treegrid .e-pager .e-prevpage,
+    .e-treegrid .e-pager .e-firstpagedisabled,
+    .e-treegrid .e-pager .e-prevpagedisabled,
+    .e-treegrid .e-pager .e-nextpage,
+    .e-treegrid .e-pager .e-lastpage,
+    .e-treegrid .e-pager .e-nextpagedisabled,
+    .e-treegrid .e-pager .e-lastpagedisabled {
+        box-sizing: content-box;
     }
 
     .e-treegrid .e-treegridcollapse:before {
@@ -20237,7 +20423,10 @@ line-height:28px;
         color: #cd0a0a;
         white-space: normal;
     }
-
+    .e-treegrid .e-aboveIcon,
+    .e-treegrid .e-belowIcon,
+    .e-treegrid .e-childIcon,
+    .e-treegrid .e-cancelIcon,
     .e-treegrid .e-treegridcollapse {
         width: 24px;
         height: 24px;
@@ -20277,25 +20466,25 @@ line-height:28px;
         margin-top: 5px;
     }
 
-    .e-treegrid .aboveIcon:before {
+    .e-treegrid .e-aboveIcon:before {
         content: "\e765";
         font-size: 20px;
         margin-top: -5px;
     }
 
-    .e-treegrid .belowIcon:before {
+    .e-treegrid .e-belowIcon:before {
         content: "\e766";
         font-size: 20px;
         margin-top: 9px;
     }
 
-    .e-treegrid .childIcon:before {
+    .e-treegrid .e-childIcon:before {
         content: "\e764";
         font-size: 20px;
         margin-top: 2px;
     }
 
-    .e-treegrid .cancelIcon:before {
+    .e-treegrid .e-cancelIcon:before {
         content: "\e767";
         font-weight: 200;
         font-size: 20px;
@@ -20564,11 +20753,11 @@ line-height:28px;
         box-shadow: none;
     }
 
-    .e-treegrid .iconMargin:before {
+    .e-treegrid .e-iconMargin:before {
         margin-left: -4px !important;
     }
 
-    .e-treegrid .firstLevIconMargin:before {
+    .e-treegrid .e-firstLevIconMargin:before {
         margin-right: -6px !important;
     }
 
@@ -20591,6 +20780,7 @@ line-height:28px;
     .e-treegrid .e-edit,
     .e-treegrid .e-delete,
     .e-treegrid .e-save,
+	.e-treegrid .e-printIcon,
     .e-treegrid .e-cancel {
         & when (@skin= "material") {
             margin-left: 4px;
@@ -20757,6 +20947,7 @@ line-height:28px;
         }
 
         margin: 0;
+        font-weight:normal;
     }
 
     .e-treegrid .e-editedfirstcell {
@@ -20932,7 +21123,7 @@ line-height:28px;
         border-width: 0px 1px 0px 0px;
     }
 
-    .e-treegrid .e-dialog .treegridform .e-editdialogrowcell {
+    .e-treegrid .e-dialog .e-treegridform .e-editdialogrowcell {
         & when (@skin= "material") {
             border: none;
             padding: 10px 0px 10px 10px;
@@ -20948,7 +21139,7 @@ line-height:28px;
         display: none !important;
     }
 
-    .e-treegrid .e-dialog .treegridform .e-editdialoglabel {
+    .e-treegrid .e-dialog .e-treegridform .e-editdialoglabel {
         & when (@skin= "material") {
             border: none;
             padding: 10px 10px 10px 0px;
@@ -20960,7 +21151,7 @@ line-height:28px;
         }
     }
 
-    .e-treegrid .e-dialog .treegridform .e-editdialogbutton {
+    .e-treegrid .e-dialog .e-treegridform .e-editdialogbutton {
         & when (@skin= "material") {
             padding: 10px 0px 0px 0px;
         }
@@ -20979,7 +21170,7 @@ line-height:28px;
             padding: 7px 24px;
         }
     }
-    .e-treegrid .e-dialog .treegridform .e-editdialoglabel label:first-child {
+    .e-treegrid .e-dialog .e-treegridform .e-editdialoglabel label:first-child {
         font-weight:normal;
     }
 
@@ -21391,7 +21582,7 @@ line-height:28px;
 
     .e-addedColumn .e-editValue {
         & when (@skin = "material") {
-            padding-bottom: 10px;
+            padding: 0px 0px 10px 0px;
             height: 30px;
         }
 
@@ -21400,7 +21591,7 @@ line-height:28px;
         }
 
         & when not (@skin= "material") and not (@skin= "office-365") {
-            padding-bottom: 0px;
+            padding: 0px;
         }
     }
 
@@ -21748,6 +21939,43 @@ line-height:28px;
         }
     }
 
+    .e-treegrid-dialog .e-treegrid-add-btn input,
+    .e-treegrid-dialog .e-confirm-dialog-btn input,.e-treegrid .e-dialog .e-treegridform .e-editdialogbutton input {
+        & when (@skin = "material") {
+            font-size: 14px;
+            margin-right: 0px;
+        }
+
+        & when (@skin = "office-365") {
+            font-size: 14px;
+            margin-right: 0px;
+        }
+        & when not (@skin= "material") and not (@skin= "office-365") {
+        font-size: 14px;
+        font-weight: normal;
+        margin-right: 0px;
+        }
+    }
+
+    .e-treegrid .e-dialog .e-treegridform .e-editdialoglabel label {
+        font-size: 14px;
+    }
+
+    .e-treegrid-dialog .e-treegrid-rename-dialog-btn input {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .e-treegrid-dialog .e-treegrid-rename-dialog-btn-cancel {
+        margin-right: 0px;
+    }
+
+    .e-addedColumn .e-editLabel {
+        & when not (@skin= "material") and not (@skin= "office-365") {
+        padding: 1px 1px 0px 1px;
+        }
+    }
+
     .e-treegrid-dialog .e-treegrid-add-btn {
         width: 100%;
         height: 27px;
@@ -22007,7 +22235,7 @@ line-height:28px;
     }
 
 
-    .e-addedColumn .editLabel {
+    .e-addedColumn .e-editLabel {
         & when (@skin = "material") {
             padding: 0px 0px 2px 0px;
         }
@@ -22021,18 +22249,21 @@ line-height:28px;
         }
     }
 
-    .e-addedColumn .editLabel label,
-    .e-treegridrenamedialog .editLabel label {
+    .e-addedColumn .e-editLabel label,
+    .e-treegridrenamedialog .e-editLabel label {
         & when (@skin = "material") {
             margin-bottom: 5px;
+            font-size: 13px
         }
 
         & when (@skin= "office-365") {
             margin-bottom: 0px;
+            font-size: 13px
         }
 
         & when not (@skin= "material") and not (@skin= "office-365") {
             margin-bottom: 5px;
+            font-size: 14px
         }
     }
 
@@ -22042,7 +22273,7 @@ line-height:28px;
         }
     }
 
-    .e-treegridrenamedialog .editLabel {
+    .e-treegridrenamedialog .e-editLabel {
         & when (@skin= "office-365") {
             padding: 0px 0px 10px 0px;
         }
@@ -22064,6 +22295,11 @@ line-height:28px;
             height: 26px;
             width: 98%;
         }
+    }
+
+    .e-treegrid .e-table.e-zerospace {
+        border-spacing: 0px;
+        border-collapse:collapse;
     }
 }
 
@@ -22190,16 +22426,16 @@ line-height:28px;
         border-spacing: 0;
     }
 
-    .e-ganttchart .gripper:before {
+    .e-ganttchart .e-gripper:before {
         content: "\e602";
         padding: 2px;
     }
 
-    .e-ganttchart .taskbarresizer-right.e-icon.gripper {
+    .e-ganttchart .e-taskbarresizer-right.e-icon.e-gripper {
         margin-left: -4px;
     }
 
-    .e-ganttchart .taskbarresizer-left.e-icon.gripper {
+    .e-ganttchart .e-taskbarresizer-left.e-icon.e-gripper {
         margin-left: -6px;
     }
 
@@ -22267,17 +22503,17 @@ line-height:28px;
         border-width: 1px;
     }
 
-    .e-ganttchart .milestone-top,
-    .e-ganttchart .baseline-milestone-top,
-    .e-ganttchart .milestone-bottom,
-    .e-ganttchart .baseline-milestone-bottom {
+    .e-ganttchart .e-milestone-top,
+    .e-ganttchart .e-baseline-milestone-top,
+    .e-ganttchart .e-milestone-bottom,
+    .e-ganttchart .e-baseline-milestone-bottom {
         width: 0;
         height: 0;
         position: absolute;
         z-index: 3;
     }
 
-    .e-ganttchart .taskbarresizer-left {
+    .e-ganttchart .e-taskbarresizer-left {
         position: absolute;
         z-index: 4;
     }
@@ -22419,18 +22655,18 @@ line-height:28px;
     }
 
 
-    .e-ganttchart .connectorline-rightarrow,
-    .e-ganttchart .connectorline-leftarrow {
+    .e-ganttchart .e-connectorline-rightarrow,
+    .e-ganttchart .e-connectorline-leftarrow {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
     }
 
-    .e-ganttchart .connectorline-rightarrow {
+    .e-ganttchart .e-connectorline-rightarrow {
         border-left-width: 10px;
         border-left-style: solid;
     }
 
-    .e-ganttchart .connectorline-leftarrow {
+    .e-ganttchart .e-connectorline-leftarrow {
         border-right-width: 10px;
         border-right-style: solid;
     }
@@ -22481,18 +22717,24 @@ line-height:28px;
         margin: 5px;
     }
 
-    .customTooltip {
+    .e-customTooltip {
         z-index: 6;
         width: auto;
         padding: 3px;
     }
 
-    .e-tooltiptable,
-    .tooltiptd {
-        margin: 5px;
+    .e-tooltiptable {
         .gantt-content-boxSizing();
         border-spacing:5px;
         border-collapse:separate;
+    }
+
+    .e-tooltiptable td {
+        padding: 0px;
+    }
+
+    .e-tooltipgantt table {
+        margin-top: 0px;
     }
 
     .e-tooltiptd-alignright {
@@ -22629,6 +22871,9 @@ line-height:28px;
 
     .e-ganttchart .e-ganttgridLinesTable, .e-ganttchart .e-ganttviewerbodyContianer-ganttViewTable {
         margin-top: 0px;
+    }
+    .e-ganttchart .e-zerospacing{
+        border-spacing:0px;
     }
 }
 
@@ -23275,6 +23520,10 @@ line-height:28px;
         margin: 0;
     }
 
+    .e-schedule .e-table {
+        border-spacing: 0px !important;
+    }
+
     .e-categorizeMenuSelected {
         height: 18px;
         width: 18px;
@@ -23637,7 +23886,8 @@ line-height:28px;
         overflow: hidden;
     }
 
-    .e-schedule .e-monthcells {
+    .e-schedule .e-monthcells,
+	.e-schedule .e-alldaycells {
         cursor: default;
     }
 
@@ -23794,6 +24044,11 @@ line-height:28px;
         position: relative;
     }
 
+    .e-schedule .e-inlinewrapper {
+        position: relative;
+        z-index: 9;
+    }
+
     .e-schedule .e-monthcurrenttime {
         font-weight: 600;
     }
@@ -23881,7 +24136,8 @@ line-height:28px;
 
     .e-schedule .e-monthappointment,
     .e-schedule .e-alldayappointment,
-    .e-schedule .e-appointment {
+    .e-schedule .e-appointment,
+    .e-schedule .e-inline {
         overflow: hidden;
         position: absolute;
         text-align: left;
@@ -23889,6 +24145,10 @@ line-height:28px;
         border-radius: @border-radius;
     }
 
+      .e-schedule .e-inlineedit:focus,
+      .e-schedule .e-inlinetext:focus {
+           outline: none;
+       }
 
     .e-schedule .e-alldayappointment {
 
@@ -24485,7 +24745,7 @@ line-height:28px;
 			line-height: 0px;
         }
 	}
-	
+
     .e-scheduledialog.e-rtl #endsonafter .e-labelcursor {
         & when (@skin= "office-365") {
 			margin: 0px !important;
@@ -24645,7 +24905,8 @@ line-height:28px;
         }
     }
 
-    .e-scheduledialog.e-rtl .e-recureditbtns .e-editonly {
+    .e-scheduledialog.e-rtl .e-recureditbtns .e-editonly,
+    .e-scheduledialog.e-rtl .e-recureditbtns .e-editfutureonly {
         & when (@skin= "office-365") {
             float: none;
             margin-left: 8px;
@@ -24668,6 +24929,19 @@ line-height:28px;
 
         & when not (@skin= "material") and not (@skin= "office-365") {
             margin-right: 10px;
+        }
+    }
+
+    .e-scheduledialog .e-recureditbtns .e-editfutureonly {
+        float: none;
+        margin-left: 0px;
+
+        & when (@skin= "material") {
+            padding: 0 13px;
+        }
+
+        & when (@skin= "office-365") {
+            width: auto;
         }
     }
 
@@ -24881,6 +25155,27 @@ line-height:28px;
         outline: medium none;
     }
 
+    .e-scheduledialog .e-editfutureonly {
+        float: left;
+        cursor: pointer;
+        outline: medium none;
+
+        & when (@skin= "material") {
+            width: 90px;
+            margin-left: 5px;
+        }
+
+        & when (@skin= "office-365") {
+            width: 100px;
+            margin-left: 8px;
+        }
+
+        & when not (@skin= "material") and not (@skin= "office-365") {
+            width: auto;
+            margin-left: 12px;
+        }
+    }
+
     .e-scheduledialog .e-editseries {
         cursor: pointer;
         float: right;
@@ -24905,6 +25200,10 @@ line-height:28px;
         float: right;
         margin-right: 2px;
         text-align: right;
+    }
+
+    .e-scheduledialog.e-rtl .e-editfutureonly {
+        float: right;
     }
 
     .e-scheduledialog.e-rtl .e-editseries {
@@ -25671,19 +25970,19 @@ line-height:28px;
 
     .e-reportviewer-ejdropdownlist {
         width: auto;
-        height: 90%;
-        margin: 3.7px 2px 2px 2px;
         float: left;
         border: 1px solid transparent;
 
         & when (@skin = "office-365") {
-            margin: 7px 2px 2px 2px;
+            padding: 8px !important;
+            padding-bottom: 15px !important;
         }
         & when not (@skin = "material") and not (@skin = "office-365") {
-            margin: 3.7px 2px 2px 2px;
+            padding: 0px !important;
         }
         & when (@skin = "material") {
-            margin: 3.7px 2px 2px 0px;
+            padding: 8px !important;
+            padding-top: 4px !important;
         }
     }
 
@@ -25699,20 +25998,21 @@ line-height:28px;
 
     .e-reportviewer-tbpage {
         background-color: transparent;
-        float: left;
         text-align: center;
         width: auto;
-        height: 25px;
 
         & when (@skin = "office-365") {
-            padding-top: 8px;
-            margin-top: 1px;
+            padding-top: 9px !important;
+            padding-bottom: 15px !important;
         }
         & when not (@skin = "material") and not (@skin = "office-365") {
-            margin-top: 3.6px;
+            margin-top: 0px;
+            padding-top: 3px !important;
+            padding-bottom: 9px !important;
         }
         & when (@skin = "material") {
-            margin-top: 5px;
+            padding-top: 4px !important;
+            padding-bottom: 9px !important;
         }
     }
 
@@ -25778,28 +26078,35 @@ line-height:28px;
         -moz-user-select: none;
     }
 
-    span.e-reportviewer-param {
-        & when (@skin = "office-365") {
-            height: 32px;
-        }
-        & when not (@skin = "office-365") {
-            height: 26px;
-        }
-    }
-
     .e-reportviewer-paramcheckbox{
         & when (@skin = "office-365") {
             background-color: #ffffff;
             padding-left: 4.5% !important;
-            width: 96%;
+            width: 95.5%;
         }
         & when (@skin = "material") {
-            padding-left: 10%;
-            width: 90%;
+            padding-left: 9.5%;
+            width: 90.5%;
         }
         & when not (@skin = "material") and not (@skin = "office-365") {
-            padding-left: 7% !important;
-            width: 93%;
+            padding-left: 6.5% !important;
+            width: 93.5%;
+        }
+    }
+
+    .e-reportviewer-device-paramcheckbox{
+        & when (@skin = "office-365") {
+            background-color: #ffffff;
+            padding-left: 4.5% !important;
+            width: 95.5%;
+        }
+        & when (@skin = "material") {
+            padding-left: 9.5%;
+            width: 90.5%;
+        }
+        & when not (@skin = "material") and not (@skin = "office-365") {
+            padding-left: 1.2% !important;
+            width: 98.8%;
         }
     }
 
@@ -25880,6 +26187,7 @@ line-height:28px;
 
         margin: 0;
         padding: 1px !important;
+        vertical-align: inherit;
     }
 
     e-reportviewer-elementalignments:focus {
@@ -25913,6 +26221,7 @@ line-height:28px;
 
     .e-reportviewer-label, .e-reportviewer-labelpageno {
         border: none;
+        vertical-align: inherit;
     }
 
     .e-reportviewer-documentmappopup {
@@ -26124,11 +26433,11 @@ line-height:28px;
         content: "\e74e";
     }
 
-    div[id*='toolbar_zoomSelection_popup'] {
+    .e-reportviewer-zoomSelection_popup {
         max-height: none !important;
     }
 
-    div[id*='toolbar_zoomSelection_popup'] > div > ul {
+    .e-reportviewer-zoomSelection_popup-ul {
         text-align: center !important;
     }
 
@@ -26183,7 +26492,7 @@ line-height:28px;
         text-transform: none;
         text-align: center;
         vertical-align: middle;
-        line-height: normal !important;
+        line-height: normal;
         display: inline-block;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -26202,7 +26511,6 @@ line-height:28px;
     }
 
     .e-pdfviewer-toolbarcontainer {
-        height: inherit !important;
         width: 100%;
         vertical-align: middle;
         border-width: 1px;
@@ -26215,7 +26523,13 @@ line-height:28px;
         & when (@skin = "material") and not (@skin = "office-365") {
             padding-top: 2.2px;
             padding-bottom: 2.2px;
-            padding-right: 11px !important;
+        }
+    }
+
+    .e-pdfviewer-toolbarcontainer.e-toolbar {
+        height: inherit;
+        & when (@skin = "material") and not (@skin = "office-365") {
+            padding-right: 11px;
         }
     }
 
@@ -26247,10 +26561,20 @@ line-height:28px;
 
         & when (@skin = "material") {
             margin-left: 5px;
-            margin-right: 5px !important;
             width: 21px;
             height: 21px;
-            padding: 7.5px !important;
+        }
+    }
+
+    .e-pdfviewer-toolbarli.e-tooltxt{
+        & when (@skin = "material") {
+            padding: 7.5px;
+        }
+    }
+
+    .e-toolbar.e-js ul>li.e-pdfviewer-toolbarli.e-tooltxt{
+        & when (@skin = "material") {
+            margin-right: 5px;
         }
     }
 
@@ -26350,7 +26674,7 @@ line-height:28px;
         }
 
         & when (@skin="material") {
-            margin-top: 6px !important;
+            margin-top: 6px;
             margin-left: 5px;
             margin-right: 5px;
         }
@@ -26360,18 +26684,18 @@ line-height:28px;
     }
 
     .e-pdfviewer-responsivesecondarytoolbar {
-        width: 215px;
+        width: 230px;
         left: 244px;
         top: 54px;
         z-index: 10235;
-        position: absolute !important;
+        position: absolute;
     }
 
     .e-pdfviewer-toolbarcontainer input.e-input, .e-pdfviewer-viewerblockcontent input.e-input {
-        line-height: normal !important;
+        line-height: normal;
     }
 
-    .e-pdfviewer-print, .e-pdfviewer-emptyconetent, .e-pdfviewer-fitpage, .e-pdfviewer-fitwidth, .e-pdfviewer-gotonext, .e-pdfviewer-gotonext.e-pdfviewer-disabled, .e-pdfviewer-gotoprevious, .e-pdfviewer-gotoprevious.e-pdfviewer-disabled, .e-pdfviewer-gotofirst, .e-pdfviewer-gotofirst.e-pdfviewer-disabled, .e-pdfviewer-gotolast, .e-pdfviewer-gotolast.e-pdfviewer-disabled, .e-pdfviewer-zoomin, .e-pdfviewer-zoomout, .e-pdfviewer-download, .e-pdfviewer-find {
+    .e-pdfviewer-print, .e-pdfviewer-emptyconetent, .e-pdfviewer-fitpage, .e-pdfviewer-fitwidth, .e-pdfviewer-gotonext, .e-pdfviewer-gotonext.e-pdfviewer-disabled, .e-pdfviewer-gotoprevious, .e-pdfviewer-gotoprevious.e-pdfviewer-disabled, .e-pdfviewer-gotofirst, .e-pdfviewer-gotofirst.e-pdfviewer-disabled, .e-pdfviewer-gotolast, .e-pdfviewer-gotolast.e-pdfviewer-disabled, .e-pdfviewer-zoomin, .e-pdfviewer-zoomout, .e-pdfviewer-download, .e-pdfviewer-find, .e-pdfviewer-sign {
         margin-top: 1px;
 
         & when not (@skin = "material") and not (@skin = "office-365") {
@@ -26398,7 +26722,7 @@ line-height:28px;
         height: 25px;
 
         & when not (@skin = "material") and not (@skin = "office-365") {
-            margin-top: 4.6px;
+            margin-top: 2.6px;
         }
 
         & when (@skin = "material") {
@@ -26411,11 +26735,38 @@ line-height:28px;
         }
     }
 
+     .e-pdfviewer-toolbarli-label.e-tooltxt {
+        padding:0px;
+     }
+
+     li.e-tooltxt > .e-pdfviewer-ejdropdownlist {
+         border:0px;
+     }
+
+     li.e-tooltxt > .e-pdfviewer-search-checkboxcontainer{
+         & when not (@skin = "material"){
+             margin-top:-2px;
+         }
+         & when (@skin = "material") {
+             margin-top:2px;
+         }
+     }
+
+     .e-toolbar.e-js ul > li.e-tooltxt.e-pdfviewer-toolbarli-label {
+         & when (@skin = "material") {
+             margin-right:4px;
+         }
+     }
+
+     .e-pdfviewer-sign-dialog.e-dialog.e-widget-content{
+            background:#fff;
+        }
+
     .e-pdfviewer-pagenumber {
-        min-height: 22px !important;
-        min-width: 25px !important;
-        height: 22px !important;
-        width: 28px !important;
+        min-height: 22px;
+        min-width: 25px;
+        height: 22px;
+        width: 28px;
         display: inline-block;
         text-align: center;
 
@@ -26437,8 +26788,8 @@ line-height:28px;
 
     .e-pdfviewer-viewer {
         width: 100%;
-        text-shadow: none !important;
-        min-width: 320px !important;
+        text-shadow: none;
+        min-width: 320px;
         -webkit-user-select: text;
     }
 
@@ -26478,7 +26829,7 @@ line-height:28px;
     }
 
     .e-pdfviewer-scrollcontainer {
-        line-height: normal !important;
+        line-height: normal;
         position: relative;
         height: 100%;
         width: 100%;
@@ -26513,7 +26864,7 @@ line-height:28px;
         border-width: 1px;
         border-style: solid;
         margin: 0;
-        padding: 1px !important;
+        padding: 1px;
     }
 
     .e-pdfviewer-viewercontainer {
@@ -26575,21 +26926,23 @@ line-height:28px;
         left: 1px;
         top: 1px;
         margin-left: 4px;
+    }
 
+    .e-pdfviewer-searchbox.e-toolbar>.e-horizontal.e-ul.e-pdfviewer-toolbarul-search {
         & when (@skin="material") {
-            margin-top: 3px !important;
+            margin-top: 3px;
         }
     }
 
     .e-pdfviewer-searchbox.e-toolbar ul:last-child > li:last-child {
         & when (@skin="material") {
-            margin-right: 0px !important;
+            margin-right: 0px;
         }
     }
 
     .e-pdfviewer-toolbarul > li.e-pdfviewer-toolbarli:first-child {
         & when (@skin="material") {
-            margin-left: 0px !important;
+            margin-left: 0px;
         }
     }
 
@@ -26795,7 +27148,9 @@ line-height:28px;
     }
     .e-pdfviewer-propertiestitle.e-header{
         padding:20px 16px;
-        border-bottom:0px !important;
+    }
+    .e-pdfviewer-propertiestitle.e-header.e-titlebar{
+        border-bottom:0px;
     }
     .e-pdfviewer-propertiestab.e-widget-content{
         padding-top:0px;
@@ -26850,7 +27205,7 @@ line-height:28px;
         float:left;
     }
     .e-inputchangeval{
-        padding-left:6px !important;
+        padding-left:6px;
         border-radius:3px;
     }
     .e-pdfviewer-subject-input, .e-pdfviewer-author-input {
@@ -27037,13 +27392,46 @@ line-height:28px;
     .e-pdfviewer-closefind:before {
         content: "\e837";
     }
+     .e-pdfviewer-select:before{
+          & when not (@skin = "material") and not (@skin = "office-365") {
+            content:"\e904"
+        }
+        & when (@skin = "office-365") {
+            content:"\e901"
+        }
+          & when (@skin = "material") {
+            content:"\e903"
+        }
 
+     }
+     .e-pdfviewer-scroll:before{
+              & when not (@skin = "material") and not (@skin = "office-365") {
+            content:"\e905"
+        }
+        & when (@skin = "office-365") {
+            content:"\e902"
+        }
+         & when (@skin = "material") {
+            content:"\e904"
+        }
+        }
+    .e-pdfviewer-sign:before {
+         & when not (@skin = "material") and not (@skin = "office-365") {
+            content:"\e903"
+        }
+        & when (@skin = "material") {
+            content:"\e902"
+        }
+        & when (@skin = "office-365") {
+            content:"\e900"
+        }
+     }
     div[id*='toolbar_zoomSelection_popup'] {
         max-height: none !important;
     }
 
     div[id*='toolbar_zoomSelection_popup'] > div > ul {
-        text-align: center !important;
+        text-align: center;
     }
 
     .e-pdfviewer-popupli {
@@ -27059,19 +27447,11 @@ line-height:28px;
         padding-left: 4px;
     }
 
-    .e-pdfviewer-lispan {
-        text-decoration: none;
-        white-space: nowrap;
-        padding: 2px !important;
-        vertical-align: text-bottom;
-    }
-
     .e-pdfviewer-custom-menu, .e-pdfviewer-highlight-menu {
         z-index: 1000;
         position: absolute;
         border: solid 2px #000;
         background-color: #fff;
-        min-width: 350px !important;
         padding: 5px 0;
         display: none;
     }
@@ -27080,9 +27460,8 @@ line-height:28px;
         padding: 0;
         margin: 0;
         list-style-type: none;
-        min-width: 350px !important;
         width: auto;
-        max-width: 200px;
+        max-width: 248px;
         font-family: Verdana;
         font-size: 12px;
     }
@@ -27173,18 +27552,18 @@ line-height:28px;
         padding: 5px 0;
         float: left;
         text-align: center;
-        width: 65px !important;
+        width: 65px;
     }
 
     .e-pdfviewer-touchDot {
         z-index: 1000;
         position: absolute;
-        margin-left: 64px !important;
+        margin-left: 64px;
         background-color: white;
         padding: 5px 0;
         float: right;
         text-align: center;
-        width: 65px !important;
+        width: 65px;
     }
 
     .e-pdfviewer-touchcustom-menu {
@@ -27192,7 +27571,7 @@ line-height:28px;
         position: absolute;
         box-sizing: border-box;
         box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.4);
-        width: 130px !important;
+        width: 130px;
         padding: 5px 0;
         display: none;
         height: 35px;
@@ -27239,7 +27618,7 @@ line-height:28px;
     }
 
     .e-pdfviewer-pageCanvas {
-        -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     }
 
     .e-dropdownlist.e-input.e-pdfviewer-ddl, .e-ddl-popup.e-pdfviewer-ddl .e-ul li {
@@ -27296,7 +27675,7 @@ line-height:28px;
 
     .e-excelfilter .e-menu.e-vertical .e-list > ul .e-list > a {
         padding-left: 15px;
-         & when (@skin= "office-365") { 
+         & when (@skin= "office-365") {
              padding-left:0;
          }
     }
@@ -27440,7 +27819,7 @@ line-height:28px;
         margin: 0px 2px;
         & when (@skin= "office-365") {
             padding: 0;
-           
+
        }
     }
 
@@ -27516,7 +27895,7 @@ line-height:28px;
             padding-bottom: 3px;
         }
     }
-    .e-excelfilter .e-dlgcustom.e-dialog .e-predicate td div.e-radsmall, 
+    .e-excelfilter .e-dlgcustom.e-dialog .e-predicate td div.e-radsmall,
     .e-excelfilter .e-dlgcustom.e-dialog .e-predicate td span.e-check-small {
          & when (@skin= "office-365") {
              height:32px;
@@ -28176,12 +28555,15 @@ slideRight Animate
         font-size: 14px;
         position: relative;
         right: 0;
+        & when (@skin= "material") {
+            top: 2px;
+        }
     }
 
     .e-lv .e-list.e-margin .e-chevron-right_01 span {
         left: 10px;
         position: relative;
-        top: 6px;
+        top: 9px;
     }
 
     .e-lv .e-list .e-chevron-right_01 [class*="icon-"] {
@@ -28395,7 +28777,7 @@ slideRight Animate
             width: 266px;
             box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.21);
         }
-		
+
 		 & when (@skin= "office-365") {
             padding: 12px;
 			width: 331px;
@@ -28443,11 +28825,11 @@ slideRight Animate
         display: inline-block;
         position: relative;
         overflow: hidden;
-		
+
 		& when not (@skin = "office-365") {
 			border: 3px solid;
         }
-		
+
         & when (@skin = "material"), (@skin = "office-365") {
             width: 80%;
         }
@@ -28461,7 +28843,7 @@ slideRight Animate
         & when (@skin = "material") {
             height: 151px;
         }
-		
+
 		 & when (@skin = "office-365") {
             height: 200px;
         }
@@ -28503,12 +28885,12 @@ slideRight Animate
     }
 
     .e-colorpicker .e-buttons .e-preview {
-       
+
         display: inline-block;
         outline: 0 none;
         height: 100%;
         position: relative;
-		
+
 		 & when not (@skin = "office-365") {
 			border-style: solid;
 			border-width: 3px;
@@ -28518,15 +28900,15 @@ slideRight Animate
             width: 32px;
             margin-left: 14px;
         }
-		
+
 		& when (@skin = "office-365") {
-            width: 16%;
+            width: 14%;
 			top: -1px;
-            padding-left:10px;
+            padding-left:16px;
         }
 
         & when not (@skin = "material") and  not (@skin = "office-365") {
-            width: 16%;
+            width: 14%;
             top: 6px;
         }
     }
@@ -28537,8 +28919,10 @@ slideRight Animate
 
         & when (@skin = "material") {
             height: 38px;
+			box-sizing: border-box;
+			border: 2px solid #eee;
         }
-		
+
 		 & when (@skin = "office-365") {
             height: 37px;
         }
@@ -28576,7 +28960,7 @@ slideRight Animate
             width: 100%;
 			padding: 0 8px 0 0;
         }
-		
+
         & when not (@skin = "material") and not (@skin = "office-365") {
             border-width: 1px;
             height: 23px;
@@ -28593,7 +28977,7 @@ slideRight Animate
         position: relative;
 
         & when not (@skin = "material") and not (@skin = "office-365") {
-            width: 80%;
+            width: 81%;
             top: 7px;
         }
 
@@ -28601,7 +28985,7 @@ slideRight Animate
             width: 80%;
             top: 80%;
         }
-		
+
 		& when (@skin = "office-365") {
             width: 80%;
         }
@@ -28616,7 +29000,7 @@ slideRight Animate
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
             width: 100%;
         }
-		
+
 		 & when (@skin = "office-365") {
             height: 32px;
             width: 100%;
@@ -28644,7 +29028,7 @@ slideRight Animate
             margin-top: 6px;
             width: 93%;
         }
-		
+
 		 & when (@skin= "office-365") {
             margin-top: 10px;
             width: 96%;
@@ -28659,7 +29043,7 @@ slideRight Animate
 			font-size: 14px;
 			font-weight: 400;
 		}
-		
+
     }
 
     .e-colorpicker .e-buttons .e-color-code::-ms-clear {
@@ -28674,13 +29058,13 @@ slideRight Animate
             padding: 0 14px;
             width: 33.3%;
         }
-		
+
 		 & when (@skin = "office-365") {
             height: 32px;
             padding: 0 14px;
             width: 33%;
         }
-		
+
         & when not (@skin = "material") and not (@skin = "office-365") {
             height: 25px;
             border-radius: 5px;
@@ -28704,15 +29088,15 @@ slideRight Animate
 
     .e-colorpicker .e-slider-wrap .e-handle {
         background: transparent;
-		& when (@skin = "office-365"){
 		border: 3px solid #fff;
+		& when not (@skin = "material"){
 			box-shadow: rgb(146, 146, 146) 0px 0px 5px inset;
 		}
     }
 
     .e-colorpicker .e-popupWrapper .e-slider-wrap {
         display: inline-block;
-     
+
         padding: 0 !important;
 
         & when not (@skin= "material") and not (@skin= "office-365") {
@@ -28726,11 +29110,11 @@ slideRight Animate
 			width: 8px;
 			height: 151px;
         }
-		
+
 		 & when (@skin= "office-365") {
 			margin-left: 17px;
 			width: 11px;;
-			height: 200px;			
+			height: 200px;
         }
     }
 
@@ -28768,13 +29152,13 @@ slideRight Animate
     }
 
     .e-colorpicker .e-slider-wrap .e-hue, .e-colorpicker .e-slider-wrap .e-opacity {
-       
-        
+
+
 
         & when (@skin = "material") {
             width: 8px;
         }
-		
+
 		 & when not (@skin = "office-365") {
 			border-style: solid;
 			border-width: 3px;
@@ -28818,7 +29202,7 @@ slideRight Animate
             box-shadow: none;
             border-radius: 2px;
         }
-		
+
 		 & when (@skin = "office-365") {
             margin: 6px 25px 6px 0px;
             box-shadow: none;
@@ -28937,7 +29321,7 @@ slideRight Animate
         }
 	}
 
-    .e-colorpicker .e-footer .e-split-btn.e-btn div {
+    .e-colorpicker .e-footer .e-split-btn.e-btn .e-btn-span {
         padding: 0px;
 
         & when (@skin= "material") {
@@ -28980,11 +29364,11 @@ slideRight Animate
         & when (@skin = "material") {
             width: 48%;
         }
-		
+
 		& when (@skin = "office-365") {
             width: 50%;
         }
-		
+
     }
 
     .e-colorpicker .e-footer .e-switcher {
@@ -29000,7 +29384,7 @@ slideRight Animate
             height: 30px;
             width: 30px;
         }
-		
+
 		 & when (@skin = "office-365") {
             height: 30px;
             width: 30px;
@@ -29028,7 +29412,7 @@ slideRight Animate
             margin: 2px 1px;
         }
 
-        
+
     }
 
     .e-colorpicker .e-footer .e-switcher .e-color-image.e-paletteModel {
@@ -29043,7 +29427,7 @@ slideRight Animate
          & when not (@skin= "material") and not (@skin="office-365") {
                 /*other*/
                 margin: 3px 2px 2px;
-                background-position: 1px -846px; 
+                background-position: 1px -846px;
         }
     }
 
@@ -29066,7 +29450,7 @@ slideRight Animate
             left: 91px;
             margin-left: 8px;
         }
-		
+
 		 & when (@skin = "office-365") {
             margin-left: -16px;
         }
@@ -29074,7 +29458,7 @@ slideRight Animate
 
     .e-colorpicker .e-footer .e-split.e-widget {
         display: inline-block;
-        
+
 		& when not (@skin = "material") and not (@skin = "office-365"){
 			height: 25px;
 		}
@@ -29126,7 +29510,7 @@ slideRight Animate
             height: 30px;
             width: 5.2em;
         }
-		
+
 		& when (@skin = "office-365") {
             font-size: 14px;
            font-size: 14px;
@@ -29443,7 +29827,7 @@ slideRight Animate
             width: 20px !important;
             border-width: 0;
         }
-		
+
 		 & when (@skin = "office-365") {
             height: 24px;
             width: 24px !important;
@@ -29463,13 +29847,13 @@ slideRight Animate
 			margin-top: 0;
 		}
 	}
-	
+
 	.e-colorpicker .e-row{
 		& when (@skin = "office-365"){
 			margin-top: 3px;
 		}
 	}
-	
+
     .e-colorpicker .e-row .e-item:first-child {
         margin-left: 0;
     }
@@ -29486,7 +29870,7 @@ slideRight Animate
             box-shadow: inset 0px 0px 0px 1.5px rgba(255,255,255,1);
             box-sizing: border-box;
         }
-		
+
 		& when (@skin = "office-365") {
            border: 1.3px solid #000;
         }
@@ -29516,7 +29900,7 @@ slideRight Animate
 
     .e-presetWrapper .e-presets-table .e-preset-row {
         display: inline-block;
-       
+
         background-repeat: no-repeat !important;
 
         & when (@skin = "material") {
@@ -29524,12 +29908,12 @@ slideRight Animate
             width: 32px;
             border-radius: 2px;
         }
-		
+
 		 & when not (@skin = "office-365") {
 			margin-left: 5px;
 			margin-right: 5px;
         }
-		
+
 		 & when (@skin = "office-365") {
 			margin-right: 12px;
         }
@@ -29541,13 +29925,13 @@ slideRight Animate
     }
 
     .e-presetWrapper.e-widget.e-context {
-	
+
 		& when not (@skin = "office-365") {
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 			border: 3px solid;
 			width: auto;
 		}
-		
+
 		& when (@skin = "office-365") {
 			width: auto;
 			padding:12px 0 12px 12px;
@@ -29603,7 +29987,7 @@ slideRight Animate
             width: 60%;
             padding: 0;
         }
-		
+
 		 & when (@skin = "office-365") {
             width: 50%;
             padding: 0;
@@ -30828,7 +31212,7 @@ slideRight Animate
         }
     }
 
-    .e-kanban .e-slexpand:before {
+    .e-kanban .e-slexpand:before, .e-kanban .e-toggle-expand:before {
         content: "\e804";
     }
 
@@ -30842,6 +31226,69 @@ slideRight Animate
             /*other*/
             content: "\e80b";
         }
+    }
+
+    .e-kanban .e-toggle-collapse:before {
+            content: "\e803" ;
+    }
+
+     .e-kanban .e-columnrow .e-rowcell .e-toggle-header {
+            cursor: pointer;
+     }
+
+     .e-kanban .e-columnrow .e-rowcell .e-toggle-header div {
+            display: inline-block;
+     }
+
+     .e-kanban .e-columnrow .e-rowcell .e-toggle-header .e-toggle-icon {
+            padding-right: 8px;
+     }
+
+     .e-kanban .e-columnrow .e-rowcell .e-togglekey {
+            padding-left: 12px;
+     }
+
+     .e-kanban .e-rowcell .e-togglekey div {
+            margin-left: 0px ;
+     }
+
+     .e-kanban .e-columnrow .e-rowcell .e-toggle-key {
+           font-size: 18px;
+           font-weight: normal;
+     }
+
+     .e-kanban .e-columnrow .e-rowcell .e-toggle-header .e-toggle-count, .e-kanban .e-columnrow .e-rowcell .e-togglekey {
+            font-size: 14px;
+            font-weight: 500;
+     }
+
+    .e-kanban .e-columnrow .e-rowcell .e-toggle-count {
+           float: right;
+     }
+
+    .e-kanban .e-columnrow .e-rowcell .e-toggle-header {
+           margin: 12px 12px 12px 12px;
+     }
+
+    .e-kanban.e-rtl .e-columnrow .e-rowcell .e-toggle-header .e-toggle-icon {
+           padding-right: 0px;
+           padding-left: 10px;
+     }
+    .e-kanban.e-rtl .e-columnrow .e-rowcell .e-togglekey  {
+           padding-right: 12px;
+     }
+
+    .e-kanban.e-rtl .e-columnrow .e-rowcell .e-togglekey div {
+           margin-left: 0px;
+           margin-right: 0px;
+     }
+
+    .e-kanban.e-rtl .e-columnrow .e-rowcell .e-toggle-count {
+           float: left;
+    }
+
+    .e-kanban .e-columnrow .e-rowcell .e-togglekey .e-kanbancard {
+           font-weight: normal;
     }
 
     .e-kanban .e-slcollapse {
@@ -32358,7 +32805,7 @@ slideRight Animate
             border-bottom-width: 1px;
         }
     }
-	
+
 	.e-kanban.e-responsive .e-kanbantoolbar .e-searchbar.e-ul{
 		& when (@skin="office-365"){
 	     margin: 0px;
@@ -32369,33 +32816,33 @@ slideRight Animate
 	   height: 35px;
 	   }
 	}
-	
+
 	.e-kanban.e-responsive .e-kanbantoolbar.e-adaptive-search .e-search .e-searchfind{
 	 & when (@skin="office-365"){
 	  height: 25px;
 	  }
 	}
-	
+
 	.e-kanban.e-responsive .e-kanbantoolbar.e-adaptive-search .e-search .e-searchfind.e-adapt-search:before {
 	 & when (@skin="office-365"){
       left: 5px;
       top: 0px;
 	 }
    }
-   
+
    .e-kanban.e-responsive .e-kanbantoolbar.e-adaptive-search .e-search .e-adapt-cancel:before {
      & when (@skin="office-365"){
       top: 4px;
 	  left: 2px;
 	 }
    }
-   
+
    .e-kanban.e-responsive .e-kanbantoolbar li.e-search.e-tooltxt{
      & when (@skin="office-365"){
       height: 35px !important;
 	 }
    }
-   
+
    .e-kanban.e-responsive .e-kanbantoolbar.e-adaptive-search li.e-search.e-tooltxt{
     & when (@skin="office-365"){
       height: 25px !important;
@@ -32406,14 +32853,14 @@ slideRight Animate
      padding-bottom: 3px;
 	}
    }
-   
+
    .e-kanban.e-responsive .e-kanbantoolbar:not(.e-adaptive-search) .e-searchitem:before {
     & when (@skin="office-365"){
      left: 6px;
      top: 3px;
 	 }
    }
-   
+
 	.e-kanban.e-responsive .e-kanbantoolbar:not(.e-adaptive-search) .e-searchitem {
 	 & when (@skin="office-365"){
       width: 30px;
@@ -32490,14 +32937,14 @@ slideRight Animate
         margin: 0;
         height: 30px !important;
     }
-    
+
 	.e-ribbon .e-menu.e-horizontal .e-list>.e-menulink{
 	    & when (@skin= "office-365") {
             /*office-365*/
             padding: 0px 24px 0px 8px;
         }
 	}
-	
+
 	.e-ribbon .e-menu .e-list>.e-menulink>span.e-icon.e-arrowhead-down, .e-ribbon .e-menu.e-rtl .e-list>.e-menulink>span.e-icon.e-arrowhead-down{
 	    & when (@skin= "office-365") {
             /*office-365*/
@@ -32505,7 +32952,7 @@ slideRight Animate
 			margin-right: 8px;
         }
 	}
-	
+
     .e-ribbon .e-content-show {
         display: block !important;
     }
@@ -32516,6 +32963,9 @@ slideRight Animate
         overflow: hidden;
     }
 
+    .e-ribbon .e-rbn-button > span {
+          display: inline-block;
+        }
     .e-ribbon .e-groupdiv {
         display: inline-block;
         height: 95%;
@@ -32616,7 +33066,7 @@ slideRight Animate
     .e-ribbon .e-groupdiv .e-resizebtn {
         position: relative;
         left: 2px;
-        
+
 		& when (@skin= "office-365") {
             /*office-365*/
             min-width: 75px;
@@ -33265,7 +33715,7 @@ slideRight Animate
             font-weight: 500! important;
         }
     }
-    
+
 	.e-ribbon .e-btn.e-btn-normal, .e-ribbon .e-tbtn.e-btn-normal{
         & when (@skin= "office-365") {
             /*office-365*/
@@ -33819,6 +34269,7 @@ slideRight Animate
         z-index: 100001;
         display: table;
         width: auto;
+        margin-top:0px;
     }
 
     .e-ribbon.e-rbnwithqat .e-qaresizediv {
@@ -34465,6 +34916,7 @@ slideRight Animate
         & when (@skin= "material") {
             height: 14px;
             width: 14px;
+            vertical-align: baseline;
         }
     }
 
@@ -34853,6 +35305,10 @@ slideRight Animate
         margin: 0 2px 0 2px;
     }
 
+	.e-spreadsheet .e-rightalign .e-chkbox-wrap div > span {
+		text-align: right;
+	}
+
     .e-spreadsheet .e-spreadsheetmainpanel .e-rowcell > button {
         font-size: 9px;
     }
@@ -35162,7 +35618,7 @@ slideRight Animate
             height: 35px;
         }
     }
-	
+
     .e-spreadsheet .e-pager .e-pagercontainer {
         float: none;
     }
@@ -35674,7 +36130,7 @@ slideRight Animate
     .e-spreadsheet .e-chartlayoutbtn .e-btntxt {
         line-height: 14px;
         text-align: left;
-        text-indent: -1px;
+        text-indent: -2px;
         width: 53px;
         & when (@skin = "material"), (@skin = "office-365")  {
             width: 58px;
@@ -38377,7 +38833,7 @@ slideRight Animate
         font-weight: bold;
     }
 
-    .ej-ssgrid .e-gridcontent .e-ss-emptyrecord, .ej-ssgrid .e-gridcontent .emptyrecord {
+    .e-ss-grid .e-gridcontent .e-ss-emptyrecord, .e-ss-grid .e-gridcontent .emptyrecord {
         text-align: center;
     }
 
@@ -38767,7 +39223,7 @@ slideRight Animate
         width: 100%;
     }
 
-    .e-dialog .ej-ssgrid .e-rowcell {
+    .e-dialog .e-ss-grid .e-rowcell {
         border: 0;
     }
 
@@ -38835,17 +39291,17 @@ slideRight Animate
         padding: 5px 5px 5px 0px;
     }
 
-    .ej-ssgrid .e-dialog .e-addedrow {
+    .e-ss-dialog.e-ss-grid .e-dialog .e-addedrow {
         padding-bottom: 0px;
     }
 
-    .ej-ssgrid .e-dialog .e-addedrow table, .ej-ssgrid .e-dialog .e-editedrow table {
-        border-spacing: 1px !important;
+    .e-ss-dialog.e-ss-grid .e-dialog .e-addedrow table, .e-ss-grid .e-dialog .e-editedrow table {
+        border-spacing: 1px;
     }
 
-    .ej-ssgrid .e-dialog .e-addedrow table input, .ej-ssgrid .e-dialog .e-addedrow table textarea,
-    .ej-ssgrid .e-dialog .e-editedrow table input, .ej-ssgrid .e-dialog .e-editedrow table textarea {
-        text-align: left !important;
+    .e-ss-dialog.e-ss-grid .e-dialog .e-addedrow table input, .e-ss-grid .e-dialog .e-addedrow table textarea,
+    .e-ss-dialog.e-ss-grid .e-dialog .e-editedrow table input, .e-ss-grid .e-dialog .e-editedrow table textarea {
+        text-align: left;
     }
 
     .e-insertdialog.e-widget-content.e-dialog {
@@ -39124,17 +39580,17 @@ slideRight Animate
     .e-spreadsheet .e-ssr-fieldlist + span.e-btntxt {
         text-indent: -2px;
     }
-	
+
 	.e-ss-dialog .e-ss-lefttopdiv {
 	   width: 30%;
        float: left;
        padding-right: 28px;
 	}
-	
+
 	.e-ss-dialog .e-ss-lefttopdiv label {
 	   padding-bottom: 7px;
 	}
-	
+
    .e-ss-dialog .e-ss-leftdiv {
 	width: 30%;
     padding-right: 16px;
@@ -39143,7 +39599,7 @@ slideRight Animate
             padding-bottom: 15px;
         }
 	}
-	
+
 	.e-ss-dialog.e-ss-fcdlg .e-ss-rightdiv tr.e-fdlg-num-options td label {
 	& when not (@skin = "office-365") {
 	        padding-top:9px;
@@ -39154,20 +39610,20 @@ slideRight Animate
 	  float:right;
 	  margin-top: 5px;
 	}
-	
+
 	 .e-ss-dialog.e-ss-insdeldlg .e-dlgctndiv tr td label {
 	 & when not (@skin = "office-365"),(@skin = "material") {
 	   margin-top:6px;
 	 }
 	 }
-	
+
 	.e-ss-pictureborder #dashes.picturecolor ul li div {
         width:30px;
     }
     .e-ss-pictureborder #dashes.picturecolor ul li {
         margin:10px;
     }
-	
+
     .e-ss-pictureborder.e-menu #dashes.picturecolor .e-list > .e-menulink {
         min-height: 12px;
     }
@@ -39177,14 +39633,14 @@ slideRight Animate
             padding:0px;
         }
     }
-	
+
     .e-ss-pictureborder.e-menu .e-list > .e-menulink > span.e-icon.e-arrowhead-right {
         & when (@skin = "material") {
             top:45%;
         }
     }
-	
-	.e-spreadsheet .e-ribbon .e-numeric {			
+
+	.e-spreadsheet .e-ribbon .e-numeric {
 	   & when (@skin = "material") {
 	       width:100%;
 	    }
@@ -39199,7 +39655,7 @@ slideRight Animate
         }
     }
 
-	
+
     /* Material Theme Changes*/
     .e-ss-dialog.e-ss-fcgdiv {
         bottom: 0;
@@ -39334,7 +39790,7 @@ slideRight Animate
             padding-right: 12px;
         }
     }
-	
+
 	.e-ss-dialog.e-ss-insdeldlg .e-radiobtn-wrap {
 	  & when not (@skin = "office-365") {
             margin-bottom: -4px;
@@ -39403,7 +39859,7 @@ slideRight Animate
         }
     }
 
-    .e-ss-dialog label, .e-ss-dialog .e-ss-fcgdiv, .e-ss-dialog.ej-ssgrid .e-dialog.e-widget-content {
+    .e-ss-dialog label, .e-ss-dialog .e-ss-fcgdiv, .e-ss-dialog.e-ss-grid .e-dialog.e-widget-content {
         & when (@skin = "material") {
             font-family: @spreadsheet-font-family;
             font-size: @font-size;
@@ -39908,7 +40364,7 @@ slideRight Animate
             margin: 8px 10px 8px 5px;
         }
     }
- 
+
     .e-menu-wrap .e-formatastablecell {
         & when (@skin= "office-365") {
             border-width:2px;
@@ -39924,10 +40380,10 @@ slideRight Animate
     .e-ss-dialog.e-ss-valdlg .e-dialog .e-dlgctndiv form tr:nth-child(2) td,
     .e-ss-dialog.e-ss-cfdlg div.e-dlg-fields,
     .e-ss-dialog.e-ss-cfdlg div.e-dlg-fields:first-child,
-    .e-ss-dialog.e-ss-hyperlinkdlg .e-treeview-wrap, 
+    .e-ss-dialog.e-ss-hyperlinkdlg .e-treeview-wrap,
     .e-ss-dialog .e-ss-fcgdiv,
     .e-ss-dialog.e-ss-movedlg div.e-dlg-fields,
-    .e-ss-dialog.e-ss-valdlg .e-ddl.e-widget , 
+    .e-ss-dialog.e-ss-valdlg .e-ddl.e-widget ,
     .e-ss-dialog.e-ss-gotodlg form div.e-dlg-fields{
         & when (@skin= "office-365") {
             padding-bottom: 15px;
@@ -39945,18 +40401,18 @@ slideRight Animate
             text-align:left;
         }
     }
-	
+
     .e-ss-dialog.e-ss-cfdlg div label.e-dlg-fields,
-    .e-ss-dialog .e-ss-lefttopdiv label, 
+    .e-ss-dialog .e-ss-lefttopdiv label,
     .e-ss-dialog .e-ss-righttopdiv label,
     .e-ss-dialog.e-ss-valdlg label,
     .e-ss-dialog.e-ss-gotodlg div label.e-dlg-fields,
-    .e-ss-dialog.e-ss-nmdlg .e-widget div.e-nmdlg-content ~ div.e-dlg-fields label	{ 
+    .e-ss-dialog.e-ss-nmdlg .e-widget div.e-nmdlg-content ~ div.e-dlg-fields label	{
         & when (@skin = "office-365") {
             padding-bottom:6px;
         }
     }
-	
+
     .e-ss-dialog .e-ss-leftdiv {
         & when (@skin = "office-365") {
             padding-right: 15px;
@@ -39970,13 +40426,13 @@ slideRight Animate
             padding-top: 15px;
         }
     }
-	
+
     .e-ss-dialog .e-dlgctndiv .e-ss-dlgtab > .e-content {
         & when (@skin = "office-365") {
             padding: 15px 0 0 0;
         }
     }
-	
+
     .e-ss-dialog.e-ss-pvtdlg .e-dialog .e-dlgctndiv table tr:nth-child(2) td {
         & when not (@skin = "office-365") {
             padding-top: 4px;
@@ -39986,73 +40442,73 @@ slideRight Animate
             padding-top:0px;
         }
     }
-	
-	
-    .e-ss-dialog.e-ss-pvtdlg .e-dialog .e-dlgctndiv table tr:nth-child(3) td div, 
+
+
+    .e-ss-dialog.e-ss-pvtdlg .e-dialog .e-dlgctndiv table tr:nth-child(3) td div,
     .e-ss-dialog.e-ss-pvtdlg .e-dialog .e-dlgctndiv table tr:nth-child(4) td div,
     .e-ss-dialog.e-ss-gotodlg .e-radiobtn-wrap.e-widget{
         & when (@skin = "office-365") {
             padding-right: 6px;
         }
     }
-	 
-    .e-ss-dialog.e-ss-pvtdlg .e-dialog .e-dlgctndiv table tr:nth-child(3) td, 
+
+    .e-ss-dialog.e-ss-pvtdlg .e-dialog .e-dlgctndiv table tr:nth-child(3) td,
     .e-ss-dialog.e-ss-pvtdlg .e-dialog .e-dlgctndiv table tr:nth-child(4) td,
     .e-ss-dialog .e-ss-nmdlg tr td:nth-child(2)	{
         & when (@skin = "office-365") {
             padding-left: 15px;
         }
     }
-	 
+
     .e-ss-dialog .e-ss-changerange tr td label, .e-ss-dialog.e-ss-hyperlinkdlg tr td label,
-    .e-ss-dialog.e-ss-pwddlg tr td:nth-child(1), .e-ss-dialog.ej-ssgrid tr td:nth-child(1)	{
+    .e-ss-dialog.e-ss-pwddlg tr td:nth-child(1), .e-ss-dialog.e-ss-grid tr td:nth-child(1)	{
         & when (@skin = "office-365") {
             padding-right: 15px;
         }
     }
-	 
+
     .e-ss-dialog.e-ss-valdlg .e-dialog .e-dlgctndiv  form tr td {
         & when (@skin = "office-365") {
             padding-bottom: 0px;
-        }	
+        }
     }
-	
+
     .e-ss-dialog .e-ss-nmdlg .e-ss-fathdr {
         margin-left:4px;
     }
-	 
+
     .e-ss-dialog .e-ss-nmdlg span.e-chkbox-wrap, .e-ss-dialog .e-ss-nmdlg .e-ss-fathdr {
         & when (@skin = "office-365") {
             vertical-align: middle;
         }
     }
-	 
-	  
+
+
     .e-ss-dialog.e-charttype-dlg .e-ss-leftdiv {
         & when (@skin = "office-365") {
             padding-right:0px;
         }
     }
-	  
+
     .e-ss-dialog.e-charttype-dlg .e-chartimg{
         & when (@skin = "office-365") {
             margin:0px 0px 15px 15px;
         }
     }
-	
+
     .e-ss-dialog.e-ss-valdlg table,
     .e-ss-dialog.e-ss-fcdlg .e-ss-centerdiv .e-ss-rightdiv tr td input	{
         & when (@skin = "office-365") {
             margin-bottom:15px;
         }
     }
-	
+
     .e-ss-dialog.e-ss-fcdlg .e-ss-centerdiv .e-ss-rightdiv tr td button {
         & when (@skin = "office-365") {
             margin-top:15px;
         }
     }
-	
+
     .e-ss-dialog .e-tab .e-bottom-line.e-active {
         & when (@skin = "office-365") {
             margin:0px;
@@ -40070,25 +40526,25 @@ slideRight Animate
             width: 208px;
         }
     }
-	
+
     .e-ss-dialog.e-ss-gotodlg div label.e-dlg-fields:nth-child(2){
         & when (@skin = "office-365") {
             padding-top:15px;
         }
     }
-	
+
     .e-ss-dialog .e-ss-okbtn.e-btn.e-select {
         & when (@skin = "office-365") {
             border: 1px solid;
         }
     }
-	
+
     .e-spreadsheet .e-pager div.e-numericcontainer {
         & when (@skin = "office-365") {
             margin-top:0px;
         }
     }
-	
+
     .e-spreadsheet .e-pager .e-numericitem {
         & when (@skin = "office-365") {
             width: auto;
@@ -40107,7 +40563,7 @@ slideRight Animate
             border:none;
         }
     }
-	 
+
     .e-ss-colorpicker.e-colorwidget .e-select.e-ssr-colorcontainer {
         & when (@skin = "office-365") {
             width:30%;
@@ -40129,13 +40585,13 @@ slideRight Animate
             line-height: 13px;
         }
     }
-	  
+
     .e-ss-dialog.e-ss-nmdlg .e-widget .e-dlg-fields.e-nmdlg-content  {
         & when (@skin = "office-365") {
             min-height:200px;
         }
     }
- 
+
     .e-ss-dialog.e-ss-nmdlg .e-widget div.e-nmdlg-content ~ div.e-dlg-fields{
         & when (@skin = "office-365") {
             padding-bottom:15px;
@@ -40178,6 +40634,9 @@ slideRight Animate
         & when (@skin = "office-365") {
             top: 19px;
             text-indent: 6px;
+        }
+        & when (@skin = "bootstrap") {
+            top: 18px;
         }
     }
 
@@ -40472,7 +40931,7 @@ slideRight Animate
 
         & when (@skin="office-365"){
             padding-bottom: 20px !important;
-        } 
+        }
     }
 
     .e-spellalert .e-alerttextdiv,
@@ -40501,7 +40960,7 @@ slideRight Animate
             width: 75%;
         }
     }
-    
+
     .e-spellalert .e-alerttextdiv{
         height: 30px;
     }
@@ -40659,12 +41118,12 @@ slideRight Animate
             font-weight: bold !important;
         }
     }
-    
+
     .e-spellmenu .e-list.e-errorsuggestions.e-separator{
         & when (@skin= "office-365") {
             border-bottom: 1px solid #c8c8c8 !important;
         }
-    } 
+    }
 
     .e-spellmenu .e-menulink {
         & when (@skin= "material") {
@@ -40778,6 +41237,7 @@ slideRight Animate
     .e-spellalert .e-alertdialog .e-alertbutton {
         & when not (@skin= "material") {
             height: 25px;
+			min-width: 100px;
         }
     }
 
@@ -40809,17 +41269,17 @@ slideRight Animate
             width: 460px !important;
         }
     }
-        
+
     .e-spellalert.e-dialog.e-dialog-wrap {
         & when (@skin= "office-365") {
             width: 280px !important;
-        }        
+        }
     }
 
     .e-spellalert.e-elementmissing.e-dialog.e-dialog-wrap {
         & when (@skin= "office-365") {
             width: 400px !important;
-        }        
+        }
     }
 
     .e-spellalert.e-elementmissing .e-dialog-scroller,
@@ -40827,7 +41287,7 @@ slideRight Animate
         & when (@skin= "office-365") {
             width: 350px !important;
             height: 78px !important;
-        }        
+        }
     }
 
     .e-spellalert .e-dialog-scroller,
@@ -40835,18 +41295,119 @@ slideRight Animate
         & when (@skin= "office-365") {
             width: 228px !important;
             height: 78px !important;
-        }        
+        }
     }
 
     .e-spellalert .e-dialog-scroller {
         & when (@skin= "office-365") {
             padding:28px 25px 20px;
-        }        
+        }
     }
 
     .e-spellalert .e-alertdialog {
         & when (@skin= "office-365") {
             padding: 0px !important;
-        }        
+        }
     }
 }
+/*------------------------------------- Media Player-------------------------------------------*/
+.e-media-player .e-media-stop:before {
+    content: "\e126";
+}
+
+.e-media-player .e-media-forward:before {
+    content: "\e90f" !important;
+}
+
+.e-media-player .e-media-backward:before {
+    content: "\e90e" !important;
+}
+
+.e-media-player .e-media-next:before {
+    content: "\e910" !important;
+}
+
+.e-media-player .e-media-previous:before {
+    content: "\e90d" !important;
+}
+
+.e-media-player .e-media-next.basic:before {
+    content: "\e916" !important;
+}
+
+.e-media-player .e-media-previous.basic:before {
+    content: "\e915" !important;
+}
+.e-media-player .e-media-volume:before {
+    content: "\e907";
+}
+
+.e-media-player .e-media-volume.media-muted:before {
+    content: "\e105";
+}
+
+.e-media-player .e-media-fullscreen:before {
+    content: "\e914";
+}
+
+.e-media-player .e-media-smallscreen:before {
+    content: "\e100";
+}
+
+.e-media-player .e-media-settings:before {
+    content: "\e913";
+}
+
+.e-media-player .e-media-playlist:before {
+    content: "\e906";
+}
+
+.e-media-player .e-media-snapshot:before {
+    content: "\e125";
+}
+
+.e-media-player .e-media-download:before {
+    content: "\e102";
+}
+
+.e-media-player .e-media-repeat:before {
+    content: "\e141";
+}
+
+.e-media-player .e-media-shuffle:before {
+    content: "\e142";
+}
+
+.e-media-player .e-media-play:before {
+    content: "\e135";
+}
+
+.e-media-player .e-media-pause:before {
+    content: "\e108";
+}
+
+.e-media-player .e-media-playlist-header-previous:before {
+    content: "\e120";
+}
+
+.e-media-player .e-media-playlist-header-next:before {
+    content: "\e107";
+}
+.e-media-player .e-media-playlist-close{
+    content: "\e908";
+}
+.e-media-player .e-media-playlist-toggle.e-media-expand:before {
+    content: "\e116";
+}
+
+.e-media-player .e-media-playlist-toggle.e-media-collapse:before {
+    content: "\e118";
+}
+
+.e-media-player .e-media-settings-selector:before {
+    content: "\e90b";
+}
+.e-media-player .e-media-playlist-close:before{
+    content: "\e908";
+}
+/*------------------------------------- End Media Player-------------------------------------------*/
