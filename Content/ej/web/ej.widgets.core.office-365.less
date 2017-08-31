@@ -5022,10 +5022,32 @@
     }
 
     .e-chkbox-wrap .e-text {
-        padding: 0px 5px 2px 5px;
         text-align: left;
         top: 0px;
         cursor: pointer;
+        & when (@skin= "material") {
+        padding: 18px 5px 2px 5px;
+	   }
+        & when (@skin= "office-365") {
+        padding: 9px 5px 2px 5px;
+        }
+    & when not (@skin= "material") and not (@skin="office-365") {
+        /*other*/
+        padding: 8px 5px 2px 5px;
+    }
+    }
+
+    .e-chkbox-wrap.e-check-small .e-text {
+        & when (@skin= "material") {
+        padding: 7px 5px 2px 5px;
+	   }
+        & when (@skin= "office-365") {
+        padding: 4px 5px 2px 5px;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
+            /*other*/
+            padding: 2px 5px 2px 5px;
+        }
     }
 
     .e-chkbox-wrap input.e-checkbox {
@@ -22235,7 +22257,6 @@ line-height:28px;
 
     .e-treegrid .e-table.e-zerospace {
         border-spacing: 0px;
-        border-collapse:collapse;
     }
 }
 

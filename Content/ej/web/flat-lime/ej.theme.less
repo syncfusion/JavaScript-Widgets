@@ -16084,14 +16084,19 @@ vertical-align:baseline;
     user-select: none;
 }
 
-.e-chkbox-wrap{       
-        display: inline-flex;
-    }
-
-.e-chkbox-wrap.e-tb-cell .e-text,.e-chkbox-wrap.e-tb-cell div{  
-        display: table-cell;
-        }
-
+.e-chkbox-wrap {
+    display: inline-flex;
+}
+.e-chkbox-wrap.e-tb-cell {
+    display: table-cell;
+}
+.e-chkbox-wrap.e-tb-cell .e-text, .e-chkbox-wrap.e-tb-cell div {
+    display: table-cell;
+     padding: 0px 5px 2px 5px;    
+}
+.e-chkbox-wrap.e-check-small.e-tb-cell .e-text {   
+    padding: 0px 5px 2px 5px;        
+}
 .e-chkbox-wrap.e-focus div > span 
 {
 	box-shadow: 0 0 2px @shadow-bg-color;
@@ -17374,6 +17379,7 @@ outline:none;
     }
 }
 .e-pivotgrid .e-pivotGridTable th, .e-pivotgrid .e-pivotGridTable td {
+overflow:hidden;
           & when not (@skin = "office-365") {
   border: solid 1px @content-border-color;
   }
@@ -20667,6 +20673,7 @@ padding:6px 0 6px 40px;
     }
 }
 .e-pivotgrid .curInput{
+    width:100%;
     & when (@skin = "flat-azure-dark"),(@skin = "flat-lime-dark"),(@skin = "flat-saffron-dark"),(@skin = "gradient-azure-dark"),(@skin = "gradient-lime-dark"),(@skin = "gradient-saffron-dark"),(@skin = "high-contrast-01"),(@skin = "high-contrast-02") {
     color:#000000;
    }
@@ -20881,6 +20888,24 @@ padding:6px 0 6px 40px;
 
 .e-hoverCell{
 background-color:@hover-bg-stcolor !important;
+}
+.e-pivotclient .e-collectionli:hover, .e-pivotclient .e-reportli:hover {
+	.office-pivotclient-toolbar-bg-color;
+	background: @toolbar-bgcolor !important;
+	border: none !important;
+	color: @oclient-icons-color !important;
+	padding:3px !important;
+	& when (@skin = "office-365"){
+		padding:7px !important;
+	}
+	border-top:4px !important;
+}
+.e-pivotclient .e-collectiondiv {
+	float: right;
+	margin-left: 6px;
+}
+.e-pivotclient .e-reportLbl,.e-pivotclient .e-collectionLbl {
+	margin-top: 2px;
 }
 .e-pivotclient .e-splitBtnUnique{
     height:auto !important
@@ -21114,7 +21139,7 @@ overflow:auto !important;
         height:42px !important;
     }
 }
-.e-pivotclient .e-reportCol {
+.e-pivotclient .e-reportCol, .e-pivotclient .e-collectionli,.e-pivotclient .e-reportli {
         & when (@skin = "office-365"){
             padding: 7px !important;
     }
@@ -21514,7 +21539,7 @@ background:@toolbar-bgcolor;
     }
 }
 .e-pivotclient .e-connectImg:hover, .e-pivotclient .e-newReportImg:hover, .e-pivotclient .e-addReportImg:hover, .e-pivotclient .e-removeReportImg:hover, .e-pivotclient .e-renameReportImg:hover, .e-pivotclient .e-reportDBImg:hover, .e-pivotclient .e-mdxImg:hover,.e-pivotclient .e-calcMemberImg:hover, .e-pivotclient .e-excelExportImg:hover,.e-pivotclient .e-wordExportImg:hover,.e-pivotclient .e-pdfExportImg:hover,.e-pivotclient .e-chartTypesImg:hover,.e-pivotclient .maximizedView:hover,.e-pivotclient .e-rowSortFilterImg:hover, .e-pivotclient .e-colSortFilterImg:hover,.e-pivotclient .e-autoExecuteImg:hover,.e-pivotclient .e-toggleaxisImg:hover { cursor: pointer;color:@toolbar-icons-hvrcolor; }
-.e-pivotclient .reportList{
+.e-pivotclient .reportList, .e-pivotclient e-collectionlist{
     overflow:visible !important;
     & when (@skin = "material") {
       margin-top:-6px;
@@ -21528,7 +21553,7 @@ background:@toolbar-bgcolor;
 .e-pivotclient div.e-advancedFilterDlg{
     border:@border-size @border-type @content-border-color;
 }
-.e-pivotclient li.e-reportCol.e-hover {
+.e-pivotclient li.e-reportCol.e-hover, .e-pivotclient .e-collectionli.e-hover, .e-pivotclient .e-reportli.e-hover {
     background: none;
     border-color:transparent;
 }
@@ -21640,7 +21665,7 @@ background:@toolbar-bgcolor;
 }
 .e-pivotclient .e-measureListLbl {    margin-top: 3px;
 }
-.e-pivotclient .e-reportCol {
+.e-pivotclient .e-reportCol,.e-pivotclient .e-collectionli, .e-pivotclient .e-reportli {
     & when (@skin = "material") {
         width: auto !important; height: 25px;
     }
@@ -22271,7 +22296,7 @@ font-size:16px;
     }
 }
 
-.e-pivotclient e-reportCol {
+.e-pivotclient e-reportCol, .e-pivotclient .e-collectionli,.e-pivotclient .e-reportli {
     margin-left: 3px;
 }
 
@@ -23310,7 +23335,7 @@ width: 43% !important;
     margin-left:0px;
    }
 }
-.e-pivotclient .e-toolbar .e-reportCol, .e-pivotclient .e-toolbar .e-reportCol.e-hover{
+.e-pivotclient .e-toolbar .e-reportCol, .e-pivotclient .e-toolbar .e-reportCol.e-hover, .e-pivotclient .e-collectionli, .e-pivotclient .e-collectionli.e-hover, .e-pivotclient .e-reportli, .e-pivotclient .e-reportli.e-hover{
    & when (@skin = "material") {
     border-left:1px solid @grey-300;
    }
@@ -23342,12 +23367,12 @@ width: 43% !important;
     margin-top:7px;
   }
 }
-.e-pivotclient .e-toolbar>.e-horizontal>.e-reportCol.e-active,.e-pivotclient .e-toolbar>.e-horizontal>.e-reportCol.e-active>.reportList{
+.e-pivotclient .e-toolbar>.e-horizontal>.e-reportCol.e-active,.e-pivotclient .e-toolbar>.e-horizontal>.e-reportCol.e-active>.reportList, .e-pivotclient .e-toolbar>.e-horizontal>.e-collectionli.e-active,.e-pivotclient .e-toolbar>.e-horizontal>.e-collectionli.e-active>.e-collectionlist{
    & when (@skin = "material") {
     background:none;
    }
 }
-.e-pivotclient .e-toolbar>.e-horizontal>.e-reportCol.e-active:after{
+.e-pivotclient .e-toolbar>.e-horizontal>.e-reportCol.e-active:after, .e-pivotclient .e-toolbar>.e-horizontal>.e-collectionli.e-active:after, .e-pivotclient .e-toolbar>.e-horizontal>.e-reportli.e-active:after{
    & when (@skin = "material") {
     animation: none;
    }

@@ -1383,7 +1383,7 @@ jQuery.fn.ejChart = function (options) {
 ///Set the dataSource for all series. It can be an array of JSON objects or an instance of ej.DataManager.
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
-///Specifies spline tension value for cardianal spline type. Value ranges from 0 to 1.
+///Specifies spline tension value for cardinal spline type. Value ranges from 0 to 1.
 ///<br/>cardinalSplineTension-number	default-0.5
 ///<br/><br/>
 ///Controls the size of the hole in doughnut series. Value ranges from 0 to 1
@@ -1882,7 +1882,7 @@ jQuery.fn.ejChart = function (options) {
 ///<br/>visibleOnLegend-string	default-visible
 ///<br/><br/>
 ///Specifies the type of the trendline for the series.
-///<br/>type-string	default-linear. See TrendlinesType
+///<br/>type-ej.datavisualization.Chart.TrendlinesType|string	default-linear. See TrendlinesType
 ///<br/><br/>
 ///Name for the trendlines that is to be displayed in the legend text.
 ///<br/>name-string	default-trendline
@@ -3696,7 +3696,7 @@ jQuery.fn.ejChart = function (options) {
 ///Specifies the dataSource for the series. It can be an array of JSON objects or an instance of ej.DataManager.
 ///<br/>dataSource-any	default-null
 ///<br/><br/>
-///Specifies spline tension values for cardianal spline type.Value ranges from 0 to 1.
+///Specifies spline tension values for cardinal spline type.Value ranges from 0 to 1.
 ///<br/>cardinalSplineTension-number	default-0.5
 ///<br/><br/>
 ///Controls the size of the hole in doughnut series. Value ranges from 0 to 1.
@@ -3781,7 +3781,7 @@ jQuery.fn.ejChart = function (options) {
 ///<br/>splitMode-ej.datavisualization.Chart.SplitMode|string	default-value. See SplitMode
 ///<br/><br/>
 ///Quartile calculation has been performed in three different formulas to render the boxplot series .
-///<br/>boxPlotMode-ej.datavisualization.Chart.LabelPosition|string	default-exclusive
+///<br/>boxPlotMode-ej.datavisualization.Chart.LabelPosition|string	default-exclusive.See BoxPlotMode
 ///<br/><br/>
 ///Options for customizing the bubble options of the Bubble series
 ///<br/>bubbleOptions-any	default-
@@ -6272,7 +6272,7 @@ jQuery.fn.ejDateRangePicker = function (options) {
 ///Used to add the preset ranges. Added ranges using this, will show in popup in right side for easy selection of different preset ranges.
 ///<br/>ranges-any	default-null
 ///<br/><br/>
-///Used to seperate the two date strings of the value in the DateRangePicker popup.
+///Used to separate the two date strings of the value in the DateRangePicker popup.
 ///<br/>separator-string	default--
 ///<br/><br/>
 ///Specifies the start date of the date ranges
@@ -7246,7 +7246,7 @@ jQuery.fn.ejDiagram = function (options) {
 ///Specifies the read method to get the created nodes from client side to the server side
 ///<br/>read-string	default-null
 ///<br/><br/>
-///Specifies the customfields to get the updated data from client side to the server side
+///Specifies the custom fields to get the updated data from client side to the server side
 ///<br/>customFields-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Defines the data source either as a collection of objects or as an instance of ej.DataManager
@@ -7258,16 +7258,16 @@ jQuery.fn.ejDiagram = function (options) {
 ///Sets the unique id of the connection data source item
 ///<br/>id-string	default-null
 ///<br/><br/>
-///Sets the sourcenode of the connection data source item
+///Sets the source node of the connection data source item
 ///<br/>sourceNode-string	default-null
 ///<br/><br/>
-///Sets the targetnode of the connection data source item
+///Sets the target node of the connection data source item
 ///<br/>targetNode-string	default-null
 ///<br/><br/>
-///Sets the sourcepoint-x value of the connection data source item
+///Sets the sourcePointX value of the connection data source item
 ///<br/>sourcePointX-string	default-null
 ///<br/><br/>
-///Sets the sourcePoint-y value of the connection data source item
+///Sets the sourcePointY value of the connection data source item
 ///<br/>sourcePointY-string	default-null
 ///<br/><br/>
 ///Sets the targetPoint-x value of the connection data source item
@@ -7291,7 +7291,7 @@ jQuery.fn.ejDiagram = function (options) {
 ///Specifies the read method which is used to get the data from client side to the server side
 ///<br/>read-string	default-null
 ///<br/><br/>
-///Specifies the customfields to get the updated data from client side to the server side
+///Specifies the custom fields to get the updated data from client side to the server side
 ///<br/>customFields-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Initializes the default values for nodes and connectors
@@ -10855,7 +10855,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>filterSettings-FilterSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates to perform the filter operation with case sensitive in excel styled filter menu mode
-///<br/>enableCaseSensitivity-Boolean	default-false
+///<br/>enableCaseSensitivity-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to define the interDeterminateState of checkbox in excel filter dialog.
 ///<br/>enableInterDeterminateState-boolean	default-true
@@ -10900,7 +10900,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>groupSettings-GroupSettings	default-
 ///<br/><br/>
 ///Gets or sets a value that customize the group caption format.
-///<br/>captionFormat-String	default-null
+///<br/>captionFormat-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable animation button option in the group drop area of the grid.
 ///<br/>enableDropAreaAutoSizing-boolean	default-false
@@ -11071,7 +11071,7 @@ jQuery.fn.ejGrid = function (options) {
 ///<br/>scrollOneStepBy-number	default-57
 ///<br/><br/>
 ///Default Value:
-///<br/>showColumnChooser-Boolean	default-false
+///<br/>showColumnChooser-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates stacked header should be shown on grid layout when the property â€œstackedHeaderRowsâ€ is set.
 ///<br/>showStackedHeader-boolean	default-false
@@ -13355,9 +13355,9 @@ ej.ListView.prototype={
 
 addItem:function(item, index, groupid){
 /// <summary>
-/// To add item in the given index. If you have enabled grouping in ListView then you need to pass the corresponding group list title to add item in it.
+/// To add item in the given index. If you have enabled grouping in ListView then you need to pass the corresponding group list title to add item in it. Depending on the data bound to ListView, we need to pass either an HTML element or JSON objects in this method.
 /// </summary>
-/// <param name="item"	type="any">Specifies the item to be added in ListView</param>
+/// <param name="item"	type="string|any">To pass the list item as element/ JSON object</param>
 /// <param name="index"	type="number">Specifies the index where item to be added</param>
 /// <param name="groupid"	type="string">optionalThis is an optional parameter. You must pass the group list title here if grouping is enabled in the ListView</param>
 },
@@ -14805,6 +14805,18 @@ showTextMarkupAnnotationTools:function(show){
 /// </summary>
 /// <param name="show"	type="boolean">shows/hides text markup annotation tools in the toolbar</param>
 },
+showSignatureTool:function(show){
+/// <summary>
+/// Shows/hides the signature tool in the toolbar.
+/// </summary>
+/// <param name="show"	type="boolean">shows/hides signature tool in the toolbar</param>
+},
+showSelectionTool:function(show){
+/// <summary>
+/// Shows/hides the selection tool in the toolbar.
+/// </summary>
+/// <param name="show"	type="boolean">shows/hides selection tool in the toolbar</param>
+},
 goToPage:function(pageNumber){
 /// <summary>
 /// Navigates to the specific page in the PDF document. If the page is not available for the given pageNumber, PDF viewer retains the existing page in view.
@@ -14937,6 +14949,9 @@ jQuery.fn.ejPdfViewer = function (options) {
 ///Enables or disables the strikethrough annotation.
 ///<br/>enableStrikethroughAnnotation-boolean	default-
 ///<br/><br/>
+///Enables or disables the adding of handwritten signature over the PDF document.
+///<br/>enableSignature-boolean	default-
+///<br/><br/>
 ///Gets/sets the settings of the strikethrough annotation.
 ///<br/>strikethroughSettings-StrikethroughSettings	default-
 ///<br/><br/>
@@ -15000,6 +15015,15 @@ jQuery.fn.ejPdfViewer = function (options) {
 ///Gets/sets the locked property of the highlight annotation.
 ///<br/>isLocked-boolean	default-
 ///<br/><br/>
+///Gets/sets the settings of the handwritten signature.
+///<br/>signatureSettings-SignatureSettings	default-
+///<br/><br/>
+///Gets/sets the color of the handwritten signature.
+///<br/>color-string	default-
+///<br/><br/>
+///Gets/sets the opacity of the handwritten signature.
+///<br/>opacity-number	default-
+///<br/><br/>
 ///Specifies the type of the annotations.
 ///<br/>annotationType-ej.PdfViewer.AnnotationType|string	default-
 ///<br/><br/>
@@ -15014,6 +15038,9 @@ jQuery.fn.ejPdfViewer = function (options) {
 ///<br/><br/>
 ///Specifies the location of the supporting PDF service
 ///<br/>pdfService-ej.PdfViewer.PdfService|string	default-
+///<br/><br/>
+///Specifies the viewer interaction mode.
+///<br/>interactionMode-ej.PdfViewer.InteractionMode|string	default-
 ///<br/><br/>
 ///Specifies the open state of the hyperlink in the PDF document.
 ///<br/>hyperlinkOpenState-ej.PdfViewer.LinkTarget|string	default-
@@ -15136,6 +15163,11 @@ setPivotEngine:function(){
 refreshControl:function(){
 /// <summary>
 /// Re-renders the control with the data source at the instant.
+/// </summary>
+},
+destroy:function(){
+/// <summary>
+/// This function Destroy the PivotChart widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
 /// </summary>
 },
 generateJSON:function(){
@@ -15312,6 +15344,9 @@ jQuery.fn.ejPivotChart = function (options) {
 ///Allows the user to rotate the angle of PivotChart in 3D view.
 ///<br/>rotation-number	default-0
 ///<br/><br/>
+///Allows the user to enable/disable the context menu options in the PivotChart.
+///<br/>enableContextMenu-boolean	default-false
+///<br/><br/>
 ///Allows the user to set custom name for the methods at service-end, communicated on AJAX post.
 ///<br/>serviceMethodSettings-ServiceMethodSettings	default-{}
 ///<br/><br/>
@@ -15368,6 +15403,16 @@ generateJSON:function(){
 refreshControl:function(){
 /// <summary>
 /// Re-renders the control with the report at that instant.
+/// </summary>
+},
+getActiveTab:function(){
+/// <summary>
+/// Returns the control tab string that displays currently in PivotClient.
+/// </summary>
+},
+destroy:function(){
+/// <summary>
+/// This function Destroy the PivotClient widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
 /// </summary>
 },
 getOlapReport:function(){
@@ -15626,6 +15671,9 @@ jQuery.fn.ejPivotClient = function (options) {
 ///Allows to set the page number in series axis to be loaded by default.
 ///<br/>seriesCurrentPage-number	default-1
 ///<br/><br/>
+///Enables the Drill-Through feature which retrieves the raw items that are used to create the specific cell in PivotGrid.
+///<br/>enableDrillThrough-boolean	default-false
+///<br/><br/>
 ///Allows the user to customize the widget's layout and appearance.
 ///<br/>displaySettings-DisplaySettings	default-{}
 ///<br/><br/>
@@ -15695,7 +15743,7 @@ jQuery.fn.ejPivotClient = function (options) {
 ///Allows user to set the visibility of Calculated Member icon in toolbar panel.
 ///<br/>enableCalculatedMember-boolean	default-false
 ///<br/><br/>
-///Allows user to show unique name on pivotbutton.
+///Allows user to show unique name on pivot button.
 ///<br/>showUniqueNameOnPivotButton-boolean	default-false
 ///<br/><br/>
 ///Enables the splitter option for resizing the elements inside the control.
@@ -15737,8 +15785,14 @@ jQuery.fn.ejPivotClient = function (options) {
 ///Allows the user to hide PivotClient's Cube Browser and Axis Element Builder while initiate the widget.
 ///<br/>collapseCubeBrowserByDefault-boolean	default-false
 ///<br/><br/>
+///Allows the user to view the KPI elements in tree-view inside PivotClient's Cube Browser.
+///<br/>enableKPI-boolean	default-false
+///<br/><br/>
 ///Allows the user to enable PivotClientâ€™s responsiveness in the browser layout.
 ///<br/>isResponsive-boolean	default-false
+///<br/><br/>
+///Options to customize the size of the PivotClient control.
+///<br/>size-any	default-Example:
 ///<br/><br/>
 ///Allows the user to set the localized language for the widget.
 ///<br/>locale-string	default-en-US
@@ -15769,6 +15823,12 @@ jQuery.fn.ejPivotClient = function (options) {
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for loading a report collection from the database.
 ///<br/>loadReport-string	default-LoadReportFromDB
+///<br/><br/>
+///Allows the user to set the custom name for the service method responsible for remove a report collection from the database.
+///<br/>removeDBReport-string	default-RemoveReportFromDB
+///<br/><br/>
+///Allows the user to set the custom name for the service method responsible for rename the report collection in the database.
+///<br/>renameDBReport-string	default-RenameReportInDB
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for retrieving the MDX query for the current report.
 ///<br/>mdxQuery-string	default-GetMDXQuery
@@ -15802,6 +15862,12 @@ jQuery.fn.ejPivotClient = function (options) {
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for updating report with calculated member.
 ///<br/>calculatedMember-string	default-CalculatedMember
+///<br/><br/>
+///Allows the user to set the custom name for the service method responsible for performing drill through operation.
+///<br/>drillThroughHierarchies-string	default-DrillThroughHierarchies
+///<br/><br/>
+///Allows the user to set the custom name for the service method responsible for performing drill through operation in data table.
+///<br/>drillThroughDataTable-string	default-DrillThroughDataTable
 ///<br/><br/>
 ///Sets the title for PivotClient widget.
 ///<br/>title-string	default-
@@ -15879,6 +15945,11 @@ removeImg:function(){
 renderControlFromJSON:function(){
 /// <summary>
 /// This function receives the JSON formatted datasource and renders the PivotGauge control.
+/// </summary>
+},
+destroy:function(){
+/// <summary>
+/// This function Destroy the PivotGauge widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
 /// </summary>
 },
 getOlapReport:function(){
@@ -16101,12 +16172,17 @@ refreshControl:function(){
 /// This function re-renders the control with the report available at that instant.
 /// </summary>
 },
+destroy:function(){
+/// <summary>
+/// This function Destroy the PivotGrid widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
+/// </summary>
+},
 calculateCellWidths:function(){
 /// <summary>
 /// This function returns the height of all rows and width each and every column.
 /// </summary>
 },
-createConditionalDialog:function(){
+openConditionalFormattingDialog:function(){
 /// <summary>
 /// This function creates the conditional formatting dialog to apply conditional formatting for PivotGrid control.
 /// </summary>
@@ -16221,6 +16297,9 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Allows to set the custom theme for the column headers.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
+///Allows the user to set delimiter for date type format in formatString. This is applicable for groupByDate option for row/column headers.
+///<br/>delimiter-string	default-
+///<br/><br/>
 ///Allows the user to set the sorting order of the members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
@@ -16280,6 +16359,9 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///<br/><br/>
 ///Allows to set the custom theme for the row headers.
 ///<br/>cssClass-string	default-
+///<br/><br/>
+///Allows the user to set delimiter for date type format in formatString. This is applicable for groupByDate option for row/column headers.
+///<br/>delimiter-string	default-
 ///<br/><br/>
 ///Allows the user to set the sorting order of the members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
@@ -16491,8 +16573,14 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Allows the user to enable the animation effects in tooltip.
 ///<br/>enableToolTipAnimation-boolean	default-false
 ///<br/><br/>
-///Allows the user to adjust the width of the columns dynamically.
+///Allows the user to adjust the width of the columns dynamically within given widget size.
 ///<br/>enableColumnResizing-boolean	default-false
+///<br/><br/>
+///Allows the user to fit the width of the column based on its maximum text width.
+///<br/>resizeColumnsToFit-boolean	default-false
+///<br/><br/>
+///Allows the user to enable/disable the context menu of Pivot buttons in the PivotGrid.
+///<br/>enableContextMenu-boolean	default-false
 ///<br/><br/>
 ///Allows the user to view large amount of data through virtual scrolling.
 ///<br/>enableVirtualScrolling-boolean	default-false
@@ -16584,6 +16672,12 @@ jQuery.fn.ejPivotGrid = function (options) {
 ///Allows the user to set the custom name for the service method responsible for performing drill through operation in data table.
 ///<br/>drillThroughDataTable-string	default-DrillThroughDataTable
 ///<br/><br/>
+///Allows the user to set the custom name for the service method responsible for performing value sorting operation in PivotGrid.
+///<br/>valueSorting-string	default-ValueSorting
+///<br/><br/>
+///Allows the user to set the custom name for the service method responsible for removing pivot button from GroupingBar/Field List.
+///<br/>removeButton-string	default-RemoveButton
+///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for write-back operation in OLAP Cube. This is only applicable in server-side component.
 ///<br/>writeBack-string	default-WriteBack
 ///<br/><br/>
@@ -16648,6 +16742,11 @@ refreshControl:function(){
 /// Re-renders the control with the data source bound to the pivot control at that instant.
 /// </summary>
 },
+destroy:function(){
+/// <summary>
+/// This function Destroy the PivotSchemaDesigner widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
+/// </summary>
+},
 };
 jQuery.fn.ejPivotSchemaDesigner=function(){
 this.data("ejPivotSchemaDesigner",new	ej.PivotSchemaDesigner());
@@ -16690,25 +16789,25 @@ jQuery.fn.ejPivotSchemaDesigner = function (options) {
 ///<br/>pivotControl-any	default-null
 ///<br/><br/>
 ///Allows the user to set custom name for the methods at service-end, communicated during AJAX post.
-///<br/>serviceMethod-ServiceMethod	default-{}
+///<br/>serviceMethods-any	default-{}
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for getting the values for the tree-view inside filter dialog.
-///<br/>fetchMembers-string	default-FetchMembers
+///<br/>serviceMethod.fetchMembers-string	default-FetchMembers
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for filtering operation in Field List.
-///<br/>filtering-string	default-Filtering
+///<br/>serviceMethod.filtering-string	default-Filtering
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for the server-side action, on expanding members in Field List.
-///<br/>memberExpand-string	default-MemberExpanded
+///<br/>serviceMethod.memberExpand-string	default-MemberExpanded
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for the server-side action, on dropping a node into Field List.
-///<br/>nodeDropped-string	default-NodeDropped
+///<br/>serviceMethod.nodeDropped-string	default-NodeDropped
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for the server-side action on changing the checked state of a node in Field List.
-///<br/>nodeStateModified-string	default-NodeStateModified
+///<br/>serviceMethod.nodeStateModified-string	default-NodeStateModified
 ///<br/><br/>
 ///Allows the user to set the custom name for the service method responsible for button removing operation in Field List.
-///<br/>removeButton-string	default-RemoveButton
+///<br/>serviceMethod.removeButton-string	default-RemoveButton
 ///<br/><br/>
 ///Connects the service using the specified URL for any server updates.
 ///<br/>url-string	default-&#226;€œ&#226;€
@@ -16729,6 +16828,11 @@ ej.PivotTreeMap.prototype={
 doAjaxPost:function(){
 /// <summary>
 /// Performs an asynchronous HTTP (AJAX) request.
+/// </summary>
+},
+doPostBack:function(){
+/// <summary>
+/// Performs an asynchronous HTTP (FullPost) submit.
 /// </summary>
 },
 getOlapReport:function(){
@@ -16766,6 +16870,11 @@ renderControlSuccess:function(){
 /// This function receives the update from service-end, which would be utilized for rendering the widget.
 /// </summary>
 },
+destroy:function(){
+/// <summary>
+/// This function Destroy the PivotTreemap widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
+/// </summary>
+},
 };
 jQuery.fn.ejPivotTreeMap=function(){
 this.data("ejPivotTreeMap",new	ej.PivotTreeMap());
@@ -16785,6 +16894,12 @@ jQuery.fn.ejPivotTreeMap = function (options) {
 ///<br/><br/>
 ///Contains the respective cube name from OLAP database as string type.
 ///<br/>cube-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///To set the data source name to fetch data from that.
+///<br/>sourceInfo-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Set the provider name for PivotTreeMap to identify whether the provider is SSAS or Mondrian.
+///<br/>providerName-string	default-ssas
 ///<br/><br/>
 ///In connection with an OLAP database, this property contains the database name as string to fetch the data from the given connection string.
 ///<br/>catalog-string	default-&#226;€œ&#226;€
@@ -19147,7 +19262,7 @@ jQuery.fn.ejRTE = function (options) {
 ///Based on the content size, its height is adjusted instead of adding the scrollbar.
 ///<br/>autoHeight-boolean	default-false
 ///<br/><br/>
-///This API holds configuration setting for paste clenaup behavior.
+///This API holds configuration setting for paste cleanup behavior.
 ///<br/>pasteCleanupSettings-PasteCleanupSettings	default-{ listConversion: false, cleanCSS: false,	removeStyles: false, cleanElements: false }
 ///<br/><br/>
 ///This API is used to convert the list elements pasted from word document to editor.
@@ -20563,6 +20678,12 @@ addToDictionary:function(customWord){
 /// </summary>
 /// <param name="customWord"	type="string">Word to add into the dictionary file</param>
 },
+getSuggestionWords:function(errorWord){
+/// <summary>
+/// Retrieves the possible suggestion words for the error word passed as an argument.
+/// </summary>
+/// <param name="errorWord"	type="string">Error word to get the suggestions</param>
+},
 };
 jQuery.fn.ejSpellCheck=function(){
 this.data("ejSpellCheck",new	ej.SpellCheck());
@@ -20630,6 +20751,9 @@ jQuery.fn.ejSpellCheck = function (options) {
 ///<br/><br/>
 ///It allows to spell check the multiple target HTML element's texts and correct its error words.
 ///<br/>controlsToValidate-string	default-null
+///<br/><br/>
+///When set to true, allows sending Asynchronous ajax request for checking the spelling errors.
+///<br/>enableAsync-boolean	default-true
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -21971,7 +22095,7 @@ jQuery.fn.ejSunburstChart = function (options) {
 ///Setting the format for the data displayed in the tooltip
 ///<br/>format-string	default-#point.x# : #point.y#
 ///<br/><br/>
-///Sets the opacity of the dispalyed tooltip
+///Sets the opacity of the displayed tooltip
 ///<br/>opacity-number	default-0.95
 ///<br/><br/>
 ///Options for customizing sunburst points.
@@ -23754,6 +23878,9 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///<br/><br/>
 ///Specifies whether to render only the visual elements that are visible in the UI. When you enable this property, it will reduce the loading time for loading large number of records.
 ///<br/>enableVirtualization-boolean	default-false
+///<br/><br/>
+///Gets or sets a value that indicates whether to enable load on demand approach, for rendering child records and page records.
+///<br/>enableLoadOnDemand-boolean	default-false
 ///<br/><br/>
 ///Specifies the settings for column resize
 ///<br/>columnResizeSettings-ColumnResizeSettings	default-
