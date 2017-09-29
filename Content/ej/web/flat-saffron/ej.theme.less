@@ -1,5 +1,6 @@
 @skin: "flat-saffron";
 @font-family: Segoe UI,Helvetica Neue,Ubuntu,Arial;
+
 @font-size: 12px;
 @border-size: 1px;
 @border-type: solid;
@@ -437,7 +438,7 @@
 /*-----------------------End PdfViewer------------------*/
 
 /*----------------------OLAP Definition------------------*/
-@table-font: 12px Segoe UI
+@table-font: 12px @font-family
 
 !important; @pivotList-treeview-text-hvr-color:@active-font-color; @pivotList-dialog-close-hvr-color:@active-bg-stcolor; @pivotList-treeview-active-color:darken( desaturate( @active-bg-stcolor, 11 ), 2 ); @ogrid-dialog-bgcolor:darken( desaturate( @active-bg-stcolor, 4 ), 1 ); @pivotList-treeview-text:@default-font-color; @pivotList-treeview-hvr-color:@active-bg-stcolor; @ogrid-header-border-color:@content-border-color; @ogaugeTooltip-border-color:@content-border-color; @toolTipText-color:@content-font-color; @toolTip-bg-color:@default-bg-stcolor; @fg-table-color: @content-font-color; @bg-table-color: @content-bg-color; @brd-table-color: @gdroparea-border-color; @bg-value-color: @content-bg-color; @bg-summary-color: saturate( @active-bg-stcolor, 1 ); @fg-header-color: @content-font-color; @fg-header-hvr-color: @hover-font-color; @expander-img: url("../common-images/icons-gray.png"); @kpi-uparrow-img: url("../common-images/olapkpi/up-arrow.png"); @kpi-rightarrow-img: url("../common-images/olapkpi/right-arrow.png"); @kpi-downarrow-img: url("../common-images/olapkpi/down-arrow.png"); @kpi-diamond-img: url("../common-images/olapkpi/diamond.png"); @kpi-triangle-img: url("../common-images/olapkpi/triangle.png"); @kpi-circle-img: url("../common-images/olapkpi/circle.png"); @kpi-red-img: url("../common-images/olapkpi/red.png"); @kpi-green-img: url("../common-images/olapkpi/green.png"); @kpi-all-img: url("../common-images/olapkpi/three-color.png"); @aeb-bgcolor: @content-bg-color; @oclient-bgcolor: @content-bg-color; @oclient-border-color: @content-border-color; @oclient-icons-color:@default-icon-color; @pivot-selection-background:@hover-bg-stcolor; @pivot-selection-border:@default-border-color; @oclient-dialog-bgcolor:@content-bg-color; @oclient-dialog-color:@default-font-color; @oclient-treeview-text:@default-font-color; @oclient-treeview-text-hover:@hover-font-color; @oclient-treeview-active:@active-bg-stcolor; @oclient-ddl-color:@default-font-color; @oclient-ddl-bgcolor:@content-bg-color; @oclient-ddl-bcolor:@hover-border-color; @oclient-ddl-hcolor:@hover-font-color; @oclient-ddl-hbgcolor:@hover-bg-stcolor; @oclient-icons-hover-bg: @hover-bg-stcolor; @toolbar-bgcolor:@default-bg-stcolor; @toolbar-icons-hvrcolor:@hover-icon-color; @fullscreen-bg-color:@content-bg-color; @maxview-bg-color:@content-bg-color; @groupingBar-bg-color:@active-bg-stcolor; 
 .groupingBar-btn-color() {
@@ -1250,7 +1251,7 @@ border-left:none;
 }
 
 .e-grid .e-dlgBtns .e-button{
-  font-family: Segoe UI;
+  font-family: @font-family;
   font-weight: normal;
   font-size: 14px;
 }
@@ -4572,6 +4573,11 @@ color:#5c5c5c;
     }
 }
 
+.e-btn{
+    & when (@skin="office-365") {
+        font-weight: 600;
+    }
+}
 .e-btn.e-select:focus {
     box-shadow: 0 0 2px @shadow-bg-color;
 }
@@ -4581,7 +4587,8 @@ color:#5c5c5c;
         font-family: @font-family;
     }
 	& when (@skin="office-365") {
-        font-family: Segoe UI Semibold;
+        font-family: @font-family;
+        font-weight: 600;
     }
 }
 
@@ -6375,6 +6382,13 @@ color:#5c5c5c;
     }
 }
 
+.e-colorpicker .e-buttons .e-codeeditor .e-color-code{
+    & when (@skin= "material")
+    {
+        border-color: fade(@base-font-color,12%);
+    } 
+}
+
 .e-colorwidget.e-split .e-in-wrap .e-select:hover, .e-colorwidget.e-split .e-color-container:hover {
     & when not (@skin = "material") {
         .hover-gradient();
@@ -6649,6 +6663,12 @@ color:#5c5c5c;
     }
 	
 }
+
+.e-colorpicker .e-buttons .e-codeeditor::before{
+        & when (@skin= "material") {
+          background: @accent-color;        
+        }
+    }
 
 .e-colorpicker .e-buttons .e-previous, .e-presetWrapper .e-presets-table .e-preset-row {
     border-color: @content-border-color;
@@ -11072,7 +11092,7 @@ color:@theme-dark;
          color:@neutral-light-font;
          line-height: 36px;
          padding: 0 12px !important;
-         font-family: Segoe UI;
+         font-family: @font-family;
          font-size: 13px;
      }
      & when not (@skin= "material") and not (@skin="office-365") {
@@ -13546,7 +13566,7 @@ background-image:url(images/rotator-icon.png);
 
 .e-tab.e-js.e-widget
 {
-    font-family: Segoe UI;
+    font-family: @font-family;
     border: none;
 }
 .e-tab.e-js > .e-header > .e-item >.e-link,
@@ -16634,7 +16654,7 @@ content: "\e833";
         .bs-default-gradient();
     }
 	& when (@skin="office-365") {
-        font-family: Segoe UI, Semibold;
+        font-family: @font-family;
         font-weight: 600;
         font-size:14px;
         color: @neutral-light-font;
@@ -17077,42 +17097,42 @@ margin-left: 25px;
 
 
 .e-interactivelegend-title{
-                font-family: Segoe UI;
+                font-family: @font-family;
                 pointer-events: none;
                 text-align: left;
 				position: absolute;
 }
 
 .e-interactivelegend-leftlabel{
-                font-family: Segoe UI;
+                font-family: @font-family;
                 pointer-events: none;
                 text-align: left;
 				position: absolute;
 }
 
 .e-interactivelegend-rightlabel{
-                font-family: Segoe UI;
+                font-family: @font-family;
                 pointer-events: none;
                 text-align: left;
 				position: absolute;
 }
 
 .e-legend-rangestartlabel{
-                font-family: Segoe UI;
+                font-family: @font-family;
                 pointer-events: none;
                 text-align: left;
 				position: absolute;
 }
 
 .e-legend-rangeendlabel{
-                font-family: Segoe UI;
+                font-family: @font-family;
                 pointer-events: none;
                 text-align: left;
 				position: absolute;
 }
 
 .e-legendlabeltext{
-                font-family: Segoe UI;
+                font-family: @font-family;
                 pointer-events: none;
                 text-align: left;
 				position: absolute;
@@ -17161,7 +17181,7 @@ margin-left: 25px;
 	font-size:17px;
 }
 .e-labelStyle {
-		font-family:Segoe UI;
+		font-family:@font-family;
 		font-size:14px;
 		white-space: nowrap;
 }
@@ -17173,7 +17193,7 @@ margin-left: 25px;
 		height:20px;
 		text-align:center;
 		font-size: 14px;
-		font-family:Segoe UI;
+		font-family:@font-family;
     
 }
 .e-smartLabelStyle:hover{
@@ -17211,7 +17231,7 @@ margin-left: 25px;
 .e-treemap-leaflabel{
     font-size:14px;
     font-weight:normal;
-    font-family:Segoe UI;
+    font-family:@font-family;
     color:white;
 }
 .e-treemap-legendLabel{
@@ -17277,7 +17297,7 @@ outline:none;
     }
         & when (@skin= "office-365") {
         /* office-365*/
-        font:13px Segoe UI;
+        font:13px @font-family;
         color:@theme-light-font;    
         }
       & when not (@skin = "material") and not (@skin = "office-365") {
@@ -17420,7 +17440,7 @@ overflow:hidden;
   white-space: nowrap;
   text-align: left;
       & when (@skin= "office-365") {
-        font:14px Segoe UI Semibold;
+        font:14px @font-family Semibold;
         background-color:@neutral-light;
     }
     & when not (@skin="office-365")  {
@@ -17442,7 +17462,7 @@ overflow:hidden;
     }
        & when (@skin= "office-365") {
         /*office-365*/
-        font:13px Segoe UI Semibold;
+        font:13px @font-family Semibold;
         color:@neutral-primary;
        padding: 6px 16px 6px 0px;
     }
@@ -17466,7 +17486,7 @@ overflow:hidden;
     }
      & when (@skin= "office-365") {
         /*office-365*/
-        font:13px Segoe UI Semibold;
+        font:13px @font-family Semibold;
         color:@neutral-primary;
        padding: 6px 16px 6px 0px;
     }
@@ -17872,7 +17892,7 @@ content:"\e6a0";
     min-height: 20px;
     border: 1px solid transparent;
   & when not (@skin = "material") {
-    font-family: Segoe UI;
+    font-family: @font-family;
     font-size: 12px;
     font-weight: bold;
   }
@@ -17962,12 +17982,12 @@ content:"\e6a0";
    }
    & when not (@skin = "material") and not (@skin = "office-365") {
      padding: 9px 0px 9px 0px;
-     font-family: 'Segoe UI';
+     font-family: @font-family;
      font-size: 14px;
      font-weight: bold;
     }
    & when (@skin = "office-365") {
-     font-family:Segoe UI Semilight;
+     font-family:@font-family Semilight;
      font-size:17px;
      font-weight:300;
      padding: 9px 0px 9px 0px;
@@ -17989,12 +18009,12 @@ content:"\e6a0";
         font-size:14px;
      }
     & when not (@skin = "material") and not (@skin = "office-365") {
-       font-family: 'Segoe UI';
+       font-family: @font-family;
        font-size: 14px;
        font-weight: bold;
     }
          & when (@skin = "office-365") {
-        font-family:Segoe UI Semilight;
+        font-family: @font-family Semilight;
         font-size:17px;
         font-weight:300;
      }
@@ -18180,7 +18200,7 @@ content:"\e6a0";
        font-weight:bold;
     }
      & when (@skin = "office-365") {
-       font: 12px Segoe UI;
+       font: 12px @font-family;
        margin-right:8px;
        margin-bottom:20px;
        width:80px;
@@ -18510,13 +18530,13 @@ content: "\e881";
    }
       & when not (@skin = "material") and not (@skin = "office-365") {
         /*other*/
-       font-family:Segoe UI;
+       font-family:@font-family;
        background: none repeat scroll 0 0 @oclient-bgcolor;
        border: 1px solid @oclient-border-color;
        color: @content-font-color;
     }
     & when (@skin = "office-365") {
-      font-family:Segoe UI;
+      font-family:@font-family;
       background: none repeat scroll 0 0 @neutral-lighter-alt;
       border: 1px solid @neutral-light;
       padding:15px 5px 15px 15px;
@@ -18732,12 +18752,12 @@ margin-right:10px;
     }
     & when not (@skin = "material") and not (@skin = "office-365") {
         /*other*/
-	    font: normal 14px Segoe UI;
+	    font: normal 14px @font-family;
      	color: @fg-header-color;
         margin: 7px 10px;
     }
     & when (@skin = "office-365") {
-	    font: 14px Segoe UI;
+	    font: 14px @font-family;
      	color: @theme-light-font;
         margin: 12px 0px;
     }
@@ -18798,7 +18818,7 @@ margin-right:10px;
         padding:0px 5px 0px 5px;        
     }
    & when (@skin = "office-365") {
-        font:17px Segoe UI Semilight;
+        font:17px @font-family Semilight;
         color:@theme-light-font;
   }
 }
@@ -18815,12 +18835,12 @@ margin-right:10px;
     }
        & when not (@skin = "material") and not (@skin = "office-365") {
         /*other*/
-     	font: normal 14px Segoe UI;
+     	font: normal 14px @font-family;
     	color: @fg-header-color;
         padding-left: 10px;
    }
    & when (@skin = "office-365") {
-        font:14px Segoe UI;
+        font:14px @font-family;
         color:@theme-light-font;
     }
 }
@@ -18868,7 +18888,7 @@ margin-right:10px;
   }
      & when (@skin = "office-365") {
    height:26px;
-   font:14px Segoe UI;
+   font:14px @font-family;
   }
     border: none !important;
     overflow: hidden;
@@ -18920,7 +18940,7 @@ margin-right:10px;
         background: @pivotList-treeview-hvr-color !important;
     }
   & when (@skin = "office-365") {
-      font:14px Segoe UI;
+      font:14px @font-family;
       padding:0px 8px;
       background:@theme-lighter;
       color:@theme-light-font;
@@ -19174,7 +19194,7 @@ margin-right:10px;
     }
      & when not (@skin = "material") and not (@skin = "office-365") {
         /*other*/
-     	font-family: Segoe UI;
+     	font-family: @font-family;
         font-size: 12px;
     	color:  @content-font-color;
         font-weight: bold;
@@ -19370,7 +19390,7 @@ margin-right:10px;
 
 .e-pivotschemadesigner .e-filterElementTag, .e-pivotgrid .e-filterElementTag {
       & when not (@skin = "material") {
-        font-family: Segoe UI;
+        font-family:@font-family;
       }
    & when (@skin = "material") {
     box-shadow:none !important;
@@ -19823,7 +19843,7 @@ margin-right:10px;
     background:@theme-lighter;
     font-size:14px;
     height:26px;
-    font-family:Segoe UI;
+    font-family:@font-family;
     color:@theme-light-font;
     padding:0px 8px;
     width:auto !important;
@@ -20230,7 +20250,7 @@ margin-right:10px;
    }
    & when (@skin = "office-365") {
     background:@neutral-lighter;
-    font:14px Segoe UI;
+    font:14px @font-family;
     color:@theme-light-font;
     padding:0px 8px;
    }
@@ -20288,7 +20308,7 @@ margin-right:10px;
    & when (@skin = "office-365") {
     background-color:@neutral-light;
     color:@theme-light-font;
-    font:14px Segoe UI;
+    font:14px @font-family;
    }
 }
 .e-pivotschemadesigner .e-dropIndicator+.e-pvtBtn{
@@ -20303,7 +20323,7 @@ margin-right:10px;
 }
 .e-pivotgrid .summary.calc,.e-pivotgrid .summary.calc:hover {
       & when (@skin= "office-365") {
-        font:14px Segoe UI Semibold;
+        font:14px @font-family Semibold;
         background-color:@neutral-light;
     }
 }
@@ -20335,7 +20355,7 @@ padding:6px 0 6px 40px;
 }
 .e-pivotschemadesigner .e-pivotHeader .headerText , .e-pivotschemadesigner .e-rPivotHeader .headerText {
       & when (@skin= "office-365") {
-    font: 14px Segoe UI;
+    font: 14px @font-family;
     color: @theme-light-font;
     margin-left:8px;
  }
@@ -20481,7 +20501,7 @@ padding:6px 0 6px 40px;
   & when (@skin = "office-365") {
     margin:0px 8px 0px 0px !important ;
     padding-bottom:15px;
-        font: 12px Segoe UI;
+        font: 12px @font-family;
   }
 }
 .e-pivotgrid .conditionformatTbl .e-ddl{
@@ -21111,7 +21131,7 @@ overflow:auto !important;
       font-weight:normal;
     }
     & when not (@skin = "material") {
-      font: normal 12px Segoe UI;
+      font: normal 12px @font-family;
     }
   border-collapse: collapse;  
   background-color: @oclient-bgcolor;
@@ -21127,7 +21147,7 @@ overflow:auto !important;
         line-height: 48px;
     }
     & when not (@skin = "material") {
-      font: normal 20px Segoe UI;
+      font: normal 20px @font-family;
         line-height: 48px;
     }
 }
@@ -21308,7 +21328,7 @@ font-size: 18px;
     & when not (@skin = "material") {
       margin-top: 6px !important;
     }
-    font: bold 12px Segoe UI;
+    font: bold 12px @font-family;
 }
 
 .e-pivotclient .e-toggleExpandButton, .e-pivotclient .e-toggleCollapseButton{
@@ -21405,7 +21425,7 @@ margin: 6px 0px 8px !important;
       margin: 8px 0 20px 3px;
     }
     & when not (@skin = "material") {
-      font: normal 14px Segoe UI;
+      font: normal 14px @font-family;
       margin: 8px 0 8px 3px;
     }
 }
@@ -21480,7 +21500,7 @@ background:@toolbar-bgcolor;
 
 .e-pivotclient .e-cubeName {
   padding: 7px 0 0 6px;
-  font: normal 14px Segoe UI;
+  font: normal 14px @font-family;
 }
 
 .e-pivotclient .e-categoricalAxis, .e-pivotclient .e-rowAxis, .e-pivotclient .e-slicerAxis {
@@ -21568,16 +21588,16 @@ background:@toolbar-bgcolor;
 }
 .e-pivotclient .e-sortingDlg, .e-pivotclient .e-filteringDlg {
    & when not (@skin = "office-365"){
-      font: bold 12px Segoe UI !important;
+      font: bold 12px @font-family !important;
    }
    & when (@skin = "office-365"){
-      font: normal 14px Segoe UI !important;
+      font: normal 14px @font-family !important;
       font-weight:400 !important;
    }   
 }
 .e-pivotclient .e-sortingDlg label, .e-pivotclient .e-filteringDlg label{
    & when (@skin = "office-365"){
-      font: normal 14px Segoe UI !important;
+      font: normal 14px @font-family !important;
    } 
 }
 .e-pivotclient .e-sortDisable,.e-pivotclient .e-radioBtnDesc,.e-pivotclient .e-preserveHrchy,.e-pivotclient .e-filterLbl,.e-pivotclient .e-conditionLbl { vertical-align: middle;}
@@ -22139,7 +22159,7 @@ font-size:16px;
 
 .e-pivotclient .e-dialog { 
 & when not (@skin = "material") and not (@skin = "office-365") {
-    font: bold 12px Segoe UI !important;
+    font: bold 12px @font-family !important;
     opacity: 1 !important;
   }
  }
@@ -23091,7 +23111,7 @@ width: 43% !important;
       }
 }
 .e-pivotclient .e-dialog.e-calcMemberDialog .e-maskedit,.e-pivotclient .e-dialog.e-calcMemberDialog .textarea{
-    font:14px Segoe UI !important;
+    font:14px @font-family !important;
 }
 
 .e-pivotclient .e-dialog .e-memberPager {
@@ -23866,7 +23886,7 @@ color:@active-font-color !important;
 background:@oclient-treeview-active !important;
 }
 .e-pivotchart{
-    font: normal 12px Segoe UI;
+    font: normal 12px @font-family;
     border: 1px solid @oclient-border-color;
     background-color: @oclient-bgcolor;
     color: @fg-header-color;
@@ -24180,7 +24200,7 @@ content:"\e871";
     border-radius: 15px;
     margin-top: 20px;
     text-align: left;
-    font: 12px Segoe UI;
+    font: 12px @font-family;
     font-stretch: condensed;
     text-decoration: none;
     line-height: 20px;
@@ -24244,7 +24264,7 @@ content:"\e871";
       outline:none;
       border:1px solid @neutral-tertiary-alt;
       text-indent:2px;
-      font-family:Segoe UI;
+      font-family:@font-family;
     font-size:14px;
         height: 32px;
     width: 40px;
@@ -24391,7 +24411,7 @@ content:"\e871";
     }
        & when (@skin= "office-365") {
         /* office-365*/
-        font-family: Segoe UI;
+        font-family: @font-family;
         font-size: 14px;
         color:@theme-light-font;
        }
@@ -24706,6 +24726,10 @@ border:1px solid @neutral-light;
 .e-reportviewer-textbox{
     font-size: @content-font-size;
     font-weight: @content-font-weight;
+}
+
+.e-reportviewer-param-datepicker {
+    float: left;
 }
 
 .e-reportviewer-labelpageno {
@@ -30546,7 +30570,7 @@ outline:none !important;
 .e-lv.subpage
 {
     & when (@skin= "office-365") {
-        font-family: Segoe UI;
+        font-family: @font-family;
         color: @theme-light-font;
         font-size: 13px;
         padding: 0;

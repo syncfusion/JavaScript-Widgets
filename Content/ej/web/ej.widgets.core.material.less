@@ -1,6 +1,6 @@
 /*Definition*/
 @skin:"material";
-@font-family: 'Roboto',Segoe UI;
+@font-family: 'Roboto',Segoe UI,Helvetica Neue,Ubuntu,Arial;
 @font-size: 14px;
 @font-path: "common-images";
 @font-icon-path: "material/icons";
@@ -11,13 +11,13 @@
 @content-font-weight: normal;
 @gheader-font-size: 14px;
 @gantt-content-font-size:12px;
-@gantt-header-font-family:Segoe UI;
+@gantt-header-font-family:@font-family;
 @gantt-header-font-size:14px;
 @gantt-parentGanttRecord-font-weight:bold;
 @gantt-schedule-font-weight:500;
 @gantt-schedule-font-size: 13px;
 @gantt-tooltip-font-size: 12px;
-@gantt-tasklable-font-family:Segoe UI;
+@gantt-tasklable-font-family:@font-family;
 @gantt-tasklable-font-size:13px;
 @gantt-tasklable-font-style:normal;
 @treegrid-headercell-height:36px;
@@ -1021,7 +1021,7 @@
     .e-datetime-wrap .e-in-wrap:before, .e-datetime-wrap .e-in-wrap:after,
     .e-atc .e-in-wrap:before, .e-atc .e-in-wrap:after,
     .e-ddl .e-in-wrap:before, .e-ddl .e-in-wrap:after,
-    .e-colorpicker .e-codeeditor:after {
+    .e-colorpicker .e-codeeditor:after, .e-colorpicker .e-buttons .e-codeeditor::before {
         & when (@skin= "material") {
             content: '';
             height: 2px;
@@ -1033,8 +1033,25 @@
             -moz-transition: .2s cubic-bezier(.4,0,.4,1);
             -webkit-transition: .2s cubic-bezier(.4,0,.4,1);
         }
+    }    
+     .e-colorpicker .e-buttons .e-codeeditor.e-focus::before{
+          & when (@skin= "material") {
+              width:100%;
+              left: 0px;
+          }
+     }
+    .e-colorpicker .e-buttons .e-codeeditor .e-color-code{
+        & when (@skin= "material"){
+            border-width:0 0 1px 0;
+            overflow:visible;
+        }
     }
 
+    .e-colorpicker .e-buttons .e-codeeditor .e-color-code:focus{
+        & when (@skin= "material"){
+            box-shadow:none;
+        }
+    }
     .e-ddl .e-in-wrap:before, .e-ddl .e-in-wrap:after {
         & when (@skin= "material") {
             content: '';
@@ -1295,7 +1312,7 @@
         border: medium none;
         box-shadow: @button-box-shadow;
 		 & when (@skin="office-365") {
-			font-family:Segoe UI Semibold;
+			font-family: @font-family;
 			font-weight:600;
 			font-size:14px;
 		}
@@ -4256,7 +4273,7 @@
 
     .e-menu-res-wrap .e-menu-res-in-wrap .e-res-title {
         height: 100%;
-        font-family: 'Segoe UI';
+        font-family: @font-family;
         font-size: 13px;
     }
 
@@ -11401,7 +11418,7 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-columnChooser {
         min-width: 200px;
         padding: 0px;
-        font-family: Segoe UI;
+        font-family: @font-family;
         height: 307px !important;
         background: none white;
     }
@@ -11679,6 +11696,7 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "material") {
             /*material*/
             line-height: 14px;
+			padding: 1.31em 0.7em 1.3em;
             color: rgba(0, 0, 0, 0.84);
             font-size: 13px;
         }
@@ -11689,9 +11707,6 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-grid tr, tr.e-row, tr.e-alt_row {
-        & when (@skin= "material") {
-            height: 48px;
-        }
          & when (@skin= "office-365") {
             height: 36px;
         }
@@ -13765,7 +13780,7 @@ background-image: url('../@{font-path}/icons-white.png');
         border: 1px solid;
         font-size: 16px;
         width: 50px;
-        font-family: Segoe UI;
+        font-family: @font-family;
         font-size: 13px;
         position: absolute;
         top: 28px;
@@ -13798,7 +13813,7 @@ width:40px;
 	height: 28px;
     line-height: 25px;
 	padding-left:25%;
-	font-family: Segoe UI;
+	font-family: @font-family;
 	font-size: 13px;
 	position:absolute;
 	&when(@skin="office-365") {
@@ -16223,7 +16238,7 @@ line-height:28px;
         width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-family: Segoe UI;
+        font-family: @font-family;
         & when (@skin= "office-365") {
             font-size: 12px;
         }
@@ -24531,7 +24546,7 @@ line-height:28px;
         left: 0px !important;
         display: block;
         text-align: center;
-        font-family: 'Segoe UI';
+        font-family: @font-family;
         padding-bottom: 5px;
         line-height: normal;
         padding-left: 0px !important;
@@ -24777,6 +24792,12 @@ line-height:28px;
         padding-left: 5px;
     }
 
+	.e-scheduledialog .e-description:focus {
+       & when (@skin= "material") {
+          border-width: 0 !important;
+       }
+    }
+	
     .e-scheduledialog .e-recurendslabel {
         text-align: left;
         vertical-align: top;
@@ -25675,7 +25696,7 @@ line-height:28px;
     }
 
     .e-draggableAppointment {
-        font-family: segoe UI;
+        font-family: @font-family;
         font-size: 11px;
         border: 1px solid black;
         background-color: #DBDBDE;
@@ -28085,13 +28106,13 @@ line-height:28px;
     .e-radialmenu .e-textcolor {
         text-anchor: middle;
         font-size: 12px;
-        font-family: 'Segoe UI';
+        font-family: @font-family;
     }
 
     .e-radialmenu .e-badgetext {
         text-anchor: middle;
         font-size: 10px;
-        font-family: 'Segoe UI';
+        font-family: @font-family;
     }
 
     .e-radialmenu .e-radialshow {
@@ -29001,7 +29022,7 @@ slideRight Animate
     }
 
     .e-colorpicker .e-buttons .e-grpbtn .e-btn.e-select {
-		& when not(@skin = "office-365"){
+		& when not (@skin= "material") and not (@skin= "office-365"){
 			font-size: 12px;
 		}
 		& when(@skin = "office-365"){
@@ -29470,10 +29491,9 @@ slideRight Animate
 
         & when (@skin = "material") {
             text-transform: uppercase;
-            font-size: 12px;
             padding: 0px 6px 0px 6px;
             height: 30px;
-            width: 5.2em;
+            width: 4.5em;
         }
 
 		& when (@skin = "office-365") {
@@ -30659,7 +30679,7 @@ slideRight Animate
 
     .e-kanban {
         height: auto;
-        font-family: Segoe UI;
+        font-family: @font-family;
         outline: 0 none;
     }
 
@@ -33313,7 +33333,7 @@ slideRight Animate
         & when not (@skin= "material")and not (@skin="office-365") {
             /*other*/
             bottom: 0px;
-            font-family: segoe ui;
+            font-family: @font-family;
 			font-size: 11px;
         }
         width: 100%;
@@ -33665,7 +33685,7 @@ slideRight Animate
         }
         height: inherit;
         white-space: nowrap;
-        font-family: Segoe UI;
+        font-family: @font-family;
     }
     .e-ribbon .e-menu.e-gallerymenu li ul > .e-list > a, .e-ribbon .e-menu.e-gallerymenu li ul .e-list > span{
 	    & when (@skin= "office-365") {
@@ -33674,7 +33694,7 @@ slideRight Animate
         }
 	}
     .e-ribbon.e-js .e-gallerymenu a {
-        font-family: Segoe UI;
+        font-family: @font-family;
 		& when (@skin= "office-365") {
             /*office-365*/
             font-weight: 500! important;
@@ -33754,7 +33774,7 @@ slideRight Animate
 
         & when not (@skin= "material") {
             /*other*/
-            font-family: Segoe UI;
+            font-family: @font-family;
         }
     }
 
@@ -33909,7 +33929,7 @@ slideRight Animate
         }
         & when not (@skin= "material") {
             /*other*/
-            font-family: segoe ui;
+            font-family: @font-family;
 			 margin: 3px 10px 0 10px;
         }
         font-size: 14px;
@@ -33934,7 +33954,7 @@ slideRight Animate
 
         & when not (@skin= "material") {
             /*other*/
-            font-family: segoe ui;
+            font-family: @font-family;
         }
 
         width: 150px;
@@ -33955,7 +33975,7 @@ slideRight Animate
 
         & when not (@skin= "material") {
             /*other*/
-            font-family: segoe ui;
+            font-family: @font-family;
         }
 
         width: 170px;
@@ -35143,7 +35163,7 @@ slideRight Animate
         box-sizing: border-box;
     }
 
-    .e-spreadsheet-list {
+	.e-spreadsheet-list {
         position: relative;
     }
 
@@ -37642,7 +37662,7 @@ slideRight Animate
 
     .e-menu-wrap .e-cellstyleheader, .e-menu-wrap .e-formatastableheader {
         color: gray;
-        font-family: 'Segoe UI';
+        font-family: @font-family;
         font-size: 14px;
         font-weight: bold;
         height: 15px;
@@ -37825,7 +37845,7 @@ slideRight Animate
         width: 63px;
         margin: 3px;
         display: inline-block;
-        font-family: 'Segoe UI';
+        font-family: @font-family;
         font-size: 14px;
         cursor: default;
     }
@@ -38352,7 +38372,7 @@ slideRight Animate
 
     .e-menu-wrap .e-chartheader {
         color: gray;
-        font-family: 'Segoe UI';
+        font-family: @font-family;
         font-size: 14px;
         font-weight: bold;
         padding: 1px 3px 3px;
@@ -40305,6 +40325,13 @@ slideRight Animate
             float: none;
         }
     }
+	.e-spreadsheet .e-spreadsheetgrppanel [class^="e-"] {
+		& when (@skin = "material") {
+			-webkit-box-sizing: content-box;
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+	}
 	/*-------------------------------------Office-365 theme changes-----------------------*/
     .e-spreadsheet .e-spreadsheetmainpanel .e-spreadsheetfooter {
         & when (@skin="office-365")  {

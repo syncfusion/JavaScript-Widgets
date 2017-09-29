@@ -1718,7 +1718,7 @@ ejChart :function (options) {
 ///<br/>bubbleOptions-any	default-
 ///<br/><br/>
 ///Used for the calculation of the bubble radius based on the mode selected 
-///<br/>radiusMode-ej.datavisualization.Chart.RadiusMode|string	default-minmax
+///<br/>radiusMode-ej.datavisualization.Chart.RadiusMode|string	default-minMax
 ///<br/><br/>
 ///Used for the setting the minimum radius of the bubble
 ///<br/>minRadius-number	default-1
@@ -1909,7 +1909,7 @@ ejChart :function (options) {
 ///Controls the size of the second pie in pieOfPie series. Value ranges from 0 to 1.
 ///<br/>pieOfPieCoefficient-number	default-0.6
 ///<br/><br/>
-///Split Value of pieofpie series.
+///Split Value of pieOfPie series.
 ///<br/>splitValue-string	default-null
 ///<br/><br/>
 ///Distance between the two pie's in pieOfPie series.
@@ -4031,7 +4031,7 @@ ejChart :function (options) {
 ///<br/>bubbleOptions-any	default-
 ///<br/><br/>
 ///Used for the calculation of the bubble radius based on the mode selected
-///<br/>radiusMode-ej.datavisualization.Chart.RadiusMode|string	default-minmax .See RadiusMode
+///<br/>radiusMode-ej.datavisualization.Chart.RadiusMode|string	default-minMax .See RadiusMode
 ///<br/><br/>
 ///Used for the setting the minimum radius of the bubble
 ///<br/>minRadius-number	default-1
@@ -4225,7 +4225,7 @@ ejChart :function (options) {
 ///Controls the size of the second pie in pieOfPie series. Value ranges from 0 to 1.
 ///<br/>pieOfPieCoefficient-number	default-0.6
 ///<br/><br/>
-///Split Value of pieofpie series.
+///Split Value of pieOfPie series.
 ///<br/>splitValue-string	default-null
 ///<br/><br/>
 ///Distance between the two pie's in pieOfPie series.
@@ -8384,6 +8384,9 @@ ejDiagram :function (options) {
 ///Defines the different colors and the region of color transitions
 ///<br/>stops-Array&lt;any&gt;	default-[]
 ///<br/><br/>
+///Defines the type of gradient
+///<br/>type-string	default-linear
+///<br/><br/>
 ///Defines the left most position(relative to node) of the rectangular region that needs to be painted
 ///<br/>x1-number	default-0
 ///<br/><br/>
@@ -8398,6 +8401,9 @@ ejDiagram :function (options) {
 ///<br/><br/>
 ///Paints the node with radial color transitions. A focal point defines the beginning of the gradient, and a circle defines the end point of the gradient.
 ///<br/>RadialGradient-any	default-
+///<br/><br/>
+///Defines the type of gradient
+///<br/>type-string	default-radial
 ///<br/><br/>
 ///Defines the position of the outermost circle
 ///<br/>cx-number	default-0
@@ -9938,6 +9944,9 @@ ejDropDownList :function (options) {
 ///This property selects the item in the DropDownList when the item is entered in the Search textbox.
 ///<br/>enableFilterSearch-boolean	default-false
 ///<br/><br/>
+///The serverfiltering is to perform filter action when text is typed in the search box and filtering will be done based on the collection which contains the matched item from entire datasource. Serverfiltering will be done based on the entire items in DataSource.
+///<br/>enableServerFiltering-boolean	default-false
+///<br/><br/>
 ///Saves the current model value to the browser cookies for state maintenance. While refreshing the DropDownList control page, it retains the model value and it is applied from the browser cookies.
 ///<br/>enablePersistence-boolean	default-false
 ///<br/><br/>
@@ -11112,6 +11121,22 @@ cancelEditCell:function(){
 /// Send a cancel request to the edited cell in grid.
 /// </summary>
 },
+calculatePageSizeByParentHeight:function(containerHeight){
+/// <signature>
+/// <summary>
+/// Returns the total page size need to be displayed in grid based on the given container height. This method will also work when the property allowTextWrap as true only when wrap mode is header.
+/// </summary>
+/// <param name="containerHeight"	type="number">When passing the container height as integer or percentage, it will returns the page size that need to be displayed for grid. </param>
+/// </signature>
+},
+changePageSize:function(pageSize){
+/// <signature>
+/// <summary>
+/// It is used to change the number of records displayed per page in grid based on the given page size.
+/// </summary>
+/// <param name="pageSize"	type="number">When passing the page size, it will change the number of records displayed per page in grid. </param>
+/// </signature>
+},
 clearCellSelection:function(){
 /// <signature>
 /// <summary>
@@ -11313,7 +11338,7 @@ filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchca
 /// <summary>
 /// Send a filtering request to filter one column in grid.
 /// </summary>
-/// <param name="fieldName"	type="any[]">Pass the field name of the column</param>
+/// <param name="fieldName"	type="any[]|string">Pass the field name of the column</param>
 /// </signature>
 /// <signature>
 /// <summary>
@@ -12081,7 +12106,7 @@ ejGrid :function (options) {
 ///<br/>disableHtmlEncode-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates to display a column value as checkbox or string
-///<br/>displayAsCheckBox-boolean	default-true
+///<br/>displayAsCheckbox-boolean	default-true
 ///<br/><br/>
 ///Gets or sets a value that indicates to customize ejNumericTextbox of an editable column. See editingType
 ///<br/>editParams-any	default-
@@ -12181,6 +12206,9 @@ ejGrid :function (options) {
 ///<br/><br/>
 ///Used to get or set the sub menu items to the custom context menu item.
 ///<br/>subMenu-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Used to get or set the sub menu items to the custom context menu item using JsRender template.
+///<br/>template-string	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to disable the default context menu items in the grid.
 ///<br/>disableDefaultItems-boolean	default-false
@@ -15401,7 +15429,46 @@ ejListView :function (options) {
 ///<br/>enablePersistence-boolean	default-false
 ///<br/><br/>
 ///Specifies the field settings to map the datasource.
-///<br/>fieldSettings-any	default-
+///<br/>fieldSettings-FieldSettings	default-
+///<br/><br/>
+///Defines the specific field name which contains Boolean values to specify whether the list items to be checked by default or not.
+///<br/>checked-boolean	default-
+///<br/><br/>
+///Defines the URL to be navigated while clicking the list item.
+///<br/>navigateUrl-string	default-
+///<br/><br/>
+///Defines the HTML attributes such as id, class, styles for the specific list item.
+///<br/>attributes-any	default-
+///<br/><br/>
+///Defines the specific field name which contains id values for the list items.
+///<br/>id-string	default-
+///<br/><br/>
+///Defines the URL for the image to be displayed in the list item.
+///<br/>imageUrl-string	default-
+///<br/><br/>
+///Defines the class name for image in that specific list items.
+///<br/>imageClass-string	default-
+///<br/><br/>
+///Specifies whether to prevent the selection of the list item.
+///<br/>preventSelection-boolean	default-
+///<br/><br/>
+///Specifies whether to retain the selection of the list item.
+///<br/>persistSelection-boolean	default-
+///<br/><br/>
+///To define the first level of list items.
+///<br/>primaryKey-string	default-
+///<br/><br/>
+///To define the child level of list items inside the parent items.
+///<br/>parentPrimaryKey-string	default-
+///<br/><br/>
+///Defines the specific field name in the data source to load the list with data.
+///<br/>text-string	default-
+///<br/><br/>
+///To trigger the mouseup event for specific list items.
+///<br/>mouseUP-string	default-
+///<br/><br/>
+///To trigger the mousedown event for specific list items.
+///<br/>mouseDown-string	default-
 ///<br/><br/>
 ///Contains the array of items to be added in ListView.
 ///<br/>items-Array&lt;any&gt;	default-[]
@@ -15875,7 +15942,7 @@ ejMap :function (options) {
 ///<br/>urlTemplate-string	default-&#39;http://a.tile.openstreetmap.org/level/tileX/tileY.png&#39;
 ///<br/><br/>
 ///Sublayer is the collection of shape Layer
-///<br/>sublayers-Array&lt;any&gt;	default-
+///<br/>subLayers-Array&lt;any&gt;	default-
 ///<br/><br/>
 ///to get the type of bing map.
 ///<br/>bingMapType-ej.datavisualization.Map.BingMapType|string	default-aerial
@@ -16213,6 +16280,9 @@ ejMaskEdit :function (options) {
 ///<br/><br/>
 ///Specify the inputMode for mask edit textbox control. See InputMode
 ///<br/>inputMode-ej.InputMode|string	default-ej.InputMode.Text
+///<br/><br/>
+///Defines the localization culture for MaskEdit.
+///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Specifies the input mask.
 ///<br/>maskFormat-string	default-null
@@ -19406,7 +19476,7 @@ ejPrint :function (options) {
 ///Specifies whether the URL of an external stylesheet can be included to customize and print that page.
 ///<br/>externalStyles-string	default-null
 ///<br/><br/>
-///Prepend a doctype to the document frame.
+///Prepend a docType to the document frame.
 ///<br/>docType-string	default-&amp;lt;!doctype html&amp;gt;
 ///<br/><br/>
 ///Specifies whether the global styles can be applied to the element to be printed.
@@ -22074,7 +22144,7 @@ executeCommand:function(cmdName, args, textnodeType){
 /// <summary>
 /// Performs the action value based on the given command.
 /// </summary>
-/// <param name="textnodeType"	type="boolean">Boolean value to specify whether the argument is textnode or not, this is optional.</param>
+/// <param name="textnodeType"	type="boolean">Boolean value to specify whether the argument is textNode or not, this is optional.</param>
 /// </signature>
 },
 focus:function(){
