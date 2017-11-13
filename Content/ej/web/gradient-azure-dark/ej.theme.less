@@ -34,8 +34,6 @@
 @hover-border-color: #777777;
 @hover-font-color: #dddddd;
 @hover-icon-color: #cccccc;
-@toggle-hover-font-color: @active-bg-stcolor ;
-@toggle-content-font-color: @content-font-color;
 
 @active-bg-stcolor: #74c3e7;
 @active-bg-endcolor: #179bd7;
@@ -220,6 +218,10 @@
 @gantt-schedule-font-color: @header-font-color;
 @gantt-toolbar-font-color: @content-font-color;
 @gantt-tooltip-font-color: @content-font-color;
+@gantt-taskbar-selection-border-color: #FFFFFF;
+@gantt-selectionpopup-content-bg-color: @content-bg-color;
+@gantt-selectionpopup-border-color:@content-border-color;
+@gantt-selectionpopup-default-icon-color:@default-icon-color;
 
 @treegrid-detailcellwrapper-background-color: @content-bg-color;
 @treegrid-detailcellwrapper-font-color: @content-font-color;
@@ -549,10 +551,11 @@
 @sp-outline:transparent none 0px; @sp-item-hover-color:rgba(60, 146, 169, 0.40); @sp-noborder:0px solid transparent; @sp-header-font-size:14px; @sp-header-border-radius:0px;
 /*-----------------------Diagram Definition-----------------*/
 @dg-contextmenu:url("../common-images/diagram_context1.png");@dg-contextmenu-hover:url("../common-images/diagram_context1.png");
-@dg-ruler-overlap-bg: #D8D8D8;
-@dg-ruler-space-bg: #EdEdEd;
-@dg-ruler-tick: #aaaaaa;
-@dg-ruler-label: #7c7c7c;
+@dg-ruler-overlap-bg: #212121;
+@dg-ruler-space-bg: #4d4d4d;
+@dg-ruler-tick: #cccccc;
+@dg-ruler-label: #dddddd;
+ 
 /*-----------------------Datepicker Definition-----------------*/
 @disable-datepicker-text: darken( @default-font-color, 46% );
 /*-----------------------Bootstrap support-----------------*/
@@ -675,6 +678,12 @@
   color: @rbn-apptab-color;
 }
 /*----------------------Ribbon End-----------------------*/
+/*----------------------File Explorer Start-----------------------*/
+
+.mouseselection-stylefor-fileexplorer() {
+    background-color: fade(@active-bg-stcolor,30%);
+}
+/*----------------------File Explorer End-----------------------*/
 /*----------------------Kanban Definition-----------------------*/
 @kanban-cell-exceed: darken( #f8d9c7, 68% );
 @kanban-cell-deceed: darken( #ffedcd, 70% );
@@ -685,6 +694,7 @@
 @kanban-toolbar-border:darken(@default-border-color,25%);
 @kanban-filter-done-stcolor: @hover-bg-stcolor;
 @kanban-card-shadow:none;
+@kanban-toggle-hover-ftcolor: @active-bg-stcolor;
 .kanban-cell-bg(){
 .custom-gradient(@default-gradient-color, @default-bg-stcolor, @default-bg-endcolor, 4%, 0%);
 }
@@ -699,6 +709,16 @@
 }
 .kanban-targetdrag-font(){
 	.default-gradient();
+}
+.kanban-toggle-content-ftcolor(){
+     color: @content-font-color;
+     opacity: 0.6;
+     filter: alpha(opacity=60);
+}
+.kanban-toggle-icon-ftcolor(){
+     color: @content-font-color;
+     opacity: 0.8;
+     filter: alpha(opacity=80);
 }
 /*----------------------Kanban End-----------------------*/
 /*----------------------Spreadsheet Definition-----------------------*/
@@ -840,6 +860,7 @@
 .high-contrast-schedule-content-icon-color() {}
 .high-contrast-upload-btn-hover-color(){}
 .high-contrast-stylefor-daterange(){}
+.daterange-inrange-background() {}
 /*---------------- Office-365 ----------------*/
 
 .office-grid-footer-bg-color() {}
@@ -2935,7 +2956,7 @@ line-height: 1.7em;
 }
 
 .e-schedule .e-mousehover {
-    background-color: @schedule-select-bg-color;
+    background-color: @schedule-select-bg-color !important;
     color: @hover-font-color;
 }
 
@@ -2980,7 +3001,8 @@ line-height: 1.7em;
     border-bottom: @border-size @border-type @content-border-color;
 }
 
-.e-schedule .e-resourcecells {
+.e-schedule .e-resourcecells,
+.e-schedule .e-monthnamecells{
     .switch-schedule-header-color;
     border-left: @border-size @border-type @header-border-color;
     border-bottom: @border-size @border-type @header-border-color;
@@ -3022,7 +3044,8 @@ line-height: 1.7em;
 .e-schedule.e-rtl .e-resourcecells,
 .e-schedule.e-rtl .e-headercells,
 .e-schedule.e-rtl .e-horizontmonthheaderdatetd,
-.e-schedule.e-rtl .e-horizontmonthheaderdaytd {
+.e-schedule.e-rtl .e-horizontmonthheaderdaytd,
+.e-schedule.e-rtl .e-monthnamecells{
     .switch-schedule-header-color;
     border-left: none !important;
     border-right: @border-size @border-type @header-border-color;
@@ -3079,7 +3102,8 @@ line-height: 1.7em;
     color: @header-font-color;
 }
 
-.e-schedule .e-resourceleftindentcells {
+.e-schedule .e-resourceleftindentcells,
+.e-schedule .e-monthnameleftindentcell{
     .switch-schedule-header-color;
     border-bottom: @border-size @border-type transparent;
     background: @header-bg-stcolor;
@@ -3114,15 +3138,15 @@ line-height: 1.7em;
 .e-schedule .e-selectedCell,
 .e-schedule .e-agendaappointment.e-selectedAppointment {
     & when (@skin= "material") {
-        background-color: @grey-100;
+        background-color: @grey-100 !important;
     }
 
     & when (@skin= "office-365") {
-        background-color: @theme-lighter;
+        background-color: @theme-lighter !important;
     }
 
     & when not (@skin= "material") and not (@skin="office-365") {
-        background-color: @schedule-select-bg-color;
+        background-color: @schedule-select-bg-color !important;
     }
 }
 
@@ -3235,6 +3259,155 @@ line-height: 1.7em;
 
     & when (@skin= "material") {
         border-bottom-color: @grey-700;
+    }
+}
+
+@media print {
+    .e-schedule .e-monthappointment,
+    .e-schedule .e-alldayappointment,
+    .e-schedule .e-appointment,
+    .e-schedule .e-activeview,
+    .e-schedule .e-currenttime,
+    .e-schedule .e-highlightcurrenttimeline,
+    .e-schedule .e-agendacolordiv,
+    .e-schedule .e-selectedCell{
+        background: @schedule-app-stbg-color !important; /* Old browsers */
+        & when (@skin= "gradient-azure-dark") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when (@skin= "gradient-lime") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when (@skin= "gradient-lime-dark") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when (@skin= "gradient-saffron") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when (@skin= "gradient-saffron-dark") {
+            background: -moz-linear-gradient(top, @schedule-app-stbg-color 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        & when not (@skin= "gradient-azure-dark") and not (@skin="gradient-lime") and not (@skin="gradient-lime-dark") and not (@skin="gradient-saffron") and not (@skin="gradient-saffron-dark"){
+            background: -moz-linear-gradient(top, 0%, @schedule-app-endbg-color 100%) !important; /* FF3.6+ */
+        }
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@schedule-app-stbg-color), color-stop(100%,@schedule-app-endbg-color)) !important; /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%) !important; /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%) !important; /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%) !important; /* IE10+ */
+        background: linear-gradient(to bottom, @schedule-app-stbg-color 0%,@schedule-app-endbg-color 100%) !important; /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{schedule-app-stbg-color}', endColorstr='@{schedule-app-endbg-color}',GradientType=0 ) !important; /* IE6-9 */
+        color: #fff !important;
+    }
+    
+    .e-schedule .e-scheduleheader {
+        & when (@skin= "material") {
+            background: @primary-color !important;
+        }
+        & when (@skin= "office-365") {
+            background: @neutral-white !important;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
+            .media-print-default-gradient(@default-gradient-color, @default-bg-stcolor, @default-bg-endcolor, 0%, 0%);
+        }
+    }
+    
+    .media-print-default-gradient(@derivedfrom, @start, @end, @light, @dark) when (true) {
+        &{
+            .generate();
+        }
+        .generate() when (@derivedfrom = none) {
+            @gradient: none;
+            background: @start !important; 
+        }
+        .generate() when not (@derivedfrom = none) {
+            @gradient: lighten(extract(@derivedfrom, 1), @light), darken(extract(@derivedfrom, 2), @dark) !important;
+            background: @start !important; /* Old browsers */
+            background: -moz-linear-gradient(top, @gradient) !important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@end)) !important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,@gradient) !important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, @gradient) !important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, @gradient) !important; /* IE10+ */
+            background: linear-gradient(to bottom, @gradient) !important; /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{start}', endColorstr='@{end}',GradientType=0 ) !important; /* IE6-9 */
+        }
+    }
+
+    .e-schedule .e-workcells,
+    .e-schedule .e-monthcells {   
+        border-bottom: @border-size @border-type @content-border-color !important;
+        border-left: @border-size @border-type @content-border-color !important;
+        background: @schedule-cells-bg-color !important;
+    }
+
+    .e-schedule .e-monthcellhighlight {
+        & when (@skin= "office-365") {
+            background: @neutral-white !important;
+        }
+        & when not (@skin="office-365") {
+            background: @content-bg-color !important;
+        }
+    }
+
+    .e-schedule .e-businesshighlightworkcells {
+        & when (@skin= "office-365") {
+            background: @neutral-white !important;
+        }
+        & when not (@skin="office-365") {
+            background: @content-bg-color !important;
+        }
+    }
+
+    .e-schedule .e-nextapp,
+    .e-schedule .e-prevapp {
+        & when (@skin="material") {
+            color: fade(@base-font-color,87%) !important;
+            background-color: @grey-100 !important;
+            border: @border-size @border-type @grey-400 !important;
+            border-bottom: transparent !important;
+        }
+        & when (@skin= "office-365") {
+            color: @neutral-light-font !important;
+            background: @neutral-lighter !important;
+            border: @border-size @border-type @neutral-lighter !important;
+            border-bottom: transparent !important;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
+            .media-print-default-gradient(@default-gradient-color, @default-bg-stcolor, @default-bg-endcolor, 0%, 0%);
+            border: @border-size @border-type @default-border-color !important;
+            border-bottom: transparent !important;
+            color: @default-font-color !important;
+        }
+    }
+
+    .e-schedule .e-apptext,
+    .e-schedule .e-apptime,
+    .e-schedule .e-recurapp:before,
+    .e-schedule .e-recureditapp:before {
+        color: @active-font-color !important;
+    }
+    
+    .e-schedule .e-scheduleallday:before,
+    .e-schedule .e-schedulerepeat:before,
+    .e-schedule .e-schedulerepeatedit:before,
+    .e-schedule .e-timeidicatorcircle:before {
+        color: @schedule-app-stbg-color !important;
+    }
+
+    .e-schedule .e-alternatecells, 
+    .e-schedule .e-ampmstyle {
+        & when (@skin= "material") {
+            border-bottom: @border-size dashed @grey-300 !important;
+        }
+        & when (@skin= "office-365") {
+            border-bottom: @border-size dotted @neutral-quaternary !important;
+        }
+        & when not (@skin= "material") and not (@skin="office-365") {
+            border-bottom: @border-size dotted lighten( @content-border-color, 2% ) !important;
+        }
+    }
+
+    .e-schedule .e-othermonths {
+        border-left: @border-size @border-type transparent !important;
     }
 }
 /*-----------------------Schedule Theme End -----------------------------*/
@@ -3672,6 +3845,127 @@ color: @pager-font-color;
          color:@neutral-secondary;
     }
 }
+.e-pager .e-textbox-paging.e-pagercontainer{
+	float: none;
+}
+.e-pager .e-template{
+	width: 100%;
+}
+.e-pager .e-textbox-paging .e-gototextbox{
+  & when not (@skin= "material") and not (@skin="office-365"){
+			border: none;
+	}
+}
+.e-pager .e-textbox-paging .e-nextpage,.e-pager .e-textbox-paging .e-nextpagedisabled{
+	& when not (@skin= "material") and not (@skin="office-365"){
+		border-left: 1px solid;
+		border-color: @pager-default-border-color;
+	}	
+}
+.e-pager.e-rtl .e-textbox-paging .e-nextpage,.e-pager.e-rtl .e-textbox-paging .e-nextpagedisabled{
+	& when not (@skin= "material") and not (@skin="office-365"){
+		border-right: 1px solid;
+		border-color: @pager-default-border-color;
+	}
+}
+.e-pager .e-textbox-paging.e-pagercontainer .e-gototextbox{
+	float: none;
+	margin-right:0px;
+	height: 26px;
+}
+.e-pager .e-textbox-paging.e-pagercontainer .e-gototextbox{
+	width: 75px;
+}
+.e-pager .e-textbox-paging.e-pagercontainer .e-newrecord,.e-pager .e-textbox-paging.e-pagercontainer .e-firstpage,
+.e-pager .e-textbox-paging.e-pagercontainer .e-lastpage,.e-pager .e-textbox-paging.e-pagercontainer .e-nextpage,
+.e-pager .e-textbox-paging.e-pagercontainer .e-prevpage,.e-pager .e-textbox-paging.e-pagercontainer .e-firstpagedisabled,
+.e-pager .e-textbox-paging.e-pagercontainer .e-lastpagedisabled,.e-pager .e-textbox-paging.e-pagercontainer .e-nextpagedisabled,
+.e-pager .e-textbox-paging.e-pagercontainer .e-prevpagedisabled{
+	 & when (@skin= "material") {  
+			margin: 5px 8px 0 8px;
+			height: 12px;
+			width: 13px;
+			display: inline-block;
+			border-radius: 50%;
+			padding: 6px 3px 5px 6px;
+			color: rgba(0,0,0,.54);
+	}
+	& when not (@skin= "material") and not (@skin="office-365"){
+		padding: 9px 3px 8px 8px;
+	}
+	& when (@skin="office-365"){
+		padding: 0px;
+	}
+}
+.e-pager .e-textbox-paging.e-pagercontainer .e-newrecord,.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-newrecord{
+	& when (@skin="office-365"){
+		font-weight: bolder;
+	}
+}
+.e-pager.e-disable .e-textbox-paging.e-pagercontainer .e-newrecord.e-hover{
+	background: transparent;
+}
+.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-newrecord,.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-firstpage,
+.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-lastpage,.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-nextpage,
+.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-prevpage,.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-firstpagedisabled,
+.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-lastpagedisabled,.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-nextpagedisabled,
+.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-prevpagedisabled{
+
+	& when not (@skin= "material") and not (@skin="office-365"){
+			padding: 8px 8px 2px 2px;
+	}
+	& when (@skin="office-365"){
+			padding: 0px;
+	}
+}
+.e-pager.e-rtl .e-textbox-paging .e-gototextbox{
+	& when not (@skin= "material") and not (@skin="office-365"){
+		float: right;
+	}
+}
+.e-pager .e-textbox-paging.e-pagercontainer .e-newrecord.e-hover{
+	& when not (@skin= "material") and not (@skin="office-365"){
+		border-radius: 0px 4px 4px 0px;
+	}
+	& when (@skin= "material"){
+		border-radius: 50%;
+	}
+}
+.e-pager.e-rtl .e-textbox-paging.e-pagercontainer .e-newrecord.e-hover{
+	& when not (@skin= "material") and not (@skin="office-365"){
+		border-radius: 0px;
+	}
+}
+.e-pager .e-textbox-paging.e-pagercontainer .e-lastpage.e-hover{
+	& when not (@skin= "material") and not (@skin="office-365"){
+		border-radius: 0px;
+	}
+}
+.e-pager .e-textbox-paging.e-pagercontainer .e-newrecord.e-hover{
+	& when not (@skin= "material") and not (@skin="office-365"){
+		.hover-pager-gradient();
+	}
+	& when (@skin= "office-365"){
+		 background-color:@neutral-lighter;
+	}
+		& when (@skin= "material"){ 
+         background-color:@grey-200;
+	}
+}
+.e-pager .e-template .e-textbox-paging .e-lastpage,.e-pager .e-template .e-textbox-paging .e-lastpagedisabled{
+	border-right: inherit;
+}
+.e-pager.e-rtl .e-template .e-lastpage,.e-pager.e-rtl .e-template .e-lastpagedisabled{
+	& when not (@skin= "material") and not (@skin="office-365"){
+		border-right: none;
+		border-left: 1px solid;
+		border-left-color: @pager-default-border-color;
+	}
+}
+.e-pager .e-template .e-previouspager.e-nextprevitemdisabled,.e-pager .e-template .e-nextpager.e-nextprevitemdisabled{
+	display: none;
+}
+
 
 
 /*------------------------------------- scrollbar -------------------------------------------*/
@@ -3712,6 +4006,11 @@ color: @pager-font-color;
      &when (@skin="office-365"){
         border-top:none;
     }
+}
+.e-scrollbar .e-vhandlespace,
+.e-scrollbar .e-hhandlespace {
+    position: relative;
+    background-color: @scroll-bg-color;
 }
 .e-scrollbar .e-hscroll .e-hdown.e-icon{
     &when not(@skin="material"){
@@ -5701,6 +6000,9 @@ color:#5c5c5c;
     & when not (@skin="material") {
         color: @active-font-color;
     }
+    & when (@skin="bootstrap") {
+        .active-gradient();
+    }
 }
 
 .e-btn.e-select.e-disable.e-primary, .e-btn.e-select.e.e-disable.e-primary:active, .e-btn.e-select.e-disable.e-primary:hover {
@@ -6384,7 +6686,9 @@ color:#5c5c5c;
  .e-colorpicker .e-slider-wrap .e-handle.e-select:hover {
     border: 3px solid @colorpicker-bg-color;
 }
-
+.e-colorpicker:focus{
+    outline: none;
+}
 .e-colorwidget .e-select {
     & when not (@skin="material") {
         background: @colorpicker-button-bg-color;
@@ -7322,6 +7626,30 @@ color:#5c5c5c;
     } 
 }
 
+.e-fileexplorer .e-tile-wrapper .e-fe-selection-rect, .e-fileexplorer .e-gridcontent .e-fe-selection-rect {
+
+    & when (@skin= "high-contrast-01") {
+        border: 1px solid @active-border-color;
+    }
+
+    & when (@skin= "high-contrast-02") {
+        border: 1px solid @active-border-color;
+    }
+
+    & when (@skin= "material") {
+        border: 1px solid @accent-color;
+    }
+
+    & when not (@skin= "high-contrast-01") and not (@skin= "high-contrast-02") and not (@skin= "material") {
+        border: 1px solid @active-bg-stcolor;
+    }
+
+    .mouseselection-stylefor-fileexplorer();
+}
+
+.e-fileexplorer.e-ie8 .e-tile-wrapper .e-fe-selection-rect.e-active, .e-fileexplorer.e-ie8 .e-gridcontent .e-fe-selection-rect.e-active {
+    background-color: @active-bg-stcolor;
+}
 
 .e-fileexplorer .e-toolbar .e-tool-input:focus, .e-fe-toolbar.e-responsive-toolbar .e-tool-input:focus, .e-fe-dialog input.e-fe-dialog-text:focus {
     & when (@skin= "office-365") {
@@ -7398,6 +7726,9 @@ color:#5c5c5c;
     visibility: hidden;
 }
 
+.e-datepicker:focus {
+    outline: none;
+}
 .e-datewidget .e-in-wrap {
     border-color: @content-border-color;
 
@@ -7783,6 +8114,11 @@ color:#5c5c5c;
     }
 }
 
+.e-ntouch.e-datepicker .e-header .e-prev.e-disable .e-arrow-sans-left:hover,
+.e-ntouch.e-datepicker .e-header .e-next.e-disable .e-arrow-sans-right:hover {
+    background-color: transparent;
+}
+
 .e-ntouch.e-datepicker .e-arrow-sans-left:hover,
 .e-ntouch.e-datepicker .e-arrow-sans-right:hover {
     & when (@skin= "material"), (@skin= "office-365") {
@@ -7809,17 +8145,26 @@ color:#5c5c5c;
 }
 
 
-.e-datepicker .e-state-default, .e-datepicker table td.e-weeknumber, .e-datepicker table td.e-weeknumber:hover {
+.e-datepicker .e-state-default{
     & when not (@skin="material") and not (@skin="office-365") {
         color: @content-font-color;
         font-weight: @content-font-weight;
     }
 
     & when (@skin="material") {
-        color: fade(@grey-light-font,54%);
+        color: fade(@base-font-color,87%);
         font-size:14px;
     }
 
+    & when (@skin="office-365") {
+        color: @theme-light-font;
+    }
+}
+
+.e-datepicker table td.e-weeknumber, .e-datepicker table td.e-weeknumber:hover {
+    & when (@skin="material") {
+        color: fade(@grey-light-font,54%);
+    }
     & when (@skin="office-365") {
         color: fade(@theme-light-font,54%);
     }
@@ -8387,6 +8732,12 @@ color:#5c5c5c;
 .e-datepicker.e-popup .e-header .e-prev:not(:active):after, .e-datepicker.e-popup .e-header .e-next:not(:active):after {
     & when (@skin="material") {
         background-color: fade(@base-font-color,12%);
+    }
+}
+
+.e-datepicker.e-popup .e-header .e-prev.e-disable:not(:active):after, .e-datepicker.e-popup .e-header .e-next.e-disable:not(:active):after {
+    & when (@skin="material") {
+        background-color: transparent;
     }
 }
 
@@ -9815,11 +10166,13 @@ color:@theme-dark;
     box-shadow: none;
     }
  
-    & when not (@skin= "material") {
+   & when not (@skin= "material") {
         /*other*/ 
-    background: @default-bg-stcolor;
-    box-shadow: 0 0 0 transparent inset;
-    }   
+  background: @default-bg-stcolor;
+ .daterange-inrange-background();   
+  box-shadow: 0 0 0 transparent inset;
+ 
+    } 
     & when (@skin= "office-365") {
        background-color:@neutral-lighter;
     } 
@@ -10223,7 +10576,7 @@ color:@theme-dark;
 }
 
 .e-datavisualization-diagram.e-js .sf-diagram_overlap {
-    background-color: @dg-ruler-overlap-bg;
+    background-color: @dg-ruler-overlap-bg; 
 }
 
 .e-datavisualization-diagram.e-js .sf-diagram_hRuler,
@@ -13094,6 +13447,13 @@ background-image:url(images/rotator-icon.png);
 }
 
 
+.e-slider-wrap .e-sliderbtn:not(.e-animate).e-select:not(:active):after {
+        & when (@skin= "material") {
+            background-color:@gtouch-border-color;
+    }
+        }
+
+
 
 /*------------------------------------- splitter -------------------------------------------*/
 
@@ -13800,7 +14160,7 @@ border: @border-size @border-type @default-border-color;
     color: @hover-font-color;
     filter:none;
 }
-.e-tab.e-js .e-header .e-icon.e-chevron-circle-left, .e-icon.e-chevron-circle-right{
+.e-tab.e-js .e-icon.e-chevron-circle-left, .e-tab.e-js .e-icon.e-chevron-circle-right{
      & when (@skin= "material") {
         /*material*/ 
        color: fade(@base-font-color,87%);    
@@ -15982,6 +16342,18 @@ vertical-align:baseline;
         background: @grey-50;
     }
 } 
+.e-rte .e-toolbar .e-rte-format.e-ul .e-tooltxt .e-ddl .e-input{
+    & when (@skin= "office-365") {
+       /*office-365*/ 
+        padding-left: 0.557em;
+    }
+}
+.e-rte .e-toolbar.e-rtl .e-rte-format.e-ul .e-tooltxt .e-ddl .e-input{
+    & when (@skin= "office-365") {
+       /*office-365*/ 
+        padding-right: 0.557em;
+    }
+} 
 .e-rte .e-toolbar .e-ul .e-tooltxt .e-ddl.e-widget.e-popactive .e-select{
     & when (@skin= "material") {
        /*material*/   
@@ -16080,6 +16452,12 @@ vertical-align:baseline;
 	margin-right: 0px;
     }
 }
+
+.e-rtlrte label{
+	height: 12px;
+    line-height: 10px;
+}
+
 .e-rte-orderlistname.e-menu.e-context.e-split, .e-rte-unorderlistname.e-menu.e-context.e-split, .e-rte-colorpalette.e-menu.e-context.e-split,
 .e-rte-orderlistname.e-menu.e-widget.e-split li.e-list, .e-rte-unorderlistname.e-menu.e-widget.e-split li.e-list
 {
@@ -16122,9 +16500,6 @@ vertical-align:baseline;
 
 .e-chkbox-wrap {
     display: inline-flex;
-}
-.e-chkbox-wrap.e-tb-cell {
-    display: table-cell;
 }
 .e-chkbox-wrap.e-tb-cell .e-text, .e-chkbox-wrap.e-tb-cell div {
     display: table-cell;
@@ -17267,42 +17642,25 @@ font-size:14px;
 .e-hoverCell{
 background-color:@hover-bg-stcolor !important;
 }
-.e-pivotgrid .e-headcol,.e-pivotgrid .e-headrow{
-    border-bottom: none !important;
-    border-left: none !important;
-    border-top: none !important;
-    border-right: none !important;
-	font-style: italic !important;
-	font-size: 10px !important;
-	font-weight: bold;
-	text-align: center;
-	padding-left:10px;
-	padding-right:10px;
-}
-.e-pivotgrid .e-rowfirst{
-    border-left: solid 1px #c8c8c8 !important;
-}
-.e-pivotgrid *:focus:hover{
-    outline:none;
-}
-.e-pivotgrid .colfirst{
-    border-top: solid 1px #c8c8c8 !important;
-}
-.e-pivotgrid .e-colHeadBtn,.e-pivotgrid .e-rowHeadBtn{
-    overflow:hidden;
-    text-overflow:ellipsis;
-}
-.e-pivotgrid .e-topele{
-    border-bottom: none !important;         
-    border-left: solid 1px #c8c8c8 !important;
-    border-top: solid 1px #c8c8c8 !important;
-    border-right: none !important;
-}
+
 .e-pivotschemadesigner .e-schemaBtnUnique{
     white-space:initial !important
 }
 .e-pivotschemadesigner *:focus:hover{
 outline:none;
+}
+.e-pivotgrid .e-headerItem{   
+    border: none !important;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;  
+    overflow: hidden !important;
+    display: inline-block;
+    text-overflow: ellipsis;    
+    white-space: nowrap;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .e-pivotgrid table {
     & when (@skin = "material") {
@@ -17416,7 +17774,7 @@ outline:none;
 }
 .e-pivotgrid .e-pivotGridTable th, .e-pivotgrid .e-pivotGridTable td {
 overflow:hidden;
-          & when not (@skin = "office-365") {
+   & when not (@skin = "office-365") {
   border: solid 1px @content-border-color;
   }
    & when (@skin = "office-365") {
@@ -18569,6 +18927,16 @@ content: "\e881";
 }
 .e-pivotgrid .e-pivotschemadesigner .e-fieldTable{
 overflow:auto;
+}
+.e-pivotschemadesigner .e-kpiCDB:before, .e-pivotschemadesigner .e-kpiRootCDB:before, .e-pivotschemadesigner .e-kpiGoalCDB:before, .e-pivotschemadesigner .e-kpiStatusCDB:before, .e-pivotschemadesigner .e-kpiTrendCDB:before, .e-pivotschemadesigner .e-kpiValueCDB:before{
+content:"\e6df";
+font-size: 18px;
+}
+.e-pivotschemadesigner .e-kpiCDB, .e-pivotschemadesigner .e-kpiRootCDB, .e-pivotschemadesigner .e-kpiGoalCDB, .e-pivotschemadesigner .e-kpiStatusCDB, .e-pivotschemadesigner .e-kpiTrendCDB, .e-pivotschemadesigner .e-kpiValueCDB{
+height:16px;
+width:16px;
+display:inline-block;
+vertical-align: text-top;
 }
 .e-pivotschemadesigner .e-fieldTable
 {
@@ -20950,7 +21318,7 @@ background-color:@hover-bg-stcolor !important;
     outline:none;
 }
 .e-pivotclient .e-removeBtnUnqiue{
-    height:calc(100% - 8px) !important
+    height:calc(100% - 39px) !important
 }
 .e-pivotclient .e-schemaRemoveBtnUnqiue{
     height: inherit !important
@@ -22356,7 +22724,20 @@ font-size:16px;
  .e-pivotclient.e-rtl .e-controlPanel .e-icon{
     float: right;
 }
- .e-pivotclient.e-rtl .sortfilterTab .e-content{
+.e-pivotclient .kpiGoal:before, .e-pivotclient .kpiStatus:before, .e-pivotclient .kpiTrend:before, .e-pivotclient .kpiValue:before{
+content:"\e6df";
+font-size: 18px;
+}
+.e-pivotclient .kpiGoal, .e-pivotclient .kpiStatus, .e-pivotclient .kpiTrend, .e-pivotclient .kpiValue{
+  height:16px;
+  width:16px;
+  display:inline-block;
+  vertical-align: text-top;
+}
+.e-pivotclient.e-rtl .e-controlPanel .e-expand, .e-pivotclient.e-rtl .e-controlPanel .e-collapse {
+float: none !important;
+}
+.e-pivotclient.e-rtl .sortfilterTab .e-content{
     float: none;
 }
  .e-pivotclient.e-rtl .e-unCheckAll {
@@ -22526,8 +22907,7 @@ font-size:16px;
         & when not (@skin = "office-365"){
          border: 1px solid @header-border-color !important;
         }
-         margin: 0 !important;
-         margin-top:4px;
+         margin: -1px !important;
          background: @default-bg-endcolor !important;
          height:18px;
     }
@@ -24130,8 +24510,16 @@ content:"\e884";
 .e-pivotchart .none:before{
 content:"\e871";
 }
+.e-pivotchart .e-icon-xAxis-title:before {
+    content: "\e917";
+    font-size:20px;
+}
+.e-pivotchart .e-icon-yAxis-title:before {
+    content: "\e918";
+    font-size:20px;
+}
 
-.e-pivotchart .e-chartTypesImg, .e-pivotchart .e-chartTypesImg:hover, .e-pivotchart .e-toolTipImg, .e-pivotchart .e-toolTipImg:hover, .e-pivotchart .e-chart3DImg, .e-pivotchart .e-chart3DImg:hover, .e-pivotchart .e-exportImg, .e-pivotchart .e-exportImg:hover, .e-pivotchart .e-chartTypesImg:hover, .e-pivotchart .e-legend, .e-pivotchart .e-legend:hover, .e-pivotchart .e-zooming, .e-pivotchart .e-zooming:hover, .e-pivotchart .e-smartLabels, .e-pivotchart .e-smartLabels:hover, .e-pivotchart .e-interaction, .e-pivotchart .e-interaction:hover{
+.e-pivotchart .e-chartTypesImg, .e-pivotchart .e-chartTypesImg:hover, .e-pivotchart .e-toolTipImg, .e-pivotchart .e-toolTipImg:hover, .e-pivotchart .e-chart3DImg, .e-pivotchart .e-chart3DImg:hover, .e-pivotchart .e-exportImg, .e-pivotchart .e-exportImg:hover, .e-pivotchart .e-chartTypesImg:hover, .e-pivotchart .e-legend, .e-pivotchart .e-legend:hover, .e-pivotchart .e-zooming, .e-pivotchart .e-zooming:hover, .e-pivotchart .e-smartLabels, .e-pivotchart .e-smartLabels:hover, .e-pivotchart .e-interaction, .e-pivotchart .e-interaction:hover, .e-pivotchart .e-icon-xAxis-title:hover, .e-pivotchart .e-icon-yAxis-title:hover, .e-pivotchart .e-icon-xAxis-title, .e-pivotchart .e-icon-yAxis-title{
     background-repeat: no-repeat;
     margin: 4px;
 	cursor: pointer;
@@ -24139,7 +24527,7 @@ content:"\e871";
 	height: 20px; 
 	width: 20px;
 }
- .e-pivotchart .e-chartTypesImg, .e-pivotchart .e-toolTipImg, .e-pivotchart .e-chart3DImg, .e-pivotchart .e-exportImg, .e-pivotchart .e-chartTypesImg,  .e-pivotchart .e-legend, .e-pivotchart .e-zooming, .e-pivotchart .e-smartLabels, .e-pivotchart .e-interaction{     
+ .e-pivotchart .e-chartTypesImg, .e-pivotchart .e-toolTipImg, .e-pivotchart .e-chart3DImg, .e-pivotchart .e-exportImg, .e-pivotchart .e-chartTypesImg,  .e-pivotchart .e-legend, .e-pivotchart .e-zooming, .e-pivotchart .e-smartLabels, .e-pivotchart .e-interaction, .e-pivotchart .e-icon-xAxis-title, .e-pivotchart .e-icon-yAxis-title{     
     overflow:visible !important;
     color:@oclient-icons-color;
     text-indent:-3px;
@@ -24742,10 +25130,6 @@ border:1px solid @neutral-light;
 .e-reportviewer-textbox{
     font-size: @content-font-size;
     font-weight: @content-font-weight;
-}
-
-.e-reportviewer-param-datepicker {
-    float: left;
 }
 
 .e-reportviewer-labelpageno {
@@ -25359,6 +25743,25 @@ border:1px solid @neutral-light;
     }
 }
 
+ .e-gantt .e-ganttpopup .e-popupcontent {
+        background-color: @gantt-selectionpopup-content-bg-color;
+        border-color: @gantt-selectionpopup-border-color;
+    }
+
+    .e-gantt .e-ganttpopup span:hover,
+    .e-gantt .e-ganttpopup .e-spanclicked {
+        border-color: @gantt-selectionpopup-default-icon-color;
+    }
+
+    .e-gantt .e-ganttpopup .e-downtail:before,
+    .e-gantt .e-ganttpopup .e-downtail {
+        border-top-color: @treegrid-selectionpopup-border-color;
+    }
+
+    .e-gantt .e-ganttpopup .e-downtail:after {
+        border-top-color:@treegrid-selectionpopup-content-bg-color;
+    }
+
 & when (@skin = "office-365") {
     .e-gantt .e-search .e-ejinputtext {
         font-family: @font-family;
@@ -25905,6 +26308,20 @@ border:1px solid @neutral-light;
    .tgPopUp-gradient();
    font-family:@font-family;
 }
+.e-headerContextmenu{
+
+      & when (@skin= "material") {
+        border-color:transparent !important;
+        color:@gantt-menuitem-font-color;
+    }
+    & when not (@skin= "material") {
+        border-color:@gantt-columnchooser-border-color !important;
+        color:@gantt-menuitem-font-color;
+    }
+   .tgPopUp-gradient();
+   font-family:@font-family;
+    border:1px solid;
+}
 
 .e-contextmenu-mouseover{
     & when (@skin= "material") {
@@ -26045,6 +26462,15 @@ border:1px solid @neutral-light;
     top: -10px;
     left: 100%;
  }
+.e-treegrid .e-frozenheaderdiv.e-stacked-header-material::before{
+    content: "";
+    background: @primary-color;
+    position: absolute;
+    height: 91px;
+    width: 1px;
+    top: -10px;
+    left: 100%;
+ }
 .e-treegrid .e-headercontent-material-filterbar{
     border-right-color:transparent!important;
 }
@@ -26144,6 +26570,16 @@ border:1px solid @neutral-light;
      font-size:13px;
      font-weight:normal;
  }
+
+}
+
+.e-treegrid-resIcon {
+	 & when (@skin= "material") {
+        color: fade(@base-font-color, 54%);
+    }
+    & when not (@skin= "material") {
+        color:@header-icon-color;
+    }
 }
 
 
@@ -27051,7 +27487,7 @@ box-shadow: -1px 0 10px 0 black;
 }
 
 
-.e-kanban, .e-kanban .e-headercell, .e-kanban .e-swimlanerow {
+.e-kanban, .e-kanban .e-kanbanheader .e-headercell, .e-kanban .e-swimlanerow {
     background: @content-bg-color;
 }
 
@@ -27064,7 +27500,7 @@ box-shadow: -1px 0 10px 0 black;
     color: @content-font-color;
 }
 
-.e-kanban .e-rowcell .e-shrinkheader {
+.e-kanban .e-kanbancontent .e-rowcell .e-shrinkheader {
      & when (@skin= "material") {
         /*material*/
     color: @accent-color;
@@ -27228,7 +27664,7 @@ box-shadow: -1px 0 10px 0 black;
       border: 1px solid @content-border-color;
 }
 
-.e-kanban .e-rowcell .e-targetclone {
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclone {
 	  & when (@skin= "material") {
           /*material*/
           border: 1px dashed @accent-color;
@@ -27245,29 +27681,29 @@ box-shadow: -1px 0 10px 0 black;
          .kanban-dragclone-bg();
      }
 }
-.e-kanban .e-rowcell .e-targetclonemulti .e-columnkey{
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey{
  border-left: 1px dashed;
  border-right: 1px dashed;
  border-bottom: 1px dashed;
  }
-.e-kanban .e-rowcell .e-targetclonemulti .e-columnkey{
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey{
       border-color: @default-border-color;
 }
-.e-kanban .e-rowcell .e-targetclonemulti .e-columnkey.e-active{
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey.e-active{
     .kanban-dragclone-bg();
 }
-.e-kanban .e-rowcell .e-targetclonemulti .e-columnkey.e-active{
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey.e-active{
      border-color:@active-bg-stcolor;
 }
-.e-kanban .e-rowcell .e-targetclonemulti .e-columnkey.e-multiclonestyle{
+.e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey.e-multiclonestyle{
     border-bottom-color:@active-bg-stcolor;
 }
- .e-kanban .e-rowcell .e-targetclonemulti .e-columnkey:first-child {
+ .e-kanban .e-kanbancontent .e-rowcell .e-targetclonemulti .e-columnkey:first-child {
  border-top-width: 1px;
  border-top-style: dashed;
  }
  
-.e-kanban .e-rowcell .e-targetdragclone {
+.e-kanban .e-kanbancontent .e-rowcell .e-targetdragclone {
     & when (@skin= "material") {
         /*material*/
 	   background:@grey-100;
@@ -27339,7 +27775,7 @@ box-shadow: -1px 0 10px 0 black;
     border-bottom: 1px solid @default-bg-stcolor;
 }
 
-.e-kanban .e-rowcell.e-shrink, .e-kanban .e-headercell.e-shrinkcol {
+.e-kanban .e-kanbancontent .e-rowcell.e-shrink, .e-kanban .e-kanbanheader .e-headercell.e-shrinkcol {
      & when (@skin="office-365"){
         /*office-365*/
         background-color: @neutral-lighter-alt;
@@ -27376,12 +27812,20 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-kanban  .e-columnrow .e-rowcell .e-toggle-header:hover > div, .e-kanban .e-toggle-header:hover > div div {
-    color: @toggle-hover-font-color;
+.e-kanban  .e-columnrow .e-rowcell .e-toggle-header:hover > div  {
+    color: @kanban-toggle-hover-ftcolor;
 }
 
-.e-kanban  .e-columnrow .e-rowcell .e-toggle-header > div, .e-kanban .e-toggle-header > div div {
-    color: @toggle-content-font-color;
+.e-kanban .e-toggle-header:hover > div div {
+    color: @kanban-toggle-hover-ftcolor !important;
+}
+
+.e-kanban  .e-columnrow .e-rowcell .e-toggle-header > div {
+    .kanban-toggle-content-ftcolor();
+}
+
+.e-kanban .e-columnrow .e-rowcell .e-toggle-header > div div {
+    .kanban-toggle-icon-ftcolor();
 }
 
 .e-kanbanfilter-window .e-filter-scrollcontent, .e-kbnfilterwindow-head {
@@ -27484,7 +27928,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-kanban .e-rowcell .e-shrinkcount { 
+.e-kanban .e-kanbancontent .e-rowcell .e-shrinkcount { 
   & when (@skin= "material") {
         /*material*/
     color: @accent-color;
@@ -27524,7 +27968,7 @@ box-shadow: -1px 0 10px 0 black;
     border-right-color: @content-border-color;
 }
 
-.e-kanban .e-headercelldiv {
+.e-kanban .e-kanbanheader .e-headercelldiv {
     & when (@skin= "material") {
       /*material*/
      color: fade(@base-font-color,87%);
@@ -27547,7 +27991,7 @@ box-shadow: -1px 0 10px 0 black;
     background-color: @content-bg-color;
 }
 
-.e-kanban .e-rowcell {
+.e-kanban .e-kanbancontent .e-rowcell {
     border-color: @content-border-color;
 }
 
@@ -27694,12 +28138,12 @@ box-shadow: -1px 0 10px 0 black;
     border-color: @default-border-color;
 }
 
-.e-kanban .e-rowcell.e-exceed {
+.e-kanban .e-kanbancontent .e-rowcell.e-exceed {
     background: @kanban-cell-exceed;
     filter: none !important;
 }
 
-.e-kanban .e-rowcell.e-deceed {
+.e-kanban .e-kanbancontent .e-rowcell.e-deceed {
     background: @kanban-cell-deceed;
 }
 
@@ -27720,7 +28164,7 @@ box-shadow: -1px 0 10px 0 black;
     -webkit-box-shadow: 9px 9px 15px -9px rgba(0,0,0,0.3);
 }
 
-.e-kanban .e-toolbaricons.e-searchfind, .e-kanban .e-toolbaricons.e-cancel {
+.e-kanban .e-kanbantoolbar .e-toolbaricons.e-searchfind, .e-kanban .e-kanbantoolbar .e-toolbaricons.e-cancel {
 	& when (@skin="office-365"){
 	      /*office-365*/
         border-left: 0px;
@@ -27823,7 +28267,7 @@ box-shadow: -1px 0 10px 0 black;
 }
 
 .e-kanban.e-rtl td:first-child, .e-kanban.e-rtl th:first-child,
-.e-kanban.e-rtl .e-headercontent, .e-kanban.e-rtl .e-columnrow td.e-dropping:first-child, .e-kanban .e-rowcell.e-dragged {
+.e-kanban.e-rtl .e-headercontent, .e-kanban.e-rtl .e-columnrow td.e-dropping:first-child, .e-kanban .e-kanbancontent .e-rowcell.e-dragged {
     border-left-color: @content-border-color !important;
 }
 
@@ -27968,7 +28412,7 @@ box-shadow: -1px 0 10px 0 black;
      }
 }
 
-.e-kanban .e-headercell .e-totalcard, .e-kanban .e-headercell .e-totalcount, .e-kanban .e-minlimit, .e-kanban .e-maxlimit,.e-kanban .e-limits, .e-kanban .e-rowcell .e-shrinklabel  {
+.e-kanban .e-kanbanheader .e-headercell .e-totalcard, .e-kanban .e-kanbanheader .e-headercell .e-totalcount, .e-kanban .e-minlimit, .e-kanban .e-maxlimit,.e-kanban .e-limits, .e-kanban .e-kanbancontent .e-rowcell .e-shrinklabel  {
       & when (@skin= "material") {
         /*material*/
        color: fade(@base-font-color,64%);
@@ -28121,7 +28565,7 @@ box-shadow: -1px 0 10px 0 black;
 	  border-bottom-width: 2px;
   } 
 }
-.e-kanban .e-kanbandialog .e-save, .e-kanban .e-kanbandialog .e-cancel, .e-kanban .e-externalform .e-save, .e-kanban .e-externalform .e-cancel,.e-kbnadapt-editdlg .e-save,.e-kbnadapt-editdlg .e-cancel,.e-kanbanfilter-window .e-clearfilter{
+.e-kanban .e-kanbandialog .e-kanban-editdiv .e-save, .e-kanban .e-kanbandialog .e-kanban-editdiv .e-cancel, .e-kanban .e-externalform .e-save, .e-kanban .e-externalform .e-cancel,.e-kbnadapt-editdlg .e-save,.e-kbnadapt-editdlg .e-cancel,.e-kanbanfilter-window .e-clearfilter{
    & when (@skin= "material") {
       /*material*/
     background: @content-bg-color;
@@ -29002,1236 +29446,422 @@ div.e-dlg-field-validation-error:before {
 }
 
 
+
+/*------------------------------------- Mediaplayer -------------------------------------------*/
+/*#region mediaplayer*/
 /*region media container styles*/
-.e-media-element {
-    width: 100%;
-    height: 100%;
-}
-
-.e-media-element-div {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.e-media-focus-div {
-    width: 0px;
-    height: 0px;
-}
-
-.e-media-content-div {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 
 .e-media-content-div .e-waitpopup-pane {
     background-color: transparent;
 }
 
 .e-media-player {
-    border: 1px solid gray;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    background-color: black;
-    min-width: 250px;
-    outline: none;
-}
-
-.e-media-player * {
-    outline: none;
+    border-color: @header-border-color;
+    background-color: @content-bg-color;
 }
 
 .e-media-control-container {
-    bottom: 0px;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    min-height: 30px;
-    z-index: 1;
+    background: @content-bg-color;
+}
+
+.e-media-element {
+    background: @content-bg-color;
 }
 
 .e-media-player .e-slider {
-    border: none !important;
-    background-color: #585858 !important;
+    background-color: @default-icon-color !important;
 }
 /*region media container styles*/
 
 /* region toolbar styles*/
-.e-media-timeslider.e-media-adv {
-    height: 50% !important;
-    top: calc(~'50% + 4px');
-}
-
-.e-media-timeslider-div.e-media-adv {
-    width: calc(~'100% - 16px');
-    left: 7px;
-    position: relative;
-}
-
-.e-media-player .e-slider-wrap {
-    cursor: pointer;
-}
 
 .e-media-toolbar-icon:before, .e-media-playlist-icon:before, .e-media-playlist-toggle:before {
-    color: white;
-    position: relative;
-}
-
-.e-media-playlist-icon:before, .e-media-playlist-toggle:before {
-    top: calc(~'50% - 7px');
-    left: calc(~'50% - 7px');
-}
-
-.e-media-toolbar-icon:hover::before, .e-media-playlist-icon:hover::before, .e-media-playlist-toggle:hover::before {
-    color: #86cbea !important;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-icon {
-    width: 20px;
-    height: 20px;
-    float: left;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    position: relative;
-    margin-left: 10px;
-    top: calc(~'50% - 11px');
-}
-
-.e-media-toolbar.adv .e-media-volume-slider-li {
-    top: calc(~'50% - 12px') !important;
-    width: 50px;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-li {
-    height: calc(~'100% - 6px');
-    margin-top: 8px;
-    cursor: pointer;
-    width: 10px;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-shfflegroup .e-media-toolbar-li {
-    width: calc(~'30%');
-    padding-left: 3px !important;
-    padding-right: 3px !important;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-playgroup .e-media-toolbar-li {
-    width: calc(~'5%');
-    float: right !important;
-    margin-left: 6px !important;
-    margin-right: 6px !important;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-volumegroup .e-media-toolbar-li {
-    width: calc(~'15%');
-    float: right !important;
-    padding-right: 0px !important;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-volume-li {
-    width: 50px !important;
-    max-width: 100px !important;
-    padding-left: 6px !important;
-    padding-right: 3px !important;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-volumegroup .e-media-volume-text-li {
-    width: calc(~'15%') !important;
-    max-width: 50px !important;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-settingsgroup .e-media-toolbar-li {
-    width: calc(~'20%');
-    float: right !important;
-    padding-left: 3px !important;
-    padding-right: 3px !important;
-}
-
-.e-media-toolbar.adv {
-    background: black;
-    border: none !important;
-    overflow: hidden;
-    height: calc(~'100% - 15px');
-}
-
-.e-media-toolbar-icon {
-    display: inline-block;
-}
-
-.e-media-toolbar-icon.disabled:before, .e-media-playlist-icon.disabled:before {
-    color: #585858 !important;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-ul {
-    position: relative;
-    height: 99% !important;
-    float: left;
-    padding: 0;
-    margin-top: 3px;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-shfflegroup {
-    width: calc(~'23%');
-    left: 2%;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-playgroup {
-    text-align: center;
-    left: 5px;
-    float: left;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-settingsgroup {
-    text-align: right;
-    right: 5px;
-    float: right;
-}
-
-.e-media-toolbar.adv .e-slider-wrap {
-    position: relative;
-    width: 50px;
-    float: left;
-    top: calc(~'50% - 3px');
-    padding: 0;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-volume-li:hover {
-    background: transparent !important;
-    border: none !important;
+    color: @default-icon-color;
 }
 
 .e-media-toolbar.adv .e-media-volume-text {
-    font-size: 9px;
-    color: white;
-    width: 100%;
-    position: absolute;
-    top: 43%;
-}
-
-.e-media-custom-fullscreen {
-    width: 100% !important;
-    height: 100% !important;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 2147483647;
-}
-
-.e-media-player.fullscreen {
-    width: 100% !important;
-    height: 100% !important;
-    top: 0px;
-    left: 0px;
-    position: fixed;
-}
-
-.e-media-timeslider.e-media-adv.e-slider .e-handle {
-    margin-top: -1px !important;
-    background: #179bd7 !important;
-    border: 2px solid white;
-}
-
-.e-media-toolbar.adv .e-media-volume-slider {
-    width: 100%;
-}
-
-.e-media-toolbar.adv .e-media-volume-slider .e-handle {
-    margin-top: 1px !important;
-}
-
-.e-media-toolbar.adv .e-media-play-li div {
-    margin-left: 3px;
+    color: @default-icon-color;
 }
 
 .e-media-time-stamp.e-media-adv {
-    font-size: 9px;
-    color: #848484;
-    height: 10px;
-    position: absolute;
-    right: 9px;
-    margin-top: 5px;
-    font-family: Roboto,arial,sans-serif !important;
-}
-
-.e-media-time-stamp.e-media-adv div {
-    height: 100%;
-    float: left;
+    color: @default-font-color;
 }
 
 .e-media-player .media-shuffled:before, .e-media-player .media-muted:before, .e-media-player .media-repeated:before,
 .e-media-player .e-media-playlist-visible:before {
-    color: #179bd7;
-    border: none;
+    color: @active-bg-stcolor;
 }
 
-.e-media-player .media-muted:before {
-}
-
-.e-media-toolbar.basic {
-    border: none !important;
-    overflow: hidden;
-    height: 100%;
-    background-image: url('../common-images/mediaplayer/basic_view_toolbar_bg.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 100% 100%;
-}
-
-.e-media-prev-li.basic, .e-media-next-li.basic {
-    position: absolute;
-    width: 39px;
-    height: 40px;
-    top: calc(~'50% - 22px');
-    cursor: pointer;
+.e-media-timeslider-div.e-media-adv {
+    background: transparent;
 }
 
 .e-media-prev-li.basic .e-media-toolbar-icon:before, .e-media-next-li.basic .e-media-toolbar-icon:before {
-    font-size: 36px !important;
-    position: relative;
-    color: white;
-    top: calc(~'50% - 18px');
-    left: calc(~'50% - 18px');
-}
-
-.e-media-prev-li.basic {
-    left: 50px;
-}
-
-.e-media-next-li.basic {
-    right: 50px;
-}
-
-.e-media-toolbar.basic .e-media-timeslider.e-media-basic {
-    height: 3px !important;
-}
-
-.e-media-toolbar.basic .e-media-play {
-    margin-left: -2px;
-}
-
-.e-media-toolbar.basic .e-media-pause {
-    margin-left: -2px;
-}
-
-.e-media-toolbar.basic .e-media-toolbar-right-div {
-    width: 20px;
-    height: 100%;
-    float: left;
-    margin-left: 10px;
-}
-
-.e-media-toolbar-time-icon-li {
-    width: 25px !important;
-}
-
-.e-media-toolbar.basic .e-media-toolbar-icon {
-    width: 100%;
-    position: relative;
-    top: calc(~'50% - 6px');
-    float: left;
-}
-
-.e-media-toolbar.basic .e-media-toolbar-li {
-    width: 20px;
-    margin-left: 10px;
-    height: 100%;
-    list-style: none !important;
-    float: left;
-    position: relative;
-}
-
-.e-media-toolbar.basic .e-media-toolbar-icon:before {
-    font-size: 16px;
-}
-
-.e-media-toolbar.basic .e-media-previous:before, .e-media-toolbar.basic .e-media-next:before {
-    font-size: 13px !important;
-    margin-top: 1px;
-}
-
-.e-media-toolbar.basic .e-media-fullscreen:before {
-    font-size: 14px !important;
-    margin-top: -1px;
-}
-
-.e-media-toolbar.basic .e-media-play-li {
-    width: 20px;
-    left: 2px;
-}
-
-.e-media-toolbar.basic .e-media-toolbar-right-li {
-    width: 100px;
-    float: right !important;
-    right: 5px;
+    color: @default-icon-color;
 }
 
 .e-media-toolbar.basic .e-media-toolbar-split-li {
-    width: 1px;
-    color: white;
+    color: @default-icon-color;
 }
 
 .e-media-toolbar.basic .e-media-split {
-    top: calc(~'50% - 10px') !important;
-    color: #848484;
-}
-
-.e-media-toolbar.basic .e-media-toolbar-time-icon-li {
-    margin-left: -1px;
-}
-
-.e-media-toolbar.basic.audio .e-media-toolbar-right-li {
-    width: 40px !important;
-}
-
-.e-media-toolbar.basic .e-media-play-li, .e-media-toolbar.basic .e-media-toolbar-right-li {
-    height: 100%;
-    background-position: 50% 50%;
-}
-
-.e-media-time-stamp-end.e-media-basic, .e-media-time-stamp-run.e-media-basic {
-    font-size: 11px;
-    color: #848484;
-    position: absolute;
-    top: calc(~'50% - 5px');
-    font-family: Roboto,arial,sans-serif !important;
-}
-
-.e-media-toolbar.basic .e-media-toolbar-time-run-li {
-    width: 37px;
-    left: 10px;
-}
-
-.e-media-time-stamp-end.e-media-basic {
-    left: 10px;
-}
-
-.e-media-time-stamp-run.e-media-basic {
-    right: 5px;
-}
-
-.e-media-toolbar.basic .e-media-time-li .e-slider-wrap {
-    width: 100% !important;
-    top: calc(~'50% - 5px');
-    position: absolute;
-}
-
-.e-media-toolbar.basic .e-media-time-li {
-    width: calc(~'100% - 245px');
-    left: 10px;
-}
-
-.e-media-toolbar.basic.audio .e-media-time-li {
-    width: calc(~'100% - 180px') !important;
-}
-
-.e-media-toolbar.basic .e-media-time-li .e-handle {
-    margin-top: -2px !important;
-    background: #179bd7 !important;
-    border: 2px solid white;
-    height: 10px !important;
-    width: 10px !important;
-}
-
-.e-media-toolbar.basic .e-media-toolbar-ul {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    float: left;
-    padding: 0;
+    color: @default-font-color;
 }
 
 .e-media-toolbar.basic .e-media-vol-slider-li {
-    height: 60px;
-    width: 20px;
-    position: absolute;
-    top: -50px;
-    z-index: 3;
+    background-color: @content-bg-color;
 }
 
-.e-media-toolbar.basic .e-media-volume-slider {
-    width: 3px !important;
-    position: relative;
-    left: calc(~'50% - 1.5px');
-}
-
-.e-media-toolbar.basic .e-media-volume-slider .e-handle {
-    width: 7px;
-    height: 7px;
-}
-
-.e-media-toolbar.adv .e-media-toolbar-playgroup .e-media-toolbar-icon:before {
-    margin-left: 2px;
-}
-
-
-
-
-
-.e-media-toolbar.mob {
-    height: 30px !important;
-    position: relative;
-    top: calc(~'50% - 30px');
-}
-
-.e-media-toolbar-ul.mob-playGroup {
-    position: absolute;
-    top: calc(~'50% - 25px');
-    width: 150px;
-    height: 50px;
-    left: calc(~'50% - 75px');
-}
-
-.e-media-toolbar-ul.mob-playGroup .e-media-toolbar-icon {
-    width: 50px;
-    height: 100%;
-    position: relative;
-}
-
-.e-media-toolbar-ul.mob-playGroup .e-media-toolbar-icon:before {
-    font-size: 25px;
-    top: calc(~'50% - 7px');
-    margin-left: -2px;
-}
-
-.e-media-toolbar-ul.mob-playGroup .e-media-play:before, .e-media-toolbar-ul.mob-playGroup .e-media-pause:before {
-    font-size: 30px !important;
-    top: calc(~'50% - 4px') !important;
-}
-
-.e-media-toolbar-ul.mob-playGroup .e-media-previous {
-    left: calc(~'50% - 150px');
-}
-
-.e-media-toolbar-ul.mob-playGroup .e-media-play, .e-media-toolbar-ul.mob-playGroup .e-media-pause {
-    left: calc(~'50% - 100px');
-}
-
-.e-media-toolbar-ul.mob-playGroup .e-media-next {
-    left: calc(~'50% - 50px');
-}
-
-.e-media-toolbar.mob .toolGroup {
-    width: 100%;
-    padding: 0;
-}
-
-.e-media-toolbar.mob .e-media-toolbar-li {
-    list-style: none !important;
-    position: relative;
-    float: left;
-    display: inline-block;
-    height: 25px;
-    margin-left: 20px;
-}
-
-.e-media-toolbar.mob .e-media-toolbar-time-run-li, .e-media-toolbar.mob .e-media-toolbar-time-icon-li {
-    width: 25px;
-}
-
-.e-media-toolbar.mob .e-media-toolbar-fullscreen-li {
-    width: 15px;
-}
-
-.e-media-toolbar.mob .e-media-time-li {
-    width: calc(~'100% - 160px');
+.e-media-time-stamp-end.e-media-basic, .e-media-time-stamp-run.e-media-basic {
+    color: @default-font-color;
 }
 
 .e-media-time-stamp-end.e-media-mob, .e-media-time-stamp-run.e-media-mob {
-    font-size: 9px;
-    color: white;
-}
-
-.e-media-toolbar.mob .e-slider-wrap {
-    position: relative;
-    top: 2px;
-}
-
-.e-media-toolbar.mob .e-media-timeslider {
-    height: 4px;
-}
-
-.e-media-toolbar.mob .e-media-fullscreen:before {
-    font-size: 11px;
-    margin-top: 1px;
+    color: @default-font-color;
 }
 /* end region toolbar styles*/
-/* region toolbar font styles */
-/* small size */
-.e-media-small-size .e-media-toolbar.adv .e-media-stop:before {
-    font-size: 9px !important;
-    top: calc(~'50% - 6px') !important;
-}
-
-.e-media-small-size .e-media-toolbar.adv .e-media-fullscreen:before {
-    font-size: 10px !important;
-}
-
-.e-media-small-size .e-media-toolbar.adv .e-media-toolbar-playgroup .e-media-toolbar-icon:before {
-    font-size: 10px;
-    margin-top: 2px;
-}
-
-.e-media-small-size .e-media-toolbar.adv .e-media-toolbar-settingsgroup .e-media-toolbar-icon:before {
-    font-size: 12px;
-    margin-top: 2px;
-}
-
-.e-media-small-size .e-media-toolbar.adv .e-media-toolbar-shfflegroup .e-media-toolbar-icon:before {
-    font-size: 15px;
-}
-
-.e-media-small-size .e-media-toolbar.adv .e-media-toolbar-volumegroup .e-media-toolbar-icon:before {
-    font-size: 13px;
-}
-
-.e-media-small-size .e-media-toolbar.adv .e-media-playlist:before {
-    font-size: 14px !important;
-    margin-left: -1px;
-}
-
-.e-media-small-size .e-media-toolbar-icon:before {
-    top: calc(~'50% - 7px');
-    left: calc(~'50% - 7px');
-}
-/* medium size */
-.e-media-medium-size .e-media-toolbar.adv .e-media-stop:before {
-    font-size: 11px !important;
-    top: calc(~'50% - 7px') !important;
-}
-
-.e-media-medium-size .e-media-toolbar.adv .e-media-fullscreen:before {
-    font-size: 12px !important;
-}
-
-.e-media-medium-size .e-media-toolbar.adv .e-media-toolbar-playgroup .e-media-toolbar-icon:before {
-    font-size: 12px;
-    margin-top: 2px;
-}
-
-.e-media-player .e-media-toolbar.adv .e-media-play, .e-media-player .e-media-toolbar.adv .e-media-pause {
-    padding-left: 1px;
-    padding-right: 1px;
-}
-
-.e-media-player .e-media-toolbar.adv .e-media-play:before, .e-media-player .e-media-toolbar.adv .e-media-pause:before {
-    font-size: 16px !important;
-    top: calc(~'50% - 10px') !important;
-}
-
-.e-media-medium-size .e-media-toolbar.adv .e-media-toolbar-settingsgroup .e-media-toolbar-icon:before {
-    font-size: 14px;
-    margin-top: 2px;
-}
-
-.e-media-medium-size .e-media-toolbar.adv .e-media-toolbar-shfflegroup .e-media-toolbar-icon:before {
-    font-size: 17px;
-}
-
-.e-media-medium-size .e-media-toolbar.adv .e-media-toolbar-volumegroup .e-media-toolbar-icon:before {
-    font-size: 15px;
-}
-
-.e-media-medium-size .e-media-toolbar.adv .e-media-playlist:before {
-    font-size: 16px !important;
-    margin-left: -1px;
-}
-
-.e-media-medium-size .e-media-toolbar-icon:before {
-    top: calc(~'50% - 8px');
-    left: calc(~'50% - 8px');
-}
-/* large size */
-.e-media-large-size .e-media-toolbar.adv .e-media-stop:before {
-    font-size: 13px !important;
-}
-
-.e-media-large-size .e-media-toolbar.adv .e-media-fullscreen:before {
-    font-size: 12px !important;
-    margin-left: -3px;
-}
-
-.e-media-large-size .e-media-toolbar.adv .e-media-toolbar-playgroup .e-media-toolbar-icon:before {
-    font-size: 12px;
-}
-
-.e-media-large-size .e-media-toolbar.adv .e-media-repeat:before, .e-media-large-size .e-media-toolbar.adv .e-media-shuffle:before {
-    top: calc(~'50% - 7px') !important;
-}
-
-.e-media-large-size .e-media-toolbar.adv .e-media-toolbar-settingsgroup .e-media-toolbar-icon:before {
-    font-size: 14px;
-}
-
-.e-media-large-size .e-media-toolbar.adv .e-media-toolbar-shfflegroup .e-media-toolbar-icon:before {
-    font-size: 19px;
-}
-
-.e-media-large-size .e-media-toolbar.adv .e-media-toolbar-volumegroup .e-media-toolbar-icon:before {
-    font-size: 17px;
-}
-
-.e-media-large-size .e-media-toolbar.adv .e-media-playlist:before {
-    font-size: 15px !important;
-    margin-top: -1px;
-}
-
-.e-media-large-size .e-media-toolbar.adv .e-media-toolbar-icon:before {
-    top: calc(~'50% - 8px');
-    left: calc(~'50% - 9px');
-    cursor: pointer;
-}
-
-.e-media-player .e-media-toolbar-icon {
-    cursor: pointer;
-}
-/* xlarge size */
-.e-media-xlarge-size .e-media-toolbar.adv .e-media-stop:before {
-    font-size: 15px !important;
-    top: calc(~'50% - 9px') !important;
-}
-
-.e-media-xlarge-size .e-media-toolbar.adv .e-media-fullscreen:before {
-    font-size: 16px !important;
-    top: calc(~'50% - 8px') !important;
-}
-
-.e-media-xlarge-size .e-media-toolbar.adv .e-media-toolbar-playgroup .e-media-toolbar-icon:before {
-    font-size: 16px;
-    margin-top: 2px;
-    margin-left: 1px;
-}
-
-.e-media-xlarge-size .e-media-toolbar.adv .e-media-toolbar-settingsgroup .e-media-toolbar-icon:before {
-    font-size: 18px;
-    margin-top: 2px;
-}
-
-.e-media-xlarge-size .e-media-toolbar.adv .e-media-toolbar-shfflegroup .e-media-toolbar-icon:before {
-    font-size: 21px;
-}
-
-.e-media-xlarge-size .e-media-toolbar.adv .e-media-toolbar-volumegroup .e-media-toolbar-icon:before {
-    font-size: 19px;
-}
-
-.e-media-xlarge-size .e-media-toolbar.adv .e-media-playlist:before {
-    font-size: 20px !important;
-    margin-left: -1px;
-}
-
-.e-media-xlarge-size .e-media-toolbar-icon:before {
-    top: calc(~'50% - 10px');
-    left: calc(~'50% - 10px');
-}
-/* end region toolbar font styles */
 
 /*region settings styles*/
-.e-media-settings-popup {
-    height: auto !important;
-    border: none !important;
-    position: absolute;
-    z-index: 2;
-    margin-left: -30px;
-}
 
 .e-media-settings-popup > .e-lv.subpage {
-    background-color: black;
-    padding: 5px;
-    border: 1px solid #3d3d3d !important;
-    border-radius: 4px;
-}
-
-.e-media-settings-popup .e-sub-list-container {
-    width: 100% !important;
-}
-
-.e-media-settings-popup .e-list-hdr.e-clearall.e-content {
-    width: 100% !important;
-}
-
-.e-media-settings-popup .e-togglebutton {
-    float: right;
-    height: 18px;
-    width: 30px;
-    margin-right: -5px;
-    margin-top: -27px;
-    font-size: 10px;
-    border-radius: 2px;
+    background-color: @content-bg-color;
+    border-color: @content-border-color !important;
 }
 
 .e-media-settings-popup li {
-    height: 30px !important;
-    border: none !important;
-    background-color: black !important;
-}
-
-.e-media-settings-popup .e-lv .e-list .e-chevron-right_01 {
-    padding-top: 7px !important;
-}
-
-.e-media-settings-popup .e-lv.subpage.e-childitem {
-    width: 86px !important;
-    position: relative;
-    left: 50px;
-}
-
-.e-media-settings-popup .e-lv.subpage:not(.e-childitem) .e-header {
-    display: none !important;
-}
-
-.e-media-settings-popup .e-lv.subpage.e-childitem .e-header, .e-media-settings-popup .e-lv.subpage.e-childitem .e-list-container,
-.e-media-settings-popup .e-lv.subpage.e-childitem .e-content {
-    width: 100% !important;
-}
-
-.e-media-settings-popup .e-lv.subpage.e-childitem .e-header .e-hicon,
-.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
-    position: relative;
-    top: -8px;
-    font-size: 14px;
-}
-
-.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
-    left: 8px;
-}
-
-.e-media-settings-popup .e-lv .e-list {
-    padding-top: 1px;
-    position: relative;
-    padding-left: 9px;
+    background-color: @content-bg-color !important;
 }
 
 .e-media-settings-popup .e-header {
-    height: 30px !important;
-    background-color: black !important;
-    border: none;
-    border-bottom: 1px solid #545454 !important;
+    background-color: @header-bg-stcolor !important;
+    border-bottom-color: @header-border-color !important;
 }
-
-.e-media-settings-popup .e-list-container {
-    border: none !important;
-    overflow: hidden !important;
-}
-
-.e-media-settings-popup .e-lv .e-arrow .e-chevron-right_01:before {
-    right: -6px !important;
-}
-/*.e-media-settings-selector {
-    font-family: 'ej-webfont' !important;
-}*/
 
 .e-media-settings-selector:before {
-    color: #179bd7;
-    font-size: 16px;
-    position: absolute;
-    left: 0px;
-    font-family: 'ej-webfont' !important;
-}
-
-.e-media-settings-popup .e-childcontainer li {
-    text-align: center;
-}
-
-.e-media-settings-popup li:hover {
-    background: #525252 !important;
+    color: @active-bg-stcolor;
 }
 
 .e-media-settings-popup .e-lv .e-list .e-chevron-right_01.e-fontimage:before,
-.e-media-settings-popup .e-lv > .e-header > .e-icon:before, .e-lv > .e-header > .e-icon:hover:before {
-    color: #179bd7 !important;
+.e-media-settings-popup .e-lv > .e-header > .e-icon:before {
+    color: @active-bg-stcolor !important;
 }
-
-.e-media-settings-popup .e-lv.subpage .e-header .e-htitle {
-    position: relative;
-    left: 2px;
-}
-
-/*.e-media-settings-subtitle a {
-    width: 80% !important;
-}*/
 
 .e-media-settings-popup .e-list-text, .e-media-settings-popup .e-btn-text {
-    color: white !important;
+    color: @default-font-color !important;
 }
-
 /*end region settings styles*/
 
 /*region playlist styles*/
-.e-media-playlist-item {
-    width: 100%;
-    height: 100%;
-    position: relative;
+
+.e-media-playlist-img-div {
+    color: @content-bg-color !important;
 }
 
-.e-media-playlist-number {
-    float: left;
-    text-align: center;
-    position: relative;
-    top: calc(~'50% - 8px');
-    font-weight: normal;
-    font-size: 11px;
-    color: #848484;
-    width: 20px;
-    padding: 0;
-    left: -2px;
+.e-media-playlist-img-div.desktop {
+    border-color: @content-border-color;
 }
 
-.e-media-playlist-img {
-    float: left;
-    color: white !important;
-    height: 90%;
-    top: calc(~'50% - 45%');
-    position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0;
+.e-media-playlist-img-div.mobile {
+    border-color: @content-border-color;
 }
 
-.e-media-playlist-img.desktop {
-    width: 50px;
-}
-
-.e-media-playlist-img.mobile {
-    width: 50px;
-    margin-left: 5px;
-}
-
-.e-media-playlist-title-div {
-    float: left;
-    padding: 0;
-    color: white !important;
-    height: 90%;
-    overflow: hidden;
-    padding-left: 10px;
-    font-size: 11px;
-}
-
-.e-media-playlist-title-div.desktop {
-    width: calc(~'100% - 85px');
-}
-
-.e-media-playlist-title-div.mobile {
-    width: calc(~'90% - 35px');
-}
-
-.e-media-playlist-title-div div, .e-media-video-title, .e-media-audio-title, .e-media-playlist-title {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.e-media-playlist-name {
-    font-size: 12px;
-}
-
-.e-media-playlist-title, .e-media-playlist-navigation {
-    height: 50%;
-    margin-left: 13px;
+.e-media-player .e-media-playlist-play:before {
+    color: @default-font-color;
 }
 
 .e-media-playlist-title {
-    width: calc(~'100% - 40px');
+    color: @default-font-color;
 }
 
-.e-media-playlist-navigation {
-    width: calc(~'100% - 13px');
-}
-
-.e-media-playlist-title {
-    font-size: 12px;
-    color: white;
-    top: 5px;
-    position: relative;
-    padding-top: 2px;
-}
-
-.e-media-playlist-author {
-    font-size: 10px;
-    margin-top: 2px;
-    color: #848484;
-}
-
-.e-media-playlist-div li {
-    height: 41px;
-}
-
-.e-media-playlist-container.desktop {
-    width: 0%;
-    position: absolute;
-    z-index: 2;
-    height: 99.5% !important;
-    top: 0;
-    right: 0;
-    background-color: #1a1a1a;
-    border: 1px solid;
-    font-family: Roboto,arial,sans-serif !important;
-}
-
-.e-media-playlist-container.mobile {
-    width: 100% !important;
-    height: auto !important;
-    position: relative;
-    z-index: 1;
-    top: 0;
-    right: 1px;
-    background-color: #1a1a1a;
-    border: 1px solid;
-    font-family: Roboto,arial,sans-serif !important;
-}
-
-.e-media-playlist-container.mobile .e-listbox-container {
-    height: auto !important;
-}
-
-.e-media-playlist-container.mobile .e-ddl-popup.e-wrap.e-js {
-    height: auto;
+.e-media-playlist-container.desktop, .e-media-playlist-container.mobile {
+    background-color: @content-bg-color;
+    border-color: @content-border-color;
 }
 
 .e-media-playlist-header {
-    height: 45px;
-    border-bottom: 2px solid #353535;
-}
-
-.e-media-playlist-title-div {
-    margin-top: 4px;
-}
-
-.e-media-playlist-container.desktop .e-ddl-popup {
-    height: calc(~'100% - 50px') !important;
-}
-
-.e-media-playlist-container .e-ddl-popup {
-    border: none;
+    border-bottom-color: @header-border-color;
 }
 
 .e-media-playlist-header label {
-    float: left;
-    color: #848484;
-    position: relative;
-    font-size: 9px;
-    top: calc(~'50% - 10px');
-    font-weight: normal;
-}
-
-.e-media-playlist-header span {
-    width: 20px;
-    height: 20px;
-    float: right;
-    top: calc(~'50% - 10px');
-    position: relative;
-    right: 13px;
-}
-
-.e-media-playlist-header-previous {
-    cursor: pointer;
-}
-
-.e-media-playlist-header-next {
-    cursor: pointer;
-}
-
-.e-media-player .e-media-playlist-header-next:before, .e-media-player .e-media-playlist-header-previous:before {
-    font-size: 12px !important;
+    color: @default-font-color;
 }
 
 .e-media-playlist-toggle.desktop {
-    position: absolute;
-    width: 12px;
-    height: 60px;
-    top: calc(~'50% - 30px');
-    right: 0%;
-    border: 1px solid;
-    border-radius: 6px;
-    z-index: 2;
-    background-color: #3a3a3a;
-    cursor: pointer;
-}
-
-.e-media-playlist-toggle.mobile {
-    position: absolute;
-    width: 12px;
-    height: 30px;
-    right: 22px !important;
-    bottom: -28px;
-    transform: rotate(45);
-    border-radius: 6px;
-    z-index: 2;
-    cursor: pointer;
-    -ms-transform: rotate(270deg); /* IE 9 */
-    -webkit-transform: rotate(270deg); /* Safari */
-    transform: rotate(270deg); /* Standard syntax */
-}
-
-.e-media-playlist-toggle.e-media-expand.desktop {
-    border-radius: 0px 6px 6px 0px;
-    margin-right: -13px;
-}
-
-.e-media-playlist-toggle.e-media-collapse.desktop {
-    border-radius: 6px 0px 0px 6px;
+    background-color: @default-font-color;
 }
 
 .e-media-playlist-toggle.e-media-expand:before, .e-media-playlist-toggle.e-media-collapse:before {
-    font-size: 12px !important;
-    color: #c3c0c0 !important;
-    left: calc(~'50% - 5px');
+    color: @default-font-color !important;
 }
 
 .e-media-playlist-container .e-listbox .e-select {
-    background: #292929 !important;
+    /*background: @active-bg-stcolor !important;*/
 }
 
 .e-media-playlist-container .e-listbox li {
-    border-bottom: 1px solid #353535;
-    cursor: pointer;
-    overflow: hidden;
-    font-family: Roboto,arial,sans-serif;
-}
-
-.e-media-playlist-container .e-listbox li:hover {
-    background: #464646 !important;
+    border-bottom-color: @content-border-color;
 }
 
 .e-media-playlist-container .e-listbox-container {
-    background-color: black;
+    background-color: @content-bg-color;
 }
 /*region playlist styles*/
 
 /*other styles*/
 .e-media-video-baner {
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    z-index: 1;
-    color: white;
-    top: 0px;
-}
-
-.e-media-video-baner {
-    background-image: url('../common-images/mediaplayer/header_bg.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 100% 100%;
-}
-
-.e-media-video-title {
-    height: 100%;
-    width: 85%;
-    position: relative;
-    top: calc(~'50% - 12px');
-    font-size: 16px;
-    left: 5%;
-}
-
-.e-media-audio-detail {
-    width: 150px;
-    height: 200px;
-    position: absolute;
-    left: calc(~'50% - 75px');
-    top: calc(~'50% - 100px');
-}
-
-.e-media-audio-poster {
-    width: 100%;
-    height: 85%;
+    color: @active-font-color;
 }
 
 .e-media-audio-title {
-    width: 100%;
-    height: 10%;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    margin-top: 5px;
+    color: @header-font-color;
 }
 
 .e-media-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
     color: white;
-    left: 0px;
-    top: 0px;
-}
-
-.e-media-player .e-slider .e-handle {
-    border-radius: 12px !important;
-}
-
-.e-media-player video::-webkit-media-controls {
-    display: none !important;
 }
 
 .e-media-time-tooltip {
-    width: auto;
-    height: auto;
-    position: absolute;
-    z-index: 2147483647;
-    border: 1px solid #212121;
-    padding: 4px;
-    color: white;
-    font-size: 12px;
-    border-radius: 2px;
-    background-color: #212121;
-    white-space: nowrap;
+    border-color: @content-border-color;
+    color: @content-font-color;
+    background-color: @content-bg-color;
 }
 
 .e-media-hd-tag {
     color: red;
-    float: right;
-    position: absolute;
-    right: 4px;
-    font-weight: bold;
-    top: 5px;
-}
-
-.e-media-settings-subtitle .e-slider-wrap {
-    padding: 0px;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-}
-
-.e-media-settings-subtitle .e-slider {
-    height: 13px !important;
-}
-
-.e-media-player .e-media-volume:before {
-    font-size: 14px !important;
-}
-
-.e-media-player .e-media-forward:before, .e-media-player .e-media-backward:before, .e-media-player .e-media-settings:before {
-    font-size: 16px !important;
-    margin-top: -2px;
 }
 
 .e-media-toolbar-split {
-    width: 1px;
-    height: 100%;
-    position: relative;
-    top: -3px;
-    float: left;
-    list-style: none;
-    background: #353535;
-    margin-left: 10px;
-}
-
-.e-media-playlist-close {
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    right: 13px;
-    top: 10px;
-    cursor: pointer;
+    background: @header-border-color;
 }
 
 .e-media-player .e-media-playlist-close:before {
-    color: white;
-    font-size: 9px;
+    color: @default-icon-color;
 }
+
+.e-media-player .e-media-play-animation {
+    background: rgba(0,0,0,.5);
+}
+
+.e-media-player .e-slider .e-handle {
+    border-color: @default-border-color !important;
+}
+/*#region hover*/
+.e-media-mouse .e-media-toolbar-icon:not(.disabled):hover::before {
+    color: @hover-font-color !important;
+}
+
+.e-media-toolbar.adv .e-media-toolbar-volume-li:hover {
+    background: transparent !important;
+}
+
+.e-media-settings-popup li:hover {
+    background: @hover-bg-stcolor !important;
+}
+
+
+/*material theme*/
+
+.e-media-toolbar.basic .e-media-time-li .e-handle {
+    & when (@skin= "material") {
+        margin-top: -3px !important;
+    }
+}
+
+.e-media-toolbar.basic .e-media-volume-slider .e-handle {
+    & when (@skin= "material") {
+        margin-left: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv .e-list .e-chevron-right_01 {
+    & when (@skin= "material") {
+        padding-top: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-header {
+    & when (@skin= "material") {
+        background-color: white !important;
+        box-shadow: none !important;
+        border-top: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
+    & when (@skin= "material") {
+        left: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-header .e-hicon,
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
+    & when (@skin= "material") {
+        top: -18px !important;
+        right: 0px !important;
+    }
+}
+
+.e-media-timeslider.e-media-adv.e-slider .e-handle {
+    & when (@skin= "material") {
+        margin-top: -2px !important;
+    }
+}
+
+.e-media-toolbar.adv .e-media-volume-slider .e-handle {
+    & when (@skin= "material") {
+        margin-top: 0px !important;
+    }
+}
+
+.e-media-player .e-media-shuffle:before {
+    & when (@skin= "material") {
+        font-size: 17px !important;
+        margin-top: -3px !important;
+    }
+}
+
+.e-media-toolbar.adv .e-media-volume-slider-li {
+    & when (@skin= "material") {
+        margin-top: -2px !important;
+    }
+}
+
+.e-media-player .e-media-playlist-toggle.e-media-collapse:before {
+    & when (@skin= "material") {
+        content: "\e116" !important;
+        -ms-transform: rotate(180deg) !important;
+        -webkit-transform: rotate(180deg) !important;
+        transform: rotate(180deg) !important;
+    }
+}
+
+.e-media-playlist-toggle.mobile {
+    & when (@skin= "material") {
+        -ms-transform: rotate(90deg) !important;
+        -webkit-transform: rotate(90deg) !important;
+        transform: rotate(90deg) !important;
+    }
+}
+
+.e-media-center-play:before {
+    & when (@skin= "material") {
+        left: 46% !important;
+        left: -moz-calc(~'50% - 23px') !important;
+        left: -webkit-calc(~'50% - 23px') !important;
+        left: -o-calc(~'50% - 23px') !important;
+        left: calc(~'50% - 23px') !important;
+    }
+}
+
+.e-media-hd-tag {
+    & when (@skin= "material") {
+        right: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-list-text {
+    & when (@skin= "material") {
+        font-size: 13px !important;
+    }
+}
+/*office-365 theme*/
+.e-media-toolbar.basic .e-media-volume-slider .e-handle {
+    & when (@skin= "office-365") {
+        margin-left: -2px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv .e-list .e-chevron-right_01 {
+    & when (@skin= "office-365") {
+        padding-top: 0px !important;
+        margin-top: -6px;
+    }
+}
+
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
+    & when (@skin= "office-365") {
+        left: 0px !important;
+    }
+}
+
+.e-media-settings-selector:before {
+    & when (@skin= "office-365") {
+        top: 6px !important;
+    }
+}
+
+.e-media-toolbar.adv .e-media-volume-slider .e-handle {
+    & when (@skin= "office-365") {
+        margin-top: -2px !important;
+    }
+}
+
+.e-media-playlist-container .e-listbox li {
+    & when (@skin= "office-365") {
+        padding: 4px !important;
+    }
+}
+
+.e-media-playlist-number {
+    & when (@skin= "office-365") {
+        margin-top: -17px !important;
+    }
+}
+
+.e-media-settings-popup .e-header {
+    & when (@skin= "office-365") {
+        box-shadow: none !important;
+        border-top: 0px !important;
+    }
+}
+
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-header .e-hicon,
+.e-media-settings-popup .e-lv.subpage.e-childitem .e-btn-text {
+    & when (@skin= "office-365") {
+        top: -6px !important;
+    }
+}
+
+.e-media-player .e-media-shuffle:before {
+    & when (@skin= "office-365") {
+        font-size: 17px !important;
+        margin-top: -3px !important;
+    }
+}
+
+.e-media-toolbar.adv .e-media-volume-slider-li {
+    & when (@skin= "office-365") {
+        margin-top: -2px !important;
+    }
+}
+
+.e-media-player .e-media-playlist-toggle.e-media-collapse:before {
+    & when (@skin= "office-365") {
+        content: "\e116" !important;
+        -ms-transform: rotate(180deg) !important;
+        -webkit-transform: rotate(180deg) !important;
+        transform: rotate(180deg) !important;
+    }
+}
+
+.e-media-playlist-toggle.mobile {
+    & when (@skin= "office-365") {
+        -ms-transform: rotate(90deg) !important;
+        -webkit-transform: rotate(90deg) !important;
+        transform: rotate(90deg) !important;
+    }
+}
+
+.e-media-center-play:before {
+    & when (@skin= "office-365") {
+        left: 46% !important;
+        left: -moz-calc(~'50% - 23px') !important;
+        left: -webkit-calc(~'50% - 23px') !important;
+        left: -o-calc(~'50% - 23px') !important;
+        left: calc(~'50% - 23px') !important;
+    }
+}
+/*#end region mediaplayer*/
 
 
 
@@ -30520,7 +30150,14 @@ width:42% !important;
     background-color: #b3b3b3 !important;
 }
 
-
+.e-rg-rangdiv {
+  background: #ff0000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  opacity: 0.8;
+}
+.e-gantt-taskbarSelection .e-gantt-childtaskbar:before {
+    border-color: @gantt-taskbar-selection-border-color;
+}
 
 
 /*------------------------------------- Radial Menu -------------------------------------------*/
@@ -30952,3 +30589,504 @@ outline:none !important;
     }
 }
 
+
+
+/*------------------------------------- ComboBox -------------------------------------------*/
+
+.e-ddl-icon {
+      & when (@skin= "material") {
+  transform: rotate(0deg);
+  transition: transform 300ms ease;
+  }
+}
+
+.e-ddl.e-input-group .e-input-group-btn button:hover,
+  .e-ddl.e-input-group .e-input-group-icon:hover,
+  .e-ddl.e-input-group .e-input-group-btn button:active,
+  .e-ddl.e-input-group .e-input-group-icon:active {
+    & when (@skin= "material") {
+         background: white;
+  }
+  }
+
+  .e-input-group::before {
+    & when (@skin= "material") {
+  left: 50%;
+  }
+}
+
+.e-input-group::before,
+  .e-input-group::after {
+    & when (@skin= "material") {
+    background: @accent-color;
+    }
+  }
+
+.e-input-group.e-input-focus::before,
+.e-input-group.e-input-focus::after {
+    & when (@skin= "material") {
+  width: 50%;
+  }
+}
+
+.e-input-group::after {
+    & when (@skin= "material") {
+  right: 50%;
+  }
+}
+
+  .e-input-group::before,
+.e-input-group::after {
+        & when (@skin= "material") {
+  bottom: -2px;
+  content: '';
+  height: 2px;
+  position: absolute;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.4, 1);
+  width: 0;
+  z-index: 10;
+  }
+}
+
+.e-icon-anim .e-ddl-icon {
+    & when (@skin= "material") {
+  transform: rotate(180deg);
+  transition: transform 300ms ease;
+  }
+}
+
+.e-input-group .e-ddl-icon:hover {
+    & when (@skin= "material") {
+  background: transparent;
+  }
+}
+
+.e-input-group:not(.e-disabled) .e-ddl-icon:active {
+    & when (@skin= "material") {
+  background: transparent;
+  }
+}
+
+input.e-combobox.e-input::selection {
+    & when (@skin= "material") {
+		background: @accent-color;
+        color: @accent-font-color;
+	}
+
+		& when (@skin= "office-365") {
+			background: @theme-primary;
+            color: @neutral-white;
+		}
+}
+
+input.e-combobox.e-input::-moz-selection {
+    & when (@skin= "material") {
+        background: @accent-color;
+        color: @accent-font-color;
+    }
+    & when (@skin= "office-365") {
+        background: @theme-primary;
+        color: @neutral-white;
+    }
+}
+
+.e-input-group .e-ddl-icon:not(:active)::after {
+     & when (@skin= "material") {
+  animation: none;
+  }
+}
+
+  .e-dropdownbase.e-content {
+    background: @content-bg-color;
+    color: @content-font-color;
+  }
+
+  .e-list-item.e-hover {
+    background: @hover-bg-stcolor;
+    color: @hover-font-color;
+  }
+  
+  input.e-combobox.e-input {
+    border: @border-size @border-type;
+    font-family: @font-family;
+    font-size: @content-font-size;
+  }
+
+  .e-combobox.e-input[disabled],
+  .e-ddl.e-input-group.e-disabled {
+    border-style: @border-type;
+  }
+
+  .e-ddl.e-input-group.e-disabled {
+    border-bottom-style: @border-type;
+  }
+
+  .e-ddl.e-input-group .e-input-group-btn button {
+    font-family: @font-family;
+    font-size: @content-font-size;
+  }
+
+  .e-ddl.e-input-group.e-disabled {
+    border-style: @border-type;
+  }
+
+  .e-ddl.e-input-group .e-clear-icon {
+    color: @default-icon-color;
+  }
+ 
+  input.e-combobox.e-input,
+  textarea.e-combobox.e-input {
+    background: @content-bg-color;
+    border-color: @content-border-color;
+    color:@content-font-color;
+  }
+
+  .e-ddl.e-input-group {
+    background: @content-bg-color;
+  }
+
+  .e-ddl.e-input-group .e-input-group-icon {
+    & when (@skin= "material") {
+        /*material*/
+        background-color: @content-bg-color;
+        color: fade(@base-font-color,87%);
+        border: none;
+    }
+
+    & when not (@skin= "material")  {
+         & when (@skin= "office-365") {
+        /*office*/
+        background: @content-bg-color;
+     }
+     & when not (@skin= "office-365") {
+        /*other*/
+        .bs-default-gradient();
+        color: @default-icon-color;
+        border-color: @content-border-color;
+     }
+    }
+  }
+  
+  .e-ddl.e-input-group:not(.e-rtl) .e-input-group-icon {
+    & when not (@skin= "material")  {
+     & when not (@skin= "office-365") {
+		border-left: 1px solid @content-border-color;
+     }
+    }
+  }
+
+  .e-ddl.e-input-group.e-rtl .e-input-group-icon {
+      & when (@skin= "material") { 
+        border: none;
+    } 
+    & when not (@skin= "material")  { 
+		    border-right: 1px solid @content-border-color; 
+    }
+  }
+  .e-combobox.e-input[disabled] {
+    background: 0px;
+  }
+
+  .e-combobox.e-input[readonly] {
+    background: @content-bg-color;
+ }
+
+  .e-ddl.e-input-group .e-input-group-btn button {
+    background: @content-bg-color;
+    border-color: @content-border-color;
+    color: @default-icon-color;
+  }
+
+  .e-ddl.e-input-group .e-input-group-btn button:hover,
+  .e-ddl.e-input-group .e-input-group-icon:hover {
+    & when not (@skin= "material") {
+    background: @hover-bg-stcolor;
+    }
+  }
+
+ 
+  .e-ddl.e-input-group:not(.e-disabled) .e-input-group-btn:active button,
+  .e-ddl.e-input-group:not(.e-disabled) .e-input-group-icon:active,
+  input.e-combobox.e-input::selection {
+    & when not (@skin= "material") {
+    background: @active-bg-stcolor;
+    color: @active-font-color;
+    }
+  }
+ 
+  input.e-combobox.e-input::-webkit-input-placeholder,
+  input.e-combobox.e-input:-moz-placeholder,
+  input.e-combobox.e-input::-moz-placeholder,
+  input.e-combobox.e-input:-ms-input-placeholder {
+    color: @header-border-color;
+  }
+
+
+  .e-ddl.e-input-group {
+    border-bottom-color: @content-border-color;
+   }
+
+
+  .e-ddl.e-input-group .e-ddl-icon:before {
+    & when (@skin= "material") {
+            content: "\e666";
+    }
+    & when (@skin= "office-365") {
+            content: "\e804";
+    }
+    & when not (@skin= "material") {
+       & when not (@skin="office-365") {
+            content: "\e63b";
+       }
+        }
+    width: 14px;
+    height: 14px;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  .e-input-group.e-ddl {
+    & when (@skin= "office-365") { 
+            height: 32px;
+        }
+         & when not (@skin= "office-365") {
+            height:30px;
+        }
+  }
+
+  .e-ddl.e-popup {
+    border: 1px solid @default-border-color;
+    position: absolute;
+      & .e-input-group {
+        margin-bottom: 0;
+     }
+  }
+
+
+  .e-ddl.e-popup {
+    border-color: @default-border-color;
+  }
+
+  .e-dropdownbase.e-nodata {
+    font-family: @font-family;
+    font-size: 16px;
+  }
+
+  // theme
+  .e-dropdownbase {
+    border-color: @default-border-color;
+      & .e-list-item {
+         & when (@skin= "material") { 
+        color: fade(@base-font-color,87%);
+    } 
+    & when not (@skin= "material") {
+        & when (@skin= "office-365") {
+			color: @neutral-primary; 
+        }
+		& when not (@skin= "office-365") {
+			color: @content-font-color;
+		}
+    }
+        background-color: @content-bg-color;
+        border-bottom: @border-size;
+        border-color: @default-gradient-color;
+        color: @default-font-color;
+        font-family: @font-family;
+        font-size: @content-font-size;
+        line-height: 2.4em;
+        text-indent: 1.067em;
+      }
+
+      & .e-list-group-item,
+      .e-fixed-head {
+        background-color:@content-bg-color;
+        border-color: @content-bg-color;
+        & when (@skin= "material") { 
+            color: fade(@base-font-color,87%);
+          } 
+        & when not (@skin= "material") {
+        & when (@skin= "office-365") {
+			      color: @neutral-primary; 
+          }
+		    & when not (@skin= "office-365") {
+			    color: @content-font-color;
+		      }
+        }
+        font-family: @font-family;
+        font-size: @content-font-size;
+        font-weight: 600;
+        line-height: 2.4em;
+        padding-left: 1.067em;
+      }
+	  
+	  & .e-list-item.e-active.e-hover {
+		& when (@skin= "office-365") {
+		background: @theme-lighter;
+		}
+		& when (@skin= "material") {
+        /*material*/
+        background-color: @grey-200;
+        color: @accent-color; 
+		}
+    }
+    
+      & .e-list-item.e-hover {
+        & when (@skin= "material") {
+        /*material*/
+       background: @grey-200;
+       color:  fade(@base-font-color,87%);  
+    }
+
+    & when not (@skin= "material") {
+        /*other*/
+        & when (@skin= "office-365") {
+			/*office-365*/
+			background: @neutral-lighter;
+			color: @theme-light-font;
+		}
+		& when not (@skin= "office-365") {
+			.hover-gradient();
+			color: @hover-font-color;
+      border-color: @hover-border-color;
+		}
+    }
+        
+      }
+
+        & .e-list-item.e-active {
+		& when (@skin= "material") {
+			/*material*/
+			background-color: @content-bg-color;
+			color: @accent-color; 
+		}
+		& when not (@skin= "material")  {
+		/*other*/ 
+			& when (@skin= "office-365") {
+				/*office-365*/ 
+				background-color: @theme-lighter;
+				color: @theme-light-font;
+			}
+			& when not (@skin= "office-365") {
+				.active-gradient();
+				color: @active-font-color;
+			}
+		}
+       }
+
+      & .e-list-item:last-child {
+        border-bottom: 0;
+      }
+
+      & .e-list-item.e-item-focus {
+        background-color: @hover-bg-stcolor;
+      }
+  }
+
+
+  .e-ddl.e-input-group input.e-combobox.e-input ,
+  .e-ddl.e-input-group.e-input-focus .e-combobox.e-input:focus {
+    border-color: @content-border-color;
+  }
+
+  .e-ddl.e-input-group.e-input-focus {
+    & when (@skin= "office-365") {
+       border-color:@theme-primary !important;
+    }
+    & when not (@skin= "material") { 
+      & when not (@skin="office-365") {
+       box-shadow: 0 0 @shadow-bg-size @bs-shadow-bg-color;
+       .material-normal-box-shadow;
+       .focus-border-color();
+    }
+    }
+   }
+
+  .e-ddl.e-input-group.e-input-focus .e-combobox.e-input:first-child:focus,
+  .e-ddl.e-input-group.e-input-focus.e-rtl span:last-child.e-input-group-icon,
+  .e-ddl.e-input-group.e-input-focus.e-rtl span:last-child button {
+    border-color: transparent @content-border-color transparent transparent;
+  }
+
+  .e-ddl.e-input-group.e-input-focus.e-rtl span.e-input-group-icon,
+  .e-ddl.e-input-group.e-input-focus span button,
+  .e-ddl.e-input-group.e-input-focus.e-rtl span:first-child.e-input-group-icon,
+  .e-ddl.e-input-group.e-input-focus.e-rtl span:first-child button,
+  .e-input-focus.e-rtl .e-combobox.e-input:first-child:focus,
+  .e-input-focus .e-combobox.e-input:last-child:focus,
+  .e-ddl.e-input-group.e-input-focus span.e-input-group-icon,
+  .e-ddl.e-input-group.e-input-focus span button {
+    border-color:  transparent transparent transparent @content-border-color;
+   }
+
+  .e-ddl.e-input-group {
+    border: @border-size @border-type;
+    border-color: @content-border-color;
+     & when (@skin= "material") {
+    border-width: 0 0 1px 0;
+    }
+    & when not (@skin= "material") {
+    border-width: 1px;
+    }
+  }
+
+   .e-input-group-btn:not(:last-child) button,
+  .e-ddl.e-input-group .e-input-group-icon:not(:last-child) {
+    & when (@skin= "material") {
+            border-left-width: 0px;
+        }
+        & when (@skin= "office-365") {
+            border-left-width: 0px;
+        }
+
+        & when not (@skin= "material") {
+             border-left: 1px @border-type;
+            border-left-width: 1px;
+             border-color: @content-border-color;
+        }
+    
+  }
+
+  .e-ddl.e-input-group .e-input-group-icon,
+  .e-ddl.e-input-group .e-input-group-btn button {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: @content-font-size;
+    padding: 7px;  
+    & when (@skin= "bootstrap") {
+        border-radius: 0px 4px 4px 0px;          
+    }
+  }
+  .e-ddl.e-rtl.e-input-group .e-input-group-icon,
+  .e-ddl.e-rtl.e-input-group .e-input-group-btn button {
+    & when (@skin= "bootstrap") {
+        border-radius: 4px 0px 0px 4px;          
+    }
+  }
+
+  .e-ddl {
+    .e-input-value,
+    .e-input-value:focus {
+      font-family: @font-family;
+      font-size: @content-font-size;
+      height:auto;
+      line-height: 1.4;
+      margin: 0px;
+      outline: none;
+      padding: 2px 0;
+      width: 100%;
+    }
+  }
+  
+  .e-input-group.e-ddl .e-comboie8.e-comboie.e-ddl-icon{
+	& when not (@skin= "material")  {
+     & when not (@skin= "office-365") {
+		border-left-width: 1px;
+		border-left-style:solid;
+		border-left-color: @content-border-color;
+     }
+    } 
+  }
+
+  /*------------------------------------- End ComboBox -------------------------------------------*/

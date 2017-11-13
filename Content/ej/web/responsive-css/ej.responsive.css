@@ -1366,6 +1366,12 @@ padding-bottom:7px;
 	.e-ss-leftdiv, .e-ss-lefttopdiv {
 		display: none;
 	}
+    .e-ss-fontmaindiv{
+        display: none;
+    }
+    .e-ss-drpfontdiv{
+        display: block;
+    }
 	.e-ss-drpdiv {
 		display: block;
 	}
