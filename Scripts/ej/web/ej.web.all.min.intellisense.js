@@ -300,6 +300,12 @@ getActiveText:function(){
 /// Returns the current active text value in the Autocomplete suggestion list.
 /// </summary>
 },
+hide:function(){
+/// <signature>
+/// <summary>
+/// Hides the Autocomplete suggestion list.
+/// </summary>
+},
 search:function(){
 /// <signature>
 /// <summary>
@@ -6350,7 +6356,7 @@ ejCircularGauge :function (options) {
 ///Specify distanceFromCorner value of circular gauge
 ///<br/>distanceFromCorner-number	default-center
 ///<br/><br/>
-///Specify range zOrder placement of circular gauge.
+///Specify range Z-order placement of circular gauge.
 ///<br/>rangeZOrder-ej.datavisualization.CircularGauge.RangeZOrderPlacement|string	default-Rear
 ///<br/><br/>
 ///Specify animate value of circular gauge
@@ -6361,6 +6367,21 @@ ejCircularGauge :function (options) {
 ///<br/><br/>
 ///Controls whether circular gauge has to be responsive while resizing.
 ///<br/>enableResize-boolean	default-false
+///<br/><br/>
+///This provides options for customizing export settings
+///<br/>exportSettings-ExportSettings	default-
+///<br/><br/>
+///Specifies the downloading filename
+///<br/>filename-string	default-CircularGauge
+///<br/><br/>
+///Specifies the format of the file to export
+///<br/>type-ej.datavisualization.CircularGauge.ExportingType|string	default-png
+///<br/><br/>
+///Specifies the name of the action URL
+///<br/>action-string	default-
+///<br/><br/>
+///Specifies the mode of exporting
+///<br/>mode-ej.datavisualization.CircularGauge.ExportingMode|string	default-client
 ///<br/><br/>
 ///Specify the frame of circular gauge
 ///<br/>frame-Frame	default-Object
@@ -7784,6 +7805,12 @@ ejDateRangePicker :function (options) {
 ///Change the DateRangePicker calendar and date format based on given culture.
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
+///Specifies the maximum date in the calendar that the user can select as a startDate or endDate.
+///<br/>maxDate-string|Date	default-new Date(2099, 11, 31)
+///<br/><br/>
+///Specifies the minimum date in the calendar that the user can select as a startDate or endDate.
+///<br/>minDate-string|Date	default-new Date(1900, 00, 01)
+///<br/><br/>
 ///Used to add the preset ranges. Added ranges using this, will show in popup in right side for easy selection of different preset ranges.
 ///<br/>ranges-any	default-null
 ///<br/><br/>
@@ -8076,6 +8103,28 @@ addPhase:function(name, options){
 /// <param name="options"	type="any">JSON object to define the phase to be added</param>
 /// </signature>
 },
+addLayers:function(layers){
+/// <signature>
+/// <summary>
+/// Add a collection of layers can be added to the existing diagram layer at runtime.
+/// </summary>
+/// <param name="layers"	type="any[]">a collection of layers to be added to the existing diagram layers.</param>
+/// </signature>
+},
+addNodeToLayer:function(layerName, nodes){
+/// <signature>
+/// <summary>
+/// Add a collection of diagram elements can be added to the specific diagram layer.
+/// </summary>
+/// <param name="layerName"	type="string">specifies the name of the layer to the nodes will be added.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Add a collection of diagram elements can be added to the specific diagram layer.
+/// </summary>
+/// <param name="nodes"	type="any[]">collection of diagram elements to be added to the specific layer.</param>
+/// </signature>
+},
 addPorts:function(name, ports){
 /// <signature>
 /// <summary>
@@ -8172,7 +8221,7 @@ exportDiagram:function(options){
 /// <param name="options"	type="Diagram.Options">options to export the desired region of diagram to the desired formats.</param>
 /// </signature>
 },
-exportImage:function(image, options){
+exportImage:function(image, exportImageSettings){
 /// <signature>
 /// <summary>
 /// The exportImage method is used to export the image passed through argument with different image format and exporting options as like exportDiagram method.
@@ -8183,7 +8232,7 @@ exportImage:function(image, options){
 /// <summary>
 /// The exportImage method is used to export the image passed through argument with different image format and exporting options as like exportDiagram method.
 /// </summary>
-/// <param name="options"	type="Diagram.Options">options to export the desired region of diagram to the desired formats.</param>
+/// <param name="exportImageSettings"	type="Diagram.ExportImageSettings">options to export the desired region of diagram to the desired formats.</param>
 /// </signature>
 },
 findNode:function(name){
@@ -8302,15 +8351,15 @@ paste:function(object, rename){
 /// <param name="rename"	type="boolean">to define whether the specified object is to be renamed or not</param>
 /// </signature>
 },
-print:function(options){
+print:function(printSettings){
 /// <signature>
 /// <summary>
 /// Print the diagram as image
 /// </summary>
-/// <param name="options"	type="Diagram.Options">options to print the desired region of diagram and print the diagram in multiple pages.</param>
+/// <param name="printSettings"	type="Diagram.PrintSettings">options to print the desired region of diagram and print the diagram in multiple pages.</param>
 /// </signature>
 },
-printImage:function(image, options){
+printImage:function(image, printImageSettings){
 /// <signature>
 /// <summary>
 /// The printImage method is used to print the image passed through argument with desired region and multiple pages as like print method.
@@ -8321,7 +8370,7 @@ printImage:function(image, options){
 /// <summary>
 /// The printImage method is used to print the image passed through argument with desired region and multiple pages as like print method.
 /// </summary>
-/// <param name="options"	type="Diagram.Options">options to export the desired region of diagram to the desired formats.</param>
+/// <param name="printImageSettings"	type="Diagram.PrintImageSettings">options to export the desired region of diagram to the desired formats.</param>
 /// </signature>
 },
 redo:function(){
@@ -8344,16 +8393,38 @@ remove:function(node){
 /// <param name="node"	type="any">the node/connector to be removed from diagram</param>
 /// </signature>
 },
+removeLayers:function(layers){
+/// <signature>
+/// <summary>
+/// Remove the collection of layers from the diagram layers.
+/// </summary>
+/// <param name="layers"	type="any[]">collection of layers to be removed from diagram layer.</param>
+/// </signature>
+},
+removeNodeToLayer:function(layerName, nodes){
+/// <signature>
+/// <summary>
+/// Remove the collection of nodes from the specific layer.
+/// </summary>
+/// <param name="layerName"	type="string">Specifies the layer name to the node will be removed.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Remove the collection of nodes from the specific layer.
+/// </summary>
+/// <param name="nodes"	type="any[]">collection of diagram elements name to be removed from specific layer.</param>
+/// </signature>
+},
 removePorts:function(name, ports){
 /// <signature>
 /// <summary>
-/// Add a collection of ports to the node specified by name
+/// Remove the collection of ports from the specified node.
 /// </summary>
 /// <param name="name"	type="string">name of the node to which the ports have to be added</param>
 /// </signature>
 /// <signature>
 /// <summary>
-/// Add a collection of ports to the node specified by name
+/// Remove the collection of ports from the specified node.
 /// </summary>
 /// <param name="ports"	type="any[]">a collection of ports to be deleted from the specified node</param>
 /// </signature>
@@ -8508,6 +8579,20 @@ updateLabel:function(nodeName, label, options){
 /// Update the given label at runtime
 /// </summary>
 /// <param name="options"	type="any">JSON to specify the label properties that have to be updated</param>
+/// </signature>
+},
+updateLayer:function(layerName, options){
+/// <signature>
+/// <summary>
+/// Update the given layer at run time.
+/// </summary>
+/// <param name="layerName"	type="string">the name of layer to be updated</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Update the given layer at run time.
+/// </summary>
+/// <param name="options"	type="any">the layer object to be modified</param>
 /// </signature>
 },
 updateNode:function(name, options){
@@ -9451,9 +9536,6 @@ ejDiagram :function (options) {
 ///Describes the transparency level of the region
 ///<br/>opacity-number	default-1
 ///<br/><br/>
-///Sets the type of the BPMN Shapes as group. Applicable, if the node is a BPMN.
-///<br/>group-any	default-ej.datavisualization.Diagram.BPMNShapes
-///<br/><br/>
 ///Defines the header of a swimlane/lane
 ///<br/>header-any	default-{ text: Title, fontSize: 11 }
 ///<br/><br/>
@@ -9900,6 +9982,27 @@ ejDiagram :function (options) {
 ///<br/><br/>
 ///Defines the z-index of the node
 ///<br/>zOrder-number	default-0
+///<br/><br/>
+///A collection of JSON objects where each object represents a layer. Layer is a named category of diagram shapes.
+///<br/>layers-Array&lt;Layers&gt;	default-[]
+///<br/><br/>
+///To specify the name of the diagram layer. Layer name should be unique.
+///<br/>name-string	default-
+///<br/><br/>
+///Enable or disable diagram objects to be added to the specific layer.
+///<br/>active-boolean	default-false
+///<br/><br/>
+///Enable or disable the specific layer objects to be visible.
+///<br/>visible-boolean	default-true
+///<br/><br/>
+///Enable or disable the specific layer objects to be visible on printing or exporting.
+///<br/>print-boolean	default-true
+///<br/><br/>
+///Enable or disable the interaction of the specific diagram objects.
+///<br/>lock-boolean	default-false
+///<br/><br/>
+///To Specify the collection of the object names belongs to the layer.
+///<br/>objects-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Binds the custom JSON data with node properties
 ///<br/>nodeTemplate-any	default-null
@@ -10541,6 +10644,21 @@ ejDigitalGauge :function (options) {
 /// <signature>
 /// <summary><br/>
 ///The Digital gauge can be easily configured to the DOM element, such as div. you can create a digital gauge with a highly customizable look and feel.<br/><br/>
+///This provides options for customizing export settings
+///<br/>exportSettings-ExportSettings	default-
+///<br/><br/>
+///Specifies the downloading filename
+///<br/>filename-string	default-DigitalGauge
+///<br/><br/>
+///Specifies the format of the file to export
+///<br/>type-ej.datavisualization.DigitalGauge.ExportingType|string	default-png
+///<br/><br/>
+///Specifies the name of the action URL
+///<br/>action-string	default-
+///<br/><br/>
+///Specifies the mode of exporting
+///<br/>mode-ej.datavisualization.DigitalGauge.ExportingMode|string	default-client
+///<br/><br/>
 ///Specifies the frame of the Digital gauge.
 ///<br/>frame-Frame	default-{backgroundImageUrl: null, innerWidth: 6, outerWidth: 10}
 ///<br/><br/>
@@ -11171,6 +11289,238 @@ ejDropDownList :function (options) {
 }
 });
 intellisense.annotate(ej,{
+DropDownTree:function(){
+ /// <signature>
+ /// <summary>Constructor of ej.DropDownTree</summary>
+ /// </signature>
+}
+});
+ej.DropDownTree=(function(){
+var original=ej.DropDownTree
+var wrapper=function(){
+var instance = new original();
+intellisense.annotate(instance, {
+
+checkAll:function(){
+/// <signature>
+/// <summary>
+/// Checks all the nodes in the DropDownTree.
+/// </summary>
+},
+checkNode:function(element){
+/// <signature>
+/// <summary>
+/// Checks a node in the DropDownTree.
+/// </summary>
+/// <param name="element"	type="string|any|any[]"> ID of the DropDownTree node/object of the DropDownTree node/collection of the ID/object of the DropDownTree nodes.</param>
+/// </signature>
+},
+clearText:function(){
+/// <signature>
+/// <summary>
+/// Clears the text in the DropDownTree.
+/// </summary>
+},
+destroy:function(){
+/// <signature>
+/// <summary>
+/// Destroys the DropDownTree control.
+/// </summary>
+},
+getValue:function(){
+/// <signature>
+/// <summary>
+/// Returns the selected value.
+/// </summary>
+},
+hidePopup:function(){
+/// <signature>
+/// <summary>
+/// Hides the popup in the DropDownTree.
+/// </summary>
+},
+moveNode:function(sourceNode, destinationNode, index){
+/// <signature>
+/// <summary>
+/// Moves the DropDownTree node within the same DropDownTree. The new position of the given DropDownTree node will be based on destination node and index position.
+/// </summary>
+/// <param name="sourceNode"	type="string|any">ID of the DropDownTree node/object of the DropDownTree node.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Moves the DropDownTree node within the same DropDownTree. The new position of the given DropDownTree node will be based on destination node and index position.
+/// </summary>
+/// <param name="destinationNode"	type="string|any">ID of the DropDownTree node/object of the DropDownTree node.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Moves the DropDownTree node within the same DropDownTree. The new position of the given DropDownTree node will be based on destination node and index position.
+/// </summary>
+/// <param name="index"	type="number">New index position of the given source node.</param>
+/// </signature>
+},
+removeAll:function(){
+/// <signature>
+/// <summary>
+/// Removes all the nodes in the DropDownTree.
+/// </summary>
+},
+removeNode:function(element){
+/// <signature>
+/// <summary>
+/// Removes a node in the DropDownTree.
+/// </summary>
+/// <param name="element"	type="string|any|any[]"> ID of the DropDownTree node/object of the DropDownTree node/collectionof the ID/object of the DropDownTree nodes.</param>
+/// </signature>
+},
+selectAll:function(){
+/// <signature>
+/// <summary>
+/// Selects all the DropDownTree nodes when allowMultiSelection field is enabled in the treeViewSettings property.
+/// </summary>
+},
+selectNode:function(element){
+/// <signature>
+/// <summary>
+/// Selects a node in the DropDownTree control. To select the collection of nodes in the DropDownTree control, enable allowMultiSelection field of the treeViewSettings property.
+/// </summary>
+/// <param name="element"	type="string|any|any[]"> ID of the DropDownTree node/object of the DropDownTree node/ collection of I the D/object of the DropDownTree nodes.</param>
+/// </signature>
+},
+showPopup:function(){
+/// <signature>
+/// <summary>
+/// Shows the DropDownTree control with the popup.
+/// </summary>
+},
+unCheckAll:function(){
+/// <signature>
+/// <summary>
+/// Unchecks all the nodes in the DropDownTree.
+/// </summary>
+},
+unCheckNode:function(element){
+/// <signature>
+/// <summary>
+/// Unchecks a node in the DropDownTree.
+/// </summary>
+/// <param name="element"	type="string|any|any[]">ID of the DropDownTree node/object of the DropDownTree node/collection of the ID/object of the DropDownTree nodes.</param>
+/// </signature>
+},
+unselectAll:function(){
+/// <signature>
+/// <summary>
+/// Unselects all the DropDownTree nodes when allowMultiSelection field of the treeViewSettings property is enabled.
+/// </summary>
+},
+unselectNode:function(element){
+/// <signature>
+/// <summary>
+/// Unselects a node in the DropDownTree control. To unselect the collection of nodes in the DropDownTree control, enable allowMultiSelection field of the treeViewSettings property.
+/// </summary>
+/// <param name="element"	type="string|any|any[]"> ID of the DropDownTree node/object of the DropDownTree node/ collection of the ID/object of the DropDownTree nodes.</param>
+/// </signature>
+},
+});
+return instance;
+};
+intellisense.redirectDefinition(wrapper, original);
+return wrapper;
+})();
+jQuery.fn.ejDropDownTree=function(){
+this.data("ejDropDownTree",new	ej.DropDownTree());
+return this;
+};
+intellisense.annotate(jQuery.fn,{
+ejDropDownTree :function (options) {
+/// <signature>
+/// <summary><br/>
+///The DropDownList control provides a list of hierarchical data to choose an item from the list.It can including other HTML elements such as images, textboxes, check box, radio buttons, and so on.<br/><br/>
+///Uses the keyboard for any action, including opening and closing the drop-down tree; navigating, expanding, and collapsing nodes of the dropdown tree; and more.
+///<br/>allowKeyboardNavigation-boolean	default-true
+///<br/><br/>
+///Sets the root CSS class for DropDownTree that allows customization of appearance.
+///<br/>cssClass-string	default-``
+///<br/><br/>
+///Sets the separator when the multiSelectMode with delimiter option or checkbox is enabled.When you enter the delimiter value, the text after the delimiter is considered as a separateword or query. The delimiter string is a single character and must be a symbol. Mostly,the delimiter symbol is used as comma (,), semi-colon (;), or any other special character.
+///<br/>delimiter-string	default-,
+///<br/><br/>
+///Indicates whether the DropDownTree control responds to user interaction or not. By default, the control is in the enabled mode and can be disabled by setting this to false.
+///<br/>enabled-boolean	default-true
+///<br/><br/>
+///The enabled animation property uses the easeOutQuad animation to SlideDown and SlideUp the popup wrapper in 200 and 100 milliseconds, respectively.
+///<br/>enableAnimation-boolean	default-false
+///<br/><br/>
+///Gets or sets a value that indicates whether to continue the DropDownTree model state in the page using applicable medium, i.e., HTML5 localStorage or cookies.
+///<br/>enablePersistence-boolean	default-false
+///<br/><br/>
+///Sets the DropDownTree textbox direction from right to left alignment.
+///<br/>enableRTL-boolean	default-false
+///<br/><br/>
+///Creates footer with text or HTML elements for the dropdown items.
+///<br/>footerTemplate-string	default-null
+///<br/><br/>
+///Serves as a patch of the entries comprising the path (that is set in the entry area) of the selected node.
+///<br/>fullPathDelimiter-string	default-&#39;/&#39;
+///<br/><br/>
+///Creates header with text or HTML elements for the dropdown items.
+///<br/>headerTemplate-string	default-null
+///<br/><br/>
+///Defines the height of the DropDownTree textbox.
+///<br/>height-string|number	default-
+///<br/><br/>
+///Allows you to set a particular country or regional language for the DropDownTree.
+///<br/>locale-string	default-en-US
+///<br/><br/>
+///Customizes the height and width of the popup wrapper.
+///<br/>popupSettings-PopupSettings	default-{height: &#39;152px&#39;,width: &#39;auto&#39;,showPopupOnLoad: false}
+///<br/><br/>
+///Defines the height of the popup wrapper in the DropDownTree control.
+///<br/>height-string|number	default-
+///<br/><br/>
+///Defines the width of the popup wrapper in the DropDownTree control.
+///<br/>width-string|number	default-
+///<br/><br/>
+///The DropDownTree control is displayed with the popup.
+///<br/>showPopupOnLoad-boolean	default-
+///<br/><br/>
+///Specifies that the DropDownTree textbox values should be read-only.
+///<br/>readOnly-boolean	default-false
+///<br/><br/>
+///The DropDownTreeâ€™s textbox is displayed with rounded corner style.
+///<br/>showRoundedCorner-boolean	default-false
+///<br/><br/>
+///Specifies the targetID for the DropDownTreeâ€™s items.
+///<br/>targetID-string	default-null
+///<br/><br/>
+///Specifies the delimiter between nodes (indicating their hierarchy).
+///<br/>textMode-ej.Textmode|string	default-ej.DropDownTree.TextMode.none
+///<br/><br/>
+///Sets the jQuery validation error message in the DropDownTree.
+///<br/>validationMessage-any	default-null
+///<br/><br/>
+///Sets the jQuery validation rules in the DropDownTree.
+///<br/>validationRules-any	default-null
+///<br/><br/>
+///Specifies the value (text content) for the DropDownTree control. For the single selection mode, the selected itemâ€™s value will be returned in its data type, and for MultiSelectMode, returns the selected itemsâ€™ values separated by delimiter in string type.
+///<br/>value-string	default-null
+///<br/><br/>
+///Specifies a short hint that describes the expected value of the DropDownTree control.
+///<br/>watermarkText-string	default-null
+///<br/><br/>
+///Defines the width of the DropDownTree textbox.
+///<br/>width-string|number	default-100%
+///<br/><br/>
+///Defines the popup settings of the DropDownTree widget. You can use any property which are in treeview using this property.
+///<br/>treeViewSettings-any	default-{}
+///</summary>
+///<param name="options" type="Object">
+///The widget configuration options
+///</param>
+///</signature>
+}
+});
+intellisense.annotate(ej,{
 Droppable:function(){
  /// <signature>
  /// <summary>Constructor of ej.Droppable</summary>
@@ -11431,14 +11781,26 @@ ejFileExplorer :function (options) {
 ///Gets or sets an object that indicates whether to customize the upload behavior in the FileExplorer.
 ///<br/>uploadSettings-UploadSettings	default-
 ///<br/><br/>
-///Specifies the maximum file size allowed to upload. It accepts the value in bytes.
-///<br/>maxFileSize-number	default-31457280
-///<br/><br/>
 ///Enables or disables the multiple files upload. When it is enabled, you can upload multiple files at a time and when disabled, you can upload only one file at a time.
 ///<br/>allowMultipleFile-boolean	default-true
 ///<br/><br/>
 ///Enables or disables the auto upload option while uploading files in FileExplorer control.
 ///<br/>autoUpload-boolean	default-false
+///<br/><br/>
+///Specifies the actions for upload dialog during initialization.
+///<br/>dialogAction-any	default-{ modal:false, closeOnComplete:false, content:null, drag:true }
+///<br/><br/>
+///Specifies the position at which the upload dialog is displayed using X and Y values. X: Sets the left position value for dialog. Y: Sets the top position value for dialog.
+///<br/>dialogPosition-any	default-null
+///<br/><br/>
+///Specifies the maximum file size allowed to upload. It accepts the value in bytes.
+///<br/>maxFileSize-number	default-31457280
+///<br/><br/>
+///Specifies the file details which are to be displayed when selected for upload by setting the showFileDetails to true.
+///<br/>showFileDetails-boolean	default-true
+///<br/><br/>
+///Specifies the virtual item count for virtual support.
+///<br/>virtualItemCount-number	default-0
 ///<br/><br/>
 ///Specifies the width of FileExplorer control.
 ///<br/>width-string|number	default-850
@@ -11476,32 +11838,16 @@ addRecord:function(data, rowPosition){
 /// <param name="rowPosition"	type="string">Defines in which position the row wants to add</param>
 /// </signature>
 },
-setSplitterIndex:function(index){
-/// <signature>
-/// <summary>
-/// Positions the splitter by the specified column index.
-/// </summary>
-/// <param name="index"	type="number">Set the splitter position based on column index.</param>
-/// </signature>
-},
-sortColumn:function(mappingName, columnSortDirection){
-/// <signature>
-/// <summary>
-/// To sort the column in required direction
-/// </summary>
-/// <param name="mappingName"	type="string">Defines the column's mapping name in which sorting have to be performed</param>
-/// </signature>
-/// <signature>
-/// <summary>
-/// To sort the column in required direction
-/// </summary>
-/// <param name="columnSortDirection"	type="string">Defines the sort direction whether the column has to sorted in ascending/descending order. By default it is sorting in an ascending order</param>
-/// </signature>
-},
 cancelEdit:function(){
 /// <signature>
 /// <summary>
 /// To cancel the edited state of an item in Gantt
+/// </summary>
+},
+clearFilter:function(){
+/// <signature>
+/// <summary>
+/// To clear all the filtered columns in Gantt.
 /// </summary>
 },
 collapseAllItems:function(){
@@ -11509,6 +11855,20 @@ collapseAllItems:function(){
 /// <summary>
 /// To collapse all the parent items in Gantt
 /// </summary>
+},
+deleteDependency:function(fromTaskId, toTaskId){
+/// <signature>
+/// <summary>
+/// To delete the dependency between the two tasks.
+/// </summary>
+/// <param name="fromTaskId"	type="number">taskID of predecessor task</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To delete the dependency between the two tasks.
+/// </summary>
+/// <param name="toTaskId"	type="number">taskID of successor task</param>
+/// </signature>
 },
 deleteItem:function(){
 /// <signature>
@@ -11556,6 +11916,38 @@ export:function(action, serverEvent, multipleExport){
 /// <param name="multipleExport"	type="boolean">optionalPass the multiple exporting value as true/false</param>
 /// </signature>
 },
+filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchCase){
+/// <signature>
+/// <summary>
+/// Sends filtering request to filter a column in Gantt dynamically.
+/// </summary>
+/// <param name="fieldName"	type="string">Pass the field name of the column.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Sends filtering request to filter a column in Gantt dynamically.
+/// </summary>
+/// <param name="filterOperator"	type="string">string/integer/date operator.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Sends filtering request to filter a column in Gantt dynamically.
+/// </summary>
+/// <param name="filterValue"	type="string">Pass the value to be filtered in a column.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Sends filtering request to filter a column in Gantt dynamically.
+/// </summary>
+/// <param name="predicate"	type="string">Optional - Pass the predicate as and/or.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Sends filtering request to filter a column in Gantt dynamically.
+/// </summary>
+/// <param name="matchCase"	type="boolean">Optional - pass the match case value as true/false.</param>
+/// </signature>
+},
 hideColumn:function(headerText){
 /// <signature>
 /// <summary>
@@ -11594,6 +11986,14 @@ saveEdit:function(){
 /// To save the edited state of an item in Gantt
 /// </summary>
 },
+searchItem:function(searchString){
+/// <signature>
+/// <summary>
+/// To search an item with search string provided at the run time
+/// </summary>
+/// <param name="searchString"	type="string">you can pass a text to search in Gantt Control.</param>
+/// </signature>
+},
 selectCells:function(Indexes, preservePreviousSelectedCell){
 /// <signature>
 /// <summary>
@@ -11616,12 +12016,12 @@ selectMultipleRows:function(rowIndexes){
 /// <param name="rowIndexes"	type="any[]">array of row indexes to select</param>
 /// </signature>
 },
-searchItem:function(searchString){
+setSplitterIndex:function(index){
 /// <signature>
 /// <summary>
-/// To search an item with search string provided at the run time
+/// Positions the splitter by the specified column index.
 /// </summary>
-/// <param name="searchString"	type="string">you can pass a text to search in Gantt Control.</param>
+/// <param name="index"	type="number">Set the splitter position based on column index.</param>
 /// </signature>
 },
 setSplitterPosition:function(width){
@@ -11638,6 +12038,76 @@ showColumn:function(headerText){
 /// To show the column by using header text
 /// </summary>
 /// <param name="headerText"	type="string">you can pass a header text of a column to show</param>
+/// </signature>
+},
+showCriticalPath:function(isShown){
+/// <signature>
+/// <summary>
+/// To show/hide the critical tasks in current project.
+/// </summary>
+/// <param name="isShown"	type="boolean">To show/hide the critical tasks</param>
+/// </signature>
+},
+sortColumn:function(mappingName, columnSortDirection){
+/// <signature>
+/// <summary>
+/// To sort the column in required direction
+/// </summary>
+/// <param name="mappingName"	type="string">Defines the column's mapping name in which sorting have to be performed</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To sort the column in required direction
+/// </summary>
+/// <param name="columnSortDirection"	type="string">Defines the sort direction whether the column has to sorted in ascending/descending order. By default it is sorting in an ascending order</param>
+/// </signature>
+},
+updateDependency:function(fromTaskId, toTaskId, predecessorType, offset){
+/// <signature>
+/// <summary>
+/// To update the predecessor type and offset value for existing task dependency.
+/// </summary>
+/// <param name="fromTaskId"	type="number">taskID of predecessor task</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To update the predecessor type and offset value for existing task dependency.
+/// </summary>
+/// <param name="toTaskId"	type="number">taskID of successor task</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To update the predecessor type and offset value for existing task dependency.
+/// </summary>
+/// <param name="predecessorType"	type="string">Type of dependency task.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To update the predecessor type and offset value for existing task dependency.
+/// </summary>
+/// <param name="offset"	type="number">Offset value of dependency task.</param>
+/// </signature>
+},
+updateRecordByTaskId:function(data){
+/// <signature>
+/// <summary>
+/// To update the value of Gantt record by using it's task id value.
+/// </summary>
+/// <param name="data"	type="any">object with modified field values and current task id value</param>
+/// </signature>
+},
+updateRecordByIndex:function(index, data){
+/// <signature>
+/// <summary>
+/// To update the value of Gantt record by using row index.
+/// </summary>
+/// <param name="index"	type="number">index of Gantt record to be updated</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To update the value of Gantt record by using row index.
+/// </summary>
+/// <param name="data"	type="any">object with modified field value</param>
 /// </signature>
 },
 updateTaskId:function(currentId, newId){
@@ -11678,8 +12148,14 @@ ejGantt :function (options) {
 ///Specifies editType of fields to be included in the add dialog in Gantt
 ///<br/>editType-string	default-
 ///<br/><br/>
+///Specifies the custom column field was displayed in General tab of add dialog or not.
+///<br/>displayInGeneralTab-boolean	default-false
+///<br/><br/>
 ///Enables or disables the ability to resize column.
 ///<br/>allowColumnResize-boolean	default-false
+///<br/><br/>
+///Enables or disables the ability to drag and drop the row interactively to reorder the rows
+///<br/>allowDragAndDrop-boolean	default-false
 ///<br/><br/>
 ///Enables or Disables Gantt chart editing in Gantt
 ///<br/>allowGanttChartEditing-boolean	default-true
@@ -11699,29 +12175,17 @@ ejGantt :function (options) {
 ///Enables or disables sorting. When enabled, we can sort the column by clicking on the column.
 ///<br/>allowSorting-boolean	default-false
 ///<br/><br/>
-///Enables or disables the ability to drag and drop the row interactively to reorder the rows
-///<br/>allowDragAndDrop-boolean	default-false
-///<br/><br/>
-///Enable or disable predecessor validation. When it is true, all the task's start and end dates are aligned based on its predecessors start and end dates.
-///<br/>enablePredecessorValidation-boolean	default-true
-///<br/><br/>
-///Enables or disables serial number column for Gantt. When enabled, the records will be number sequenced.
-///<br/>enableSerialNumber-boolean	default-false
-///<br/><br/>
 ///Specifies the baseline background color in Gantt
 ///<br/>baselineColor-string	default-#fba41c
-///<br/><br/>
-///Specifies the mapping property path for the work field of a task in the data source. When it is mapped the end date and duration for a task will be calculated automatically.
-///<br/>workMapping-string	default-
-///<br/><br/>
-///Specifies the mapping property path for the expand status of a record in data source.
-///<br/>expandStateMapping-string	default-
 ///<br/><br/>
 ///Specifies the mapping property path for baseline end date in datasource
 ///<br/>baselineEndDateMapping-string	default-
 ///<br/><br/>
 ///Specifies the mapping property path for baseline start date of a task in datasource
 ///<br/>baselineStartDateMapping-string	default-
+///<br/><br/>
+///Specifies the template for cell tooltip
+///<br/>cellTooltipTemplate-string	default-null
 ///<br/><br/>
 ///Specifies the mapping property path for sub tasks in datasource
 ///<br/>childMapping-string	default-
@@ -11738,8 +12202,14 @@ ejGantt :function (options) {
 ///Specify the CSS class for Gantt to achieve custom theme.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///Specifies the template for cell tooltip
-///<br/>cellTooltipTemplate-string	default-null
+///Collection of data or hierarchical data to represent in Gantt
+///<br/>dataSource-Array&lt;any&gt;	default-null
+///<br/><br/>
+///Specifies the dateFormat for Gantt , given format is displayed in tooltip , Grid .
+///<br/>dateFormat-string	default-MM/dd/yyyy
+///<br/><br/>
+///Specifies the customized working time for tasks in Gantt
+///<br/>dayWorkingTime-Array&lt;any&gt;	default-[{ from: 08:00 AM, to: 12:00 PM }, { from: 01:00 PM, to: 05:00 PM }]
 ///<br/><br/>
 ///Option for customizing the drag tooltip while reordering the rows.
 ///<br/>dragTooltip-DragTooltip	default-
@@ -11753,20 +12223,14 @@ ejGantt :function (options) {
 ///Specifies the custom template for drag tooltip.
 ///<br/>tooltipTemplate-string	default-null
 ///<br/><br/>
-///Collection of data or hierarchical data to represent in Gantt
-///<br/>dataSource-Array&lt;any&gt;	default-null
-///<br/><br/>
-///Specifies the dateFormat for Gantt , given format is displayed in tooltip , Grid .
-///<br/>dateFormat-string	default-MM/dd/yyyy
-///<br/><br/>
-///Specifies the customized working time for tasks in Gantt
-///<br/>dayWorkingTime-Array&lt;any&gt;	default-[{ from: 08:00 AM, to: 12:00 PM }, { from: 01:00 PM, to: 05:00 PM }]
-///<br/><br/>
 ///Specifies the mapping property path for duration of a task in datasource
 ///<br/>durationMapping-string	default-
 ///<br/><br/>
 ///Specifies the duration unit for each tasks whether days or hours or minutes
 ///<br/>durationUnit-ej.Gantt.DurationUnit|string	default-ej.Gantt.DurationUnit.Day
+///<br/><br/>
+///Specifies the mapping property path for task duration unit in datasource
+///<br/>durationUnitMapping-string	default-
 ///<br/><br/>
 ///Specifies the fields to be included in the edit dialog in Gantt
 ///<br/>editDialogFields-Array&lt;EditDialogFields&gt;	default-[]
@@ -11776,6 +12240,78 @@ ejGantt :function (options) {
 ///<br/><br/>
 ///Specifies editType of fields to be included in the edit dialog in Gantt
 ///<br/>editType-string	default-
+///<br/><br/>
+///Specifies the custom column field was displayed in General tab of edit dialog or not.
+///<br/>displayInGeneralTab-boolean	default-false
+///<br/><br/>
+///Specifies the editSettings options in Gantt.
+///<br/>editSettings-EditSettings	default-
+///<br/><br/>
+///Enables or disables add record icon in Gantt toolbar
+///<br/>allowAdding-boolean	default-false
+///<br/><br/>
+///Enables or disables delete icon in Gantt toolbar
+///<br/>allowDeleting-boolean	default-false
+///<br/><br/>
+///Specifies the option for enabling or disabling editing in Gantt grid part
+///<br/>allowEditing-boolean	default-false
+///<br/><br/>
+///Specifies the option for enabling or disabling indent action in Gantt.
+///<br/>allowIndent-boolean	default-false
+///<br/><br/>
+///Specifies the mouse action whether single click or double click to begin the editing
+///<br/>beginEditAction-ej.Gantt.BeginEditAction|string	default-ej.Gantt.BeginEditAction.DblClick
+///<br/><br/>
+///Specifies the edit mode in Gantt, "normal" is for dialog editing ,"cellEditing" is for cell type editing
+///<br/>editMode-string	default-normal
+///<br/><br/>
+///Specifies the position where the new row has to be added.
+///<br/>rowPosition-ej.Gantt.RowPosition|string	default-ej.Gantt.RowPosition.BelowSelectedRow
+///<br/><br/>
+///Enable or disable the confirmation dialog while deleting the record.
+///<br/>showDeleteConfirmDialog-boolean	default-false
+///<br/><br/>
+///Enables or Disables enableAltRow row effect in Gantt
+///<br/>enableAltRow-boolean	default-true
+///<br/><br/>
+///Enables or disables the collapse all records when loading the Gantt.
+///<br/>enableCollapseAll-boolean	default-false
+///<br/><br/>
+///Enables or disables the contextmenu for Gantt , when enabled contextmenu appears on right clicking Gantt
+///<br/>enableContextMenu-boolean	default-false
+///<br/><br/>
+///Enable or disable predecessor validation. When it is true, all the task's start and end dates are aligned based on its predecessors start and end dates.
+///<br/>enablePredecessorValidation-boolean	default-true
+///<br/><br/>
+///Indicates whether we can edit the progress of a task interactively in Gantt.
+///<br/>enableProgressBarResizing-boolean	default-true
+///<br/><br/>
+///Enables or disables the option for dynamically updating the Gantt size on window resizing
+///<br/>enableResize-boolean	default-false
+///<br/><br/>
+///Enables or disables serial number column for Gantt. When enabled, the records will be number sequenced.
+///<br/>enableSerialNumber-boolean	default-false
+///<br/><br/>
+///Enables or disables tooltip while editing (dragging/resizing) the taskbar.
+///<br/>enableTaskbarDragTooltip-boolean	default-true
+///<br/><br/>
+///Enables or disables tooltip for taskbar.
+///<br/>enableTaskbarTooltip-boolean	default-true
+///<br/><br/>
+///Enables/Disables virtualization for rendering Gantt items.
+///<br/>enableVirtualization-boolean	default-false
+///<br/><br/>
+///Enables/disables work breakdown structure column.
+///<br/>enableWBS-boolean	default-false
+///<br/><br/>
+///Enables/disables WBS predecessor column.
+///<br/>enableWBSPredecessor-boolean	default-false
+///<br/><br/>
+///Specifies the mapping property path for end Date of a task in datasource
+///<br/>endDateMapping-string	default-
+///<br/><br/>
+///Specifies the mapping property path for the expand status of a record in data source.
+///<br/>expandStateMapping-string	default-
 ///<br/><br/>
 ///Options for filtering and customizing filter actions.
 ///<br/>filterSettings-FilterSettings	default-
@@ -11795,92 +12331,14 @@ ejGantt :function (options) {
 ///Specifies the filter condition to filtered column. See operator
 ///<br/>operator-string	default-
 ///<br/><br/>
-///Enables or disables the responsiveness of Gantt
-///<br/>isResponsive-boolean	default-false
+///Specifies the data collection for grouping the resources in resource allocation view in Gantt.
+///<br/>groupCollection-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Option to configure the splitter position.
-///<br/>splitterSettings-SplitterSettings	default-
+///Default Value
+///<br/>groupIdMapping-string	default-
 ///<br/><br/>
-///Specifies position of the splitter in Gantt , splitter can be placed either based on percentage values or pixel values.
-///<br/>position-string	default-
-///<br/><br/>
-///Specifies the position of splitter in Gantt, based on column index in Gantt.
-///<br/>index-string	default-
-///<br/><br/>
-///Specifies the editSettings options in Gantt.
-///<br/>editSettings-EditSettings	default-
-///<br/><br/>
-///Enables or disables add record icon in Gantt toolbar
-///<br/>allowAdding-boolean	default-false
-///<br/><br/>
-///Enables or disables delete icon in Gantt toolbar
-///<br/>allowDeleting-boolean	default-false
-///<br/><br/>
-///Specifies the option for enabling or disabling editing in Gantt grid part
-///<br/>allowEditing-boolean	default-false
-///<br/><br/>
-///Specifies the option for enabling or disabling indent action in Gantt.
-///<br/>allowIndent-boolean	default-false
-///<br/><br/>
-///Specifies the option for enabling or disabling outdent action in Gantt
-///<br/>allowOutdent-boolean	default-false
-///<br/><br/>
-///Specifies the mouse action whether single click or double click to begin the editing
-///<br/>beginEditAction-ej.Gantt.BeginEditAction|string	default-ej.Gantt.BeginEditAction.DblClick
-///<br/><br/>
-///Specifies the edit mode in Gantt, "normal" is for dialog editing ,"cellEditing" is for cell type editing
-///<br/>editMode-string	default-normal
-///<br/><br/>
-///Specifies the position where the new row has to be added.
-///<br/>rowPosition-ej.Gantt.RowPosition|string	default-ej.Gantt.RowPosition.BelowSelectedRow
-///<br/><br/>
-///Enable or disable the confirmation dialog while deleting the record.
-///<br/>showDeleteConfirmDialog-boolean	default-false
-///<br/><br/>
-///Enables or Disables enableAltRow row effect in Gantt
-///<br/>enableAltRow-boolean	default-true
-///<br/><br/>
-///Enables/disables work breakdown structure column.
-///<br/>enableWBS-boolean	default-false
-///<br/><br/>
-///Enables/disables WBS predecessor column.
-///<br/>enableWBSPredecessor-boolean	default-false
-///<br/><br/>
-///Enables or disables the collapse all records when loading the Gantt.
-///<br/>enableCollapseAll-boolean	default-false
-///<br/><br/>
-///Specifies the data source field name to be displayed as left task label
-///<br/>leftTaskLabelMapping-string	default-
-///<br/><br/>
-///Specifies the data source field name to be displayed as right task label
-///<br/>rightTaskLabelMapping-string	default-
-///<br/><br/>
-///Specifies the template for left task label
-///<br/>leftTaskLabelTemplate-string	default-
-///<br/><br/>
-///Specifies the template for right task label
-///<br/>rightTaskLabelTemplate-string	default-
-///<br/><br/>
-///Enables or disables the contextmenu for Gantt , when enabled contextmenu appears on right clicking Gantt
-///<br/>enableContextMenu-boolean	default-false
-///<br/><br/>
-///Indicates whether we can edit the progress of a task interactively in Gantt.
-///<br/>enableProgressBarResizing-boolean	default-true
-///<br/><br/>
-///Enables or disables the option for dynamically updating the Gantt size on window resizing
-///<br/>enableResize-boolean	default-false
-///<br/><br/>
-///Enables or disables tooltip while editing (dragging/resizing) the taskbar.
-///<br/>enableTaskbarDragTooltip-boolean	default-true
-///<br/><br/>
-///Enables or disables tooltip for taskbar.
-///<br/>enableTaskbarTooltip-boolean	default-true
-///<br/><br/>
-///Enables/Disables virtualization for rendering Gantt items.
-///<br/>enableVirtualization-boolean	default-false
-///<br/><br/>
-///Specifies the mapping property path for end Date of a task in datasource
-///<br/>endDateMapping-string	default-
+///Default Value
+///<br/>groupNameMapping-string	default-
 ///<br/><br/>
 ///Specifies whether to highlight the weekends in Gantt .
 ///<br/>highlightWeekends-boolean	default-true
@@ -11900,53 +12358,47 @@ ejGantt :function (options) {
 ///Specifies whether to include weekends while calculating the duration of a task.
 ///<br/>includeWeekend-boolean	default-true
 ///<br/><br/>
+///Enables or disables the responsiveness of Gantt
+///<br/>isResponsive-boolean	default-false
+///<br/><br/>
+///Specifies the data source field name to be displayed as left task label
+///<br/>leftTaskLabelMapping-string	default-
+///<br/><br/>
+///Specifies the template for left task label
+///<br/>leftTaskLabelTemplate-string	default-
+///<br/><br/>
 ///Specify the locale for Gantt
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
 ///Specifies the mapping property path for milestone in datasource
 ///<br/>milestoneMapping-string	default-
 ///<br/><br/>
-///Enables/disables the options for inserting , deleting and renaming  columns.
-///<br/>showColumnOptions-boolean	default-false
-///<br/><br/>
-///Specifies the template for parent taskbar
-///<br/>parentTaskbarTemplate-string	default-
-///<br/><br/>
-///Specifies the nature of a task for calculating the work,  and it can fixed duration, fixed work and fixed resource unit
-///<br/>taskType-ej.Gantt.TaskType|string	default-ej.Gantt.TaskType.FixedUnit
-///<br/><br/>
-///Specifies the unit for the work involved in a task and it can be day, hour or minute
-///<br/>workUnit-ej.Gantt.WorkUnit|string	default-ej.Gantt.WorkUnit.Hour
-///<br/><br/>
-///Specifies the task scheduling mode for a project and this will be set to all the tasks available in the project
-///<br/>taskSchedulingMode-ej.Gantt.TaskSchedulingMode|string	default-ej.Gantt.TaskSchedulingMode.Auto
-///<br/><br/>
-///Specifies the row selection type.
-///<br/>selectionType-ej.Gantt.SelectionType|string	default-ej.Gantt.SelectionType.Single
-///<br/><br/>
-///Specifies the background of parent progressbar in Gantt
-///<br/>parentProgressbarBackground-string	default-
-///<br/><br/>
-///Specifies the mapping property path for resource's percent effort involved in a task in datasource
-///<br/>resourceUnitMapping-string	default-
+///To Specify the JsRender script Id to customize the mile stone with our preference
+///<br/>milestoneTemplate-string	default-
 ///<br/><br/>
 ///Specifies the mapping property path for the task description in datasource
 ///<br/>notesMapping-string	default-
 ///<br/><br/>
-///Specifies the mapping property path for the task scheduling mode for a task in datasource
-///<br/>taskSchedulingModeMapping-string	default-auto
-///<br/><br/>
-///Specifies the mapping property path for task duration unit in datasource
-///<br/>durationUnitMapping-string	default-
-///<br/><br/>
-///Specifies the background of parent taskbar in Gantt
-///<br/>parentTaskbarBackground-string	default-
+///Specifies the background of parent progressbar in Gantt
+///<br/>parentProgressbarBackground-string	default-
 ///<br/><br/>
 ///Specifies the mapping property path for parent task Id in self reference datasource
 ///<br/>parentTaskIdMapping-string	default-
 ///<br/><br/>
+///Specifies the background of parent taskbar in Gantt
+///<br/>parentTaskbarBackground-string	default-
+///<br/><br/>
+///Specifies the template for parent taskbar
+///<br/>parentTaskbarTemplate-string	default-
+///<br/><br/>
 ///Specifies the mapping property path for predecessors of a task in datasource
 ///<br/>predecessorMapping-string	default-
+///<br/><br/>
+///Specifies the JsRender template id or template script for predecessor tooltip on mouse action.
+///<br/>predecessorTooltipTemplate-string	default-
+///<br/><br/>
+///Specifies the mapping property path for progress percentage of a task in datasource
+///<br/>progressMapping-string	default-
 ///<br/><br/>
 ///Specifies the background of progressbar in Gantt
 ///<br/>progressbarBackground-string	default-
@@ -11960,14 +12412,17 @@ ejGantt :function (options) {
 ///Specifies the template ID for customized tooltip for progressbar editing in Gantt
 ///<br/>progressbarTooltipTemplateId-string	default-null
 ///<br/><br/>
-///Specifies the mapping property path for progress percentage of a task in datasource
-///<br/>progressMapping-string	default-
-///<br/><br/>
 ///It receives query to retrieve data from the table (query is same as SQL).
 ///<br/>query-any	default-null
 ///<br/><br/>
+///Enables or disables Gantt to read-only mode
+///<br/>readOnly-boolean	default-false
+///<br/><br/>
 ///Enables or Disables rendering baselines in Gantt , when enabled baseline is rendered in Gantt
 ///<br/>renderBaseline-boolean	default-false
+///<br/><br/>
+///Default Value
+///<br/>resourceCollectionMapping-string	default-
 ///<br/><br/>
 ///Specifies the mapping property name for resource ID in resource Collection in Gantt
 ///<br/>resourceIdMapping-string	default-
@@ -11978,8 +12433,17 @@ ejGantt :function (options) {
 ///Specifies the mapping property path for resource name of a task in Gantt
 ///<br/>resourceNameMapping-string	default-
 ///<br/><br/>
+///Specifies the mapping property path for resource's percent effort involved in a task in datasource
+///<br/>resourceUnitMapping-string	default-
+///<br/><br/>
 ///Collection of data regarding resources involved in entire project
 ///<br/>resources-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Specifies the data source field name to be displayed as right task label
+///<br/>rightTaskLabelMapping-string	default-
+///<br/><br/>
+///Specifies the template for right task label
+///<br/>rightTaskLabelTemplate-string	default-
 ///<br/><br/>
 ///Specifies whether rounding off the day working time edits
 ///<br/>roundOffDayworkingTime-boolean	default-true
@@ -12029,11 +12493,29 @@ ejGantt :function (options) {
 ///Specifies start date of the Gantt schedule. By default, start date will be rounded to its previous Sunday.
 ///<br/>scheduleStartDate-string	default-null
 ///<br/><br/>
+///Specifies the selected cell information on rendering Gantt.
+///<br/>selectedCellIndexes-Array&lt;SelectedCellIndexes&gt;	default-
+///<br/><br/>
+///Specifies the row index of the cell to be selected Gantt control
+///<br/>rowIndex-number	default--1
+///<br/><br/>
+///Specifies the cell index to be selected in the row.
+///<br/>cellIndex-number	default--1
+///<br/><br/>
 ///Specifies the selected row Index in Gantt , the row with given index will highlighted
 ///<br/>selectedRowIndex-number	default--1
 ///<br/><br/>
+///Specifies the row selection type.
+///<br/>selectionType-ej.Gantt.SelectionType|string	default-ej.Gantt.SelectionType.Single
+///<br/><br/>
+///Specifies the type of selection whether to select row or cell.
+///<br/>selectionMode-ej.Gantt.SelectionMode|string	default-ej.Gantt.SelectionMode.Row
+///<br/><br/>
 ///Enables or disables the column chooser.
 ///<br/>showColumnChooser-boolean	default-false
+///<br/><br/>
+///Enables/disables the options for inserting , deleting and renaming  columns.
+///<br/>showColumnOptions-boolean	default-false
 ///<br/><br/>
 ///Specifies the template for cell tooltip
 ///<br/>showGridCellTooltip-boolean	default-true
@@ -12059,15 +12541,6 @@ ejGantt :function (options) {
 ///Specifies the width of Gantt control
 ///<br/>width-string	default-
 ///<br/><br/>
-///Specifies the selected cell information on rendering Gantt.
-///<br/>selectedCellIndexes-Array&lt;SelectedCellIndexes&gt;	default-
-///<br/><br/>
-///Specifies the row index of the cell to be selected Gantt control
-///<br/>rowIndex-number	default-
-///<br/><br/>
-///Specifies the cell index to be selected in the row.
-///<br/>cellIndex-number	default- 
-///<br/><br/>
 ///Specifies the sorting options for Gantt.
 ///<br/>sortSettings-SortSettings	default-
 ///<br/><br/>
@@ -12082,6 +12555,15 @@ ejGantt :function (options) {
 ///<br/><br/>
 ///Specifies splitter position in Gantt.
 ///<br/>splitterPosition-string	default-null
+///<br/><br/>
+///Option to configure the splitter position.
+///<br/>splitterSettings-SplitterSettings	default-
+///<br/><br/>
+///Specifies position of the splitter in Gantt , splitter can be placed either based on percentage values or pixel values.
+///<br/>position-string	default-
+///<br/><br/>
+///Specifies the position of splitter in Gantt, based on column index in Gantt.
+///<br/>index-string	default-
 ///<br/><br/>
 ///Specifies the mapping property path for start date of a task in datasource
 ///<br/>startDateMapping-string	default-
@@ -12104,6 +12586,24 @@ ejGantt :function (options) {
 ///Specifies the width of the stripline in Gantt
 ///<br/>lineWidth-string	default-
 ///<br/><br/>
+///Default Value
+///<br/>taskCollectionMapping-string	default-
+///<br/><br/>
+///Specifies the mapping property path for task Id in datasource
+///<br/>taskIdMapping-string	default-
+///<br/><br/>
+///Specifies the mapping property path for task name in datasource
+///<br/>taskNameMapping-string	default-
+///<br/><br/>
+///Specifies the task scheduling mode for a project and this will be set to all the tasks available in the project
+///<br/>taskSchedulingMode-ej.Gantt.TaskSchedulingMode|string	default-ej.Gantt.TaskSchedulingMode.Auto
+///<br/><br/>
+///Specifies the mapping property path for the task scheduling mode for a task in datasource
+///<br/>taskSchedulingModeMapping-string	default-auto
+///<br/><br/>
+///Specifies the nature of a task for calculating the work,  and it can fixed duration, fixed work and fixed resource unit
+///<br/>taskType-ej.Gantt.TaskType|string	default-ej.Gantt.TaskType.FixedUnit
+///<br/><br/>
 ///Specifies the background of the taskbar in Gantt
 ///<br/>taskbarBackground-string	default-
 ///<br/><br/>
@@ -12116,26 +12616,14 @@ ejGantt :function (options) {
 ///Specifies the height of taskBar in Gantt.
 ///<br/>taskbarHeight-number	default-20
 ///<br/><br/>
-///Specifies the template for tooltip on mouse action on taskbars
-///<br/>taskbarTooltipTemplate-string	default-
-///<br/><br/>
 ///To Specify the JsRender script Id to customize the task bar with our preference
 ///<br/>taskbarTemplate-string	default-
 ///<br/><br/>
-///To Specify the JsRender script Id to customize the mile stone with our preference
-///<br/>milestoneTemplate-string	default-
-///<br/><br/>
-///Enables or disables Gantt to read-only mode
-///<br/>readOnly-boolean	default-false
+///Specifies the template for tooltip on mouse action on taskbars
+///<br/>taskbarTooltipTemplate-string	default-
 ///<br/><br/>
 ///Specifies the template id for tooltip on mouse action on taskbars
 ///<br/>taskbarTooltipTemplateId-string	default-
-///<br/><br/>
-///Specifies the mapping property path for task Id in datasource
-///<br/>taskIdMapping-string	default-
-///<br/><br/>
-///Specifies the mapping property path for task name in datasource
-///<br/>taskNameMapping-string	default-
 ///<br/><br/>
 ///Specifies the toolbarSettings options.
 ///<br/>toolbarSettings-ToolbarSettings	default-
@@ -12161,38 +12649,26 @@ ejGantt :function (options) {
 ///Specifies the tree expander column in Gantt
 ///<br/>treeColumnIndex-number	default-0
 ///<br/><br/>
-///Specifies the type of selection whether to select row or cell.
-///<br/>selectionMode-ej.Gantt.SelectionMode|string	default-ej.Gantt.SelectionMode.Row
-///<br/><br/>
 ///Enables or disables the schedule date validation while connecting a manually scheduled task with predecessor
 ///<br/>validateManualTasksOnLinking-boolean	default-false
-///<br/><br/>
-///Specifies the weekendBackground color in Gantt
-///<br/>weekendBackground-string	default-#F2F2F2
-///<br/><br/>
-///Specifies the working time schedule of day
-///<br/>workingTimeScale-ej.Gantt.workingTimeScale|string	default-ej.Gantt.workingTimeScale.TimeScale8Hours
-///<br/><br/>
-///Gets or sets the working days of a week in a project.
-///<br/>workWeek-Array&lt;any&gt;	default-[Monday,Tuesday,Wednesday,Thursday,Friday]
 ///<br/><br/>
 ///Specifies the view type for a project in the Gantt.
 ///<br/>viewType-ej.Gantt.ViewType|string	default-ej.Gantt.ViewType.ProjectView
 ///<br/><br/>
-///Specifies the data collection for grouping the resources in resource allocation view in Gantt.
-///<br/>groupCollection-Array&lt;any&gt;	default-[]
+///Specifies the weekendBackground color in Gantt
+///<br/>weekendBackground-string	default-#F2F2F2
 ///<br/><br/>
-///Default Value
-///<br/>resourceCollectionMapping-string	default-
+///Specifies the mapping property path for the work field of a task in the data source. When it is mapped the end date and duration for a task will be calculated automatically.
+///<br/>workMapping-string	default-
 ///<br/><br/>
-///Default Value
-///<br/>taskCollectionMapping-string	default-
+///Specifies the unit for the work involved in a task and it can be day, hour or minute
+///<br/>workUnit-ej.Gantt.WorkUnit|string	default-ej.Gantt.WorkUnit.Hour
 ///<br/><br/>
-///Default Value
-///<br/>groupIdMapping-string	default-
+///Gets or sets the working days of a week in a project.
+///<br/>workWeek-Array&lt;any&gt;	default-[Monday,Tuesday,Wednesday,Thursday,Friday]
 ///<br/><br/>
-///Default Value
-///<br/>groupNameMapping-string	default-
+///Specifies the working time schedule of day
+///<br/>workingTimeScale-ej.Gantt.workingTimeScale|string	default-ej.Gantt.workingTimeScale.TimeScale8Hours
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -13590,6 +14066,9 @@ ejGrid :function (options) {
 ///This helps in mapping server-side action when rows are dropped in Grid.
 ///<br/>dropMapper-string	default-null
 ///<br/><br/>
+///Gets or sets a value that indicates whether move or copy a record from one grid to another or within the grid
+///<br/>dragBehavior-ej.Grid.DragBehavior|string	default-ej.Grid.DragBehavior.Move
+///<br/><br/>
 ///Gets or sets an object that indicates whether to customize the searching behavior of the grid
 ///<br/>searchSettings-SearchSettings	default-
 ///<br/><br/>
@@ -13605,7 +14084,7 @@ ejGrid :function (options) {
 ///It enables or disables case-sensitivity while searching the search key in grid.
 ///<br/>ignoreCase-boolean	default-true
 ///<br/><br/>
-///Gets a value that indicates whether the grid model to hold multiple selected records . selectedRecords can be used to displayed hold the single or multiple selected records using â€œselectedRecordsâ€ property
+///Gets a value that display the array of selected records in the Grid.
 ///<br/>selectedRecords-Array&lt;any&gt;	default-null
 ///<br/><br/>
 ///Gets or sets a value that indicates to select the row while initializing the grid
@@ -13622,6 +14101,9 @@ ejGrid :function (options) {
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to enable the toggle selection behavior for row, cell and column.
 ///<br/>enableToggle-boolean	default-false
+///<br/><br/>
+///Gets or sets a value that indicates whether to select multiple rows or cells by performing dragging in Grid.
+///<br/>allowDragSelection-boolean	default-false
 ///<br/><br/>
 ///Gets or sets a value that indicates whether to add the default selection actions as a selection mode.See selectionMode
 ///<br/>selectionMode-Array&lt;any&gt;	default-[row]
@@ -16072,6 +16554,21 @@ ejLinearGauge :function (options) {
 ///Specifies the animate state for marker pointer
 ///<br/>enableMarkerPointerAnimation-boolean	default-true
 ///<br/><br/>
+///This provides options for customizing export settings
+///<br/>exportSettings-ExportSettings	default-
+///<br/><br/>
+///Specifies the downloading filename
+///<br/>filename-string	default-LinearGauge
+///<br/><br/>
+///Specifies the format of the file to export
+///<br/>type-ej.datavisualization.LinearGauge.ExportingType|string	default-png
+///<br/><br/>
+///Specifies the name of the action URL
+///<br/>action-string	default-
+///<br/><br/>
+///Specifies the mode of exporting
+///<br/>mode-ej.datavisualization.LinearGauge.ExportingMode|string	default-client
+///<br/><br/>
 ///Specifies the can resize state.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
@@ -17570,6 +18067,9 @@ ejMap :function (options) {
 ///Enables or Disables the map animation
 ///<br/>enableAnimation-boolean	default-false
 ///<br/><br/>
+///Enables or Disables right to left(RTL) support for maps.
+///<br/>enableRTL-boolean	default-false
+///<br/><br/>
 ///Enables or Disables the animation for layer change in map
 ///<br/>enableLayerChangeAnimation-boolean	default-false
 ///<br/><br/>
@@ -17590,6 +18090,9 @@ ejMap :function (options) {
 ///<br/><br/>
 ///Enables or Disables the zoom on selecting the map shape
 ///<br/>enableZoomOnSelection-boolean	default-false
+///<br/><br/>
+///Enables or Disables the zoom on mouse wheel the map.
+///<br/>enableMouseWheelZoom-boolean	default-true
 ///<br/><br/>
 ///Specifies the zoom factor for map zoom value.
 ///<br/>factor-number	default-1
@@ -17747,6 +18250,9 @@ ejMap :function (options) {
 ///to get leftLabel value for legend setting
 ///<br/>leftLabel-string	default-null
 ///<br/><br/>
+///To get the field name in the datasource for generating legend items.
+///<br/>textPath-string	default-null
+///<br/><br/>
 ///to get mode of legend setting
 ///<br/>mode-ej.datavisualization.Map.Mode|string	default-default
 ///<br/><br/>
@@ -17831,6 +18337,9 @@ ejMap :function (options) {
 ///Specifies the shape color valuePath of the shape layer in map
 ///<br/>colorValuePath-string	default-null
 ///<br/><br/>
+///Specifies the field name in the datasource that contains color values for each shapes.
+///<br/>colorPath-string	default-null
+///<br/><br/>
 ///Enables or Disables the gradient colors for map shapes.
 ///<br/>enableGradient-boolean	default-false
 ///<br/><br/>
@@ -17911,6 +18420,9 @@ ejMap :function (options) {
 ///<br/><br/>
 ///Specifies the bubble color valuePath of the shape layer in map
 ///<br/>colorValuePath-string	default-null
+///<br/><br/>
+///Specifies the field name in the datasource that contains color values for each bubbles.
+///<br/>colorPath-string	default-null
 ///<br/><br/>
 ///Specifies the maximum size value of bubbles for shape layer in map
 ///<br/>maxValue-number	default-20
@@ -17998,6 +18510,9 @@ ejMap :function (options) {
 ///<br/><br/>
 ///to get leftLabel value for legend setting
 ///<br/>leftLabel-string	default-null
+///<br/><br/>
+///To get the field name in the datasource for generating legend items.
+///<br/>textPath-string	default-null
 ///<br/><br/>
 ///to get mode of legend setting
 ///<br/>mode-ej.datavisualization.Map.Mode|string	default-default
@@ -19218,37 +19733,37 @@ intellisense.annotate(instance, {
 doAjaxPost:function(){
 /// <signature>
 /// <summary>
-/// Performs an asynchronous HTTP (AJAX) request.
+/// Posts an asynchronous HTTP (AJAX) request.
 /// </summary>
 },
 doPostBack:function(){
 /// <signature>
 /// <summary>
-/// Perform an asynchronous HTTP (FullPost) submit.
+/// Performs an asynchronous HTTP (FullPost) submit.
 /// </summary>
 },
 exportPivotChart:function(){
 /// <signature>
 /// <summary>
-/// Exports the PivotChart to the format specified in the parameter.
+/// Exports the pivot chart to the format that is specified in the parameter.
 /// </summary>
 },
 renderChartFromJSON:function(){
 /// <signature>
 /// <summary>
-/// This function renders the PivotChart control with the JSON formatted datasource.
+/// This function renders the pivot chart control with the JSON formatted data source.
 /// </summary>
 },
 renderControlSuccess:function(){
 /// <signature>
 /// <summary>
-/// This function receives the update from service-end, which would be utilized for rendering the widget.
+/// This function receives the update from the service-end, which will be utilized for rendering the widget.
 /// </summary>
 },
 getOlapReport:function(){
 /// <signature>
 /// <summary>
-/// Returns the OlapReport string maintained along with the axis elements information.
+/// Returns the OlapReport string that is maintained along with the axis elements information.
 /// </summary>
 },
 setOlapReport:function(){
@@ -19260,7 +19775,7 @@ setOlapReport:function(){
 getJSONRecords:function(){
 /// <signature>
 /// <summary>
-/// Returns the JSON records formed to render the control.
+/// Returns the JSON records that are formed to render the control.
 /// </summary>
 },
 setJSONRecords:function(){
@@ -19272,37 +19787,37 @@ setJSONRecords:function(){
 getPivotEngine:function(){
 /// <signature>
 /// <summary>
-/// Returns the PivotEngine formed to render the control.
+/// Returns the PivotEngine that is formed to render the control.
 /// </summary>
 },
 setPivotEngine:function(){
 /// <signature>
 /// <summary>
-/// Sets the PivotEngine required to render the control.
+/// Sets the PivotEngine that is required to render the control.
 /// </summary>
 },
 refreshControl:function(){
 /// <signature>
 /// <summary>
-/// Re-renders the control with the data source at the instant.
+/// Re-renders the control with the datasource at instant.
 /// </summary>
 },
 destroy:function(){
 /// <signature>
 /// <summary>
-/// This function Destroy the PivotChart widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
+/// This function destroys the pivot chart widget associated events that are bound using &quot;this._on&quot; and brings the control to pre-init state.
 /// </summary>
 },
 generateJSON:function(){
 /// <signature>
 /// <summary>
-/// Renders the control with the pivot engine obtained from olap cube.
+/// Renders the control with the pivot engine that is obtained from the OLAP cube.
 /// </summary>
 },
 refreshPagedPivotChart:function(){
 /// <signature>
 /// <summary>
-/// Navigates to the specified page number in specified axis.
+/// Navigates to the specified page number in the specified axis.
 /// </summary>
 },
 });
@@ -19319,59 +19834,59 @@ intellisense.annotate(jQuery.fn,{
 ejPivotChart :function (options) {
 /// <signature>
 /// <summary><br/>
-///The PivotChart is a lightweight control that reads OLAP and Relational information and visualizes it in graphical format with the ability to drill up and down.<br/><br/>
-///Sets the mode for the PivotChart widget for binding either OLAP or Relational data source.
+///The pivot chart is a lightweight control that reads OLAP and relational information and visualizes it in a graphical format with the ability to drill up and down.<br/><br/>
+///Sets the mode for the pivot chart widget to bind either the OLAP or relational datasource.
 ///<br/>analysisMode-ej.Pivot.AnalysisMode|string	default-ej.Pivot.AnalysisMode.Pivot
 ///<br/><br/>
-///Specifies the CSS class to PivotChart to achieve custom theme.
+///Specifies the CSS class to the pivot chart for achieving the custom theme.
 ///<br/>cssClass-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Options for enabling zooming feature of PivotChart.
+///Options for enabling the zooming feature of the pivot chart.
 ///<br/>zooming-Zooming	default-{}
 ///<br/><br/>
-///Enables or disables horizontal scrollbar.
+///Enables or disables the horizontal scrollbar.
 ///<br/>enableScrollbar-boolean	default-false
 ///<br/><br/>
-///Options available to configure the properties of entire series. You can also override the options for specific series by using series collection.
+///Options available to configure the properties of entire series. You can also override the options for specific series by using the series collection.
 ///<br/>commonSeriesOptions-CommonSeriesOptions	default-{}
 ///<br/><br/>
-///Allows the user to set the specific chart type for PivotChart widget.
+///Allows you to set the specific chart type for the pivot chart widget.
 ///<br/>type-ej.PivotChart.ChartTypes|string	default-ej.PivotChart.ChartTypes.Column
 ///<br/><br/>
-///Initializes the data source for the PivotChart widget, when it functions completely on client-side.
+///Initializes the datasource for the pivot chart widget, when it functions completely on the client-side.
 ///<br/>dataSource-DataSource	default-{}
 ///<br/><br/>
-///Contains the respective cube name from OLAP database as string type.
+///Contains the respective cube name from the OLAP database as string type.
 ///<br/>cube-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///To set the data source name to fetch data from that.
+///To set the datasource name to fetch the data from that.
 ///<br/>sourceInfo-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Set the provider name for PivotChart to identify whether the provider is SSAS or Mondrian.
+///Sets the provider name for the pivot chart to identify whether the provider is SSAS or Mondrian.
 ///<br/>providerName-string	default-ssas
 ///<br/><br/>
-///Provides the raw data source for the PivotChart.
+///Provides the raw datasource for the pivot chart.
 ///<br/>data-any	default-null
 ///<br/><br/>
-///In connection with an OLAP database, this property contains the database name as string to fetch the data from the given connection string.
+///In connection with the OLAP database, this property contains the database name as string to fetch the data from the given connection string.
 ///<br/>catalog-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Lists out the items to be displayed as series of PivotChart.
+///Lists out the items to be displayed as series of the pivot chart.
 ///<br/>columns-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item.
+///Allows you to set the display caption for the item.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
-///Allows the user to indicate whether the added item is a named set or not.
+///Allows you to indicate whether the added item is a named set or not.
 ///<br/>isNamedSets-boolean	default-false
 ///<br/><br/>
-///Allows the user to set the sorting order of the members of the field.
+///Allows you to set the sorting order of field members.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
-///Applies filter to the field members.
+///Applies filter to field members.
 ///<br/>filterItems-any	default-null
 ///<br/><br/>
 ///Sets the type of filter whether to include/exclude the mentioned values.
@@ -19380,22 +19895,22 @@ ejPivotChart :function (options) {
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Lists out the items to be displayed as segments of PivotChart.
+///Lists out the items to be displayed as segments of the pivot chart.
 ///<br/>rows-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item.
+///Allows you to set the display caption for the item.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
-///Allows the user to indicate whether the added item is a named set or not.
+///Allows you to indicate whether the added item is a named set or not.
 ///<br/>isNamedSets-boolean	default-false
 ///<br/><br/>
-///Allows the user to set the sorting order of the members of the field.
+///Allows you to set the sorting order of field members.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
-///Applies filter to the field members.
+///Applies filter to field members.
 ///<br/>filterItems-any	default-null
 ///<br/><br/>
 ///Sets the type of filter whether to include/exclude the mentioned values.
@@ -19404,37 +19919,37 @@ ejPivotChart :function (options) {
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Lists out the items supports calculation in PivotChart.
+///Lists out the items support calculation in the pivot chart.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name for Relational datasource.
+///Allows you to bind the item by using its unique name as field name for the relational datasource.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item for Relational datasource.
+///Allows you to set the display caption for the item of the relational datasource.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
-///This holds the list of unique names of measures to bind them from the OLAP cube.
+///Holds the list of unique names of measures to bind them from the OLAP cube.
 ///<br/>measures-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the measure from OLAP datasource by using its unique name as field name.
+///Allows you to bind the measure from the OLAP datasource by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows to set the axis name to place the measures items.
+///Allows you to set the axis name to place the measures items.
 ///<br/>axis-string	default-rows
 ///<br/><br/>
-///Indicates whether the field is a calculated field or not with Relational datasource.
+///Indicates whether the field is a calculated field with the relational datasource or not.
 ///<br/>isCalculatedField-boolean	default-false
 ///<br/><br/>
-///Allows to set the formula for calculation of values for calculated members in Relational datasource.
+///Allows you to set the formula to calculate the values for calculated members in the relational datasource.
 ///<br/>formula-string	default-
 ///<br/><br/>
-///Lists out the items which supports filtering of values without displaying the members in UI in PivotChart.
+///Lists out the items that supports filtering of values without displaying the members in UI of the pivot chart.
 ///<br/>filters-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Applies filter to the field members.
+///Applies filter to field members.
 ///<br/>filterItems-any	default-null
 ///<br/><br/>
 ///Sets the type of filter whether to include/exclude the mentioned values.
@@ -19443,62 +19958,71 @@ ejPivotChart :function (options) {
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Object utilized to pass additional information between client-end and service-end on operating the control in server mode.
+///Object is utilized to pass additional information between the client-end and the service-end while operating the control in the server mode.
 ///<br/>customObject-any	default-{}
 ///<br/><br/>
-///Allows the user to enable 3D view of PivotChart.
+///Allows you to enable the 3D view of the pivot chart.
 ///<br/>enable3D-boolean	default-false
 ///<br/><br/>
-///Allows the user to view PivotChart from right to left.
+///Allows you to view the pivot chart from right to left.
 ///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
-///Allows user to render complete PivotChart on drill operation, that is, when expanding and collapsing members which are shown in multi-level labels.
+///Allows you to render the complete pivot chart on drill operation, when expanding and collapsing members are shown in multi-level labels.
 ///<br/>enableMultiLevelLabels-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable PivotChartâ€™s responsiveness in the browser layout.
+///Allows you to enable the responsiveness of pivot chart in the browser layout.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
-///Lets the user to customize the legend items and their labels.
+///You can customize the legend items and their labels.
 ///<br/>legend-any	default-{}
 ///<br/><br/>
-///Allows the user to set the localized language for the widget.
+///Allows you to set the localized language for the widget.
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
-///Sets the mode for the PivotChart widget for binding data source either in server-side or client-side.
+///Sets the mode for the pivot chart widget to bind the data source either in the server-side or client-side.
 ///<br/>operationalMode-ej.Pivot.OperationalMode|string	default-ej.Pivot.OperationalMode.ClientMode
 ///<br/><br/>
-///This is a horizontal axis that contains options to configure axis and it is the primary x axis for all the series in series array. To override x axis for particular series, create an axis object by providing unique name by using name property and add it to axes array. Then, assign the name to the seriesâ€™s xAxisName property to link both axis and series.
+///This is a horizontal axis that contains options to configure the axis and it is the primary x-axis for all series in the series array. To override x-axis for particular series, create an axis object by providing a unique name by using the name property and add it to the axes array. Then, assign the name to the seriesâ€™s xAxisName property to link both the axis and the series.
 ///<br/>primaryXAxis-any	default-{}
 ///<br/><br/>
-///This is a vertical axis that contains options to configure axis. This is the primary y axis for all the series in series array. To override y axis for particular series, create an axis object by providing unique name by using name property and add it to axes array. Then, assign the name to the seriesâ€™s yAxisName property to link both axis and series.
+///This is a vertical axis that contains options to configure the axis. This is the primary y-axis for all the series in the series array. To override y-axis for particular series, create an axis object by providing a unique name by using the name property and add it to the axes array. Then, assign the name to the seriesâ€™s yAxisName property to link both the axis and the series.
 ///<br/>primaryYAxis-any	default-{}
 ///<br/><br/>
-///Allows the user to rotate the angle of PivotChart in 3D view.
+///Allows you to rotate the angle of pivot chart in 3D view.
 ///<br/>rotation-number	default-0
 ///<br/><br/>
-///Allows the user to enable/disable the context menu options in the PivotChart.
+///Allows you to enable/disable context menu options in the pivot chart.
 ///<br/>enableContextMenu-boolean	default-false
 ///<br/><br/>
-///Allows the user to set custom name for the methods at service-end, communicated on AJAX post.
+///Allows you to set the custom name for methods at service-end, when you are communicating on AJAX post.
 ///<br/>serviceMethodSettings-ServiceMethodSettings	default-{}
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for drilling up/down operation in PivotChart.
+///Allows you to set the custom name for the service method that is responsible for drilling up/down in the pivot chart.
 ///<br/>drillDown-string	default-DrillChart
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for exporting.
+///Allows you to set the custom name for the service method which is responsible for exporting the pivot chart.
 ///<br/>exportPivotChart-string	default-Export
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for initializing PivotChart.
+///Allows you to set the custom name for the service method which is responsible for initializing the pivot chart.
 ///<br/>initialize-string	default-InitializeChart
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for navigating between pages in paged PivotChart.
+///Allows you to set the custom name for the service method which is responsible for navigating between pages in the paged pivot chart.
 ///<br/>paging-string	default-Paging
 ///<br/><br/>
-///Options to customize the size of the PivotChart control.
+///Options to customize the size of the pivot chart control.
 ///<br/>size-any	default-{}
 ///<br/><br/>
-///Connects the service using the specified URL for any server updates on operating the control in server mode.
+///Options for customizing the title of PivotChart.
+///<br/>title-Title	default-
+///<br/><br/>
+///Text to be displayed in PivotChart title.
+///<br/>text-string	default-
+///<br/><br/>
+///Connects the service by using the specified URL for any server updates while operating the control in the server mode.
 ///<br/>url-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Allows you to enable "withCredentials" property inside XMLHttpRequest object for CORS(Cross-Origin Resource Sharing) request.
+///<br/>enableXHRCredentials-boolean	default-false
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -19528,25 +20052,25 @@ doAjaxPost:function(){
 doPostBack:function(){
 /// <signature>
 /// <summary>
-/// Performs an asynchronous HTTP (FullPost) submit.
+/// Performs an asynchronous HTTP (full post) submit.
 /// </summary>
 },
 refreshPagedPivotClient:function(){
 /// <signature>
 /// <summary>
-/// Navigates to the specified page in specified axis.
+/// Navigates to a specified page in the specified axis.
 /// </summary>
 },
 refreshPagedPivotClientSuccess:function(){
 /// <signature>
 /// <summary>
-/// Updates the PivotClient component with the JSON data fetched from the service on navigating between pages.
+/// Updates the pivot client component with the JSON data that is fetched from the service while navigating between the pages.
 /// </summary>
 },
 generateJSON:function(){
 /// <signature>
 /// <summary>
-/// Renders the PivotChart and PivotGrid with the JSON data provided.
+/// Renders the pivot chart and the pivot grid with the provided JSON data.
 /// </summary>
 },
 refreshControl:function(){
@@ -19558,37 +20082,37 @@ refreshControl:function(){
 getActiveTab:function(){
 /// <signature>
 /// <summary>
-/// Returns the control tab string that displays currently in PivotClient.
+/// Returns the control tab string that displays currently in the pivot client.
 /// </summary>
 },
 destroy:function(){
 /// <signature>
 /// <summary>
-/// This function Destroy the PivotClient widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
+/// This function destroys all events of the pivot client widget bound using &quot;this._on&quot; and bring the control to pre-init state.
 /// </summary>
 },
 getOlapReport:function(){
 /// <signature>
 /// <summary>
-/// Returns the OlapReport string maintained along with the axis elements information.
+/// Returns the OLAP report string that is maintained along with the axis elements information.
 /// </summary>
 },
 setOlapReport:function(){
 /// <signature>
 /// <summary>
-/// Sets the OlapReport string along with the axis information and maintains it in a property.
+/// Sets the OLAP report string along with the axis information and maintains it in a property.
 /// </summary>
 },
 getJSONRecords:function(){
 /// <signature>
 /// <summary>
-/// Returns the JSON records formed to render the control.
+/// Returns the formed JSON records to render the control.
 /// </summary>
 },
 setJSONRecords:function(){
 /// <signature>
 /// <summary>
-/// Sets the JSON records formed to render the control to a property.
+/// Sets the formed JSON records to render the control to a property.
 /// </summary>
 },
 });
@@ -19605,77 +20129,77 @@ intellisense.annotate(jQuery.fn,{
 ejPivotClient :function (options) {
 /// <signature>
 /// <summary><br/>
-///PivotClient is an ad hoc analysis tool that can be easily bound to any OLAP and Relational datasource to provide a visual presentation of the information retrieved from the database.<br/><br/>
-///Sets the mode for the PivotClient widget for binding either OLAP or Relational data source.
+///The pivot client is an ad hoc analysis tool that can be easily bound to any OLAP and relational datasources to provide a visual presentation of the information retrieved from the database.<br/><br/>
+///Sets the mode for the pivot client widget for binding the OLAP or relational data sources.
 ///<br/>analysisMode-ej.Pivot.AnalysisMode|string	default-ej.Pivot.AnalysisMode.Pivot
 ///<br/><br/>
-///Allows the user to set the specific Chart type for PivotChart inside PivotClient widget.
+///Allows you to set the specific chart type for the pivot chart in the pivot client widget.
 ///<br/>chartType-ej.PivotChart.ChartTypes|string	default-ej.PivotChart.ChartTypes.Column
 ///<br/><br/>
-///Allows the user to set the content on exporting the PivotClient widget.
+///Allows you to set the content for exporting the pivot client widget.
 ///<br/>clientExportMode-ej.PivotClient.ClientExportMode|string	default-ej.PivotClient.ClientExportMode.ChartAndGrid
 ///<br/><br/>
-///Specifies the CSS class to PivotClient to achieve custom theme.
+///Specifies the CSS class to the pivot client for achieving the custom theme.
 ///<br/>cssClass-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Object utilized to pass additional information between client-end and service-end when the control functions in server-mode.
+///An object is utilized to pass the additional information between the client-end and the service-end when the control functions are present in the server-mode.
 ///<br/>customObject-any	default-{}
 ///<br/><br/>
-///Initializes the data source for the PivotClient widget, when it functions completely on client-side.
+///Initializes the data source for the pivot client widget, when it functions completely on the client-side.
 ///<br/>dataSource-DataSource	default-{}
 ///<br/><br/>
-///Lists out the items to be arranged in columns section of PivotClient.
+///Lists out the items to be arranged in the columns section of the pivot client.
 ///<br/>columns-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item.
+///Allows you to set the display caption for an item.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
-///Allows the user to filter the report by default using advanced filtering (excel-like) option for OLAP data source in client-mode.
+///Allows you to filter the report by default using the advanced filtering (e.g., Microsoft Excel) option for the OLAP data source in the client-mode.
 ///<br/>advancedFilter-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to provide level unique name to perform advanced filtering.
+///Allows you to provide a level unique name to perform the advanced filtering.
 ///<br/>name-string	default-
 ///<br/><br/>
-///Allows the user to set the operator to perform Label Filtering.
+///Allows you to set the operator to perform label filtering.
 ///<br/>labelFilterOperator-string	default-none
 ///<br/><br/>
-///Allows the user to set the operator to perform Value Filtering.
+///Allows you to set the operator to perform value filtering.
 ///<br/>valueFilterOperator-string	default-none
 ///<br/><br/>
-///Allows the user to set the filtering type while performing advanced filtering.
+///Allows you to set the filtering type while performing the advanced filtering.
 ///<br/>advancedFilterType-string	default-
 ///<br/><br/>
-///In case of value filtering, this property contains the measure name to which the filter is applied.
+///In value filtering, this property contains the measure name to which the filter is applied.
 ///<br/>measure-string	default-
 ///<br/><br/>
-///Allows the user to hold the filter operand values in advanced filtering.
+///Allows you to hold the filter operand values in the advanced filtering.
 ///<br/>values-Array&lt;any&gt;	default-
 ///<br/><br/>
-///Allows the user to indicate whether the added item is a named set or not.
+///Allows you to indicate whether the added item is a named set or not.
 ///<br/>isNamedSets-boolean	default-false
 ///<br/><br/>
-///Shows/Hides the sub-total of the field in PivotGrid.
+///Shows/hides the sub-total of the field in the pivot grid.
 ///<br/>showSubTotal-boolean	default-true
 ///<br/><br/>
 ///Allows to set the format for the column headers.
 ///<br/>format-string	default-
 ///<br/><br/>
-///This property is set to display the formatted values with format types in PivotGrid.
+///This property is set to display the formatted values with format types in the pivot grid.
 ///<br/>formatString-string	default-
 ///<br/><br/>
-///Allows to set the custom theme for the column headers.
+///Allows you to set the custom theme for the column headers.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///Allows the user to set the sorting order of the members of the field.
+///Allows you to set the sorting order of members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
 ///Contains the list of members need to be drilled down by default in the field.
 ///<br/>drilledItems-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Applies filter to the field members.
+///Applies the filter to field members.
 ///<br/>filterItems-any	default-null
 ///<br/><br/>
 ///Sets the type of filter whether to include/exclude the mentioned values.
@@ -19684,58 +20208,58 @@ ejPivotClient :function (options) {
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Lists out the items to be arranged in rows section of PivotClient.
+///Lists out the items to be arranged in the rows section of the pivot client.
 ///<br/>rows-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item.
+///Allows you to set the display caption for an item.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
-///Allows the user to filter the report by default using advanced filtering (excel-like) option for OLAP data source in client-mode.
+///Allows you to filter the report by using the advanced filtering (e.g., Microsoft Excel) option for the OLAP data source in the client-mode.
 ///<br/>advancedFilter-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to provide level unique name to perform advanced filtering.
+///Allows you to provide a level unique name to perform the advanced filtering.
 ///<br/>name-string	default-
 ///<br/><br/>
-///Allows the user to set the operator to perform Label Filtering.
+///Allows you to set the operator to perform the label filtering.
 ///<br/>labelFilterOperator-string	default-none
 ///<br/><br/>
-///Allows the user to set the operator to perform Value Filtering.
+///Allows you to set the operator to perform the value filtering.
 ///<br/>valueFilterOperator-string	default-none
 ///<br/><br/>
-///Allows the user to set the filtering type while performing advanced filtering.
+///Allows you to set the filtering type while performing the advanced filtering.
 ///<br/>advancedFilterType-string	default-
 ///<br/><br/>
-///In case of value filtering, this property contains the measure name to which the filter is applied.
+///In value filtering, this property contains the measure name to which the filter is applied.
 ///<br/>measure-string	default-
 ///<br/><br/>
-///Allows the user to hold the filter operand values in advanced filtering.
+///Allows you to hold the filter operand values in the advanced filtering.
 ///<br/>values-Array&lt;any&gt;	default-
 ///<br/><br/>
-///Allows the user to indicate whether the added item is a named set or not.
+///Allows you to indicate whether the added item is a named set or not.
 ///<br/>isNamedSets-boolean	default-false
 ///<br/><br/>
-///Shows/Hides the sub-total of the field.
+///Shows/hides the sub-total of the field.
 ///<br/>showSubTotal-boolean	default-true
 ///<br/><br/>
-///Allows to set the format for the row headers.
+///Allows to set the format for row headers.
 ///<br/>format-string	default-
 ///<br/><br/>
-///This property is set to display the formatted values with format types in PivotGrid.
+///This property is set to display the formatted values with format types in the pivot grid.
 ///<br/>formatString-string	default-
 ///<br/><br/>
-///Allows to set the custom theme for the row headers.
+///Allows to set the custom theme for row headers.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///Allows the user to set the sorting order of the members of the field.
+///Allows you to set the sorting order for the field members.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
 ///Contains the list of members need to be drilled down by default in the field.
 ///<br/>drilledItems-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Applies filter to the field members.
+///Applies the filter to the field members.
 ///<br/>filterItems-any	default-null
 ///<br/><br/>
 ///Sets the type of filter whether to include/exclude the mentioned values.
@@ -19744,49 +20268,49 @@ ejPivotClient :function (options) {
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Lists out the items which supports calculation in PivotClient.
+///Lists out the items which supports calculation in the pivot client.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name for Relational datasource.
+///Allows you to bind the item by using its unique name as field name for the relational data source.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item for Relational datasource.
+///Allows you to set the display caption for an item for the relational data source.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
 ///This holds the list of unique names of measures to bind them from the OLAP cube.
 ///<br/>measures-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the measure from OLAP datasource by using its unique name as field name.
+///Allows you to bind the measure from the OLAP data source by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
 ///Allows to set the axis name to place the measures items.
 ///<br/>axis-string	default-rows
 ///<br/><br/>
-///Indicates whether the field is a calculated field or not with Relational datasource.
+///Indicates whether the field is a calculated field or not with the relational data source.
 ///<br/>isCalculatedField-boolean	default-false
 ///<br/><br/>
-///Allows to set the type of PivotGrid summary calculation for the value field with Relational datasource.
+///Allows to set the type of the pivot grid summary calculation for the value field with the relational data source.
 ///<br/>summaryType-ej.PivotAnalysis.SummaryType|string	default-ej.PivotAnalysis.SummaryType.Sum
 ///<br/><br/>
 ///Allows to set the format of the values.
 ///<br/>format-string	default-
 ///<br/><br/>
-///This property is set to display the formatted values with format types in PivotGrid.
+///This property is set to display the formatted values with format types in the pivot grid.
 ///<br/>formatString-string	default-
 ///<br/><br/>
 ///Allows to set the custom theme for the values.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///Allows to set the formula for calculation of values for calculated members in Relational datasource.
+///Allows to set the formula for calculation of members values in the relational data source.
 ///<br/>formula-string	default-
 ///<br/><br/>
-///Lists out the items which supports filtering of values without displaying the members in UI in PivotClient.
+///Lists out the items which supports filtering of values without displaying the members in UI of the pivot client.
 ///<br/>filters-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display name for an item.
+///Allows you to set the display name for an item.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
 ///Applies filter to the field members.
@@ -19798,248 +20322,278 @@ ejPivotClient :function (options) {
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Contains the respective cube name from OLAP database as string type.
+///Contains the respective cube name from the OLAP database as string type.
 ///<br/>cube-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///To set the data source name to fetch data from that.
+///Allows to set the data source name to fetch the data from that.
 ///<br/>sourceInfo-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Set the provider name for PivotClient to identify whether the provider is SSAS or Mondrian.
+///Sets the provider name for the pivot client to identify whether the provider is SSAS or Mondrian.
 ///<br/>providerName-string	default-ssas
 ///<br/><br/>
-///Provides the raw data source for the PivotClient.
+///Provides the raw data source for the pivot client.
 ///<br/>data-any	default-null
 ///<br/><br/>
 ///In connection with an OLAP database, this property contains the database name as string to fetch the data from the given connection string.
 ///<br/>catalog-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Allows user to filter the members (by its name and values) through advanced filtering (excel-like) option in client-mode.
+///Allows you to filter the members (by its name and values) through the advanced filtering (e.g., Microsoft Excel) option in the client-mode.
 ///<br/>enableAdvancedFilter-boolean	default-false
 ///<br/><br/>
 ///Sets a name to the report bound to the control.
 ///<br/>reportName-string	default-
 ///<br/><br/>
-///Allows to set the page size and current page number for each axis on applying paging.
+///Allows to set the page size and current page number for each axis on applying the paging.
 ///<br/>pagerOptions-any	default-{}
 ///<br/><br/>
-///Allows to set the number of categorical columns to be displayed in each page on applying paging.
+///Allows to set the number of categorical columns to be displayed in each page on applying the paging.
 ///<br/>categoricalPageSize-number	default-0
 ///<br/><br/>
-///Allows to set the number of series rows to be displayed in each page on applying paging.
+///Allows to set the number of series rows to be displayed in each page on applying the paging.
 ///<br/>seriesPageSize-number	default-0
 ///<br/><br/>
-///Allows to set the page number in categorical axis to be loaded by default.
+///Allows to set the page number in the categorical axis to be loaded by default.
 ///<br/>categoricalCurrentPage-number	default-1
 ///<br/><br/>
-///Allows to set the page number in series axis to be loaded by default.
+///Allows to set the page number in the series axis to be loaded by default.
 ///<br/>seriesCurrentPage-number	default-1
 ///<br/><br/>
-///Enables the Drill-Through feature which retrieves the raw items that are used to create the specific cell in PivotGrid.
+///Enables the drill-through feature which retrieves the raw items that are used to create a specific cell in the pivot grid.
 ///<br/>enableDrillThrough-boolean	default-false
 ///<br/><br/>
-///Allows the user to customize the widget's layout and appearance.
+///Allows you to customize the layout and appearance of the widget.
 ///<br/>displaySettings-DisplaySettings	default-{}
 ///<br/><br/>
-///Lets the user to customize the display of PivotChart and PivotGrid widgets, either in tabs or tiles.
+///Allows you to customize the display of the pivot chart and pivot grid widgets in the tabs or tiles.
 ///<br/>controlPlacement-ej.PivotClient.ControlPlacement|string	default-ej.PivotClient.ControlPlacement.Tab
 ///<br/><br/>
-///Lets the user to set either Chart or Grid as the start-up widget.
+///Allows you to set either the chart or grid as the start-up widget.
 ///<br/>defaultView-ej.PivotClient.DefaultView|string	default-ej.PivotClient.DefaultView.Grid
 ///<br/><br/>
-///Lets the user to have an option for switching to full screen view of PivotChart and PivotGrid from default view in PivotClient.
+///Allows you to switch to full screen view of the pivot chart and the pivot grid from default view in the pivot client.
 ///<br/>enableFullScreen-boolean	default-false
 ///<br/><br/>
-///Enables an option to enhance the space for PivotGrid and PivotChart by hiding Cube Browser and Axis Element Builder.
+///Enables an option to enhance the space for the pivot grid and pivot chart by hiding the cube browser and the axis element builder.
 ///<br/>enableTogglePanel-boolean	default-false
 ///<br/><br/>
-///Sets the display mode (Only Chart/Only Grid/Both) in PivotClient.
+///Sets the display mode (only chart/only grid/both) in the pivot client.
 ///<br/>mode-ej.PivotClient.DisplayMode|string	default-ej.PivotClient.DisplayMode.ChartAndGrid
 ///<br/><br/>
-///Allows user to set visibility of icons in toolbar panel.
+///Allows you to set the visibility of icons in the toolbar panel.
 ///<br/>toolbarIconSettings-ToolbarIconSettings	default-{}
 ///<br/><br/>
-///Allows user to set the visibility of Add Report icon in toolbar panel.
+///Allows you to set the visibility of Add Report icon in the toolbar panel.
 ///<br/>enableAddReport-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of New Report icon in toolbar panel.
+///Allows you to set the visibility of New Report icon in the toolbar panel.
 ///<br/>enableNewReport-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Rename Report icon in toolbar panel.
+///Allows you to set the visibility of Rename Report icon in the toolbar panel.
 ///<br/>enableRenameReport-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of DB Manipulation icon in toolbar panel.
+///Allows you to set the visibility of DB Manipulation icon in the toolbar panel.
 ///<br/>enableDBManipulation-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Word Export icon in toolbar panel.
+///Allows you to set the visibility of Word Export icon in the toolbar panel.
 ///<br/>enableWordExport-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Excel Export icon in toolbar panel.
+///Allows you to set the visibility of Excel Export icon in the toolbar panel.
 ///<br/>enableExcelExport-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of PDF Export icon in toolbar panel.
+///Allows you to set the visibility of PDF Export icon in the toolbar panel.
 ///<br/>enablePdfExport-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of MDX Query icon in toolbar panel.
+///Allows you to set the visibility of MDX Query icon in the toolbar panel.
 ///<br/>enableMDXQuery-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Defer Update icon in toolbar panel.
+///Allows to set the visibility of Defer Update icon in the toolbar panel.
 ///<br/>enableDeferUpdate-boolean	default-false
 ///<br/><br/>
-///Allows user to set the visibility of Full Screen icon in toolbar panel.
+///Allows to set the visibility of Full Screen icon in the toolbar panel.
 ///<br/>enableFullScreen-boolean	default-false
 ///<br/><br/>
-///Allows user to set the visibility of Sort/Filter Column icon in toolbar panel.
+///Allows you to set the visibility of Sort/Filter Column icon in the toolbar panel.
 ///<br/>enableSortOrFilterColumn-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Sort/Filter Row icon in toolbar panel.
+///Allows you to set the visibility of Sort/Filter Row icon in the toolbar panel.
 ///<br/>enableSortOrFilterRow-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Toggle Axis icon in toolbar panel.
+///Allows you to set the visibility of Toggle Axis icon in the toolbar panel.
 ///<br/>enableToggleAxis-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Chart Types icon in toolbar panel.
+///Allows you to set the visibility of Chart Types icon in the toolbar panel.
 ///<br/>enableChartTypes-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Remove Report icon in toolbar panel.
+///Allows you to set the visibility of Remove Report icon in the toolbar panel.
 ///<br/>enableRemoveReport-boolean	default-true
 ///<br/><br/>
-///Allows user to set the visibility of Calculated Member icon in toolbar panel.
+///Allows you to set the visibility of Calculated Member icon in the toolbar panel.
 ///<br/>enableCalculatedMember-boolean	default-false
 ///<br/><br/>
-///Allows user to show unique name on pivot button.
+///Allows you to show a unique name on the pivot button.
 ///<br/>showUniqueNameOnPivotButton-boolean	default-false
 ///<br/><br/>
-///Allows user to load the saved report collection from the database.
+///Allows you to load the saved report collection from the database.
 ///<br/>showReportCollection-boolean	default-false
 ///<br/><br/>
-///Enables the splitter option for resizing the elements inside the control.
+///Enables the splitter option for resizing the elements in the control.
 ///<br/>enableSplitter-boolean	default-false
 ///<br/><br/>
-///Enables the advanced filtering options Value Filtering, Label Filtering and Sorting for each dimensions on binding OLAP data in server mode.
+///Enables the advanced filtering options such as value filtering, label filtering, and sorting for each dimensions when binding the OLAP data in the server mode.
 ///<br/>enableAdvancedFilter-boolean	default-false
 ///<br/><br/>
-///Allows the user to refresh the control on-demand and not during every UI operation.
+///Allows you to refresh the control on-demand and not during the every UI operation.
 ///<br/>enableDeferUpdate-boolean	default-false
 ///<br/><br/>
-///Lets the user to save and load reports in a customized way with the help of events.
+///Allows to save and load the reports in a customized way with the help of events.
 ///<br/>enableLocalStorage-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable paging for both the PivotChart and PivotGrid components for the ease of viewing large data.
+///Allows you to enable the paging for both the pivot chart and the pivot grid components for viewing the large data.
 ///<br/>enablePaging-boolean	default-false
 ///<br/><br/>
-///Allows the user to include the PivotTreeMap component as one of the Chart types.
+///Allows you to include the pivot tree map component as one of the chart types.
 ///<br/>enablePivotTreeMap-boolean	default-false
 ///<br/><br/>
-///Allows the user to view the layout of PivotClient from right to left.
+///Allows you to view the layout of the pivot client from right to left.
 ///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
-///Enables/disables the visibility of measure group selector drop-down in Cube Browser.
+///Enables/disables the visibility of measure group selector drop-down in the cube browser.
 ///<br/>enableMeasureGroups-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable virtual scrolling for both the PivotChart and PivotGrid components for the ease of viewing large data.
+///Allows you to get cell details in JSON format by clicking the value cell.
+///<br/>enableCellClick-boolean	default-false
+///<br/><br/>
+///Allows you to get cell details in JSON format by double-clicking the value cell.
+///<br/>enableCellDoubleClick-boolean	default-false
+///<br/><br/>
+///Allows you to enable the virtual scrolling for both the pivot chart and pivot grid components for viewing the large data.
 ///<br/>enableVirtualScrolling-boolean	default-false
 ///<br/><br/>
-///Enables/Disables paging in Member Editor for viewing the large count of members in pages.
+///Allows you to set the maximum number of nodes as well as child nodes to be displayed in the member editor.
+///<br/>maxNodeLimitInMemberEditor-number	default-1000
+///<br/><br/>
+///Enables/disables paging in the member editor for viewing the large count of members in the pages.
 ///<br/>enableMemberEditorPaging-boolean	default-false
 ///<br/><br/>
-///Allows the user to set the number of members to be displayed in each page of Member Editor on applying paging in it.
+///Allows you to set the number of members to be displayed in each page of the member editor on applying the paging in it.
 ///<br/>memberEditorPageSize-number	default-100
 ///<br/><br/>
-///Sets the summary layout for PivotGrid. Following are the ways in which summary can be positioned: normal summary (bottom), top summary, no summary and excel-like summary.
+///Sets the summary layout for the pivot grid. Following are the ways in which the summary can be positioned: normal summary (bottom), top summary, no summary, and Microsoft Excel summary.
 ///<br/>gridLayout-ej.PivotGrid.Layout|string	default-ej.PivotGrid.Layout.Normal
 ///<br/><br/>
-///Allows the user to hide PivotClient's Cube Browser and Axis Element Builder while initiate the widget.
+///Allows you to hide the cube browser and the axis element builder of the pivot client while initiating the widget.
 ///<br/>collapseCubeBrowserByDefault-boolean	default-false
 ///<br/><br/>
-///Allows the user to view the KPI elements in tree-view inside PivotClient's Cube Browser.
+///Allows you to view the KPI elements in tree-view of the pivot client's cube browser.
 ///<br/>enableKPI-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable PivotClientâ€™s responsiveness in the browser layout.
+///Allows you to enable the pivot clientâ€™s responsiveness in the browser layout.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
-///Options to customize the size of the PivotClient control.
+///Options to customize the size of the pivot client control.
 ///<br/>size-any	default-Example:
 ///<br/><br/>
-///Allows the user to set the localized language for the widget.
+///Allows you to set the localized language for the widget.
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
-///Sets the mode for the PivotClient widget for binding data source either in server-side or client-side.
+///Sets the mode for the pivot client widget to bind the data source in the server-side or the client-side.
 ///<br/>operationalMode-ej.Pivot.OperationalMode|string	default-ej.Pivot.OperationalMode.ClientMode
 ///<br/><br/>
-///Allows the user to set custom name for the methods at service-end, communicated during AJAX post.
+///Allows you to set the custom name for methods at service-end, and it is communicated during the AJAX post.
 ///<br/>serviceMethodSettings-ServiceMethodSettings	default-{}
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for updating the entire report and widget, while changing the Cube.
+///Allows you to set the custom name for the service method that is responsible for updating the entire report and widget, while changing the cube.
 ///<br/>cubeChanged-string	default-CubeChanged
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for exporting.
+///Allows to set the custom name for the service method responsible for exporting.
 ///<br/>exportPivotClient-string	default-Export
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible to get the members for the tree-view, inside member-editor dialog.
+///Allows you to set the custom name for the service method that is responsible to get the members for tree-view in the member-editor dialog.
 ///<br/>fetchMemberTreeNodes-string	default-FetchMemberTreeNodes
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for fetching the report names from the database.
+///Allows you to set the custom name for the service method that is responsible for fetching the report names from the database.
 ///<br/>fetchReportList-string	default-FetchReportListFromDB
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for updating report while filtering members.
+///Allows you to set the custom name for the service method that is responsible for updating the report while filtering the members.
 ///<br/>filterElement-string	default-FilterElement
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for initializing PivotClient.
+///Allows you to set the custom name for the service method that is responsible for initializing the pivot client.
 ///<br/>initialize-string	default-InitializeClient
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for loading a report collection from the database.
+///Allows you to set the custom name for the service method that is responsible for loading a report collection from the database.
 ///<br/>loadReport-string	default-LoadReportFromDB
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for remove a report collection from the database.
+///Allows you to set the custom name for the service method that is responsible to remove a report collection from the database.
 ///<br/>removeDBReport-string	default-RemoveReportFromDB
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for rename the report collection in the database.
+///Allows you to set the custom name for the service method that is responsible for renaming the report collection in the database.
 ///<br/>renameDBReport-string	default-RenameReportInDB
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for retrieving the MDX query for the current report.
+///Allows you to set the custom name for the service method that is responsible for retrieving the MDX query for the current report.
 ///<br/>mdxQuery-string	default-GetMDXQuery
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for updating the tree-view inside Cube Browser, while changing the measure group.
+///Allows you to set the custom name for the service method that is responsible for updating the tree-view in the cube browser, while changing the measure group.
 ///<br/>measureGroupChanged-string	default-MeasureGroupChanged
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible to get the child members, on tree-view node expansion.
+///Allows you to set the custom name for the service method that is responsible to get the child members, on tree-view node expansion.
 ///<br/>memberExpand-string	default-MemberExpanded
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for updating report while dropping a node/SplitButton inside Axis Element Builder.
+///Allows you to set the custom name for the service method that is responsible for updating the report while dropping a node/split button in the axis element builder.
 ///<br/>nodeDropped-string	default-NodeDropped
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for updating report while removing SplitButton from Axis Element Builder.
+///Allows you to set the custom name for the service method that is responsible to update the report while removing the split button from the axis element builder.
 ///<br/>removeSplitButton-string	default-RemoveSplitButton
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for saving the report collection to database.
+///Allows you to set the custom name for the service method that is responsible for saving the report collection in the database.
 ///<br/>saveReport-string	default-SaveReportToDB
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for toggling the elements in row and column axes.
+///Allows you to set the custom name for the service method that is responsible for toggling the elements in the row and column axes.
 ///<br/>toggleAxis-string	default-ToggleAxis
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for all the toolbar operations.
+///Allows you to set the custom name for the service method that is responsible for all the toolbar operations.
 ///<br/>toolbarServices-string	default-ToolbarOperations
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for updating report collection.
+///Allows you to set the custom name for the service method that is responsible for updating the report collection.
 ///<br/>updateReport-string	default-UpdateReport
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible on navigating between pages in paged PivotClient.
+///Allows you to set the custom name for the service method while navigating between the pages in the paged pivot client.
 ///<br/>paging-string	default-Paging
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for updating report with calculated member.
+///Allows you to set the custom name for the service method that is responsible for updating the report with the calculated member.
 ///<br/>calculatedMember-string	default-CalculatedMember
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for performing drill through operation.
+///Allows you to set the custom name for the service method that is responsible for performing value sorting operation in the PivotClient.
+///<br/>valueSorting-string	default-ValueSorting
+///<br/><br/>
+///Allows you to set the custom name for the service method that is responsible for performing the drill through operation.
 ///<br/>drillThroughHierarchies-string	default-DrillThroughHierarchies
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for performing drill through operation in data table.
+///Allows you to set the custom name for the service method that is responsible for performing the drill through operation in the data table.
 ///<br/>drillThroughDataTable-string	default-DrillThroughDataTable
 ///<br/><br/>
-///Sets the title for PivotClient widget.
+///Holds the necessary properties for value sorting.
+///<br/>valueSortSettings-ValueSortSettings	default-{}
+///<br/><br/>
+///Contains the header of the specific column to which value sorting is applied.
+///<br/>headerText-string	default-
+///<br/><br/>
+///Allows you to set the string for separating column headers provided in the headerText property.
+///<br/>headerDelimiters-string	default-
+///<br/><br/>
+///Allows you to set the sorting order of values of the field.
+///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
+///<br/><br/>
+///Sets the title for the pivot client widget.
 ///<br/>title-string	default-
 ///<br/><br/>
 ///Connects the service using the specified URL for any server updates.
 ///<br/>url-string	default-
+///<br/><br/>
+///Allows you to export entire data instead of current page data, while paging option is enabled.
+///<br/>enableCompleteDataExport-boolean	default-false
+///<br/><br/>
+///Allows you to enable "withCredentials" property inside XMLHttpRequest object for CORS(Cross-Origin Resource Sharing) request.
+///<br/>enableXHRCredentials-boolean	default-false
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -20240,6 +20794,18 @@ ejPivotGauge :function (options) {
 ///Allows the user to view PivotGauge from right to left.
 ///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
+///Specify the frame details of PivotGauge here.
+///<br/>frame-Frame	default-Object
+///<br/><br/>
+///Specifies the frame type of PivotGauge.
+///<br/>frameType-string	default-fullcircle
+///<br/><br/>
+///Specifies the end angle for the half circular frame.
+///<br/>halfCircleFrameEndAngle-number	default-360
+///<br/><br/>
+///Specifies the start angle for the half circular frame.
+///<br/>halfCircleFrameStartAngle-number	default-180
+///<br/><br/>
 ///Allows the user to enable PivotGaugeâ€™s responsiveness in the browser layout.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
@@ -20284,6 +20850,9 @@ ejPivotGauge :function (options) {
 ///<br/><br/>
 ///Sets the mode for the PivotGauge widget for binding data source either in server-side or client-side.
 ///<br/>operationalMode-ej.Pivot.OperationalMode|string	default-ej.Pivot.OperationalMode.ClientMode
+///<br/><br/>
+///Allows you to enable "withCredentials" property inside XMLHttpRequest object for CORS(Cross-Origin Resource Sharing) request.
+///<br/>enableXHRCredentials-boolean	default-false
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -20325,13 +20894,13 @@ exportPivotGrid:function(){
 refreshPagedPivotGrid:function(){
 /// <signature>
 /// <summary>
-/// This function re-renders the PivotGrid on clicking the navigation buttons on PivotPager.
+/// This function re-renders the PivotGrid when clicking the navigation buttons on the PivotPager.
 /// </summary>
 },
 refreshPivotGrid:function(){
 /// <signature>
 /// <summary>
-/// This function refreshes the PivotGrid with modified data input in client-mode.
+/// This function refreshes the PivotGrid with the modified data input in client-mode.
 /// </summary>
 },
 refreshControl:function(){
@@ -20343,19 +20912,19 @@ refreshControl:function(){
 destroy:function(){
 /// <signature>
 /// <summary>
-/// This function Destroy the PivotGrid widget all events bound using this._on will be unbind automatically and bring the control to pre-init state.
+/// This function destroys the PivotGrid widget associated events that are bound using &quot;this._on&quot; and brings the control to pre-init state.
 /// </summary>
 },
 calculateCellWidths:function(){
 /// <signature>
 /// <summary>
-/// This function returns the height of all rows and width each and every column.
+/// This function returns the height of all rows and the width of all columns.
 /// </summary>
 },
 openConditionalFormattingDialog:function(){
 /// <signature>
 /// <summary>
-/// This function creates the conditional formatting dialog to apply conditional formatting for PivotGrid control.
+/// This function creates the conditional formatting dialog to apply conditional formatting for the PivotGrid control.
 /// </summary>
 },
 saveReport:function(){
@@ -20373,13 +20942,13 @@ loadReport:function(){
 excelLikeLayout:function(){
 /// <signature>
 /// <summary>
-/// This function reconstructs the JSON data formed for rendering PivotGrid in excel-like layout format.
+/// This function reconstructs the JSON data that is formed for rendering the PivotGrid in the excel-like layout format.
 /// </summary>
 },
 getOlapReport:function(){
 /// <signature>
 /// <summary>
-/// Returns the OlapReport string maintained along with the axis elements information.
+/// Returns the OlapReport string that is maintained along with the axis elements information.
 /// </summary>
 },
 setOlapReport:function(){
@@ -20391,19 +20960,19 @@ setOlapReport:function(){
 getJSONRecords:function(){
 /// <signature>
 /// <summary>
-/// Returns the JSON records formed to render the control.
+/// Returns the JSON records that are formed to render the control.
 /// </summary>
 },
 setJSONRecords:function(){
 /// <signature>
 /// <summary>
-/// Sets the JSON records formed to render the control.
+/// Sets the JSON records that are formed to render the control.
 /// </summary>
 },
 refreshFieldCaption:function(){
 /// <signature>
 /// <summary>
-/// This function allows user to change the caption of the Pivot Item (name displayed in UI) on-demand for relational datasource in client-mode.
+/// This function allows you to change the caption of the pivot item (name displayed in UI) on-demand for the relational datasource in client-mode.
 /// </summary>
 },
 renderControlFromJSON:function(){
@@ -20426,206 +20995,206 @@ intellisense.annotate(jQuery.fn,{
 ejPivotGrid :function (options) {
 /// <signature>
 /// <summary><br/>
-///The PivotGrid control is easily configurable, presentation-quality business control that reads OLAP data from a Microsoft SQL Server Analysis Services database, an offline cube, XML/A or relational datasource.<br/><br/>
-///Sets the mode for the PivotGrid widget for binding either OLAP or relational data source.
+///The PivotGrid control is easily configurable, presentation-quality business control that reads OLAP data from a Microsoft SQL Server Analysis Services database, an offline cube, XML/A, or relational datasource.<br/><br/>
+///Sets the mode for the PivotGrid widget to bind either OLAP or relational data source.
 ///<br/>analysisMode-ej.Pivot.AnalysisMode|string	default-ej.Pivot.AnalysisMode.Pivot
 ///<br/><br/>
-///Specifies the CSS class to PivotGrid to achieve custom theme.
+///Specifies the CSS class to the PivotGrid for achieving the custom theme.
 ///<br/>cssClass-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Connects the PivotSchemaDesigner with the specified ID to the PivotGrid Control.
+///Connects the PivotSchemaDesigner with specified ID to the PivotGrid control.
 ///<br/>pivotTableFieldListID-string	default-&#226;€œ&#226;€
 ///<br/><br/>
 ///Initializes the data source for the PivotGrid widget, when it functions completely on client-side.
 ///<br/>dataSource-DataSource	default-{}
 ///<br/><br/>
-///Lists out the items to be arranged in columns section of PivotGrid.
+///Lists out the items to be arranged in the columns section of the PivotGrid.
 ///<br/>columns-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item.
+///Allows you to set the display caption for an item.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
-///Allows the user to filter the report by default using advanced filtering (excel-like) option for OLAP data source in client-mode.
+///Allows you to filter the report by using advanced filtering (e.g., Microsoft Excel) option for the OLAP data source in client-mode.
 ///<br/>advancedFilter-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to provide level unique name to perform advanced filtering.
+///Allows you to provide a level unique name to perform the advanced filtering.
 ///<br/>name-string	default-
 ///<br/><br/>
-///Allows the user to set the operator to perform Label Filtering.
+///Allows you to set the operator to perform the label filtering.
 ///<br/>labelFilterOperator-string	default-none
 ///<br/><br/>
-///Allows the user to set the operator to perform Value Filtering.
+///Allows you to set the operator to perform the value filtering.
 ///<br/>valueFilterOperator-string	default-none
 ///<br/><br/>
-///Allows the user to set the filtering type while performing advanced filtering.
+///Allows you to set the filtering type while performing the advanced filtering.
 ///<br/>advancedFilterType-string	default-
 ///<br/><br/>
-///In case of value filtering, this property contains the measure name to which the filter is applied.
+///In value filtering, this property contains the measure name to which the filter is applied.
 ///<br/>measure-string	default-
 ///<br/><br/>
-///Allows the user to hold the filter operand values in advanced filtering.
+///Allows you to hold filter operand values in the advanced filtering.
 ///<br/>values-Array&lt;any&gt;	default-
 ///<br/><br/>
-///Allows the user to indicate whether the added item is a named set or not.
+///Allows you to indicate whether the added item is a named set or not.
 ///<br/>isNamedSets-boolean	default-false
 ///<br/><br/>
-///Shows/Hides the sub-total of the field in PivotGrid.
+///Shows/hides the sub-total of the field in PivotGrid.
 ///<br/>showSubTotal-boolean	default-true
 ///<br/><br/>
-///Allows to set the format for the column headers.
+///Allows you to set the format for column headers.
 ///<br/>format-string	default-
 ///<br/><br/>
-///This property is set to display the formatted values with format types in PivotGrid.
+///This property is set to display the formatted values with format types in the PivotGrid.
 ///<br/>formatString-string	default-
 ///<br/><br/>
-///Allows to set the custom theme for the column headers.
+///Allows you to set the custom theme for column headers.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///Allows the user to set delimiter for date type format in formatString. This is applicable for groupByDate option for row/column headers.
+///Allows you to set the delimiter for date type format in the formatString. This is applicable for the groupByDate of row/column headers.
 ///<br/>delimiter-string	default-
 ///<br/><br/>
-///Allows the user to set the sorting order of the members of the field.
+///Allows you to set the sorting order of members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
 ///Contains the list of members need to be drilled down by default in the field.
 ///<br/>drilledItems-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Applies filter to the field members.
+///Applies the filter to field members.
 ///<br/>filterItems-any	default-null
 ///<br/><br/>
-///Sets the type of filter whether to include/exclude the mentioned values.
+///Sets the type of filter to include/exclude the mentioned values.
 ///<br/>filterType-ej.PivotAnalysis.FilterType|string	default-ej.PivotAnalysis.FilterType.Exclude
 ///<br/><br/>
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Lists out the items to be arranged in rows section of PivotGrid.
+///Lists out the items to be arranged in the rows section of PivotGrid.
 ///<br/>rows-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item.
+///Allows you to set the display caption for the item.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
-///Allows the user to filter the report by default using advanced filtering (excel-like) option for OLAP data source in client-mode.
+///Allows you to filter the report by using the advanced filtering (e.g., Microsoft Excel) option for the OLAP data source in client-mode.
 ///<br/>advancedFilter-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to provide level unique name to perform advanced filtering.
+///Allows you to provide the level unique name to perform the advanced filtering.
 ///<br/>name-string	default-
 ///<br/><br/>
-///Allows the user to set the operator to perform Label Filtering.
+///Allows you to set the operator to perform the label filtering.
 ///<br/>labelFilterOperator-string	default-none
 ///<br/><br/>
-///Allows the user to set the operator to perform Value Filtering.
+///Allows you to set the operator to perform the value filtering.
 ///<br/>valueFilterOperator-string	default-none
 ///<br/><br/>
-///Allows the user to set the filtering type while performing advanced filtering.
+///Allows you to set the filtering type while performing the advanced filtering.
 ///<br/>advancedFilterType-string	default-
 ///<br/><br/>
-///In case of value filtering, this property contains the measure name to which the filter is applied.
+///In value filtering, this property contains the measure name to which the filter is applied.
 ///<br/>measure-string	default-
 ///<br/><br/>
-///Allows the user to hold the filter operand values in advanced filtering.
+///Allows you to hold the filter operand values in the advanced filtering.
 ///<br/>values-Array&lt;any&gt;	default-
 ///<br/><br/>
-///Allows the user to indicate whether the added item is a named set or not.
+///Allows you to indicate whether the added item is a named set or not.
 ///<br/>isNamedSets-boolean	default-false
 ///<br/><br/>
-///Shows/Hides the sub-total of the field.
+///Shows/hides the sub-total of the field.
 ///<br/>showSubTotal-boolean	default-true
 ///<br/><br/>
-///Allows to set the format for the row headers.
+///Allows you to set the format for row headers.
 ///<br/>format-string	default-
 ///<br/><br/>
-///This property is set to display the formatted values with format types in PivotGrid.
+///This property is set to display the formatted values with format types in the PivotGrid.
 ///<br/>formatString-string	default-
 ///<br/><br/>
-///Allows to set the custom theme for the row headers.
+///Allows you to set the custom theme for row headers.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///Allows the user to set delimiter for date type format in formatString. This is applicable for groupByDate option for row/column headers.
+///Allows you to set the delimiter for date type format in the formatString. This is applicable for the groupByDate in row/column headers.
 ///<br/>delimiter-string	default-
 ///<br/><br/>
-///Allows the user to set the sorting order of the members of the field.
+///Allows you to set the sorting order of members of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
 ///Contains the list of members need to be drilled down by default in the field.
 ///<br/>drilledItems-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Applies filter to the field members.
+///Applies the filter to field members.
 ///<br/>filterItems-any	default-null
 ///<br/><br/>
-///Sets the type of filter whether to include/exclude the mentioned values.
+///Sets the type of filter to include/exclude the mentioned values.
 ///<br/>filterType-ej.PivotAnalysis.FilterType|string	default-ej.PivotAnalysis.FilterType.Exclude
 ///<br/><br/>
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Lists out the items which supports calculation in PivotGrid.
+///Lists out the items that support calculation in the PivotGrid.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name for Relational datasource.
+///Allows you to bind the item by using its unique name as field name for the relational datasource.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display caption for an item for Relational datasource.
+///Allows you to set the display caption for the item in the relational datasource.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
 ///This holds the list of unique names of measures to bind them from the OLAP cube.
 ///<br/>measures-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the measure from OLAP datasource by using its unique name as field name.
+///Allows you to bind the measure from the OLAP datasource by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows to set the axis name to place the measures items.
+///Allows you to set the axis name to place measures items.
 ///<br/>axis-string	default-rows
 ///<br/><br/>
-///Indicates whether the field is a calculated field or not with Relational datasource.
+///Indicates whether the field is a calculated field with the relational datasource or not.
 ///<br/>isCalculatedField-boolean	default-false
 ///<br/><br/>
-///Allows to set the type of PivotGrid summary calculation for the value field with Relational datasource.
+///Allows to set the type of PivotGrid summary calculation in the value field with the relational datasource.
 ///<br/>summaryType-ej.PivotAnalysis.SummaryType|string	default-ej.PivotAnalysis.SummaryType.Sum
 ///<br/><br/>
-///Allows to set the format for the values.
+///Allows to set the format for values.
 ///<br/>format-string	default-
 ///<br/><br/>
-///This property is set to display the formatted values with format types in PivotGrid.
+///This property is set to display the formatted values with format types in the PivotGrid.
 ///<br/>formatString-string	default-
 ///<br/><br/>
-///Allows to set the formula for calculation of values for calculated members in Relational datasource.
+///Allows to set the formula for calculation of values for calculated members in the relational datasource.
 ///<br/>formula-string	default-
 ///<br/><br/>
-///Allows to set the custom theme for the values.
+///Allows to set the custom theme for values.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///Lists out the items which supports filtering of values without displaying the members in UI in PivotGrid.
+///Lists out the items which supports filtering of values without displaying the members in UI of the PivotGrid.
 ///<br/>filters-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Allows the user to bind the item by using its unique name as field name.
+///Allows you to bind the item by using its unique name as field name.
 ///<br/>fieldName-string	default-
 ///<br/><br/>
-///Allows the user to set the display name for an item.
+///Allows you to set the display name for the item.
 ///<br/>fieldCaption-string	default-
 ///<br/><br/>
-///Applies filter to the field members.
+///Applies the filter to field members.
 ///<br/>filterItems-any	default-null
 ///<br/><br/>
-///Sets the type of filter whether to include/exclude the mentioned values.
+///Sets the type of filter to include/exclude the mentioned values.
 ///<br/>filterType-ej.PivotAnalysis.FilterType|string	default-ej.PivotAnalysis.FilterType.Exclude
 ///<br/><br/>
 ///Contains the collection of items to be included/excluded among the field members.
 ///<br/>values-Array&lt;any&gt;	default-[]
 ///<br/><br/>
-///Contains the respective cube name from OLAP database as string type.
+///Contains the respective cube name as string type in the OLAP database.
 ///<br/>cube-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///To set the data source name to fetch data from that.
+///To set the data source name to fetch the data.
 ///<br/>sourceInfo-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Set the provider name for PivotGrid to identify whether the provider is SSAS or Mondrian.
+///Sets the provider name for PivotGrid to identify whether the provider is SSAS or Mondrian.
 ///<br/>providerName-string	default-ssas
 ///<br/><br/>
 ///Provides the raw data source for the PivotGrid.
@@ -20634,242 +21203,254 @@ ejPivotGrid :function (options) {
 ///In connection with an OLAP database, this property contains the database name as string to fetch the data from the given connection string.
 ///<br/>catalog-string	default-&#226;€œ&#226;€
 ///<br/><br/>
-///Allows user to filter the members (by its name and values) through advanced filtering (excel-like) option for OLAP data source in client-mode.
+///Allows you to filter the members (by its name and values) through advanced filtering (e.g., Microsoft Excel) option at OLAP data source in client-mode.
 ///<br/>enableAdvancedFilter-boolean	default-false
 ///<br/><br/>
-///Sets a name to the report bound to the control.
+///Sets a name to the report that is bound to the control.
 ///<br/>reportName-string	default-
 ///<br/><br/>
-///Allows to set the page size and current page number for each axis on applying paging.
+///Allows to set the page size and current page number for each axis on applying the paging.
 ///<br/>pagerOptions-any	default-{}
 ///<br/><br/>
-///Allows to set the number of categorical columns to be displayed in each page on applying paging.
+///Allows to set the number of categorical columns to be displayed in each page on applying the paging.
 ///<br/>categoricalPageSize-number	default-0
 ///<br/><br/>
-///Allows to set the number of series rows to be displayed in each page on applying paging.
+///Allows to set the number of series rows to be displayed in each page on applying the paging.
 ///<br/>seriesPageSize-number	default-0
 ///<br/><br/>
-///Allows to set the page number in categorical axis to be loaded by default.
+///Allows to set the page number to be loaded in the categorical axis by default.
 ///<br/>categoricalCurrentPage-number	default-1
 ///<br/><br/>
-///Allows to set the page number in series axis to be loaded by default.
+///Allows to set the page number to be loaded in the series axis by default.
 ///<br/>seriesCurrentPage-number	default-1
 ///<br/><br/>
 ///Holds the necessary properties for value sorting.
 ///<br/>valueSortSettings-ValueSortSettings	default-{}
 ///<br/><br/>
-///Contains the headers of the specific column to which value sorting is applied.
+///Contains the header of the specific column to which value sorting is applied.
 ///<br/>headerText-string	default-
 ///<br/><br/>
-///Allows the user to set the string for separating column headers provided in the above property headerText.
+///Allows you to set the string for separating column headers provided in the headerText property.
 ///<br/>headerDelimiters-string	default-
 ///<br/><br/>
-///Allows the user to set the sorting order of the values of the field.
+///Allows you to set the sorting order of values of the field.
 ///<br/>sortOrder-ej.PivotAnalysis.SortOrder|string	default-ej.PivotAnalysis.SortOrder.Ascending
 ///<br/><br/>
 ///Object that holds the settings of frozen headers.
 ///<br/>frozenHeaderSettings-FrozenHeaderSettings	default-{}
 ///<br/><br/>
-///Allows the user to freeze the row headers alone on scrolling the horizontal scroll bar.
+///Allows you to freeze the row headers alone when scrolling the horizontal scroll bar.
 ///<br/>enableFrozenRowHeaders-boolean	default-false
 ///<br/><br/>
-///Allows the user to freeze the column headers alone on scrolling the vertical scroll bar.
+///Allows you to freeze the column headers alone when scrolling the vertical scroll bar.
 ///<br/>enableFrozenColumnHeaders-boolean	default-false
 ///<br/><br/>
-///Allows the user to freeze both the row headers and column headers on scrolling.
+///Allows you to freeze both row headers and column headers while scrolling.
 ///<br/>enableFrozenHeaders-boolean	default-false
 ///<br/><br/>
-///Allows user to set the size of the scrollbar (horizontal and vertical) visible in PivotGrid.
+///Allows you to set the size of the scrollbar (horizontal and vertical) that is visible in the PivotGrid.
 ///<br/>scrollerSize-number	default-18
 ///<br/><br/>
-///Allows user to display header name in PivotGrid control.
+///Allows you to display the header name in the PivotGrid control.
 ///<br/>headerSettings-HeaderSettings	default-{}
 ///<br/><br/>
-///Allows user to enable/disable row header names in PivotGrid control.
+///Allows you to enable/disable the row header names in the PivotGrid control.
 ///<br/>showRowItems-boolean	default-false
 ///<br/><br/>
-///Allows user to enable/disable column header names in PivotGrid control.
+///Allows you to enable/disable the column header names in the PivotGrid control.
 ///<br/>showColumnItems-boolean	default-false
 ///<br/><br/>
-///Allows user to show appropriate unique name on Pivot button.
+///Allows you to show the appropriate unique name in the pivot button.
 ///<br/>showUniqueNameOnPivotButton-boolean	default-false
 ///<br/><br/>
-///Object utilized to pass additional information between client-end and service-end on operating the control in server mode.
+///Object is utilized to pass additional information between the client-end and the service-end while operating the control in server mode.
 ///<br/>customObject-any	default-null
 ///<br/><br/>
-///Allows the user to collapsed the specified members in each field by default.
+///Allows you to collapse specified members in each field by default.
 ///<br/>collapsedMembers-any	default-null
 ///<br/><br/>
-///Allows the user to access each cell on mouse right-click.
+///Allows you to access each cell by right-clicking the mouse.
 ///<br/>enableCellContext-boolean	default-false
 ///<br/><br/>
 ///Enables the cell selection for a specific range of value cells.
 ///<br/>enableCellSelection-boolean	default-false
 ///<br/><br/>
-///Enables the Drill-Through feature which retrieves the raw items that are used to create the specific cell in PivotGrid.
+///Enables the Drill-Through feature which retrieves raw items that are used to create a specific cell in the PivotGrid.
 ///<br/>enableDrillThrough-boolean	default-false
 ///<br/><br/>
-///Allows user to get the cell details in JSON format on double clicking the cell.
+///Allows you to get cell details in JSON format by clicking the value cell.
+///<br/>enableCellClick-boolean	default-false
+///<br/><br/>
+///Allows you to get cell details in JSON format by double-clicking the value cell.
 ///<br/>enableCellDoubleClick-boolean	default-false
 ///<br/><br/>
-///Allows user to edit the value cells for write-back support in PivotGrid. This is applicable only for server-mode.
+///Allows you to edit value cells for write-back support in the PivotGrid. This is applicable only for the server-mode.
 ///<br/>enableCellEditing-boolean	default-false
 ///<br/><br/>
-///Collapses the Pivot items along rows and columns by default.  It works only for relational data source.
+///Collapses the pivot items along rows and columns by default. It works only for the relational data source.
 ///<br/>enableCollapseByDefault-boolean	default-false
 ///<br/><br/>
-///Enables/Disables the display of grand total for all the columns.
+///Enables/disables the display of grand total for all columns.
 ///<br/>enableColumnGrandTotal-boolean	default-true
 ///<br/><br/>
-///Allows the user to format a specific set of cells based on the condition.
+///Allows you to format a specific set of cells based on the condition.
 ///<br/>enableConditionalFormatting-boolean	default-false
 ///<br/><br/>
-///Enables the advanced filtering options Value Filtering, Label Filtering and Sorting for each fields in server mode.
+///Enables the advanced filtering options such as value filtering, label filtering, and sorting for each field in the server mode.
 ///<br/>enableAdvancedFilter-boolean	default-false
 ///<br/><br/>
-///Allows the user to refresh the control on-demand and not during every UI operation.
+///Allows you to refresh the control on-demand and not during every UI operation.
 ///<br/>enableDeferUpdate-boolean	default-false
 ///<br/><br/>
-///Enables the display of GroupingBar allowing you to filter, sort and remove fields obtained from datasource.
+///Enables the display of GroupingBar allowing you to filter, sort, and remove fields obtained from the datasource.
 ///<br/>enableGroupingBar-boolean	default-false
 ///<br/><br/>
-///Enables/Disables paging in Member Editor for viewing the large count of members in pages.
+///Allows you to set the maximum number of nodes as well as child nodes to be displayed in the member editor.
+///<br/>maxNodeLimitInMemberEditor-number	default-1000
+///<br/><br/>
+///Enables/disables paging in the member editor for viewing the large count of members in pages.
 ///<br/>enableMemberEditorPaging-boolean	default-false
 ///<br/><br/>
-///Allows the user to set the number of members to be displayed in each page of Member Editor on applying paging in it.
+///Allows you to set the number of members to be displayed in each page of member editor on applying paging in it.
 ///<br/>memberEditorPageSize-number	default-100
 ///<br/><br/>
-///Enables/Disables the display of grand total for rows and columns.
+///Enables/disables the display of grand total for rows and columns.
 ///<br/>enableGrandTotal-boolean	default-true
 ///<br/><br/>
-///Allows the user to load PivotGrid using JSON data.
+///Allows you to load the PivotGrid using the JSON data.
 ///<br/>enableJSONRendering-boolean	default-false
 ///<br/><br/>
-///Enables rendering of PivotGrid widget along with the PivotTable Field List, which allows UI operations.
+///Enables rendering of the PivotGrid widget along with the PivotTable field list which allows UI operations.
 ///<br/>enablePivotFieldList-boolean	default-true
 ///<br/><br/>
-///Enables the display of grand total for all the rows.
+///Enables the display of grand total for all rows.
 ///<br/>enableRowGrandTotal-boolean	default-true
 ///<br/><br/>
-///Allows the user to view layout of the PivotGrid from right to left.
+///Allows you to view the layout of PivotGrid from right to left.
 ///<br/>enableRTL-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable ToolTip option.
+///Allows you to enable the ToolTip.
 ///<br/>enableToolTip-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable the animation effects in tooltip.
+///Allows you to enable the animation effects in the tooltip.
 ///<br/>enableToolTipAnimation-boolean	default-false
 ///<br/><br/>
-///Allows the user to adjust the width of the columns dynamically within given widget size.
+///Allows you to adjust the width of columns dynamically within given widget size.
 ///<br/>enableColumnResizing-boolean	default-false
 ///<br/><br/>
-///Allows the user to fit the width of the column based on its maximum text width.
+///Allows you to fit the width of the column based on its maximum text width.
 ///<br/>resizeColumnsToFit-boolean	default-true
 ///<br/><br/>
-///Allows the user to enable/disable the context menu of Pivot buttons in the PivotGrid.
+///Allows you to enable/disable the context menu of pivot buttons in the PivotGrid.
 ///<br/>enableContextMenu-boolean	default-false
 ///<br/><br/>
-///Allows the user to view large amount of data through virtual scrolling.
+///Allows you to view the large amount of data through virtual scrolling.
 ///<br/>enableVirtualScrolling-boolean	default-false
 ///<br/><br/>
-///Allows the user to view large amount of data by applying paging.
+///Allows you to view the large amount of data by applying paging.
 ///<br/>enablePaging-boolean	default-false
 ///<br/><br/>
-///Allows the user to configure hyperlink settings of PivotGrid control.
+///Allows you to configure the hyperlink settings of the PivotGrid control.
 ///<br/>hyperlinkSettings-HyperlinkSettings	default-{}
 ///<br/><br/>
-///Allows the user to enable/disable hyperlink for column header.
+///Allows you to enable/disable the hyperlink for the column header.
 ///<br/>enableColumnHeaderHyperlink-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable/disable hyperlink for row header.
+///Allows you to enable/disable the hyperlink for the row header.
 ///<br/>enableRowHeaderHyperlink-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable/disable hyperlink for summary cells.
+///Allows you to enable/disable the hyperlink for summary cells.
 ///<br/>enableSummaryCellHyperlink-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable/disable hyperlink for value cells.
+///Allows you to enable/disable the hyperlink for value cells.
 ///<br/>enableValueCellHyperlink-boolean	default-false
 ///<br/><br/>
-///Allows the user to enable PivotGridâ€™s responsiveness in the browser layout.
+///Allows you to enable PivotGridâ€™s responsiveness in the browser layout.
 ///<br/>isResponsive-boolean	default-false
 ///<br/><br/>
-///Contains the serialized JSON string which renders PivotGrid.
+///Contains the serialized JSON string which renders the PivotGrid.
 ///<br/>jsonRecords-string	default-
 ///<br/><br/>
-///Sets the summary layout for PivotGrid.Following are the ways in which summary can be positioned: normal summary (bottom), top summary, no summary and excel-like summary.
+///Sets the summary layout for PivotGrid.Following are the ways in which summary can be positioned: normal summary (bottom), top summary, no summary, and excel-like summary.
 ///<br/>layout-ej.PivotGrid.Layout|string	default-ej.PivotGrid.Layout.Normal
 ///<br/><br/>
 ///Allows the user to set the localized language for the widget.
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
-///Sets the mode for the PivotGrid widget for binding data source either in server-side or client-side.
+///Sets the mode for PivotGrid widget for binding the data source either in the server-side or client-side.
 ///<br/>operationalMode-ej.Pivot.OperationalMode|string	default-ej.Pivot.OperationalMode.ClientMode
 ///<br/><br/>
-///Allows the user to set custom name for the methods at service-end, communicated during AJAX post.
+///Allows you to set the custom name for the methods at service-end, communicated during AJAX post.
 ///<br/>serviceMethodSettings-ServiceMethodSettings	default-{}
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for drill up/down operation in PivotGrid.
+///Allows you to set the custom name for service method which is responsible for drill up/down operation in the PivotGrid.
 ///<br/>drillDown-string	default-DrillGrid
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for exporting.
+///Allows you to set the custom name for the service method that is responsible for exporting.
 ///<br/>exportPivotGrid-string	default-Export
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for performing server-side actions on defer update.
+///Allows you to set the custom name for the service method responsible for performing server-side actions based on defer update.
 ///<br/>deferUpdate-string	default-DeferUpdate
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for getting the values for the tree-view inside filter dialog.
+///Allows you to set the custom name for the service method that is responsible for getting values of the tree-view inside filter dialog.
 ///<br/>fetchMembers-string	default-FetchMembers
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for filtering operation in PivotGrid.
+///Allows you to set the custom name for the service method that is responsible for filtering operation in the PivotGrid.
 ///<br/>filtering-string	default-Filtering
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for initializing PivotGrid.
+///Allows you to set the custom name for the service method that is responsible for initializing the PivotGrid.
 ///<br/>initialize-string	default-InitializeGrid
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for the server-side action, on dropping a node from Field List.
+///Allows you to set the custom name for the service method that is responsible for the server-side action when dropping a node from the field list.
 ///<br/>nodeDropped-string	default-NodeDropped
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for the server-side action on changing the checked state of a node in Field List.
+///Allows you to set the custom name for the service method that is responsible for server-side action when changing the checked state of a node in the field list.
 ///<br/>nodeStateModified-string	default-NodeStateModified
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for performing paging operation in PivotGrid.
+///Allows you to set the custom name for the service method that is responsible for performing paging operation in the PivotGrid.
 ///<br/>paging-string	default-Paging
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for sorting operation in PivotGrid.
+///Allows you to set the custom name for the service method that is responsible for sorting operation in the PivotGrid.
 ///<br/>sorting-string	default-Sorting
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for expanding members inside member editor.
+///Allows you to set the custom name for the service method that is responsible for expanding members in the member editor.
 ///<br/>memberExpand-string	default-MemberExpanded
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for editing the cells.
+///Allows you to set the custom name for the service method that is responsible for editing the cells.
 ///<br/>cellEditing-string	default-CellEditing
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for saving the current report to database.
+///Allows you to set the custom name for the service method that is responsible for saving the current report to the database.
 ///<br/>saveReport-string	default-SaveReport
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for loading a report from database.
+///Allows you to set the custom name for the service method that is responsible for loading a report from the database.
 ///<br/>loadReport-string	default-LoadReportFromDB
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for adding a calculated field to the report.
+///Allows you to set the custom name for the service method that is responsible for adding a calculated field to the report.
 ///<br/>calculatedField-string	default-CalculatedField
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for performing drill through operation.
+///Allows you to set the custom name for the service method that is responsible for performing the drill through operation.
 ///<br/>drillThroughHierarchies-string	default-DrillThroughHierarchies
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for performing drill through operation in data table.
+///Allows you to set the custom name for the service method that is responsible for performing drill through operation in the data table.
 ///<br/>drillThroughDataTable-string	default-DrillThroughDataTable
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for performing value sorting operation in PivotGrid.
+///Allows you to set the custom name for the service method that is responsible for performing value sorting operation in the PivotGrid.
 ///<br/>valueSorting-string	default-ValueSorting
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for removing pivot button from GroupingBar/Field List.
+///Allows you to set the custom name for the service method that is responsible for removing the pivot button from the GroupingBar/field list.
 ///<br/>removeButton-string	default-RemoveButton
 ///<br/><br/>
-///Allows the user to set the custom name for the service method responsible for write-back operation in OLAP Cube. This is only applicable in server-side component.
+///Allows you to set the custom name for the service method that is responsible for write-back operation in the OLAP Cube. This is applicable only in the server-side component.
 ///<br/>writeBack-string	default-WriteBack
 ///<br/><br/>
 ///Connects the service using the specified URL for any server updates.
 ///<br/>url-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Allows you to export entire data instead of current page data, while paging option is enabled.
+///<br/>enableCompleteDataExport-boolean	default-false
+///<br/><br/>
+///Allows you to enable "withCredentials" property inside XMLHttpRequest object for CORS(Cross-Origin Resource Sharing) request.
+///<br/>enableXHRCredentials-boolean	default-false
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -21239,6 +21820,9 @@ ejPivotTreeMap :function (options) {
 ///<br/><br/>
 ///Connects the service using the specified URL for any server updates.
 ///<br/>url-string	default-&#226;€œ&#226;€
+///<br/><br/>
+///Allows you to enable "withCredentials" property inside XMLHttpRequest object for CORS(Cross-Origin Resource Sharing) request.
+///<br/>enableXHRCredentials-boolean	default-false
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -22956,7 +23540,7 @@ ejReportViewer :function (options) {
 ///<br/>name-string	default-empty
 ///<br/><br/>
 ///Gets or sets the values of data source.
-///<br/>values-Array&lt;any&gt;	default-[]
+///<br/>value-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///Enables or disables the page cache of report.
 ///<br/>enablePageCache-boolean	default-false
@@ -24478,6 +25062,26 @@ var wrapper=function(){
 var instance = new original();
 intellisense.annotate(instance, {
 
+addResource:function(resourceObject, name, index){
+/// <signature>
+/// <summary>
+/// It is used to add the resources dynamically in the scheduler. It renders the resource based on the index if it is available or else it renders this resource at end of all resources.
+/// </summary>
+/// <param name="resourceObject"	type="any">Resource object which can be defined with all the available options of resources.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// It is used to add the resources dynamically in the scheduler. It renders the resource based on the index if it is available or else it renders this resource at end of all resources.
+/// </summary>
+/// <param name="name"	type="string">Defines the name of the resource collection to which this object needs to be added.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// It is used to add the resources dynamically in the scheduler. It renders the resource based on the index if it is available or else it renders this resource at end of all resources.
+/// </summary>
+/// <param name="index"	type="number">It is optional. If it is available, this render the resource at the given specified index location. Else render at end of the all resources.</param>
+/// </signature>
+},
 deleteAppointment:function(data){
 /// <signature>
 /// <summary>
@@ -24559,6 +25163,20 @@ refreshScroller:function(){
 /// <summary>
 /// Refreshes the Scroller of Scheduler while using it within some other controls or application.
 /// </summary>
+},
+removeResource:function(resourceId, name){
+/// <signature>
+/// <summary>
+/// It is used to remove the resources dynamically from the scheduler. It removed the resource based on the resource id with the given resource collection name.
+/// </summary>
+/// <param name="resourceId"	type="string|number">Defines the Id of the resource.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// It is used to remove the resources dynamically from the scheduler. It removed the resource based on the resource id with the given resource collection name.
+/// </summary>
+/// <param name="name"	type="string">Defines the name of the resource collection which this resource id belongs.</param>
+/// </signature>
 },
 saveAppointment:function(appointmentObject){
 /// <signature>
@@ -24793,6 +25411,9 @@ ejSchedule :function (options) {
 ///<br/><br/>
 ///Holds the array of resource names to be grouped on the Schedule.
 ///<br/>resources-Array&lt;any&gt;	default-
+///<br/><br/>
+///When set to true, allows performing CRUD actions simultaneously on all the grouped appointments of multiple resources.
+///<br/>allowGroupEditing-boolean	default-false
 ///<br/><br/>
 ///Sets the height of the Schedule. Accepts both pixel and percentage values.
 ///<br/>height-string	default-1120px
@@ -25284,6 +25905,12 @@ redo:function(){
 /// <signature>
 /// <summary>
 /// redo the last drawn stroke of the signature
+/// </summary>
+},
+refresh:function(){
+/// <signature>
+/// <summary>
+/// Refreshes the Signature widget
 /// </summary>
 },
 save:function(Filename){
@@ -26799,6 +27426,12 @@ protectSheet:function(isProtected){
 /// <param name="isProtected"	type="boolean">Optional. By default is {{'`true`' | markdownify}}. If it is {{'`false`' | markdownify}} active sheet is unprotected.</param>
 /// </signature>
 },
+redo:function(){
+/// <signature>
+/// <summary>
+/// This method is used to perform the redo action in Spreadsheet.
+/// </summary>
+},
 refreshContent:function(sheetIdx){
 /// <signature>
 /// <summary>
@@ -27059,6 +27692,12 @@ showWaitingPopUp:function(){
 /// <signature>
 /// <summary>
 /// This method is used to show waiting pop-up in Spreadsheet.
+/// </summary>
+},
+undo:function(){
+/// <signature>
+/// <summary>
+/// This method is used to perform the undo action in Spreadsheet.
 /// </summary>
 },
 unhideSheet:function(sheetInfo){
@@ -28638,7 +29277,7 @@ ejEditor :function (options) {
 ///Sets the root CSS class for Editors which allow us to customize the appearance.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
-///Specifies the number of digits that should be allowed after the decimal point.
+///Specifies the number of digits that is allowed after the decimal point. When the decimalPlaces is set to â€œ-1â€, it allows the decimals without any limit in the Textboxes.
 ///<br/>decimalPlaces-number	default-0
 ///<br/><br/>
 ///Specifies the editor control state.
@@ -30232,6 +30871,9 @@ ejTreeGrid :function (options) {
 ///Enables or disables the ability to filter the columns with empty, null and undefined values.
 ///<br/>enableComplexBlankFilter-boolean	default-true
 ///<br/><br/>
+///Specifies the mode of filtering to filter the record with or without hierarchy.
+///<br/>filterHierarchyMode-ej.TreeGrid.FilterHierarchyMode|string	default-ej.TreeGrid.FilterHierarchyMode.Parent
+///<br/><br/>
 ///Specifies the localization information to customize the User Interface (UI) to support regional language and culture
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
@@ -30529,6 +31171,9 @@ ejTreeMap :function (options) {
 ///<br/><br/>
 ///Specifies the color value path of the treemap
 ///<br/>colorValuePath-string	default-null
+///<br/><br/>
+///Specifies the field name in the datasource that contains color values for treemap items.
+///<br/>colorPath-string	default-null
 ///<br/><br/>
 ///Specifies the datasource of the treemap
 ///<br/>dataSource-any	default-null

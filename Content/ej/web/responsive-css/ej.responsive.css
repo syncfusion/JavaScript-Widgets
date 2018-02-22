@@ -951,6 +951,12 @@ padding-bottom:7px;
    top: 5px;
    left: -2px;
 }
+.e-kanban .e-adaptive-search .e-adapt-cancel.e-msieadapt:before {
+   left: -42px;
+}
+.e-kanban .e-adaptive-search .e-adapt-cancel.e-webkitadapt:before {
+   left: -5px;
+}
 .e-kanban .e-adapt-search:before{
 	font-size: 15px;
     left: 1px;
