@@ -3722,7 +3722,7 @@ color: @pager-font-color;
    
 }
 
-@{e-js}.e-pager .e-currentitem {
+@{e-js}.e-pager .e-currentitem.e-active {
     & when (@skin= "material") {
         /*material*/
         background: @accent-color;
@@ -10679,7 +10679,7 @@ color:@theme-dark;
         box-shadow:0px 0px 15px 0px rgba(0,0,0,0.2);
     }
 }
-@{e-widget}.e-dialog.e-widget-content {
+@{e-widget} .e-dialog.e-widget-content {
      & when (@skin= "material") {
         font-size:15px;
         font-family: @font-family;
@@ -10705,7 +10705,7 @@ color:@theme-dark;
 	    font-size:@content-font-size;
     }
 }
-@{e-widget}.e-dialog.e-widget-content.e-load{
+@{e-widget} .e-dialog.e-widget-content.e-load{
     background-image: @ajaxloaderimage;
 	background-position: center;
     background-repeat: no-repeat;
@@ -10832,10 +10832,10 @@ color:@theme-dark;
 @{e-widget}.e-dialog .e-draggable {
     touch-action:none;
 }
-@{e-widget}.e-dialog.e-widget-content .e-pager .e-firstpage, @{e-widget}.e-dialog.e-widget-content .e-pager .e-prevpage, @{e-widget}.e-dialog.e-widget-content .e-pager .e-firstpagedisabled, @{e-widget}.e-dialog.e-widget-content .e-pager .e-prevpagedisabled, @{e-widget}.e-dialog.e-widget-content .e-pager .e-nextpage, @{e-widget}.e-dialog.e-widget-content .e-pager .e-lastpage, @{e-widget}.e-dialog.e-widget-content .e-pager .e-nextpagedisabled, @{e-widget}.e-dialog.e-widget-content .e-pager .e-lastpagedisabled {
+@{e-widget} .e-dialog.e-widget-content .e-pager .e-firstpage, @{e-widget} .e-dialog.e-widget-content .e-pager .e-prevpage, @{e-widget} .e-dialog.e-widget-content .e-pager .e-firstpagedisabled, @{e-widget} .e-dialog.e-widget-content .e-pager .e-prevpagedisabled, @{e-widget} .e-dialog.e-widget-content .e-pager .e-nextpage, @{e-widget} .e-dialog.e-widget-content .e-pager .e-lastpage, @{e-widget} .e-dialog.e-widget-content .e-pager .e-nextpagedisabled, @{e-widget} .e-dialog.e-widget-content .e-pager .e-lastpagedisabled {
     padding: 9px 3px 1px 9px;
 }
-@{e-widget}.e-dialog.e-widget-content .e-pager .e-firstpage, @{e-widget}.e-dialog.e-widget-content .e-pager .e-prevpage, @{e-widget}.e-dialog.e-widget-content .e-pager .e-firstpagedisabled, @{e-widget}.e-dialog.e-widget-content .e-pager .e-prevpagedisabled, @{e-widget}.e-dialog.e-widget-content .e-pager .e-nextpage, @{e-widget}.e-dialog.e-widget-content .e-pager .e-lastpage, @{e-widget}.e-dialog.e-widget-content .e-pager .e-nextpagedisabled, @{e-widget}.e-dialog.e-widget-content .e-pager .e-lastpagedisabled {
+@{e-widget} .e-dialog.e-widget-content .e-pager .e-firstpage, @{e-widget} .e-dialog.e-widget-content .e-pager .e-prevpage, @{e-widget} .e-dialog.e-widget-content .e-pager .e-firstpagedisabled, @{e-widget} .e-dialog.e-widget-content .e-pager .e-prevpagedisabled, @{e-widget} .e-dialog.e-widget-content .e-pager .e-nextpage, @{e-widget} .e-dialog.e-widget-content .e-pager .e-lastpage, @{e-widget} .e-dialog.e-widget-content .e-pager .e-nextpagedisabled, @{e-widget} .e-dialog.e-widget-content .e-pager .e-lastpagedisabled {
      & when (@skin= "office-365") {
          padding: 9px 3px -2px 9px;
      }
@@ -10848,6 +10848,26 @@ color:@theme-dark;
 	& when (@skin= "office-365") {
 		background-color: @neutral-lighter;
 	}
+}
+@{e-widget} .e-atc .e-in-wrap, @{e-widget} .e-atc .e-input, @{e-widget}.e-atc-popup, @{e-widget} .e-atc .e-options {
+    background-color: @content-bg-color;
+    border-color: @content-border-color;
+      & when (@skin= "material") {
+        color: fade(@base-font-color, 87%);
+        font-size: 13px;
+        font-weight: @content-font-weight;
+	  }
+      & when (@skin= "office-365") {
+        color:@neutral-primary;
+        font-weight:400;
+        font-size: @content-font-size;
+      }
+      & when not (@skin= "material") and not (@skin="office-365") {
+        color: @content-font-color;
+        font-size: @content-font-size;
+        font-weight: @content-font-weight;
+	  }
+    font-family: @font-family;
 }
 @{e-widget}.e-ddl .e-input,@{e-widget}.e-ddl .e-input[readonly],
 @{e-widget}.e-ddl-popup,@{e-widget}.e-ddl .e-options { 
@@ -14052,7 +14072,7 @@ background-image:url(images/rotator-icon.png);
 		}
 		& when not (@skin= "office-365") {
 			/*other*/
-			border: @border-size @border-type @default-border-color;
+			border: none;
 		}
     } 
     border-left:none;
@@ -17728,7 +17748,7 @@ outline:none;
    .ogridheader-hvr-gradient();
 }
 
-@{e-js}.e-tooltipText {
+@{e-js} .e-tooltipText {
     font-size: 12px;
     text-align: left;
     height: auto;
@@ -17765,7 +17785,7 @@ outline:none;
     -webkit-appearance: none !important; 
     margin: 0; 
 }
- @{e-js}.e-pGridTooltip {
+ @{e-js} .e-pGridTooltip {
     position: absolute;
     z-index: 500;
     display: none;
@@ -19957,7 +19977,7 @@ margin-right:10px;
 }
  @{e-js}.e-pivotschemadesigner .e-filterElementTag , @{e-js}.e-pivotgrid .e-filterElementTag
 {
-     height:20px;
+     height: auto!important;
 }
 @{e-js}.e-pivotgrid #clientDialog_wrapper.e-advancedFilterDlg .e-scroller:not([id$="_fieldCollection_container"]), @{e-js}.e-pivotschemadesigner #clientDialog_wrapper.e-advancedFilterDlg .e-scroller {
     overflow: visible;
@@ -21379,6 +21399,14 @@ padding:6px 0 6px 40px;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+}
+
+@{e-js}.e-pivotclient .e-box,@{e-js}.e-pivotclient button.e-btn,@{e-js}.e-pivotclient input.e-btn,@{e-js}.e-pivotclient input.e-input,@{e-js}.e-pivotclient input[type="text"].e-input,
+@{e-js}.e-pivotclient .e-input.e-placeholder,@{e-js}.e-pivotclient  input.e-input,@{e-js}.e-pivotclient .e-js.e-lv.e-js .e-header.e-box,@{e-js}.e-pivotclient .e-textbox, .e-textarea
+{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 @{e-js}.e-pivotclient td {
     padding: 0;
@@ -23212,6 +23240,9 @@ width: 43% !important;
     & when (@skin = "office-365"){
     padding: 0px 12px;
    }
+}
+@{e-js}.e-pivotclient .e-filterElementTag{
+    height: auto !important;
 }
 @{e-js}.e-pivotclient .e-advancedFilterDlg .e-menu-wrap{
     & when (@skin = "office-365"){
@@ -25073,7 +25104,7 @@ border:1px solid @neutral-light;
 
 
 /*------------------------------reportviewer Theme Start-------------------------------*/
-@{e-js}.e-reportviewer-outerborder:hover{
+@{e-js} .e-reportviewer-outerborder:hover{
     .hover-gradient();
     border-color: @hover-border-color;
     color: @content-font-color;
@@ -25095,7 +25126,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-tbdiv.e-reportviewer-fittopagetip{
+@{e-js}.e-reportviewer-tbdiv.e-reportviewer-fittopagetip {
 	.default-gradient();
     border-color:@content-border-color;
     & when (@skin= "material") {
@@ -25123,14 +25154,14 @@ border:1px solid @neutral-light;
     border-color:@content-border-color;
 }
 
-@{e-js}.e-reportviewer-headerspan{
+@{e-js} .e-reportviewer-headerspan{
      & when (@skin= "material") {
         /*material*/
         padding-left: 2px;
     }
 }
 
-@{e-js}.e-reportviewer-headerspan,@{e-js}.e-reportviewer-contentspan{
+@{e-js} .e-reportviewer-headerspan,@{e-js} .e-reportviewer-contentspan{
     & when (@skin= "material") {
         /*material*/
         color:@primary-font-color;
@@ -25142,11 +25173,11 @@ border:1px solid @neutral-light;
 	font-family: @font-family !important;
 }
 
-@{e-js}.e-reportviewer-viewer{
+@{e-js} .e-reportviewer-viewer{
     font-size:@content-font-size;
 }
 
-@{e-js}.e-reportviewer-popuppageno,@{e-js}.e-reportviewer-popuptotalpage{
+@{e-js} .e-reportviewer-popuppageno, @{e-js} .e-reportviewer-popuptotalpage{
     color : @rv-popuppage-color;
 }
 
@@ -25162,7 +25193,7 @@ border:1px solid @neutral-light;
  }
 
 
-@{e-js}.e-reportviewer-viewerblock {
+@{e-js} .e-reportviewer-viewerblock {
     & when (@skin= "material") {
         /*material*/
         background-color:@grey-50;
@@ -25181,7 +25212,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-viewerblockcellcontent {
+@{e-js} .e-reportviewer-viewerblockcellcontent {
     & when (@skin= "material") {
         /*material*/
         font-family: @font-family;
@@ -25200,7 +25231,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-viewreport {
+@{e-js} .e-reportviewer-viewreport {
     border-left-color: @content-border-color;
     & when (@skin= "material") {
         /*material*/
@@ -25211,8 +25242,8 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-scrollcontainer,
-@{e-js}.e-reportviewer-viewer>.e-splitter .e-pane{
+@{e-js} .e-reportviewer-scrollcontainer,
+@{e-js} .e-reportviewer-viewer>.e-splitter .e-pane{
     & when (@skin= "material") {
         /*material*/
         background-color: @grey-200;
@@ -25223,7 +25254,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-pageviewcontainer{
+@{e-js} .e-reportviewer-pageviewcontainer{
      & when (@skin= "material") {
         /*material*/
         background-color: @grey-200;
@@ -25234,7 +25265,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-pageview {
+@{e-js} .e-reportviewer-pageview {
      & when (@skin= "material") {
         /*material*/
         -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.16);
@@ -25251,51 +25282,51 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-label,
-@{e-js}.e-reportviewer-tbpage,
-@{e-js}.e-reportviewer-elementalignments,
-@{e-js}.e-reportviewer-textbox{
+@{e-js} .e-reportviewer-label,
+@{e-js} .e-reportviewer-tbpage,
+@{e-js} .e-reportviewer-elementalignments,
+@{e-js} .e-reportviewer-textbox{
     color: @content-font-color;
 }
 
-@{e-js}.e-reportviewer-label,
-@{e-js}.e-reportviewer-tbpage,
-@{e-js}.e-reportviewer-elementalignments,
-@{e-js}.e-reportviewer-textbox{
+@{e-js} .e-reportviewer-label,
+@{e-js} .e-reportviewer-tbpage,
+@{e-js} .e-reportviewer-elementalignments,
+@{e-js} .e-reportviewer-textbox{
     font-size: @content-font-size;
     font-weight: @content-font-weight;
 }
 
-@{e-js}.e-reportviewer-labelpageno {
+@{e-js} .e-reportviewer-labelpageno {
     font-size: @rv-labelpageno-font-size;
 }
 
-@{e-js}.e-reportviewer-documentmapcontainer div,
-@{e-js}.e-reportviewer-documentmappopup{
+@{e-js} .e-reportviewer-documentmapcontainer div,
+@{e-js} .e-reportviewer-documentmappopup{
     background-color: @rv-documentMappopup-bg-color;
 }
 
-@{e-js}.e-reportviewer-pagepopupinfo{
+@{e-js} .e-reportviewer-pagepopupinfo{
     background-color:@rv-popuppageinfo-bg-color;
 }
 
-@{e-js}.e-reportviewer-viewerblock,
-@{e-js}.e-reportviewer-pagenumber,
-@{e-js}.e-reportviewer-tbpage,
-@{e-js}.e-reportviewer-tbdiv.e-reportviewer-exportlist,
-@{e-js}.e-reportviewer-label,
-@{e-js}.e-reportviewer-labelpageno {
+@{e-js} .e-reportviewer-viewerblock,
+@{e-js} .e-reportviewer-pagenumber,
+@{e-js} .e-reportviewer-tbpage,
+@{e-js} .e-reportviewer-tbdiv.e-reportviewer-exportlist,
+@{e-js} .e-reportviewer-label,
+@{e-js} .e-reportviewer-labelpageno {
     font-family: @font-family !important;
 }
 
 @{e-js}.e-reportviewer-toolbarcontainer,
-@{e-js}.e-reportviewer-viewerblock,
-@{e-js}.e-reportviewer-viewercontainer,
-@{e-js}.e-reportviewer-elementalignments,
-@{e-js}.e-reportviewer-viewerblockcellcontent,
-@{e-js}.e-reportviewer-viewerblockcontent,
-@{e-js}.e-reportviewer-textbox,
-@{e-js}.e-reportviewer-documentmappopup{
+@{e-js} .e-reportviewer-viewerblock,
+@{e-js} .e-reportviewer-viewercontainer,
+@{e-js} .e-reportviewer-elementalignments,
+@{e-js} .e-reportviewer-viewerblockcellcontent,
+@{e-js} .e-reportviewer-viewerblockcontent,
+@{e-js} .e-reportviewer-textbox,
+@{e-js} .e-reportviewer-documentmappopup{
     & when (@skin= "material") {
         /*material*/
         border-color: @grey-300;
@@ -25306,7 +25337,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-popupli:hover {
+@{e-js} .e-reportviewer-popupli:hover {
     .hover-gradient();
     & when (@skin= "office-365") {
         background-color: @default-bg-stcolor;
@@ -25316,7 +25347,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-popupli {
+@{e-js} .e-reportviewer-popupli {
     & when (@skin= "office-365") {
         color: @neutral-light-font !important;
     }
@@ -25328,14 +25359,14 @@ border:1px solid @neutral-light;
     font-weight: @content-font-weight !important;
 }
 
-@{e-js}.e-reportviewer-gotonext.e-reportviewer-disabled,
-@{e-js}.e-reportviewer-gotoprevious.e-reportviewer-disabled,
-@{e-js}.e-reportviewer-gotolast.e-reportviewer-disabled,
-@{e-js}.e-reportviewer-gotofirst.e-reportviewer-disabled{
+@{e-js} .e-reportviewer-gotonext.e-reportviewer-disabled,
+@{e-js} .e-reportviewer-gotoprevious.e-reportviewer-disabled,
+@{e-js} .e-reportviewer-gotolast.e-reportviewer-disabled,
+@{e-js} .e-reportviewer-gotofirst.e-reportviewer-disabled{
     opacity: @rv-navigate-disabled-opacity;
 }
 
-@{e-js}.e-reportviewer-viewreportbutton{
+@{e-js} .e-reportviewer-viewreportbutton{
     font-family: @font-family !important;
      & when (@skin= "material") {
         /*material*/
@@ -25346,17 +25377,17 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-reportviewer-alert-icon {
+@{e-js} .e-reportviewer-alert-icon {
     color: @error-color;
     font-size: 40px;
 }
 
-@{e-js}.e-reportviewer-error-content {
+@{e-js} .e-reportviewer-error-content {
     background-color: @disable-control-background-color;
     font-size: @rv-viewerblock-font-size;
 }
 
-@{e-js}.e-reportviewer-scroller .e-scrollbar .e-icon {
+@{e-js} .e-reportviewer-scroller .e-scrollbar .e-icon {
     font-size: 0;
 }
 /*------------------------------reportviewer Theme End-------------------------------*/
@@ -26201,7 +26232,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js}.e-dragrowcell {
+@{e-js} .e-dragrowcell {
     border-color: @gantt-content-border-color !important;
 }
 
@@ -26609,7 +26640,7 @@ border:1px solid @neutral-light;
     }
 }
 
-@{e-js} .e-tooltipgantt {
+@{e-js}.e-tooltipgantt {
     & when (@skin= "material") {
         background-color: @grey-700;
         color: @primary-font-color;
@@ -27081,7 +27112,7 @@ border:1px solid @neutral-light;
    }
 }
 
-.e-ribbon.e-js .e-header > .e-select,.e-ribbon.e-js .e-header > .e-active,.e-ribbon.e-js .e-left > .e-active,.e-ribbon.e-js .e-right > .e-active,.e-ribbon.e-js .e-left > .e-select,.e-ribbon.e-js .e-right > .e-select{
+.e-ribbon.e-js .e-header > .e-select,@{e-widget}.e-ribbon.e-js .e-header > .e-active,.e-ribbon.e-js .e-left > .e-active,.e-ribbon.e-js .e-right > .e-active,.e-ribbon.e-js .e-left > .e-select,.e-ribbon.e-js .e-right > .e-select{
  & when not (@skin= "material") {
     background:transparent;
 	border:none;

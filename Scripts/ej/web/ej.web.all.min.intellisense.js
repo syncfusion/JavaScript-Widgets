@@ -25265,6 +25265,9 @@ ejSchedule :function (options) {
 ///When set to true, allows the user to create/edit appointments inline - simply through a single click made either on the Scheduler cells or on the existing appointmentâ€™s Subject text respectively. Pressing enter key after the new Subject text   typed onto the inline created text box, will save/update the appointments appropriately.
 ///<br/>allowInline-boolean	default-false
 ///<br/><br/>
+///When set to false, disables the appointment delete option on the Scheduler.
+///<br/>allowDelete-boolean	default-true
+///<br/><br/>
 ///When set to true, Scheduler allows interaction through keyboard shortcut keys.
 ///<br/>allowKeyboardNavigation-boolean	default-true
 ///<br/><br/>
@@ -30368,6 +30371,26 @@ sortColumn:function(fieldName, columnSortDirection){
 /// To sorting the data based on the particular fields
 /// </summary>
 /// <param name="columnSortDirection"	type="string">you can pass a sort direction to sort the column.</param>
+/// </signature>
+},
+moveRow:function(fromIndex, toIndex, position){
+/// <signature>
+/// <summary>
+/// To move the TreeGrid rows programmatically with from index ,to index and position.
+/// </summary>
+/// <param name="fromIndex"	type="number">you can pass drag Index of the row</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To move the TreeGrid rows programmatically with from index ,to index and position.
+/// </summary>
+/// <param name="toIndex"	type="number">you can pass target Index of the row.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// To move the TreeGrid rows programmatically with from index ,to index and position.
+/// </summary>
+/// <param name="position"	type="string">you can pass the drop position as above,below,child</param>
 /// </signature>
 },
 reorderColumn:function(fieldName, targetIndex){

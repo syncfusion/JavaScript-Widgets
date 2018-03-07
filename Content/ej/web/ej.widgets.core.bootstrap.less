@@ -6137,7 +6137,7 @@
 
 .mixin(@widget) when (@widget = dialog), (@widget = none) {
 
-    .e-dialog {
+     .e-dialog {
         outline: 0 none;
     }
 
@@ -6247,7 +6247,7 @@
         float: left;
     }
 
-    .e-dialog > .e-icon {
+     .e-dialog > .e-icon {
         height: 20px;
         width: 20px;
     }
@@ -6836,7 +6836,22 @@
             width: 30px;
         }
     }
+    .e-uploaddialog.e-dialog .e-ul .e-action-perform .e-icon {
+        float: left;
+        margin-top: 5px;
+        position: relative;
+        cursor: pointer;
 
+        & when (@skin= "office-365") {
+            height: 16px;
+            width: 16px;
+        }
+
+        & when not (@skin= "office-365") {
+            height: 20px;
+            width: 30px;
+        }
+    }
     .e-uploadbox .e-file-list .e-checkmark, .e-uploadbox .e-file-list .e-file-percentage-failed {
         margin-top: -5px;
         left: 43%;
@@ -9206,19 +9221,19 @@ background-image: url('../@{font-path}/icons-white.png');
     }
     /*Map*/
     /* common icon position */
-    .e-boardpin:before, .e-icon.e-unpin:before {
+    .e-icon.e-boardpin:before, .e-icon.e-unpin:before {
         content: "\e684";
     }
 
-    .e-boardpin1:before, .e-icon.e-pin:before {
+    .e-icon.e-boardpin1:before, .e-icon.e-pin:before {
         content: "\e683";
     }
 
-    .e-upload:before {
+    .e-icon.e-upload:before {
         content: "\e678";
     }
 
-    .e-reload:before {
+    .e-icon.e-reload:before {
         content: "\e677";
     }
 
@@ -9234,99 +9249,99 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-close:before {
+    .e-icon.e-close:before {
         content: "\e605";
     }
 
-    .e-addnew:before, .e-icon.e-plus:before {
+    .e-icon.e-addnew:before, .e-icon.e-plus:before {
         content: "\e676";
     }
 
-    .e-minus:before, .e-icon.e-minus:before, .e-icon.e-minimize:before {
+    .e-icon.e-minus:before, .e-icon.e-minimize:before {
         content: "\e675";
     }
 
-    .e-rarrowright-2x:before {
+    .e-icon.e-rarrowright-2x:before {
         content: "\e674";
     }
 
-    .e-rarrowup-2x:before {
+    .e-icon.e-rarrowup-2x:before {
         content: "\e672";
     }
 
-    .e-rarrowdown-2x:before {
+    .e-icon.e-rarrowdown-2x:before {
         content: "\e673";
     }
 
-    .e-rarrowleft-2x:before {
+    .e-icon.e-rarrowleft-2x:before {
         content: "\e671";
     }
 
-    .e-login:before {
+    .e-icon.e-login:before {
         content: "\e670";
     }
 
-    .e-orientationlanscape:before {
+    .e-icon.e-orientationlanscape:before {
         content: "\e66f";
     }
 
-    .e-searchfind:before, .e-icon.e-search:before {
+    .e-icon.e-searchfind:before, .e-icon.e-search:before {
         content: "\e66e";
     }
 
-    .e-alignleft:before {
+    .e-icon.e-alignleft:before {
         content: "\e682";
     }
 
-    .e-aligncenter:before {
+    .e-icon.e-aligncenter:before {
         content: "\e66d";
     }
 
-    .e-alignright:before {
+    .e-icon.e-alignright:before {
         content: "\e66b";
     }
 
-    .e-alignjustify:before {
+    .e-icon.e-alignjustify:before {
         content: "\e66c";
     }
 
-    .e-alignnone:before {
+    .e-icon.e-alignnone:before {
         content: "\e66a";
     }
 
-    .e-filterset:before {
+    .e-icon.e-filterset:before {
         content: "\e669";
     }
 
-    .e-filternone:before {
+    .e-icon.e-filternone:before {
         content: "\e668";
     }
     /**/
-    .e-arrowheadup-2x:before {
+    .e-icon.e-arrowheadup-2x:before {
         content: "\e667";
     }
 
-    .e-arrowheaddown-2x:before {
+    .e-icon.e-arrowheaddown-2x:before {
         content: "\e666";
     }
 
-    .e-arrowheadleft:before, .e-arrowheadleft-2x:before, .e-icon.e-left-arrow:before, .e-rtl .e-icon.e-right-arrow:before, :not(.e-splitter).e-rtl .e-icon.e-arrow-sans-right:before {
+    .e-icon.e-arrowheadleft:before, .e-icon.e-arrowheadleft-2x:before, .e-icon.e-left-arrow:before, .e-rtl .e-icon.e-right-arrow:before, :not(.e-splitter).e-rtl .e-icon.e-arrow-sans-right:before {
         content: "\e665";
     }
 
-    .e-arrowheadright:before, .e-arrowheadright-2x:before, .e-icon.e-right-arrow:before, .e-rtl .e-icon.e-left-arrow:before, :not(.e-splitter).e-rtl .e-icon.e-arrow-sans-left:before {
+    .e-icon.e-arrowheadright:before, .e-icon.e-arrowheadright-2x:before, .e-icon.e-right-arrow:before, .e-rtl .e-icon.e-left-arrow:before, :not(.e-splitter).e-rtl .e-icon.e-arrow-sans-left:before {
         content: "\e664";
     }
 
-    .e-numbering:before {
+    .e-icon.e-numbering:before {
         content: "\e663";
     }
 
-    .e-bullets:before {
+    .e-icon.e-bullets:before {
         content: "\e661";
     }
 
-    .e-maximize:before {
+    .e-icon.e-maximize:before {
         content: "\e660";
     }
 
@@ -9334,235 +9349,235 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e681";
     }
 
-    .e-chevron-circle-right:before {
+    .e-icon.e-chevron-circle-right:before {
         content: "\e73f";
     }
 
-    .e-chevron-circle-left:before {
+    .e-icon.e-chevron-circle-left:before {
         content: "\e740";
     }
 
-    .e-mediaback:before {
+    .e-icon.e-mediaback:before {
         content: "\e65f";
     }
 
-    .e-mediaforward:before {
+    .e-icon.e-mediaforward:before {
         content: "\e65e";
     }
 
-    .e-arrowheadright-2x:before {
+    .e-icon.e-arrowheadright-2x:before {
         content: "\e664";
     }
 
-    .e-arrowheadleft-2x:before {
+    .e-icon.e-arrowheadleft-2x:before {
         content: "\e665";
     }
 
-    .e-medianext:before {
+    .e-icon.e-medianext:before {
         content: "\e65d";
     }
 
-    .e-mediaprev:before {
+    .e-icon.e-mediaprev:before {
         content: "\e65c";
     }
 
-    .e-mediaeject:before {
+    .e-icon.e-mediaeject:before {
         content: "\e65a";
     }
 
-    .e-mediaclose:before {
+    .e-icon.e-mediaclose:before {
         content: "\e65b";
     }
 
-    .e-mediapause:before {
+    .e-icon.e-mediapause:before {
         content: "\e659";
     }
 
-    .e-mediaplay:before {
+    .e-icon.e-mediaplay:before {
         content: "\e658";
     }
 
-    .e-righttick:before, .e-icon.e-checkmark:before {
+    .e-icon.e-righttick:before, .e-icon.e-checkmark:before {
         content: "\e657";
     }
 
-    .e-cancel:before, .e-icon.e-file-cancel:before, .e-icon.e-file-percentage-failed:before {
+    .e-icon.e-cancel:before, .e-icon.e-file-cancel:before, .e-icon.e-file-percentage-failed:before {
         content: "\e656";
     }
 
-    .e-smile:before {
+    .e-icon.e-smile:before {
         content: "\e655";
     }
 
-    .e-information:before {
+    .e-icon.e-information:before {
         content: "\e654";
     }
     /**/
-    .e-cut:before {
+    .e-icon.e-cut:before {
         content: "\e680";
     }
 
-    .e-edit:before {
+    .e-icon.e-edit:before {
         content: "\e653";
     }
 
-    .e-swapleft:before {
+    .e-icon.e-swapleft:before {
         content: "\e652";
     }
 
-    .e-swapright:before {
+    .e-icon.e-swapright:before {
         content: "\e651";
     }
 
-    .e-swapup:before {
+    .e-icon.e-swapup:before {
         content: "\e650";
     }
 
-    .e-swapdown:before {
+    .e-icon.e-swapdown:before {
         content: "\e64f";
     }
 
-    .e-zoomin:before {
+    .e-icon.e-zoomin:before {
         content: "\e64e";
     }
 
-    .e-zoomout:before {
+    .e-icon.e-zoomout:before {
         content: "\e64d";
     }
 
-    .e-warningmessage:before {
+    .e-icon.e-warningmessage:before {
         content: "\e64c";
     }
 
-    .e-cursor:before {
+    .e-icon.e-cursor:before {
         content: "\e64b";
     }
 
-    .e-shoppingcart:before {
+    .e-icon.e-shoppingcart:before {
         content: "\e64a";
     }
 
-    .e-handup:before {
+    .e-icon.e-handup:before {
         content: "\e648";
     }
 
-    .e-palette:before {
+    .e-icon.e-palette:before {
         content: "\e67f";
     }
 
-    .e-star:before {
+    .e-icon.e-star:before {
         content: "\e647";
     }
 
-    .e-copy:before {
+    .e-icon.e-copy:before {
         content: "\e646";
     }
 
-    .e-paste:before {
+    .e-icon.e-paste:before {
         content: "\e645";
     }
 
-    .e-settings:before {
+    .e-icon.e-settings:before {
         content: "\e644";
     }
 
-    .e-clock:before {
+    .e-icon.e-clock:before {
         content: "\e643";
     }
 
-    .e-hyperlink:before {
+    .e-icon.e-hyperlink:before {
         content: "\e642";
     }
 
-    .e-hyperlinkbreak:before {
+    .e-icon.e-hyperlinkbreak:before {
         content: "\e641";
     }
     /**/
-    .e-resizers:before, .e-icon.e-resize-handle:before, .e-resize-handle:before {
+    .e-icon.e-resizers:before, .e-icon.e-resize-handle:before, .e-icon.e-resize-handle:before {
         content: "\e640";
     }
 
-    .e-home:before {
+    .e-icon.e-home:before {
         content: "\e63f";
     }
 
-    .e-clipboard:before {
+    .e-icon.e-clipboard:before {
         content: "\e63e";
     }
 
-    .e-userlogin:before {
+    .e-icon.e-userlogin:before {
         content: "\e63d";
     }
 
-    .e-dataexport:before {
+    .e-icon.e-dataexport:before {
         content: "\e63c";
     }
 
-    .e-arrowheadright:before {
+    .e-icon.e-arrowheadright:before {
         content: "\e658";
     }
 
-    .e-arrowhead-down:before, .e-icon.e-down-arrow:before {
+    .e-icon.e-arrowhead-down:before, .e-icon.e-down-arrow:before {
         content: "\e63b";
     }
 
-    .e-arrowheadup:before, .e-icon.e-up-arrow:before {
+    .e-icon.e-arrowheadup:before, .e-icon.e-up-arrow:before {
         content: "\e63a";
     }
 
-    .e-arrowheadleft:before {
+    .e-icon.e-arrowheadleft:before {
         content: "\e639";
     }
 
-    .e-undo:before {
+    .e-icon.e-undo:before {
         content: "\e637";
     }
 
-    .e-redo:before {
+    .e-icon.e-redo:before {
         content: "\e638";
     }
 
-    .e-bold:before {
+    .e-icon.e-bold:before {
         content: "\e636";
     }
 
-    .e-italic:before {
+    .e-icon.e-italic:before {
         content: "\e635";
     }
 
-    .e-underline:before {
+    .e-icon.e-underline:before {
         content: "\e634";
     }
 
-    .e-strikethrough:before {
+    .e-icon.e-strikethrough:before {
         content: "\e633";
     }
 
-    .e-font:before {
+    .e-icon.e-font:before {
         content: "\e632";
     }
 
-    .e-rarrowdown:before {
+    .e-icon.e-rarrowdown:before {
         content: "\e631";
     }
 
-    .e-rarrowleft:before {
+    .e-icon.e-rarrowleft:before {
         content: "\e630";
     }
 
-    .e-rarrowup:before {
+    .e-icon.e-rarrowup:before {
         content: "\e67d";
     }
 
-    .e-rarrowright:before {
+    .e-icon.e-rarrowright:before {
         content: "\e62f";
     }
     /**/
-    .e-calender:before {
+    .e-icon.e-calender:before {
         content: "\e62e";
     }
 
-    .e-datetimecalendar:before,
+    .e-icon.e-datetimecalendar:before,
     .e-icon.e-datetime:before {
         content: "\e62d";
     }
@@ -9603,11 +9618,11 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e675";
     }
 
-    .e-gridgroupbutton:before {
+    .e-icon.e-gridgroupbutton:before {
         content: "\e61c";
     }
 
-    .e-gnextmedia {
+    .e-icon.e-gnextmedia {
         background-position: -51px -84px;
     }
 
@@ -9635,27 +9650,27 @@ background-image: url('../@{font-path}/icons-white.png');
         background-position: -181px -20px;
     }
 
-    .e-save:before {
+    .e-icon.e-save:before {
         content: "\e620";
     }
 
-    .e-insertInbetween:before {
+    .e-icon.e-insertInbetween:before {
         content: "\e70c";
     }
 
-    .e-insertInbetween-rtl:before {
+    .e-icon.e-insertInbetween-rtl:before {
         content: "\e70a";
     }
 
-    .e-gcancel {
+    .e-icon.e-gcancel {
         background-position: -440px -20px;
     }
 
-    .e-gsearch {
+    .e-icon.e-gsearch {
         background-position: -310px 4px;
     }
 
-    .e-gdiagonalnext:before {
+    .e-icon.e-gdiagonalnext:before {
         content: "\e67c";
 
         & when (@skin= "office-365") {
@@ -9663,7 +9678,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-gnextforward:before {
+    .e-icon.e-gnextforward:before {
         content: "\e67e";
 
         & when (@skin= "office-365") {
@@ -9671,19 +9686,19 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-gupward {
+    .e-icon.e-gupward {
         background-position: -204px 2px;
     }
 
-    .e-gdownward {
+    .e-icon.e-gdownward {
         background-position: -180px 2px;
     }
 
-    .e-gclose {
+    .e-icon.e-gclose {
         background-position: -445px -22px;
     }
 
-    .e-guparrow:before {
+    .e-icon.e-guparrow:before {
         content: "\e625";
 
         & when (@skin= "office-365") {
@@ -9691,7 +9706,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-gdownarrow:before {
+    .e-icon.e-gdownarrow:before {
         content: "\e627";
 
         & when (@skin= "office-365") {
@@ -9699,7 +9714,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-gupdatenotify:before {
+    .e-icon.e-gupdatenotify:before {
         content: "\e6ff";
         font-size: 10px;
     }
@@ -9875,7 +9890,7 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e700";
     }
 
-    .e-tab .e-icon.e-close:before, .e-uploadbox.e-dialog .e-close:before {
+    .e-tab .e-icon.e-close:before,  .e-uploadbox.e-dialog .e-close:before {
         content: "\e605";
     }
 
@@ -11842,7 +11857,9 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-grid .e-widget [class^="e-"] {
         box-sizing: border-box;
     }
-
+	.e-grid [class^="e-"] .e-button {
+		box-sizing: border-box;
+	}
     .e-grid .e-dialog.e-widget .e-dialog-icon, .e-grid .e-widget .e-pagercontainer > .e-icon, .e-grid .e-widget .e-pagercontainer .e-numericitem,
     .e-grid .e-widget .e-filtericon, .e-grid .e-widget .e-filtertext, .e-grid .e-widget .e-predicate span, .e-grid .e-widget .e-value .e-chk-act, .e-grid .e-detailcell .e-groupheadercell,
     .e-grid .e-detailcell .e-ungroupbutton, .e-grid .e-excelfilter .e-chk-act {
@@ -14059,7 +14076,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
      .e-pager .e-spacing,
      .e-pager .e-numericitem:hover,
-     .e-pager .e-currentitem {
+     .e-pager .e-currentitem.e-active {
         & when (@skin= "material") {
             /*material*/
             padding: 6px 1px 6px 1px;
@@ -14080,14 +14097,14 @@ background-image: url('../@{font-path}/icons-white.png');
 
      .e-pager.e-disable .e-spacing,
      .e-pager.e-disable .e-numericitem:hover,
-     .e-pager.e-disable .e-currentitem,  .e-pager.e-disable .e-nextpage:hover,  .e-pager.e-disable .e-lastpage:hover {
+     .e-pager.e-disable .e-currentitem.e-active,  .e-pager.e-disable .e-nextpage:hover,  .e-pager.e-disable .e-lastpage:hover {
         cursor: default;
     }
 
 
      .e-pager .e-customtext .e-spacing,
      .e-pager .e-customtext .e-numericitem:hover,
-     .e-pager .e-customtext .e-currentitem {
+     .e-pager .e-customtext .e-currentitem.e-active {
 
         & when not (@skin= "material") and not (@skin="office-365") {
             /*other*/
@@ -14095,7 +14112,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-pager .e-currentitem {
+     .e-pager .e-currentitem.e-active {
         border-width: @border-size;
         font-style: normal;
         font-variant: normal;
@@ -14428,7 +14445,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
      .e-pager.e-rtl .e-spacing,
      .e-pager.e-rtl .e-numericitem:hover,
-     .e-pager.e-rtl .e-currentitem {
+     .e-pager.e-rtl .e-currentitem.e-active {
         & when (@skin= "material") {
             padding: 6px 1px 6px;
         }
@@ -14482,7 +14499,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-pagercontainer {
+     .e-pager .e-pagercontainer {
         float: left;
     }
 
@@ -16160,7 +16177,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-fileexplorer-toolbar-icon, .e-fileexplorer .e-tree-foldericon, .e-fileexplorer .e-addressbar-foldericon {
+     .e-fileexplorer-toolbar-icon, .e-fileexplorer .e-tree-foldericon, .e-fileexplorer .e-addressbar-foldericon {
         font-family: 'ej-webfont';
 
         & when not (@skin= "material") and not (@skin="office-365") {
@@ -16195,67 +16212,67 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e768";
     }
 
-    .e-fileexplorer .e-minus ~ .e-tree-foldericon:before, .e-fileexplorer-toolbar-icon.Open:before, .e-fileexplorer-toolbar-icon.OpenFolderLocation:before {
+    .e-fileexplorer .e-minus ~ .e-tree-foldericon:before,  .e-fileexplorer-toolbar-icon.Open:before,  .e-fileexplorer-toolbar-icon.OpenFolderLocation:before {
         content: "\e769";
     }
 
-    .e-fileexplorer-toolbar-icon.Delete:before {
+     .e-fileexplorer-toolbar-icon.Delete:before {
         content: "\e708";
     }
 
-    .e-fileexplorer-toolbar-icon.NewFolder:before {
+     .e-fileexplorer-toolbar-icon.NewFolder:before {
         content: "\e76a";
     }
 
-    .e-fileexplorer-toolbar-icon.Back:before {
+     .e-fileexplorer-toolbar-icon.Back:before {
         content: "\e773";
     }
 
-    .e-fileexplorer-toolbar-icon.Forward:before {
+     .e-fileexplorer-toolbar-icon.Forward:before {
         content: "\e774";
     }
 
-    .e-fileexplorer-toolbar-icon.Upward:before {
+     .e-fileexplorer-toolbar-icon.Upward:before {
         content: "\e74f";
     }
 
-    .e-fileexplorer-toolbar-icon.Back:hover:before {
+     .e-fileexplorer-toolbar-icon.Back:hover:before {
         content: "\e775";
     }
 
-    .e-fileexplorer-toolbar-icon.Forward:hover:before {
+     .e-fileexplorer-toolbar-icon.Forward:hover:before {
         content: "\e776";
     }
 
-    .e-fileexplorer-toolbar-icon.Cut:before {
+     .e-fileexplorer-toolbar-icon.Cut:before {
         content: "\e680";
     }
 
-    .e-fileexplorer-toolbar-icon.Copy:before {
+     .e-fileexplorer-toolbar-icon.Copy:before {
         content: "\e646";
     }
 
-    .e-fileexplorer-toolbar-icon.Paste:before {
+     .e-fileexplorer-toolbar-icon.Paste:before {
         content: "\e645";
     }
 
-    .e-fileexplorer-toolbar-icon.Details:before, .e-fileexplorer-toolbar-icon.Getinfo:before {
+     .e-fileexplorer-toolbar-icon.Details:before,  .e-fileexplorer-toolbar-icon.Getinfo:before {
         content: "\e777";
     }
 
-    .e-fileexplorer-toolbar-icon.Upload:before {
+     .e-fileexplorer-toolbar-icon.Upload:before {
         content: "\e678";
     }
 
-    .e-fileexplorer-toolbar-icon.Refresh:before {
+     .e-fileexplorer-toolbar-icon.Refresh:before {
         content: "\e677";
     }
 
-    .e-fileexplorer-toolbar-icon.Rename:before {
+     .e-fileexplorer-toolbar-icon.Rename:before {
         content: "\e69c";
     }
 
-    .e-fileexplorer-toolbar-icon.Download {
+     .e-fileexplorer-toolbar-icon.Download {
         & when not (@skin= "office-365") {
             top: -3px;
             position: relative;
@@ -16274,11 +16291,11 @@ background-image: url('../@{font-path}/icons-white.png');
         filter: alpha(opacity=35);
     }
 
-    .e-fileexplorer-toolbar-icon.Download:before {
+     .e-fileexplorer-toolbar-icon.Download:before {
         content: "\e61f";
     }
 
-    .e-fileexplorer-toolbar-icon.SortBy:before,
+     .e-fileexplorer-toolbar-icon.SortBy:before,
     .e-icon.e-fe-sortby:before {
         content: "\e823";
         text-indent: 1px;
@@ -16576,7 +16593,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-fileexplorer-toolbar-icon {
+     .e-fileexplorer-toolbar-icon {
         & when (@skin= "office-365") {
             height: 15px;
         }
@@ -21849,7 +21866,7 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
 
-    .e-dragrowcell {
+     .e-dragrowcell {
         border-collapse: collapse;
         border-style: solid;
         border-width: 0 1px 1px 0;
@@ -22408,7 +22425,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-treegrid-columnmenu,
+     .e-treegrid-columnmenu,
     .e-treegrid-contextmenu,
     .e-innerContextmenu {
         & when (@skin= "material") {
@@ -23771,7 +23788,7 @@ background-image: url('../@{font-path}/icons-white.png');
         -o-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        float: left;
+        float: left\9;
     }
 
     .e-ganttchart td {
@@ -24096,7 +24113,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
 .mixin(@widget) when (@widget = schedule), (@widget = none) {
 
-     .e-schedule.e-scheduleouter {
+    .e-schedule.e-scheduleouter {
         font-family: @font-family;
         font-size: @font-size;
         overflow: hidden;
@@ -24105,42 +24122,42 @@ background-image: url('../@{font-path}/icons-white.png');
         outline: medium none;
     }
 
-     .e-schedule {
+    .e-schedule {
         touch-action: none;
     }
 
-     .e-schedule .e-scheduleoutertable {
+    .e-schedule .e-scheduleoutertable {
         height: 100%;
         width: 100%;
         position: relative;
     }
 
-     .e-schedule .e-scheduleoutertable td, .e-schedule .e-scheduleoutertable tr {
+    .e-schedule .e-scheduleoutertable td, .e-schedule .e-scheduleoutertable tr {
         vertical-align: top;
     }
 
-     .e-schedule .e-headrealldaytable td {
+    .e-schedule .e-headrealldaytable td {
         vertical-align: middle;
     }
 
-     .e-schedule .e-horizontalheader {
+    .e-schedule .e-horizontalheader {
         vertical-align: middle !important;
     }
 
-     .e-schedule .e-horizontalresheader {
+    .e-schedule .e-horizontalresheader {
         width: 100%;
         text-align: center;
         text-overflow: ellipsis;
         overflow: hidden;
     }
 
-     .e-schedule .e-horizontaltimecells {
+    .e-schedule .e-horizontaltimecells {
         position: relative;
         overflow: hidden;
         width: 100%;
     }
 
-     .e-schedule .e-horizontaltimecellsht {
+    .e-schedule .e-horizontaltimecellsht {
 
         & when (@skin= "material") {
             height: 96px;
@@ -24155,7 +24172,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontalmonthtimecellsht {
+    .e-schedule .e-horizontalmonthtimecellsht {
 
         & when (@skin= "material") {
             height: 96px;
@@ -24170,11 +24187,11 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-headertable {
+    .e-schedule .e-headertable {
         width: 100%;
     }
 
-     .e-schedule .e-resourceheadertext,
+    .e-schedule .e-resourceheadertext,
     .e-schedule .e-monthnamerow .e-monthrow .e-monthnameheadertext {
         overflow: hidden;
         width: inherit;
@@ -24183,24 +24200,24 @@ background-image: url('../@{font-path}/icons-white.png');
         white-space: nowrap;
     }
 
-     .e-schedule .e-monthnamerow .e-monthrow .e-monthnameheadertext {
+    .e-schedule .e-monthnamerow .e-monthrow .e-monthnameheadertext {
         & when not (@skin= "material") and not (@skin="office-365") {
             height: 19px;
             margin: 5px;
         }
     }
 
-     .e-schedule .e-headerdays {
+    .e-schedule .e-headerdays {
         position: relative;
         width: 100%;
     }
 
-     .e-schedule .e-agendacellstab {
+    .e-schedule .e-agendacellstab {
         width: 100%;
         table-layout: fixed;
     }
 
-     .e-schedule .e-agendacellstab td {
+    .e-schedule .e-agendacellstab td {
         & when (@skin= "material") {
             height: 48px;
             vertical-align: middle;
@@ -24216,7 +24233,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-agendaday {
+    .e-schedule .e-agendaday {
         float: left;
         line-height: @schedule-agendaday-line-height;
         font-weight: normal;
@@ -24240,7 +24257,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-agendaweek {
+    .e-schedule .e-agendaweek {
         display: block;
         font-style: normal;
 
@@ -24260,7 +24277,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-agendamonth {
+    .e-schedule .e-agendamonth {
 
         & when (@skin= "material") {
             font-size: 12px;
@@ -24279,7 +24296,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-datecolumn {
+    .e-schedule .e-datecolumn {
         width: 160px;
     }
 
@@ -24291,16 +24308,16 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-resourcecolumn {
+    .e-schedule .e-resourcecolumn {
         width: 75px;
     }
 
-     .e-schedule .e-agendacells {
+    .e-schedule .e-agendacells {
         border-top: none;
         cursor: default;
     }
 
-     .e-schedule .e-textwrapper {
+    .e-schedule .e-textwrapper {
         padding: 5px;
         white-space: normal;
         overflow: hidden;
@@ -24322,17 +24339,17 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-textwrapper b {
+    .e-schedule .e-textwrapper b {
         & when (@skin= "office-365") {
             font-weight: normal;
         }
     }
 
-     .e-schedule .e-hide {
+    .e-schedule .e-hide {
         display: none !important;
     }
 
-     .e-schedule .e-agendacolordiv {
+    .e-schedule .e-agendacolordiv {
         width: 14px;
         height: 14px;
         display: inline-block;
@@ -24353,16 +24370,16 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-scheduleallday:before {
+    .e-schedule .e-scheduleallday:before {
         font-size: 16px;
     }
 
-     .e-schedule .e-scheduleallday {
+    .e-schedule .e-scheduleallday {
         margin-right: 5px;
         float: left;
     }
 
-     .e-schedule .e-schedulerepeat:before,
+    .e-schedule .e-schedulerepeat:before,
     .e-schedule .e-recurapp:before {
         content: "\e7b7";
 
@@ -24375,7 +24392,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-appup:before {
+    .e-schedule .e-appup:before {
         font-size: 16px;
 
         & when (@skin= "material") {
@@ -24391,7 +24408,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-appdown:before {
+    .e-schedule .e-appdown:before {
         font-size: 16px;
 
         & when (@skin= "material") {
@@ -24407,7 +24424,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-schedulerepeat,
+    .e-schedule .e-schedulerepeat,
     .e-schedule .e-schedulerepeatedit {
         display: inline-block;
         vertical-align: middle;
@@ -24421,7 +24438,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-schedulerepeatedit:before,
+    .e-schedule .e-schedulerepeatedit:before,
     .e-schedule .e-recureditapp:before {
         content: "\e7b8";
 
@@ -24434,11 +24451,11 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-firstcolumn {
+    .e-schedule .e-firstcolumn {
         border-left: none !important;
     }
 
-     .e-schedule .e-agendaappointment {
+    .e-schedule .e-agendaappointment {
         position: relative;
         display: block;
         line-height: 14px;
@@ -24450,19 +24467,19 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-agendaappointment.e-selectedAppointment {
+    .e-schedule .e-agendaappointment.e-selectedAppointment {
         border: none;
     }
 
-     .e-schedule .e-agendacells:focus,
-     .e-schedule .e-agendaappointment {
+    .e-schedule .e-agendacells:focus,
+    .e-schedule .e-agendaappointment {
         outline: 0 none;
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
     }
 
-     .e-schedule .e-agendahover {
+    .e-schedule .e-agendahover {
         cursor: pointer;
         top: 0px;
         right: 0px;
@@ -24471,21 +24488,21 @@ background-image: url('../@{font-path}/icons-white.png');
         height: 14px;
     }
 
-     .e-schedule .e-editapp:before {
+    .e-schedule .e-editapp:before {
         font-size: 16px;
     }
 
-     .e-schedule .e-deleteapp:before {
+    .e-schedule .e-deleteapp:before {
         font-size: 16px;
     }
 
-     .e-schedule .e-editapp,
-     .e-schedule .e-deleteapp {
+    .e-schedule .e-editapp,
+    .e-schedule .e-deleteapp {
         padding-right: 10px;
         display: inline-block;
     }
 
-     .e-schedule.e-rtl .e-textwrapper {
+    .e-schedule.e-rtl .e-textwrapper {
         padding: 5px;
 
         & when (@skin= "material") {
@@ -24501,33 +24518,33 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule.e-rtl .e-scheduleallday,
-     .e-schedule.e-rtl .e-agendaday {
+    .e-schedule.e-rtl .e-scheduleallday,
+    .e-schedule.e-rtl .e-agendaday {
         margin: 0 0 0 5px;
         float: right;
     }
 
-     .e-schedule.e-rtl .e-schedulerepeat,
-     .e-schedule.e-rtl .e-schedulerepeatedit,
-     .e-schedule.e-rtl .e-agendacolordiv {
+    .e-schedule.e-rtl .e-schedulerepeat,
+    .e-schedule.e-rtl .e-schedulerepeatedit,
+    .e-schedule.e-rtl .e-agendacolordiv {
         margin: 0 -2px 0 5px;
     }
 
-     .e-schedule.e-rtl .e-firstcolumn {
+    .e-schedule.e-rtl .e-firstcolumn {
         border-right: none !important;
     }
 
-     .e-schedule.e-rtl .e-agendahover {
+    .e-schedule.e-rtl .e-agendahover {
         left: 0px;
         right: inherit;
     }
 
-     .e-schedule.e-rtl .e-editapp,
-     .e-schedule.e-rtl .e-deleteapp {
+    .e-schedule.e-rtl .e-editapp,
+    .e-schedule.e-rtl .e-deleteapp {
         padding: 0 10px 0 0;
     }
 
-     .e-schedule .e-horizontalheadertddate {
+    .e-schedule .e-horizontalheadertddate {
         & when (@skin= "material") {
             vertical-align: middle !important;
             height: 46px;
@@ -24547,7 +24564,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontalheaderdiv {
+    .e-schedule .e-horizontalheaderdiv {
         text-align: center;
         overflow: hidden;
 
@@ -24566,7 +24583,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontaltimetd {
+    .e-schedule .e-horizontaltimetd {
         vertical-align: middle !important;
         overflow: hidden;
         text-align: center !important;
@@ -24586,12 +24603,12 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontaltimespan {
+    .e-schedule .e-horizontaltimespan {
         float: left;
         width: 25px;
     }
 
-     .e-schedule .e-horizontaltimespandiv {
+    .e-schedule .e-horizontaltimespandiv {
         font-size: 9px;
         vertical-align: top;
         position: absolute;
@@ -24606,7 +24623,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontalalternatetd {
+    .e-schedule .e-horizontalalternatetd {
         position: static !important;
 
         & when (@skin= "material") {
@@ -24623,7 +24640,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontmonthheaderdatetd {
+    .e-schedule .e-horizontmonthheaderdatetd {
         & when (@skin= "material") {
             height: 47px;
             vertical-align: middle !important;
@@ -24636,7 +24653,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontmonthheaderdaytd {
+    .e-schedule .e-horizontmonthheaderdaytd {
         & when (@skin= "material") {
             height: 47px;
             vertical-align: middle !important;
@@ -24651,36 +24668,36 @@ background-image: url('../@{font-path}/icons-white.png');
         cursor: default;
     }
 
-     .e-schedule .e-horizontresdiv {
+    .e-schedule .e-horizontresdiv {
         width: 100%;
         height: 100%;
         overflow: hidden;
         position: relative;
     }
 
-     .e-schedule .e-horires {
+    .e-schedule .e-horires {
         position: absolute;
         width: 100%;
         height: 100%;
     }
 
-     .e-schedule .e-alternateworkcell {
+    .e-schedule .e-alternateworkcell {
         width: 25px;
     }
 
-     .e-schedule .e-headerdays table tr:first-child td:first-child,
-     .e-schedule .e-headerdays table tr:last-child td:first-child {
+    .e-schedule .e-headerdays table tr:first-child td:first-child,
+    .e-schedule .e-headerdays table tr:last-child td:first-child {
         border-left: none !important;
     }
 
-     .e-scheduledialog .e-table,
-     .e-schedule .e-table {
+    .e-scheduledialog .e-table,
+    .e-schedule .e-table {
         border: 0 none;
         border-collapse: separate;
         margin: 0;
     }
 
-     .e-schedule .e-table {
+    .e-schedule .e-table {
         border-spacing: 0px !important;
     }
 
@@ -24689,18 +24706,18 @@ background-image: url('../@{font-path}/icons-white.png');
         width: 18px;
     }
 
-     .e-schedule .e-multipleCategory {
+    .e-schedule .e-multipleCategory {
         position: absolute;
         bottom: 2px;
         right: 3px;
     }
 
-     .e-schedule .e-table td {
+    .e-schedule .e-table td {
         padding: 0;
     }
 
-     .e-schedule .e-nextapp,
-     .e-schedule .e-prevapp {
+    .e-schedule .e-nextapp,
+    .e-schedule .e-prevapp {
         cursor: pointer;
         position: absolute;
         border-radius: 7px 7px 0 0;
@@ -24718,7 +24735,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-scheduleheader {
+    .e-schedule .e-scheduleheader {
         & when (@skin= "material") {
             height: 56px;
         }
@@ -24732,16 +24749,16 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-contentarearow {
+    .e-schedule .e-contentarearow {
         height: 100%;
     }
 
-     .e-schedule .e-horizontmonthdatealign {
+    .e-schedule .e-horizontmonthdatealign {
         margin-left: 0px !important;
         margin-right: 0px !important;
     }
 
-     .e-schedule .e-dateheadercell {
+    .e-schedule .e-dateheadercell {
         & when not (@skin= "material") and not (@skin="office-365") {
             height: 19px;
             margin: 5px;
@@ -24753,11 +24770,11 @@ background-image: url('../@{font-path}/icons-white.png');
         white-space: nowrap;
     }
 
-     .e-schedule .e-dateheaderselect {
+    .e-schedule .e-dateheaderselect {
         cursor: pointer !important;
     }
 
-     .e-schedule .e-headercells {
+    .e-schedule .e-headercells {
         & when (@skin= "material") {
             height: 47px;
         }
@@ -24770,11 +24787,11 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
 
-     .e-schedule .e-headercells:not(.e-horizontalheadertddate),
-     .e-schedule .e-resourcecells,
-     .e-schedule .e-monthleftcells,
-     .e-schedule .e-settingsindent,
-     .e-schedule .e-resourceleftindentcells {
+    .e-schedule .e-headercells:not(.e-horizontalheadertddate),
+    .e-schedule .e-resourcecells,
+    .e-schedule .e-monthleftcells,
+    .e-schedule .e-settingsindent,
+    .e-schedule .e-resourceleftindentcells {
         & when (@skin= "material") {
             font-size: 12px;
             font-weight: 500;
@@ -24782,15 +24799,15 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontaldaterender,
-     .e-schedule .e-horizontalheader {
+    .e-schedule .e-horizontaldaterender,
+    .e-schedule .e-horizontalheader {
         & when (@skin= "material") {
             font-size: 12px;
             font-weight: 500;
         }
     }
 
-     .e-schedule .e-datecommondiv {
+    .e-schedule .e-datecommondiv {
         border: none;
         cursor: pointer;
         float: left;
@@ -24811,7 +24828,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-viewsdiv {
+    .e-schedule .e-viewsdiv {
         float: right;
         height: 100%;
 
@@ -24824,16 +24841,16 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-viewstable {
+    .e-schedule .e-viewstable {
         table-layout: fixed;
         margin-top: @schedule-viewstable-margin-top;
     }
 
-     .e-schedule .e-viewstable tr, .e-schedule .e-viewstable td {
+    .e-schedule .e-viewstable tr, .e-schedule .e-viewstable td {
         border: none;
     }
 
-     .e-schedule .e-datedisplay {
+    .e-schedule .e-datedisplay {
         border: none;
         cursor: pointer;
         text-align: center;
@@ -24853,11 +24870,11 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule.e-rtl .e-datedisplay {
+    .e-schedule.e-rtl .e-datedisplay {
         margin-left: 8px;
     }
 
-     .e-schedule.e-scheduleresponsive .e-datedisplay {
+    .e-schedule.e-scheduleresponsive .e-datedisplay {
         & when (@skin= "material") {
             font-size: 15px;
         }
@@ -24867,14 +24884,14 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule.e-rtl .e-datecommondiv.e-datecursor,
-     .e-schedule.e-rtl .e-datecommondiv.e-datecursor .e-datedisplay,
-     .e-schedule .e-datecommondiv.e-datecursor,
-     .e-schedule .e-datecommondiv.e-datecursor .e-datedisplay {
+    .e-schedule.e-rtl .e-datecommondiv.e-datecursor,
+    .e-schedule.e-rtl .e-datecommondiv.e-datecursor .e-datedisplay,
+    .e-schedule .e-datecommondiv.e-datecursor,
+    .e-schedule .e-datecommondiv.e-datecursor .e-datedisplay {
         cursor: default;
     }
 
-     .e-schedule .e-commonviewbutton {
+    .e-schedule .e-commonviewbutton {
         cursor: pointer;
         height: 20px;
         padding: @schedule-commonviewbutton;
@@ -24902,15 +24919,15 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-icon.e-topind:before {
+    .e-schedule .e-icon.e-topind:before {
         font-size: 12px;
     }
 
-     .e-schedule .e-icon.e-bottomind:before {
+    .e-schedule .e-icon.e-bottomind:before {
         font-size: 12px;
     }
 
-     .e-schedule .e-icon.e-bottomind {
+    .e-schedule .e-icon.e-bottomind {
         position: absolute;
         width: 100%;
         background-size: 19px;
@@ -24918,11 +24935,11 @@ background-image: url('../@{font-path}/icons-white.png');
         left: 1px;
     }
 
-     .e-schedule .e-icon.e-leftind:before {
+    .e-schedule .e-icon.e-leftind:before {
         font-size: 12px;
     }
 
-     .e-schedule .e-icon.e-leftind {
+    .e-schedule .e-icon.e-leftind {
         position: absolute;
         background-size: 20px;
         top: 3px;
@@ -24932,16 +24949,16 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule.e-rtl .e-icon.e-leftind {
+    .e-schedule.e-rtl .e-icon.e-leftind {
         left: 3px;
         top: 3px;
     }
 
-     .e-schedule .e-icon.e-rightind:before {
+    .e-schedule .e-icon.e-rightind:before {
         font-size: 12px;
     }
 
-     .e-schedule .e-icon.e-rightind {
+    .e-schedule .e-icon.e-rightind {
         position: absolute;
         right: 0px;
         background-size: 19px;
@@ -24952,33 +24969,33 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-singleview {
+    .e-schedule .e-singleview {
         & when not (@skin= "material") {
             border-radius: 6px;
         }
     }
 
-     .e-schedule.e-rtl .e-lastview,
-     .e-schedule .e-firstview {
+    .e-schedule.e-rtl .e-lastview,
+    .e-schedule .e-firstview {
         & when not (@skin= "material") and not (@skin="office-365") {
             border-radius: 6px 0 0 6px;
         }
     }
 
-     .e-schedule.e-rtl .e-firstview,
-     .e-schedule .e-lastview {
+    .e-schedule.e-rtl .e-firstview,
+    .e-schedule .e-lastview {
         & when not (@skin= "material") and not (@skin="office-365") {
             border-radius: 0 6px 6px 0;
         }
     }
 
-     .e-schedule.e-rtl .e-lastview {
+    .e-schedule.e-rtl .e-lastview {
         & when not (@skin= "material") and not (@skin="office-365") {
             border-right: none;
         }
     }
 
-     .e-schedule .e-schedulesettings {
+    .e-schedule .e-schedulesettings {
         text-align: center;
 
         & when (@skin= "material") {
@@ -24987,21 +25004,21 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-emptytrdesign {
+    .e-schedule .e-emptytrdesign {
         height: 3px;
         width: 100%;
     }
 
-     .e-schedule .e-headrealldaytable {
+    .e-schedule .e-headrealldaytable {
         table-layout: fixed;
         height: 100%;
         position: relative;
         float: left;
     }
 
-     .e-schedule .e-empty,
-     .e-schedule .e-leftindenttable,
-     .e-schedule .e-workleftindent {
+    .e-schedule .e-empty,
+    .e-schedule .e-leftindenttable,
+    .e-schedule .e-workleftindent {
 
         & when (@skin= "material") {
             width: 140px;
@@ -25012,38 +25029,38 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-leftindent {
+    .e-schedule .e-leftindent {
         vertical-align: middle !important;
     }
 
-     .e-schedule .e-fixedlayout,
-     .e-schedule .e-leftindenttable {
+    .e-schedule .e-fixedlayout,
+    .e-schedule .e-leftindenttable {
         table-layout: fixed;
     }
 
-     .e-schedule .e-workleftindent,
-     .e-schedule .e-timecelltable tr:last-child td,
-     .e-schedule .e-workcellstab tr:last-child td {
+    .e-schedule .e-workleftindent,
+    .e-schedule .e-timecelltable tr:last-child td,
+    .e-schedule .e-workcellstab tr:last-child td {
         border-bottom: none;
     }
 
-     .e-schedule .e-lastcell {
+    .e-schedule .e-lastcell {
         border-bottom: none !important;
     }
 
-     .e-schedule .e-worktable {
+    .e-schedule .e-worktable {
         height: 100%;
         width: 100%;
         table-layout: fixed;
     }
 
-     .e-schedule .e-workcells {
+    .e-schedule .e-workcells {
         border-top: none;
         cursor: default;
     }
 
-     .e-schedule.e-scheduleouter,
-     .e-scheduledialog {
+    .e-schedule.e-scheduleouter,
+    .e-scheduledialog {
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -25053,12 +25070,12 @@ background-image: url('../@{font-path}/icons-white.png');
         overflow: hidden;
     }
 
-     .e-schedule .e-monthcells,
-     .e-schedule .e-alldaycells {
+    .e-schedule .e-monthcells,
+    .e-schedule .e-alldaycells {
         cursor: default;
     }
 
-     .e-schedule .e-timecells {
+    .e-schedule .e-timecells {
         text-align: center;
         position: relative;
         cursor: default;
@@ -25080,7 +25097,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-monthleftindent .e-timecells {
+    .e-schedule .e-monthleftindent .e-timecells {
         & when (@skin= "material") {
             width: 140px;
             vertical-align: middle;
@@ -25098,13 +25115,13 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-timecells:not(.e-dateheaderselect) .e-timecelldivs {
+    .e-schedule .e-timecells:not(.e-dateheaderselect) .e-timecelldivs {
         & when (@skin= "material") {
             padding-top: 20px;
         }
     }
 
-     .e-schedule .e-timedivcells {
+    .e-schedule .e-timedivcells {
         width: 51px;
         overflow: hidden;
         text-align: center;
@@ -25112,14 +25129,14 @@ background-image: url('../@{font-path}/icons-white.png');
         white-space: nowrap;
     }
 
-     .e-schedule .e-headerareadiv {
+    .e-schedule .e-headerareadiv {
         position: absolute;
         height: 100%;
         width: 100%;
     }
 
-     .e-schedule .e-resourcecells,
-     .e-schedule .e-monthnamecells  {
+    .e-schedule .e-resourcecells,
+    .e-schedule .e-monthnamecells  {
         & when (@skin= "material") {
             height: 47px;
         }
@@ -25136,12 +25153,12 @@ background-image: url('../@{font-path}/icons-white.png');
         text-overflow: ellipsis;
     }
 
-     .e-schedule .e-scrolltimecells {
+    .e-schedule .e-scrolltimecells {
         position: absolute;
     }
 
-     .e-schedule .e-celldefaultheight .e-workcells,
-     .e-schedule .e-celldefaultheight .e-ampmdisplay {
+    .e-schedule .e-celldefaultheight .e-workcells,
+    .e-schedule .e-celldefaultheight .e-ampmdisplay {
         & when (@skin= "material") {
             height: 48px;
         }
@@ -25155,7 +25172,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontal .e-celldefaultheight .e-workcells {
+    .e-schedule .e-horizontal .e-celldefaultheight .e-workcells {
         height: 20px;
 
         & when (@skin= "office-365") {
@@ -25163,9 +25180,9 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-headercellsheight,
-     .e-schedule .e-alldaycellsheight,
-     .e-schedule .e-monthnameleftindentcell.e-headercellsheight {
+    .e-schedule .e-headercellsheight,
+    .e-schedule .e-alldaycellsheight,
+    .e-schedule .e-monthnameleftindentcell.e-headercellsheight {
         & when (@skin= "material") {
             height: 47px !important;
         }
@@ -25175,20 +25192,20 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-headercellsheight,
-     .e-schedule .e-alldaycellsheight {
+    .e-schedule .e-headercellsheight,
+    .e-schedule .e-alldaycellsheight {
         & when not (@skin= "material") and not (@skin="office-365") {
             height: 27px !important;
         }
     }
 
-     .e-schedule .e-monthnameleftindentcell.e-headercellsheight {
+    .e-schedule .e-monthnameleftindentcell.e-headercellsheight {
         & when not (@skin= "material") and not (@skin="office-365") {
             height: 29px !important;
         }
     }
 
-     .e-schedule .e-ampmstyle {
+    .e-schedule .e-ampmstyle {
         text-align: center;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -25212,32 +25229,32 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-ampmstyle,
-     .e-schedule .e-commonviewbutton,
-     .e-schedule .e-alldaycells {
+    .e-schedule .e-ampmstyle,
+    .e-schedule .e-commonviewbutton,
+    .e-schedule .e-alldaycells {
         box-sizing: content-box;
     }
 
-     .e-schedule .e-appointwrapper {
+    .e-schedule .e-appointwrapper {
         position: relative;
     }
 
-     .e-schedule .e-inlinewrapper {
+    .e-schedule .e-inlinewrapper {
         position: relative;
         z-index: 9;
     }
 
-     .e-schedule .e-monthcurrenttime {
+    .e-schedule .e-monthcurrenttime {
         font-weight: 600;
     }
 
-     .e-schedule .e-highlightcurrenttimeline {
+    .e-schedule .e-highlightcurrenttimeline {
         height: 1px;
         position: absolute;
         z-index: 1;
     }
 
-     .e-schedule .e-currenttime {
+    .e-schedule .e-currenttime {
         height: 13px;
         width: 28px;
         margin-left: 25%;
@@ -25245,33 +25262,33 @@ background-image: url('../@{font-path}/icons-white.png');
         text-align: center;
     }
 
-     .e-schedule .e-timewidth {
+    .e-schedule .e-timewidth {
         width: 42px !important;
     }
 
-     .e-schedule .e-appsoverflow {
+    .e-schedule .e-appsoverflow {
         height: 15px;
         width: 15px;
         position: absolute;
         cursor: pointer;
     }
 
-     .e-schedule .e-workareadiv {
+    .e-schedule .e-workareadiv {
         position: relative;
         height: 100%;
         overflow: hidden;
     }
 
-     .e-schedule .e-workcellstab {
+    .e-schedule .e-workcellstab {
         width: 100%;
         table-layout: fixed;
     }
 
-     .e-schedule .e-timecelltable {
+    .e-schedule .e-timecelltable {
         width: 100%;
     }
 
-     .e-schedule .e-monthheader {
+    .e-schedule .e-monthheader {
         padding-left: 5px;
         height: 20px;
         cursor: pointer;
@@ -25286,15 +25303,15 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-monthdateshighlight {
+    .e-schedule .e-monthdateshighlight {
         & when (@skin= "material") {
             opacity: 0.38;
         }
     }
 
-     .e-schedule .e-monthempty,
-     .e-schedule .e-monthempty .e-leftindenttable,
-     .e-schedule .e-monthleftindent {
+    .e-schedule .e-monthempty,
+    .e-schedule .e-monthempty .e-leftindenttable,
+    .e-schedule .e-monthleftindent {
         & when (@skin= "material") {
             width: 140px;
         }
@@ -25308,14 +25325,14 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-monthappointment, .e-schedule .e-alldayappointment {
+    .e-schedule .e-monthappointment, .e-schedule .e-alldayappointment {
         box-sizing: border-box !important;
     }
 
-     .e-schedule .e-monthappointment,
-     .e-schedule .e-alldayappointment,
-     .e-schedule .e-appointment,
-     .e-schedule .e-inline {
+    .e-schedule .e-monthappointment,
+    .e-schedule .e-alldayappointment,
+    .e-schedule .e-appointment,
+    .e-schedule .e-inline {
         overflow: hidden;
         position: absolute;
         text-align: left;
@@ -25323,12 +25340,12 @@ background-image: url('../@{font-path}/icons-white.png');
         border-radius: @border-radius;
     }
 
-     .e-schedule .e-inlineedit:focus,
-     .e-schedule .e-inlinetext:focus {
+    .e-schedule .e-inlineedit:focus,
+    .e-schedule .e-inlinetext:focus {
         outline: none;
     }
 
-     .e-schedule .e-alldayappointment {
+    .e-schedule .e-alldayappointment {
 
         & when (@skin= "material") {
             margin: 2px 0px;
@@ -25344,7 +25361,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-monthappointment {
+    .e-schedule .e-monthappointment {
 
         & when (@skin= "material") {
             margin-top: 3px;
@@ -25360,7 +25377,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-horizontal .e-appointment {
+    .e-schedule .e-horizontal .e-appointment {
 
         & when (@skin= "material") {
             margin-top: 3px;
@@ -25376,15 +25393,15 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-scheduleheader > td {
+    .e-schedule .e-scheduleheader > td {
         border-radius: @border-top-radius;
     }
 
-     .e-schedule .e-contentarearow > td {
+    .e-schedule .e-contentarearow > td {
         border-radius: @border-bottom-radius;
     }
 
-     .e-schedule .e-apptext {
+    .e-schedule .e-apptext {
         & when (@skin= "material") {
             font-size: 13px;
             line-height: 20px;
@@ -25404,7 +25421,7 @@ background-image: url('../@{font-path}/icons-white.png');
         text-overflow: ellipsis;
     }
 
-     .e-schedule .e-vertical .e-appointment .e-apptext {
+    .e-schedule .e-vertical .e-appointment .e-apptext {
         & when (@skin= "material") {
             padding: 8px 0px 8px 0px;
         }
@@ -26284,11 +26301,11 @@ background-image: url('../@{font-path}/icons-white.png');
         font-size: 10px;
     }
 
-     .e-schedulequickdialog > div {
+    .e-schedulequickdialog > div {
         overflow: visible;
     }
 
-     .e-schedulequickdialog {
+    .e-schedulequickdialog {
         -moz-box-shadow: 0 0 9px rgba(0,0,0,.4) !important;
         -webkit-box-shadow: 0 0 9px rgba(0,0,0,.4) !important;
         box-shadow: 0 0 9px rgba(0,0,0,.4) !important;
@@ -26312,7 +26329,7 @@ background-image: url('../@{font-path}/icons-white.png');
         cursor: pointer;
     }
 
-     .e-schedule .icon-AddGrad:before {
+    .e-schedule .icon-AddGrad:before {
         margin-top: 5px;
         float: right;
     }
@@ -26744,7 +26761,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-scheduledialog .e-scheduledelete:before {
+    .e-scheduledialog .e-scheduledelete:before {
         font-size: 20px;
     }
 
@@ -26802,46 +26819,46 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule.e-rtl .e-icon.e-schedulemouseclose {
+    .e-schedule.e-rtl .e-icon.e-schedulemouseclose {
         right: auto;
         left: 5px;
     }
 
-     .e-scheduledialog .e-alertbtn .e-alertOk {
+    .e-scheduledialog .e-alertbtn .e-alertOk {
         & when not (@skin= "office-365") {
             margin: 0px 10px 0px 10px;
         }
     }
 
-     .e-scheduledialog .e-alertbtn .e-alertCancel {
+    .e-scheduledialog .e-alertbtn .e-alertCancel {
         & when not (@skin= "material") {
             margin-right: 10px;
         }
     }
 
-     .e-scheduledialog .e-recurtitle {
+    .e-scheduledialog .e-recurtitle {
         font-size: 16px;
         font-weight: bold;
         padding: 8px;
     }
 
-     .e-schedule .icon-AddGrad:before:before {
+    .e-schedule .icon-AddGrad:before:before {
         content: "\e69f";
     }
 
-     .e-schedule .e-timeidicatorcircle:before {
+    .e-schedule .e-timeidicatorcircle:before {
         font-size: 9px;
         top: 2px;
         left: -1px;
         position: absolute;
     }
 
-     .e-schedule .e-ewexpand:before {
+    .e-schedule .e-ewexpand:before {
         content: "\e6fb";
         font-size: 14px !important;
     }
 
-     .e-schedule .e-appointresizer-right {
+    .e-schedule .e-appointresizer-right {
         margin-right: -4px;
         margin-top: 2px;
 
@@ -26850,7 +26867,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-appointresizer-left {
+    .e-schedule .e-appointresizer-left {
         margin-left: 0;
         margin-top: 2px;
 
@@ -26859,7 +26876,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule.e-rtl .e-appointresizer-left {
+    .e-schedule.e-rtl .e-appointresizer-left {
         margin-left: 4px;
         margin-top: 2px;
 
@@ -26868,7 +26885,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule.e-rtl .e-appointresizer-right {
+    .e-schedule.e-rtl .e-appointresizer-right {
         margin-right: -8px;
         margin-top: 2px;
 
@@ -26877,21 +26894,21 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule .e-nsexpand:before {
+    .e-schedule .e-nsexpand:before {
         content: "\e712";
         font-size: 14px !important;
         line-height: 0px;
     }
 
-     .e-schedule .e-appointresizer-top {
+    .e-schedule .e-appointresizer-top {
         margin-top: 1px;
     }
 
-     .e-schedule .e-appointresizer-bottom {
+    .e-schedule .e-appointresizer-bottom {
         margin-bottom: 0;
     }
 
-     .e-schedule .e-appsoverflow:before {
+    .e-schedule .e-appsoverflow:before {
         font-size: 12px;
     }
 
@@ -26904,29 +26921,29 @@ background-image: url('../@{font-path}/icons-white.png');
         z-index: 1;
     }
 
-     .e-schedule .e-upicon,
-     .e-schedule .e-downicon {
+    .e-schedule .e-upicon,
+    .e-schedule .e-downicon {
         height: 20px;
         position: absolute;
         z-index: 1;
     }
 
-     .e-schedule .e-appup,
-     .e-schedule .e-appdown {
+    .e-schedule .e-appup,
+    .e-schedule .e-appdown {
         float: right;
         margin-right: 2px;
         opacity: 0.5;
     }
 
-     .e-schedule.e-rtl .e-appup,
-     .e-schedule.e-rtl .e-appdown {
+    .e-schedule.e-rtl .e-appup,
+    .e-schedule.e-rtl .e-appdown {
         float: left;
         margin-left: 2px;
         opacity: 0.5;
     }
 
-     .e-schedule .e-recurapp,
-     .e-schedule .e-recureditapp {
+    .e-schedule .e-recurapp,
+    .e-schedule .e-recureditapp {
         display: inline-block;
         vertical-align: middle;
         float: left;
@@ -26944,24 +26961,24 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-schedule.e-rtl .e-recurapp,
-     .e-schedule.e-rtl .e-recureditapp {
+    .e-schedule.e-rtl .e-recurapp,
+    .e-schedule.e-rtl .e-recureditapp {
         margin: 1px 0 0 5px;
         float: right;
     }
 
-     .e-schedule .e-scheduleAppGlassy {
+    .e-schedule .e-scheduleAppGlassy {
         filter: alpha(opacity=60);
         -moz-opacity: 0.6;
         opacity: 0.6;
     }
 
-     .e-scheduledialog div.e-error {
+    .e-scheduledialog div.e-error {
         position: absolute;
         z-index: 9999;
     }
 
-     .e-scheduledialog div.e-error .e-errortail {
+    .e-scheduledialog div.e-error .e-errortail {
         height: 0;
         width: 0;
         position: relative;
@@ -26970,33 +26987,33 @@ background-image: url('../@{font-path}/icons-white.png');
         border-bottom: 8px solid;
     }
 
-     .e-scheduledialog div.e-error .e-toparrow {
+    .e-scheduledialog div.e-error .e-toparrow {
         left: 10%;
         border-top-width: 2px;
         display: block;
     }
 
-     .e-scheduledialog.e-rtl div.e-error .e-toparrow {
+    .e-scheduledialog.e-rtl div.e-error .e-toparrow {
         right: 10%;
     }
 
-     .e-scheduledialog .e-error div.e-field-validation-error {
+    .e-scheduledialog .e-error div.e-field-validation-error {
         border-radius: 4px;
         font-size: 14px;
         padding: 4px;
     }
 
-     .e-scheduleAppGlassy { /*While enable external drag and drop the appointment rendered in body tag. The class applies only external drag and drop*/
+    .e-scheduleAppGlassy { /*While enable external drag and drop the appointment rendered in body tag. The class applies only external drag and drop*/
         filter: alpha(opacity=60);
         -moz-opacity: 0.6;
         opacity: 0.6;
     }
 
-     .e-schedule .e-monthnamerow .e-monthrow{
+    .e-schedule .e-monthnamerow .e-monthrow{
         text-align: center;
     }
 
-     .e-schedule .e-horizontalmonthtimecellsht.e-monthheaderrow{
+    .e-schedule .e-horizontalmonthtimecellsht.e-monthheaderrow{
         height:92px;
     }
 
@@ -27006,7 +27023,7 @@ background-image: url('../@{font-path}/icons-white.png');
 }
 
 .mixin(@widget) when (@widget = reportviewer), (@widget = none) {
-    .e-reportviewer-icon {
+     .e-reportviewer-icon {
         font-family: 'ej-webfont';
         speak: none;
         font-style: normal;
@@ -27053,7 +27070,7 @@ background-image: url('../@{font-path}/icons-white.png');
         margin-top: 4px;
     }
 
-    .e-reportviewer-toolbarul {
+     .e-reportviewer-toolbarul {
         & when not (@skin = "material") and not (@skin = "office-365")  {
             height: 34px !important;
             margin: 0.75px !important;
@@ -27066,7 +27083,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-toolbarli {
+     .e-reportviewer-toolbarli {
         & when (@skin = "office-365") {
             width: 20px;
             height: 20px;
@@ -27086,7 +27103,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-tbdiv {
+     .e-reportviewer-tbdiv {
         width: 16px;
         height: 16px;
         border: 1px solid;
@@ -27094,7 +27111,7 @@ background-image: url('../@{font-path}/icons-white.png');
         margin: 4px 0px;
     }
 
-    .e-reportviewer-outerborder {
+     .e-reportviewer-outerborder {
         background-color: transparent;
         border: 1px solid;
         border-color: transparent;
@@ -27104,7 +27121,7 @@ background-image: url('../@{font-path}/icons-white.png');
         float: left;
     }
 
-    .e-reportviewer-outerborder:hover {
+     .e-reportviewer-outerborder:hover {
         border: 1px solid;
     }
 
@@ -27156,7 +27173,7 @@ background-image: url('../@{font-path}/icons-white.png');
         z-index: 2147483647;
     }
 
-    .e-reportviewer-headerspan {
+     .e-reportviewer-headerspan {
         font-style: normal;
         font-weight: bold;
         padding: 1px;
@@ -27164,7 +27181,7 @@ background-image: url('../@{font-path}/icons-white.png');
         word-wrap: break-word;
     }
 
-    .e-reportviewer-contentspan {
+     .e-reportviewer-contentspan {
         word-wrap: break-word;
 
         & when (@skin= "material") {
@@ -27181,11 +27198,11 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-param-datepicker {
+     .e-reportviewer-param-datepicker {
        float: left;
     }
 
-    .e-reportviewer-ejdropdownlist {
+     .e-reportviewer-ejdropdownlist {
         width: auto;
 		height: auto;
         float: left;
@@ -27204,16 +27221,16 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-toolbarcontainer input.e-input, .e-reportviewer-viewerblockcontent input.e-input {
+    .e-reportviewer-toolbarcontainer input.e-input,  .e-reportviewer-viewerblockcontent input.e-input {
         line-height: normal !important;
     }
 
-    .e-reportviewer-print, .e-reportviewer-emptyconetent, .e-reportviewer-pagefit, .e-reportviewer-export, .e-reportviewer-gotonext, .e-reportviewer-gotonext.e-reportviewer-disabled, .e-reportviewer-gotoprevious, .e-reportviewer-gotoprevious.e-reportviewer-disabled, .e-reportviewer-gotofirst, .e-reportviewer-gotofirst.e-reportviewer-disabled, .e-reportviewer-gotolast, .e-reportviewer-gotolast.e-reportviewer-disabled, .e-reportviewer-zoomin, .e-reportviewer-zoomout, .e-reportviewer-refresh, .e-reportviewer-parameter, .e-reportviewer-documentmap, .e-reportviewer-gotoparent, .e-reportviewer-preview, .e-reportviewer-pagesetup, .e-reportviewer-printsetup {
+     .e-reportviewer-print,  .e-reportviewer-emptyconetent,  .e-reportviewer-pagefit,  .e-reportviewer-export,  .e-reportviewer-gotonext,  .e-reportviewer-gotonext.e-reportviewer-disabled,  .e-reportviewer-gotoprevious,  .e-reportviewer-gotoprevious.e-reportviewer-disabled,  .e-reportviewer-gotofirst,  .e-reportviewer-gotofirst.e-reportviewer-disabled,  .e-reportviewer-gotolast,  .e-reportviewer-gotolast.e-reportviewer-disabled,  .e-reportviewer-zoomin,  .e-reportviewer-zoomout,  .e-reportviewer-refresh,  .e-reportviewer-parameter,  .e-reportviewer-documentmap,  .e-reportviewer-gotoparent,  .e-reportviewer-preview,  .e-reportviewer-pagesetup,  .e-reportviewer-printsetup {
         width: 20px;
         height: 20px;
     }
 
-    .e-reportviewer-tbpage {
+     .e-reportviewer-tbpage {
         background-color: transparent;
         text-align: center;
         width: auto;
@@ -27233,7 +27250,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-pagenumber {
+     .e-reportviewer-pagenumber {
         min-height: 22px !important;
         min-width: 25px !important;
         height: 22px !important;
@@ -27248,19 +27265,19 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-tbdiv.e-reportviewer-zoomlist {
+     .e-reportviewer-tbdiv.e-reportviewer-zoomlist {
         border: 1px solid;
         margin: 4px 7px;
         width: 60px;
         height: 19px;
     }
 
-    .e-reportviewer-viewer {
+     .e-reportviewer-viewer {
         width: 100%;
         text-shadow: none !important;
     }
 
-    .e-reportviewer-viewerblock {
+     .e-reportviewer-viewerblock {
         width: 100%;
         border: 1px solid;
         font-size: 11pt;
@@ -27276,7 +27293,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-blockstyle {
+     .e-reportviewer-blockstyle {
         position: absolute;
         top: 0;
         left: 0;
@@ -27285,11 +27302,11 @@ background-image: url('../@{font-path}/icons-white.png');
         z-index: 10;
     }
 
-    .e-reportviewer-viewerblockcontent {
+     .e-reportviewer-viewerblockcontent {
         width: 100%;
     }
 
-    .e-reportviewer-viewerblockcellcontent {
+     .e-reportviewer-viewerblockcellcontent {
         border: 0;
         vertical-align: middle;
         -webkit-user-select: none;
@@ -27297,7 +27314,7 @@ background-image: url('../@{font-path}/icons-white.png');
         -moz-user-select: none;
     }
 
-    .e-reportviewer-paramcheckbox {
+     .e-reportviewer-paramcheckbox {
         & when (@skin = "office-365") {
             padding: 2px 5px 6px 0.58em;
             width: 95.5%;
@@ -27312,7 +27329,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-paramcheckboxlabel {
+     .e-reportviewer-paramcheckboxlabel {
         font-size: 14px !important;
         & when (@skin = "office-365") {
             padding: 3px 0 0 0.56em !important;
@@ -27325,7 +27342,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-device-paramcheckbox {
+     .e-reportviewer-device-paramcheckbox {
         & when (@skin = "office-365") {
             background-color: #ffffff;
             padding-left: 4.5% !important;
@@ -27341,7 +27358,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-viewreport {
+     .e-reportviewer-viewreport {
         border-left: 1px solid;
         border-right: 0;
         border-bottom: 0;
@@ -27351,7 +27368,7 @@ background-image: url('../@{font-path}/icons-white.png');
         vertical-align: top;
     }
 
-    .e-reportviewer-viewreportbutton {
+     .e-reportviewer-viewreportbutton {
         line-height: normal;
         vertical-align: baseline;
         padding: initial;
@@ -27363,7 +27380,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-scrollcontainer {
+     .e-reportviewer-scrollcontainer {
         line-height: normal !important;
         position: relative;
         height: 100%;
@@ -27372,14 +27389,14 @@ background-image: url('../@{font-path}/icons-white.png');
         text-align: left;
     }
 
-    .e-reportviewer-pageviewcontainer {
+     .e-reportviewer-pageviewcontainer {
         width: auto;
         height: auto;
         border: 1px none;
         margin: 0px auto;
     }
 
-    .e-reportviewer-pageouterline {
+     .e-reportviewer-pageouterline {
         background-color: transparent;
         position: relative;
         border: 1px solid;
@@ -27396,7 +27413,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-pageview {
+     .e-reportviewer-pageview {
         position: absolute;
         & when (@skin = "office-365") {
             -moz-box-shadow: 0px 0px 5px 0.2px rgba(0,0,0,0.22);
@@ -27410,7 +27427,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-elementalignments {
+     .e-reportviewer-elementalignments {
         & when not (@skin= "material") {
             /*other*/
             border: 1px solid;
@@ -27421,7 +27438,7 @@ background-image: url('../@{font-path}/icons-white.png');
         vertical-align: inherit;
     }
 
-    .e-reportviewer-elementalignments:focus {
+     .e-reportviewer-elementalignments:focus {
         & when not (@skin= "material") {
             /*other*/
             border: 1px solid !important;
@@ -27430,7 +27447,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-	.e-reportviewer-viewercontainer {
+	 .e-reportviewer-viewercontainer {
 		border: 1px solid;
 
         & when (@skin = "material") {
@@ -27440,21 +27457,21 @@ background-image: url('../@{font-path}/icons-white.png');
         }
 	}
 
-	.e-reportviewer-box-border, .e-reportviewer-pageviewcontainer,
-	.e-reportviewer-pageouterline, .e-reportviewer-viewercontainer,
-	.e-reportviewer-viewercontainer, .e-reportviewer-viewerblock {
+	 .e-reportviewer-box-border,  .e-reportviewer-pageviewcontainer,
+	 .e-reportviewer-pageouterline,  .e-reportviewer-viewercontainer,
+	 .e-reportviewer-viewercontainer,  .e-reportviewer-viewerblock {
 		-webkit-box-sizing: border-box !important;
 		-moz-box-sizing: border-box !important;
 		box-sizing: border-box !important;
 	}
 
-	.e-reportviewer-box-content, .e-reportviewer-pageview {
+	 .e-reportviewer-box-content,  .e-reportviewer-pageview {
 		-webkit-box-sizing: content-box !important;
 		-moz-box-sizing: content-box !important;
 		box-sizing: content-box !important;
 	}
 
-    .e-reportviewer-textbox {
+     .e-reportviewer-textbox {
         & when not (@skin= "material") {
             /*other*/
             border: 1px solid;
@@ -27467,16 +27484,16 @@ background-image: url('../@{font-path}/icons-white.png');
         padding: 0px;
     }
 
-    .e-reportviewer-label, .e-reportviewer-labelpageno {
+     .e-reportviewer-label,  .e-reportviewer-labelpageno {
         border: none;
         vertical-align: text-top;
     }
 
-    .e-reportviewer-documentmappopup {
+     .e-reportviewer-documentmappopup {
         border: 1px solid;
     }
 
-    .e-reportviewer-pagepopupinfo {
+     .e-reportviewer-pagepopupinfo {
         height: 30px;
         width: auto;
         /*height: auto;*/
@@ -27494,26 +27511,26 @@ background-image: url('../@{font-path}/icons-white.png');
         opacity: .5;
     }
 
-    .e-reportviewer-popuppageno {
+     .e-reportviewer-popuppageno {
         min-width: 20px;
         height: 15px;
         display: table-cell;
     }
 
-    .e-reportviewer-popuptotalpage {
+     .e-reportviewer-popuptotalpage {
         /*display: table-cell;*/
         /*vertical-align: middle;*/
     }
 
-    .e-reportviewer-expandtoggle {
+     .e-reportviewer-expandtoggle {
         background: url('@{font-path}/reportviewer/expand.svg') no-repeat center;
     }
 
-    .e-reportviewer-collapsetoggle {
+     .e-reportviewer-collapsetoggle {
         background: url('@{font-path}/reportviewer/collapse.svg') no-repeat center;
     }
 
-    .e-reportviewer-sortingUpDown {
+     .e-reportviewer-sortingUpDown {
         background: url('@{font-path}/reportviewer/updown.png');
         background-repeat: no-repeat;
         background-origin: padding-box;
@@ -27522,7 +27539,7 @@ background-image: url('../@{font-path}/icons-white.png');
         background-size: 10px;
     }
 
-    .e-reportviewer-sortingUp {
+     .e-reportviewer-sortingUp {
         background: url('@{font-path}/reportviewer/up.png');
         background-repeat: no-repeat;
         background-origin: padding-box;
@@ -27531,7 +27548,7 @@ background-image: url('../@{font-path}/icons-white.png');
         background-size: 10px;
     }
 
-    .e-reportviewer-sortingDown {
+     .e-reportviewer-sortingDown {
         background: url('@{font-path}/reportviewer/down.png');
         background-repeat: no-repeat;
         background-origin: padding-box;
@@ -27540,7 +27557,7 @@ background-image: url('../@{font-path}/icons-white.png');
         background-size: 10px;
     }
 
-    .e-reportviewer-close {
+     .e-reportviewer-close {
         padding-bottom: 29px;
         padding-right: 7px;
         font-weight: bold;
@@ -27556,17 +27573,17 @@ background-image: url('../@{font-path}/icons-white.png');
         padding: 24px 20px 24px 15px !important
     }
 
-	.e-reportviewer-error-content {
+	 .e-reportviewer-error-content {
 		padding: 4px 6px 6px !important;
 		line-height: 1.8;
 	}
 
-    .e-reportviewer-alert-table {
+     .e-reportviewer-alert-table {
         border-spacing: 2px !important;
         border-collapse: separate !important;
     }
 
-    .e-reportviewer-scroller .e-scrollbar .e-hscroll .e-hup.e-icon {
+     .e-reportviewer-scroller .e-scrollbar .e-hscroll .e-hup.e-icon {
         display: none;
     }
 
@@ -27601,15 +27618,15 @@ background-image: url('../@{font-path}/icons-white.png');
       text-indent: 1.2px;
    }
 
-    .e-rptviewer-okbtn{
+     .e-rptviewer-okbtn {
         width: 68px;
     }
 
-    .e-rptviewer-cancelbtn{
+     .e-rptviewer-cancelbtn {
         width: 72px;
     }
 
-    .e-reportviewer-blockcontainer {
+     .e-reportviewer-blockcontainer {
         & when (@skin = "material") {
             padding-left: 15px !important;
             padding-right: 10px !important;
@@ -27620,7 +27637,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-tr {
+     .e-reportviewer-tr {
         & when (@skin = "office-365") {
             height: 12px !important;
         }
@@ -27629,19 +27646,19 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-pagesetuptr {
+     .e-reportviewer-pagesetuptr {
         height: 10px !important;
         & when (@skin = "office-365") {
             font-size: 14px !important;
         }
     }
 
-    .e-reportviewer-pagesetupheader {
+     .e-reportviewer-pagesetupheader {
         padding-top: 10px;
         padding-bottom: 5px !important;
     }
 
-    .e-reportviewer-pagesetupcontent {
+     .e-reportviewer-pagesetupcontent {
         & when not (@skin = "material") {
             font-size: 14px;
         }
@@ -27650,107 +27667,107 @@ background-image: url('../@{font-path}/icons-white.png');
         padding-bottom: 10px !important;
     }
 
-    .e-reportviewer-expandtoggle:hover, .e-reportviewer-collapsetoggle:hover, .e-reportviewer-drillhover:hover, .e-reportviewer-sortingUp:hover, .e-reportviewer-sortingDown:hover, .e-reportviewer-sortingUpDown:hover, .e-reportviewer-drillhover:hover {
+     .e-reportviewer-expandtoggle:hover,  .e-reportviewer-collapsetoggle:hover,  .e-reportviewer-drillhover:hover,  .e-reportviewer-sortingUp:hover,  .e-reportviewer-sortingDown:hover,  .e-reportviewer-sortingUpDown:hover,  .e-reportviewer-drillhover:hover {
         cursor: pointer;
     }
 
-    .e-reportviewer-pagefit:before {
+     .e-reportviewer-pagefit:before {
         content: "\e660";
     }
 
-    .e-reportviewer-pagefittopage:before {
+     .e-reportviewer-pagefittopage:before {
         content: "\e657";
     }
 
-    .e-reportviewer-emptyconetent:before {
+     .e-reportviewer-emptyconetent:before {
         content: "\00a0 \00a0";
     }
 
-    .e-reportviewer-print:before {
+     .e-reportviewer-print:before {
         content: "\e71f";
     }
 
-    .e-reportviewer-export:before {
+     .e-reportviewer-export:before {
         content: "\e720";
     }
 
-    .e-reportviewer-pagesetup:before {
+     .e-reportviewer-pagesetup:before {
         content: "\e6d1";
     }
 
-    .e-reportviewer-gotonext:before {
+     .e-reportviewer-gotonext:before {
         content: "\e723";
     }
 
-    .e-reportviewer-gotonext.e-reportviewer-disabled:before {
+     .e-reportviewer-gotonext.e-reportviewer-disabled:before {
         content: "\e723";
     }
 
-    .e-reportviewer-gotoprevious:before {
+     .e-reportviewer-gotoprevious:before {
         content: "\e722";
     }
 
-    .e-reportviewer-gotoprevious.e-reportviewer-disabled {
+     .e-reportviewer-gotoprevious.e-reportviewer-disabled {
         content: "\e722";
     }
 
-    .e-reportviewer-gotofirst:before {
+     .e-reportviewer-gotofirst:before {
         content: "\e721";
     }
 
-    .e-reportviewer-gotolast:before {
+     .e-reportviewer-gotolast:before {
         content: "\e724";
     }
 
-    .e-reportviewer-gotolast.e-reportviewer-disabled {
+     .e-reportviewer-gotolast.e-reportviewer-disabled {
         content: "\e724";
     }
 
-    .e-reportviewer-gotofirst.e-reportviewer-disabled {
+     .e-reportviewer-gotofirst.e-reportviewer-disabled {
         content: "\e721";
     }
 
-    .e-reportviewer-zoomin:before {
+     .e-reportviewer-zoomin:before {
         content: "\e725";
     }
 
-    .e-reportviewer-zoomout:before {
+     .e-reportviewer-zoomout:before {
         content: "\e726";
     }
 
-    .e-reportviewer-refresh:before {
+     .e-reportviewer-refresh:before {
         content: "\e727";
     }
 
-    .e-reportviewer-parameter:before {
+     .e-reportviewer-parameter:before {
         content: "\e728";
     }
 
-    .e-reportviewer-documentmap:before {
+     .e-reportviewer-documentmap:before {
         content: "\e719";
     }
 
-    .e-reportviewer-gotoparent:before {
+     .e-reportviewer-gotoparent:before {
         content: "\e71e";
     }
 
-    .e-reportviewer-preview:before {
+     .e-reportviewer-preview:before {
         content: "\e72a";
     }
 
-    .e-reportviewer-close:before {
+     .e-reportviewer-close:before {
         content: "\e74e";
     }
 
-    .e-reportviewer-zoomSelection_popup {
+     .e-reportviewer-zoomSelection_popup {
         max-height: none !important;
     }
 
-    .e-reportviewer-zoomSelection_popup-ul {
+     .e-reportviewer-zoomSelection_popup-ul {
         text-align: center !important;
     }
 
-    .e-reportviewer-popupli {
+     .e-reportviewer-popupli {
         border: 0 none;
         float: none;
         position: relative;
@@ -27776,25 +27793,25 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-reportviewer-popupspan {
+     .e-reportviewer-popupspan {
         & when (@skin = "office-365") {
             position: absolute;
             padding-top: 8px;
         }
     }
 
-    .e-reportviewer-lispan {
+     .e-reportviewer-lispan {
         text-decoration: none;
         white-space: nowrap;
         padding: 2px !important;
         vertical-align: text-bottom;
     }
 
-    .e-reportviewer-viewerblock-parentdiv .e-scrollbar .e-vscroll .e-vup.e-icon {
+     .e-reportviewer-viewerblock-parentdiv .e-scrollbar .e-vscroll .e-vup.e-icon {
         display: none;
     }
 
-    .e-reportviewer-txt-overflow {
+     .e-reportviewer-txt-overflow {
         overflow: hidden;
         -ms-text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
@@ -37682,7 +37699,7 @@ slideRight Animate
         text-indent: -12px;
     }
 
-    .e-ss-cut:before {
+     .e-ss-cut:before {
         content: "\e601";
         font-family: "ej-xlfont";
     }
@@ -37703,14 +37720,14 @@ slideRight Animate
         line-height: 13px;
     }
 
-    .e-ss-copy:before {
+     .e-ss-copy:before {
         content: "\e602";
         font-family: "ej-xlfont";
         font-size: 15px;
         text-indent: -1px;
     }
 
-    .e-ss-paste:before {
+     .e-ss-paste:before {
         content: "\e674";
         font-family: "ej-xlfont";
         font-size: 15px;
@@ -37742,7 +37759,7 @@ slideRight Animate
         text-indent: -1px;
     }
 
-    .e-ssr-clear:before {
+     .e-ssr-clear:before {
         content: "\e63a";
         font-family: "ej-xlfont";
         font-size: 18px;
@@ -37751,21 +37768,21 @@ slideRight Animate
         height: 30px;
     }
 
-    .e-ss-clear:before {
+     .e-ss-clear:before {
         content: "\e63b";
         font-family: "ej-xlfont";
         font-size: 15px;
         text-indent: 0px;
     }
 
-    .e-ss-clearformat:before {
+     .e-ss-clearformat:before {
         content: "\e63c";
         font-family: "ej-xlfont";
         font-size: 17px;
         text-indent: 2px;
     }
 
-    .e-ssr-autosum:before {
+     .e-ssr-autosum:before {
         content: "\e690";
         font-family: "ej-xlfont";
         font-size: 16px;
@@ -37773,7 +37790,7 @@ slideRight Animate
         text-indent: -4px;
     }
 
-    .e-ss-autosum:before {
+     .e-ss-autosum:before {
         content: "\e690";
         font-family: "ej-xlfont";
         font-size: 16px;
@@ -37781,7 +37798,7 @@ slideRight Animate
         text-indent: 1px;
     }
 
-    .e-ss-newsheet:before {
+     .e-ss-newsheet:before {
         content: "\e603";
         font-family: "ej-xlfont";
         font-size: 15px;
@@ -37789,7 +37806,7 @@ slideRight Animate
         line-height: 8px;
     }
 
-    .e-ss-open:before {
+     .e-ss-open:before {
         content: "\e605";
         font-family: "ej-xlfont";
         font-size: 15px;
@@ -38019,7 +38036,7 @@ slideRight Animate
         text-indent: -2px;
     }
 
-    .e-ss-addnew:before {
+     .e-ss-addnew:before {
         content: "\e66c";
         font-family: "ej-xlfont";
         font-size: 15px;
