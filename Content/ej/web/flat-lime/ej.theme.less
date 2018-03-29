@@ -60,6 +60,9 @@
 @content-font-weight: normal;
 @content-font-size:14px;
 
+@button-mozila-padding: '';
+@button-mozila-border: '';
+
 @scroll-bg-color: darken(@content-bg-color, 2%);
 @scroll-handle-color: @default-bg-stcolor;
 @scroll-handle-hover-color: @hover-bg-stcolor;
@@ -10112,6 +10115,17 @@ color:@theme-dark;
 @{e-widget}.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.today {
     background: @content-bg-color;
     color: @content-font-color;
+}
+
+@{e-widget}.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.e-state-hover:hover,
+@{e-widget}.e-daterangepicker-popup .e-datepicker .e-datepicker-days .e-state-default.today:hover {
+     & when not (@skin= "material") {
+        background: @hover-bg-stcolor;
+        color: @hover-font-color;
+        & when not (@skin= "office-365") {
+            border-radius: 4px;
+        }
+     }
 }
 
 @{e-widget}.e-daterangepicker-popup .e-custom-dateranges li:hover {
@@ -21602,6 +21616,9 @@ padding-right: 7.5px;
 width:5px !important;
 border: none;
 }
+@{e-js}.e-pivotclient .controlPanelTD {
+  display:inline-block;
+}
 @{e-js}.e-pivotclient .e-childsplit.e-rtl > .e-axisTable.e-pane {
 left:3.5px !important;
 }
@@ -29082,32 +29099,32 @@ box-shadow: -1px 0 10px 0 black;
 /*-------------------- Borders ------------------------ */
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-bborderright,
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-bctrlborderright,
-@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-bcbright {
+@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-bcborderright {
     border-right-color: @ssborder-bright;
 }
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-bborderbottom,
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-bctrlborderbottom,
-@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-bcbbottom {
+@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-bcborderbottom {
     border-bottom-color: @ssborder-bright;
 }
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-rborderright,
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-rctrlborderright,
-@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-rcbright {
+@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-rcborderright {
     border-right-color: #fc100c;
 }
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-rborderbottom,
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-rctrlborderbottom,
-@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-rcbbottom {
+@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-rcborderbottom {
     border-bottom-color: #fc100c;
 }
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-vborderright,
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-vctrlborderright,
-@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-vcbright {
+@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-vcborderright {
     border-right-color: #6a13ad;
 }
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-vborderbottom,
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-vctrlborderbottom,
-@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-vcbbottom {
+@{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-vcborderbottom {
     border-bottom-color: #6a13ad;
 }
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel .e-gborderright,
@@ -29134,10 +29151,10 @@ box-shadow: -1px 0 10px 0 black;
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel td.e-octrlborderbottom {
     border-bottom-color: #e59604;
 }
-@{e-js}.e-spreadsheet .e-spreadsheetmainpanel .e-thinright {
+@{e-js}.e-spreadsheet .e-spreadsheetmainpanel .e-thinborderright {
     border-right-color: @ssfroze-highlight-color;
 }
-@{e-js}.e-spreadsheet .e-spreadsheetmainpanel .e-thinbottom {
+@{e-js}.e-spreadsheet .e-spreadsheetmainpanel .e-thinborderbottom {
     border-bottom-color: @ssfroze-highlight-color;
 }
 @{e-js}.e-spreadsheet .e-ss-numeric .e-select .e-spin {
@@ -30974,6 +30991,14 @@ outline:none !important;
   transition: transform 300ms ease;
   }
 }
+
+@{e-widget} .e-ddl.e-input-group .e-ddl-hidden {
+  border: 0;
+  height: 0;
+  visibility: hidden;
+  width: 0;
+}
+
 @{e-widget} .e-input-group .e-input.e-placeholder {
 	top: 0px;
 	position: absolute;

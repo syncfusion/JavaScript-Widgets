@@ -91,6 +91,9 @@
 @header-border-size: 1px;
 @grid-box-shadow:none;
 
+@button-mozila-padding: 0px;
+@button-mozila-border: 0px;
+
 @input-border-width:@border-size;
 
 .e-ribbon.e-js .e-header .e-active a, .e-ribbon .e-header > .e-apptab .e-apptabanchor,
@@ -798,12 +801,17 @@
         bottom:0;
         top:auto;
     }
-
-        .e-slider-wrap.e-vertical.e-top-to-bottom .e-decreasebtn.e-select {
+	
+	.e-slider-wrap.e-vertical.e-top-to-bottom.e-rtl {
+		direction: ltr;
+    }
+	
+    .e-slider-wrap.e-vertical.e-top-to-bottom .e-decreasebtn.e-select {
         top:0;
         bottom:auto;
     }
-        .e-slider-wrap.e-vertical .e-top.e-decreasebtn.e-select {
+	
+    .e-slider-wrap.e-vertical .e-top.e-decreasebtn.e-select {
          bottom:0;
          top:auto;
     }
@@ -1559,6 +1567,11 @@
         }
     }
 
+    button::-moz-focus-inner{
+        padding: @button-mozila-padding;
+        border: @button-mozila-border;
+    }
+    
     .e-btn, .e-btn .e-btn-span {
         vertical-align: middle;
         border-spacing: 0;
@@ -11857,9 +11870,7 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-grid .e-widget [class^="e-"] {
         box-sizing: border-box;
     }
-	.e-grid [class^="e-"] .e-button {
-		box-sizing: border-box;
-	}
+
     .e-grid .e-dialog.e-widget .e-dialog-icon, .e-grid .e-widget .e-pagercontainer > .e-icon, .e-grid .e-widget .e-pagercontainer .e-numericitem,
     .e-grid .e-widget .e-filtericon, .e-grid .e-widget .e-filtertext, .e-grid .e-widget .e-predicate span, .e-grid .e-widget .e-value .e-chk-act, .e-grid .e-detailcell .e-groupheadercell,
     .e-grid .e-detailcell .e-ungroupbutton, .e-grid .e-excelfilter .e-chk-act {
@@ -12057,7 +12068,9 @@ background-image: url('../@{font-path}/icons-white.png');
         height: 307px !important;
         background: none white;
     }
-
+	.e-grid.e-columnChooser .e-button, .e-grid .e-ccButton{
+		box-sizing: border-box;
+	}
     .e-columnChooser .e-searchbox {
         position: relative;
         margin: 0px 10px 5px 11px;
@@ -36996,23 +37009,23 @@ slideRight Animate
         border-bottom: 1px dashed;
     }
     /*--------------------- Chart Borders -----------------------*/
-    .e-spreadsheet .e-spreadsheetmainpanel td.e-bcbright,
-    .e-spreadsheet .e-spreadsheetmainpanel td.e-vcbright,
-    .e-spreadsheet .e-spreadsheetmainpanel td.e-rcbright {
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-bcborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-vcborderright,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-rcborderright {
         border-right: 1px solid;
     }
 
-    .e-spreadsheet .e-spreadsheetmainpanel td.e-bcbbottom,
-    .e-spreadsheet .e-spreadsheetmainpanel td.e-vcbbottom,
-    .e-spreadsheet .e-spreadsheetmainpanel td.e-rcbbottom {
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-bcborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-vcborderbottom,
+    .e-spreadsheet .e-spreadsheetmainpanel td.e-rcborderbottom {
         border-bottom: 1px solid;
     }
     /*--------------------- Border -------------------------- */
-    .e-spreadsheet .e-spreadsheetmainpanel .e-thinright {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-thinborderright {
         border-right: 1px solid;
     }
 
-    .e-spreadsheet .e-spreadsheetmainpanel .e-thinbottom {
+    .e-spreadsheet .e-spreadsheetmainpanel .e-thinborderbottom {
         border-bottom: 1px solid;
     }
     /*--------------------- Selection -------------------------- */
@@ -37897,7 +37910,7 @@ slideRight Animate
         font-family: "ej-xlfont";
         font-size: 18px;
         line-height: 19px;
-        text-indent: -1px;
+        text-indent: -5px;
     }
 
     .e-spreadsheet .e-ss-fontcolor:before {
@@ -37905,7 +37918,7 @@ slideRight Animate
         font-family: "ej-xlfont";
         font-size: 15px;
         line-height: 17px;
-        text-indent: -1px;
+        text-indent: -5px;
     }
 
     .e-spreadsheet .e-ss-increasefontsize:before {
@@ -41327,7 +41340,7 @@ slideRight Animate
         }
     }
 
-    .e-spreadsheet .e-pager .e-currentitem, .e-spreadsheet .e-pager .e-currentitem:hover {
+    .e-spreadsheet .e-pager .e-currentitem.e-active, .e-spreadsheet .e-pager .e-currentitem.e-active:hover {
         & when (@skin = "material") {
             border-radius: 0px;
         }
@@ -42373,7 +42386,9 @@ slideRight Animate
     font-size: 18px;
 
 }
-
+.e-colorwidget.e-ss-colorpicker {
+	border-radius:0;
+}
     /*-------------------------------------SpreadSheet End -----------------------*/
 }
 

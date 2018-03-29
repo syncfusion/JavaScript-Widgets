@@ -1369,18 +1369,12 @@ padding-bottom:7px;
 }
 /*------------------------------------Menu End-------------------------------------*/
 @media (max-width : 420px) {
-	.e-ss-leftdiv, .e-ss-lefttopdiv {
+	.e-ss-leftdiv, .e-ss-lefttopdiv, .e-ss-fontmaindiv {
 		display: none;
 	}
-    .e-ss-fontmaindiv{
-        display: none;
-    }
-    .e-ss-drpfontdiv{
+    .e-ss-drpfontdiv, .e-ss-drpdiv {
         display: block;
     }
-	.e-ss-drpdiv {
-		display: block;
-	}
     .e-ss-maindiv {
 		max-width: 418px;
 		min-height: 300px;

@@ -9749,14 +9749,14 @@ return this;
 };
 jQuery.fn.ejDropDownTree = function (options) {
 /// <summary><br/>
-///The DropDownList control provides a list of hierarchical data to choose an item from the list.It can including other HTML elements such as images, textboxes, check box, radio buttons, and so on.<br/><br/>
+///The DropDownTree control provides a list of hierarchical data to choose an item from the list.It can including other HTML elements such as images, textboxes, check box, radio buttons, and so on.<br/><br/>
 ///Uses the keyboard for any action, including opening and closing the drop-down tree; navigating, expanding, and collapsing nodes of the dropdown tree; and more.
 ///<br/>allowKeyboardNavigation-boolean	default-true
 ///<br/><br/>
 ///Sets the root CSS class for DropDownTree that allows customization of appearance.
 ///<br/>cssClass-string	default-``
 ///<br/><br/>
-///Sets the separator when the multiSelectMode with delimiter option or checkbox is enabled.When you enter the delimiter value, the text after the delimiter is considered as a separateword or query. The delimiter string is a single character and must be a symbol. Mostly,the delimiter symbol is used as comma (,), semi-colon (;), or any other special character.
+///Sets the separator when the multiSelectMode with delimiter option or checkbox is enabled. When you enter the delimiter value, the text after the delimiter is considered as a separate word or query. The delimiter string is a single character and must be a symbol. Mostly, the delimiter symbol is used as comma (,), semi-colon (;), or any other special character.
 ///<br/>delimiter-string	default-,
 ///<br/><br/>
 ///Indicates whether the DropDownTree control responds to user interaction or not. By default, the control is in the enabled mode and can be disabled by setting this to false.
@@ -9801,10 +9801,10 @@ jQuery.fn.ejDropDownTree = function (options) {
 ///Specifies that the DropDownTree textbox values should be read-only.
 ///<br/>readOnly-boolean	default-false
 ///<br/><br/>
-///The DropDownTreeâ€™s textbox is displayed with rounded corner style.
+///The DropDownTree's textbox is displayed with rounded corner style.
 ///<br/>showRoundedCorner-boolean	default-false
 ///<br/><br/>
-///Specifies the targetID for the DropDownTreeâ€™s items.
+///Specifies the targetID for the DropDownTree's items.
 ///<br/>targetID-string	default-null
 ///<br/><br/>
 ///Specifies the delimiter between nodes (indicating their hierarchy).
@@ -9816,7 +9816,7 @@ jQuery.fn.ejDropDownTree = function (options) {
 ///Sets the jQuery validation rules in the DropDownTree.
 ///<br/>validationRules-any	default-null
 ///<br/><br/>
-///Specifies the value (text content) for the DropDownTree control. For the single selection mode, the selected itemâ€™s value will be returned in its data type, and for MultiSelectMode, returns the selected itemsâ€™ values separated by delimiter in string type.
+///Specifies the value (text content) for the DropDownTree control. For the single selection mode, the selected item's value will be returned in its data type, and for MultiSelectMode, returns the selected items values separated by delimiter in string type.
 ///<br/>value-string	default-null
 ///<br/><br/>
 ///Specifies a short hint that describes the expected value of the DropDownTree control.
@@ -10611,6 +10611,9 @@ jQuery.fn.ejGantt = function (options) {
 ///<br/><br/>
 ///Specifies the start day of the week in week timescale mode
 ///<br/>weekStartDay-number	default-0
+///<br/><br/>
+///Enable or disable the automatic timescale update on cell editing, dialog editing and taskbar editing.
+///<br/>updateTimescaleView-boolean	default-true
 ///<br/><br/>
 ///Specifies start date of the Gantt schedule. By default, start date will be rounded to its previous Sunday.
 ///<br/>scheduleStartDate-string	default-null
@@ -16458,6 +16461,9 @@ jQuery.fn.ejPivotChart = function (options) {
 ///<br/><br/>
 ///Sets the mode for the pivot chart widget to bind the data source either in the server-side or client-side.
 ///<br/>operationalMode-ej.Pivot.OperationalMode|string	default-ej.Pivot.OperationalMode.ClientMode
+///<br/><br/>
+///To override x axis for particular series, create an axis object by providing unique name by using name property and add it to axes array.
+///<br/>axes-Array&lt;any&gt;	default-[]
 ///<br/><br/>
 ///This is a horizontal axis that contains options to configure the axis and it is the primary x-axis for all series in the series array. To override x-axis for particular series, create an axis object by providing a unique name by using the name property and add it to the axes array. Then, assign the name to the seriesâ€™s xAxisName property to link both the axis and the series.
 ///<br/>primaryXAxis-any	default-{}
@@ -22816,6 +22822,9 @@ jQuery.fn.ejSpreadsheet = function (options) {
 ///Gets or sets a value that indicates whether to enable the sorting feature in the Spreadsheet.
 ///<br/>allowSorting-boolean	default-true
 ///<br/><br/>
+///Gets or sets a value that indicates whether to enable the sparkline feature in the Spreadsheet.
+///<br/>allowSparkline-boolean	default-false
+///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable undo and redo feature in the Spreadsheet.
 ///<br/>allowUndoRedo-boolean	default-true
 ///<br/><br/>
@@ -24330,6 +24339,9 @@ jQuery.fn.ejTimePicker = function (options) {
 ///<br/><br/>
 ///Sets a specified time value on the TimePicker.
 ///<br/>value-string|Date	default-null
+///<br/><br/>
+///Specifies the water mark text to be displayed in input text.
+///<br/>watermarkText-string	default-select a time
 ///<br/><br/>
 ///Defines the width of the TimePicker textbox.
 ///<br/>width-string|number	default-
