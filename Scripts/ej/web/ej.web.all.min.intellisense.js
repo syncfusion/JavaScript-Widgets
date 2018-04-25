@@ -11948,6 +11948,14 @@ filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchCa
 /// <param name="matchCase"	type="boolean">Optional - pass the match case value as true/false.</param>
 /// </signature>
 },
+filterContent:function(ejPredicate){
+/// <signature>
+/// <summary>
+/// To filter multiple columns with multiple conditions dynamically in Gantt.
+/// </summary>
+/// <param name="ejPredicate"	type="Gantt.EjPredicate">Pass the filtering column details and conditions as ejPredicate instance. The ejPredicate object is defined as fieldName,filterOperator, filterValue and ignoreCase properties.</param>
+/// </signature>
+},
 hideColumn:function(headerText){
 /// <signature>
 /// <summary>
@@ -13098,11 +13106,13 @@ getCurrentViewData:function(){
 /// Get the current page data source of grid.
 /// </summary>
 },
-getDataByIndex:function(){
+getDataByIndex:function(rowIndex){
 /// <signature>
 /// <summary>
 /// Get the data of given row index in grid.
 /// </summary>
+/// <param name="rowIndex"	type="number">Pass the index of the row to get the corresponding data</param>
+/// </signature>
 },
 getFieldNameByHeaderText:function(headerText){
 /// <signature>
@@ -30565,6 +30575,14 @@ filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchca
 /// Sends filtering request to filter a column in TreeGrid.
 /// </summary>
 /// <param name="actualFilterValue"	type="any">Optional actualFilterValue denote the filter object of current filtered columns. </param>
+/// </signature>
+},
+filterContent:function(ejPredicate){
+/// <signature>
+/// <summary>
+/// To filter multiple columns with multiple conditions dynamically in TreeGrid.
+/// </summary>
+/// <param name="ejPredicate"	type="TreeGrid.EjPredicate">Pass the filtering column details and conditions as ejPredicate instance. ejPredicate object is defined as fieldName,filterOperator, filterValue and ignoreCase properties</param>
 /// </signature>
 },
 columnIndex:function(Index){

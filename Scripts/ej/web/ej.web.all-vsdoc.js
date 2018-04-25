@@ -10143,6 +10143,12 @@ filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchCa
 /// <param name="predicate"	type="string">Optional - Pass the predicate as and/or.</param>
 /// <param name="matchCase"	type="boolean">Optional - pass the match case value as true/false.</param>
 },
+filterContent:function(ejPredicate){
+/// <summary>
+/// To filter multiple columns with multiple conditions dynamically in Gantt.
+/// </summary>
+/// <param name="ejPredicate"	type="Gantt.EjPredicate">Pass the filtering column details and conditions as ejPredicate instance. The ejPredicate object is defined as fieldName,filterOperator, filterValue and ignoreCase properties.</param>
+},
 hideColumn:function(headerText){
 /// <summary>
 /// To hide the column by using header text
@@ -11065,10 +11071,11 @@ getCurrentViewData:function(){
 /// Get the current page data source of grid.
 /// </summary>
 },
-getDataByIndex:function(){
+getDataByIndex:function(rowIndex){
 /// <summary>
 /// Get the data of given row index in grid.
 /// </summary>
+/// <param name="rowIndex"	type="number">Pass the index of the row to get the corresponding data</param>
 },
 getFieldNameByHeaderText:function(headerText){
 /// <summary>
@@ -25003,6 +25010,12 @@ filterColumn:function(fieldName, filterOperator, filterValue, predicate, matchca
 /// <param name="predicate"	type="string">Pass the predicate as and/or.</param>
 /// <param name="matchcase"	type="boolean">Optional pass the match case value as true/false.</param>
 /// <param name="actualFilterValue"	type="any">Optional actualFilterValue denote the filter object of current filtered columns. </param>
+},
+filterContent:function(ejPredicate){
+/// <summary>
+/// To filter multiple columns with multiple conditions dynamically in TreeGrid.
+/// </summary>
+/// <param name="ejPredicate"	type="TreeGrid.EjPredicate">Pass the filtering column details and conditions as ejPredicate instance. ejPredicate object is defined as fieldName,filterOperator, filterValue and ignoreCase properties</param>
 },
 columnIndex:function(Index){
 /// <summary>

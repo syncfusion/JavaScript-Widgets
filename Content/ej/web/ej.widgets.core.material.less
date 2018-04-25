@@ -11805,12 +11805,17 @@ background-image: url('../@{font-path}/icons-white.png');
         overflow: visible;
     }
 
-    .e-grid [class ^="e-"], .e-grid .e-unboundcelldiv > button {
+    .e-grid [class ^="e-"] {
         -webkit-box-sizing: content-box;
         -moz-box-sizing: content-box;
         box-sizing: content-box;
     }
-
+	.e-grid .e-unboundcelldiv > button {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+	
     .e-grid .e-widget [class^="e-"] {
         box-sizing: border-box;
     }
@@ -43393,10 +43398,23 @@ slideRight Animate
 .e-media-player .media-muted:before {
 }
 
-.e-media-toolbar.basic {
+.e-media-player .e-media-toolbar.basic {
     border: none !important;
     overflow: hidden;
-    height: 100%;
+    height: 45px;
+}
+
+.e-media-player .e-media-playlist-container.mobile .e-media-playlist-header {
+	border-bottom: 0px;
+}
+
+.e-mediaplayer .e-hide, .e-media-custom-fullscreen.e-hide {
+    display: none;
+}
+
+.e-mediaplayer.e-js ul, .e-mediaplayer.e-js ol {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .e-media-prev-li.basic, .e-media-next-li.basic {
