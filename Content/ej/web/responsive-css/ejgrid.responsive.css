@@ -95,25 +95,6 @@
         font-family: segoe ui;
     }
 
-        .e-grid.e-responsive .e-pager {
-            position: relative;
-            height: 38px;
-            margin-bottom: -5px;
-            font-family: segoe ui;
-        }
-
-            .e-grid.e-responsive .e-pager .e-parentmsgbar {
-                position: absolute;
-                top: 34px;
-                padding-top: 0;
-                margin-left: 24%;
-            }
-
-            .e-grid.e-responsive .e-pager .e-pagercontainer {
-                position: absolute;               
-                margin-left: 16%;
-                top:5px;
-            }
             .e-pager .e-pagercontainer{
                 margin-left:30px;               
             }

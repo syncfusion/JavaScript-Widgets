@@ -99,9 +99,6 @@
 @column-selection-bg-color: @default-bg-stcolor;
 @alt-row-bg-color: lighten( @content-bg-color, 7%);
 
-@button-mozila-padding: '';
-@button-mozila-border: '';
-
 @pager-font-color: @default-font-color;
 @pager-default-font-color: @default-font-color;
 @pager-default-bg-color: @default-bg-stcolor;
@@ -252,12 +249,12 @@
 @treegrid-selectionpopup-default-icon-color:@default-icon-color;
 @tab-background-color: #1e1e1e;
 @tab-background-color-dark: #1e1e1e;
-.tab-headerbg(@is-color: none){    
+.tab-headerbg(@is-color: none){
     & when not (@is-color = none) {
-        background: @content-bg-color;      
+        background: @content-bg-color;
     }
     color: @active-bg-stcolor;
-} 
+}
 @radial-badge-color:#FFFFFF;
 
 .header-gradient() {
@@ -284,7 +281,7 @@
     }
     .generate() when (@derivedfrom = none) {
         @gradient: none;
-        background: @start;         
+        background: @start;
     }
     .generate() when not (@derivedfrom = none) {
         @gradient: lighten(extract(@derivedfrom, 1), @light), darken(extract(@derivedfrom, 2), @dark);
@@ -297,7 +294,7 @@
         background: linear-gradient(to bottom, @gradient); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{start}', endColorstr='@{end}',GradientType=0 ); /* IE6-9 */
     }
-}    
+}
 
 .scroller-gradient() {
     background-image: @active-grid-image;
@@ -354,8 +351,8 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{schedule-app-stbg-color}', endColorstr='@{schedule-app-endbg-color}',GradientType=0 ); /* IE6-9 */
 }
 
-.cell-selection() {        
-    .custom-gradient(@active-gradient-color, @cell-selection-stbg-color, @cell-selection-endbg-color, 0%, 20%);  
+.cell-selection() {
+    .custom-gradient(@active-gradient-color, @cell-selection-stbg-color, @cell-selection-endbg-color, 0%, 20%);
 }
 
 .column-selection() {
@@ -404,7 +401,7 @@
 .gantt-child-progress-background() {
    .active-gradient();
 }
-.gantt-child-manualprogress-background(){   
+.gantt-child-manualprogress-background(){
     .custom-gradient(@gantt-chart-manual-child-progressbar-gradient-color,  @gantt-chart-manual-child-progressbar-stbg-color, @gantt-chart-manual-child-progressbar-endbg-color, 0%, 0% );
 }
 @colorpicker-image: url(../common-images/darktheme/colorpicker_dark.png);
@@ -449,7 +446,7 @@
 /*----------------------OLAP Definition------------------*/
 @table-font: 12px  @font-family
 
-!important; @pivotList-treeview-text-hvr-color:@active-font-color; @pivotList-dialog-close-hvr-color:@active-bg-stcolor; @pivotList-treeview-active-color:darken( desaturate( @active-bg-stcolor, 11 ), 2 ); @ogrid-dialog-bgcolor:darken( desaturate( @active-bg-stcolor, 4 ), 1 ); @pivotList-treeview-text:@default-font-color; @pivotList-treeview-hvr-color:@active-bg-stcolor; @ogrid-header-border-color:@content-border-color; @ogaugeTooltip-border-color:@content-border-color; @toolTipText-color:@content-font-color; @toolTip-bg-color:@default-bg-stcolor; @fg-table-color: @content-font-color; @bg-table-color: @content-bg-color; @brd-table-color: @gdroparea-border-color; @bg-value-color: @content-bg-color; @bg-summary-color: saturate( @active-bg-stcolor, 1 ); @fg-header-color: @content-font-color; @fg-header-hvr-color: @hover-font-color; @expander-img: url("../common-images/icons-gray.png"); @kpi-uparrow-img: url("../common-images/pivotgrid/up-arrow.png"); @kpi-rightarrow-img: url("../common-images/pivotgrid/right-arrow.png"); @kpi-downarrow-img: url("../common-images/pivotgrid/down-arrow.png"); @kpi-diamond-img: url("../common-images/pivotgrid/diamond.png"); @kpi-triangle-img: url("../common-images/pivotgrid/triangle.png"); @kpi-circle-img: url("../common-images/pivotgrid/circle.png"); @kpi-red-img: url("../common-images/pivotgrid/red.png"); @kpi-green-img: url("../common-images/pivotgrid/green.png"); @kpi-all-img: url("../common-images/pivotgrid/three-color.png"); @aeb-bgcolor: @content-bg-color; @oclient-bgcolor: @content-bg-color; @oclient-border-color: @content-border-color; @oclient-icons-color:@default-icon-color; @pivot-selection-background:@hover-bg-stcolor; @pivot-selection-border:@default-border-color; @oclient-dialog-bgcolor:@content-bg-color; @oclient-dialog-color:@default-font-color; @oclient-treeview-text:@default-font-color; @oclient-treeview-text-hover:@hover-font-color; @oclient-treeview-active:@active-bg-stcolor; @oclient-ddl-color:@default-font-color; @oclient-ddl-bgcolor:@content-bg-color; @oclient-ddl-bcolor:@hover-border-color; @oclient-ddl-hcolor:@hover-font-color; @oclient-ddl-hbgcolor:@hover-bg-stcolor; @oclient-icons-hover-bg: @hover-bg-stcolor; @toolbar-bgcolor:@default-bg-stcolor; @toolbar-icons-hvrcolor:@hover-icon-color; @fullscreen-bg-color:@content-bg-color; @maxview-bg-color:@content-bg-color; @groupingBar-bg-color:@active-bg-stcolor; 
+!important; @pivotList-treeview-text-hvr-color:@active-font-color; @pivotList-dialog-close-hvr-color:@active-bg-stcolor; @pivotList-treeview-active-color:darken( desaturate( @active-bg-stcolor, 11 ), 2 ); @ogrid-dialog-bgcolor:darken( desaturate( @active-bg-stcolor, 4 ), 1 ); @pivotList-treeview-text:@default-font-color; @pivotList-treeview-hvr-color:@active-bg-stcolor; @ogrid-header-border-color:@content-border-color; @ogaugeTooltip-border-color:@content-border-color; @toolTipText-color:@content-font-color; @toolTip-bg-color:@default-bg-stcolor; @fg-table-color: @content-font-color; @bg-table-color: @content-bg-color; @brd-table-color: @gdroparea-border-color; @bg-value-color: @content-bg-color; @bg-summary-color: saturate( @active-bg-stcolor, 1 ); @fg-header-color: @content-font-color; @fg-header-hvr-color: @hover-font-color; @expander-img: url("../common-images/icons-gray.png"); @kpi-uparrow-img: url("../common-images/pivotgrid/up-arrow.png"); @kpi-rightarrow-img: url("../common-images/pivotgrid/right-arrow.png"); @kpi-downarrow-img: url("../common-images/pivotgrid/down-arrow.png"); @kpi-diamond-img: url("../common-images/pivotgrid/diamond.png"); @kpi-triangle-img: url("../common-images/pivotgrid/triangle.png"); @kpi-circle-img: url("../common-images/pivotgrid/circle.png"); @kpi-red-img: url("../common-images/pivotgrid/red.png"); @kpi-green-img: url("../common-images/pivotgrid/green.png"); @kpi-all-img: url("../common-images/pivotgrid/three-color.png"); @aeb-bgcolor: @content-bg-color; @oclient-bgcolor: @content-bg-color; @oclient-border-color: @content-border-color; @oclient-icons-color:@default-icon-color; @pivot-selection-background:@hover-bg-stcolor; @pivot-selection-border:@default-border-color; @oclient-dialog-bgcolor:@content-bg-color; @oclient-dialog-color:@default-font-color; @oclient-treeview-text:@default-font-color; @oclient-treeview-text-hover:@hover-font-color; @oclient-treeview-active:@active-bg-stcolor; @oclient-ddl-color:@default-font-color; @oclient-ddl-bgcolor:@content-bg-color; @oclient-ddl-bcolor:@hover-border-color; @oclient-ddl-hcolor:@hover-font-color; @oclient-ddl-hbgcolor:@hover-bg-stcolor; @oclient-icons-hover-bg: @hover-bg-stcolor; @toolbar-bgcolor:@default-bg-stcolor; @toolbar-icons-hvrcolor:@hover-icon-color; @fullscreen-bg-color:@content-bg-color; @maxview-bg-color:@content-bg-color; @groupingBar-bg-color:@active-bg-stcolor;
 .groupingBar-btn-color() {
     color: @default-icon-color;
     border-color: @content-border-color;
@@ -521,23 +518,53 @@
 @rv-navigate-disabled-opacity: 0.5;
 @rv-viewerblock-font-size: 12.5px;
 @rv-viewerblockcellcontent-font-size: 14.5px;
- 
-@rv-viewerblock-bg-color: lighten(@default-bg-stcolor, 4%); 
-@rv-pageviewcontainer-bg-color: lighten(@content-bg-color, 24%); 
+
+@rv-viewerblock-bg-color: lighten(@default-bg-stcolor, 4%);
+@rv-pageviewcontainer-bg-color: lighten(@content-bg-color, 24%);
 @rv-documentMappopup-bg-color:#111111 !important; 
 
-@rv-popuppageinfo-bg-color:black; 
+@rv-popuppageinfo-bg-color:black;
 @rv-labelpageno-font-size:16px !important; 
-@rv-pageview-moz-box-shadow:rgba(0,0,0,0.6); 
-@rv-pageview-webkit-box-shadow:rgba(0,0,0,0.6); 
-@rv-pageview-box-shadow:rgba(0,0,0,0.3); 
-@rv-pageview-border-color: rgb(128,128,128); 
+@rv-pageview-moz-box-shadow:rgba(0,0,0,0.6);
+@rv-pageview-webkit-box-shadow:rgba(0,0,0,0.6);
+@rv-pageview-box-shadow:rgba(0,0,0,0.3);
+@rv-pageview-border-color: rgb(128,128,128);
 
-@rv-ttooltip-background:white; 
-@rv-ttooltip-border-color:@content-border-color; 
+@rv-ttooltip-background:white;
+@rv-ttooltip-border-color:@content-border-color;
 @rv-ttooltip-color:black;
 
 /*----------------------Reportviewer Definition End------------------*/
+/*----------------------Reportdesigner Definition Start------------------*/
+@rd-widget-font-size: 8px;
+@rd-nav-arrow-size: 9px;
+@rd-button-font-size: 11px;
+@rd-preview-font-size: 13px;
+@rd-header-font-size: 16.5px;
+@rd-data-font-size: 18px;
+@rd-acrdn-nav-size: 30px;
+@rd-text-border-radius: 2px;
+@rd-button-border-radius: 4px;
+@rd-border-radius: 4px 4px 0 0;
+@rd-exp-set:@active-bg-stcolor;
+@rd-exp-border:#c8c8c8;
+@rd-exp-reset:#000000;
+@rd-list-bgreset:transparent;
+@rd-surfacecontainer-bg-color: lighten(@content-bg-color, 24%);
+@rd-switch-bg-color: @content-bg-color;
+@rd-accordion-hover:none;
+@rd-accordion-border:@hover-border-color;
+@rd-tab-fontcolor:#cccccc;
+@rd-tab-hover-fontcolor:#aaaaaa;
+@rd-dialog-addBtn:@active-bg-stcolor;
+@rd-accordion-tile-hover:none;
+.rd-tile-hover-gradient(){
+    .custom-gradient(@rd-accordion-tile-hover, #3a3a3a,#3a3a3a, 0%, 100% );
+}
+.rd-hover-gradient() {
+    .custom-gradient(@rd-accordion-hover,#3a3a3a,#3b3b3b, 0%, 0% );
+}
+/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 @sp-outline:transparent none 0px; @sp-item-hover-color: rgba(243, 177, 63, 0.40); @sp-noborder:0px solid transparent; @sp-header-font-size:14px; @sp-header-border-radius:0px;
 /*-----------------------Diagram Definition-----------------*/
@@ -546,7 +573,7 @@
 @dg-ruler-space-bg: #212121;
 @dg-ruler-tick: #cccccc;
 @dg-ruler-label: #dddddd;
- 
+
 /*-----------------------Datepicker Definition-----------------*/
 @disable-datepicker-text: darken( @default-font-color, 46% );
 /*-----------------------Bootstrap support-----------------*/
@@ -614,19 +641,19 @@
 @rbn-act-color: none;
 @rbnapptab-font-color:@rbntab-font-color;
 @rbn-act-a-border-color:@active-border-color;
-@rbncontent-font-color: @header-font-color; 
+@rbncontent-font-color: @header-font-color;
 @rbntab-font-color:@header-font-color;
-@rbncontent-border-color: @content-border-color; 
+@rbncontent-border-color: @content-border-color;
 @rbnhelp-color: @default-icon-color;
 @rbncaption-font-color: @content-font-color;
-@rbndropdown-color: @content-bg-color; 
-@rbnmenu-font-color: @hover-font-color; 
-@rbn-white-color:#FFFFFF;    
-@rbn-apptab-color:@rbn-white-color;                          
-@rbngallery-hover-color:@hover-bg-stcolor;   
-@rbngallery-select-color:@active-bg-stcolor;                    
-@rbn-text-color:@hover-font-color;        
-@rbngallery-bg-color: @content-bg-color;        
+@rbndropdown-color: @content-bg-color;
+@rbnmenu-font-color: @hover-font-color;
+@rbn-white-color:#FFFFFF;
+@rbn-apptab-color:@rbn-white-color;
+@rbngallery-hover-color:@hover-bg-stcolor;
+@rbngallery-select-color:@active-bg-stcolor;
+@rbn-text-color:@hover-font-color;
+@rbngallery-bg-color: @content-bg-color;
 @rbngallery-border-color:@default-border-color;
 @rbngallery-disable-color:#4F4F4F;
 @rbnbackstage-start-hover-color:darken(@active-bg-stcolor, 15%);
@@ -663,7 +690,7 @@
    .ribbon-hover-gradient();
 }
 .ribbon-shadow(){
-    
+
 }
 .ribbon-app-tab-font(){
   color: @rbn-apptab-color;
@@ -786,7 +813,7 @@
 @hover-rangeScroll-arrow-fill:@hover-icon-color;
 
 .material-stylefor-button(){}
-.material-stylefor-datepicker(){} 
+.material-stylefor-datepicker(){}
 .material-stylefor-borderradius(){}
 
 /*--------------- common ----------------- */
@@ -914,7 +941,7 @@
     border-top: 3px @border-type @active-bg-stcolor;
 }
 
-.material-tab-right-border(){ 
+.material-tab-right-border(){
   border-left: transparent;
 }
 .material-tab-right-bottom-border(){
@@ -976,7 +1003,7 @@
 .material-file-explorer-splitbtn-shadow(){}
 .material-file-explorer-splitbtn-radius(){}
 .material-ddl-checkbox-bordercolor(){}
-.material-tab-padding-bottom(){ 
+.material-tab-padding-bottom(){
    padding-bottom: 1px;
 }
 .material-tab-border-bottom-line(){}
@@ -4176,6 +4203,19 @@ color: @pager-font-color;
     }
     
 }
+@{e-widget}.e-scroller.e-speed-scroll > .e-content{
+    overflow: scroll !important;
+}
+
+@{e-widget}.e-scroller.e-speed-scroll .e-content, @{e-widget}.e-scroller.e-speed-scroll .e-content {
+	touch-action: manipulation;
+    -ms-overflow-style: none;
+}
+
+@{e-widget}.e-scroller.e-speed-scroll .e-content::-webkit-scrollbar {
+		height: 0;
+		width: 0;
+}
 
 @{e-widget}.e-scroller .e-disable .e-vhandle:hover,
 @{e-widget}.e-scroller .e-disable .e-button :hover,
@@ -4869,7 +4909,7 @@ color:#5c5c5c;
 
 
 /*------------------------------------- Button -------------------------------------------*/
-.e-btn, @{e-widget}.e-tbtn, .e-split-btn {
+.e-btn, @{e-widget} .e-tbtn, @{e-widget} .e-split-btn {
     & when (@skin="material") {
         font-family: @font-family;
         position: relative;
@@ -4891,7 +4931,7 @@ color:#5c5c5c;
     box-shadow: 0 0 2px @shadow-bg-color;
 }
 
-.e-btn.e-txt.e-select, .e-tbtn.e-txt.e-select, .e-split-btn.e-txt.e-select {
+@{e-widget}.e-btn.e-txt.e-select, @{e-widget} .e-tbtn.e-txt.e-select, @{e-widget} .e-split-btn.e-txt.e-select {
     & when not (@skin="material") {
         font-family: @font-family;
     }
@@ -4901,18 +4941,18 @@ color:#5c5c5c;
     }
 }
 
-.e-split-btn-hide {
+@{e-widget}.e-split-btn-hide {
     visibility: hidden;
 }
 
-.e-rtl .e-splitarrowleft .e-split-btn.e-left-btn {
+@{e-widget}.e-rtl .e-splitarrowleft .e-split-btn.e-left-btn {
     & when not (@skin="material") {
         border-right: medium none;
         border-left-color: @default-border-color;
     }
 }
 
-.e-rtl .e-splitarrowright .e-split-btn.e-left-btn {
+@{e-widget}.e-rtl .e-splitarrowright .e-split-btn.e-left-btn {
     & when not (@skin="material") {
         border-left: medium none;
         border-right-color: @default-border-color;
@@ -4920,7 +4960,7 @@ color:#5c5c5c;
 }
 
 
-@{e-widget}.e-btn.e-select.e-disable, .e-btn.e-disable.e-select:hover, .e-btn.e-disable.e-select:hover {
+@{e-widget}.e-btn.e-select.e-disable, @{e-widget}.e-btn.e-disable.e-select:hover, @{e-widget}.e-btn.e-disable.e-select:hover {
     & when (@skin="material") {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.38);
         border-radius: 2px;
@@ -4932,8 +4972,8 @@ color:#5c5c5c;
     }
 }
 
-.e-btn.e-disable.e-select:hover, .e-btn.e-disable.e-select:hover, .e-tbtn.e-disable:hover,
-.e-btn.e-disable.e-select:active, .e-btn.e-disable.e-select:active {
+@{e-widget}.e-btn.e-disable.e-select:hover, @{e-widget}.e-btn.e-disable.e-select:hover, @{e-widget} .e-tbtn.e-disable:hover,
+@{e-widget}.e-btn.e-disable.e-select:active, @{e-widget}.e-btn.e-disable.e-select:active {
     & when not (@skin="material") {
         .bs-default-gradient();
         color: @default-font-color;
@@ -4942,7 +4982,7 @@ color:#5c5c5c;
     }
 }
 
-.e-btn.e-select {
+@{e-widget}.e-btn.e-select {
     & when not (@skin="material") {
         .bs-default-gradient();
         color: @default-font-color;
@@ -4964,7 +5004,7 @@ color:#5c5c5c;
 	}
 }
 
-.e-btn.e-disable, @{e-widget}.e-btn.e-select.e-disable .e-icon,@{e-widget}.e-btn.e-select.e-disable .e-icon,@{e-widget}.e-btn.e-select.e-disable:hover .e-icon,@{e-widget}.e-btn.e-select.e-disable:active .e-icon, {
+@{e-widget}.e-btn.e-disable, @{e-widget}.e-btn.e-select.e-disable .e-icon,@{e-widget}.e-btn.e-select.e-disable .e-icon,@{e-widget}.e-btn.e-select.e-disable:hover .e-icon,@{e-widget}.e-btn.e-select.e-disable:active .e-icon, {
     cursor: default;
     & when (@skin="office-365") {
 		color:@neutral-tertiary-alt
@@ -4973,7 +5013,7 @@ color:#5c5c5c;
 
 /*flat button*/
 
-.e-btn.e-select.e-flat:hover, .e-btn.e-select.e-flat:focus {
+@{e-widget}.e-btn.e-select.e-flat:hover, @{e-widget}.e-btn.e-select.e-flat:focus {
     & when (@skin="material") {
         color: @accent-color;
         border: none;
@@ -4983,7 +5023,7 @@ color:#5c5c5c;
     }
 }
 
-.e-btn.e-select.e-flat:active {
+@{e-widget}.e-btn.e-select.e-flat:active {
     & when (@skin="material") {
         color: @accent-color;
         border: none;
@@ -5021,13 +5061,13 @@ color:#5c5c5c;
     }
 }
 
-.e-tbtn.e-btn.e-select.e-primary:hover {
+@{e-widget} .e-tbtn.e-btn.e-select.e-primary:hover {
     & when (@skin="material") {
         background: none;
     }
 }
 
-.e-tbtn.e-btn.e-select.e-primary.e-active, .e-tbtn.e-btn.e-select.e-primary.e-active:hover {
+@{e-widget} .e-tbtn.e-btn.e-select.e-primary.e-active,@{e-widget} .e-tbtn.e-btn.e-select.e-primary.e-active:hover {
     & when (@skin="material") {
         background: @accent-color;
         border: none;
@@ -5036,7 +5076,7 @@ color:#5c5c5c;
 }
 
 
-.e-btn.e-primary.e-select:hover, .e-btn.e-primary.e-select:focus {
+@{e-widget}.e-btn.e-primary.e-select:hover, @{e-widget}.e-btn.e-primary.e-select:focus {
     & when (@skin="material") {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         color: @accent-font-color;
@@ -5099,7 +5139,7 @@ color:#5c5c5c;
 }
 
 
-.e-btn.e-primary-raised.e-select:hover, .e-btn.e-primary-raised.e-select:focus {
+@{e-widget}.e-btn.e-primary-raised.e-select:hover, @{e-widget}.e-btn.e-primary-raised.e-select:focus {
     & when (@skin="material") {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         color: @accent-font-color;
@@ -5123,7 +5163,7 @@ color:#5c5c5c;
 }
 
 
-@{e-widget}.e-btn.e-select.e-primary-raised.e-disable, .e-togglebutton.e-btn.e-tbtn.e-select.e-disable:hover {
+@{e-widget}.e-btn.e-select.e-primary-raised.e-disable, @{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable:hover {
     & when (@skin="material") {
         background: fade(@base-font-color,12%);
         color: fade(@base-font-color,26%);
@@ -5405,7 +5445,7 @@ color:#5c5c5c;
 	
 }
 
-@{e-widget}.e-button.e-btn.e-select.e-disable:after, .e-tbtn.e-btn.e-select.e-disable:after, @{e-widget}.e-split .e-split-btn.e-btn:after {
+@{e-widget}.e-button.e-btn.e-select.e-disable:after,@{e-widget} .e-tbtn.e-btn.e-select.e-disable:after, @{e-widget}.e-split .e-split-btn.e-btn:after {
     &when (@skin="material") {
         content: none;
     }
@@ -5415,7 +5455,7 @@ color:#5c5c5c;
 
 /*end*/
 
-.e-btn.e-select:hover, @{e-widget}.e-btn.e-select.e-active:hover {
+@{e-widget}.e-btn.e-select:hover, @{e-widget}.e-btn.e-select.e-active:hover {
     & when (@skin="material") {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         background-color: fade(@base-font-color,12%);
@@ -5433,13 +5473,13 @@ color:#5c5c5c;
 	  border-color:@theme-primary;
 	}
 }
-@{e-widget}.e-splitbutton.e-btn.e-left-btn:focus , .e-split-btn.e-btn.e-select.e-drp-btn:focus {
+@{e-widget} .e-splitbutton.e-btn.e-left-btn:focus ,@{e-widget} .e-split-btn.e-btn.e-select.e-drp-btn:focus {
 	& when (@skin="office-365") {
 		border: 1px solid;
 		border-color:@theme-primary;
 		}
 }
-@{e-widget}.e-splitbutton.e-btn.e-left-btn.e-disable:focus , .e-split-btn.e-btn.e-select.e-drp-btn.e-disable:focus{
+@{e-widget} .e-splitbutton.e-btn.e-left-btn.e-disable:focus ,@{e-widget} .e-split-btn.e-btn.e-select.e-drp-btn.e-disable:focus{
     & when (@skin="office-365") {
         border:none;
     }
@@ -5450,13 +5490,13 @@ color:#5c5c5c;
 	}
 }
 
-@{e-widget}.e-splitbutton .e-btn.e-select:focus {
+@{e-widget} .e-splitbutton .e-btn.e-select:focus {
 	& when (@skin= "office-365") {
 		border:1px solid;
 	}
 }
 
-.e-btn.e-select:focus {
+@{e-widget}.e-btn.e-select:focus {
     & when (@skin="material") {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         background-color: fade(@base-font-color,12%);
@@ -5469,7 +5509,7 @@ color:#5c5c5c;
 	}
 }
 
-@{e-widget}.e-btn.e-select:active, .e-btn.e-disable.e-active.e-select:hover, .e-btn.e-disable.e-active.e-select:hover, .e-tbtn.e-flat.e-active, .e-tbtn.e-btn.e-select.e-flat {
+@{e-widget}.e-btn.e-select:active, @{e-widget}.e-btn.e-disable.e-active.e-select:hover, @{e-widget}.e-btn.e-disable.e-active.e-select:hover, @{e-widget}.e-tbtn.e-flat.e-active, @{e-widget}.e-tbtn.e-btn.e-select.e-flat {
     & when (@skin="material") {
         box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
         color: @base-font-color;
@@ -5499,7 +5539,7 @@ color:#5c5c5c;
     }
 }
 
-@{e-widget}.e-btn.e-select:active, @{e-widget}.e-btn.e-select:active, .e-tbtn.e-btn.e-select.e-active, .e-tbtn.e-btn.e-select.e-active.e-disable:hover{
+@{e-widget}.e-btn.e-select:active, @{e-widget}.e-btn.e-select:active,@{e-widget} .e-tbtn.e-btn.e-select.e-active,@{e-widget} .e-tbtn.e-btn.e-select.e-active.e-disable:hover{
     & when not (@skin="material") {
         .active-gradient();
         border-color: @active-border-color;
@@ -5522,7 +5562,7 @@ color:#5c5c5c;
     }
 }
 
-.e-drp-btn.e-select:hover, @{e-widget}.e-btn.e-select:hover .e-icon {
+@{e-widget} .e-drp-btn.e-select:hover, @{e-widget}.e-btn.e-select:hover .e-icon {
     & when not(@skin="material") {
         color: @hover-icon-color;
     }
@@ -5535,7 +5575,7 @@ color:#5c5c5c;
     }
 }
 
-.e-drp-btn.e-select:active, .e-drp-btn.e-select:active, @{e-widget}.e-btn.e-select:active .e-icon, @{e-widget}.e-btn.e-select:active .e-icon, .e-btn.e-active .e-icon, .e-btn.e-disable.e-select.e-active:hover .e-icon, .e-btn.e-disable.e-select.e-active:hover .e-icon {
+@{e-widget} .e-drp-btn.e-select:active, @{e-widget} .e-drp-btn.e-select:active, @{e-widget}.e-btn.e-select:active .e-icon, @{e-widget}.e-btn.e-select:active .e-icon, .e-btn.e-active .e-icon, .e-btn.e-disable.e-select.e-active:hover .e-icon, .e-btn.e-disable.e-select.e-active:hover .e-icon {
     & when (@skin="material") {
         color: fade(@base-font-color,54%);
     }
@@ -5564,13 +5604,13 @@ color:#5c5c5c;
         color:@neutral-light-font;
     }
 }
-.e-split-btn-div .e-icon {
+@{e-widget} .e-split-btn-div .e-icon {
     & when (@skin="material") {
         padding: 0px;
     }
 }
 
-.e-btn.e-disable.e-select:hover, .e-btn.e-disable, .e-btn.e-disable.e-select:hover, @{e-widget}.e-btn.e-select.e-disable:hover, @{e-widget}.e-btn.e-select.e-disable {
+@{e-widget}.e-btn.e-disable.e-select:hover, @{e-widget}.e-btn.e-disable, @{e-widget}.e-btn.e-disable.e-select:hover, @{e-widget}.e-btn.e-select.e-disable:hover, @{e-widget}.e-btn.e-select.e-disable {
     & when (@skin="material") {
         color: fade(@base-font-color,26%);
         box-shadow: none;
@@ -5588,7 +5628,7 @@ color:#5c5c5c;
 
 /*toggle button*/
 
-.e-tbtn.e-btn.e-select {
+@{e-widget} .e-tbtn.e-btn.e-select {
     &when(@skin="material") {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         border-radius: 2px;
@@ -5598,7 +5638,7 @@ color:#5c5c5c;
     }
 }
 
-.e-tbtn.e-btn.e-select:hover, .e-tbtn.e-btn.e-select:focus {
+@{e-widget} .e-tbtn.e-btn.e-select:hover,@{e-widget} .e-tbtn.e-btn.e-select:focus {
     & when (@skin="material") {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         background-color: fade(@base-font-color,12%);
@@ -5606,27 +5646,27 @@ color:#5c5c5c;
     }
 }
 
-.e-tbtn.e-btn.e-select.e-active:focus {
+@{e-widget} .e-tbtn.e-btn.e-select.e-active:focus {
 	& when (@skin="office-365") {
 	    background-color: @theme-dark;
 		color: @theme-dark-font;
 		border-color:@theme-primary;
 	}
 }
-.e-tbtn.e-btn.e-select.e-active {
+@{e-widget} .e-tbtn.e-btn.e-select.e-active {
     & when (@skin="material") {
         box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
         background-color: @accent-color;
     }
 }
 
-.e-tbtn.e-btn.e-select.e-active, .e-tbtn.e-btn.e-select.e-active .e-icon {
+@{e-widget} .e-tbtn.e-btn.e-select.e-active,@{e-widget} .e-tbtn.e-btn.e-select.e-active .e-icon {
     & when (@skin="material") {
         color: @accent-font-color;
     }
 }
 
-.e-tbtn.e-btn.e-select.e-active.e-disable, .e-tbtn.e-btn.e-select.e-disable {
+@{e-widget} .e-tbtn.e-btn.e-select.e-active.e-disable, @{e-widget} .e-tbtn.e-btn.e-select.e-disable {
     & when (@skin="material") {
         box-shadow: none;
         background-color: fade(@base-font-color,12%);
@@ -5634,14 +5674,14 @@ color:#5c5c5c;
     }
 }
 
-.e-tbtn.e-select.e-flat:hover {
+@{e-widget} .e-tbtn.e-select.e-flat:hover {
     & when (@skin="material") {
         background: none;
     }
 }
 
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-flat, @{e-widget}.e-btn.e-select.e-flat {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat, @{e-widget}.e-btn.e-select.e-flat {
     & when (@skin="material") {
         background: none;
         color: @accent-color;
@@ -5651,13 +5691,13 @@ color:#5c5c5c;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-flat .e-icon, @{e-widget}.e-btn.e-select.e-flat .e-icon {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat .e-icon, @{e-widget}.e-btn.e-select.e-flat .e-icon {
     & when (@skin="material") {
         color: @accent-color;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-active {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-active {
     & when (@skin="material") {
         background-color: @accent-color;
         color: @accent-font-color;
@@ -5666,27 +5706,27 @@ color:#5c5c5c;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-active.e-flat .e-icon {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-active.e-flat .e-icon {
     & when (@skin="material") {
         color: @content-bg-color;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-active:active {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-active:active {
     & when (@skin="material") {
         background-color: fade(@accent-color,61%);
         border-radius: 2px;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-flat:active {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat:active {
     & when (@skin="material") {
         background-color: fade(@accent-color,12%);
         border-radius: 2px;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon, .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon:hover {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon,@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon:hover {
     & when (@skin="material") {
         font-family: "ej-webfont";
         border-radius: 100%;
@@ -5697,71 +5737,71 @@ color:#5c5c5c;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-disable, .e-togglebutton.e-btn.e-tbtn.e-select.e-disable:hover, @{e-widget}.e-btn.e-select.e-flat.e-disable, @{e-widget}.e-btn.e-select.e-flat.e-disable:hover,
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable,@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable:hover, @{e-widget}.e-btn.e-select.e-flat.e-disable, @{e-widget}.e-btn.e-select.e-flat.e-disable:hover,
 @{e-widget}.e-split.e-widget.e-disable, @{e-widget}.e-split.e-widget.e-disable:hover, @{e-widget}.e-split.e-widget.e-disable .e-icon {
     & when (@skin="material") {
         color: fade(@base-font-color,26%);
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-disable, .e-togglebutton.e-btn.e-tbtn.e-select.e-disable:hover {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable,@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable:hover {
     & when (@skin="material") {
         background-color: fade(@base-font-color,12%);
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-disable .e-icon, @{e-widget}.e-btn.e-select.e-flat.e-disable .e-icon, @{e-widget}.e-btn.e-select.e-primary.e-disable .e-icon, .e-togglebutton.e-btn.e-tbtn.e-select.e-disable .e-icon:hover,
-.e-togglebutton.e-btn.e-tbtn.e-select.e-disable .e-icon:hover, @{e-widget}.e-btn.e-select.e-flat.e-disable .e-icon:hover, .e-btn.e-select.e-primary.e-disable .e-icon:hover {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable .e-icon, @{e-widget}.e-btn.e-select.e-flat.e-disable .e-icon, @{e-widget}.e-btn.e-select.e-primary.e-disable .e-icon,@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable .e-icon:hover,
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable .e-icon:hover, @{e-widget}.e-btn.e-select.e-flat.e-disable .e-icon:hover, .e-btn.e-select.e-primary.e-disable .e-icon:hover {
     & when (@skin="material") {
         color: fade(@base-font-color,26%);
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon:focus, .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon:hover {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon:focus,@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon:hover {
     &when(@skin="material") {
         background-color: fade(@base-font-color,12%);
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon:not(:active):after {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon:not(:active):after {
     &when(@skin="material") {
         background-color: fade(@accent-color,12%);
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active:not(:active):after {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active:not(:active):after {
     &when(@skin="material") {
         background-color: fade(@content-bg-color,12%);
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active, .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active:hover {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active,@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active:hover {
     & when (@skin="material") {
         color: @accent-color;
         background: none;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active:focus, .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active:hover {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active:focus, @{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-active:hover {
     &when(@skin="material") {
         background-color: fade(@accent-color,26%);
         color: @accent-font-color;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-disable, .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-disable:active, .e-togglebutton.e-btn.e-tbtn.e-select.e-disable.e-toggle-icon-btn.e-icon.e-icon:focus,.e-togglebutton.e-btn.e-tbtn.e-select.e-disable.e-toggle-icon-btn.e-icon.e-icon:hover {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-disable,@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-toggle-icon-btn.e-icon.e-disable:active, @{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable.e-toggle-icon-btn.e-icon.e-icon:focus, @{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-disable.e-toggle-icon-btn.e-icon.e-icon:hover {
     & when (@skin="material") {
         color: fade(@base-font-color,26%);
         background-color: transparent;
     }
 }
 
-.e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-disable, .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-disable:active, .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-disable:hover, .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-disable:focus {
+@{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-disable, @{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-disable:active, @{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-disable:hover, @{e-widget} .e-togglebutton.e-btn.e-tbtn.e-select.e-flat.e-disable:focus {
     & when (@skin="material") {
         background: none;
     }
 }
-.e-tbtn.e-btn.e-active:hover .e-icon
+@{e-widget} .e-tbtn.e-btn.e-active:hover .e-icon
 {
     & when (@skin= "office-365")
     {
@@ -6021,15 +6061,15 @@ color:#5c5c5c;
     }
 }
 
-@{e-widget}.e-button.e-btn:not(:active):after, .e-tbtn.e-btn.e-active:not(:active):after, @{e-widget}.e-split .e-split-btn.e-select.e-btn:not(:active):after,
-.e-tbtn.e-btn.e-flat.e-active:not(:active):after, @{e-widget}.e-colorwidget .e-color-container .e-selected-color:active::after, @{e-widget}.e-colorwidget .e-select:active .e-icon::after, @{e-widget}.e-colorpicker .e-colorblock .e-color-image.e-add:active:after,
+@{e-widget}.e-button.e-btn:not(:active):after, @{e-widget} .e-tbtn.e-btn.e-active:not(:active):after, @{e-widget}.e-split .e-split-btn.e-select.e-btn:not(:active):after,
+@{e-widget} .e-tbtn.e-btn.e-flat.e-active:not(:active):after, @{e-widget}.e-colorwidget .e-color-container .e-selected-color:active::after, @{e-widget}.e-colorwidget .e-select:active .e-icon::after, @{e-widget}.e-colorpicker .e-colorblock .e-color-image.e-add:active:after,
 @{e-widget}.e-groupbutton > .e-ul > .e-grp-btn-item.e-active:not(:active):after, @{e-widget}.e-groupbutton > .e-ul > .e-grp-btn-item:not(:active):after, {
     &when( @skin="material") {
         background-color: fade(@content-bg-color,12%);
     }
 }
 
-@{e-widget}.e-button.e-btn.e-flat:not(:active):after, .e-tbtn.e-btn.e-flat:not(:active):after, .e-tbtn.e-btn:not(:active):after {
+@{e-widget}.e-button.e-btn.e-flat:not(:active):after, @{e-widget} .e-tbtn.e-btn.e-flat:not(:active):after, @{e-widget} .e-tbtn.e-btn:not(:active):after {
     & when (@skin="material") {
         background-color: fade(@accent-color,12%);
     }
@@ -6434,8 +6474,8 @@ color:#5c5c5c;
         background-color: @grey-200;
     }
 }
-.e-btn.e-disable.e-select, .e-btn.e-disable.e-select,.e-tbtn.e-btn.e-disable.e-select.e-active,.e-tbtn.e-disable,
-.e-btn.e-disable.e-select:active, .e-btn.e-disable.e-select:active,
+@{e-widget}.e-btn.e-disable.e-select, @{e-widget}.e-btn.e-disable.e-select,.e-tbtn.e-btn.e-disable.e-select.e-active, @{e-widget} .e-tbtn.e-disable,
+@{e-widget}.e-btn.e-disable.e-select:active, @{e-widget}.e-btn.e-disable.e-select:active,
 @{e-widget}.e-split.e-disable{
      & when not (@skin= "material") and not (@skin="office-365"){
      background-color: @disable-control-background-color;
@@ -6444,7 +6484,7 @@ color:#5c5c5c;
     opacity:1;
     }
 }
-.e-btn.e-disable.e-select,.e-btn.e-disable.e-select:hover, .e-tbtn.e-disable:hover, .e-btn.e-disable.e-select:active,.e-tbtn.e-btn.e-disable.e-select.e-active:hover{
+@{e-widget}.e-btn.e-disable.e-select,@{e-widget}.e-btn.e-disable.e-select:hover,@{e-widget} .e-tbtn.e-disable:hover, @{e-widget}.e-btn.e-disable.e-select:active, @{e-widget} .e-tbtn.e-btn.e-disable.e-select.e-active:hover{
      & when not (@skin= "material") and not (@skin="office-365"){
      background-color: @disable-control-background-color;
     border-color:@disable-control-border-color;
@@ -6452,18 +6492,18 @@ color:#5c5c5c;
     opacity:1;
     }
 }
-.e-btn.e-disable.e-select:hover .e-icon,
-.e-btn.e-disable.e-select:active .e-icon{
+@{e-widget}.e-btn.e-disable.e-select:hover .e-icon,
+@{e-widget}.e-btn.e-disable.e-select:active .e-icon{
      & when not (@skin= "material") and not (@skin="office-365"){
      color:@disable-icon-bg-color;
      }
 }
-.e-btn.e-disable.e-select .e-icon{
+@{e-widget}.e-btn.e-disable.e-select .e-icon{
      & when not (@skin= "material") and not (@skin="office-365"){
      color:@disable-icon-bg-color;
      }
 }
-.e-btn.e-disable.e-select:focus{
+@{e-widget}.e-btn.e-disable.e-select:focus{
      & when not (@skin= "material") and not (@skin="office-365"){
     box-shadow:none;
     }
@@ -6953,7 +6993,7 @@ color:#5c5c5c;
         background-color: @neutral-lighter;
     }
 }
-.e-hsvButton.e-button.e-js.e-ntouch.e-btn-normal.e-btn.e-select.e-widget.e-txt.e-disable{
+@{e-widget}.e-colorpicker.e-buttons.e-grpbtn .e-hsvButton.e-button.e-js.e-ntouch.e-btn-normal.e-btn.e-select.e-widget.e-txt.e-disable{
     background:none
 }
 
@@ -7103,6 +7143,30 @@ color:#5c5c5c;
     background-color: @disable-icon-bg-color;
     }
 }
+@{e-widget}.e-colorwidget .e-in-wrap .e-tool-icon.e-icon{
+    font-family: 'ej-webfont';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    transform: rotate(0deg);
+    transition: transform 300ms ease;
+    & when (@skin = "material") {
+        margin: -11px 8px;
+        height:14px;
+    }
+
+    & when not (@skin = "material") {
+        margin: -11px 5px;
+    }
+}
+
 
 
 
@@ -9270,18 +9334,18 @@ color:#5c5c5c;
     }
 }
 
-.e-timepicker table td.e-disable {
+@{e-widget}.e-timepicker table td.e-disable {
     color: @disable-datepicker-text;
 }
 
-.e-ntouch.e-timepicker table td.e-disable:hover {
+@{e-widget}.e-ntouch.e-timepicker table td.e-disable:hover {
     background: none;
     border-color: none;
     color: @disable-datepicker-text;
 }
 
-.e-ntouch.e-timepicker .e-arrow-sans-left:hover,
-.e-ntouch.e-timepicker .e-arrow-sans-right:hover {
+@{e-widget}.e-ntouch.e-timepicker .e-arrow-sans-left:hover,
+@{e-widget}.e-ntouch.e-timepicker .e-arrow-sans-right:hover {
     & when (@skin= "material") {
         /*material*/
         background-color: @content-bg-color;
@@ -9298,8 +9362,8 @@ color:#5c5c5c;
     }
 }
 
-.e-ntouch.e-timepicker .e-disable.e-arrow-sans-left:hover,
-.e-ntouch.e-timepicker .e-disable.e-arrow-sans-right:hover {
+@{e-widget}.e-ntouch.e-timepicker .e-disable.e-arrow-sans-left:hover,
+@{e-widget}.e-ntouch.e-timepicker .e-disable.e-arrow-sans-right:hover {
     border-color: @hover-border-color;
 }
 
@@ -9918,7 +9982,7 @@ color:#5c5c5c;
 
 }
 @{e-widget}.e-daterangepicker-popup  .e-datepicker table .e-datepicker-months td.e-hidedate:hover::before, 
-.e-datepicker table .e-datepicker-years td.e-hidedate:hover::before
+@{e-widget}.e-datepicker table .e-datepicker-years td.e-hidedate:hover::before
 {
     & when (@skin= "office-365") {
         /*material*/
@@ -14615,7 +14679,7 @@ border-bottom: @border-size @border-type @tab-background-color;
 /*------------------------------------- TimeEditor -------------------------------------------*/
 
 @{e-widget}.e-timewidget .e-input,
-.e-time-popup 
+@{e-widget}.e-time-popup 
 {
     background-color: @content-bg-color;
 	font-family: @font-family;
@@ -14646,7 +14710,7 @@ border-bottom: @border-size @border-type @tab-background-color;
     }
 }
 @{e-widget}.e-timewidget .e-in-wrap,
-.e-time-popup 
+@{e-widget}.e-time-popup 
 {
   border-color: @content-border-color;
   & when (@skin= "material") {
@@ -14745,7 +14809,7 @@ border-bottom: @border-size @border-type @tab-background-color;
        border-color:@neutral-tertiary-alt;
       }
 }
-.e-time-popup .e-active.e-hover{
+@{e-widget}.e-time-popup .e-active.e-hover{
      & when (@skin= "material") {
         /*material*/
       background-color:@grey-200;
@@ -14764,7 +14828,7 @@ border-bottom: @border-size @border-type @tab-background-color;
     }
 }
 
-.e-time-popup .e-active 
+@{e-widget}.e-time-popup .e-active 
 { 
     .active-gradient();	
     border-color: @active-bg-stcolor;   
@@ -14807,7 +14871,7 @@ border-bottom: @border-size @border-type @tab-background-color;
     }  
      
 }
-.e-time-popup{
+@{e-widget}.e-time-popup{
      & when (@skin= "material") {
         /*material*/     
       font-size:13px;
@@ -17260,6 +17324,13 @@ content: "\e833";
     }
 }
 
+@{e-widget}.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > span.e-btntxt.e-grp-responsive {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+
 @{e-widget}.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > a.e-icon, @{e-widget}.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > span.e-icon, @{e-widget}.e-groupbutton > .e-ul > .e-grp-btn-item .e-btn-content > div.e-icon {
     & when (@skin="material") {        
         font-size: 18px;
@@ -17804,7 +17875,7 @@ outline:none;
     margin: 0; 
 }
  @{e-js} .e-pGridTooltip {
-    position: absolute;
+    position: fixed !important;
     z-index: 500;
     display: none;
     border-width: 10px;
@@ -18610,7 +18681,7 @@ content:"\e6a0";
  @{e-js}.e-pivotgrid .e-dropIndicatorActive {
    height: 20px;
    width: 20px;
-   position: absolute;
+   position: fixed !important;
    z-index: 30000;
    color: @default-icon-color;
    cursor: pointer;
@@ -20238,6 +20309,16 @@ margin-right:10px;
     margin-left:8px;
    }
 }
+@{e-js}.e-pivotgrid .e-pvtBtnIndent{
+   & when (@skin = "office-365") {
+    margin-left:25px !important;
+   }
+}
+@{e-js}.e-pivotgrid .e-pvtBtnSort {
+   & when (@skin = "office-365") {
+     margin-top: -20px !important; 
+  }
+}
 @{e-js}.e-pivotgrid .e-sorting{
    & when (@skin = "office-365") {
     margin-top:5px;
@@ -21492,9 +21573,7 @@ background-color:@hover-bg-stcolor !important;
 @{e-js}.e-pivotclient .e-gridPanel, @{e-js}.e-pivotclient .e-chartPanel {
  border: none !important;
 }
-@{e-js}.e-pivotclient .e-chartPanel > div{
-border-bottom:none !important;
-}
+
 @{e-js}.e-pivotclient .e-controlPanel{
   position: relative;
   right: 5px;
@@ -21572,6 +21651,10 @@ border:none;
 }
 @{e-js}.e-pivotclient .customCSS .e-splitbar{
 background-color:@content-bg-color;
+}
+@{e-js}.e-pivotclient .e-olapFieldList .e-ul {
+ width:100% !important;
+ height:100% !important;
 }
 @{e-js}.e-pivotclient .e-splitter .e-pane{
 overflow: visible !important;
@@ -21870,7 +21953,7 @@ font-size: 18px;
 @{e-js}.e-pivotclient .e-chartPanel{
     height: 0;
     width: 800px;
-    margin: 5px 7px 7px;
+    margin: 3.5px 7px 7px;
 }
 @{e-js}.e-pivotclient .clientTab{
     & when not (@skin = "material") {
@@ -22113,6 +22196,10 @@ background:@toolbar-bgcolor;
       margin-top:-6px;
     }
 }
+@{e-js}.e-pivotclient .e-pivotgrid .pivotGridRowTable th,
+@{e-js}.e-pivotclient .e-pivotgrid .pivotGridRowTable td {
+    padding: 6px 2px 6px 8px !important;
+}
 @{e-js}.e-pivotclient .e-renameDBReportTbl .e-ddl{
     & when (@skin = "office-365") {
       height:25px !important;
@@ -22175,6 +22262,23 @@ background:@toolbar-bgcolor;
    & when (@skin = "office-365"){
        margin-right:8px;
    }
+}
+@{e-js}.e-pivotclient .e-cubeBrowserCalcMember, @{e-js}.e-pivotclient .e-calcMemberFieldPanel .e-textarea {
+    font-weight: normal;
+}
+@{e-js}.e-pivotclient.e-rtl  .e-pivotschemadesigner.e-rtl{
+    margin-left: 2px;
+    margin-right: 4px;
+}
+@{e-js}.e-pivotclient.e-rtl .pivotFieldList, @{e-js}.e-pivotclient.e-rtl .e-togglePanel {
+    float: right !important;
+}
+@{e-js}.e-pivotclient.e-rtl .e-pivotschemadesigner .e-fieldEnSplitTable.e-pane {
+    right: 4.5px !important;
+    left:0px;
+}         
+@{e-js}.e-pivotclient.e-rtl .e-toggleExpandButton:before {
+    margin-right: 0px;
 }
 
 @{e-js}.e-pivotclient .e-SortFilterDlg .e-ddl{
@@ -22240,6 +22344,17 @@ background:@toolbar-bgcolor;
     & when not (@skin = "material") {
         width: auto; height: 25px;
     }
+}
+@{e-js}.e-pivotclient .e-cubeBrowserCalcMember .e-measureGroupCDB:before {
+    content: "\e6e1";
+    font-size: 18px;
+}
+
+@{e-js}.e-pivotclient .e-cubeBrowserCalcMember .e-measureGroupCDB {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    vertical-align: text-top;
 }
 @{e-js}.e-pivotclient .e-dimensionCDB, @{e-js}.e-pivotclient .e-folderCDB, @{e-js}.e-pivotclient .e-hierarchyCDB, @{e-js}.e-pivotclient .e-attributeCDB, @{e-js}.e-pivotclient .e-chartCDB, @{e-js}.e-pivotclient .e-namedSetCDB,
 @{e-js}.e-pivotclient .e-level0, @{e-js}.e-pivotclient .e-level1, @{e-js}.e-pivotclient .e-level2, @{e-js}.e-pivotclient .e-level3, @{e-js}.e-pivotclient .e-level4, 
@@ -22969,6 +23084,9 @@ float: none !important;
 @{e-js}.e-pivotclient .e-pivotschemadesigner .e-schemaValue {
     margin: 0 !important;
     width: 100%;
+}
+@{e-js}.e-pivotclient .e-pGridTooltip {
+    position: absolute !important;
 }
 @{e-js}.e-pivotclient .e-pivotschemadesigner .e-dropIndicator {
     margin-top: 0px !important;
@@ -23847,6 +23965,11 @@ width: 43% !important;
     margin:10px !important;
    }
 }
+
+@{e-js}.e-pivotclient .e-pivotgrid td.summary.gtot {
+  padding: 6px 6px 6px 16px !important;            
+}
+
 @{e-js}.e-pivotclient .e-csHeader .cubeText{
    & when (@skin = "material") {
     margin-top:4px;
@@ -24383,6 +24506,12 @@ width: 43% !important;
 @{e-js}.e-pivotclient .e-advanceFltrElement .e-editorDiv {
     margin-left:0px;
 }
+ @{e-js}.e-pivotclient.e-rtl .e-clientChartTabRtl {
+    margin: 5px -10px 0 0 !important;
+}
+@{e-js}.e-pivotclient.e-rtl .e-serverChartTabRtl {
+    margin: 5px -22px 0 0 !important;
+}
 @{e-js}.e-pivotclient .e-advanceFltrElement .searchEditorTreeView {
     font-weight: normal;
 }
@@ -24394,6 +24523,15 @@ width: 43% !important;
 }
 @{e-js}.e-pivotclient.e-rtl .e-pivotgrid .valueSorting{
 	float: none !important;
+}
+@{e-js}.e-pivotclient .e-pivotschemadesigner .e-pvtBtn {
+    float:left;
+}
+@{e-js}.e-pivotclient.e-rtl .e-pivotschemadesigner .e-pvtBtn {
+    float:right;
+}
+@{e-js}.e-pivotclient .e-pivotschemadesigner .e-pivotButton > .e-pvtBtn {
+    margin-top: 0px !important;
 }
 @{e-js}.e-pivotclient .e-descImage, @{e-js}.e-pivotclient .e-ascImage {
     display: inline-block;
@@ -25206,10 +25344,12 @@ border:1px solid @neutral-light;
     & when (@skin= "material") {
         /*material*/
         background-color: @grey-50 !important;
+        font-size: 16px;
     }
     & when not (@skin = "material") {
         /*other*/
         background-color: @content-bg-color !important;
+        font-size: 16px;
     }
  }
 
@@ -27155,11 +27295,14 @@ border:1px solid @neutral-light;
  }
 }
 @{e-widget}.e-ribbon .e-apptab .e-menu .e-active >a,@{e-widget}.e-ribbon .e-apptab .e-menu .e-active span {
-   & when not (@skin= "material") and not(@skin="office-365"){
+   & when not (@skin= "material") and not(@skin="office-365") and not(@skin="bootstrap"){
      color:@rbnapptab-font-color !important;
 	}
 	& when (@skin="office-365"){
 	  color: @theme-dark-font ! important;
+	}
+	& when (@skin="bootstrap"){
+	  color: @active-font-color ! important;
 	}
 }
 .e-ribbon.e-js .e-header li.e-select:not(.e-apptab) a:hover {
@@ -27321,6 +27464,12 @@ border:1px solid @neutral-light;
 	& when not (@skin= "material") {
       /*other*/
       color:  @rbnhover-font-color;
+   }
+}
+@{e-widget}.e-ribbon .e-rbn-button.e-btn.e-active .e-icon.e-ribbonresize{
+    & when (@skin= "bootstrap") {
+      /*bootstrap*/
+      color:  @active-icon-color !important;
    }
 }
 @{e-widget}.e-ribbon .e-rbn-button.e-tbtn.e-active.e-disable {
@@ -27618,7 +27767,7 @@ background:none;
 		color: @neutral-secondary-alt;
     }
 }
-.e-ribbon.e-js .e-rbn-button.e-tbtn.e-active,.e-ribbon.e-js .e-rbn-button.e-btn.e-resizebtnselect,.e-ribbon.e-rbnwithqat.e-js .e-rbn-button.e-tbtn.e-active{
+.e-ribbon.e-js .e-rbn-button.e-tbtn.e-active:hover,.e-ribbon.e-js .e-rbn-button.e-tbtn.e-active,.e-ribbon.e-js .e-rbn-button.e-btn.e-resizebtnselect,.e-ribbon.e-rbnwithqat.e-js .e-rbn-button.e-tbtn.e-active{
       & when (@skin="material") {
 	    /*material*/
         background-color: @grey-400;
@@ -27629,7 +27778,12 @@ background:none;
         background: @theme-light;
 		color:  @rbnhover-font-color;
       }
-	  & when not (@skin= "material") and not (@skin="office-365") {
+	  & when (@skin="bootstrap") {
+	    /*bootstrap*/
+       .ribbon-toggle-gradient();
+       color:  @active-font-color;
+      }
+	  & when not (@skin= "material") and not (@skin="office-365") and not (@skin="bootstrap") {
         /*other*/
        .ribbon-toggle-gradient();
        color:  @rbnhover-font-color;
@@ -27645,7 +27799,11 @@ background:none;
 	    /*office-365*/
 	 	color:@neutral-secondary-alt! important;
       }
-	  & when not (@skin= "material") and not (@skin="office-365") {
+	  & when (@skin="bootstrap") {
+	    /*bootstrap*/
+	 	color: @active-icon-color;
+     }
+	  & when not (@skin= "material") and not (@skin="office-365") and not (@skin="bootstrap") {
         /*other*/
        color:  @rbnhover-font-color;
      }
@@ -29466,6 +29624,9 @@ box-shadow: -1px 0 10px 0 black;
 @{e-js}.e-spreadsheet .e-ssr-horizontalprt .e-btn.e-ss-active {
    .spread-toggle-gradient();
    color:@sscontent-color;
+   & when (@skin = "bootstrap") {
+	color:@active-font-color;
+	}
    & when (@skin = "office-365") {
 	background:@ssactive-buttonbg-color;
 	}
@@ -29474,6 +29635,9 @@ box-shadow: -1px 0 10px 0 black;
 @{e-js}.e-spreadsheet .e-ssr-horizontalprt .e-btn.e-ss-active:hover {
     & when (@skin = "office-365") {
 	background:@ssactive-buttonbg-color;
+	}
+	& when (@skin = "bootstrap") {
+		color:@content-bg-color;
 	}
 }
 
@@ -29528,8 +29692,44 @@ box-shadow: -1px 0 10px 0 black;
 	border-color:@ssactive-buttonbg-color;
 	}
 }
-@{e-js}.e-spreadsheet .e-split.e-active .e-box .e-btn .e-icon, @{e-js}.e-spreadsheet .e-split .e-btn.e-select:active .e-icon{
+
+@{e-js}.e-spreadsheet .e-split.e-active .e-box .e-btn.e-select.e-ss-active{
+	& when (@skin = "bootstrap") {
+		color: @active-font-color;
+	}
+}
+@{e-js}.e-spreadsheet .e-ribbon.e-js .e-btn.e-select.e-ss-active:hover .e-icon {
+	& when (@skin = "bootstrap") {
+		color: @active-font-color;
+	}
+}
+@{e-js}.e-spreadsheet .e-ribbon .e-rbn-button.e-btn.e-active .e-icon {
+	& when (@skin = "bootstrap") {
+		color: @active-font-color;
+	}
+}
+@{e-js}.e-spreadsheet .e-ribbon.e-js .e-controlclicked .e-btn.e-select.e-ss-active:hover .e-icon {
+  & when (@skin = "bootstrap") {
+		color: @default-icon-color;
+	}
+}
+
+@{e-js}.e-spreadsheet .e-split.e-active .e-box .e-btn.e-select,
+@{e-js}.e-spreadsheet .e-split.e-active .e-box .e-btn.e-select:hover {
+	& when (@skin = "bootstrap") {
+		color: @active-font-color;
+	}
+}
+@{e-js}.e-spreadsheet .e-ribbon.e-js .e-btn.e-select.e-ss-active .e-icon {
+	& when (@skin = "bootstrap") {
+		color: @active-font-color;
+	}
+}
+@{e-js}.e-spreadsheet .e-split.e-active .e-box .e-btn .e-icon, @{e-js}.e-spreadsheet .e-split .e-btn.e-select:active .e-ss-active .e-icon{
     color: @ssactive-icon-color;
+	& when (@skin = "bootstrap") {
+		color: @active-font-color;
+	}
 }
 @{e-js}.e-spreadsheet .e-spreadsheetmainpanel .e-hborder {
     border-color: transparent;
@@ -29793,7 +29993,12 @@ box-shadow: -1px 0 10px 0 black;
   border:none;
   }
 }
-
+@{e-js}.e-spreadsheet .e-ribbon.e-js .e-rbn-button.e-tbtn.e-select:active .e-icon {
+	& when (@skin="bootstrap") {
+	    /*bootstrap*/
+	 	color: @hover-icon-color;
+    }
+}
 /*-------------------------------------SpreadSheet End -----------------------*/
 
 
@@ -29833,7 +30038,7 @@ box-shadow: -1px 0 10px 0 black;
 /*#region mediaplayer*/
 /*region media container styles*/
 
-.e-media-content-div .e-waitpopup-pane {
+@{e-js}.e-media-player .e-media-content-div .e-waitpopup-pane {
     background-color: transparent;
 }
 
@@ -29842,11 +30047,11 @@ box-shadow: -1px 0 10px 0 black;
     background-color: @content-bg-color;
 }
 
-.e-media-control-container {
+@{e-js}.e-media-player .e-media-control-container {
     background: @content-bg-color;
 }
 
-.e-media-element {
+@{e-js}.e-media-player .e-media-element {
     background: @content-bg-color;
 }
 
@@ -29857,15 +30062,15 @@ box-shadow: -1px 0 10px 0 black;
 
 /* region toolbar styles*/
 
-.e-media-toolbar-icon:before, .e-media-playlist-icon:before, .e-media-playlist-toggle:before {
+@{e-js}.e-media-player .e-media-toolbar-icon:before, @{e-js}.e-media-player .e-media-playlist-icon:before, @{e-js}.e-media-player .e-media-playlist-toggle:before {
     color: @default-icon-color;
 }
 
-.e-media-toolbar.adv .e-media-volume-text {
+@{e-js}.e-media-player .e-media-toolbar.adv .e-media-volume-text {
     color: @default-icon-color;
 }
 
-.e-media-time-stamp.e-media-adv {
+@{e-js}.e-media-player .e-media-time-stamp.e-media-adv {
     color: @default-font-color;
 }
 
@@ -29874,23 +30079,23 @@ box-shadow: -1px 0 10px 0 black;
     color: @active-bg-stcolor;
 }
 
-.e-media-timeslider-div.e-media-adv {
+@{e-js}.e-media-player .e-media-timeslider-div.e-media-adv {
     background: transparent;
 }
 
-.e-media-prev-li.basic .e-media-toolbar-icon:before, .e-media-next-li.basic .e-media-toolbar-icon:before {
+@{e-js}.e-media-player .e-media-prev-li.basic .e-media-toolbar-icon:before, @{e-js}.e-media-player .e-media-next-li.basic .e-media-toolbar-icon:before {
     color: @default-icon-color;
 }
 
-.e-media-toolbar.basic .e-media-toolbar-split-li {
+@{e-js}.e-media-player .e-media-toolbar.basic .e-media-toolbar-split-li {
     color: @default-icon-color;
 }
 
-.e-media-toolbar.basic .e-media-split {
+@{e-js}.e-media-player .e-media-toolbar.basic .e-media-split {
     color: @default-font-color;
 }
 
-.e-media-toolbar.basic .e-media-vol-slider-li {
+@{e-js}.e-media-player .e-media-toolbar.basic .e-media-vol-slider-li {
     background-color: @content-bg-color;
 }
 
@@ -29898,7 +30103,7 @@ box-shadow: -1px 0 10px 0 black;
     color: @default-font-color;
 }
 
-.e-media-time-stamp-end.e-media-mob, .e-media-time-stamp-run.e-media-mob {
+@{e-js}.e-media-player .e-media-time-stamp-end.e-media-mob, @{e-js}.e-media-player .e-media-time-stamp-run.e-media-mob {
     color: @default-font-color;
 }
 /* end region toolbar styles*/
@@ -29935,15 +30140,15 @@ box-shadow: -1px 0 10px 0 black;
 
 /*region playlist styles*/
 
-.e-media-playlist-img-div {
+@{e-js}.e-media-player .e-media-playlist-img-div {
     color: @content-bg-color !important;
 }
 
-.e-media-playlist-img-div.desktop {
+@{e-js}.e-media-player .e-media-playlist-img-div.desktop {
     border-color: @content-border-color;
 }
 
-.e-media-playlist-img-div.mobile {
+@{e-js}.e-media-player .e-media-playlist-img-div.mobile {
     border-color: @content-border-color;
 }
 
@@ -29951,68 +30156,68 @@ box-shadow: -1px 0 10px 0 black;
     color: @default-font-color;
 }
 
-.e-media-playlist-title {
+@{e-js}.e-media-player .e-media-playlist-title {
     color: @default-font-color;
 }
 
-.e-media-playlist-container.desktop, .e-media-playlist-container.mobile {
+@{e-js}.e-media-player .e-media-playlist-container.desktop,@{e-js}.e-media-player .e-media-playlist-container.mobile {
     background-color: @content-bg-color;
     border-color: @content-border-color;
 }
 
-.e-media-playlist-header {
+@{e-js}.e-media-player .e-media-playlist-header {
     border-bottom-color: @header-border-color;
 }
 
-.e-media-playlist-header label {
+@{e-js}.e-media-player .e-media-playlist-header label {
     color: @default-font-color;
 }
 
-.e-media-playlist-toggle.desktop {
+@{e-js}.e-media-player .e-media-playlist-toggle.desktop {
     background-color: @default-font-color;
 }
 
-.e-media-playlist-toggle.e-media-expand:before, .e-media-playlist-toggle.e-media-collapse:before {
+@{e-js}.e-media-player .e-media-playlist-toggle.e-media-expand:before, @{e-js}.e-media-player .e-media-playlist-toggle.e-media-collapse:before {
     color: @default-font-color !important;
 }
 
-.e-media-playlist-container .e-listbox .e-select {
+@{e-js}.e-media-player .e-media-playlist-container .e-listbox .e-select {
     /*background: @active-bg-stcolor !important;*/
 }
 
-.e-media-playlist-container .e-listbox li {
+@{e-js}.e-media-player .e-media-playlist-container .e-listbox li {
     border-bottom-color: @content-border-color;
 }
 
-.e-media-playlist-container .e-listbox-container {
+@{e-js}.e-media-player .e-media-playlist-container .e-listbox-container {
     background-color: @content-bg-color;
 }
 /*region playlist styles*/
 
 /*other styles*/
-.e-media-video-baner {
+@{e-js}.e-media-player .e-media-video-baner {
     color: @active-font-color;
 }
 
-.e-media-audio-title {
+@{e-js}.e-media-player .e-media-audio-title {
     color: @header-font-color;
 }
 
-.e-media-overlay {
+@{e-js}.e-media-player .e-media-overlay {
     color: white;
 }
 
-.e-media-time-tooltip {
+@{e-js}.e-media-player .e-media-time-tooltip {
     border-color: @content-border-color;
     color: @content-font-color;
     background-color: @content-bg-color;
 }
 
-.e-media-hd-tag {
+@{e-js}.e-media-player .e-media-hd-tag {
     color: red;
 }
 
-.e-media-toolbar-split {
+@{e-js}.e-media-player .e-media-toolbar-split {
     background: @header-border-color;
 }
 
@@ -30028,11 +30233,11 @@ box-shadow: -1px 0 10px 0 black;
     border-color: @default-border-color !important;
 }
 /*#region hover*/
-.e-media-mouse .e-media-toolbar-icon:not(.disabled):hover::before {
+@{e-js}.e-media-player .e-media-mouse .e-media-toolbar-icon:not(.disabled):hover::before {
     color: @hover-font-color !important;
 }
 
-.e-media-toolbar.adv .e-media-toolbar-volume-li:hover {
+@{e-js}.e-media-player .e-media-toolbar.adv .e-media-toolbar-volume-li:hover {
     background: transparent !important;
 }
 
@@ -30043,13 +30248,13 @@ box-shadow: -1px 0 10px 0 black;
 
 /*material theme*/
 
-.e-media-toolbar.basic .e-media-time-li .e-handle {
+@{e-js}.e-media-player .e-media-toolbar.basic .e-media-time-li .e-handle {
     & when (@skin= "material") {
         margin-top: -3px !important;
     }
 }
 
-.e-media-toolbar.basic .e-media-volume-slider .e-handle {
+@{e-js}.e-media-player .e-media-toolbar.basic .e-media-volume-slider .e-handle {
     & when (@skin= "material") {
         margin-left: 0px !important;
     }
@@ -30083,13 +30288,13 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-timeslider.e-media-adv.e-slider .e-handle {
+@{e-js}.e-media-player .e-media-timeslider.e-media-adv.e-slider .e-handle {
     & when (@skin= "material") {
         margin-top: -2px !important;
     }
 }
 
-.e-media-toolbar.adv .e-media-volume-slider .e-handle {
+@{e-js}.e-media-player .e-media-toolbar.adv .e-media-volume-slider .e-handle {
     & when (@skin= "material") {
         margin-top: 0px !important;
     }
@@ -30102,7 +30307,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-toolbar.adv .e-media-volume-slider-li {
+@{e-js}.e-media-player .e-media-toolbar.adv .e-media-volume-slider-li {
     & when (@skin= "material") {
         margin-top: -2px !important;
     }
@@ -30117,7 +30322,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-playlist-toggle.mobile {
+@{e-js}.e-media-player .e-media-playlist-toggle.mobile {
     & when (@skin= "material") {
         -ms-transform: rotate(90deg) !important;
         -webkit-transform: rotate(90deg) !important;
@@ -30125,7 +30330,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-center-play:before {
+@{e-js}.e-media-player .e-media-center-play:before {
     & when (@skin= "material") {
         left: 46% !important;
         left: -moz-calc(~'50% - 23px') !important;
@@ -30135,7 +30340,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-hd-tag {
+@{e-js}.e-media-player .e-media-hd-tag {
     & when (@skin= "material") {
         right: 0px !important;
     }
@@ -30147,7 +30352,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 /*office-365 theme*/
-.e-media-toolbar.basic .e-media-volume-slider .e-handle {
+@{e-js}.e-media-player .e-media-toolbar.basic .e-media-volume-slider .e-handle {
     & when (@skin= "office-365") {
         margin-left: -2px !important;
     }
@@ -30166,25 +30371,25 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-settings-selector:before {
+@{e-js}.e-media-player .e-media-settings-selector:before {
     & when (@skin= "office-365") {
         top: 6px !important;
     }
 }
 
-.e-media-toolbar.adv .e-media-volume-slider .e-handle {
+@{e-js}.e-media-player .e-media-toolbar.adv .e-media-volume-slider .e-handle {
     & when (@skin= "office-365") {
         margin-top: -2px !important;
     }
 }
 
-.e-media-playlist-container .e-listbox li {
+@{e-js}.e-media-player .e-media-playlist-container .e-listbox li {
     & when (@skin= "office-365") {
         padding: 4px !important;
     }
 }
 
-.e-media-playlist-number {
+@{e-js}.e-media-player .e-media-playlist-number {
     & when (@skin= "office-365") {
         margin-top: -17px !important;
     }
@@ -30211,7 +30416,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-toolbar.adv .e-media-volume-slider-li {
+@{e-js}.e-media-player .e-media-toolbar.adv .e-media-volume-slider-li {
     & when (@skin= "office-365") {
         margin-top: -2px !important;
     }
@@ -30226,7 +30431,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-playlist-toggle.mobile {
+@{e-js}.e-media-player .e-media-playlist-toggle.mobile {
     & when (@skin= "office-365") {
         -ms-transform: rotate(90deg) !important;
         -webkit-transform: rotate(90deg) !important;
@@ -30234,7 +30439,7 @@ box-shadow: -1px 0 10px 0 black;
     }
 }
 
-.e-media-center-play:before {
+@{e-js}.e-media-player .e-media-center-play:before {
     & when (@skin= "office-365") {
         left: 46% !important;
         left: -moz-calc(~'50% - 23px') !important;
