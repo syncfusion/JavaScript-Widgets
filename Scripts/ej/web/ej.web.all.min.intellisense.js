@@ -13358,6 +13358,14 @@ refreshContent:function(templateRefresh){
 /// <param name="templateRefresh"	type="boolean">optional When templateRefresh is set true, template and grid contents both are refreshed in grid else only grid content is refreshed</param>
 /// </signature>
 },
+refreshData:function(additionalParameters){
+/// <signature>
+/// <summary>
+/// Refresh the grid contents with updated server Data, using XMLHttpRequest. Url Path should be provided in Grid datasource otherwise it refreshes with local data without XMLHttpRequest.
+/// </summary>
+/// <param name="additionalParameters"	type="any">optionalData to the server </param>
+/// </signature>
+},
 refreshTemplate:function(){
 /// <signature>
 /// <summary>
@@ -18097,7 +18105,7 @@ zoom:function(level, isAnimate){
 refreshLayer:function(){
 /// <signature>
 /// <summary>
-/// Method to reload the shape marker with updated values.
+/// Method to reload the specified layer based on layer and sublayer index value.
 /// </summary>
 },
 addMarkers:function(){
@@ -24964,11 +24972,13 @@ insertRow:function(before, cell){
 /// <param name="cell"	type="JQuery">Row will be added based on the given cell element</param>
 /// </signature>
 },
-pasteContent:function(){
+pasteContent:function(html){
 /// <signature>
 /// <summary>
 /// This method helps to insert/paste the content at the current cursor (caret) position or the selected content to be replaced with our text by passing the value as parameter to the pasteContent method in the Editor.
 /// </summary>
+/// <param name="html"	type="string">paste content</param>
+/// </signature>
 },
 refresh:function(){
 /// <signature>
@@ -31230,7 +31240,7 @@ ejTreeGrid :function (options) {
 ///<br/>editMode-ej.TreeGrid.EditMode|string	default-ej.TreeGrid.EditMode.CellEditing
 ///<br/><br/>
 ///Specifies the position where the new row has to be added.
-///<br/>rowPosition-ej.TreeGrid.RowPosition|string	default-top
+///<br/>rowPosition-ej.TreeGrid.RowPosition|string	default-ej.TreeGrid.RowPosition.Top
 ///<br/><br/>
 ///Enable or disable the confirmation dialog while deleting the record.
 ///<br/>showDeleteConfirmDialog-boolean	default-false
@@ -31287,7 +31297,7 @@ ejTreeGrid :function (options) {
 ///<br/>value-string	default-
 ///<br/><br/>
 ///Gets or sets a value that indicates the maximum number of filter choices that can be showed in the excel styled filter menu.
-///<br/>maxFilterChoice-number	default-1000
+///<br/>maxFilterChoices-number	default-1000
 ///<br/><br/>
 ///Specifies whether to wrap the header text when it is overflown i.e., when it exceeds the header width.
 ///<br/>headerTextOverflow-ej.TreeGrid.HeaderTextOverflow|string	default-ej.TreeGrid.HeaderTextOverflow.None
@@ -31456,6 +31466,9 @@ ejTreeGrid :function (options) {
 ///<br/><br/>
 ///Specifies the summary columns in the summary rows.
 ///<br/>summaryColumns-Array&lt;any&gt;	default-
+///<br/><br/>
+///Specifies the custom summary calculate function or text.
+///<br/>customSummaryValue-string	default-
 ///<br/><br/>
 ///Specifies summary column used to perform the summary calculation.
 ///<br/>dataMember-string	default-

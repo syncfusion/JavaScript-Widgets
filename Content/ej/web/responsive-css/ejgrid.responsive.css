@@ -92,7 +92,7 @@
 
     .e-grid.e-responsive, .e-grid.e-responsive .e-rowcell {
         font-size: 12px;
-        font-family: segoe ui;
+        font-family: segoe ui,Helvetica Neue,Ubuntu,Arial;
     }
 
             .e-pager .e-pagercontainer{

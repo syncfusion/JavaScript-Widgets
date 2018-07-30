@@ -5495,7 +5495,7 @@
             /*material*/
             height: 14px;
             width: 14px;
-        }
+		}
 
         & when (@skin= "office-365") {
             height: 16px;
@@ -5510,7 +5510,12 @@
             top: 3px;
         }
     }
-
+     .e-excelfilter .e-menu.e-vertical .e-list .e-chkbox-small > span {
+        & when (@skin= "material") {
+            /*material*/
+            top: 4px;
+		}
+	}
     .e-chkbox-wrap .e-chkbox-medium > span {
         height: 20px;
         width: 20px;
@@ -20400,7 +20405,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
     div.e-menuitem > div.e-expander:before, 
     div.e-columnmenu span.e-expander:before,
-    div.e-contextmenu div.e-expander:before,
+    div.e-tgcontextmenu div.e-expander:before,
     div.e-columnmenu div.e-expander:before {
         content: "\e67e" !important;
     }
@@ -20761,8 +20766,8 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-contextmenu,
-    .e-innerContextmenu {
+    .e-tgcontextmenu,
+    .e-tginnerContextmenu {
         & when (@skin= "material") {
             border-width: 0px;
             border-style: solid;
@@ -22388,7 +22393,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
      .e-treegrid-columnmenu,
     .e-treegrid-contextmenu,
-    .e-innerContextmenu {
+    .e-tginnerContextmenu {
         & when (@skin= "material") {
             padding: 8px 0px 8px 0px;
             margin: 0px;
@@ -22481,8 +22486,8 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-columnmenu,
-    .e-innerContextmenu,
-    .e-contextmenu {
+    .e-tginnerContextmenu,
+    .e-tgcontextmenu {
         & when (@skin= "material") {
             border-width: 0px;
             border-style: solid;
@@ -22711,26 +22716,6 @@ background-image: url('../@{font-path}/icons-white.png');
             top: 3px;
             box-sizing: content-box;
             -moz-box-sizing: content-box;
-        }
-    }
-
-    @-webkit-keyframes e-ripple-treegrid {
-        100% {
-            & when (@skin = "material") {
-                opacity: 0;
-                -webkit-transform: scale(4);
-                transform: scale(4);
-            }
-        }
-    }
-
-    @keyframes e-ripple-treegrid {
-        100% {
-            & when (@skin = "material") {
-                opacity: 0;
-                -webkit-transform: scale(4);
-                transform: scale(4);
-            }
         }
     }
 
@@ -23096,7 +23081,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-     .e-contextmenu-image {
+     .e-tgcontextmenu-image {
         & when (@skin = "material") {
             padding: 8px 5px 8px 7px;
         }
@@ -23114,7 +23099,7 @@ background-image: url('../@{font-path}/icons-white.png');
         float: left;
     }
 
-     .e-contextmenu-icon {
+     .e-tgcontextmenu-icon {
         & when (@skin = "material") {
             padding: 8px 5px 8px 7px;
         }
@@ -23132,7 +23117,7 @@ background-image: url('../@{font-path}/icons-white.png');
         float: left;
     }
 
-     .e-contextmenu-label {
+     .e-tgcontextmenu-label {
         & when (@skin = "material") {
             padding: 5px 5px 6px 5px;
         }
@@ -23150,7 +23135,7 @@ background-image: url('../@{font-path}/icons-white.png');
         float: left;
     }
 
-    .e-contextmenu-label span {
+    .e-tgcontextmenu-label span {
         & when (@skin = "office-365") {
             font-size: 13px;
         }
@@ -23354,12 +23339,12 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e74e";
     }
 
-    .e-headerContextmenu .e-icon {
+    .e-tgheaderContextmenu .e-icon {
         position: relative;
         top: 5px;
     }
 
-    .e-headerContextmenu .e-expander {
+    .e-tgheaderContextmenu .e-expander {
         float: right;
         position: relative;
         top: 0px;
@@ -23369,13 +23354,13 @@ background-image: url('../@{font-path}/icons-white.png');
         word-break: break-all;
     }
 
-    .e-contextmenu .e-save, 
-    .e-contextmenu .e-cancel {
+    .e-tgcontextmenu .e-save, 
+    .e-tgcontextmenu .e-cancel {
         position: relative;
         top: 3.5px;
     }
 
-    .e-contextmenu .e-edit {
+    .e-tgcontextmenu .e-edit {
         position: relative;
         top: 3px;
     }
@@ -27008,8 +26993,8 @@ background-image: url('../@{font-path}/icons-white.png');
 
     @font-face {
         font-family: 'ej-reportviewericons';
-        src: url('@{font-icon-path}/reportviewer/ej-reportviewericons.eot?wpa4ep');
-        src: url('@{font-icon-path}/reportviewer/ej-reportviewericons.eot?wpa4ep#iefix') format('embedded-opentype'), url('@{font-icon-path}/reportviewer/ej-reportviewericons.ttf?wpa4ep') format('truetype'), url('@{font-icon-path}/reportviewer/ej-reportviewericons.woff?wpa4ep') format('woff'), url('@{font-icon-path}/reportviewer/ej-reportviewericons.svg?wpa4ep#ej-reportviewericons') format('svg');
+        src: url('@{font-path}/reportviewer/ej-reportviewericons.eot?wpa4ep');
+        src: url('@{font-path}/reportviewer/ej-reportviewericons.eot?wpa4ep#iefix') format('embedded-opentype'), url('@{font-path}/reportviewer/ej-reportviewericons.ttf?wpa4ep') format('truetype'), url('@{font-path}/reportviewer/ej-reportviewericons.woff?wpa4ep') format('woff'), url('@{font-path}/reportviewer/ej-reportviewericons.svg?wpa4ep#ej-reportviewericons') format('svg');
         font-weight: normal;
         font-style: normal;
     }
@@ -29084,9 +29069,8 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-excelfilter .e-menu.e-vertical .e-list > a {
-        & when not (@skin= "material") {
-            margin: 0px 10px 0px 15px;
-        }
+          margin: 0px 10px 0px 15px;
+        
 
         & when (@skin= "office-365") {
             padding-bottom: 13px;
@@ -29097,7 +29081,9 @@ background-image: url('../@{font-path}/icons-white.png');
 
     .e-excelfilter .e-menu.e-vertical .e-list > ul .e-list > a {
         padding-left: 15px;
-
+        & when (@skin= "material") {
+            padding-left: 20px;
+        }
         & when (@skin= "office-365") {
             padding-left: 0;
         }
@@ -29119,6 +29105,9 @@ background-image: url('../@{font-path}/icons-white.png');
 
     .e-excelfilter .e-menu.e-vertical .e-exceltick::before {
         margin-left: -7px;
+		& when (@skin= "material") {
+            margin-left: -1px;
+        }
     }
 
     .e-excelfilter .e-menu.e-vertical .e-exceltick:before {
@@ -33414,6 +33403,9 @@ slideRight Animate
     .e-kanban.e-rtl .e-kanbancard .e-expandcollapse {
         float: left;
         margin-left: -7px;
+		& when (@skin= "material") {
+            margin-left: -1px;
+        }
     }
 
     .e-kanban.e-rtl .e-kanbancard .e-card_image {
@@ -42142,6 +42134,18 @@ slideRight Animate
     padding-right: 8px;
      }
 
+      .e-ss-topmaindiv {
+         padding-bottom: 7px;
+     }
+
+      .e-dlg-fieldlabel {
+       padding-left: 5px;
+    }
+
+     .e-dlg-fieldvaluelabel {
+    padding: 0px 0px 7px 0px;
+    }
+
      .e-ss-rightdiv {
         width: 240px;
 
@@ -44372,9 +44376,22 @@ slideRight Animate
     left: 0px;
     border-radius: 50%;
     opacity: 0;
-    -moz-animation: e-media-fadeout .5s linear 1 normal forwards;
-    -webkit-animation: e-media-fadeout .5s linear 1 normal forwards;
-    animation: e-media-fadeout .5s linear 1 normal forwards;
+    -webkit-animation-name: e-media-fadeout;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: initial;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-play-state: initial;
+    -moz-animation-name: e-media-fadeout;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: initial;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-direction: normal;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-play-state: initial;
     animation-name: e-media-fadeout;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -44384,6 +44401,7 @@ slideRight Animate
     animation-fill-mode: forwards;
     animation-play-state: initial;
 }
+
 .e-media-player .e-media-player .e-hide {
 	display:none;
 }
