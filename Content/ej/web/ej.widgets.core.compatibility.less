@@ -22703,6 +22703,26 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
+    @-webkit-keyframes e-ripple-treegrid {
+        100% {
+            & when (@skin = "material") {
+                opacity: 0;
+                -webkit-transform: scale(4);
+                transform: scale(4);
+            }
+        }
+    }
+
+    @keyframes e-ripple-treegrid {
+        100% {
+            & when (@skin = "material") {
+                opacity: 0;
+                -webkit-transform: scale(4);
+                transform: scale(4);
+            }
+        }
+    }
+
     .e-js .e-filterMenuDiv .e-btn.e-select, 
     .e-js .e-filterMenuDiv .e-btn.e-select:hover, 
     .e-js .e-filterMenuDiv .e-btn.e-select:active,
@@ -26998,6 +27018,38 @@ background-image: url('../@{font-path}/icons-white.png');
         -moz-osx-font-smoothing: grayscale;
     }
 
+     .e-js.e-reportviewer-errormodeltooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+    .e-js.e-reportviewer-errormodeltooltip .e-reportviewer-tooltiptext {
+        visibility: hidden;
+        width: 230px;
+        background-color: #F0F3F4;
+        color: #424949;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        margin-left: -60px;
+        font-size: 14px;
+        font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial !important;
+    }
+
+     .e-js.e-reportviewer-errormodeltooltip .e-reportviewer-tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+    }
+
+     .e-js.e-reportviewer-errormodeltooltip:hover .e-reportviewer-tooltiptext {
+        visibility: visible;
+     }
+
     .e-js.e-reportviewer-toolbarcontainer {
         vertical-align: middle;
         border: 1px solid;
@@ -27494,6 +27546,14 @@ background-image: url('../@{font-path}/icons-white.png');
 
     .e-js .e-reportviewer-collapsetoggle {
         background: url('@{font-path}/reportviewer/collapse.svg') no-repeat center;
+    }
+
+    .e-js .e-reportviewer-alertIcon {
+        background: url('@{font-path}/reportviewer/alertIcon.svg') no-repeat center;
+    }
+
+    .e-js .e-reportviewer-errorIcon {
+        background: url('@{font-path}/reportviewer/errorIcon.svg') no-repeat center;
     }
 
     .e-js .e-reportviewer-sortingUpDown {
@@ -44360,22 +44420,9 @@ slideRight Animate
     left: 0px;
     border-radius: 50%;
     opacity: 0;
-    -webkit-animation-name: e-media-fadeout;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: initial;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-direction: normal;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-play-state: initial;
-    -moz-animation-name: e-media-fadeout;
-    -moz-animation-duration: 0.5s;
-    -moz-animation-timing-function: linear;
-    -moz-animation-delay: initial;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-direction: normal;
-    -moz-animation-fill-mode: forwards;
-    -moz-animation-play-state: initial;
+    -moz-animation: e-media-fadeout .5s linear 1 normal forwards;
+    -webkit-animation: e-media-fadeout .5s linear 1 normal forwards;
+    animation: e-media-fadeout .5s linear 1 normal forwards;
     animation-name: e-media-fadeout;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -44385,7 +44432,6 @@ slideRight Animate
     animation-fill-mode: forwards;
     animation-play-state: initial;
 }
-
 .e-js.e-media-player .e-media-player .e-hide {
 	display:none;
 }

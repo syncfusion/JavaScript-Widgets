@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.css
-*  version : 12.3
+*  version : 16.2.0.47-beta
 *  Copyright Syncfusion Inc. 2001 - 2018. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -22705,11 +22705,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   color: #666666;
 }
 .e-columnmenuselection .e-icon,
-.e-contextmenu-mouseover .e-icon {
+.e-tgcontextmenu-mouseover .e-icon {
   
 }
 .e-columnmenuselection .e-icon,
-.e-contextmenu-mouseover .e-icon {
+.e-tgcontextmenu-mouseover .e-icon {
   color: #333333;
 }
 .e-treegrid .e-tooltxt.e-hover > span {
@@ -22775,34 +22775,34 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-treegrid .e-summaryrow .e-summaryrowcell {
   border-bottom-color: #cecece;
 }
-.e-contextmenu,
-.e-innerContextmenu {
+.e-tgcontextmenu,
+.e-tginnerContextmenu {
   
   background: #fcfcfc;
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
 }
-.e-contextmenu,
-.e-innerContextmenu {
+.e-tgcontextmenu,
+.e-tginnerContextmenu {
   border-color: #cecece !important;
   color: #333333;
 }
-.e-headerContextmenu {
+.e-tgheaderContextmenu {
   
   background: #fcfcfc;
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
   border: 1px solid;
 }
-.e-headerContextmenu {
+.e-tgheaderContextmenu {
   border-color: #cecece !important;
   color: #333333;
 }
-.e-contextmenu-mouseover {
+.e-tgcontextmenu-mouseover {
   
 }
-.e-contextmenu-mouseover {
+.e-tgcontextmenu-mouseover {
   color: #333333;
 }
-.e-contextmenu-mouseover {
+.e-tgcontextmenu-mouseover {
   background: #f4f4f4;
   /* Old browsers */
   background: -moz-linear-gradient(top, #f4f4f4, #e9e9e9);

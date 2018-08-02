@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.compatibility.css
-*  version : 12.3
+*  version : 16.2.0.47-beta
 *  Copyright Syncfusion Inc. 2001 - 2018. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -20304,11 +20304,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   color: #cccccc;
 }
 .e-js .e-columnmenuselection .e-icon,
-.e-js .e-contextmenu-mouseover .e-icon {
+.e-js .e-tgcontextmenu-mouseover .e-icon {
   
 }
 .e-js .e-columnmenuselection .e-icon,
-.e-js .e-contextmenu-mouseover .e-icon {
+.e-js .e-tgcontextmenu-mouseover .e-icon {
   color: #efefef;
 }
 .e-js.e-treegrid .e-tooltxt.e-hover > span {
@@ -20358,34 +20358,34 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-js.e-treegrid .e-summaryrow .e-summaryrowcell {
   border-bottom-color: #494949;
 }
-.e-js.e-contextmenu,
-.e-js.e-innerContextmenu {
+.e-js.e-tgcontextmenu,
+.e-js.e-tginnerContextmenu {
   
   background: black;
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
 }
-.e-js.e-contextmenu,
-.e-js.e-innerContextmenu {
+.e-js.e-tgcontextmenu,
+.e-js.e-tginnerContextmenu {
   border-color: #494949 !important;
   color: #dddddd;
 }
-.e-js.e-headerContextmenu {
+.e-js.e-tgheaderContextmenu {
   
   background: black;
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
   border: 1px solid;
 }
-.e-js.e-headerContextmenu {
+.e-js.e-tgheaderContextmenu {
   border-color: #494949 !important;
   color: #dddddd;
 }
-.e-js .e-contextmenu-mouseover {
+.e-js .e-tgcontextmenu-mouseover {
   
 }
-.e-js .e-contextmenu-mouseover {
+.e-js .e-tgcontextmenu-mouseover {
   color: #aaaaaa;
 }
-.e-js .e-contextmenu-mouseover {
+.e-js .e-tgcontextmenu-mouseover {
   background: #343e16;
 }
 .e-js.e-tooltipgantt {

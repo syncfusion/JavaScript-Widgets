@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.css
-*  version : 12.3
+*  version : 16.2.0.47-beta
 *  Copyright Syncfusion Inc. 2001 - 2018. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -20443,11 +20443,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   color: white;
 }
 .e-columnmenuselection .e-icon,
-.e-contextmenu-mouseover .e-icon {
+.e-tgcontextmenu-mouseover .e-icon {
   
 }
 .e-columnmenuselection .e-icon,
-.e-contextmenu-mouseover .e-icon {
+.e-tgcontextmenu-mouseover .e-icon {
   color: white;
 }
 .e-treegrid .e-tooltxt.e-hover > span {
@@ -20497,34 +20497,34 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-treegrid .e-summaryrow .e-summaryrowcell {
   border-bottom-color: gray;
 }
-.e-contextmenu,
-.e-innerContextmenu {
+.e-tgcontextmenu,
+.e-tginnerContextmenu {
   
   background: black;
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
 }
-.e-contextmenu,
-.e-innerContextmenu {
+.e-tgcontextmenu,
+.e-tginnerContextmenu {
   border-color: gray !important;
   color: #dbdb00;
 }
-.e-headerContextmenu {
+.e-tgheaderContextmenu {
   
   background: black;
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
   border: 1px solid;
 }
-.e-headerContextmenu {
+.e-tgheaderContextmenu {
   border-color: gray !important;
   color: #dbdb00;
 }
-.e-contextmenu-mouseover {
+.e-tgcontextmenu-mouseover {
   
 }
-.e-contextmenu-mouseover {
+.e-tgcontextmenu-mouseover {
   color: white;
 }
-.e-contextmenu-mouseover {
+.e-tgcontextmenu-mouseover {
   background: #035103;
 }
 .e-tooltipgantt {
