@@ -5645,7 +5645,9 @@
     }
 
     .e-radiobtn-wrap .e-radiobtn {
-        display: none;
+        display: block;
+        visibility: hidden;
+        position: absolute;
         height: 0px;
         width: 0px;
         z-index: 1;
@@ -5660,73 +5662,120 @@
         display: block;
     }
 
-    .e-radiobtn-wrap > span .e-rad-icon {
+    .e-radiobtn-wrap > span.e-radmedium > span.e-rad-icon {
         position: absolute;
-        width: 100%;
+        width: 90%;
+        height: 80%;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        font-size:16px;
+
+        & when (@skin ="material") { 
+        transform: scale(0.75);
+        -moz-transform: scale(0.75);
+        -webkit-transform: scale(0.75);
+        height: 93%;
+        width:100%;
+        }
+
+        & when (@skin="office-365"){
+        transform: scale(0.75);
+        -moz-transform: scale(0.75);
+        -webkit-transform: scale(0.75);
+        height: 93%;
+        width:100%;
+        }
+    }
+
+    .e-radiobtn-wrap > span.e-radsmaller > span.e-rad-icon {
+        position: absolute;
+        width: 75%;
+        height: 75%;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        font-size:16px;
+
+        & when (@skin= "material") 
+        {
+        width: 90%;
         height: 100%;
+        transform: scale(0.63);
+        -moz-transform: scale(0.63);
+        -webkit-transform: scale(0.63);
+        }
+        & when (@skin="office-365"){
+        width: 90%;
+        height: 100%;
+        transform: scale(0.63);
+        -moz-transform: scale(0.63);
+        -webkit-transform: scale(0.63);
+        }
     }
 
     .e-radiobtn-wrap .e-radmedium {
         & when (@skin= "material") {
             height: 20px;
             width: 20px;
-            border-radius: 20px;
-            -moz-border-radius: 20px;
-            -webkit-border-radius: 20px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            left:0;
+            top:0;
         }
 
         & when (@skin= "office-365") {
             height: 20px;
             width: 20px;
-            border-radius: 20px;
-            -moz-border-radius: 20px;
-            -webkit-border-radius: 20px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            left:0;
+            top:0;
         }
 
         & when not (@skin= "material") and not (@skin="office-365") {
             height: 16px;
             width: 16px;
-            border-radius: 15px;
-            -moz-border-radius: 15px;
-            -webkit-border-radius: 15px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            top:0;
+            left:0;
         }
     }
 
     .e-radiobtn-wrap .e-radmedium .e-rad-icon {
-        font-size: 9px;
-        border-radius: 9px;
-        -moz-border-radius: 9px;
-        -webkit-border-radius: 9px;
-
-        & when (@skin= "material") {
-            font-size: 12px;
-            line-height: 11px;
-        }
-
-        & when (@skin= "office-365") {
-            font-size: 10px;
-            line-height: 11px;
-        }
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
     }
 
     .e-radiobtn-wrap .e-radmedium .e-rad-icon.e-icon:before {
         & when (@skin= "material") {
-            height: 10px;
-            width: 10px;
+            height: 16px;
+            width: 16px;
         }
 
         & when (@skin="office-365") {
-            height: 10px;
-            width: 10px;
+            height: 16px;
+            width: 16px;
         }
 
         & when not (@skin= "material") and not (@skin="office-365") {
             /*other*/
-            height: 9px;
-            width: 9px;
+            height: 14px;
+            width: 14px;
         }
 
-        margin: 24% auto;
+        margin: 9% auto;
     }
 
     .e-radiobtn-wrap .e-radsmaller {
@@ -5734,49 +5783,36 @@
         & when (@skin= "material") {
             height: 16px;
             width: 16px;
-            border-radius: 16px;
-            -moz-border-radius: 16px;
-            -webkit-border-radius: 16px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
         }
 
         & when (@skin= "office-365") {
             height: 16px;
             width: 16px;
-            border-radius: 16px;
-            -moz-border-radius: 16px;
-            -webkit-border-radius: 16px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            top: 0;
+            left: 0;
         }
 
         & when not (@skin= "material") and not (@skin="office-365") {
             height: 13px;
             width: 13px;
-            border-radius: 13px;
-            -moz-border-radius: 13px;
-            -webkit-border-radius: 13px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            top: 0;
+            left: 0;
         }
     }
 
     .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
-        text-indent: 2px;
-        border-radius: 7px;
-        -moz-border-radius: 7px;
-        -webkit-border-radius: 7px;
-        padding: 0.5px;
-
-        & when (@skin= "material") {
-            font-size: 10px;
-            line-height: 15px;
-        }
-
-        & when (@skin= "office-365") {
-            font-size: 9px;
-            line-height: 15px;
-        }
-
-        & when not (@skin= "material") and not (@skin="office-365") {
-            font-size: 8px;
-            line-height: 12px;
-        }
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
     }
 
     .e-radiobtn-wrap .e-text {
@@ -7361,6 +7397,7 @@
         min-height: 15px;
         min-width: 10px;
         border-image: initial;
+        outline: 0 none;
 
         & when (@skin= "material") {
             margin-left: 8px;
@@ -12934,6 +12971,10 @@ background-image: url('../@{font-path}/icons-white.png');
         & when (@skin= "office-365") {
             top: 8px;
         }
+    }
+
+    .e-grid .e-filterdiv.e-searchinputdiv {
+        box-sizing: content-box;
     }
 
     .e-grid .e-gridpopup .e-tail:before, .e-grid .e-gridpopup .e-tail:after {
@@ -22727,26 +22768,6 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    @-webkit-keyframes e-ripple-treegrid {
-        100% {
-            & when (@skin = "material") {
-                opacity: 0;
-                -webkit-transform: scale(4);
-                transform: scale(4);
-            }
-        }
-    }
-
-    @keyframes e-ripple-treegrid {
-        100% {
-            & when (@skin = "material") {
-                opacity: 0;
-                -webkit-transform: scale(4);
-                transform: scale(4);
-            }
-        }
-    }
-
      .e-filterMenuDiv .e-btn.e-select, 
      .e-filterMenuDiv .e-btn.e-select:hover, 
      .e-filterMenuDiv .e-btn.e-select:active,
@@ -27042,38 +27063,6 @@ background-image: url('../@{font-path}/icons-white.png');
         -moz-osx-font-smoothing: grayscale;
     }
 
-     .e-reportviewer-errormodeltooltip {
-        position: relative;
-        display: inline-block;
-    }
-
-    .e-reportviewer-errormodeltooltip .e-reportviewer-tooltiptext {
-        visibility: hidden;
-        width: 230px;
-        background-color: #F0F3F4;
-        color: #424949;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        position: absolute;
-        z-index: 1;
-        left: 50%;
-        margin-left: -60px;
-        font-size: 14px;
-        font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial !important;
-    }
-
-     .e-reportviewer-errormodeltooltip .e-reportviewer-tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-    }
-
-     .e-reportviewer-errormodeltooltip:hover .e-reportviewer-tooltiptext {
-        visibility: visible;
-     }
-
     .e-reportviewer-toolbarcontainer {
         vertical-align: middle;
         border: 1px solid;
@@ -27528,7 +27517,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
      .e-reportviewer-label,  .e-reportviewer-labelpageno {
         border: none;
-        vertical-align: text-top;
+        vertical-align: inherit;
     }
 
      .e-reportviewer-documentmappopup {
@@ -27570,14 +27559,6 @@ background-image: url('../@{font-path}/icons-white.png');
 
      .e-reportviewer-collapsetoggle {
         background: url('@{font-path}/reportviewer/collapse.svg') no-repeat center;
-    }
-
-     .e-reportviewer-alertIcon {
-        background: url('@{font-path}/reportviewer/alertIcon.svg') no-repeat center;
-    }
-
-     .e-reportviewer-errorIcon {
-        background: url('@{font-path}/reportviewer/errorIcon.svg') no-repeat center;
     }
 
      .e-reportviewer-sortingUpDown {
@@ -37002,7 +36983,7 @@ slideRight Animate
     .e-spreadsheet .e-rightalign {
         direction: rtl;
         unicode-bidi: plaintext;
-		-moz-unicode-bidi: plaintext;
+		unicode-bidi: -moz-plaintext;
     }
 
     .e-spreadsheet .e-calign {

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.compatibility.css
-*  version : 16.2.0.47-beta
+*  version : 12.3
 *  Copyright Syncfusion Inc. 2001 - 2018. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -14396,9 +14396,6 @@ input[type="text"].e-input {
 .e-widget.e-radiobtn-wrap.e-material-animate .e-radmedium span.e-rad-icon.e-icon.e-circle_01 {
   
 }
-.e-widget.e-radiobtn-wrap.e-material-animate .e-radsmaller span.e-rad-icon.e-icon.e-circle_01 {
-  
-}
 .e-widget.e-radiobtn-wrap span.e-rad-icon.e-icon.e-rad-select:before {
   
 }
@@ -14432,6 +14429,25 @@ input[type="text"].e-input {
 }
 .e-widget.e-radiobtn-wrap.e-disable.e-focus > span {
   box-shadow: none;
+}
+.e-widget.e-radiobtn-wrap .e-spanicon.e-radsmaller .e-icon.e-rad-icon,
+.e-widget.e-radiobtn-wrap .e-radmedium .e-rad-icon {
+  text-indent: 0px;
+}
+.e-widget.e-radiobtn-wrap.e-ie8 .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  /* IE8 */
+  text-indent: 2px;
+  line-height: 12px;
+  padding: 0.5px;
+  font-size: 8px;
+  
+}
+.e-widget.e-radiobtn-wrap.e-ie8 .e-radmedium .e-rad-icon {
+  /* IE 8 */
+  font-size: 9px;
+  text-indent: 3px;
+  line-height: 15px;
+  
 }
 
 /* need verify with UX team*/
@@ -18330,6 +18346,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-js.e-pivotclient td {
   padding: 0;
   border: 0 none;
+}
+.e-js.e-pivotclient .e-dialogremoveBtn:before {
+  font-family: "ej-webfont";
+  content: "\e711";
+  display: inline-block;
 }
 .e-js.e-pivotclient .e-hoverCell {
   background-color: #e7f1c9 !important;

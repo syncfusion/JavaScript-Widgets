@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.css
-*  version : 16.2.0.47-beta
+*  version : 12.3
 *  Copyright Syncfusion Inc. 2001 - 2018. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -12560,9 +12560,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 .e-radiobtn-wrap .e-text {
   font-size: 13px;
 }
-.e-radiobtn-wrap.e-material-animate .e-radsmaller span.e-rad-icon.e-icon.e-circle_01 {
-  font-size: 10px;
-}
 .e-radiobtn-wrap span.e-rad-icon.e-icon.e-rad-select:before {
   content: "\e686";
   font-size: 0px;
@@ -12628,6 +12625,37 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-radiobtn-wrap.e-disable.e-focus > span {
   
+}
+.e-radiobtn-wrap .e-spanicon.e-radsmaller .e-icon.e-rad-icon,
+.e-radiobtn-wrap .e-radmedium .e-rad-icon {
+  text-indent: 0px;
+}
+.e-radiobtn-wrap.e-ie8 .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  /* IE8 */
+  text-indent: 2px;
+  line-height: 12px;
+  padding: 0.5px;
+  font-size: 8px;
+  
+}
+.e-radiobtn-wrap.e-ie8 .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  /* IE 8 */
+  font-size: 10px;
+  text-indent: 2.5px;
+  line-height: 15px;
+}
+.e-radiobtn-wrap.e-ie8 .e-radmedium .e-rad-icon {
+  /* IE 8 */
+  font-size: 9px;
+  text-indent: 3px;
+  line-height: 15px;
+  
+}
+.e-radiobtn-wrap.e-ie8 .e-radmedium .e-rad-icon {
+  /* IE 8 */
+  font-size: 12px;
+  text-indent: 2px;
+  line-height: 16px;
 }
 
 /*-----------------------Map------------------*/
@@ -16607,6 +16635,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-pivotclient td {
   padding: 0;
   border: 0 none;
+}
+.e-pivotclient .e-dialogremoveBtn:before {
+  font-family: "ej-webfont";
+  content: "\e711";
+  display: inline-block;
 }
 .e-pivotclient .e-hoverCell {
   background-color: #e0e0e0 !important;

@@ -2035,7 +2035,8 @@ color: @row-selection-bg-color;
 }
  .e-grid .e-groupheadercell {
      & when (@skin= "office-365") {
-    font:14px;
+    font-size:14px;
+    font-family: @font-family;
     background:@theme-light;
     color:@theme-light-font;
     }
@@ -2044,7 +2045,8 @@ color: @row-selection-bg-color;
  .e-grid .e-groupheadercell:hover{
       & when (@skin= "office-365") {
           background:@theme-lighter;
-          font:14px;
+          font-size:14px;
+          font-family: @font-family;
           color:@theme-light-font;
       }
  }
@@ -17351,11 +17353,7 @@ content: "\e833";
 	& when (@skin= "material") {
 		}
 }
-.e-radiobtn-wrap.e-material-animate .e-radsmaller span.e-rad-icon.e-icon.e-circle_01 {
-	& when (@skin= "material") {
-		font-size: 10px;
-		}
-}
+
 .e-radiobtn-wrap span.e-rad-icon.e-icon.e-rad-select:before {
 	& when (@skin= "material") {
     content: "\e686";
@@ -17461,6 +17459,48 @@ content: "\e833";
 .e-radiobtn-wrap.e-disable.e-focus > span{
      & when not (@skin= "material") and not (@skin="office-365"){
     box-shadow:none;
+    }
+}
+
+.e-radiobtn-wrap .e-spanicon.e-radsmaller .e-icon.e-rad-icon, .e-radiobtn-wrap .e-radmedium .e-rad-icon {
+    text-indent:0px;
+}
+
+.e-radiobtn-wrap.e-ie8 .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+    /* IE8 */
+    text-indent: 2px;
+    line-height: 12px;
+    padding: 0.5px; 
+    font-size: 8px;
+    & when (@skin ="material") { 
+        /* IE 8 */
+        font-size: 10px;  
+        text-indent: 2.5px; 
+        line-height: 15px;   
+    }
+    & when (@skin="office-365"){
+        /* IE 8 */
+         font-size: 10px;
+         text-indent: 2.5px; 
+         line-height: 15px; 
+    }
+}
+.e-radiobtn-wrap.e-ie8 .e-radmedium .e-rad-icon {
+    /* IE 8 */
+    font-size: 9px;
+    text-indent: 3px; 
+    line-height: 15px;
+    & when (@skin ="material") { 
+        /* IE 8 */
+        font-size: 12px;
+        text-indent: 2px; 
+        line-height: 16px;       
+    }
+    & when (@skin="office-365"){
+        /* IE 8 */
+         font-size: 12px;
+         text-indent: 2px; 
+         line-height: 16px;
     }
 }
 
@@ -21837,6 +21877,12 @@ padding:6px 0 6px 40px;
 .e-pivotclient td {
     padding: 0;
     border: 0 none;
+}
+.e-pivotclient .e-dialogremoveBtn:before
+{
+  font-family: "ej-webfont";
+  content: "\e711";
+  display: inline-block;
 }
 .e-pivotclient .e-hoverCell{
 background-color:@hover-bg-stcolor !important;
