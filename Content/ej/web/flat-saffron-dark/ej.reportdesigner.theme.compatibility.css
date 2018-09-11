@@ -185,6 +185,9 @@
 .e-js .e-reportdesigner-widget-textbox:before {
   color: #ec7838;
 }
+.e-js .e-reportdesigner-widget-custom:before {
+  color: #4da6ff;
+}
 .e-js .e-reportdesigner-area-chart .path1:before {
   color: #4da6ff;
 }
@@ -687,6 +690,10 @@
 .e-js.e-reportdesigner .e-itempanel-header.e-itempanel-collapse {
   background: #212121;
 }
+.e-js .e-rptdesigner-itemInfo-template {
+  font-size: 12px;
+  float: left;
+}
 /************************Itempanel End***********************************/
 
 /*----------------------PropertyPanel Start-----------------------*/
@@ -721,7 +728,7 @@
   float: right;
 }
 .e-js .e-rptdesigner-dataconfig-header {
-  background: #212121;
+  background-color: #212121;
 }
 .e-js .e-rptdesigner-dataconfig-icon {
   font-size: 18px;
@@ -960,7 +967,7 @@
   font-size: 12px;
 }
 .e-js .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
-  font-size: 7px;
+  font-size: 14px;
 }
 .e-js .e-designer-property-header {
   background: black !important;
@@ -1020,16 +1027,22 @@
 /*----------------------ReportDesigner Common Styles----------------------*/
 
 .e-js .e-reportdesigner-dataset-okbtn,
-.e-js .e-rptdesigner-okbtn,
 .e-js .e-designer-alert-okbtn {
   
 }
 .e-js .e-reportdesigner-dataset-okbtn,
-.e-js .e-rptdesigner-okbtn,
 .e-js .e-designer-alert-okbtn {
-  background: #f9920b !important;
   border-color: #777777 !important;
+  background: #f9920b !important;
   color: white !important;
+}
+.e-js .e-rptdesigner-okbtn {
+  background: #f9920b !important;
+  color: white !important;
+  
+}
+.e-js .e-rptdesigner-okbtn {
+  border-color: #777777 !important;
 }
 .e-js .e-reportdesigner-dataset-okbtn:hover,
 .e-js .e-rptdesigner-okbtn:hover,
@@ -1115,7 +1128,7 @@
   box-shadow: 0 0 1px #494949;
   border: 0.5px solid #494949;
 }
-.e-js .e-designer-content,
+.e-js.e-reportdesigner .e-designer-content,
 .e-js .e-querydesigner-dataset-text {
   font-size: 12px !important;
 }
@@ -1193,7 +1206,7 @@
   font-size: 20px !important;
   color: #cccccc;
 }
-.e-js .e-rptdesigner-param-text {
+.e-js.e-reportdesigner .e-rptdesigner-param-text {
   font-size: 12px !important;
   font-weight: 400 !important;
 }
@@ -1312,7 +1325,8 @@
 .e-js .e-rptdesigner-designbutton .e-btntxt,
 .e-js .e-designer-ejdialog .e-title,
 .e-js .e-designer-dialog .e-title,
-.e-js .e-designer-alertbox .e-title {
+.e-js .e-designer-alertbox .e-title,
+.e-js .e-rptdesigner-itemInfo-template {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 /*----------------------EJ Designer Fontfamily----------------------*/
@@ -1607,6 +1621,9 @@
 .e-js .e-rptdesigner-format-prevwChild {
   color: #dddddd;
 }
+.e-js .e-rptdesigner-format-font {
+  font-weight: 400 !important;
+}
 /************************FormatDialog  CSS End***********************************/
 
 /*----------------------Ejdesigner Overridden css Start-----------------------*/
@@ -1784,8 +1801,8 @@
 
 /*----------------------Scroller Start-----------------------*/
 
-.e-js .e-reportdesigner-scroller .e-scrollbar .e-icon {
-  font-size: 0;
+.e-js .e-reportdesigner-scroller .e-vscrollbar {
+  border-top: 1px solid #777777;
 }
 /*----------------------Scroller End-----------------------*/
 
@@ -1920,6 +1937,9 @@
 .e-js.e-querydesigner-toolbarcontainer .e-qrydesigner-filter {
   font-size: 16px;
 }
+.e-js.e-querydesigner-toolbarcontainer .e-qrydesigner-param {
+  font-size: 20px;
+}
 .e-js.e-querydesigner-toolbarcontainer.e-responsive-toolbar {
   border-top: 0 !important;
   border-bottom: 1px solid #494949;
@@ -1930,6 +1950,9 @@
 }
 .e-js.e-querydesigner-toolbarcontainer.e-responsive-toolbar {
   border-right: 1px solid #494949;
+}
+.e-js .e-qrydesigner-separator.e-horizontal.e-separator {
+  border-right: 0 none;
 }
 /*------------------------------querydesigner toolbar End-------------------------------*/
 
@@ -2011,10 +2034,18 @@
 .e-js .e-qrydesigner-datatable .e-item .e-active.e-node-hover .e-qrydesigner-treeview.e-checkmark {
   color: #efefef !important;
 }
-.e-js .e-qrydesigner-dataheader {
+.e-js .e-qrydesigner-dataheader,
+.e-js .e-qrydesigner-Update,
+.e-js .e-qrydesigner-update-icon {
   font-size: 12px;
   font-weight: 600;
   color: #dddddd !important;
+}
+.e-js .e-qrydesigner-generatepreview {
+  font-size: 12px;
+  font-weight: 600;
+  color: #dddddd !important;
+  
 }
 .e-js .e-qrydesigner-datacontent {
   font-size: 12px;
@@ -2089,7 +2120,7 @@
 .e-js .e-qrydesigner-datatable .e-item .e-active.e-node-hover .e-qrydesigner-treeview {
   color: #efefef !important;
 }
-.e-js .e-query-text {
+.e-js.e-querydesigner .e-query-text {
   font-size: 12px !important;
 }
 .e-js .e-table-user-selection-active .e-qrydesigner-table-column-deselect:before {
@@ -2137,6 +2168,9 @@
   border-top-width: 0.5px;
   border-color: #494949;
 }
+.e-js .e-qrydesigner-query-table {
+  background-color: black;
+}
 /*------------------------------querydesigner surface End-------------------------------*/
 
 /*------------------------------querydesigner dependent overwritten-------------------------------*/
@@ -2159,8 +2193,10 @@
 .e-js .e-qrydesigner-norow-msg,
 .e-js .e-qrydesigner-empty-msg,
 .e-js .e-qrydesigner-dataheader,
+.e-js .e-qrydesigner-Update,
 .e-js .e-qrydesigner-add-label,
 .e-js .e-qrydesigner-okbtn.e-txt,
+.e-js .e-qrydesigner-texteditor,
 .e-js .e-qrydesigner-cancelbtn,
 .e-js .e-qrydesigner-cancelbtn.e-txt,
 .e-js .e-qrydesigner-add-btn,
@@ -2263,12 +2299,12 @@
   color: #ee2924;
 }
 .e-js .e-qrydesigner-okbtn {
+  background: #f9920b !important;
+  color: white !important;
   
 }
 .e-js .e-qrydesigner-okbtn {
-  background: #f9920b !important;
-  border-color: #494949;
-  color: white !important;
+  border-color: #777777 !important;
 }
 .e-js .e-qrydesigner-okbtn:hover {
   border-color: #494949;
@@ -2394,6 +2430,13 @@
   color: #dddddd;
 }
 /*----------------------Query Param CSS End-----------------------*/
+
+/************************Report Parameter Start***********************************/
+
+.e-js .e-qrydesigner-dataparam-font {
+  font-size: 12px;
+}
+/************************Report Parameter End***********************************/
 
 /*------------------------------querydesigner Common Css Start-------------------------------*/
 

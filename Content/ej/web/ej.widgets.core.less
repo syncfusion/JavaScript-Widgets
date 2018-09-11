@@ -5623,11 +5623,11 @@
     .e-radiobtn-wrap .e-radiobtn {
         display: block;
         visibility: hidden;
-        position: absolute;
         height: 0px;
         width: 0px;
         z-index: 1;
         text-align: left;
+        position: absolute;
     }
 
     .e-rad-outer {
@@ -21457,6 +21457,32 @@ background-image: url('../@{font-path}/icons-white.png');
         font-size: 20px;
         margin-top: 3px;
     }
+    .e-treegrid .e-updatedtd {
+        position:relative;
+    }
+    .e-treegrid .e-updatedtd:before {          
+        color: red;
+        width: 10px;
+        text-align: right;
+        position:absolute;
+        top:0px;
+        right:0px;
+    }    
+    .e-treegrid .e-tgupdatenotify:before {
+        & when (@skin= "material") {
+            content: "\e917";
+        }
+
+        & when (@skin= "office-365") {
+            content: "\e917";
+        }
+
+        & when not (@skin= "material") and not (@skin= "office-365") {
+            content: "\e918";
+        }
+        font-size: 6px;
+        font-family: 'ej-webfont';
+    }    
 
     .e-treegrid .e-table {
         width: 100%;
@@ -23764,7 +23790,7 @@ background-image: url('../@{font-path}/icons-white.png');
         -o-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        float: left;
+        float: left\9;
     }
 
     .e-ganttchart td {
@@ -23944,8 +23970,35 @@ background-image: url('../@{font-path}/icons-white.png');
         top: 0;
         position: absolute;
     }
-
-    .e-ganttchart .e-weekends {
+    
+    .e-ganttchart .e-gantthistocell {
+          vertical-align: top !important;
+          position: relative;
+    }
+    .e-ganttchart .e-gantthistoworklabel{
+        position: absolute;
+        left: 2px;
+        font-size: 12px;
+        transform: rotate(90deg);      
+        bottom:10px;
+    }
+    .e-ganttchart .e-rverticalline,
+    .e-ganttchart .e-lverticalline {
+        border-left-width: 1px;
+        border-left-style: solid;
+        position: absolute;
+        margin-top: 6px;
+        width: 1px;
+    }
+    .e-ganttchart .e-horizontalline{
+        top: 6px;
+        border-top-style: solid;
+        border-top-width: 1px;
+        position: absolute;
+    }
+    .e-ganttchart .e-gantthistobar,
+    .e-ganttchart .e-weekends,
+    .e-ganttchart .e-ganttworkingtime {
         position: absolute;
     }
 
@@ -24015,6 +24068,28 @@ background-image: url('../@{font-path}/icons-white.png');
 
     .e-ganttchart .e-zerospacing {
         border-spacing: 0px;
+    }
+    .e-gantt-childtaskbar.e-gantt-unscheduletaskbar-left {
+        width: 7px;
+        border-right: transparent;
+        border-width: 3px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        padding-right: 4px;
+    }
+    .e-gantt-childtaskbar.e-gantt-unscheduletaskbar-right {
+        width: 7px;
+        border-left: transparent;
+        border-width: 3px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        padding-left: 4px;
+    }
+    .e-gantt-childtaskbar.e-gantt-unscheduletaskbar {
+        border-style: none;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
     }
 }
 
@@ -27039,6 +27114,38 @@ background-image: url('../@{font-path}/icons-white.png');
         -moz-osx-font-smoothing: grayscale;
     }
 
+    .e-reportviewer-errormodeltooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+    .e-reportviewer-errormodeltooltip .e-reportviewer-tooltiptext {
+        visibility: hidden;
+        width: 230px;
+        background-color: #F0F3F4;
+        color: #424949;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        margin-left: -60px;
+        font-size: 14px;
+        font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial !important;
+    }
+
+     .e-reportviewer-errormodeltooltip .e-reportviewer-tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+    }
+
+     .e-reportviewer-errormodeltooltip:hover .e-reportviewer-tooltiptext {
+        visibility: visible;
+     }
+
     .e-reportviewer-toolbarcontainer {
         vertical-align: middle;
         border: 1px solid;
@@ -27464,15 +27571,14 @@ background-image: url('../@{font-path}/icons-white.png');
         }
 	}
 
-	 .e-reportviewer-box-border,  .e-reportviewer-pageviewcontainer,
-	 .e-reportviewer-pageouterline,  .e-reportviewer-viewercontainer,
+	 .e-reportviewer-box-border,  .e-reportviewer-pageviewcontainer,  .e-reportviewer-viewercontainer,
 	 .e-reportviewer-viewercontainer,  .e-reportviewer-viewerblock {
 		-webkit-box-sizing: border-box !important;
 		-moz-box-sizing: border-box !important;
 		box-sizing: border-box !important;
 	}
 
-	 .e-reportviewer-box-content,  .e-reportviewer-pageview {
+	 .e-reportviewer-box-content,  .e-reportviewer-pageview,  .e-reportviewer-pageouterline, {
 		-webkit-box-sizing: content-box !important;
 		-moz-box-sizing: content-box !important;
 		box-sizing: content-box !important;
@@ -27531,6 +27637,14 @@ background-image: url('../@{font-path}/icons-white.png');
 
      .e-reportviewer-expandtoggle {
         background: url('@{font-path}/reportviewer/expand.svg') no-repeat center;
+    }
+
+     .e-reportviewer-alertIcon {
+        background: url('@{font-path}/reportviewer/alertIcon.svg') no-repeat center;
+    }
+
+     .e-reportviewer-errorIcon {
+        background: url('@{font-path}/reportviewer/errorIcon.svg') no-repeat center;
     }
 
      .e-reportviewer-collapsetoggle {
@@ -33428,9 +33542,6 @@ slideRight Animate
     .e-kanban.e-rtl .e-kanbancard .e-expandcollapse {
         float: left;
         margin-left: -7px;
-		& when (@skin= "material") {
-            margin-left: -1px;
-        }
     }
 
     .e-kanban.e-rtl .e-kanbancard .e-card_image {
@@ -44401,9 +44512,22 @@ slideRight Animate
     left: 0px;
     border-radius: 50%;
     opacity: 0;
-    -moz-animation: e-media-fadeout .5s linear 1 normal forwards;
-    -webkit-animation: e-media-fadeout .5s linear 1 normal forwards;
-    animation: e-media-fadeout .5s linear 1 normal forwards;
+    -webkit-animation-name: e-media-fadeout;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: initial;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-play-state: initial;
+    -moz-animation-name: e-media-fadeout;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: initial;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-direction: normal;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-play-state: initial;
     animation-name: e-media-fadeout;
     animation-duration: 0.5s;
     animation-timing-function: linear;

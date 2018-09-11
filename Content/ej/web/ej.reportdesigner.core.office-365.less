@@ -282,10 +282,6 @@
         margin-left: -1em;
     }
 
-     .e-reportdesigner-widget-leftarrow:before {
-        content: "\e92c";
-    }
-
      .e-reportdesigner-widget-line:before {
         content: "\e92d";
     }
@@ -307,12 +303,12 @@
         content: "\e931";
     }
 
-     .e-reportdesigner-widget-rightarrow:before {
-        content: "\e932";
-    }
-
      .e-reportdesigner-widget-textbox:before {
         content: "\e933";
+    }
+
+     .e-reportdesigner-widget-custom:before {
+        content: "\ea37";
     }
 
      .e-reportdesigner-area-chart .path1:before {
@@ -1214,6 +1210,14 @@
         content: "\e9f6";
     }
 
+     .e-reportdesigner-datasource-defaultextesnion:before {
+        content: "\ea34";
+    }
+
+     .e-reportdesigner-datasource-webapi:before {
+        content: "\ea35";
+    }
+
      .e-reportdesigner-datasource-shared:before {
         content: "\e9f7";
     }
@@ -1302,16 +1306,37 @@
         content: "\ea23";
         margin-left: -1em;
     }
+
+     .e-rptdesigner-data-expand:before {
+        content: "\ea38";
+    }
+
+     .e-rptdesigner-data-collapse:before {
+        content: "\ea39";
+    }
     /*----------------------ReportDesigner Font Icons End----------------------*/
     /*----------------------ReportDesigner Common Styles----------------------*/
      .e-rptdesigner-dataconfig,
      .e-rptdesigner-dataconfig-item,
      .e-rptdesigner-dataconfig-header,
     .e-rptdesigner-toolbarcontainer,
-    .e-rptdesigner-toolbarcontainer .e-rptdesigner-preview-div {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+    .e-rptdesigner-toolbarcontainer .e-rptdesigner-preview-div,
+     .e-reportdesigner-default-image,
+     .e-rptdesigner-itempanel-parent,
+     .e-rptdesigner-itempanel-autocomplete,
+     .e-rptdesigner-itempanel-container,
+     .e-rptdesigner-dspanel-data,
+     .e-rptdesigner-dataconfig-expandablepanel,
+     .e-rptdesigner-headertag,
+     .e-reportdesigner-designPanel,
+     .e-rptdesigner-dpbodytag,
+     .e-rptdesigner-surfacecontainer,
+    .e-rptdesigner-alertbox .e-footerbar,
+    .e-rptdesigner-dialog .e-footerbar,
+    .e-rptdesigner-ejdialog .e-footerbar {
+        -webkit-box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        box-sizing: border-box !important;
     }
 
      .e-querydesigner .e-widgeticon span,
@@ -1692,9 +1717,6 @@
         background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: center;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
     }
 
      .e-reportdesigner-image {
@@ -1939,11 +1961,9 @@
 
      .e-rptdesigner-itempanel-parent {
         float: left;
-        box-sizing: border-box;
     }
 
      .e-rptdesigner-itempanel-autocomplete {
-        box-sizing: border-box;
         float: left;
         margin: 5px;
 
@@ -2001,11 +2021,10 @@
      .e-rptdesigner-itempanel-container {
         height: 75px;
         width: 100%;
-        box-sizing: border-box;
     }
 
      .e-rptdesigner-itempanel-itemdiv {
-        width: 74.5px;
+        width: 79.5px;
         height: 74px;
         cursor: default;
         float: left;
@@ -2033,6 +2052,17 @@
 
      .e-itempanel-header:hover {
         cursor: pointer !important;
+    }
+
+     .e-rptdesigner-item-info-container .e-rptdesigner-item-header,
+     .e-rptdesigner-item-info-container .e-rptdesigner-datareq-header,
+     .e-rptdesigner-item-info-container .e-rptdesigner-item-desc {
+        margin-bottom: 5px;
+    }
+
+     .e-rptdesigner-item-info-container .e-rptdesigner-item-header,
+     .e-rptdesigner-item-info-container .e-rptdesigner-datareq-header {
+        font-weight: bold;
     }
     /************************Itempanel End***********************************/
     /************************Datasource Start*********************************/
@@ -2132,9 +2162,6 @@
         width: 100%;
         float: left;
         clear: none;
-        -moz-box-sizing: border-box !important;
-        -webkit-box-sizing: border-box !important;
-        box-sizing: border-box !important;
     }
 
      .e-rptdesigner-dspanel-new {
@@ -2245,6 +2272,7 @@
         background-repeat: no-repeat;
         background-position: center;
         display: inline-block;
+        cursor: pointer !important;
     }
 
      .e-rptdesigner-dataconfig-expandablepanel {
@@ -2252,7 +2280,6 @@
         height: 100%;
         overflow: hidden;
         float: left;
-        box-sizing: border-box;
     }
 
      .e-rptdesigner-dataconfig-arrow {
@@ -2266,6 +2293,36 @@
         & when not (@skin = "material") {
             top: 4px !important;
         }
+    }
+
+     .e-rptdesigner-hint-nodata {
+        background-image: url('@{font-path}/reportdesigner/Nodata.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 60px;
+    }
+
+     .e-rptdesigner-dataConfigAlertContainer {
+        width: 464px;
+        vertical-align: middle;
+        overflow: hidden;
+        display: none;
+    }
+
+     .e-rptdesigner-alertMsg {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+     .e-rptdesigner-data-collapse,
+     .e-rptdesigner-data-expand {
+        display: block !important;
+        -webkit-box-sizing: content-box !important;
+        -moz-box-sizing: content-box !important;
+        box-sizing: content-box !important;
+        font-size: 9px !important;
+        padding: 4px 7px;
     }
     /*----------------------DataConfiguration End-----------------------*/
     /*----------------------PropertyPanel Start-----------------------*/
@@ -2308,18 +2365,9 @@
     /*----------------------PropertyPanel End-----------------------*/
     /*----------------------Dependent component Overwritten-----------------------*/
     /*----------------------DesignPanel CSS Start-----------------------*/
-     .e-rptdesigner-headertag,
-     .e-reportdesigner-designPanel,
-     .e-rptdesigner-dpbodytag {
-        box-sizing: border-box !important;
-        -moz-box-sizing: border-box !important;
-        -webkit-box-sizing: border-box !important;
-    }
-
      .e-rptdesigner-surfacecontainer {
         border-left-width: 1px;
         float: left;
-        box-sizing: border-box;
     }
 
      .e-rptdesigner-dpOuterline {
@@ -2564,11 +2612,6 @@
         width: 11px;
     }
 
-     .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
-        line-height: 10px;
-        text-indent: 1.5px;
-    }
-
      .e-reportdesigner-designer-configuration .e-chkbox-wrap .e-chkbox-small > span {
         height: 12px;
         width: 12px;
@@ -2770,7 +2813,7 @@
         content: "\ea32" !important;
     }
 
-    .e-reportviewer .e-rptdesigner.e-reportviewer-icon.e-reportviewer-close {
+    .e-reportdesigner .e-reportviewer .e-reportviewer-icon.e-reportviewer-close {
         content: "\e901" !important;
         font-family: 'ej-webfont' !important;
     }
@@ -2965,9 +3008,6 @@
         height: auto !important;
         display: inline-table !important;
         width: 100%;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
     }
 
     .e-rptdesigner-alertbox > .e-dialog-scroller {
@@ -3170,10 +3210,11 @@
         }
     }
 
-     .e-rptdesigner-avail-table .e-radiobtn-wrap .e-radsmaller.e-rad-active .e-rad-icon.e-icon {
-        & when (@skin= "material") {
-            margin-left: -1.5px;
-            margin-top: 0.5px;
+     .e-rptdesigner-avail-table .e-radiobtn-wrap .e-radsmaller.e-rad-active .e-rad-icon.e-icon,
+     .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
+        & when (@skin= "material"), (@skin= "office-365")  {
+            margin-left: -0.5px;
+            margin-top: -1.5px;
         }
     }
 
@@ -3533,6 +3574,7 @@
      .e-rptdesigner-add-label {
         font-weight: 700 !important;
         cursor: default;
+        vertical-align: top;
     }
 
      .e-rptdesigner-dialog-addbtn {
@@ -3566,9 +3608,6 @@
         height: auto !important;
         display: inline-table !important;
         width: 100%;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
     }
 
     .e-rptdesigner-dialog .e-titlebar,
@@ -3846,8 +3885,22 @@
     }
     /*----------------------Ejdesigner Tooltip Css End-----------------------*/
     /*----------------------Scroller Start-----------------------*/
-     .e-reportdesigner-scroller .e-scrollbar .e-hscroll .e-hup.e-icon {
-        display: none;
+     .e-reportdesigner-scroller.e-autohide .e-content {
+        width: 100% !important;
+    }
+
+     .e-reportdesigner-scroller .e-scrollbar .e-icon {
+        font-size: 8px !important;
+        cursor: pointer;
+    }
+
+     .e-reportdesigner-scroller .e-vscrollbar {
+        width: 12px !important;
+    }
+
+     .e-reportdesigner-scroller .e-hscrollbar {
+        height: 12px !important;
+        bottom: 2px !important;
     }
 
      .e-reportdesigner-dsscroller {
@@ -3936,6 +3989,10 @@
             margin-top: 3px !important;
         }
     }
+
+     .e-rptdesigner-padding-property .e-rptdesigner-exp-cont {
+        margin-top: 26px !important;
+    }
     /*----------------------Menu overide End----------------------*/
      .e-reportdesigner-treeText {
         font-size: 14px;
@@ -3972,6 +4029,22 @@
      .e-reportdesigner-single-drag:before {
         content: "\e914";
     }
+
+    .e-querydesigner-toolbarcontainer .e-qrydesigner-param:before {
+        content: "\ea36";
+    }
+
+     .e-qrydesigner-update-icon:before {
+        content: "\ea33";
+    }
+
+     .e-qrydesigner-webapi:before {
+        content: "\ea3a";
+    }
+
+     .e-qrydesigner-webapi-rawdata:before {
+        content: "\ea3b";
+    }
     /*----------------------QueryDesigner Font Icons----------------------*/
     /*------------------------------querydesigner toolbar Start-------------------------------*/
     .e-querydesigner-toolbarcontainer .e-icon.e-toolbar-res-arrow {
@@ -3991,6 +4064,10 @@
         }
     }
 
+    .e-querydesigner-toolbarcontainer .e-qrydesigner-param {
+        margin-top: 4px !important;
+    }
+
      .e-qrydesigner-switcher {
         & when not (@skin = "material") {
             padding: 3.5px 3px !important;
@@ -3999,12 +4076,10 @@
         & when (@skin = "material") {
             margin: 5.5px !important;
         }
-
-        border-right: 0 none !important;
     }
 
      .e-qrydesigner-code-switcher {
-        display: block;
+        display: table;
         float: right;
         margin-left: 6px;
 
@@ -4021,7 +4096,13 @@
         }
     }
 
-    .e-querydesigner-toolbarcontainer .e-toolbarfonticonbasic {
+     .e-qrydesigner-switch-text-parent {
+        display: table-cell !important;
+        vertical-align: middle !important;
+    }
+
+    .e-querydesigner-toolbarcontainer .e-toolbarfonticonbasic,
+    .e-qrydesigner-update-icon {
         font-family: 'ejreportdesigner' !important;
     }
 
@@ -4043,7 +4124,6 @@
         border-radius: 0 !important;
 
         & when (@skin = "material") {
-            height: 48px !important;
             -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20) !important;
             -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20) !important;
             box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20) !important;
@@ -4087,6 +4167,7 @@
         display: inline-block;
         width: 38px;
         height: 21px;
+        margin: 0px;
     }
 
     .e-querydesigner-toolbarcontainer .e-qrydesigner-switch input {
@@ -4228,12 +4309,6 @@
         border-collapse: collapse !important;
     }
 
-     .e-qrydesigner-exp-td {
-        -webkit-box-sizing: border-box !important;
-        -moz-box-sizing: border-box !important;
-        box-sizing: border-box !important;
-    }
-
      .e-qrydesigner-datatable .e-icon.e-plus,
      .e-qrydesigner-datatable .e-icon.e-minus {
         cursor: pointer;
@@ -4313,9 +4388,6 @@
         padding-left: 5px;
         box-shadow: none;
         border-radius: 3px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
     }
 
      .e-qrydesigner-table-close {
@@ -4472,6 +4544,7 @@
      .e-qrydesigner-add-label {
         font-weight: 700 !important;
         cursor: default;
+        vertical-align: top;
     }
 
      .e-qrydesigner-add-icon {
@@ -4548,9 +4621,6 @@
         height: auto !important;
         display: inline-table !important;
         width: 100%;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
     }
 
     .e-qrydesigner-dialog .e-titlebar {
@@ -4599,7 +4669,7 @@
         float: right;
     }
     /*----------------------Dialog Common Styles End-----------------------*/
-    /*------------------------------queryjoiner Dialog End-------------------------------*/
+    /*------------------------------queryjoiner Dialog Start-------------------------------*/
      .e-qrydesigner-qryjoiner-width,
      .e-qrydesigner-storeparameter-width {
         width: 100%;
@@ -4612,12 +4682,6 @@
     }
     /*------------------------------queryjoiner Dialog End-------------------------------*/
     /*------------------------------query expression Dialog Start-------------------------------*/
-     .e-qrydesigner-exp-td {
-        -webkit-box-sizing: border-box !important;
-        -moz-box-sizing: border-box !important;
-        box-sizing: border-box !important;
-    }
-
      .e-qrydesigner-exp-datacontainer {
         margin-left: 12px;
     }
@@ -4709,7 +4773,7 @@
      .e-qrydesigner-explist-iconspan {
         margin-top: 2px;
         float: right;
-        margin-right: 6px;
+        margin-right: 12px;
         cursor: pointer;
     }
 
@@ -4799,6 +4863,34 @@
         font-weight: 600;
     }
     /*----------------------Query Param CSS End-----------------------*/
+    /************************Report Parameter Start***********************************/
+     .e-qrydesigner-dataparam-table {
+        border-spacing: 0 !important;
+    }
+
+     .e-qrydesigner-dataparam-container {
+        padding: 5px 3px;
+        margin-top: 6px;
+        margin-bottom: 2px;
+    }
+
+     .e-qrydesigner-dataparam-container-div {
+        padding: 4px 8px;
+    }
+
+     .e-qrydesigner-dataparam-padding {
+        padding-left: 10px;
+    }
+
+     .e-qrydesigner-dataparam-errorColum {
+        padding-right: 5px;
+    }
+
+     .e-qrydesigner-dataparam-delColum {
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+    /************************Report Parameter End***********************************/
     /*------------------------------querydesigner Common Css Start-------------------------------*/
      .e-qrydesigner-txtoverflow {
         overflow: hidden !important;
@@ -4812,5 +4904,22 @@
      .e-qrydesigner-title-label {
         cursor: default !important;
     }
+
+     .e-qrydesigner-exp-td,
+     .e-qrydesigner-dragheader,
+    .e-qrydesigner-dialog .e-footerbar {
+        -webkit-box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        box-sizing: border-box !important;
+    }
+
+     .e-rptdesigner-autopreview {
+        padding-top: 1px !important;
+    }
     /*------------------------------querydesigner Common Css End-------------------------------*/
+    /*------------------------------querydesigner dependent overwritten-------------------------------*/
+    .e-querydesigner .e-query-editor .CodeMirror {
+        height: 100% !important;
+    }
+    /*------------------------------querydesigner dependent overwritten-------------------------------*/
 }

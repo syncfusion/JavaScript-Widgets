@@ -189,6 +189,9 @@
 .e-reportdesigner-widget-textbox:before {
   color: #ec7838;
 }
+.e-reportdesigner-widget-custom:before {
+  color: #4da6ff;
+}
 .e-reportdesigner-area-chart .path1:before {
   color: #4da6ff;
 }
@@ -755,6 +758,10 @@
   /* IE6-9 */
 
 }
+.e-rptdesigner-itemInfo-template {
+  font-size: 12px;
+  float: left;
+}
 /************************Itempanel End***********************************/
 
 /*----------------------PropertyPanel Start-----------------------*/
@@ -789,23 +796,7 @@
   float: right;
 }
 .e-rptdesigner-dataconfig-header {
-  background: #fcfcfc;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #fcfcfc, #e0e0e0);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #e0e0e0));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #fcfcfc, #e0e0e0);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #fcfcfc, #e0e0e0);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #fcfcfc, #e0e0e0);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #fcfcfc, #e0e0e0);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e0e0e0', GradientType=0);
-  /* IE6-9 */
-
+  background-color: #fcfcfc;
 }
 .e-rptdesigner-dataconfig-icon {
   font-size: 18px;
@@ -1140,7 +1131,7 @@
   font-size: 12px;
 }
 .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
-  font-size: 7px;
+  font-size: 14px;
 }
 .e-designer-property-header {
   background: white !important;
@@ -1200,16 +1191,22 @@
 /*----------------------ReportDesigner Common Styles----------------------*/
 
 .e-reportdesigner-dataset-okbtn,
-.e-rptdesigner-okbtn,
 .e-designer-alert-okbtn {
   
 }
 .e-reportdesigner-dataset-okbtn,
-.e-rptdesigner-okbtn,
 .e-designer-alert-okbtn {
-  background: #3277b2 !important;
   border-color: #cecece !important;
+  background: #3277b2 !important;
   color: white !important;
+}
+.e-rptdesigner-okbtn {
+  background: #3277b2 !important;
+  color: white !important;
+  
+}
+.e-rptdesigner-okbtn {
+  border-color: #cecece !important;
 }
 .e-reportdesigner-dataset-okbtn:hover,
 .e-rptdesigner-okbtn:hover,
@@ -1295,7 +1292,7 @@
   box-shadow: 0 0 1px #cecece;
   border: 0.5px solid #cecece;
 }
-.e-designer-content,
+.e-reportdesigner .e-designer-content,
 .e-querydesigner-dataset-text {
   font-size: 12px !important;
 }
@@ -1389,7 +1386,7 @@
   font-size: 20px !important;
   color: #666666;
 }
-.e-rptdesigner-param-text {
+.e-reportdesigner .e-rptdesigner-param-text {
   font-size: 12px !important;
   font-weight: 400 !important;
 }
@@ -1508,7 +1505,8 @@
 .e-rptdesigner-designbutton .e-btntxt,
 .e-designer-ejdialog .e-title,
 .e-designer-dialog .e-title,
-.e-designer-alertbox .e-title {
+.e-designer-alertbox .e-title,
+.e-rptdesigner-itemInfo-template {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 /*----------------------EJ Designer Fontfamily----------------------*/
@@ -1867,6 +1865,9 @@
 .e-rptdesigner-format-prevwChild {
   color: #333333;
 }
+.e-rptdesigner-format-font {
+  font-weight: 400 !important;
+}
 /************************FormatDialog  CSS End***********************************/
 
 /*----------------------Ejdesigner Overridden css Start-----------------------*/
@@ -2044,8 +2045,8 @@
 
 /*----------------------Scroller Start-----------------------*/
 
-.e-reportdesigner-scroller .e-scrollbar .e-icon {
-  font-size: 0;
+.e-reportdesigner-scroller .e-vscrollbar {
+  border-top: 1px solid #cecece;
 }
 /*----------------------Scroller End-----------------------*/
 
@@ -2196,6 +2197,9 @@
 .e-querydesigner-toolbarcontainer .e-qrydesigner-filter {
   font-size: 16px;
 }
+.e-querydesigner-toolbarcontainer .e-qrydesigner-param {
+  font-size: 20px;
+}
 .e-querydesigner-toolbarcontainer.e-responsive-toolbar {
   border-top: 0 !important;
   border-bottom: 1px solid #cecece;
@@ -2206,6 +2210,9 @@
 }
 .e-querydesigner-toolbarcontainer.e-responsive-toolbar {
   border-right: 1px solid #cecece;
+}
+.e-qrydesigner-separator.e-horizontal.e-separator {
+  border-right: 0 none;
 }
 /*------------------------------querydesigner toolbar End-------------------------------*/
 
@@ -2306,10 +2313,18 @@
 .e-qrydesigner-datatable .e-item .e-active.e-node-hover .e-qrydesigner-treeview.e-checkmark {
   color: #333333 !important;
 }
-.e-qrydesigner-dataheader {
+.e-qrydesigner-dataheader,
+.e-qrydesigner-Update,
+.e-qrydesigner-update-icon {
   font-size: 12px;
   font-weight: 600;
   color: #282827 !important;
+}
+.e-qrydesigner-generatepreview {
+  font-size: 12px;
+  font-weight: 600;
+  color: #282827 !important;
+  
 }
 .e-qrydesigner-datacontent {
   font-size: 12px;
@@ -2384,7 +2399,7 @@
 .e-qrydesigner-datatable .e-item .e-active.e-node-hover .e-qrydesigner-treeview {
   color: #333333 !important;
 }
-.e-query-text {
+.e-querydesigner .e-query-text {
   font-size: 12px !important;
 }
 .e-table-user-selection-active .e-qrydesigner-table-column-deselect:before {
@@ -2464,6 +2479,9 @@
   border-top-width: 0.5px;
   border-color: #cecece;
 }
+.e-qrydesigner-query-table {
+  background-color: white;
+}
 /*------------------------------querydesigner surface End-------------------------------*/
 
 /*------------------------------querydesigner dependent overwritten-------------------------------*/
@@ -2486,8 +2504,10 @@
 .e-qrydesigner-norow-msg,
 .e-qrydesigner-empty-msg,
 .e-qrydesigner-dataheader,
+.e-qrydesigner-Update,
 .e-qrydesigner-add-label,
 .e-qrydesigner-okbtn.e-txt,
+.e-qrydesigner-texteditor,
 .e-qrydesigner-cancelbtn,
 .e-qrydesigner-cancelbtn.e-txt,
 .e-qrydesigner-add-btn,
@@ -2590,12 +2610,12 @@
   color: #ee2924;
 }
 .e-qrydesigner-okbtn {
+  background: #3277b2 !important;
+  color: white !important;
   
 }
 .e-qrydesigner-okbtn {
-  background: #3277b2 !important;
-  border-color: #cecece;
-  color: white !important;
+  border-color: #cecece !important;
 }
 .e-qrydesigner-okbtn:hover {
   border-color: #cecece;
@@ -2769,6 +2789,13 @@
   color: #282827;
 }
 /*----------------------Query Param CSS End-----------------------*/
+
+/************************Report Parameter Start***********************************/
+
+.e-qrydesigner-dataparam-font {
+  font-size: 12px;
+}
+/************************Report Parameter End***********************************/
 
 /*------------------------------querydesigner Common Css Start-------------------------------*/
 

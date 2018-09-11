@@ -185,6 +185,9 @@
 .e-js .e-reportdesigner-widget-textbox:before {
   color: #ec7838;
 }
+.e-js .e-reportdesigner-widget-custom:before {
+  color: #4da6ff;
+}
 .e-js .e-reportdesigner-area-chart .path1:before {
   color: #4da6ff;
 }
@@ -751,6 +754,10 @@
   /* IE6-9 */
 
 }
+.e-js .e-rptdesigner-itemInfo-template {
+  font-size: 12px;
+  float: left;
+}
 /************************Itempanel End***********************************/
 
 /*----------------------PropertyPanel Start-----------------------*/
@@ -785,23 +792,7 @@
   float: right;
 }
 .e-js .e-rptdesigner-dataconfig-header {
-  background: whitesmoke;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, whitesmoke, #dddddd);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(100%, #dddddd));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, whitesmoke, #dddddd);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, whitesmoke, #dddddd);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, whitesmoke, #dddddd);
-  /* IE10+ */
-  background: linear-gradient(to bottom, whitesmoke, #dddddd);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='whitesmoke', endColorstr='#dddddd', GradientType=0);
-  /* IE6-9 */
-
+  background-color: whitesmoke;
 }
 .e-js .e-rptdesigner-dataconfig-icon {
   font-size: 18px;
@@ -1136,7 +1127,7 @@
   font-size: 12px;
 }
 .e-js .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
-  font-size: 7px;
+  font-size: 14px;
 }
 .e-js .e-designer-property-header {
   background: white !important;
@@ -1201,16 +1192,22 @@
 /*----------------------ReportDesigner Common Styles----------------------*/
 
 .e-js .e-reportdesigner-dataset-okbtn,
-.e-js .e-rptdesigner-okbtn,
 .e-js .e-designer-alert-okbtn {
   
 }
 .e-js .e-reportdesigner-dataset-okbtn,
-.e-js .e-rptdesigner-okbtn,
 .e-js .e-designer-alert-okbtn {
-  background: #74c3e7 !important;
   border-color: #c8c8c8 !important;
+  background: #74c3e7 !important;
   color: white !important;
+}
+.e-js .e-rptdesigner-okbtn {
+  background: #74c3e7 !important;
+  color: white !important;
+  
+}
+.e-js .e-rptdesigner-okbtn {
+  border-color: #c8c8c8 !important;
 }
 .e-js .e-reportdesigner-dataset-okbtn:hover,
 .e-js .e-rptdesigner-okbtn:hover,
@@ -1296,7 +1293,7 @@
   box-shadow: 0 0 1px #c8c8c8;
   border: 0.5px solid #c8c8c8;
 }
-.e-js .e-designer-content,
+.e-js.e-reportdesigner .e-designer-content,
 .e-js .e-querydesigner-dataset-text {
   font-size: 12px !important;
 }
@@ -1390,7 +1387,7 @@
   font-size: 20px !important;
   color: #686969;
 }
-.e-js .e-rptdesigner-param-text {
+.e-js.e-reportdesigner .e-rptdesigner-param-text {
   font-size: 12px !important;
   font-weight: 400 !important;
 }
@@ -1509,7 +1506,8 @@
 .e-js .e-rptdesigner-designbutton .e-btntxt,
 .e-js .e-designer-ejdialog .e-title,
 .e-js .e-designer-dialog .e-title,
-.e-js .e-designer-alertbox .e-title {
+.e-js .e-designer-alertbox .e-title,
+.e-js .e-rptdesigner-itemInfo-template {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 /*----------------------EJ Designer Fontfamily----------------------*/
@@ -1868,6 +1866,9 @@
 .e-js .e-rptdesigner-format-prevwChild {
   color: #333333;
 }
+.e-js .e-rptdesigner-format-font {
+  font-weight: 400 !important;
+}
 /************************FormatDialog  CSS End***********************************/
 
 /*----------------------Ejdesigner Overridden css Start-----------------------*/
@@ -2045,8 +2046,8 @@
 
 /*----------------------Scroller Start-----------------------*/
 
-.e-js .e-reportdesigner-scroller .e-scrollbar .e-icon {
-  font-size: 0;
+.e-js .e-reportdesigner-scroller .e-vscrollbar {
+  border-top: 1px solid #c8c8c8;
 }
 /*----------------------Scroller End-----------------------*/
 
@@ -2197,6 +2198,9 @@
 .e-js.e-querydesigner-toolbarcontainer .e-qrydesigner-filter {
   font-size: 16px;
 }
+.e-js.e-querydesigner-toolbarcontainer .e-qrydesigner-param {
+  font-size: 20px;
+}
 .e-js.e-querydesigner-toolbarcontainer.e-responsive-toolbar {
   border-top: 0 !important;
   border-bottom: 1px solid #c8c8c8;
@@ -2207,6 +2211,9 @@
 }
 .e-js.e-querydesigner-toolbarcontainer.e-responsive-toolbar {
   border-right: 1px solid #c8c8c8;
+}
+.e-js .e-qrydesigner-separator.e-horizontal.e-separator {
+  border-right: 0 none;
 }
 /*------------------------------querydesigner toolbar End-------------------------------*/
 
@@ -2320,10 +2327,18 @@
 .e-js .e-qrydesigner-datatable .e-item .e-active.e-node-hover .e-qrydesigner-treeview.e-checkmark {
   color: #282827 !important;
 }
-.e-js .e-qrydesigner-dataheader {
+.e-js .e-qrydesigner-dataheader,
+.e-js .e-qrydesigner-Update,
+.e-js .e-qrydesigner-update-icon {
   font-size: 12px;
   font-weight: 600;
   color: #282827 !important;
+}
+.e-js .e-qrydesigner-generatepreview {
+  font-size: 12px;
+  font-weight: 600;
+  color: #282827 !important;
+  
 }
 .e-js .e-qrydesigner-datacontent {
   font-size: 12px;
@@ -2398,7 +2413,7 @@
 .e-js .e-qrydesigner-datatable .e-item .e-active.e-node-hover .e-qrydesigner-treeview {
   color: #282827 !important;
 }
-.e-js .e-query-text {
+.e-js.e-querydesigner .e-query-text {
   font-size: 12px !important;
 }
 .e-js .e-table-user-selection-active .e-qrydesigner-table-column-deselect:before {
@@ -2478,6 +2493,9 @@
   border-top-width: 0.5px;
   border-color: #c8c8c8;
 }
+.e-js .e-qrydesigner-query-table {
+  background-color: white;
+}
 /*------------------------------querydesigner surface End-------------------------------*/
 
 /*------------------------------querydesigner dependent overwritten-------------------------------*/
@@ -2500,8 +2518,10 @@
 .e-js .e-qrydesigner-norow-msg,
 .e-js .e-qrydesigner-empty-msg,
 .e-js .e-qrydesigner-dataheader,
+.e-js .e-qrydesigner-Update,
 .e-js .e-qrydesigner-add-label,
 .e-js .e-qrydesigner-okbtn.e-txt,
+.e-js .e-qrydesigner-texteditor,
 .e-js .e-qrydesigner-cancelbtn,
 .e-js .e-qrydesigner-cancelbtn.e-txt,
 .e-js .e-qrydesigner-add-btn,
@@ -2604,12 +2624,12 @@
   color: #ee2924;
 }
 .e-js .e-qrydesigner-okbtn {
+  background: #74c3e7 !important;
+  color: white !important;
   
 }
 .e-js .e-qrydesigner-okbtn {
-  background: #74c3e7 !important;
-  border-color: #c8c8c8;
-  color: white !important;
+  border-color: #c8c8c8 !important;
 }
 .e-js .e-qrydesigner-okbtn:hover {
   border-color: #c8c8c8;
@@ -2783,6 +2803,13 @@
   color: #282827;
 }
 /*----------------------Query Param CSS End-----------------------*/
+
+/************************Report Parameter Start***********************************/
+
+.e-js .e-qrydesigner-dataparam-font {
+  font-size: 12px;
+}
+/************************Report Parameter End***********************************/
 
 /*------------------------------querydesigner Common Css Start-------------------------------*/
 

@@ -190,6 +190,10 @@
 @gantt-chart-critical-child-taskbar-color: #ff8b8b;
 @gantt-chart-critical-child-taskbar-border-color: #ff8b8b;
 
+@gantt-chart-histobar-overallocate-bg-color: #FFDEDE;
+@gantt-chart-histobar-nonoverallocate-bg-color: #D4FFD0;
+@gantt-chart-histocalender-color: #FFA3A3;
+@gantt-chart-histowork-label: #282827;
 @gantt-chart-manual-child-progressbar-stbg-color: #67C1B2;
 @gantt-chart-manual-child-progressbar-endbg-color: #67C1B2;
 @gantt-chart-manual-child-progressbar-gradient-color: none;
@@ -267,6 +271,8 @@
 @gantt-selectionpopup-content-bg-color: @content-bg-color;
 @gantt-selectionpopup-border-color:@content-border-color;
 @gantt-selectionpopup-default-icon-color:@default-icon-color;
+@gantt-child-unschedule-task-bg-color: fadeout(@active-bg-stcolor,80%);
+@gantt-manual-child-unschedule-task-bg-color: fadeout(@gantt-chart-manual-child-taskbar-color, 80%);
 
 @treegrid-detailcellwrapper-background-color: @neutral-white;
 @treegrid-detailcellwrapper-font-color: @neutral-primary;
@@ -7512,7 +7518,10 @@ color:#5c5c5c;
         margin: -11px 5px;
     }
 }
-
+.e-widget.e-colorpicker .e-buttons .e-grpbtn .e-hsvButton.e-btn.e-select.e-disable{
+  opacity:.35;
+  background:none;
+}
 
 
 
@@ -18724,8 +18733,96 @@ content:"\e6a0";
 }
 .e-js.e-pivotgrid .e-editorTreeView {
     margin-top: 7px;
-    height: 245px !important;
 }
+
+.e-js.e-pivotschemadesigner .e-memberDescendingIcon,
+.e-js.e-pivotschemadesigner .e-memberAscendingIcon,
+.e-js.e-pivotgrid .e-memberDescendingIcon,
+.e-js.e-pivotgrid .e-memberAscendingIcon {
+  display: inline-block;
+  height: 20px;
+  margin: 0px 10px;
+  vertical-align: middle;
+  width: 20px;
+  & when not (@skin = "material") {
+    color: @default-icon-color;
+  }
+}
+
+.e-js.e-pivotschemadesigner .e-memberAscendingIcon:before,
+.e-js.e-pivotgrid .e-memberAscendingIcon:before {
+  content: "\e714";
+  font-size: 16px;
+  margin: auto !important;
+  margin-top: 2px !important;  
+}
+
+.e-js.e-pivotschemadesigner .memberSortDiv,
+.e-js.e-pivotgrid .memberSortDiv
+{
+margin-top: -3px;
+}
+
+.e-js.e-pivotschemadesigner div.memberSortingDiv> div.e-checkAllBox > label,
+.e-js.e-pivotgrid div.memberSortingDiv> div.e-checkAllBox > label {
+  font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.e-js.e-pivotschemadesigner .advancedFilter div.memberSortingDiv> div.e-checkAllBox > label,
+.e-js.e-pivotgrid .advancedFilter div.memberSortingDiv> div.e-checkAllBox > label {
+  font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  font-size: 12px;
+  font-weight: normal !important;
+}
+
+.e-js.e-pivotschemadesigner .e-editorTreeView.e-treeViewUl ul, .e-js.e-pivotgrid .e-editorTreeView.e-treeViewUl ul {
+  padding-left: 0px !important;
+}
+
+.e-js.e-pivotschemadesigner .e-editorTreeView.e-treeViewUl li, .e-js.e-pivotgrid .e-editorTreeView.e-treeViewUl li {
+  padding-left: 16px !important;
+}
+
+
+.e-js.e-pivotschemadesigner .e-separateDiv {
+    border:0.50px solid;
+    border-color: @row-border-color;
+}
+
+.e-js.e-pivotschemadesigner .e-separateDiv,
+.e-js.e-pivotgrid .e-separateDiv {
+  border: 1px solid @row-border-color !important;
+  border-bottom: none !important;
+  margin: 9px 0px;
+ 
+}
+
+.e-js.e-pivotschemadesigner .e-memberDescendingIcon:before,
+.e-js.e-pivotgrid .e-memberDescendingIcon:before {
+  content: "\e713";
+  font-size: 16px;
+  margin: 2px;
+  
+}
+
+.e-js.e-pivotschemadesigner .e-memberDescendingIcon:hover,
+.e-js.e-pivotschemadesigner .e-memberAscendingIcon:hover,
+.e-js.e-pivotgrid .e-memberDescendingIcon:hover,
+.e-js.e-pivotgrid .e-memberAscendingIcon:hover {
+  & when (@skin = "material") {
+       background-color:@primary-color;
+  }
+  & when not (@skin = "material") and not (@skin = "office-365") {
+       background-color: @pivot-selection-background;
+  }
+  & when (@skin = "office-365") {
+       background-color: @theme-lighter;
+  }
+  cursor: pointer;
+ }
+
 .e-js.e-pivotgrid .e-dialogOKBtn {
     width: 69px;
     & when not (@skin = "material") and not (@skin = "office-365") {
@@ -19504,7 +19601,7 @@ vertical-align: text-top;
 .e-js.e-pivotschemadesigner .e-editorTreeView
 {
 	margin-top: 7px;
-	height: 245px !important;
+	
 }
 .e-js.e-pivotschemadesigner .schemaHeaders
 {
@@ -20351,7 +20448,7 @@ margin-right:10px;
 }
 
 .e-js.e-pivotschemadesigner .advancedFilter .e-editorTreeView, .e-js.e-pivotgrid .advancedFilter .e-editorTreeView {
-    height: inherit !important;
+    height: inherit;
     margin-top: 0px;
 }
 .e-js.e-pivotschemadesigner .separator, .e-js.e-pivotgrid  .separator {
@@ -21884,6 +21981,11 @@ padding:6px 0 6px 40px;
     box-sizing: content-box;
 }
 
+.e-js.e-pivotclient .e-pivotschemadesigner .memberSortDiv
+{
+margin-top: 1px !important;
+}
+
 .e-js.e-pivotclient .e-box,.e-js.e-pivotclient button.e-btn,.e-js.e-pivotclient input.e-btn,.e-js.e-pivotclient input.e-input,.e-js.e-pivotclient input[type="text"].e-input,
 .e-js.e-pivotclient .e-input.e-placeholder,.e-js.e-pivotclient  input.e-input,.e-js.e-pivotclient .e-js.e-lv.e-js .e-header.e-box,.e-js.e-pivotclient .e-textbox, .e-textarea
 {
@@ -21894,12 +21996,6 @@ padding:6px 0 6px 40px;
 .e-js.e-pivotclient td {
     padding: 0;
     border: 0 none;
-}
-.e-js.e-pivotclient .e-dialogremoveBtn:before
-{
-  font-family: "ej-webfont";
-  content: "\e711";
-  display: inline-block;
 }
 .e-js.e-pivotclient .e-hoverCell{
 background-color:@hover-bg-stcolor !important;
@@ -21958,6 +22054,77 @@ background-color:@hover-bg-stcolor !important;
   & when (@skin = "material") {
     padding-bottom:10px;
   }
+}
+
+
+.e-js.e-pivotclient .e-memberDescendingIcon,
+.e-js.e-pivotclient .e-memberAscendingIcon {
+  display: inline-block;
+  height: 20px;
+  margin: 0px 10px;
+  vertical-align: middle;
+  width: 20px;
+  & when (@skin = "material") {
+     color: fade(@base-font-color, 54%);
+    }
+    & when not (@skin = "material") {
+     color: @oclient-icons-color;
+   }
+}
+.e-js.e-pivotclient  .e-memberAscendingIcon:before {
+  content: "\e714";
+  font-size: 16px;
+  margin: 2px;  
+}
+
+
+.e-js.e-pivotclient div.memberSortingDiv> div.e-checkAllBox > label {
+  font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.e-js.e-pivotclient .e-separateDiv {
+  border:1px solid @oclient-border-color !important;
+  border-bottom: none !important;
+   & when (@skin = "office-365"){
+       border-color:@neutral-light !important;
+   }
+  margin: 9px 0px; 
+}
+
+.e-js.e-pivotclient .e-memberDescendingIcon:before {
+  content: "\e713";
+  font-size: 16px;
+  margin: 2px;  
+}
+
+.e-js.e-pivotclient .e-memberDescendingIcon:hover,
+.e-js.e-pivotclient .e-memberAscendingIcon:hover {
+  background-color: @oclient-icons-hover-bg;
+  cursor: pointer;
+}
+
+.e-js.e-pivotclient .advancedFilter div.memberSortingDiv> div.e-checkAllBox > label {
+  font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  font-size: 12px;
+  font-weight: normal !important;
+}
+
+.e-js.e-pivotclient .e-editorTreeView.e-treeViewUl ul {
+  padding-left: 0px !important;
+}
+
+.e-js.e-pivotclient .e-editorTreeView.e-treeViewUl li {
+  padding-left: 12px !important;
+} 
+.e-js.e-pivotclient .memberSortDiv {
+  float: right;
+}
+
+.e-js.e-pivotclient .memberSortDiv.e-rtl {
+  float: left;
+  margin-left: -15px !important;
 }
 
 .e-js.e-pivotclient .e-gridPanel, .e-js.e-pivotclient .e-chartPanel {
@@ -22172,6 +22339,17 @@ overflow:auto !important;
         line-height: 48px;
     }
 }
+
+.e-js.e-pivotclient .conditionformatTbl td {
+    padding: 6px 2px 6px 8px;
+}
+
+.e-js.e-pivotclient .e-dialogremoveBtn:before {
+    font-family: "ej-webfont";
+    content: "\e711";
+    display: inline-block;
+}
+
 .e-js.e-pivotclient .e-titleText span {
     padding-left: 10px;
 }
@@ -26715,6 +26893,12 @@ border:1px solid @neutral-light;
     border-color: @gantt-content-border-color;
 }
 
+.e-js.e-treegrid .e-batchdisable {
+    opacity:0.35;
+    background-image:none;
+    pointer-events:none;
+}
+
 .e-js.e-treegrid .e-borderbox {
     border-bottom-color: @gantt-content-bg-color;
 }
@@ -30858,7 +31042,21 @@ box-shadow: -1px 0 10px 0 black;
         .ganttheader-gradient();    
     }
 }
-.e-js.e-ganttchart .e-weekends
+.e-js.e-ganttchart .e-ganttoverallocate{
+       background-color:@gantt-chart-histobar-overallocate-bg-color;
+}
+.e-js.e-ganttchart .e-ganttnonoverallocate{
+       background-color:@gantt-chart-histobar-nonoverallocate-bg-color;
+}
+.e-js.e-ganttchart .e-gantthistocalender{
+       border-color: @gantt-chart-histocalender-color;
+}
+.e-js.e-ganttchart .e-gantthistoworklabel{
+        color: @gantt-chart-histowork-label;
+}
+.e-js.e-ganttchart .e-weekends,
+.e-js.e-ganttchart .e-ganttnonworkingrange,
+.e-js.e-ganttchart .e-ganttdayweekend
 {
     background-color:@gantt-weekends-bg-color;
 }
@@ -31148,6 +31346,52 @@ width:42% !important;
 .e-js.e-ganttchart .e-connectorline-hover{
     border-color: @gantt-chart-connectorline-hover-color !important;
     outline-color: @gantt-chart-connectorline-hover-color !important;
+}
+
+.e-js.e-ganttchart .e-gantt-childtaskbar.e-gantt-unscheduletaskbar-left {
+    background-color: none;
+    background: none;
+    & when (@skin= "office-365") {
+        border-color: @theme-primary;
+    }    
+}
+.e-js.e-ganttchart .e-gantt-childtaskbar.e-gantt-unscheduletaskbar-right {
+    background-color: none;
+    background: none;
+    & when (@skin= "office-365") {
+        border-color: @theme-primary;
+    }
+}
+.e-js.e-ganttchart .e-gantt-childtaskbar.e-gantt-unscheduletaskbar {
+    background-color:@gantt-child-task-bg-color;    
+    background: linear-gradient(to right, @gantt-child-unschedule-task-bg-color, @gantt-child-progress-bg-color 30%, @gantt-child-progress-bg-color 70%, @gantt-child-progress-bg-color 70%, @gantt-child-unschedule-task-bg-color 100%);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+.e-js.e-ganttchart .e-manualchildtaskbar.e-gantt-unscheduletaskbar-left {
+    background-color: none;
+    background: none;
+    & when (@skin= "office-365") {
+        border-color:@gantt-chart-manual-child-progressbar-stbg-color;
+    }
+}
+.e-js.e-ganttchart .e-manualchildtaskbar.e-gantt-unscheduletaskbar-right {
+    background-color: none;
+    background: none;
+    & when (@skin= "office-365") {
+        border-color: @gantt-chart-manual-child-progressbar-stbg-color;
+    }
+}
+.e-js.e-ganttchart .e-manualchildtaskbar.e-gantt-unscheduletaskbar {
+    background-color:@gantt-chart-manual-child-taskbar-color;
+    background: linear-gradient(to right, @gantt-manual-child-unschedule-task-bg-color, @gantt-chart-manual-child-progressbar-stbg-color  30%, @gantt-chart-manual-child-progressbar-stbg-color 70%, @gantt-chart-manual-child-progressbar-stbg-color 70%, @gantt-manual-child-unschedule-task-bg-color 100%);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+.e-js.e-ganttchart .e-milestone-top.e-unscheduletaskbar{    
+    border-bottom-color:@gantt-parent-task-bg-color;   
+}
+
+.e-js.e-ganttchart .e-milestone-bottom.e-unscheduletaskbar {
+    border-top-color:@gantt-parent-task-bg-color;
 }
 
 
@@ -31852,12 +32096,17 @@ outline:none !important;
 
 
   .e-widget.e-input-group.e-ddl {
+    & when (@skin= "material") {
+      height: 31px;
+    }
     & when (@skin= "office-365") { 
-            height: 32px;
+            height: 30px;
         }
-         & when not (@skin= "office-365") {
-            height:30px;
+     & when not (@skin= "material") {
+       & when not (@skin="office-365") {
+            height:28px;
         }
+  }
   }
 
   .e-widget.e-ddl.e-popup {

@@ -7840,6 +7840,9 @@ jQuery.fn.ejDiagram = function (options) {
 ///Defines how long edges should be, ideally. This will be the resting length for the springs.
 ///<br/>maxIteration-number	default-1000
 ///<br/><br/>
+///Enable or disable connector's segment overlapping with each other when executing the layout with multiple parents.
+///<br/>avoidSegmentOverlapping-boolean	default-false
+///<br/><br/>
 ///Defines the current culture of diagram
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
@@ -10340,6 +10343,9 @@ jQuery.fn.ejGantt = function (options) {
 ///Enables or disables sorting. When enabled, we can sort the column by clicking on the column.
 ///<br/>allowSorting-boolean	default-false
 ///<br/><br/>
+///Enables or disables the rendering of unscheduled tasks.
+///<br/>allowUnscheduledTask-boolean	default-false
+///<br/><br/>
 ///Specifies the baseline background color in Gantt
 ///<br/>baselineColor-string	default-#fba41c
 ///<br/><br/>
@@ -10374,7 +10380,7 @@ jQuery.fn.ejGantt = function (options) {
 ///<br/>dateFormat-string	default-MM/dd/yyyy
 ///<br/><br/>
 ///Specifies the customized working time for tasks in Gantt
-///<br/>dayWorkingTime-Array&lt;any&gt;	default-[{ from: 08:00 AM, to: 12:00 PM }, { from: 01:00 PM, to: 05:00 PM }]
+///<br/>dayWorkingTime-Array&lt;any&gt;	default-[{ from: 08:00 AM, to: 12:00 PM , background:   }, { from: 01:00 PM, to: 05:00 PM , background:  }]
 ///<br/><br/>
 ///Option for customizing the drag tooltip while reordering the rows.
 ///<br/>dragTooltip-DragTooltip	default-
@@ -10505,6 +10511,9 @@ jQuery.fn.ejGantt = function (options) {
 ///Default Value
 ///<br/>groupNameMapping-string	default-
 ///<br/><br/>
+///Specifies whether to highlight the non working time in Gantt.
+///<br/>highlightNonWorkingTime-boolean	default-false
+///<br/><br/>
 ///Specifies whether to highlight the weekends in Gantt .
 ///<br/>highlightWeekends-boolean	default-true
 ///<br/><br/>
@@ -10540,6 +10549,9 @@ jQuery.fn.ejGantt = function (options) {
 ///<br/><br/>
 ///To Specify the JsRender script Id to customize the mile stone with our preference
 ///<br/>milestoneTemplate-string	default-
+///<br/><br/>
+///Specifies the background color for non working time in Gantt.
+///<br/>nonWorkingBackground-string	default-
 ///<br/><br/>
 ///Specifies the mapping property path for the task description in datasource
 ///<br/>notesMapping-string	default-
@@ -25603,6 +25615,12 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///Enables or disables the ability to edit a row or cell.
 ///<br/>allowEditing-boolean	default-false
 ///<br/><br/>
+///specifies the batch edit mode in TreeGrid.
+///<br/>batchEditSettings-any	default-
+///<br/><br/>
+///Specifies the batch edit mode whether it is cell, row or dialog.
+///<br/>editMode-ej.TreeGrid.BatchEditMode|string	default-ej.TreeGrid.BatchEditMode.Cell
+///<br/><br/>
 ///Specifies the mouse action whether single click or double click to begin the editing
 ///<br/>beginEditAction-ej.TreeGrid.BeginEditAction|string	default-ej.TreeGrid.BeginEditAction.DblClick
 ///<br/><br/>
@@ -25737,6 +25755,9 @@ jQuery.fn.ejTreeGrid = function (options) {
 ///<br/><br/>
 ///Specifies the operator for the search key words in toolbar searching.
 ///<br/>operator-string	default-contains
+///<br/><br/>
+///Specifies the search mode of records in searching.
+///<br/>searchHierarchyMode-ej.TreeGrid.SearchHierarchyMode|string	default-ej.TreeGrid.SearchHierarchyMode.Parent
 ///<br/><br/>
 ///Specifies the selected cell information on rendering TreeGrid.
 ///<br/>selectedCellIndexes-Array&lt;SelectedCellIndexes&gt;	default-
@@ -26196,19 +26217,21 @@ jQuery.fn.ejTreeMap = function (options) {
 ej.TreeView=function(){};
 ej.TreeView.prototype={
 
-addNode:function(newNodeText, target){
+addNode:function(newNodeText, target, preventTargetExpand){
 /// <summary>
 /// To add a Node or collection of nodes in TreeView. If target tree node is specified, then the given nodes are added as child of target tree node, otherwise nodes are added in TreeView.
 /// </summary>
 /// <param name="newNodeText"	type="string|any">New node text or JSON object</param>
 /// <param name="target"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="preventTargetExpand"	type="boolean">Parent node will be prevented from auto expanding</param>
 },
-addNodes:function(collection, target){
+addNodes:function(collection, target, preventTargetExpand){
 /// <summary>
 /// To add a collection of nodes in TreeView. If target tree node is specified, then the given nodes are added as child of target tree node, otherwise nodes are added in TreeView.
 /// </summary>
 /// <param name="collection"	type="any|any[]">New node details in JSON object</param>
 /// <param name="target"	type="string|any">ID of TreeView node/object of TreeView node</param>
+/// <param name="preventTargetExpand"	type="boolean">Parent node will be prevented from auto expanding</param>
 },
 checkAll:function(){
 /// <summary>

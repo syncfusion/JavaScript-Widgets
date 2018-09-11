@@ -4561,6 +4561,10 @@ input[type="text"].e-input {
 .e-colorwidget .e-in-wrap .e-tool-icon.e-icon {
   margin: -11px 5px;
 }
+.e-colorpicker .e-buttons .e-grpbtn .e-hsvButton.e-btn.e-select.e-disable {
+  opacity: 0.35;
+  background: none;
+}
 
 /*-----------------------Map------------------*/
 /*-----------------------PdfViewer------------------*/
@@ -13179,7 +13183,82 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-pivotgrid .e-editorTreeView {
   margin-top: 7px;
-  height: 245px !important;
+}
+.e-pivotschemadesigner .e-memberDescendingIcon,
+.e-pivotschemadesigner .e-memberAscendingIcon,
+.e-pivotgrid .e-memberDescendingIcon,
+.e-pivotgrid .e-memberAscendingIcon {
+  display: inline-block;
+  height: 20px;
+  margin: 0px 10px;
+  vertical-align: middle;
+  width: 20px;
+}
+.e-pivotschemadesigner .e-memberDescendingIcon,
+.e-pivotschemadesigner .e-memberAscendingIcon,
+.e-pivotgrid .e-memberDescendingIcon,
+.e-pivotgrid .e-memberAscendingIcon {
+  color: #686969;
+}
+.e-pivotschemadesigner .e-memberAscendingIcon:before,
+.e-pivotgrid .e-memberAscendingIcon:before {
+  content: "\e714";
+  font-size: 16px;
+  margin: auto !important;
+  margin-top: 2px !important;
+}
+.e-pivotschemadesigner .memberSortDiv,
+.e-pivotgrid .memberSortDiv {
+  margin-top: -3px;
+}
+.e-pivotschemadesigner div.memberSortingDiv > div.e-checkAllBox > label,
+.e-pivotgrid div.memberSortingDiv > div.e-checkAllBox > label {
+  font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+.e-pivotschemadesigner .advancedFilter div.memberSortingDiv > div.e-checkAllBox > label,
+.e-pivotgrid .advancedFilter div.memberSortingDiv > div.e-checkAllBox > label {
+  font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  font-size: 12px;
+  font-weight: normal !important;
+}
+.e-pivotschemadesigner .e-editorTreeView.e-treeViewUl ul,
+.e-pivotgrid .e-editorTreeView.e-treeViewUl ul {
+  padding-left: 0px !important;
+}
+.e-pivotschemadesigner .e-editorTreeView.e-treeViewUl li,
+.e-pivotgrid .e-editorTreeView.e-treeViewUl li {
+  padding-left: 16px !important;
+}
+.e-pivotschemadesigner .e-separateDiv {
+  border: 0.5px solid;
+  border-color: #c8c8c8;
+}
+.e-pivotschemadesigner .e-separateDiv,
+.e-pivotgrid .e-separateDiv {
+  border: 1px solid #c8c8c8 !important;
+  border-bottom: none !important;
+  margin: 9px 0px;
+}
+.e-pivotschemadesigner .e-memberDescendingIcon:before,
+.e-pivotgrid .e-memberDescendingIcon:before {
+  content: "\e713";
+  font-size: 16px;
+  margin: 2px;
+}
+.e-pivotschemadesigner .e-memberDescendingIcon:hover,
+.e-pivotschemadesigner .e-memberAscendingIcon:hover,
+.e-pivotgrid .e-memberDescendingIcon:hover,
+.e-pivotgrid .e-memberAscendingIcon:hover {
+  
+  cursor: pointer;
+}
+.e-pivotschemadesigner .e-memberDescendingIcon:hover,
+.e-pivotschemadesigner .e-memberAscendingIcon:hover,
+.e-pivotgrid .e-memberDescendingIcon:hover,
+.e-pivotgrid .e-memberAscendingIcon:hover {
+  background-color: #cee292;
 }
 .e-pivotgrid .e-dialogOKBtn {
   width: 69px;
@@ -13878,7 +13957,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-pivotschemadesigner .e-editorTreeView {
   margin-top: 7px;
-  height: 245px !important;
 }
 .e-pivotschemadesigner .schemaHeaders {
   overflow: hidden;
@@ -14482,7 +14560,7 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-pivotschemadesigner .advancedFilter .e-editorTreeView,
 .e-pivotgrid .advancedFilter .e-editorTreeView {
-  height: inherit !important;
+  height: inherit;
   margin-top: 0px;
 }
 .e-pivotschemadesigner .separator,
@@ -15717,6 +15795,9 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+.e-pivotclient .e-pivotschemadesigner .memberSortDiv {
+  margin-top: 1px !important;
+}
 .e-pivotclient .e-box,
 .e-pivotclient button.e-btn,
 .e-pivotclient input.e-btn,
@@ -15733,11 +15814,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-pivotclient td {
   padding: 0;
   border: 0 none;
-}
-.e-pivotclient .e-dialogremoveBtn:before {
-  font-family: "ej-webfont";
-  content: "\e711";
-  display: inline-block;
 }
 .e-pivotclient .e-hoverCell {
   background-color: #cee292 !important;
@@ -15789,6 +15865,63 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 }
 .e-pivotclient {
   color: #333333;
+}
+.e-pivotclient .e-memberDescendingIcon,
+.e-pivotclient .e-memberAscendingIcon {
+  display: inline-block;
+  height: 20px;
+  margin: 0px 10px;
+  vertical-align: middle;
+  width: 20px;
+  
+}
+.e-pivotclient .e-memberDescendingIcon,
+.e-pivotclient .e-memberAscendingIcon {
+  color: #686969;
+}
+.e-pivotclient .e-memberAscendingIcon:before {
+  content: "\e714";
+  font-size: 16px;
+  margin: 2px;
+}
+.e-pivotclient div.memberSortingDiv > div.e-checkAllBox > label {
+  font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+.e-pivotclient .e-separateDiv {
+  border: 1px solid #c8c8c8 !important;
+  border-bottom: none !important;
+  
+  margin: 9px 0px;
+}
+.e-pivotclient .e-memberDescendingIcon:before {
+  content: "\e713";
+  font-size: 16px;
+  margin: 2px;
+}
+.e-pivotclient .e-memberDescendingIcon:hover,
+.e-pivotclient .e-memberAscendingIcon:hover {
+  background-color: #cee292;
+  cursor: pointer;
+}
+.e-pivotclient .advancedFilter div.memberSortingDiv > div.e-checkAllBox > label {
+  font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  font-size: 12px;
+  font-weight: normal !important;
+}
+.e-pivotclient .e-editorTreeView.e-treeViewUl ul {
+  padding-left: 0px !important;
+}
+.e-pivotclient .e-editorTreeView.e-treeViewUl li {
+  padding-left: 12px !important;
+}
+.e-pivotclient .memberSortDiv {
+  float: right;
+}
+.e-pivotclient .memberSortDiv.e-rtl {
+  float: left;
+  margin-left: -15px !important;
 }
 .e-pivotclient .e-gridPanel,
 .e-pivotclient .e-chartPanel {
@@ -15964,6 +16097,14 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-pivotclient .e-titleText {
   font: normal 20px Segoe UI, Helvetica Neue, Ubuntu, Arial;
   line-height: 48px;
+}
+.e-pivotclient .conditionformatTbl td {
+  padding: 6px 2px 6px 8px;
+}
+.e-pivotclient .e-dialogremoveBtn:before {
+  font-family: "ej-webfont";
+  content: "\e711";
+  display: inline-block;
 }
 .e-pivotclient .e-titleText span {
   padding-left: 10px;
@@ -20043,6 +20184,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   background-color: white;
   border-color: #c8c8c8;
 }
+.e-treegrid .e-batchdisable {
+  opacity: 0.35;
+  background-image: none;
+  pointer-events: none;
+}
 .e-treegrid .e-borderbox {
   border-bottom-color: white;
 }
@@ -23262,7 +23408,21 @@ ej-ribbon {
 .e-ganttchart .e-headercell-weekend > div {
   background: #fcfcfc;
 }
-.e-ganttchart .e-weekends {
+.e-ganttchart .e-ganttoverallocate {
+  background-color: #ffdede;
+}
+.e-ganttchart .e-ganttnonoverallocate {
+  background-color: #d4ffd0;
+}
+.e-ganttchart .e-gantthistocalender {
+  border-color: #ffa3a3;
+}
+.e-ganttchart .e-gantthistoworklabel {
+  color: #282827;
+}
+.e-ganttchart .e-weekends,
+.e-ganttchart .e-ganttnonworkingrange,
+.e-ganttchart .e-ganttdayweekend {
   background-color: #f7f7f7;
 }
 .e-ganttchart-core {
@@ -23494,6 +23654,42 @@ ej-ribbon {
 .e-ganttchart .e-connectorline-hover {
   border-color: #0026da !important;
   outline-color: #0026da !important;
+}
+.e-ganttchart .e-gantt-childtaskbar.e-gantt-unscheduletaskbar-left {
+  background-color: none;
+  background: none;
+  
+}
+.e-ganttchart .e-gantt-childtaskbar.e-gantt-unscheduletaskbar-right {
+  background-color: none;
+  background: none;
+  
+}
+.e-ganttchart .e-gantt-childtaskbar.e-gantt-unscheduletaskbar {
+  background-color: rgba(174, 207, 73, 0.6);
+  background: linear-gradient(to right, rgba(174, 207, 73, 0.2), #aecf49 30%, #aecf49 70%, #aecf49 70%, rgba(174, 207, 73, 0.2) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+.e-ganttchart .e-manualchildtaskbar.e-gantt-unscheduletaskbar-left {
+  background-color: none;
+  background: none;
+  
+}
+.e-ganttchart .e-manualchildtaskbar.e-gantt-unscheduletaskbar-right {
+  background-color: none;
+  background: none;
+  
+}
+.e-ganttchart .e-manualchildtaskbar.e-gantt-unscheduletaskbar {
+  background-color: #8dd1c4;
+  background: linear-gradient(to right, rgba(141, 209, 196, 0.2), #67c1b2 30%, #67c1b2 70%, #67c1b2 70%, rgba(141, 209, 196, 0.2) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+.e-ganttchart .e-milestone-top.e-unscheduletaskbar {
+  border-bottom-color: rgba(51, 51, 51, 0.6);
+}
+.e-ganttchart .e-milestone-bottom.e-unscheduletaskbar {
+  border-top-color: rgba(51, 51, 51, 0.6);
 }
 
 /*-----------------------Map------------------*/
@@ -24173,7 +24369,7 @@ input.e-combobox.e-input:-ms-input-placeholder {
   
 }
 .e-input-group.e-ddl {
-  height: 30px;
+  height: 28px;
 }
 .e-ddl.e-popup {
   border: 1px solid #c8c8c8;
