@@ -38,7 +38,7 @@ In case of any questions regarding the use of Syncfusion JavaScript, please [con
 
 ## Release Notes
 
-Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes at Syncfusion](http://help.syncfusion.com/js/release-notes/v16.3.0.17 "").
+Refer the Syncfusion JavaScript Product Release Notes in [online Release Notes at Syncfusion](http://help.syncfusion.com/js/release-notes/v16.3.0.21 "").
 
 ## License Information
 
