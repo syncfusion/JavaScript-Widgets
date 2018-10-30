@@ -1155,7 +1155,7 @@ e-excelfilter .e-menu .e-list.e-fghdrcolor.e-mhover.e-mfocused,
   
 }
 .e-excelfilter .e-shadow {
-  box-shadow: 10px 10px 10px #e0e0e0 !important;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
 }
 
 /*-----------------------Map------------------*/
