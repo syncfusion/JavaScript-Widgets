@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.compatibility.css
-*  version : 16.3.0.30
+*  version : 12.3
 *  Copyright Syncfusion Inc. 2001 - 2018. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -546,6 +546,30 @@
 .e-js .e-reportdesigner-alert-info .path2:before {
   color: #ebba16;
 }
+.e-js .e-reportdesigner-widget-tablix .path1:before {
+  color: #4da7ff;
+}
+.e-js .e-reportdesigner-widget-tablix .path2:before {
+  color: #4da7ff;
+}
+.e-js .e-reportdesigner-widget-tablix .path3:before {
+  color: #4da7ff;
+}
+.e-js .e-reportdesigner-widget-tablix .path4:before {
+  color: #4da7ff;
+}
+.e-js .e-reportdesigner-widget-tablix .path5:before {
+  color: #4da7ff;
+}
+.e-js .e-reportdesigner-widget-tablix .path6:before {
+  color: #ec7839;
+}
+.e-js .e-reportdesigner-widget-tablix .path7:before {
+  color: #ec7839;
+}
+.e-js .e-reportdesigner-widget-tablix .path8:before {
+  color: #ec7839;
+}
 /*----------------------ReportDesigner Font Icons----------------------*/
 
 /*----------------------Toolbar Start----------------------*/
@@ -692,7 +716,8 @@
 .e-js.e-reportdesigner .e-itempanel-header.e-itempanel-collapse {
   background: black;
 }
-.e-js .e-rptdesigner-itemInfo-template {
+.e-js .e-rptdesigner-itemInfo-template,
+.e-js .e-rptdesigner-grpingpanel-template {
   font-size: 12px;
   float: left;
 }
@@ -1328,7 +1353,9 @@
 .e-js .e-designer-ejdialog .e-title,
 .e-js .e-designer-dialog .e-title,
 .e-js .e-designer-alertbox .e-title,
-.e-js .e-rptdesigner-itemInfo-template {
+.e-js .e-rptdesigner-itemInfo-template,
+.e-js .e-rptdesigner-grpingpanel-template,
+.e-js .e-designer-tablix-alert-radiobtn .e-text {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 /*----------------------EJ Designer Fontfamily----------------------*/
@@ -1399,7 +1426,7 @@
   font-size: 30px;
 }
 .e-js .e-rptdesigner-img-divhover {
-  border: 1px solid;
+  border: 2px solid;
   border-color: white;
 }
 .e-js .e-rptdesigner-img-childdivhover {
@@ -1928,6 +1955,125 @@
   font-size: 13px;
 }
 /*----------------------Shared Dataset CSS Start-----------------------*/
+
+/*************************************Tablix Start******************************************/
+
+/*************************************Tablix Grouping Panel css Start******************************************/
+
+.e-js .e-rptdesigner-rowColumn-openCloseDiv,
+.e-js .e-rptdesigner-rowColumn-headerTable,
+.e-js .e-rptdesigner-rowColumn-containerTable,
+.e-js .e-rptdesigner-rowColumn-bodyContainer {
+  
+}
+.e-js .e-rptdesigner-rowColumn-openCloseDiv,
+.e-js .e-rptdesigner-rowColumn-headerTable,
+.e-js .e-rptdesigner-rowColumn-containerTable,
+.e-js .e-rptdesigner-rowColumn-bodyContainer {
+  background-color: black;
+}
+.e-js .e-rptdesigner-rowColumn-container {
+  border-color: gray;
+}
+.e-js .e-rptdesigner-rowColumn-headerDiv {
+  
+  color: lime;
+}
+.e-js .e-rptdesigner-rowColumn-headerDiv {
+  background-repeat: no-repeat;
+  border-bottom: 1px solid gray;
+}
+.e-js .e-rptdesigner-rowColumn-headerDiv {
+  background: black;
+}
+.e-js .e-rptdesigner-rowColumn-rowDiv,
+.e-js .e-rptdesigner-rowColumn-columnDiv {
+  
+}
+.e-js .e-rptdesigner-rowColumn-rowDiv,
+.e-js .e-rptdesigner-rowColumn-columnDiv {
+  background-color: black;
+}
+.e-js .e-rptdesigner-headerRowSpan,
+.e-js .e-rptdesigner-headerColumn,
+.e-js .e-rptdesigner-rowColumn-fieldNameDiv,
+.e-js .e-rptdesigner-rowColumn-menuIcon {
+  font-size: 12px;
+}
+.e-js .e-rptdesigner-rowColumn-rowDiv {
+  border: 1px solid gray;
+}
+.e-js .e-rptdesigner-rowColumn-columnDiv {
+  border: 1px solid gray;
+}
+.e-js .e-rptdesigner-rowColumn-containerTable {
+  border: 1px solid gray;
+  color: lime;
+}
+.e-js .e-rptdesigner-rowColumn-menuDiv {
+  border-left: 0.5px solid gray;
+}
+.e-js .e-rptdesigner-group-list-hover {
+  
+}
+.e-js .e-rptdesigner-group-list-hover {
+  color: white;
+}
+.e-js .e-rptdesigner-group-list-hover {
+  background: #1010af;
+}
+.e-js .e-rptdesigner-user-selection-active {
+  
+}
+.e-js .e-rptdesigner-user-selection-active {
+  background: blue;
+}
+.e-js .e-rptdesigner-user-selection-active,
+.e-js .e-rptdesigner-user-selection-active .e-rptdesigner-rowColumn-menuIcon,
+.e-js .e-rptdesigner-user-selection-active .e-rptdesigner-group-detailIcon,
+.e-js .e-rptdesigner-user-selection-active .e-rptdesigner-group-icon {
+  
+}
+.e-js .e-rptdesigner-user-selection-active,
+.e-js .e-rptdesigner-user-selection-active .e-rptdesigner-rowColumn-menuIcon,
+.e-js .e-rptdesigner-user-selection-active .e-rptdesigner-group-detailIcon,
+.e-js .e-rptdesigner-user-selection-active .e-rptdesigner-group-icon {
+  color: white;
+}
+.e-js .e-rptdesigner-groupPanel-resizer {
+  
+}
+.e-js .e-rptdesigner-groupPanel-resizer {
+  background-color: gray;
+}
+.e-js .e-rptdesigner-groupPanel-resizer:hover {
+  
+}
+.e-js .e-rptdesigner-groupPanel-resizer:hover {
+  background-color: #1010af;
+  border-color: white;
+}
+.e-js .e-rptdesigner-groupPanel-resize-helper {
+  
+}
+.e-js .e-rptdesigner-groupPanel-resize-helper {
+  background: blue;
+}
+.e-js .e-rptdesigner-rowColumn-rowIconSpan,
+.e-js .e-rptdesigner-rowColumn-advIconSpan,
+.e-js .e-rptdesigner-rowColumn-menuIcon,
+.e-js .e-rptdesigner-rowColumn-openCloseIcon,
+.e-js .e-rptdesigner-group-detailIcon,
+.e-js .e-rptdesigner-group-icon,
+.e-js .e-rptdesigner-rowColumn-groupIcon-size {
+  color: white;
+}
+/*************************************Tablix Grouping Panel End******************************************/
+
+.e-js .e-rptdesigner-textbox-editIcon {
+  color: #159bd7;
+}
+/*************************************Tablix End******************************************/
 
 /*------------------------------querydesigner toolbar Start-------------------------------*/
 

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.css
-*  version : 16.3.0.30
+*  version : 12.3
 *  Copyright Syncfusion Inc. 2001 - 2018. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -565,6 +565,30 @@
 .e-reportdesigner-alert-info .path2:before {
   color: #ebba16;
 }
+.e-reportdesigner-widget-tablix .path1:before {
+  color: #4da7ff;
+}
+.e-reportdesigner-widget-tablix .path2:before {
+  color: #4da7ff;
+}
+.e-reportdesigner-widget-tablix .path3:before {
+  color: #4da7ff;
+}
+.e-reportdesigner-widget-tablix .path4:before {
+  color: #4da7ff;
+}
+.e-reportdesigner-widget-tablix .path5:before {
+  color: #4da7ff;
+}
+.e-reportdesigner-widget-tablix .path6:before {
+  color: #ec7839;
+}
+.e-reportdesigner-widget-tablix .path7:before {
+  color: #ec7839;
+}
+.e-reportdesigner-widget-tablix .path8:before {
+  color: #ec7839;
+}
 /*----------------------ReportDesigner Font Icons----------------------*/
 
 /*----------------------Toolbar Start----------------------*/
@@ -774,7 +798,8 @@
   /* IE6-9 */
 
 }
-.e-rptdesigner-itemInfo-template {
+.e-rptdesigner-itemInfo-template,
+.e-rptdesigner-grpingpanel-template {
   font-size: 12px;
   float: left;
 }
@@ -1522,7 +1547,9 @@
 .e-designer-ejdialog .e-title,
 .e-designer-dialog .e-title,
 .e-designer-alertbox .e-title,
-.e-rptdesigner-itemInfo-template {
+.e-rptdesigner-itemInfo-template,
+.e-rptdesigner-grpingpanel-template,
+.e-designer-tablix-alert-radiobtn .e-text {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 /*----------------------EJ Designer Fontfamily----------------------*/
@@ -1625,7 +1652,7 @@
   font-size: 30px;
 }
 .e-rptdesigner-img-divhover {
-  border: 1px solid;
+  border: 2px solid;
   border-color: #777777;
 }
 .e-rptdesigner-img-childdivhover {
@@ -2202,6 +2229,189 @@
   font-size: 13px;
 }
 /*----------------------Shared Dataset CSS Start-----------------------*/
+
+/*************************************Tablix Start******************************************/
+
+/*************************************Tablix Grouping Panel css Start******************************************/
+
+.e-rptdesigner-rowColumn-openCloseDiv,
+.e-rptdesigner-rowColumn-headerTable,
+.e-rptdesigner-rowColumn-containerTable,
+.e-rptdesigner-rowColumn-bodyContainer {
+  
+}
+.e-rptdesigner-rowColumn-openCloseDiv,
+.e-rptdesigner-rowColumn-headerTable,
+.e-rptdesigner-rowColumn-containerTable,
+.e-rptdesigner-rowColumn-bodyContainer {
+  background-color: #4d4d4d;
+}
+.e-rptdesigner-rowColumn-container {
+  border-color: #494949;
+}
+.e-rptdesigner-rowColumn-headerDiv {
+  
+  color: #dddddd;
+}
+.e-rptdesigner-rowColumn-headerDiv {
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #494949;
+}
+.e-rptdesigner-rowColumn-headerDiv {
+  background: #4d4d4d;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4d4d4d, #212121);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(100%, #212121));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4d4d4d, #212121);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4d4d4d, #212121);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4d4d4d, #212121);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4d4d4d, #212121);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4d4d', endColorstr='#212121', GradientType=0);
+  /* IE6-9 */
+
+}
+.e-rptdesigner-rowColumn-rowDiv,
+.e-rptdesigner-rowColumn-columnDiv {
+  
+}
+.e-rptdesigner-rowColumn-rowDiv,
+.e-rptdesigner-rowColumn-columnDiv {
+  background-color: black;
+}
+.e-rptdesigner-headerRowSpan,
+.e-rptdesigner-headerColumn,
+.e-rptdesigner-rowColumn-fieldNameDiv,
+.e-rptdesigner-rowColumn-menuIcon {
+  font-size: 12px;
+}
+.e-rptdesigner-rowColumn-rowDiv {
+  border: 1px solid #494949;
+}
+.e-rptdesigner-rowColumn-columnDiv {
+  border: 1px solid #494949;
+}
+.e-rptdesigner-rowColumn-containerTable {
+  border: 1px solid #494949;
+  color: #dddddd;
+}
+.e-rptdesigner-rowColumn-menuDiv {
+  border-left: 0.5px solid #777777;
+}
+.e-rptdesigner-group-list-hover {
+  
+}
+.e-rptdesigner-group-list-hover {
+  color: #dddddd;
+}
+.e-rptdesigner-group-list-hover {
+  background: #2f4651;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #2f4651, #133a4c);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2f4651), color-stop(100%, #133a4c));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #2f4651, #133a4c);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #2f4651, #133a4c);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #2f4651, #133a4c);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #2f4651, #133a4c);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f4651', endColorstr='#133a4c', GradientType=0);
+  /* IE6-9 */
+
+}
+.e-rptdesigner-user-selection-active {
+  
+}
+.e-rptdesigner-user-selection-active {
+  background: #74c3e7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #74c3e7, #179bd7);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74c3e7), color-stop(100%, #179bd7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #74c3e7, #179bd7);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #74c3e7, #179bd7);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #74c3e7, #179bd7);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #74c3e7, #179bd7);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74c3e7', endColorstr='#179bd7', GradientType=0);
+  /* IE6-9 */
+
+}
+.e-rptdesigner-user-selection-active,
+.e-rptdesigner-user-selection-active .e-rptdesigner-rowColumn-menuIcon,
+.e-rptdesigner-user-selection-active .e-rptdesigner-group-detailIcon,
+.e-rptdesigner-user-selection-active .e-rptdesigner-group-icon {
+  
+}
+.e-rptdesigner-user-selection-active,
+.e-rptdesigner-user-selection-active .e-rptdesigner-rowColumn-menuIcon,
+.e-rptdesigner-user-selection-active .e-rptdesigner-group-detailIcon,
+.e-rptdesigner-user-selection-active .e-rptdesigner-group-icon {
+  color: white;
+}
+.e-rptdesigner-groupPanel-resizer {
+  
+}
+.e-rptdesigner-groupPanel-resizer {
+  background-color: #494949;
+}
+.e-rptdesigner-groupPanel-resizer:hover {
+  
+}
+.e-rptdesigner-groupPanel-resizer:hover {
+  background-color: #2f4651;
+  border-color: #777777;
+}
+.e-rptdesigner-groupPanel-resize-helper {
+  
+}
+.e-rptdesigner-groupPanel-resize-helper {
+  background: #74c3e7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #74c3e7, #179bd7);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74c3e7), color-stop(100%, #179bd7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #74c3e7, #179bd7);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #74c3e7, #179bd7);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #74c3e7, #179bd7);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #74c3e7, #179bd7);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74c3e7', endColorstr='#179bd7', GradientType=0);
+  /* IE6-9 */
+
+}
+.e-rptdesigner-rowColumn-rowIconSpan,
+.e-rptdesigner-rowColumn-advIconSpan,
+.e-rptdesigner-rowColumn-menuIcon,
+.e-rptdesigner-rowColumn-openCloseIcon,
+.e-rptdesigner-group-detailIcon,
+.e-rptdesigner-group-icon,
+.e-rptdesigner-rowColumn-groupIcon-size {
+  color: #cccccc;
+}
+/*************************************Tablix Grouping Panel End******************************************/
+
+.e-rptdesigner-textbox-editIcon {
+  color: #159bd7;
+}
+/*************************************Tablix End******************************************/
 
 /*------------------------------querydesigner toolbar Start-------------------------------*/
 

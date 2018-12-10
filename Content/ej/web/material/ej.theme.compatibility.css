@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.compatibility.css
-*  version : 16.3.0.30
+*  version : 12.3
 *  Copyright Syncfusion Inc. 2001 - 2018. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -1155,7 +1155,7 @@ e-excelfilter .e-menu .e-list.e-fghdrcolor.e-mhover.e-mfocused,
   
 }
 .e-excelfilter .e-shadow {
-  box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.4) !important;
 }
 
 /*-----------------------Map------------------*/

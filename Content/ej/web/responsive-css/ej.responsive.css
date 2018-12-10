@@ -1402,6 +1402,59 @@ padding-bottom:7px;
 		top: 0px !important;
 		left: 0px !important;
 	}
+
+    .e-ss-fcdlg .e-ss-leftdiv .e-ddl-popup {
+        height: 156px !important;
+    }
+
+    .e-ss-fcdlg .e-ss-rightdiv .e-ddl-popup {
+        height: 110px !important;
+    }
+
+    .e-ss-fcdlg .e-ss-rightdiv .e-ddl-popup.e-ss-customtypes {
+        height: 62px !important;
+    }
+
+    .e-ss-fcdlg .e-ss-rightdiv .e-fdlg-num-options .e-button.e-js {
+        display: none !important;
+    }
+
+    .e-ss-fcdlg .e-ss-fontcntdiv .e-ddl-popup {
+        height: 122px !important;
+    }
+
+    .e-ss-fcdlg .e-ss-fontmaindiv .e-ss-fontcntdiv:last-child {
+        display: none !important;
+    }
+
+    .e-charttype-dlg .e-ss-dlgtab .e-content {
+        height: 250px !important;
+    }
+
+    .e-charttype-dlg .e-ss-leftdiv .e-ddl-popup {
+        height: 230px !important;
+    }
+
+    .e-ss-valdlg {
+        top: 20px !important;
+    }
+
+    .e-ss-valdlg .e-val-chk {
+        display: none;
+    }
+
+    .e-ss-dialog.e-charttype-dlg .e-ss-dlgtab .e-content .e-ss-maindiv .e-ss-rightdiv {
+        height: 228px !important;
+        overflow-y: scroll !important;
+    }
+
+    .e-ss-gotodlg {
+        top: 15px !important;
+    }
+
+    .e-ss-gotodlg .e-dlgctndiv.e-ss-gotosp-content .e-ss-gotosp-chk {
+        display: none;
+    }
 }
 /*------------------------------------Spreadsheet End-------------------------------------*/
 @media (min-width: 320px) and (max-width:480px) {

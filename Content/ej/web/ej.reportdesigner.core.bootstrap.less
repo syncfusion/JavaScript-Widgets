@@ -1073,6 +1073,10 @@
         content: "\e9ca";
     }
 
+     .e-rptdesigner-toolbar-grouping:before {
+        content: "\e9ca";
+    }
+
      .e-reportdesigner-toolbar-ruler:before {
         content: "\e9cb";
     }
@@ -1378,6 +1382,77 @@
      .e-rptdesigner-data-collapse:before {
         content: "\ea39";
     }
+
+     .e-rptdesigner-group-colIcon:before {
+        content: "\ea3c";
+    }
+
+     .e-rptdesigner-group-rowIcon:before {
+        content: "\ea3d";
+    }
+
+     .e-reportdesigner-widget-tablix .path1:before {
+        content: "\ea3e";
+    }
+
+     .e-reportdesigner-widget-tablix .path2:before {
+        content: "\ea3f";
+        margin-left: -1em;
+    }
+
+     .e-reportdesigner-widget-tablix .path3:before {
+        content: "\ea40";
+        margin-left: -1em;
+    }
+
+     .e-reportdesigner-widget-tablix .path4:before {
+        content: "\ea41";
+        margin-left: -1em;
+    }
+
+     .e-reportdesigner-widget-tablix .path5:before {
+        content: "\ea42";
+        margin-left: -1em;
+    }
+
+     .e-reportdesigner-widget-tablix .path6:before {
+        content: "\ea43";
+        margin-left: -1em;
+    }
+
+     .e-reportdesigner-widget-tablix .path7:before {
+        content: "\ea44";
+        margin-left: -1em;
+    }
+
+     .e-reportdesigner-widget-tablix .path8:before {
+        content: "\ea45";
+        margin-left: -1em;
+    }
+
+     .e-rptdesigner-group-detailIcon:before {
+        content: "\ea46";
+    }
+
+     .e-rptdesigner-group-icon:before {
+        content: "\ea47";
+    }
+
+     .e-rptdesigner-grouping-minimize:before {
+        content: "\ea48";
+    }
+
+     .e-rptdesigner-grouping-maximize:before {
+        content: "\ea49";
+    }
+
+     .e-rptdesigner-rowColumn-advIconSpan:before {
+        content: "\ea4a"
+    }
+
+     .e-rptdesigner-textbox-editIcon:before {
+        content: "\ea4c";
+    }
     /*----------------------ReportDesigner Font Icons End----------------------*/
     /*----------------------ReportDesigner Common Styles----------------------*/
      .e-rptdesigner-dataconfig,
@@ -1397,7 +1472,9 @@
      .e-rptdesigner-surfacecontainer,
     .e-rptdesigner-alertbox .e-footerbar,
     .e-rptdesigner-dialog .e-footerbar,
-    .e-rptdesigner-ejdialog .e-footerbar {
+    .e-rptdesigner-ejdialog .e-footerbar,
+     .e-rptdesigner-rowColumn-elementDiv,
+     .e-rptdesigner-rowColumn-containerTable {
         -webkit-box-sizing: border-box !important;
         -moz-box-sizing: border-box !important;
         box-sizing: border-box !important;
@@ -1524,7 +1601,10 @@
      .e-rptdesigner-drag-div,
      .e-rptdesigner-drag-label,
      .e-designer-setparam-btn,
-     .e-rptdesigner-format-prevwChild {
+     .e-rptdesigner-format-prevwChild,
+     .e-rptdesigner-headerRowSpan,
+     .e-rptdesigner-headerColumn,
+     .e-rptdesigner-rowColumn-fieldNameDiv {
         overflow: hidden !important;
         white-space: nowrap !important;
         -ms-text-overflow: ellipsis !important;
@@ -1671,6 +1751,7 @@
         }
 
         & when (@skin= "office-365") {
+            padding: 0px 20px 0px !important;
             width: 0 !important;
             height: 29px !important;
         }
@@ -2072,14 +2153,8 @@
 
      .e-rptdesigner-itempanel-expandcollapseicon {
         float: right;
-        width: 25px;
-        margin-left: 6px;
-        margin-right: 5px;
-        text-align: center;
-
-        & when not (@skin = "material") and not (@skin = "office-365") {
-            margin-top: 1px;
-        }
+        position: relative;
+        top: 1px;
     }
 
      .e-rptdesigner-itempanel-container {
@@ -2216,6 +2291,7 @@
 
      .e-designer-dslist-label {
         padding: 0 10px;
+        display: inline-block;
     }
 
      .e-rptdesigner-dstype-list {
@@ -2259,8 +2335,6 @@
     }
 
      .e-rptdesigner-dsconfig-button {
-        width: 50%;
-        height: 100%;
         display: block;
         overflow: hidden;
         float: left;
@@ -2286,7 +2360,7 @@
         border: 1px solid transparent;
         background-color: transparent;
         float: left;
-        padding: 6px;
+        padding: 11px;
         display: table-cell;
         text-align: center;
         line-height: normal;
@@ -2325,7 +2399,9 @@
      .e-designer-existing-tbl,
      .e-designer-sharedconfig-table,
      .e-designer-sharedconfig-table table,
-     .e-rptdesigner-designbutton .e-btn-span {
+     .e-rptdesigner-designbutton .e-btn-span,
+     .e-rptdesigner-rowColumn-headerTable,
+     .e-rptdesigner-rowColumn-containerTable {
         border-spacing: 2px !important;
         border-collapse: separate !important;
     }
@@ -3074,7 +3150,8 @@
         width: 100%;
     }
 
-    .e-rptdesigner-alertbox > .e-dialog-scroller {
+    .e-rptdesigner-alertbox > .e-dialog-scroller,
+    .e-designer-tablix-alert > .e-dialog-scroller {
         border-bottom: none !important;
     }
 
@@ -3181,10 +3258,6 @@
      .e-rptdesigner-param-panelSep {
         margin: 8px;
         margin-bottom: 9px;
-    }
-
-     .e-rptdesigner-param-btnDiv {
-        width: 50%;
     }
 
      .e-rptdesigner-param-btn {
@@ -3574,7 +3647,7 @@
     }
 
      .e-rptdesigner-img-itemdiv {
-        margin: 10px;
+        margin: 8px;
         float: left;
         vertical-align: middle;
         text-align: center;
@@ -3967,6 +4040,10 @@
         bottom: 2px !important;
     }
 
+	 .e-reportdesigner-scroll-index .e-scrollbar {
+		z-index: 1000;
+	}
+
      .e-reportdesigner-dsscroller {
         padding-bottom: 10px;
     }
@@ -4061,6 +4138,168 @@
      .e-reportdesigner-treeText {
         font-size: 14px;
     }
+
+/*************************************Tablix Report Item Start******************************************/
+
+/*************************************Grouping panel [Start]******************************************/
+     .e-rptdesigner-rowColumn-container {
+        overflow: hidden;
+        border: 0px solid;
+        border-left-width: 1px;
+        border-top-width: 1px;
+    }
+
+     .e-rptdesigner-rowColumn-openCloseIcon {
+        float: right;
+        margin-right: 8px;
+    }
+
+     .e-rptdesigner-rowColumn-rowIconSpan {
+        float: left;
+        padding: 0px 5px;
+    }
+
+     .e-rptdesigner-rowColumn-headerDiv {
+        display: block;
+        width: 100%;
+        height: 29px;
+    }
+
+     .e-rptdesigner-rowColumn-headerTable {
+        height: 29px;
+    }
+
+     .e-rptdesigner-headerRow {
+        width: 50%;
+    }
+
+     .e-rptdesigner-headerRowSpan,
+     .e-rptdesigner-headerColumn {
+        max-width: 95px;
+    }
+
+     .e-rptdesigner-rowColumn-rowDiv {
+        position: relative !important;
+        margin: 4px 2px 4px 4px;
+        float: left;
+    }
+
+     .e-rptdesigner-rowColumn-columnDiv {
+        position: relative !important;
+        margin: 4px 4px 4px 2px;
+        float: right;
+    }
+
+     .e-rptdesigner-rowColumn-containerTable {
+        border-radius: 2px !important;
+        height: 22px;
+        width: 100%;
+        display: inline-table;
+    }
+
+     .e-rptdesigner-rowColumn-fieldNameDiv {
+        padding: 3px;
+        max-width: 100px;
+        vertical-align: middle;
+        display: block;
+    }
+
+     .e-rptdesigner-rowColumn-menuDiv {
+        display: inline-block;
+        float: right;
+        padding: 1px;
+    }
+
+     .e-rptdesigner-rowColumn-groupIcon {
+        height: 12px;
+        padding: 2px;
+        padding-left: 4px !important;
+        float: left;
+    }
+
+     .e-rptdesigner-rowColumn-groupIcon-size {
+        font-size: 13px !important;
+    }
+
+     .e-rptdesigner-rowColumn-elementDiv {
+        padding: 1px 2px 1px 0px;
+    }
+
+     .e-rptdesigner-rowColumn-menuIcon {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+     .e-rptdesigner-rowColumn-advIconSpan {
+        float: right;
+        font-size: 17px;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+     .e-rptdesigner-group-rowIcon,
+     .e-rptdesigner-group-colIcon,
+     .e-rptdesigner-grouping-minimize,
+     .e-rptdesigner-grouping-maximize  {
+        font-size: 15px !important;
+    }
+
+     .e-rptdesigner-rowColumn-advIconSpan {
+        font-size: 17px !important;
+    }
+
+     .e-rptdesigner-groupPanel-resizer {
+        width: 100%;
+        height: 1px;
+        cursor: n-resize;
+    }
+
+     .e-rptdesigner-groupPanel-resize-helper {
+	    height: 3px;
+	    position: absolute;
+	    cursor: n-resize;
+	    z-index: 1000;
+    }
+
+     .e-rptdesigner-group-rowIcon {
+        padding-left: 5px;
+    }
+/*************************************Grouping panel [End]******************************************/
+
+/*************************************Tablix Group Dialog [Start] ******************************************/
+     .e-rptdesigner-tablix-group-row {
+	    padding-top: 2px;
+	    padding-bottom: 2px;
+    }
+
+     .e-rptdesigner-tablix-group-topContainer {
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+    }
+
+     .e-rptdesigner-tablix-group-bottomContainer {
+	    padding-left: 4px;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+    }
+
+/*************************************Tablix Group Dialog [End] ******************************************/
+
+/*************************************Tablix Alert Dialog [Start] ******************************************/
+.e-rptdesigner-tablix-alert-contentDiv {
+    height: auto;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.e-rptdesigner-tablix-alert-radioBtn {
+    height: auto;
+    margin: 8px;
+    margin-left: 15px; 
+}
+/*************************************Tablix Alert Dialog [End] ******************************************/
+
+/*************************************Tablix Report Item End******************************************/
 }
 
 
