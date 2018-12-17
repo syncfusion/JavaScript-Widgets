@@ -13208,7 +13208,23 @@ input.e-fe-dialog-text:not(.e-textbox),
   /* IE 8 */
   font-size: 12px;
   text-indent: 2px;
-  line-height: 16px;
+  line-height: 18px;
+}
+.e-radiobtn-wrap.e-rtl .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  
+}
+.e-radiobtn-wrap.e-rtl .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  width: 0.98em;
+}
+.e-radiobtn-wrap.e-rtl > span.e-radmedium > span.e-rad-icon {
+  
+}
+.e-radiobtn-wrap.e-rtl > span.e-radmedium > span.e-rad-icon {
+  width: 1.25em;
+}
+.e-ie8.e-radiobtn-wrap .e-radmedium.e-spanicon .e-rad-icon.e-icon,
+.e-ie8.e-radiobtn-wrap .e-radsmaller.e-spanicon .e-rad-icon.e-icon {
+  width: 1.6em;
 }
 
 /*-----------------------HeatMap Definition-----------------*/
@@ -21833,7 +21849,10 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   pointer-events: none;
 }
 .e-treegrid .e-borderbox {
-  border-bottom-color: white;
+  
+}
+.e-treegrid .e-borderbox {
+  border-bottom-color: #eaeaea;
 }
 .e-treegrid .e-editcell,
 .e-treegrid .e-detailsrowcell,
@@ -25250,7 +25269,10 @@ ej-ribbon {
   background: white;
 }
 .e-ganttchart .e-borderbox {
-  border-bottom-color: white;
+  
+}
+.e-ganttchart .e-borderbox {
+  border-bottom-color: #eaeaea;
 }
 .e-ganttchart .e-schedule-day-headercell,
 .e-ganttchart .e-schedule-hour-headercell,

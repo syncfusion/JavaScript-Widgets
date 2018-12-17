@@ -17188,14 +17188,43 @@ content: "\e833";
         /* IE 8 */
         font-size: 12px;
         text-indent: 2px; 
-        line-height: 16px;       
+        line-height: 18px;
     }
     & when (@skin="office-365"){
         /* IE 8 */
          font-size: 12px;
          text-indent: 2px; 
-         line-height: 16px;
+         line-height: 18px;
     }
+}
+
+.e-widget.e-radiobtn-wrap.e-rtl .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+    & when not (@skin= "material") and not (@skin="office-365"){
+	    width: 0.85em;
+    } 
+	& when (@skin= "material") {
+        width: 0.98em;
+    }
+	& when (@skin= "office-365") {
+        width: 0.98em;
+    }  
+}
+
+.e-widget.e-radiobtn-wrap.e-rtl > span.e-radmedium > span.e-rad-icon {
+	& when (@skin= "material") {
+        width: 1.25em;
+    }
+	& when (@skin= "office-365") {
+        width: 1.25em;
+    }
+    & when not (@skin= "material") and not (@skin="office-365"){
+	    width: 1.05em;
+    }
+}
+
+.e-widget.e-ie8.e-radiobtn-wrap .e-radmedium.e-spanicon .e-rad-icon.e-icon,
+.e-widget.e-ie8.e-radiobtn-wrap .e-radsmaller.e-spanicon .e-rad-icon.e-icon {
+	width: 1.6em;
 }
 
 
@@ -26568,7 +26597,15 @@ border:1px solid @neutral-light;
 }
 
 .e-js.e-treegrid .e-borderbox {
-    border-bottom-color: @gantt-content-bg-color;
+    &when (@skin="material") {
+        border-bottom-color: @grey-400;
+    }
+    & when (@skin= "office-365") {
+        border-bottom-color: @neutral-light;
+    }
+    & when not (@skin= "material") and not (@skin="office-365"){
+        border-bottom-color: @scroll-handle-color;
+    }
 }
 
 .e-js.e-treegrid .e-editcell,
@@ -30734,7 +30771,15 @@ box-shadow: -1px 0 10px 0 black;
 }
 
 .e-js.e-ganttchart  .e-borderbox {
-  border-bottom-color:@gantt-chart-content-bg-color;
+    &when (@skin="material") {
+        border-bottom-color: @grey-400;
+    }
+    & when (@skin= "office-365") {
+        border-bottom-color: @neutral-light;
+    }
+    & when not (@skin= "material") and not (@skin="office-365"){
+        border-bottom-color: @scroll-handle-color;
+    }
  }
 
 .e-js.e-ganttchart .e-schedule-day-headercell,

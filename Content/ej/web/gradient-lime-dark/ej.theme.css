@@ -15189,6 +15189,22 @@ input.e-fe-dialog-text:not(.e-textbox),
   line-height: 15px;
   
 }
+.e-radiobtn-wrap.e-rtl .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  
+}
+.e-radiobtn-wrap.e-rtl .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  width: 0.85em;
+}
+.e-radiobtn-wrap.e-rtl > span.e-radmedium > span.e-rad-icon {
+  
+}
+.e-radiobtn-wrap.e-rtl > span.e-radmedium > span.e-rad-icon {
+  width: 1.05em;
+}
+.e-ie8.e-radiobtn-wrap .e-radmedium.e-spanicon .e-rad-icon.e-icon,
+.e-ie8.e-radiobtn-wrap .e-radsmaller.e-spanicon .e-rad-icon.e-icon {
+  width: 1.6em;
+}
 
 /* need verify with UX team*/
 .pager-hover-gradient {
@@ -24089,7 +24105,10 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   pointer-events: none;
 }
 .e-treegrid .e-borderbox {
-  border-bottom-color: black;
+  
+}
+.e-treegrid .e-borderbox {
+  border-bottom-color: #404040;
 }
 .e-treegrid .e-editcell,
 .e-treegrid .e-detailsrowcell,
@@ -28168,7 +28187,10 @@ ej-ribbon {
   background: black;
 }
 .e-ganttchart .e-borderbox {
-  border-bottom-color: black;
+  
+}
+.e-ganttchart .e-borderbox {
+  border-bottom-color: #404040;
 }
 .e-ganttchart .e-schedule-day-headercell,
 .e-ganttchart .e-schedule-hour-headercell,

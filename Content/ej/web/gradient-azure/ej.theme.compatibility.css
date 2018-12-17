@@ -14414,6 +14414,22 @@ input[type="text"].e-input {
   line-height: 15px;
   
 }
+.e-widget.e-radiobtn-wrap.e-rtl .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  
+}
+.e-widget.e-radiobtn-wrap.e-rtl .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  width: 0.85em;
+}
+.e-widget.e-radiobtn-wrap.e-rtl > span.e-radmedium > span.e-rad-icon {
+  
+}
+.e-widget.e-radiobtn-wrap.e-rtl > span.e-radmedium > span.e-rad-icon {
+  width: 1.05em;
+}
+.e-widget.e-ie8.e-radiobtn-wrap .e-radmedium.e-spanicon .e-rad-icon.e-icon,
+.e-widget.e-ie8.e-radiobtn-wrap .e-radsmaller.e-spanicon .e-rad-icon.e-icon {
+  width: 1.6em;
+}
 
 /*------------------------Map-----------------------------*/
 /*-----------------------PdfViewer------------------*/
@@ -23046,7 +23062,10 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   pointer-events: none;
 }
 .e-js.e-treegrid .e-borderbox {
-  border-bottom-color: white;
+  
+}
+.e-js.e-treegrid .e-borderbox {
+  border-bottom-color: whitesmoke;
 }
 .e-js.e-treegrid .e-editcell,
 .e-js.e-treegrid .e-detailsrowcell,
@@ -27011,7 +27030,10 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   background: white;
 }
 .e-js.e-ganttchart .e-borderbox {
-  border-bottom-color: white;
+  
+}
+.e-js.e-ganttchart .e-borderbox {
+  border-bottom-color: whitesmoke;
 }
 .e-js.e-ganttchart .e-schedule-day-headercell,
 .e-js.e-ganttchart .e-schedule-hour-headercell,
