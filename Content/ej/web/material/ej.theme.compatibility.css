@@ -3129,10 +3129,14 @@ input[type="text"].e-input {
 .e-widget.e-btn.e-disable.e-select:active {
   
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.87);

@@ -3265,18 +3265,26 @@ input[type="text"].e-input {
 .e-widget.e-btn.e-disable.e-select:active {
   background: #f4f4f4;
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   color: #212121;
   border-color: #c8c8c8;
   border: none;
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   background: #f4f4f4;
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   border-color: #f4f4f4;
   background-color: #f4f4f4;
   color: #333333;

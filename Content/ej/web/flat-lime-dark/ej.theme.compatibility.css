@@ -3056,14 +3056,20 @@ input[type="text"].e-input {
 .e-widget.e-btn.e-disable.e-select:active {
   background: #212121;
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   color: #dddddd;
   border-color: #777777;
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   background: #212121;
 }
 .e-widget.e-btn.e-disable,

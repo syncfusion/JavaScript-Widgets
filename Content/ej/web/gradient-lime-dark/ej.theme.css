@@ -3933,14 +3933,20 @@ input[type="text"].e-input {
   /* IE6-9 */
 
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   color: #dddddd;
   border-color: #777777;
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   background: #4d4d4d;
   /* Old browsers */
   background: -moz-linear-gradient(top, #4d4d4d, #212121);

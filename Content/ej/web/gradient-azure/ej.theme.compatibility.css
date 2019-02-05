@@ -3728,14 +3728,20 @@ input[type="text"].e-input {
   /* IE6-9 */
 
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   color: #333333;
   border-color: #c8c8c8;
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   background: whitesmoke;
   /* Old browsers */
   background: -moz-linear-gradient(top, whitesmoke, #dddddd);

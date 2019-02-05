@@ -3652,10 +3652,14 @@ input[type="text"].e-input {
   color: #333333;
   border-color: #cecece;
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   
 }
-.e-widget.e-btn.e-select {
+.e-widget.e-btn.e-select,
+.e-widget .e-btn.e-tbtn.e-select,
+.e-widget .e-btn.e-split-btn.e-select {
   background: #fcfcfc;
   /* Old browsers */
 

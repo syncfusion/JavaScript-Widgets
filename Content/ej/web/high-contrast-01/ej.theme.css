@@ -3072,14 +3072,20 @@ input[type="text"].e-input {
 .e-btn.e-disable.e-select:active {
   background: black;
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   color: white;
   border-color: gray;
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   background: black;
 }
 .e-btn.e-disable,

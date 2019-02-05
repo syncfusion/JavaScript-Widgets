@@ -3065,14 +3065,20 @@ input[type="text"].e-input {
 .e-btn.e-disable.e-select:active {
   background: #ececec;
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   color: #333333;
   border-color: #c8c8c8;
 }
-.e-btn.e-select {
+.e-btn.e-select,
+.e-btn.e-tbtn.e-select,
+.e-btn.e-split-btn.e-select {
   background: #ececec;
 }
 .e-btn.e-disable,
