@@ -11962,6 +11962,12 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-js.e-grid .e-columnheader:not(.e-stackedHeaderRow), .e-js.e-grid th.e-headercell.e-draggable{
         cursor: pointer;
     }
+	.e-js.e-grid .e-gridheader tr.e-resizedragicon{
+       cursor: col-resize;
+    }
+    .e-js.e-grid .e-resizedragicon th.e-headercell.e-draggable{
+	   cursor: col-resize;
+    }
 
     .e-js.e-grid .e-columnheader.e-defaultcursor, .e-js.e-grid .e-headercell.e-defaultcursor {
         cursor: default;
@@ -17981,8 +17987,8 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-widget.e-fileexplorer .e-toolbar .e-splitbutton > span:first-child .e-icon {
-        width: 14px;
-        height: 14px;
+        width: 16px;
+        height: 16px;
         padding: 0 3px;
     }
 
@@ -21177,6 +21183,10 @@ background-image: url('../@{font-path}/icons-white.png');
         outline: 0 none;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         font-weight: normal;
+    }
+
+    .e-js.e-treegrid .e-gridheader tr.e-resizedragicon {
+        cursor: col-resize !important;
     }
 
     .e-js.e-treegridtoolbar {
@@ -34915,7 +34925,7 @@ slideRight Animate
         }
     }
 
-    .e-ribbon.e-js .e-header .e-contextualtabset.e-active {
+    .e-widget.e-ribbon.e-js .e-header .e-contextualtabset.e-active {
         border: none;
     }
 
@@ -37720,21 +37730,21 @@ slideRight Animate
         text-indent: -2px;
     }
 
-    .e-js.e-spreadsheet .e-findbtn .e-btntxt,
-    .e-js.e-spreadsheet .e-fpanebtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-findbtn .e-btntxt,
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-fpanebtn .e-btntxt {
         line-height: 14px;
         text-indent: 4px;
         text-align: left;
         width: 42px;
     }
 
-    .e-js.e-spreadsheet .e-coptbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-coptbtn .e-btntxt {
         line-height: 14px;
         text-indent: -1px;
     }
 
-    .e-js.e-spreadsheet .e-deletesbtn .e-btntxt,
-    .e-js.e-spreadsheet .e-insertsbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-deletesbtn .e-btntxt,
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-insertsbtn .e-btntxt {
         text-indent: 8px;
 
         & when (@skin = "material") {
@@ -37748,9 +37758,10 @@ slideRight Animate
 
     .e-js.e-spreadsheet .e-ssr-charttype + .e-btntxt,
     .e-js.e-spreadsheet .e-ssr-srcolumn + .e-btntxt,
-    .e-js.e-spreadsheet .e-formatastablebtn .e-btntxt,
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-formatastablebtn .e-btntxt,
     .e-js.e-spreadsheet .e-ssr-namemngr + .e-btntxt,
-    .e-js.e-spreadsheet .e-ssr-protectsheet + .e-btntxt {
+    .e-js.e-spreadsheet .e-tbtn.e-btn .e-ssr-protectsheet + .e-btntxt,
+	.e-js.e-spreadsheet .e-tbtn.e-btn .e-ssr-protect + .e-btntxt {
         line-height: 14px;
     }
 
@@ -37778,21 +37789,21 @@ slideRight Animate
         height: 40px;
     }
 
-    .e-js.e-spreadsheet .e-cformatbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-cformatbtn .e-btntxt {
         line-height: 14px;
         text-align: left;
         text-indent: 4px;
         width: 67px;
     }
 
-    .e-js.e-spreadsheet .e-cellstylebtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-cellstylebtn .e-btntxt {
         line-height: 14px;
         text-indent: 10px;
         text-align: left;
         width: 38px;
     }
 
-    .e-js.e-spreadsheet .e-sortfltrbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-sortfltrbtn .e-btntxt {
         line-height: 14px;
         text-align: left;
         width: 35px;
@@ -37803,7 +37814,7 @@ slideRight Animate
         }
     }
 
-    .e-js.e-spreadsheet .e-ssr-validationsbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-ssr-validationsbtn.e-droparrowbottom .e-btntxt{
         line-height: 14px;
         width: 71px;
 
@@ -37820,13 +37831,13 @@ slideRight Animate
         }
     }
 
-    .e-js.e-spreadsheet .e-clearbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-clearbtn .e-btntxt {
         & when not (@skin = "material") {
             padding-bottom: 16px;
         }
     }
 
-    .e-js.e-spreadsheet .e-autosumbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-autosumbtn .e-btntxt {
         padding-bottom: 6px;
     }
 
@@ -37836,7 +37847,7 @@ slideRight Animate
         padding-bottom: 4px;
     }
 
-    .e-js.e-spreadsheet .e-mergebtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-mergebtn .e-btntxt {
         & when not (@skin = "material") {
             text-indent: -16px;
             line-height: 15px;
@@ -37855,12 +37866,12 @@ slideRight Animate
         text-indent: -9px;
     }
 
-    .e-js.e-spreadsheet .e-ssr-pastesbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-ssr-pastesbtn .e-btntxt {
         text-indent: 6px;
         padding-bottom: 7px;
     }
 
-    .e-js.e-spreadsheet .e-chartlayoutbtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-chartlayoutbtn .e-btntxt {
         line-height: 14px;
         text-align: left;
         text-indent: -2px;
@@ -37870,6 +37881,9 @@ slideRight Animate
             width: 58px;
         }
     }
+	.e-js.e-spreadsheet .e-split-btn.e-btn.e-borderbtn .e-icon:before {
+		text-indent: -1px;
+	}
     /* -------------------Clipboard Font Icons ------------------- */
     .e-js.e-spreadsheet .e-ssr-pastesbtn {
         text-indent: -12px;

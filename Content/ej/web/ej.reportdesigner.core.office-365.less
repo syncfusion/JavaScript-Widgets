@@ -252,6 +252,22 @@
         content: "\ea16";
     }
 
+     .e-rptdesigner-toolbar-sendbackward:before {
+        content: "\ea51";
+    }
+
+     .e-rptdesigner-toolbar-bringforward:before {
+        content: "\ea52";
+    }
+
+     .e-rptdesigner-toolbar-sendtoback:before {
+        content: "\ea53";
+    }
+
+     .e-rptdesigner-toolbar-bringtofront:before {
+        content: "\ea54";
+    }
+
      .e-reportdesigner-variables:before {
         content: "\e925";
     }
@@ -1383,11 +1399,30 @@
     }
 
      .e-rptdesigner-rowColumn-advIconSpan:before {
-        content: "\ea4a"
+        content: "\ea4a";
     }
 
      .e-rptdesigner-textbox-editIcon:before {
-        content: "\ea4c";
+        content: "\ea4b";
+    }
+
+     .e-reportdesigner-widget-list .path1:before {
+        content: "\ea4d";
+    }
+
+     .e-reportdesigner-widget-list .path2:before {
+        content: "\ea4e";
+        margin-left: -1em;
+    }
+
+     .e-reportdesigner-widget-list .path3:before {
+        content: "\ea4f";
+        margin-left: -1em;
+    }
+
+     .e-reportdesigner-widget-list .path4:before {
+        content: "\ea50";
+        margin-left: -1em;
     }
     /*----------------------ReportDesigner Font Icons End----------------------*/
     /*----------------------ReportDesigner Common Styles----------------------*/
@@ -1531,6 +1566,7 @@
      .e-rptdesigner-param-text,
      .e-rptdesigner-report-caption,
      .e-designer-param-tab,
+     .e-designer-codemodule-tab,
      .e-rptdesigner-paramdrag-label,
      .e-rptdesigner-da-dragLabel,
      .e-rptdesigner-da-dataLable,
@@ -1540,7 +1576,8 @@
      .e-rptdesigner-format-prevwChild,
      .e-rptdesigner-headerRowSpan,
      .e-rptdesigner-headerColumn,
-     .e-rptdesigner-rowColumn-fieldNameDiv {
+     .e-rptdesigner-rowColumn-fieldNameDiv,
+     .e-rptdesigner-prop-dataAlert-caption {
         overflow: hidden !important;
         white-space: nowrap !important;
         -ms-text-overflow: ellipsis !important;
@@ -2923,19 +2960,22 @@
     }
     /*----------------------Link Parameter End-----------------------*/
     /*----------------------Filter Dialog Start-----------------------*/
-     .e-rptdesigner-filter-container {
+     .e-rptdesigner-filter-container,
+     .e-rptdesigner-codemodule-container {
         padding: 4px 0px;
         margin: 0px 0px 4px 0px;
     }
 
-     .e-rptdesigner-filter-div {
+     .e-rptdesigner-filter-div, 
+     .e-rptdesigner-codemodule-div {
         padding-right: 8px;
         padding-left: 8px;
         padding-top: 4px;
         padding-bottom: 4px;
     }
 
-     .e-rptdesigner-filter-table {
+     .e-rptdesigner-filter-table,
+     .e-rptdesigner-codemodule-table {
         padding: 3px;
     }
     /*----------------------Filter Dialog End-----------------------*/
@@ -3255,17 +3295,20 @@
     }
     /*----------------------Parameter module CSS End----------------------*/
     /*----------------------Parameter Dialog CSS Start----------------------*/
-     .e-designer-param-tab {
+     .e-designer-param-tab, 
+     .e-designer-codemodule-tab {
         & when not (@skin= "material") {
             padding-top: 0.5em !important;
         }
     }
 
-     .e-rptdesigner-avail-div {
+     .e-rptdesigner-avail-div, 
+     .e-rptdesigner-code-div {
         width: 100%;
     }
 
-     .e-rptdesigner-avail-table {
+     .e-rptdesigner-avail-table, 
+     .e-rptdesigner-code-table {
         & when not (@skin= "material") {
             margin-top: 6px;
             margin-left: 6px;
@@ -3277,15 +3320,17 @@
         }
     }
 
-     .e-rptdesigner-avail-table .e-radiobtn-wrap .e-spanicon.e-radsmaller {
+     .e-rptdesigner-avail-table .e-radiobtn-wrap .e-spanicon.e-radsmaller,
+     .e-rptdesigner-code-table .e-radiobtn-wrap .e-spanicon.e-radsmaller {
         & when (@skin= "material") {
             margin-top: 4px !important;
         }
     }
 
      .e-rptdesigner-avail-table .e-radiobtn-wrap .e-radsmaller.e-rad-active .e-rad-icon.e-icon,
+     .e-rptdesigner-code-table .e-radiobtn-wrap .e-radsmaller.e-rad-active .e-rad-icon.e-icon,
      .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
-        & when (@skin= "material"), (@skin= "office-365")  {
+        & when (@skin= "material"), (@skin= "office-365") {
             margin-left: -0.5px;
             margin-top: -1.5px;
         }
@@ -3323,7 +3368,8 @@
         padding: 5px 0px;
     }
 
-     .e-rptdesigner-param-tab-list {
+     .e-rptdesigner-param-tab-list,
+     .e-rptdesigner-codemodule-tab-list {
         & when not (@skin= "material") {
             width: 140px !important;
             height: 30px !important;
@@ -3339,7 +3385,8 @@
         }
     }
 
-     .e-rptdesigner-param-anchor {
+     .e-rptdesigner-param-anchor,
+     .e-rptdesigner-codemodule-anchor {
         & when not (@skin= "material") {
             width: 120px !important;
         }
@@ -3633,6 +3680,10 @@
 
      .e-rptdesigner-dialog-height {
         height: auto !important;
+    }
+
+     .e-rptdesigner-codedialog-height {
+        height: 364 !important;
     }
 
      .e-rptdesigner-dialog-cursor {
@@ -3976,9 +4027,9 @@
         bottom: 2px !important;
     }
 
-	 .e-reportdesigner-scroll-index .e-scrollbar {
-		z-index: 1000;
-	}
+     .e-reportdesigner-scroll-index .e-scrollbar {
+        z-index: 1000;
+    }
 
      .e-reportdesigner-dsscroller {
         padding-bottom: 10px;
@@ -4074,10 +4125,21 @@
      .e-reportdesigner-treeText {
         font-size: 14px;
     }
+    /*************************************Tablix Report Item Start******************************************/
+     .e-rptdesigner-tablix-cell-menu {
+        padding-left: 5px;
+    }
 
-/*************************************Tablix Report Item Start******************************************/
+    .e-designer-menu.e-tablix-cell-menu .e-menulink {
+        padding-left: 30px !important;
+    }
 
-/*************************************Grouping panel [Start]******************************************/
+     .e-rptdesigner-group-line.e-rptdesigner-group-detailIcon {
+        font-size: 7px !important;
+        width: 7px;
+        height: 7px;
+    }
+    /*************************************Grouping panel [Start]******************************************/
      .e-rptdesigner-rowColumn-container {
         overflow: hidden;
         border: 0px solid;
@@ -4176,7 +4238,7 @@
      .e-rptdesigner-group-rowIcon,
      .e-rptdesigner-group-colIcon,
      .e-rptdesigner-grouping-minimize,
-     .e-rptdesigner-grouping-maximize  {
+     .e-rptdesigner-grouping-maximize {
         font-size: 15px !important;
     }
 
@@ -4191,51 +4253,86 @@
     }
 
      .e-rptdesigner-groupPanel-resize-helper {
-	    height: 3px;
-	    position: absolute;
-	    cursor: n-resize;
-	    z-index: 1000;
+        height: 3px;
+        position: absolute;
+        cursor: n-resize;
+        z-index: 1000;
     }
 
      .e-rptdesigner-group-rowIcon {
         padding-left: 5px;
     }
-/*************************************Grouping panel [End]******************************************/
-
-/*************************************Tablix Group Dialog [Start] ******************************************/
+    /*************************************Grouping panel [End]******************************************/
+    /*************************************Tablix Group Dialog [Start] ******************************************/
      .e-rptdesigner-tablix-group-row {
-	    padding-top: 2px;
-	    padding-bottom: 2px;
+        padding-top: 2px;
+        padding-bottom: 2px;
     }
 
      .e-rptdesigner-tablix-group-topContainer {
-	    padding-top: 5px;
-	    padding-bottom: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
      .e-rptdesigner-tablix-group-bottomContainer {
-	    padding-left: 4px;
-	    padding-top: 5px;
-	    padding-bottom: 5px;
+        padding-left: 4px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    /*************************************Tablix Group Dialog [End] ******************************************/
+
+    /*************************************Tablix Alert Dialog [Start] ******************************************/
+     .e-rptdesigner-tablix-alert-contentDiv {
+        height: auto;
+        margin: 5px;
+        margin-bottom: 10px;
     }
 
-/*************************************Tablix Group Dialog [End] ******************************************/
+     .e-rptdesigner-tablix-alert-radioBtn {
+        height: auto;
+        margin: 8px;
+        margin-left: 15px; 
+    }
+    /*************************************Tablix Alert Dialog [End] ******************************************/
 
-/*************************************Tablix Alert Dialog [Start] ******************************************/
-.e-rptdesigner-tablix-alert-contentDiv {
-    height: auto;
-    margin: 5px;
-    margin-bottom: 10px;
-}
+    /************************************* Tablix Addtext Dialog [Start] ******************************************/
+     .e-rptdesigner-tablix-addText-textareaDiv {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    /************************************* Tablix Addtext Dialog [End] ******************************************/
 
-.e-rptdesigner-tablix-alert-radioBtn {
-    height: auto;
-    margin: 8px;
-    margin-left: 15px; 
-}
-/*************************************Tablix Alert Dialog [End] ******************************************/
+    /*************************************Tablix Report Item End******************************************/
+    /*************************************Property panel [Start] ******************************************/
+     .e-rptdesigner-prop-dataAlert {
+        height: 50px;
+    }
 
-/*************************************Tablix Report Item End******************************************/
+     .e-rptdesigner-prop-dataAlert-rightCell {
+        width: 227px;
+        padding-left: 15px;
+        margin-top: 2px;
+    }
+
+     .e-rptdesigner-prop-dataAlert-iconDiv {
+        padding-left: 10px;
+        margin-top: 1px;
+    }
+
+     .e-rptdesigner-prop-dataAlert-btn {
+        width: 130px !important;
+        max-width: 130px !important;
+    }
+
+     .e-rptdesigner-prop-dataAlert-btnDiv {
+        padding-right: 11px;
+        float: right;
+    }
+
+     .e-rptdesigner-prop-dataAlert-caption {
+        font-weight: 600;
+    }
+    /*************************************Property panel [End] ******************************************/
 }
 
 
@@ -4459,7 +4556,7 @@
     /************************Toggle Button*********************************/
     /*------------------------------querydesigner surface start-------------------------------*/
      .e-designer-hint-newtable {
-        background-image: url('@{font-path}/reportdesigner/Drag Table.png');
+        background-image: url('@{font-path}/reportdesigner/DragTable.png');
         background-position: 7% 48%;
         background-repeat: no-repeat;
     }

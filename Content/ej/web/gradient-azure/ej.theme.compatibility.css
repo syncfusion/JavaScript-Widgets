@@ -843,6 +843,8 @@
   background-color: white;
   color: #333333;
   vertical-align: baseline;
+  text-indent: 10px;
+  padding-right: 4px;
 }
 .e-ejinputtext:focus {
   box-shadow: 0 0 5px #cccccc;
@@ -15497,6 +15499,7 @@ input[type="text"].e-input {
   cursor: pointer;
 }
 .e-js.e-pivotgrid .hyperlinkHeaderCell {
+  color: #74c3e7;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -18456,6 +18459,9 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 }
 .e-js.e-pivotclient {
   color: #333333;
+}
+.e-js.e-pivotclient .e-fullScreenView .e-pivotgrid {
+  overflow: auto;
 }
 .e-js.e-pivotclient .e-memberDescendingIcon,
 .e-js.e-pivotclient .e-memberAscendingIcon {
@@ -22352,6 +22358,14 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-js .e-reportviewer-documentmappopup {
   /*other*/
   border-color: #c8c8c8;
+}
+.e-js .e-reportviewer-printExportLoading {
+  font-style: italic;
+  font-weight: bolder;
+  font-size: larger;
+  opacity: 0.7;
+  color: black;
+  background-color: rgba(56, 56, 56, 0.2);
 }
 .e-js .e-reportviewer-popupli:hover {
   

@@ -562,6 +562,7 @@
 @rd-tab-hover-fontcolor:white;
 @rd-dialog-addBtn:@active-bg-stcolor;
 @rd-accordion-tile-hover:#008002;
+@rd-nodata-alert-bg:#484848;
 .rd-hover-gradient() {
     .custom-gradient(@rd-accordion-hover, @hover-bg-stcolor, @hover-bg-endcolor, 0%, 0% );
 }
@@ -2131,6 +2132,8 @@ outline:none;
 background-color: @content-bg-color;
 color: @content-font-color;
 vertical-align:baseline;
+text-indent: 10px; 
+padding-right: 4px; 
 }
 
  .e-ejinputtext:focus {
@@ -18367,6 +18370,7 @@ content:"\e6a0";
   cursor: pointer;
 }
 .e-pivotgrid .hyperlinkHeaderCell {
+ .hyperlink-setcolor();
   text-decoration: underline;
   cursor: pointer;
 }
@@ -21855,6 +21859,9 @@ background-color:@hover-bg-stcolor !important;
   }
 }
 
+.e-pivotclient .e-fullScreenView .e-pivotgrid {
+ overflow: auto;
+ }
 
 .e-pivotclient .e-memberDescendingIcon,
 .e-pivotclient .e-memberAscendingIcon {
@@ -25863,6 +25870,15 @@ border:1px solid @neutral-light;
         /*other*/
         border-color: @content-border-color;
     }
+}
+
+ .e-reportviewer-printExportLoading {
+     font-style: italic;
+     font-weight: bolder;
+     font-size: larger;
+     opacity: 0.7;
+     color: black;
+     background-color: rgba(56, 56, 56, 0.2);
 }
 
  .e-reportviewer-popupli:hover {

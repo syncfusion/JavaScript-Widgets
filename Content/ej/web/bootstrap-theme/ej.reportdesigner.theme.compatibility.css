@@ -573,6 +573,18 @@
 .e-js .e-reportdesigner-widget-tablix .path8:before {
   color: #ec7839;
 }
+.e-js .e-reportdesigner-widget-list .path1:before {
+  color: #4da7ff;
+}
+.e-js .e-reportdesigner-widget-list .path2:before {
+  color: #ec7839;
+}
+.e-js .e-reportdesigner-widget-list .path3:before {
+  color: #ec7839;
+}
+.e-js .e-reportdesigner-widget-list .path4:before {
+  color: #4da7ff;
+}
 /*----------------------ReportDesigner Font Icons----------------------*/
 
 /*----------------------Toolbar Start----------------------*/
@@ -805,6 +817,20 @@
 }
 .e-js .e-rptdesigner-browse-icon {
   font-size: 16.5px;
+}
+.e-js .e-rptdesigner-prop-dataAlert {
+  background-color: #fff8ed;
+  
+}
+.e-js .e-rptdesigner-prop-dataAlert {
+  border-bottom: 1px solid #cecece;
+}
+.e-js .e-rptdesigner-prop-dataAlert-caption {
+  font-size: 12px !important;
+  
+}
+.e-js .e-rptdesigner-prop-dataAlert-caption {
+  color: #333333;
 }
 /*----------------------PropertyPanel End-----------------------*/
 
@@ -1448,6 +1474,7 @@
 /*----------------------EJ Designer Fontfamily----------------------*/
 
 .e-js .e-designer-fontfamily,
+.e-js .e-designer-codemoduletextbox,
 .e-js .e-rptdesigner-toolbar-zoom,
 .e-js .e-designer-content-label,
 .e-js .e-designer-content-label .e-input,
@@ -1535,6 +1562,9 @@
 .e-js .e-rptdesigner-grpingpanel-template,
 .e-js .e-designer-tablix-alert-radiobtn .e-text {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
+}
+.e-js.e-textarea-codeeditor .CodeMirror {
+  font-family: 'Segoe UI' !important;
 }
 /*----------------------EJ Designer Fontfamily----------------------*/
 
@@ -1670,9 +1700,11 @@
 /*----------------------Dialog Common Styles Start-----------------------*/
 
 .e-js .e-rptdesigner-param-assign,
+.e-js .e-rptdesigner-codemodule,
 .e-js .e-rptdesigner-add-icon,
 .e-js .e-rptdesigner-add-btn,
 .e-js .e-rptdesigner-add-label,
+.e-js .e-rptdesigner-add-code-label,
 .e-js .e-rptdesigner-delete-icon,
 .e-js .e-rptdesigner-txtmark {
   font-size: 12px;
@@ -1688,6 +1720,9 @@
   border: 0.5px solid #c8c8c8;
 }
 .e-js .e-rptdesigner-add-label {
+  color: #282827;
+}
+.e-js .e-rptdesigner-add-code-label {
   color: #282827;
 }
 .e-js .e-rptdesigner-delete-icon {
@@ -2394,6 +2429,9 @@
 
 .e-js .e-rptdesigner-textbox-editIcon {
   color: #159bd7;
+}
+.e-js .e-rptdesigner-group-line.e-rptdesigner-group-detailIcon {
+  color: #c3c3c3;
 }
 /*************************************Tablix End******************************************/
 

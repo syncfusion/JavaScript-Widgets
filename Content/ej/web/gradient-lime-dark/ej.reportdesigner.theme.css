@@ -588,6 +588,18 @@
 .e-reportdesigner-widget-tablix .path8:before {
   color: #ec7839;
 }
+.e-reportdesigner-widget-list .path1:before {
+  color: #4da7ff;
+}
+.e-reportdesigner-widget-list .path2:before {
+  color: #ec7839;
+}
+.e-reportdesigner-widget-list .path3:before {
+  color: #ec7839;
+}
+.e-reportdesigner-widget-list .path4:before {
+  color: #4da7ff;
+}
 /*----------------------ReportDesigner Font Icons----------------------*/
 
 /*----------------------Toolbar Start----------------------*/
@@ -820,6 +832,20 @@
 }
 .e-rptdesigner-browse-icon {
   font-size: 16.5px;
+}
+.e-rptdesigner-prop-dataAlert {
+  background-color: #484848;
+  
+}
+.e-rptdesigner-prop-dataAlert {
+  border-bottom: 1px solid #494949;
+}
+.e-rptdesigner-prop-dataAlert-caption {
+  font-size: 12px !important;
+  
+}
+.e-rptdesigner-prop-dataAlert-caption {
+  color: #dddddd;
 }
 /*----------------------PropertyPanel End-----------------------*/
 
@@ -1463,6 +1489,7 @@
 /*----------------------EJ Designer Fontfamily----------------------*/
 
 .e-designer-fontfamily,
+.e-designer-codemoduletextbox,
 .e-rptdesigner-toolbar-zoom,
 .e-designer-content-label,
 .e-designer-content-label .e-input,
@@ -1550,6 +1577,9 @@
 .e-rptdesigner-grpingpanel-template,
 .e-designer-tablix-alert-radiobtn .e-text {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
+}
+.e-textarea-codeeditor .CodeMirror {
+  font-family: 'Segoe UI' !important;
 }
 /*----------------------EJ Designer Fontfamily----------------------*/
 
@@ -1685,9 +1715,11 @@
 /*----------------------Dialog Common Styles Start-----------------------*/
 
 .e-rptdesigner-param-assign,
+.e-rptdesigner-codemodule,
 .e-rptdesigner-add-icon,
 .e-rptdesigner-add-btn,
 .e-rptdesigner-add-label,
+.e-rptdesigner-add-code-label,
 .e-rptdesigner-delete-icon,
 .e-rptdesigner-txtmark {
   font-size: 12px;
@@ -1703,6 +1735,9 @@
   border: 0.5px solid gray;
 }
 .e-rptdesigner-add-label {
+  color: #dddddd;
+}
+.e-rptdesigner-add-code-label {
   color: #dddddd;
 }
 .e-rptdesigner-delete-icon {
@@ -2409,6 +2444,9 @@
 
 .e-rptdesigner-textbox-editIcon {
   color: #159bd7;
+}
+.e-rptdesigner-group-line.e-rptdesigner-group-detailIcon {
+  color: #c3c3c3;
 }
 /*************************************Tablix End******************************************/
 

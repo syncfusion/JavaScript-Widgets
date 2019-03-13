@@ -343,6 +343,9 @@ jQuery.fn.ejAutocomplete = function (options) {
 ///Number of items to be displayed in the suggestion list.
 ///<br/>itemsCount-number	default-0
 ///<br/><br/>
+///To enable or disable the diacritic characters of the Autocomplete suggestion list when filtering.
+///<br/>ignoreAccent-boolean	default-false
+///<br/><br/>
 ///Set the localization culture for Autocomplete Widget.
 ///<br/>locale-string	default-
 ///<br/><br/>
@@ -16193,11 +16196,6 @@ searchPrevious:function(){
 /// Searches the previous occurrence of the searched text from the current occurrence in the PDF viewer control.
 /// </summary>
 },
-cancelSearchText:function(){
-/// <summary>
-/// Aborts the search operation.
-/// </summary>
-},
 setJSONData:function(jsonData){
 /// <summary>
 /// Set the JSON data that are formed for rendering the document content in PDF viewer.
@@ -21868,7 +21866,7 @@ save:function(Filename){
 },
 show:function(){
 /// <summary>
-/// Used to Show the signature widget, if it is already hided.
+/// Used to Show the signature widget, if it is already hidden.
 /// </summary>
 },
 undo:function(){
@@ -24762,6 +24760,12 @@ jQuery.fn.ejTimePicker = function (options) {
 ///<br/><br/>
 ///Defines the time format displayed in the TimePicker.
 ///<br/>timeFormat-string	default-h:mm tt
+///<br/><br/>
+///Set the jQuery validation error message in TimePicker.
+///<br/>validationMessages-any	default-null
+///<br/><br/>
+///Set the jQuery validation rules in TimePicker.
+///<br/>validationRules-any	default-null
 ///<br/><br/>
 ///Sets a specified time value on the TimePicker.
 ///<br/>value-string|Date	default-null
