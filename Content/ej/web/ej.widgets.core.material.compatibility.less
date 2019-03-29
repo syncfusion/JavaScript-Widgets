@@ -8517,7 +8517,7 @@
         display: block;
     }
 
-    .e-js .e-abs-position {
+    .e-js.e-abs-position {
         position: absolute;
     }
 
@@ -27467,6 +27467,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
     .e-js .e-reportviewer-viewerblockcontent {
         width: 100%;
+        border-bottom: 1px solid;
     }
 
     .e-js .e-reportviewer-viewerblockcellcontent {
@@ -27987,7 +27988,11 @@ background-image: url('../@{font-path}/icons-white.png');
         vertical-align: text-bottom;
     }
 
-    .e-js .e-reportviewer-viewerblock-parentdiv .e-scrollbar .e-vscroll .e-vup.e-icon {
+    .e-js .e-reportviewer-viewerblock-parentdiv .e-scrollbar .e-vscroll .e-button.e-icon {
+        display: none;
+    }
+
+    .e-js .e-reportviewer-viewerblock-parentdiv .e-scrollbar .e-hscroll .e-button.e-icon {
         display: none;
     }
 
