@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.compatibility.css
-*  version : 17.1.0.38
+*  version : 17.1.0.40
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -599,9 +599,18 @@
   font-size: 13px;
 }
 .e-js .e-rptdesigner-ejwidgets-splitbtn {
+  
   background: transparent !important;
-  color: #dddddd !important;
   outline: none !important;
+}
+.e-js .e-rptdesigner-ejwidgets-splitbtn {
+  color: #cccccc !important;
+}
+.e-js .e-rptdesigner-toolbarli.e-hover .e-rptdesigner-ejwidgets-splitbtn {
+  
+}
+.e-js .e-rptdesigner-toolbarli.e-hover .e-rptdesigner-ejwidgets-splitbtn {
+  color: #efefef !important;
 }
 .e-js .e-rptdesigner-preview {
   font-size: 13px;
@@ -1380,11 +1389,19 @@
 .e-js .e-designer-alertbox .e-title,
 .e-js .e-rptdesigner-itemInfo-template,
 .e-js .e-rptdesigner-grpingpanel-template,
+.e-js .e-rptdesigner-fieldList > li,
+.e-js .e-rptdesigner-addDataSourceItem > a,
+.e-js .e-rptdesigner-expressionElement > a,
+.e-js .e-rptdesigner-textElement > a,
+.e-js .e-rptdesigner-noRecords,
+.e-js .e-rptdesigner-tablix-searchtxtbx,
 .e-js .e-designer-tablix-alert-radiobtn .e-text {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 .e-js.e-textarea-codeeditor .CodeMirror {
   font-family: 'Segoe UI' !important;
+  height: 322px !important;
+  visibility: unset;
 }
 /*----------------------EJ Designer Fontfamily----------------------*/
 
@@ -2109,6 +2126,51 @@
 .e-js .e-rptdesigner-group-line.e-rptdesigner-group-detailIcon {
   color: #c3c3c3;
 }
+/**************************Tablix Data Assign Override Start*******************************/
+
+.e-js .e-rptdesigner-tablixdataassignmenu {
+  background-color: black;
+  
+}
+.e-js .e-rptdesigner-tablixdataassignmenu {
+  border: 1px solid #494949;
+  box-shadow: none;
+}
+.e-js .e-rptdesigner-menu-item:hover {
+  
+  color: #aaaaaa;
+  cursor: pointer;
+}
+.e-js .e-rptdesigner-menu-item:hover {
+  background: #4b2c03;
+}
+.e-js .e-rptdesigner-menu-item {
+  font-size: 14px;
+}
+.e-js .e-rptdesigner-menu-item > a {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  text-decoration: none !important;
+}
+.e-js .e-rptdesigner-menu-separator {
+  background-color: #494949;
+}
+.e-js .e-rptdesigner-noRecords {
+  font-size: 12px;
+  color: #cccccc !important;
+  font-style: italic;
+}
+.e-js .e-rptdesigner-tablix-searchicon {
+  color: #cccccc !important;
+}
+.e-js .e-rptdesigner-tablix-content-icon {
+  font-family: ejreportdesigner !important;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: normal;
+}
+/**************************Tablix Data Assign Override End*******************************/
+
 /*************************************Tablix End******************************************/
 
 /*------------------------------querydesigner toolbar Start-------------------------------*/

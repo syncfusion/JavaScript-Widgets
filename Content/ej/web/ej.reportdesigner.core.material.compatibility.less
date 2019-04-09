@@ -2591,7 +2591,7 @@
     }
 
     .e-js .e-rptdesigner-da-searchroot {
-        margin-top: 3px;
+        margin: 3px;
     }
 
     .e-js .e-rptdesigner-da-searchtxtbx {
@@ -2967,7 +2967,7 @@
         margin: 0px 0px 4px 0px;
     }
 
-    .e-js .e-rptdesigner-filter-div, 
+    .e-js .e-rptdesigner-filter-div,
     .e-js .e-rptdesigner-codemodule-div {
         padding-right: 8px;
         padding-left: 8px;
@@ -3296,19 +3296,19 @@
     }
     /*----------------------Parameter module CSS End----------------------*/
     /*----------------------Parameter Dialog CSS Start----------------------*/
-    .e-js .e-designer-param-tab, 
+    .e-js .e-designer-param-tab,
     .e-js .e-designer-codemodule-tab {
         & when not (@skin= "material") {
             padding-top: 0.5em !important;
         }
     }
 
-    .e-js .e-rptdesigner-avail-div, 
+    .e-js .e-rptdesigner-avail-div,
     .e-js .e-rptdesigner-code-div {
         width: 100%;
     }
 
-    .e-js .e-rptdesigner-avail-table, 
+    .e-js .e-rptdesigner-avail-table,
     .e-js .e-rptdesigner-code-table {
         & when not (@skin= "material") {
             margin-top: 6px;
@@ -4281,7 +4281,6 @@
         padding-bottom: 5px;
     }
     /*************************************Tablix Group Dialog [End] ******************************************/
-
     /*************************************Tablix Alert Dialog [Start] ******************************************/
     .e-js .e-rptdesigner-tablix-alert-contentDiv {
         height: auto;
@@ -4292,17 +4291,143 @@
     .e-js .e-rptdesigner-tablix-alert-radioBtn {
         height: auto;
         margin: 8px;
-        margin-left: 15px; 
+        margin-left: 15px;
     }
     /*************************************Tablix Alert Dialog [End] ******************************************/
-
     /************************************* Tablix Addtext Dialog [Start] ******************************************/
     .e-js .e-rptdesigner-tablix-addText-textareaDiv {
         margin-top: 10px;
         margin-bottom: 5px;
     }
     /************************************* Tablix Addtext Dialog [End] ******************************************/
+    /*************************************Tablix Data Assign Start*************************************/
+    .e-js .e-rptdesigner-tablixdataassignmenu {
+        height: auto !important;
+        width: 210px;
+        position: absolute;
+        display: none;
+        z-index: 2000001;
+    }
 
+    .e-js .e-rptdesigner-tablix-searchicon {
+        float: right;
+        margin-top: -18.5px !important;
+        font-size: 10px !important;
+    }
+
+    .e-js .e-rptdesigner-menu-item {
+        & when (@skin = "material") {
+            padding: 15px 0 15px 18px !important;
+        }
+
+        & when (@skin = "office-365") {
+            padding: 8px 15px !important;
+        }
+
+        & when not (@skin = "office-365") and not (@skin = "material") {
+            padding: 6px 15px !important;
+        }
+
+        display: block;
+        position: relative;
+        font-size: 14px;
+    }
+
+    .e-js .e-rptdesigner-menu-item > a {
+        display: block;
+        font-size: 14px;
+    }
+
+    .e-js .e-rptdesigner-menu-separator {
+        display: block;
+        position: relative;
+        height: 1px !important;
+    }
+
+    .e-js .e-rptdesigner-menu-ejdropdowncontrol {
+        & when (@skin = "material") {
+            padding: 15px 0 0px 14px !important;
+        }
+
+        & when (@skin = "office-365") {
+            padding: 9px 15px 0px !important;
+        }
+
+        & when not (@skin = "office-365") and not (@skin = "material") {
+            padding: 10px 14px 0px !important;
+        }
+
+        display: block;
+        position: relative;
+    }
+
+    .e-js .e-rptdesigner-menu-ejsearchcontrol {
+        & when (@skin = "material") {
+            padding: 15px 0 15px 14px !important;
+        }
+
+        & when (@skin = "office-365") {
+            padding: 9px 15px 8px !important;
+        }
+
+        & when not (@skin = "office-365") and not (@skin = "material") {
+            padding: 10px 14px 9px !important;
+        }
+
+        display: block;
+        position: relative;
+    }
+
+    .e-js .e-rptdesigner-menu-ejlistcontrol {
+        display: block;
+        position: relative;
+        height: 179px;
+    }
+
+    .e-js .e-rptdesigner-menu-ejlistcontrol > div {
+        border: none !important;
+    }
+
+    .e-js .e-rptdesigner-fieldList > li {
+        font-size: 14px !important;
+    }
+
+    .e-js .e-rptdesigner-noFieldDispTag {
+        font-size: 12px;
+        vertical-align: middle;
+        text-align: center;
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+    }
+
+    .e-js .e-rptdesigner-noRecords {
+        display: table;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+    }
+
+    .e-js .e-rptdesigner-document-scroll {
+        overflow: scroll !important;
+    }
+
+    .e-js .e-rptdesigner-tablix-content-icon {
+        & when (@skin= "office-365") {
+            padding: 6px 6px !important;
+            margin-top: 6px !important;
+        }
+
+        & when not (@skin= "office-365") {
+            padding: 3px 6px !important
+        }
+
+        margin-right: 5px !important;
+        line-height: 1;
+        cursor: default;
+    }
+    /*************************************Tablix Data Assign End*************************************/
     /*************************************Tablix Report Item End******************************************/
     /*************************************Property panel [Start] ******************************************/
     .e-js .e-rptdesigner-prop-dataAlert {
