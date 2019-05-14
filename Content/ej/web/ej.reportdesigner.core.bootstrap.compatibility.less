@@ -1674,6 +1674,14 @@
         user-select: none;
     }
 
+    .e-js.e-reportdesigner .content-iframe-body,
+    .e-js.e-reportdesigner .content-iframe-body * {
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+        user-select: text !important;
+    }
+
     .e-js.e-reportdesigner .e-reportdesigner-designer-configuration .e-atc,
     .e-js.e-reportdesigner .e-numeric,
     .e-js.e-reportdesigner .e-percent,
@@ -1876,20 +1884,20 @@
         cursor: default;
     }
 
-    .e-js .content-iframe-body:focus {
+    .e-js.e-reportdesigner .content-iframe-body:focus {
         outline: none;
     }
 
-    .e-js .content-iframe-body br {
+    .e-js.e-reportdesigner .content-iframe-body br {
         display: none !important;
     }
 
-    .e-js .content-iframe-body-rtl {
+    .e-js.e-reportdesigner .content-iframe-body-rtl {
         direction: rtl;
         text-align: right;
     }
 
-    .e-js .content-iframe-body span {
+    .e-js.e-reportdesigner .content-iframe-body span {
         height: auto;
         white-space: pre-wrap;
     }
@@ -4483,7 +4491,7 @@
         }
 
         & when not (@skin= "office-365") {
-            padding: 3px 6px !important
+            padding: 3px 6px !important;
         }
 
         margin-right: 5px !important;
