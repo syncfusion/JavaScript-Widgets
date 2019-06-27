@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.compatibility.css
-*  version : 17.1.0.47
+*  version : 17.2.0.28
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -1014,7 +1014,10 @@
   font-size: 12px;
 }
 .e-js .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
-  font-size: 14px;
+  
+}
+.e-js .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
+  font-size: 13px;
 }
 .e-js .e-designer-property-header {
   background: white !important;
@@ -1146,14 +1149,6 @@
 .e-js .e-designer-textbox-border {
   
 }
-.e-js.e-reportdesigner .e-userselect textarea::-moz-selection,
-.e-js.e-reportdesigner .e-userselect input::-moz-selection {
-  -moz-appearance: none !important;
-  -webkit-appearance: none !important;
-  appearance: none !important;
-  color: white;
-  background: #3399ff;
-}
 .e-js .e-rptdesigner-headericon {
   
 }
@@ -1162,6 +1157,27 @@
 .e-js .e-designer-txt {
   border-radius: 2px;
   font-size: 12px;
+  
+}
+.e-js .e-reportdesigner .e-textbox::selection,
+.e-js .e-reportdesigner .e-textarea::selection,
+.e-js .e-reportdesigner .e-textbox::-moz-selection,
+.e-js .e-reportdesigner .e-textarea::-moz-selection {
+  
+}
+.e-js .e-reportdesigner .e-textbox::selection,
+.e-js .e-reportdesigner .e-textarea::selection,
+.e-js .e-reportdesigner .e-textbox::-moz-selection,
+.e-js .e-reportdesigner .e-textarea::-moz-selection {
+  background: #ff4081;
+  color: white;
+}
+.e-js .e-reportdesigner .e-textbox::selection,
+.e-js .e-reportdesigner .e-textarea::selection {
+  
+}
+.e-js .e-reportdesigner .e-textbox::-moz-selection,
+.e-js .e-reportdesigner .e-textarea::-moz-selection {
   
 }
 .e-js.e-reportdesigner .e-designer-content,
@@ -1390,7 +1406,9 @@
 
 /*----------------------Report Action Start-----------------------*/
 
-.e-js .e-rptdesigner-report-caption {
+.e-js .e-rptdesigner-report-caption,
+.e-js .e-designer-radio .e-text,
+.e-js .e-designer-radiobtn .e-text {
   font-size: 12px !important;
 }
 /*----------------------Report Action End-----------------------*/
@@ -1956,9 +1974,6 @@
 .e-js .e-rptdesigner-data-bgset {
   background-color: #eeeeee;
 }
-.e-js .e-split .e-rptdesigner-data-splitbtn.e-left-btn .e-btntxt.e-rptdesigner-txtoverflow {
-  font-size: 12px !important;
-}
 /*----------------------Dataset CSS End-----------------------*/
 
 /*----------------------Shared Dataset CSS Start-----------------------*/
@@ -2103,11 +2118,14 @@
 }
 .e-js .e-rptdesigner-menu-item {
   font-size: 14px;
+  color: #212121;
 }
 .e-js .e-rptdesigner-menu-item > a {
   font-size: 14px;
   text-overflow: ellipsis;
   text-decoration: none !important;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .e-js .e-rptdesigner-menu-separator {
   background-color: #e0e0e0;
@@ -2129,6 +2147,26 @@
 /**************************Tablix Data Assign Override End*******************************/
 
 /*************************************Tablix End******************************************/
+
+.e-js .e-rptdesigner-headericon.e-reportdesigner-backarrow:hover {
+  cursor: pointer;
+  border-color: #e0e0e0;
+  color: #212121;
+  border-radius: 4px;
+  
+}
+.e-js .e-rptdesigner-headericon.e-reportdesigner-backarrow:hover {
+  background-color: #e0e0e0 !important;
+}
+/*************************************Code Module Start******************************************/
+
+.e-js .e-rptdesigner-codeinfo {
+  color: gray;
+}
+.e-js .e-reportdesigner-infoIcon-border {
+  border-left: 1px solid #dedede;
+}
+/*************************************Code Module End******************************************/
 
 /*------------------------------querydesigner toolbar Start-------------------------------*/
 
@@ -2404,7 +2442,8 @@
 .e-js .e-qrydesigner-add-btn,
 .e-js .e-qrydesigner-atc-boxshadow,
 .e-js .e-qrydesigner-datacontent,
-.e-js .e-qrydesigner-title-label {
+.e-js .e-qrydesigner-title-label,
+.e-js .e-qrydesigner-generatepreview {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 /*------------------------------querydesigner font-family-------------------------------*/

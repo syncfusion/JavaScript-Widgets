@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.compatibility.css
-*  version : 17.1.0.47
+*  version : 17.2.0.28
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -1188,6 +1188,9 @@
   font-size: 12px;
 }
 .e-js .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
+  
+}
+.e-js .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
   font-size: 14px;
 }
 .e-js .e-designer-property-header {
@@ -1325,14 +1328,6 @@
 .e-js .e-designer-textbox-border {
   border-color: #c8c8c8;
 }
-.e-js.e-reportdesigner .e-userselect textarea::-moz-selection,
-.e-js.e-reportdesigner .e-userselect input::-moz-selection {
-  -moz-appearance: none !important;
-  -webkit-appearance: none !important;
-  appearance: none !important;
-  color: white;
-  background: #3399ff;
-}
 .e-js .e-rptdesigner-headericon {
   font-size: 12px;
   color: #232323;
@@ -1348,6 +1343,22 @@
 .e-js .e-designer-txt {
   box-shadow: 0 0 1px #c8c8c8;
   border: 0.5px solid #c8c8c8;
+}
+.e-js .e-reportdesigner .e-textbox::selection,
+.e-js .e-reportdesigner .e-textarea::selection,
+.e-js .e-reportdesigner .e-textbox::-moz-selection,
+.e-js .e-reportdesigner .e-textarea::-moz-selection {
+  
+}
+.e-js .e-reportdesigner .e-textbox::selection,
+.e-js .e-reportdesigner .e-textarea::selection {
+  background: #3297fd;
+  color: white;
+}
+.e-js .e-reportdesigner .e-textbox::-moz-selection,
+.e-js .e-reportdesigner .e-textarea::-moz-selection {
+  background: #3399ff;
+  color: white;
 }
 .e-js.e-reportdesigner .e-designer-content,
 .e-js .e-querydesigner-dataset-text {
@@ -1591,7 +1602,9 @@
 
 /*----------------------Report Action Start-----------------------*/
 
-.e-js .e-rptdesigner-report-caption {
+.e-js .e-rptdesigner-report-caption,
+.e-js .e-designer-radio .e-text,
+.e-js .e-designer-radiobtn .e-text {
   font-size: 12px !important;
 }
 /*----------------------Report Action End-----------------------*/
@@ -2248,9 +2261,6 @@
   /* IE6-9 */
 
 }
-.e-js .e-split .e-rptdesigner-data-splitbtn.e-left-btn .e-btntxt.e-rptdesigner-txtoverflow {
-  font-size: 12px !important;
-}
 /*----------------------Dataset CSS End-----------------------*/
 
 /*----------------------Shared Dataset CSS Start-----------------------*/
@@ -2483,11 +2493,14 @@
 }
 .e-js .e-rptdesigner-menu-item {
   font-size: 14px;
+  color: #333333;
 }
 .e-js .e-rptdesigner-menu-item > a {
   font-size: 14px;
   text-overflow: ellipsis;
   text-decoration: none !important;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .e-js .e-rptdesigner-menu-separator {
   background-color: #c8c8c8;
@@ -2509,6 +2522,42 @@
 /**************************Tablix Data Assign Override End*******************************/
 
 /*************************************Tablix End******************************************/
+
+.e-js .e-rptdesigner-headericon.e-reportdesigner-backarrow:hover {
+  cursor: pointer;
+  border-color: #c8c8c8;
+  color: #282827;
+  border-radius: 4px;
+  
+}
+.e-js .e-rptdesigner-headericon.e-reportdesigner-backarrow:hover {
+  background: #f4f4f4;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f4f4f4, #e9e9e9);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e9e9e9));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f4f4f4, #e9e9e9);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f4f4f4, #e9e9e9);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f4f4f4, #e9e9e9);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f4f4f4, #e9e9e9);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#e9e9e9', GradientType=0);
+  /* IE6-9 */
+
+}
+/*************************************Code Module Start******************************************/
+
+.e-js .e-rptdesigner-codeinfo {
+  color: gray;
+}
+.e-js .e-reportdesigner-infoIcon-border {
+  border-left: 1px solid #dedede;
+}
+/*************************************Code Module End******************************************/
 
 /*------------------------------querydesigner toolbar Start-------------------------------*/
 
@@ -2849,7 +2898,8 @@
 .e-js .e-qrydesigner-add-btn,
 .e-js .e-qrydesigner-atc-boxshadow,
 .e-js .e-qrydesigner-datacontent,
-.e-js .e-qrydesigner-title-label {
+.e-js .e-qrydesigner-title-label,
+.e-js .e-qrydesigner-generatepreview {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 /*------------------------------querydesigner font-family-------------------------------*/

@@ -7935,6 +7935,9 @@ ejDateTimePicker :function (options) {
 ///Sets the text for the Today button inside the datetime popup.
 ///<br/>today-string	default-
 ///<br/><br/>
+///Disable the list of specified date value.
+///<br/>blackoutDates-any	default-{}
+///<br/><br/>
 ///Set the root class for DateTimePicker theme. This cssClass API helps to use custom skinning option for DateTimePicker control.
 ///<br/>cssClass-string	default-
 ///<br/><br/>
@@ -7946,6 +7949,9 @@ ejDateTimePicker :function (options) {
 ///<br/><br/>
 ///Specifies the navigation depth level in DatePicker calendar inside DateTimePicker popup. This option is not applied when start level view option is lower than depth level view. See ej.DatePicker.Level
 ///<br/>depthLevel-ej.DatePicker.Level|string	default-
+///<br/><br/>
+///Specifies the list of time range to be disabled.
+///<br/>disableTimeRanges-any	default-{}
 ///<br/><br/>
 ///Enable or disable the animation effect in DateTimePicker.
 ///<br/>enableAnimation-boolean	default-true
@@ -7997,6 +8003,9 @@ ejDateTimePicker :function (options) {
 ///<br/><br/>
 ///Changes the sharped edges into rounded corner for the DateTimePicker textbox and popup.
 ///<br/>showRoundedCorner-boolean	default-false
+///<br/><br/>
+///Specifies the special dates in DateTimePicker.
+///<br/>specialDates-any	default-null
 ///<br/><br/>
 ///Specifies the start day of the week in datepicker inside the DateTimePicker popup.
 ///<br/>startDay-number	default-1
@@ -23711,6 +23720,42 @@ var wrapper=function(){
 var instance = new original();
 intellisense.annotate(instance, {
 
+addDataSet:function(dataset){
+/// <signature>
+/// <summary>
+/// Add a dataset to the report at runtime.
+/// </summary>
+/// <param name="dataset"	type="any">a JSON to define a connection properties for dataset.</param>
+/// </signature>
+},
+addDataSource:function(datasource){
+/// <signature>
+/// <summary>
+/// Add a datasource to the report at runtime.
+/// </summary>
+/// <param name="datasource"	type="any">a JSON to define a connection properties for datasource.</param>
+/// </signature>
+},
+addReportItem:function(item){
+/// <signature>
+/// <summary>
+/// Add a report item to the report at runtime.
+/// </summary>
+/// <param name="item"	type="any">JSON for the new report item to be added</param>
+/// </signature>
+},
+bringForward:function(){
+/// <signature>
+/// <summary>
+/// Visually move the selected report item over its closest intersected report items.
+/// </summary>
+},
+bringToFront:function(){
+/// <signature>
+/// <summary>
+/// Visually move the selected report item over all other intersected report items.
+/// </summary>
+},
 canCopy:function(){
 /// <signature>
 /// <summary>
@@ -23723,12 +23768,6 @@ canCut:function(){
 /// Determines whether a cut operation is possible.
 /// </summary>
 },
-canRemove:function(){
-/// <signature>
-/// <summary>
-/// Determines whether a delete operation is possible.
-/// </summary>
-},
 canPaste:function(){
 /// <signature>
 /// <summary>
@@ -23738,55 +23777,71 @@ canPaste:function(){
 canRedo:function(){
 /// <signature>
 /// <summary>
-/// Returns the bool value indicating whether the user can redo the previous action in the report.
+/// Returns the boolean value indicating whether the user can redo the previous action in the report.
+/// </summary>
+},
+canRemove:function(){
+/// <signature>
+/// <summary>
+/// Determines whether a delete operation is possible.
 /// </summary>
 },
 canUndo:function(){
 /// <signature>
 /// <summary>
-/// Returns a bool value indicating whether the user can undo the previous action in the report.
+/// Returns a boolean value indicating whether the user can undo the previous action in the report.
 /// </summary>
+},
+cloneDataSet:function(name){
+/// <signature>
+/// <summary>
+/// Clone the existing dataset in the report at runtime.
+/// </summary>
+/// <param name="name"	type="string">Name of the existing dataset.</param>
+/// </signature>
+},
+cloneDataSource:function(name){
+/// <signature>
+/// <summary>
+/// Clone the existing datasource in the report at runtime.
+/// </summary>
+/// <param name="name"	type="string">Name of the existing datasource.</param>
+/// </signature>
 },
 copy:function(){
 /// <signature>
 /// <summary>
-/// Copies the selected ReportItem from design panel to Report Designer internal clipboard.
+/// Copies the selected report item from design panel to the Report Designer internal clipboard.
 /// </summary>
 },
 cut:function(){
 /// <signature>
 /// <summary>
-/// Cuts the selected ReportItem from design panel to Report Designer internal clipboard.
-/// </summary>
-},
-remove:function(){
-/// <signature>
-/// <summary>
-/// Deletes the selected item from the report.
+/// Cuts the selected report item from design panel to the Report Designer internal clipboard.
 /// </summary>
 },
 hasReportChanges:function(){
 /// <signature>
 /// <summary>
-/// Returns the bool value that specifies whether the report has changes or not.
+/// Returns the boolean value that specifies whether the report has changes or not.
 /// </summary>
 },
 isNewReport:function(){
 /// <signature>
 /// <summary>
-/// Returns the bool value that specifies whether the currently processing report is a new report or not.
+/// Returns the boolean value that specifies whether the currently processing report is a new report or not.
 /// </summary>
 },
 isNewServerReport:function(){
 /// <signature>
 /// <summary>
-/// Returns the bool value that specifies whether the currently processing report is a new server report or not.
+/// Returns the boolean value that specifies whether the currently processing report is a new server report or not.
 /// </summary>
 },
 isServerReport:function(){
 /// <signature>
 /// <summary>
-/// Returns the bool value that specifies whether the currently processing report is obtained from the server or local.
+/// Returns the boolean value that specifies whether the currently processing report is obtained from the server or local.
 /// </summary>
 },
 newReport:function(){
@@ -23804,25 +23859,25 @@ newServerReport:function(){
 openReport:function(){
 /// <signature>
 /// <summary>
-/// This method opens the report from the ReportServer.
+/// This method opens the report from the server.
 /// </summary>
 },
 openReportFromDevice:function(){
 /// <signature>
 /// <summary>
-/// To open the report client browse dialog.
+/// Opens the client browse dialog to browse the report.
 /// </summary>
 },
 openServerReportDialog:function(){
 /// <signature>
 /// <summary>
-/// To open the report open server browse dialog.
+/// Opens the report designer browse dialog to browse the available reports in the reportserver.
 /// </summary>
 },
 paste:function(){
 /// <signature>
 /// <summary>
-/// Pastes the selected ReportItem from Report Designer internal clipboard to design panel.
+/// Pastes the selected report item from the Report Designer internal clipboard to design panel.
 /// </summary>
 },
 redo:function(){
@@ -23831,16 +23886,46 @@ redo:function(){
 /// Reverses the action of the last Undo command.
 /// </summary>
 },
+remove:function(){
+/// <signature>
+/// <summary>
+/// Deletes the selected report item from the report.
+/// </summary>
+},
+removeDataSet:function(dataset){
+/// <signature>
+/// <summary>
+/// Remove a dataset from the report at runtime.
+/// </summary>
+/// <param name="dataset"	type="string">Name of the dataset.</param>
+/// </signature>
+},
+removeDatasource:function(datasource){
+/// <signature>
+/// <summary>
+/// Remove a datasource from the report at runtime.
+/// </summary>
+/// <param name="datasource"	type="string">Name of the datasource.</param>
+/// </signature>
+},
+removeReportItem:function(itemName){
+/// <signature>
+/// <summary>
+/// Remove the given report item from the report.
+/// </summary>
+/// <param name="itemName"	type="string">Name of the report item to be removed from report</param>
+/// </signature>
+},
 saveReport:function(){
 /// <signature>
 /// <summary>
-/// This method saves the report into the ReportServer.
+/// This method saves the report into the server.
 /// </summary>
 },
 saveServerReportDialog:function(){
 /// <signature>
 /// <summary>
-/// To open the report save server browse dialog.
+/// Opens the report designer browse dialog to save the report into server.
 /// </summary>
 },
 saveToDevice:function(){
@@ -23849,10 +23934,30 @@ saveToDevice:function(){
 /// To download the designed report.
 /// </summary>
 },
+selectReportItem:function(itemName){
+/// <signature>
+/// <summary>
+/// Update the selection to report item at runtime.
+/// </summary>
+/// <param name="itemName"	type="string">Name of the report item.</param>
+/// </signature>
+},
+sendBackward:function(){
+/// <signature>
+/// <summary>
+/// Visually move the selected report item behind its closest intersected report item.
+/// </summary>
+},
+sendToBack:function(){
+/// <signature>
+/// <summary>
+/// Visually move the selected report item behind all other intersected report items.
+/// </summary>
+},
 showDesign:function(){
 /// <signature>
 /// <summary>
-/// To show the report design.
+/// Performs switch action from viewer to designer at runtime.
 /// </summary>
 },
 showNewReportDialog:function(){
@@ -23870,7 +23975,7 @@ showOpenSaveReportDialog:function(){
 showPreview:function(){
 /// <signature>
 /// <summary>
-/// To show the report preview.
+/// Performs switch action from designer to viewer at runtime.
 /// </summary>
 },
 undo:function(){
@@ -23878,6 +23983,34 @@ undo:function(){
 /// <summary>
 /// Reverses the last action that was performed.
 /// </summary>
+},
+updateDataset:function(datasetName, dataset){
+/// <signature>
+/// <summary>
+/// Update the dataset in the report at runtime.
+/// </summary>
+/// <param name="datasetName"	type="string">Name of the existing dataset.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Update the dataset in the report at runtime.
+/// </summary>
+/// <param name="dataset"	type="any">a JSON to define a connection properties for dataset.</param>
+/// </signature>
+},
+updateDatasource:function(datasourceName, datasource){
+/// <signature>
+/// <summary>
+/// Update the datasource in the report at runtime.
+/// </summary>
+/// <param name="datasourceName"	type="string">Name of the existing datasource.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// Update the datasource in the report at runtime.
+/// </summary>
+/// <param name="datasource"	type="any">a JSON to define a connection properties for datasource.</param>
+/// </signature>
 },
 });
 return instance;
@@ -23893,23 +24026,68 @@ intellisense.annotate(jQuery.fn,{
 ejReportDesigner :function (options) {
 /// <signature>
 /// <summary><br/>
-///Report Designer allows to design the report that can be published in the Server or downloaded in the local physical path.<br/><br/>
+///Report Designer allows to design the report that can be published in the server or downloaded in the local physical path.<br/><br/>
+///Shows or hides the items of configuration pane in ReportDesigner control.
+///<br/>configurePaneSettings-ConfigurePaneSettings	default-ej.ReportDesigner.ConfigureItems.All
+///<br/><br/>
+///Shows or hides the configuration pane in ReportDesigner control.
+///<br/>showConfigurePane-boolean	default-true
+///<br/><br/>
 ///Specifies the locale for report designer.
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
-///Gets or Sets the report path of server.
+///Gets or sets the list of custom data extension items.
+///<br/>reportDataExtensions-Array&lt;ReportDataExtensions&gt;	default-[]
+///<br/><br/>
+///Gets or sets the name of the datasource type.
+///<br/>name-string	default-empty
+///<br/><br/>
+///Gets or sets the class name of the data extension.
+///<br/>className-string	default-empty
+///<br/><br/>
+///Gets or sets the image class name to load image in data pane tile.
+///<br/>imageClass-string	default-empty
+///<br/><br/>
+///Gets or sets the name for data extension item to display in the data pane tile.
+///<br/>displayName-string	default-empty
+///<br/><br/>
+///Gets or sets the list of custom report items.
+///<br/>reportItemExtensions-Array&lt;ReportItemExtensions&gt;	default-[]
+///<br/><br/>
+///Gets or sets the name for the report item.
+///<br/>name-string	default-empty
+///<br/><br/>
+///Gets or sets the class name of the report item.
+///<br/>className-string	default-empty
+///<br/><br/>
+///Gets or sets the image class name to load image in widgets pane tile.
+///<br/>imageClass-string	default-empty
+///<br/><br/>
+///Gets or sets the name for custom report item to display in the widgets pane tile.
+///<br/>displayName-string	default-empty
+///<br/><br/>
+///Gets or sets the category name for the report item.
+///<br/>category-string	default-empty
+///<br/><br/>
+///Gets information to provide content for custom report item tooltip.
+///<br/>toolTip-any	default-null
+///<br/><br/>
+///Gets or sets the report path of server.
 ///<br/>reportPath-string	default-null
 ///<br/><br/>
-///Gets or Sets the reports server URL.
+///Gets or sets the reports server URL.
 ///<br/>reportServerUrl-string	default-null
 ///<br/><br/>
 ///Gets or sets the serviceAuthorizationToken to access the Report Server API services.
 ///<br/>serviceAuthorizationToken-string	default-empty
 ///<br/><br/>
-///Gets or Sets the URL of the  WebAPI service; it will be used for processing the report.
+///Gets or sets the URL of the  WebAPI service; it will be used for processing the report.
 ///<br/>serviceUrl-string	default-null
 ///<br/><br/>
-///Specifies the toolbar settings.
+///Gets or sets the tenant name of the user groups; it will be used when integrating report designer with server.
+///<br/>tenantName-string	default-null
+///<br/><br/>
+///Defines the settings of the ReportDesigner toolbar.
 ///<br/>toolbarSettings-ToolbarSettings	default-
 ///<br/><br/>
 ///Shows or hides the grouped items in the toolbar with the help of enum ej.ReportDesigner.ToolbarItems.
@@ -24143,6 +24321,18 @@ ejReportViewer :function (options) {
 ///<br/><br/>
 ///Add the custom icon groups to the toolbar.
 ///<br/>customGroups-Array&lt;any&gt;	default-empty
+///<br/><br/>
+///Specifies the parameter settings.
+///<br/>parameterSettings-ParameterSettings	default-
+///<br/><br/>
+///Sets the separator when the multiSelectMode with delimiter option or checkbox is enabled with the dropdown. When you enter the delimiter value, the texts after the delimiter are considered as a separate word or query. The delimiter string is a single character and must be a symbol. Mostly, the delimiter symbol is used as comma (,) or semi-colon (;) or any other special character.
+///<br/>delimiterChar-string	default-,
+///<br/><br/>
+///Specifies the height of the combobox parameter popup list. By default, the popup height value is "152px".
+///<br/>popupHeight-string	default-152px
+///<br/><br/>
+///Specifies the width of the combobox parameter popup list. By default, the popup width sets based on the width of the component.
+///<br/>popupWidth-string	default-auto
 ///<br/><br/>
 ///Gets or sets the zoom factor for report viewer.
 ///<br/>zoomFactor-number	default-1
@@ -31203,12 +31393,6 @@ updateResponsiveMinWidth:function(width){
 /// </summary>
 /// <param name="width"	type="string">Pass the minimum responsive width, above which the TreeGrid needs to work in responsive mode.</param>
 /// </signature>
-},
-deleteRow:function(){
-/// <signature>
-/// <summary>
-/// To delete a selected row in TreeGrid.
-/// </summary>
 },
 });
 return instance;

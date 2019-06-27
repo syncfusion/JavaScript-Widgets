@@ -27286,7 +27286,6 @@ background-image: url('../@{font-path}/icons-white.png');
         min-height: 30.5px;
         min-width: 55px;
         position: absolute;
-        padding: 1px;
         word-wrap: break-word;
         border: 1px solid;
         margin: 0.5px auto;
@@ -27303,7 +27302,6 @@ background-image: url('../@{font-path}/icons-white.png');
         min-height: 30.5px;
         min-width: 55px;
         position: absolute;
-        padding: 1px;
         word-wrap: break-word;
         border: 1px solid;
         margin: 0.5px auto;
@@ -27331,26 +27329,13 @@ background-image: url('../@{font-path}/icons-white.png');
     .e-js .e-reportviewer-headerspan {
         font-style: normal;
         font-weight: bold;
-        padding: 1px;
-        margin: 1.5px;
+        margin-bottom: 5px;
         word-wrap: break-word;
     }
 
     .e-js .e-reportviewer-contentspan {
         word-wrap: break-word;
-
-        & when (@skin= "material") {
-            /*material*/
-            padding: 5px;
-            margin: 5.5px;
-        }
-        & when not (@skin = "material") {
-            /*other*/
-            padding: 1px;
-            margin-left: 15px;
-            margin-bottom: 5px;
-            margin: 0px 5px 5px 15px;
-        }
+        margin-bottom: 5px;
     }
 
     .e-js .e-reportviewer-param-datepicker {
@@ -27371,8 +27356,10 @@ background-image: url('../@{font-path}/icons-white.png');
             padding: 1px !important;
         }
         & when (@skin = "material") {
-            padding: 8px !important;
             padding-top: 4px !important;
+            padding-bottom: 8px !important;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
         }
     }
 
@@ -27784,9 +27771,19 @@ background-image: url('../@{font-path}/icons-white.png');
    }
 
    .e-js.e-rptviewer-dialog .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
-      font-size: 7px;
+      font-size: 9px;
       line-height: 10px;
       text-indent: 1.2px;
+
+      & when (@skin = "material"), (@skin = "office-365") {
+        padding-top: 0.5px;
+        padding-left: 1px;
+      }
+
+      & when not (@skin = "material") and not (@skin = "office-365") {
+        padding-top: 2px;
+        padding-left: 2px;
+      }
    }
 
     .e-js .e-rptviewer-okbtn {
@@ -27843,7 +27840,12 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-js .e-reportviewer-pagefit:before {
-        content: "\e660";
+        & when (@skin= "material") {
+            content: "\e853";
+        }
+        & when not (@skin = "material") {
+            content: "\e660";
+        }
     }
 
     .e-js .e-reportviewer-pagefittopage:before {
@@ -27855,63 +27857,138 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-js .e-reportviewer-print:before {
-        content: "\e71f";
+        & when (@skin= "material") {
+            content: "\e848";
+        }
+        & when not (@skin = "material") {
+            content: "\e71f";
+        }
     }
 
     .e-js .e-reportviewer-export:before {
-        content: "\e720";
+        & when (@skin= "material") {
+            content: "\e849";
+        }
+        & when not (@skin = "material") {
+            content: "\e720";
+        }
     }
 
     .e-js .e-reportviewer-pagesetup:before {
-        content: "\e6d1";
+        & when (@skin= "material") {
+            content: "\e84b";
+        }
+        & when not (@skin = "material") {
+            content: "\e6d1";
+        }
     }
 
     .e-js .e-reportviewer-gotonext:before {
-        content: "\e723";
+        & when (@skin= "material") {
+            content: "\e84e";
+        }
+        & when not (@skin = "material") {
+            content: "\e723";
+        }
     }
 
     .e-js .e-reportviewer-gotonext.e-reportviewer-disabled:before {
-        content: "\e723";
+        & when (@skin= "material") {
+            content: "\e84e";
+        }
+        & when not (@skin = "material") {
+            content: "\e723";
+        }
     }
 
     .e-js .e-reportviewer-gotoprevious:before {
-        content: "\e722";
+        & when (@skin= "material") {
+            content: "\e84d";
+        }
+        & when not (@skin = "material") {
+            content: "\e722";
+        }
     }
 
     .e-js .e-reportviewer-gotoprevious.e-reportviewer-disabled {
-        content: "\e722";
+        & when (@skin= "material") {
+            content: "\e84d";
+        }
+        & when not (@skin = "material") {
+            content: "\e722";
+        }
     }
 
     .e-js .e-reportviewer-gotofirst:before {
-        content: "\e721";
+        & when (@skin= "material") {
+            content: "\e84c";
+        }
+        & when not (@skin = "material") {
+            content: "\e721";
+        }
     }
 
     .e-js .e-reportviewer-gotolast:before {
-        content: "\e724";
+        & when (@skin= "material") {
+            content: "\e84f";
+        }
+        & when not (@skin = "material") {
+            content: "\e724";
+        }
     }
 
     .e-js .e-reportviewer-gotolast.e-reportviewer-disabled {
-        content: "\e724";
+        & when (@skin= "material") {
+            content: "\e84f";
+        }
+        & when not (@skin = "material") {
+            content: "\e724";
+        }
     }
 
     .e-js .e-reportviewer-gotofirst.e-reportviewer-disabled {
-        content: "\e721";
+        & when (@skin= "material") {
+            content: "\e84c";
+        }
+        & when not (@skin = "material") {
+            content: "\e721";
+        }
     }
 
     .e-js .e-reportviewer-zoomin:before {
-        content: "\e725";
+        & when (@skin= "material") {
+            content: "\e851";
+        }
+        & when not (@skin = "material") {
+            content: "\e725";
+        }
     }
 
     .e-js .e-reportviewer-zoomout:before {
-        content: "\e726";
+        & when (@skin= "material") {
+            content: "\e852";
+        }
+        & when not (@skin = "material") {
+            content: "\e726";
+        }
     }
 
     .e-js .e-reportviewer-refresh:before {
-        content: "\e727";
+        & when (@skin= "material") {
+            content: "\e850";
+        }
+        & when not (@skin = "material") {
+            content: "\e727";
+        }
     }
 
     .e-js .e-reportviewer-parameter:before {
-        content: "\e728";
+        & when (@skin= "material") {
+            content: "\e854";
+        }
+        & when not (@skin = "material") {
+            content: "\e728";
+        }
     }
 
     .e-js .e-reportviewer-documentmap:before {
@@ -27923,7 +28000,12 @@ background-image: url('../@{font-path}/icons-white.png');
     }
 
     .e-js .e-reportviewer-preview:before {
-        content: "\e72a";
+        & when (@skin= "material") {
+            content: "\e84a";
+        }
+        & when not (@skin = "material") {
+            content: "\e72a";
+        }
     }
 
     .e-js .e-reportviewer-close:before {
@@ -27946,6 +28028,37 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e901";
     }
 
+    .e-js .e-reportviewer-toolbarcontainer.e-toolbar .e-icon.e-toolbar-res-arrow {
+        cursor: pointer;
+        & when (@skin= "material") {
+            height: 34px;
+            padding-top: 0px;
+            padding-right: 7px;
+            margin-top: 7px;
+            margin-bottom: 6px;
+        }
+    }
+
+    .e-js .e-rptviewer-drpdown.e-reportviewer-zoomSelection_popup .e-reportviewer-zoomSelection_popup-ul li {
+        & when (@skin= "material") {
+            padding: 10px;
+        }
+    }
+
+    .e-js .e-reportviewer-toolbarli.e-reportviewer-ejdropdownlist .e-rptviewer-drpdown .e-in-wrap.e-box .e-input {
+        & when (@skin= "material") {
+            padding-left: 10px;
+        }
+    }
+
+    .e-js .e-reportviewer-icon.e-reportviewer-pagefittopage,
+    .e-js .e-reportviewer-icon.e-reportviewer-emptyconetent {
+        & when (@skin= "material") {
+            height: 13px;
+            margin-top: -3px;
+        }
+    }
+
     .e-js .e-reportviewer-popupli {
         border: 0 none;
         float: none;
@@ -27959,18 +28072,16 @@ background-image: url('../@{font-path}/icons-white.png');
             padding-left: 12px;
             width: 80px;
             height: 36px;
+            padding-right: 5px;
         }
         & when (@skin = "material") {
-            padding-top: 3px;
-            padding-bottom: 3px;
-            padding-left: 4px;
-            padding-right: 4px;
+            padding: 10px;
         }
         & when not (@skin = "material") and not (@skin = "office-365") {
             padding-top: 4px;
             padding-bottom: 4px;
             padding-left: 6px;
-            padding-right: 6px;
+            padding-right: 5px;
         }
     }
 
@@ -37849,7 +37960,7 @@ slideRight Animate
 
     .e-js.e-spreadsheet .e-ssr-cut + .e-btntxt,
     .e-js.e-spreadsheet .e-ssr-copy + .e-btntxt,
-    .e-js.e-spreadsheet .e-ss-formatpainter + .e-btntxt {
+    .e-js.e-spreadsheet .e-tbtn.e-btn .e-btn-span .e-ss-formatpainter + .e-btntxt {
         padding-bottom: 4px;
     }
 
@@ -41757,8 +41868,8 @@ slideRight Animate
     }
 
 
-    .e-js.e-spreadsheet .e-findbtn .e-btntxt,
-    .e-js.e-spreadsheet .e-fpanebtn .e-btntxt {
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-findbtn .e-btntxt,
+    .e-js.e-spreadsheet .e-split-btn.e-btn.e-fpanebtn .e-btntxt {
         & when (@skin = "material") {
             line-height: 14px;
             text-indent: 7px;

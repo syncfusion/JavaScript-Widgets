@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.css
-*  version : 17.1.0.47
+*  version : 17.2.0.28
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -1207,6 +1207,9 @@
   font-size: 12px;
 }
 .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
+  
+}
+.e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
   font-size: 14px;
 }
 .e-designer-property-header {
@@ -1344,14 +1347,6 @@
 .e-designer-textbox-border {
   border-color: #494949;
 }
-.e-reportdesigner .e-userselect textarea::-moz-selection,
-.e-reportdesigner .e-userselect input::-moz-selection {
-  -moz-appearance: none !important;
-  -webkit-appearance: none !important;
-  appearance: none !important;
-  color: white;
-  background: #3399ff;
-}
 .e-rptdesigner-headericon {
   font-size: 12px;
   color: #cccccc;
@@ -1367,6 +1362,22 @@
 .e-designer-txt {
   box-shadow: 0 0 1px #494949;
   border: 0.5px solid #494949;
+}
+.e-reportdesigner .e-textbox::selection,
+.e-reportdesigner .e-textarea::selection,
+.e-reportdesigner .e-textbox::-moz-selection,
+.e-reportdesigner .e-textarea::-moz-selection {
+  
+}
+.e-reportdesigner .e-textbox::selection,
+.e-reportdesigner .e-textarea::selection {
+  background: #3297fd;
+  color: white;
+}
+.e-reportdesigner .e-textbox::-moz-selection,
+.e-reportdesigner .e-textarea::-moz-selection {
+  background: #3399ff;
+  color: white;
 }
 .e-reportdesigner .e-designer-content,
 .e-querydesigner-dataset-text {
@@ -1610,7 +1621,9 @@
 
 /*----------------------Report Action Start-----------------------*/
 
-.e-rptdesigner-report-caption {
+.e-rptdesigner-report-caption,
+.e-designer-radio .e-text,
+.e-designer-radiobtn .e-text {
   font-size: 12px !important;
 }
 /*----------------------Report Action End-----------------------*/
@@ -2267,9 +2280,6 @@
   /* IE6-9 */
 
 }
-.e-split .e-rptdesigner-data-splitbtn.e-left-btn .e-btntxt.e-rptdesigner-txtoverflow {
-  font-size: 12px !important;
-}
 /*----------------------Dataset CSS End-----------------------*/
 
 /*----------------------Shared Dataset CSS Start-----------------------*/
@@ -2502,11 +2512,14 @@
 }
 .e-rptdesigner-menu-item {
   font-size: 14px;
+  color: #dddddd;
 }
 .e-rptdesigner-menu-item > a {
   font-size: 14px;
   text-overflow: ellipsis;
   text-decoration: none !important;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .e-rptdesigner-menu-separator {
   background-color: #494949;
@@ -2528,6 +2541,42 @@
 /**************************Tablix Data Assign Override End*******************************/
 
 /*************************************Tablix End******************************************/
+
+.e-rptdesigner-headericon.e-reportdesigner-backarrow:hover {
+  cursor: pointer;
+  border-color: #777777;
+  color: #dddddd;
+  border-radius: 4px;
+  
+}
+.e-rptdesigner-headericon.e-reportdesigner-backarrow:hover {
+  background: #6d6d6d;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #6d6d6d, #3a3a3a);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6d6d6d), color-stop(100%, #3a3a3a));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #6d6d6d, #3a3a3a);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #6d6d6d, #3a3a3a);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #6d6d6d, #3a3a3a);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #6d6d6d, #3a3a3a);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6d6d6d', endColorstr='#3a3a3a', GradientType=0);
+  /* IE6-9 */
+
+}
+/*************************************Code Module Start******************************************/
+
+.e-rptdesigner-codeinfo {
+  color: gray;
+}
+.e-reportdesigner-infoIcon-border {
+  border-left: 1px solid #dedede;
+}
+/*************************************Code Module End******************************************/
 
 /*------------------------------querydesigner toolbar Start-------------------------------*/
 
@@ -2868,7 +2917,8 @@
 .e-qrydesigner-add-btn,
 .e-qrydesigner-atc-boxshadow,
 .e-qrydesigner-datacontent,
-.e-qrydesigner-title-label {
+.e-qrydesigner-title-label,
+.e-qrydesigner-generatepreview {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 /*------------------------------querydesigner font-family-------------------------------*/

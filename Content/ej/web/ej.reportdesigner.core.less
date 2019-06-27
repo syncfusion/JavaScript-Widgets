@@ -1210,7 +1210,7 @@
         content: "\e9f5";
     }
 
-     .e-reportdesigner-datasource-sass:before {
+     .e-reportdesigner-datasource-ssas:before {
         content: "\e9f6";
     }
 
@@ -1444,10 +1444,9 @@
      .e-reportdesigner .e-toolbarfonticonbasic span,
     .e-rptdesigner-alertbox .e-widget-content .e-widgeticon span,
      .e-rptdesigner-new-btn,
-     .e-rptviewer-updown,
      .e-designer-ejwidgets-updown,
      .e-reportdesigner-alertinfo,
-     .e-rptviewer-updown,
+     .e-rptdesigner .e-rptviewer-updown,
      .e-designer-ejwidgets-colorpicker,
      .e-rptdesigner-ejwidgets-splitbtn,
      .e-designer-ejwidgets-dataConfig,
@@ -1480,11 +1479,12 @@
      .e-designer-ejwidgets .e-icon.e-arrow-sans-down:before,
      .e-designer-ejwidgets-dataConfig .e-icon.e-arrow-sans-down:before,
      .e-rptdesigner-new-btn .e-icon.e-arrow-sans-down:before,
-     .e-rptviewer-drpdown .e-icon.e-arrow-sans-down:before,
-     .e-rptviewer-updown .e-arrow-sans-down:before,
-     .e-rptviewer-updown .e-arrow-sans-up:before,
+     .e-rptdesigner .e-rptviewer-drpdown .e-icon.e-arrow-sans-down:before,
+     .e-rptdesigner .e-rptviewer-updown .e-arrow-sans-down:before,
+     .e-rptdesigner .e-rptviewer-updown .e-arrow-sans-up:before,
     .e-reportdesigner .e-toolbarsmallfonticonsettings,
-    .e-reportdesigner .e-reporticons {
+    .e-reportdesigner .e-reporticons,
+     .e-rptdesigner-codeinfo {
         font-family: 'ejreportdesigner' !important;
     }
 
@@ -1842,11 +1842,11 @@
         cursor: default !important;
 
         & when (@skin = "material") {
-            margin-top: 6.5px;
+            margin-top: 8.5px;
         }
 
         & when (@skin = "office-365") {
-            margin-top: -2.5px;
+            margin-top: 0px;
         }
 
         & when not (@skin = "material") and not (@skin = "office-365") {
@@ -1886,15 +1886,27 @@
         border: 0 solid;
 
         & when not (@skin = "material") {
-            height: 38px;
             box-shadow: none !important;
         }
 
         & when (@skin = "material") {
-            height: 48px !important;
             -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.20) !important;
             -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.20) !important;
             box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.20) !important;
+        }
+    }
+
+    .e-rptdesigner-toolbarcontainer:not(.e-responsive-toolbar) {
+        & when not (@skin = "material") and not (@skin = "office-365") {
+            height: 38px;
+        }
+
+        & when (@skin = "office-365") {
+            height: 40px !important;
+        }
+
+        & when (@skin = "material") {
+            height: 48px !important;
         }
     }
 
@@ -1923,7 +1935,9 @@
 
         & when (@skin = "office-365") {
             height: 31px !important;
-            padding-right: 10px;
+            padding-right: 10px !important;
+            margin-top: 4.5px !important;
+            margin-bottom: 4.5px !important;
         }
     }
 
@@ -2045,7 +2059,14 @@
     }
 
      .e-rptdesigner-ejdesigner {
-        margin: 3px;
+
+        & when not (@skin = "office-365") and not (@skin = "material") {
+            margin: 3px;
+        }
+
+        & when (@skin = "office-365"), (@skin = "material") {
+            margin: 5.5px;
+        }
     }
 
     .e-reportdesigner .e-toolbarClose {
@@ -2182,6 +2203,7 @@
 
      .e-rptdesigner-dstitle-text {
         margin-top: 2px;
+        height: 15px;
     }
 
      .e-rptdesigner-dssize,
@@ -2228,7 +2250,8 @@
     }
 
      .e-rptdesigner-dsconfig {
-        padding: 7px 11px;
+        padding: 4px 5px;
+        margin: 3px 6px;
         float: left;
     }
 
@@ -2300,6 +2323,7 @@
     }
 
      .e-rptdesigner-dsconfig-button {
+        height: 100%;
         display: block;
         overflow: hidden;
         float: left;
@@ -2360,6 +2384,7 @@
      .e-rptdesigner-table-dialog,
      .e-rptdesigner-table-dialog table,
      .e-designer-param-table,
+     .e-designer-preview-data-table,
      .e-designer-param-table table,
      .e-designer-existing-tbl,
      .e-designer-sharedconfig-table,
@@ -2445,7 +2470,6 @@
 
      .e-rptdesigner-prop-border {
         & when (@skin = "material"), (@skin = "office-365") {
-            margin-left: 20px;
             width: 86px !important;
         }
     }
@@ -2466,6 +2490,16 @@
         & when (@skin = "office-365") {
             margin-top: -2px !important;
         }
+    }
+
+     .e-rptdesigner-colorpicker {
+        & when (@skin = "material"), (@skin = "office-365") {
+            width: 50px !important;
+        }
+    }
+
+     .e-rptdesigner-prop-margin {
+        margin-left: 5px !important;
     }
     /*----------------------PropertyPanel End-----------------------*/
     /*----------------------Dependent component Overwritten-----------------------*/
@@ -2756,8 +2790,7 @@
     }
 
      .e-rptdesigner-img-addbutton .e-icon.e-plus,
-     .e-rptdesigner-param-newbtn .e-icon.e-plus,
-     .e-rptdesigner-data-splitbtn .e-icon.e-plus {
+     .e-rptdesigner-param-newbtn .e-icon.e-plus {
         & when (@skin= "office-365") {
             width: 15px !important;
             height: 15px !important;
@@ -2766,8 +2799,7 @@
     }
 
      .e-rptdesigner-img-addbutton .e-btntxt,
-     .e-rptdesigner-param-newbtn .e-btntxt,
-     .e-rptdesigner-data-splitbtn .e-btntxt {
+     .e-rptdesigner-param-newbtn .e-btntxt {
         & when (@skin= "office-365") {
             padding-top: 2.5px !important;
         }
@@ -2787,12 +2819,22 @@
     }
 
     .e-reportdesigner .e-reportviewer-toolbarcontainer {
-        & when not (@skin = "material") {
+        vertical-align: middle;
+        border: 0 solid;
+    }
+
+    .e-reportdesigner .e-reportviewer-toolbarcontainer:not(.e-responsive-toolbar) {
+        & when not (@skin = "material") and not (@skin = "office-365") {
             height: 35px !important;
         }
 
-        vertical-align: middle;
-        border: 0 solid;
+        & when (@skin = "office-365") {
+            height: 44px !important;
+        }
+
+        & when (@skin = "material") {
+            height: 48px !important;
+        }
     }
 
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-tooltxt {
@@ -2808,7 +2850,7 @@
     }
 
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-reportviewer-toolbarli:not(.e-reportviewer-ejdropdownlist):not(.e-reportviewer-tbpage) {
-        & when not (@skin = "material") {
+        & when not (@skin = "material") and not (@skin = "office-365") {
             margin: 2px 1.5px !important;
             padding: 0 !important;
             width: 28px !important;
@@ -2816,22 +2858,32 @@
             border-width: 0 !important;
             border-radius: 2px !important;
         }
+
+        & when (@skin = "material"), (@skin = "office-365") {
+            margin-left: 12px;
+            margin-right: 12px !important;
+            width: 21px !important;
+            height: 21px !important;
+            padding: 7px !important;
+            padding-top: 10px !important;
+            padding-left: 10px !important;
+        }
     }
 
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-reportviewer-toolbarli > span:not(.e-ddl) {
-        & when not (@skin = "material") {
+        & when not (@skin = "material") and not (@skin = "office-365") {
             margin: 6px 0 0 4px;
         }
     }
 
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-reportviewer-toolbarli > span.e-ddl {
-        & when not (@skin = "material") {
+        & when not (@skin = "material") and not (@skin = "office-365") {
             margin: 0 1px 0 1px !important;
         }
     }
 
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-reportviewer-toolbarul:first-child {
-        & when not (@skin = "material") {
+        & when not (@skin = "material") and not (@skin = "office-365") {
             padding-left: 5px !important;
         }
     }
@@ -2845,6 +2897,7 @@
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-reportviewer-toolbarul {
         & when (@skin = "office-365") {
             padding-right: 10px;
+            margin: 3.5px 0px !important;
         }
     }
 
@@ -2852,10 +2905,16 @@
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-reportviewer-toolbarli.e-reportviewer-ejdropdownlist {
         background-color: transparent !important;
         border: 0 !important;
+
+        & when (@skin = "office-365"), (@skin = "office-365") {
+            padding-top: 6px !important;
+        }
     }
 
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-reportviewer-toolbarli.e-reportviewer-ejdropdownlist {
-        margin: 2px !important;
+        & when not (@skin = "material") and not (@skin = "office-365") {
+            margin: 2px !important;
+        }
     }
 
     .e-rptdesigner.e-reportviewer-toolbarcontainer .e-reportviewer-print:before {
@@ -2953,13 +3012,15 @@
     /*----------------------Link Parameter End-----------------------*/
     /*----------------------Filter Dialog Start-----------------------*/
      .e-rptdesigner-filter-container,
-     .e-rptdesigner-codemodule-container {
+     .e-rptdesigner-codemodule-container,
+     .e-rptdesigner-datafield-container {
         padding: 4px 0px;
         margin: 0px 0px 4px 0px;
     }
 
      .e-rptdesigner-filter-div,
-     .e-rptdesigner-codemodule-div {
+     .e-rptdesigner-codemodule-div,
+     .e-rptdesigner-datafield-div {
         padding-right: 8px;
         padding-left: 8px;
         padding-top: 4px;
@@ -2967,7 +3028,8 @@
     }
 
      .e-rptdesigner-filter-table,
-     .e-rptdesigner-codemodule-table {
+     .e-rptdesigner-codemodule-table,
+     .e-rptdesigner-datafield-table {
         padding: 3px;
     }
     /*----------------------Filter Dialog End-----------------------*/
@@ -3049,15 +3111,6 @@
         padding-right: 5px;
         vertical-align: middle;
         display: table-cell;
-    }
-
-     .e-split .e-rptdesigner-data-splitbtn.e-left-btn .e-icon,
-     .e-split .e-rptdesigner-data-splitbtn.e-left-btn .e-icon:before {
-        & when (@skin= "material") {
-            height: 16px !important;
-            width: 16px !important;
-            font-size: 16px !important;
-        }
     }
     /*----------------------Dataset CSS End-----------------------*/
     /************************New Dialog Start***********************************/
@@ -3313,7 +3366,8 @@
     }
 
      .e-rptdesigner-avail-table .e-radiobtn-wrap .e-spanicon.e-radsmaller,
-     .e-rptdesigner-code-table .e-radiobtn-wrap .e-spanicon.e-radsmaller {
+     .e-rptdesigner-code-table .e-radiobtn-wrap .e-spanicon.e-radsmaller,
+     .e-designer-radio .e-spanicon.e-radsmaller {
         & when (@skin= "material") {
             margin-top: 4px !important;
         }
@@ -3324,7 +3378,49 @@
      .e-reportdesigner-designer-configuration .e-radiobtn-wrap .e-radsmaller .e-rad-icon {
         & when (@skin= "material"), (@skin= "office-365") {
             margin-left: -0.5px;
-            margin-top: -1.5px;
+            margin-top: -1px;
+        }
+    }
+
+     .e-designer-radio .e-radsmaller .e-rad-icon {
+        & when (@skin= "material") {
+            margin-left: -0.5px !important;
+            margin-top: -1px !important;
+        }
+    }
+
+     .e-designer-radio,
+     .e-designer-radiobtn {
+        margin-bottom: 0px !important;
+    }
+
+     .e-designer-radio .e-text,
+     .e-rptdesigner-avail-div .e-radiobtn-wrap.e-radsmall .e-text,
+     .e-rptdesigner-default-div .e-radiobtn-wrap.e-radsmall .e-text {
+        line-height: 17px;
+
+        & when (@skin= "office-365") {
+            line-height: 11px !important;
+        }
+
+        & when (@skin= "material") {
+            line-height: 18px !important;
+        }
+    }
+
+    .e-designer-radiobtn .e-text {
+        & when (@skin= "material"), (@skin= "office-365") {
+            line-height: 11px !important;
+        }
+    }
+
+     .e-designer-prop-checkbox .e-chkbox-small > span {
+        top: 3px !important;
+    }
+
+     .e-rptdesigner-group-check .e-chkbox-small > span {
+        & when (@skin= "material") {
+            top: 1.5px !important;
         }
     }
 
@@ -3341,7 +3437,7 @@
      .e-rptdesigner-availField-div {
         height: 100%;
         margin-top: 0px;
-        margin-left: 12px;
+        padding: 0px 12px;
         overflow: auto;
     }
 
@@ -3449,25 +3545,6 @@
         float: left !important;
     }
 
-     .e-rptdesigner-data-splitbtn {
-        padding: 0 10px !important;
-    }
-
-     .e-rptdesigner-splitbtn-div {
-        position: absolute !important;
-        margin-right: 6.5px !important;
-        height: 100% !important;
-        margin-top: -13px !important;
-    }
-
-     .e-rptdesigner-split-icon {
-        padding-top: 3.5px !important;
-    }
-
-     .e-rptdesigner-split-menu {
-        border-radius: 4px !important;
-    }
-
      .e-rptdesigner-datalist-icon {
         padding: 6px 4px 4px !important;
     }
@@ -3535,14 +3612,6 @@
      .e-querydesigner .e-reportdesigner-treeView a,
      .e-reportdesigner .e-reportdesigner-treeView a {
         text-decoration: none;
-    }
-
-     .e-split.e-drop .e-rptdesigner-data-splitbtn .e-rptdesigner-splitbtn-div .e-rptdesigner-split-icon.e-icon,
-     .e-split.e-drop .e-rptdesigner-data-splitbtn .e-rptdesigner-splitbtn-div .e-rptdesigner-split-icon.e-icon:before {
-        & when (@skin= "material") {
-            height: 15px !important;
-            width: 15px !important;
-        }
     }
     /*----------------------Dataset CSS End----------------------*/
     /*----------------------Shared Dataset CSS Start----------------------*/
@@ -3685,6 +3754,7 @@
      .e-rptdesigner-add-btn {
         vertical-align: top !important;
         font-weight: 700 !important;
+        line-height: 18px !important;
     }
 
      .e-rptdesigner-add-label {
@@ -3772,7 +3842,7 @@
 
      .e-designer-ejwidgets .e-icon.e-arrow-sans-down:before,
      .e-designer-ejwidgets-dataConfig .e-icon.e-arrow-sans-down:before,
-     .e-rptviewer-drpdown .e-icon.e-arrow-sans-down:before {
+     .e-rptdesigner .e-rptviewer-drpdown .e-icon.e-arrow-sans-down:before {
         content: "\e9c7" !important;
 
         & when (@skin = "office-365") {
@@ -3874,7 +3944,7 @@
     }
 
      .e-designer-ejwidgets-updown .e-icon.e-arrow-sans-down:before,
-     .e-rptviewer-updown .e-arrow-sans-down:before {
+     .e-rptdesigner .e-rptviewer-updown .e-arrow-sans-down:before {
         content: "\e9c7" !important;
 
         & when not (@skin = "material") and not (@skin = "office-365") {
@@ -3884,7 +3954,7 @@
     }
 
      .e-designer-ejwidgets-updown .e-icon.e-arrow-sans-up:before,
-     .e-rptviewer-updown .e-arrow-sans-up:before {
+     .e-rptdesigner .e-rptviewer-updown .e-arrow-sans-up:before {
         content: "\e9c7" !important;
         -moz-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
@@ -4182,33 +4252,44 @@
 
      .e-rptdesigner-rowColumn-containerTable {
         border-radius: 2px !important;
-        height: 22px;
+        height: 28px !important;
         width: 100%;
-        display: inline-table;
+        display: table;
+        table-layout: fixed !important;
+    }
+
+     .e-rptdesigner-grplabelDiv {
+        padding-right: 5px;
+        vertical-align: middle;
+        display: table-cell !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
     }
 
      .e-rptdesigner-rowColumn-fieldNameDiv {
-        padding: 3px;
-        max-width: 100px;
+        padding: 1.5px 3px;
         vertical-align: middle;
         display: block;
+        width: 100%;
     }
 
      .e-rptdesigner-rowColumn-menuDiv {
-        display: inline-block;
-        float: right;
-        padding: 1px;
+        display: table-cell;
+        width: 23px;
+        vertical-align: middle !important;
     }
 
      .e-rptdesigner-rowColumn-groupIcon {
-        height: 12px;
-        padding: 2px;
-        padding-left: 4px !important;
-        float: left;
+        padding: 1.5px 0px;
+        padding-left: 4px;
+        display: table-cell !important;
+        width: 13px;
     }
 
      .e-rptdesigner-rowColumn-groupIcon-size {
         font-size: 13px !important;
+        vertical-align: middle !important;
     }
 
      .e-rptdesigner-rowColumn-elementDiv {
@@ -4216,8 +4297,11 @@
     }
 
      .e-rptdesigner-rowColumn-menuIcon {
-        display: inline-block;
-        margin-left: 5px;
+        display: block;
+        margin-left: 6px;
+        height: 13px !important;
+        vertical-align: middle !important;
+        padding-top: 2px !important;
     }
 
      .e-rptdesigner-rowColumn-advIconSpan {
@@ -4289,6 +4373,7 @@
      .e-rptdesigner-tablix-addText-textareaDiv {
         margin-top: 10px;
         margin-bottom: 5px;
+        height: 54px;
     }
     /************************************* Tablix Addtext Dialog [End] ******************************************/
     /*************************************Tablix Data Assign Start*************************************/
@@ -4380,6 +4465,18 @@
     }
 
      .e-rptdesigner-fieldList > li {
+        & when (@skin = "material") {
+            padding: 16px 0 16px 18px !important;
+        }
+
+        & when (@skin = "office-365") {
+            padding: 0px 12px 3px !important;
+        }
+
+        & when not (@skin = "office-365") and not (@skin = "material") {
+            padding: 5px 5px 6px 0.857em !important;
+        }
+
         font-size: 14px !important;
     }
 
@@ -4450,6 +4547,24 @@
         font-weight: 600;
     }
     /*************************************Property panel [End] ******************************************/
+    /*************************************Code Module [Start] ******************************************/
+     .e-rptdesigner-codeinfo:before {
+        content: "\e9be";
+    }
+
+     .e-rptdesigner-codeinfo {
+        font-size: 14px !important;
+        margin-top: 4px;
+        margin-left: 8px;
+    }
+
+     .e-rptdesigner-codeinfo-div {
+        display: inline-block;
+        float: right;
+        margin-left: 5px;
+        width: 25px;
+    }
+    /*************************************Code Module [End] ******************************************/
 }
 
 
@@ -4518,7 +4633,17 @@
     }
 
     .e-querydesigner-toolbarcontainer .e-qrydesigner-param {
-        margin-top: 4px !important;
+        & when (@skin = "office-365") {
+            margin-top: 4px !important;
+        }
+
+        & when (@skin = "material") {
+            margin-top: 1px !important;
+        }
+
+        & when not (@skin = "material") and not (@skin = "office-365") {
+            margin-top: 3px !important;
+        }
     }
 
      .e-qrydesigner-switcher {
@@ -4542,10 +4667,12 @@
 
         & when (@skin = "office-365") {
             padding: 3px 0;
+            margin-top: 2.5px !important;
         }
 
         & when (@skin = "material") {
             padding: 7px 0;
+            margin-top: 1.5px !important;
         }
     }
 
@@ -4576,6 +4703,10 @@
         border-width: 0;
         border-radius: 0 !important;
 
+        & when (@skin = "office-365") {
+            box-shadow: none !important;
+        }
+
         & when (@skin = "material") {
             -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20) !important;
             -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20) !important;
@@ -4583,15 +4714,26 @@
         }
     }
 
+    .e-querydesigner-toolbarcontainer:not(.e-responsive-toolbar) {
+
+        & when (@skin = "office-365") {
+            height: 40px !important;
+        }
+
+        & when (@skin = "material") {
+            height: 48px !important;
+        }
+    }
+
     .e-querydesigner-toolbarcontainer .e-rel-position {
         cursor: default !important;
 
         & when (@skin = "material") {
-            margin-top: 6.5px;
+            margin-top: 8.5px;
         }
 
         & when (@skin = "office-365") {
-            margin-top: -2.5px;
+            margin-top: 0px;
         }
 
         & when not (@skin = "material") and not (@skin = "office-365") {
@@ -4611,6 +4753,60 @@
 
         & when (@skin = "office-365") {
             margin: 3px 3.5px !important;
+        }
+    }
+
+     .e-qrydesigner-auto-preview {
+        & when (@skin = "material") {
+            margin-top: 3px;
+        }
+    }
+
+     .e-querydesigner-filter-check-parent {
+        & when (@skin= "material") {
+            padding-bottom: 0px !important;
+        }
+    }
+
+     .e-querydesigner-filter-check-parent .e-qrydesigner-param-assign.e-check-small {
+        & when (@skin= "material") {
+            margin-top: 4.5px !important;
+        }
+    }
+
+     .e-qrydesigner-auto-preview-div {
+        & when (@skin= "material") {
+            margin-top: 2px !important;
+        }
+    }
+
+     .e-qrydesigner-queryparam-datatype-parent {
+        & when (@skin= "material") {
+            width: 68px !important;
+        }
+
+        & when not (@skin= "material") {
+            width: 64px !important;
+        }
+    }
+
+     .e-qrydesigner-queryparam-null-parent {
+        & when (@skin= "material") {
+            width: 35px !important;
+        }
+
+        & when not (@skin= "material") {
+            width: 30px !important;
+        }
+    }
+
+     .e-qrydesigner-queryparam-value-parent {
+        & when (@skin= "material") {
+            width: 161px !important;
+        }
+
+        & when not (@skin= "material") {
+            width: 170px !important;
         }
     }
     /*------------------------------querydesigner toolbar End-------------------------------*/
