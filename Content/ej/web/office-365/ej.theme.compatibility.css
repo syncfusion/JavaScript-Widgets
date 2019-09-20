@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.compatibility.css
-*  version : 17.2.0.46
+*  version : 17.3.0.9
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -24485,6 +24485,9 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 }
 .e-js.e-spreadsheet .e-ss-object {
   background-color: white;
+}
+.e-js.e-spreadsheet .e-ss-image {
+  background-color: transparent;
 }
 .e-js.e-spreadsheet .e-ss-charttheme {
   background-color: black;

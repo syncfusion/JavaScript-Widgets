@@ -970,10 +970,6 @@
         content: "\e9bc";
     }
 
-     .e-reportdesigner-widget-grid:before {
-        content: "\e9bc";
-    }
-
      .e-reportdesigner-dataset-toparrow:before {
         content: "\e9bd";
     }
@@ -1245,10 +1241,6 @@
 
      .e-reportdesigner-alertinfo:before {
         content: "\e9f8";
-    }
-
-     .e-reportdesigner-widget-pivotgrid:before {
-        content: "\e9f9";
     }
 
      .e-rptdesigner-toolbar-footer:before {
@@ -1554,14 +1546,14 @@
      .e-designer-setparam-btn.e-txt,
      .e-qrydesigner-addbtn .e-btntxt,
      .e-rptdesigner-connect.e-txt,
-     .e-rptdesigner-designbutton .e-btntxt {
+     .e-rptdesigner-designbutton .e-btntxt,
+     .e-rptdesigner-prop-btn.e-txt {
         & when not (@skin= "material") {
             padding-bottom: 0.2em !important;
         }
     }
 
      .e-rptdesigner-txtoverflow,
-     .e-reportdesigner-grid-cell,
      .e-designer-li-text,
      .e-reportdesigner-treeText,
      .e-rptdesigner-param-text,
@@ -1658,7 +1650,6 @@
     }
 
      .e-designer-newparam-btn,
-     .e-rptdesigner-new-btn,
      .e-designer-newds-btn,
      .e-designer-dsconnect-btn {
         line-height: normal !important;
@@ -1666,13 +1657,22 @@
         width: 154px !important;
     }
 
-     .e-rptdesigner-new-btn .e-icon,
+     .e-rptdesigner-new-btn {
+        line-height: normal !important;
+        height: 29px !important;
+        width: 86px !important;
+    }
+
      .e-designer-newparam-btn .e-icon,
      .e-designer-newds-btn .e-icon,
      .e-designer-alert-okbtn .e-icon,
      .e-rptdesigner-alert-cancelbtn .e-icon,
      .e-qrydesigner-addbtn .e-icon {
         padding: 4px !important;
+    }
+
+     .e-rptdesigner-new-btn .e-icon {
+        padding: 3px !important;
     }
 
      .e-designer-content {
@@ -1720,7 +1720,6 @@
 
      .e-rptdesigner-format-input {
         padding-top: 0.5px;
-        margin-left: 7px;
 
         & when (@skin= "office-365") {
             width: 197px !important;
@@ -1729,13 +1728,13 @@
 
      .e-rptdesigner-format-btn {
         & when not (@skin= "material") {
-            margin-top: -2.5px;
+            margin-top: -1.5px;
         }
 
         & when (@skin= "office-365") {
             padding: 0px 20px 0px !important;
             width: 0 !important;
-            height: 29px !important;
+            height: 31px !important;
         }
     }
 
@@ -1779,7 +1778,6 @@
     }
 
      .e-rptdesigner-box-sizing,
-     .e-reportdesigner-designArea,
      .e-rptdesigner-pg-tag {
         -webkit-box-sizing: content-box !important;
         -moz-box-sizing: content-box !important;
@@ -2480,11 +2478,6 @@
         z-index: 10008;
     }
 
-     .e-rptdesigner-prop-num {
-        margin-top: 3px;
-        margin-left: 5px;
-    }
-
      .e-rptdesigner-prop-border {
         & when (@skin = "material"), (@skin = "office-365") {
             width: 86px !important;
@@ -2494,12 +2487,6 @@
      .e-rptdesigner-prop-border input {
         & when (@skin = "material") {
             position: absolute;
-        }
-    }
-
-     .e-rptdesigner-prop-border .e-designer-ejwidgets-updown {
-        & when (@skin = "material"), (@skin = "office-365") {
-            width: 86px !important;
         }
     }
 
@@ -2542,6 +2529,9 @@
 
      .e-reportdesigner-designArea {
         float: left;
+        box-sizing: border-box !important;
+        -webkit-box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
     }
 
      .e-reportdesigner-designPanel {
@@ -2807,7 +2797,8 @@
     }
 
      .e-rptdesigner-img-addbutton .e-icon.e-plus,
-     .e-rptdesigner-param-newbtn .e-icon.e-plus {
+     .e-rptdesigner-param-newbtn .e-icon.e-plus,
+     .e-rptdesigner-field-data-button .e-icon.e-plus {
         & when (@skin= "office-365") {
             width: 15px !important;
             height: 15px !important;
@@ -2816,7 +2807,8 @@
     }
 
      .e-rptdesigner-img-addbutton .e-btntxt,
-     .e-rptdesigner-param-newbtn .e-btntxt {
+     .e-rptdesigner-param-newbtn .e-btntxt,
+     .e-rptdesigner-field-data-button .e-btntxt {
         & when (@skin= "office-365") {
             padding-top: 2.5px !important;
         }
@@ -3030,14 +3022,16 @@
     /*----------------------Filter Dialog Start-----------------------*/
      .e-rptdesigner-filter-container,
      .e-rptdesigner-codemodule-container,
-     .e-rptdesigner-datafield-container {
+     .e-rptdesigner-datafield-container,
+     .e-rptdesigner-field-container, {
         padding: 4px 0px;
         margin: 0px 0px 4px 0px;
     }
 
      .e-rptdesigner-filter-div,
      .e-rptdesigner-codemodule-div,
-     .e-rptdesigner-datafield-div {
+     .e-rptdesigner-datafield-div,
+     .e-rptdesigner-field-div, {
         padding-right: 8px;
         padding-left: 8px;
         padding-top: 4px;
@@ -3046,7 +3040,8 @@
 
      .e-rptdesigner-filter-table,
      .e-rptdesigner-codemodule-table,
-     .e-rptdesigner-datafield-table {
+     .e-rptdesigner-datafield-table,
+     .e-rptdesigner-field-table, {
         padding: 3px;
     }
     /*----------------------Filter Dialog End-----------------------*/
@@ -3122,12 +3117,28 @@
         padding: 7px 4px !important;
     }
 
-    .e-reportdesigner .e-split-btn-separator {
+    .e-reportdesigner .e-split-add-btn-separator {
         width: 1px;
         height: 25px;
-        padding-right: 5px;
+        padding-right: 1px;
         vertical-align: middle;
         display: table-cell;
+    }
+
+    .e-reportdesigner .e-rptdesigner-field-add-btn {
+        max-width: 36px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+     .e-split .e-rptdesigner-field-data-button.e-left-btn .e-icon,
+     .e-split .e-rptdesigner-field-data-button.e-left-btn .e-icon:before {
+        & when (@skin= "material") {
+            height: 16px !important;
+            width: 16px !important;
+            font-size: 16px !important;
+        }
     }
     /*----------------------Dataset CSS End-----------------------*/
     /************************New Dialog Start***********************************/
@@ -3562,6 +3573,25 @@
         float: left !important;
     }
 
+     .e-rptdesigner-field-data-button {
+        padding: 0px !important;
+    }
+
+     .e-rptdesigner-fieldadd-div {
+        position: absolute !important;
+        margin-right: 6.5px !important;
+        height: 100% !important;
+        margin-top: -13px !important;
+    }
+
+     .e-rptdesigner-split-icon {
+        padding-top: 3.5px !important;
+    }
+
+     .e-rptdesigner-split-menu {
+        border-radius: 4px !important;
+    }
+
      .e-rptdesigner-datalist-icon {
         padding: 6px 4px 4px !important;
     }
@@ -3629,6 +3659,14 @@
      .e-querydesigner .e-reportdesigner-treeView a,
      .e-reportdesigner .e-reportdesigner-treeView a {
         text-decoration: none;
+    }
+
+     .e-split.e-drop .e-rptdesigner-field-data-button .e-rptdesigner-fieldadd-div .e-rptdesigner-split-icon.e-icon,
+     .e-split.e-drop .e-rptdesigner-field-data-button .e-rptdesigner-fieldadd-div .e-rptdesigner-split-icon.e-icon:before {
+        & when (@skin= "material") {
+            height: 14px !important;
+            width: 14px !important;
+        }
     }
     /*----------------------Dataset CSS End----------------------*/
     /*----------------------Shared Dataset CSS Start----------------------*/
@@ -3886,15 +3924,20 @@
 
      .e-designer-ejwidgets-colorpicker:not(.e-popup) {
         & when (@skin = "material"), (@skin = "office-365") {
-            width: 50px !important;
+            width: 36px !important;
             height: 28px !important;
         }
     }
 
-     .e-designer-ejwidgets-colorpicker .e-color-container,
+     .e-designer-ejwidgets-colorpicker .e-color-container {
+        & when (@skin = "material"), (@skin = "office-365") {
+            width: 70%;
+        }
+    }
+
      .e-designer-ejwidgets-colorpicker .e-select {
         & when (@skin = "material"), (@skin = "office-365") {
-            width: 50%;
+            width: 30%;
         }
     }
 
@@ -3987,11 +4030,11 @@
 
      .e-rptdesigner-new-btn .e-icon.e-arrow-sans-down:before {
         content: "\e9c7" !important;
-        -moz-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        transform: rotate(180deg);
+        -moz-transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
     }
 
      .e-reportdesigner-designer .e-colorwidget .e-selected-color {
@@ -4097,8 +4140,12 @@
         cursor: pointer;
     }
 
-     .e-reportdesigner-scroller .e-vscrollbar {
+     .e-reportdesigner-scroller:not(.e-rptdesigner-scrollsize) .e-vscrollbar {
         width: 12px !important;
+    }
+
+     .e-rptdesigner-scrollsize .e-vscrollbar {
+        width: 9px !important;
     }
 
      .e-reportdesigner-scroller .e-hscrollbar {
@@ -4168,7 +4215,9 @@
     }
 
      .e-rptdesigner-exp-menu {
-        margin-right: 10px;
+        height: 6px;
+        width: 6px;
+        margin-top: 10px;
         cursor: default;
         padding: 1px;
     }
@@ -4562,6 +4611,64 @@
 
      .e-rptdesigner-prop-dataAlert-caption {
         font-weight: 600;
+    }
+
+     .e-rptdesigner-prop-padding-label-parent {
+        float: left;
+        padding: 29px 0px;
+    }
+
+     .e-rptdesigner-prop-textarea-label-parent {
+        float: left;
+        padding: 17px 0px;
+    }
+
+     .e-rptdesigner-prop-label {
+        font-size: 12px;
+        float: right;
+        padding-right: 10px;
+    }
+
+     .e-rptdesigner-prop-content-container {
+        padding: 7px 0px;
+    }
+
+     .e-rptdesigner-prop-item-container {
+        padding: 7px 10px;
+    }
+
+     .e-rptdesigner-prop-item-checkbox,
+     .e-rptdesigner-prop-label-parent {
+        float: left;
+        padding: 7px 0px;
+    }
+
+     .e-rptdesigner-expEle-container {
+        height: 27px;
+        width: 25px;
+        float: right;
+        cursor: default;
+    }
+
+     .e-rptdesigner-subProp-text {
+        font-size: 10px;
+        padding-bottom: 5px;
+    }
+
+     .e-rptdesigner-subProp-padding-container {
+        padding-top: 5px;
+    }
+
+     .e-rptdesigner-prop-padding-exp {
+        padding: 22px 0px;
+    }
+
+     .e-rptdesigner-prop-textarea-exp {
+        padding: 15px 0px;
+    }
+
+     .e-rptdesigner-prop-textbox-exp {
+        padding: 2px 0px;
     }
     /*************************************Property panel [End] ******************************************/
     /*************************************Code Module [Start] ******************************************/

@@ -24036,6 +24036,12 @@ ejReportDesigner :function (options) {
 ///Specifies the locale for report designer.
 ///<br/>locale-string	default-en-US
 ///<br/><br/>
+///Shows or hides the create, edit, and delete options in data source and dataset panels.
+///<br/>permissionSettings-PermissionSettings	default-ej.ReportDesigner.Permission.All
+///<br/><br/>
+///Shows or hides the create, edit and delete options in data source pane with the help of ej.ReportDesigner.Permission enum.
+///<br/>dataSource-ej.ReportDesigner.Permission|string	default-ej.ReportDesigner.Permission.All
+///<br/><br/>
 ///Gets or sets the list of custom data extension items.
 ///<br/>reportDataExtensions-Array&lt;ReportDataExtensions&gt;	default-[]
 ///<br/><br/>
@@ -24074,6 +24080,9 @@ ejReportDesigner :function (options) {
 ///<br/><br/>
 ///Gets or sets the report path of server.
 ///<br/>reportPath-string	default-null
+///<br/><br/>
+///Gets or sets the report type.
+///<br/>reportType-string	default-ej.ReportDesigner.ReportType.RDL
 ///<br/><br/>
 ///Gets or sets the reports server URL.
 ///<br/>reportServerUrl-string	default-null
@@ -24281,7 +24290,7 @@ ejReportViewer :function (options) {
 ///<br/>printMode-boolean	default-false
 ///<br/><br/>
 ///Specifies the print option of the report.
-///<br/>printOptions-ej.ReportViewer.PrintOptions|string	default-ej.ReportViewer.PrintOptions.Default
+///<br/>printOption-ej.ReportViewer.PrintOptions|string	default-ej.ReportViewer.PrintOptions.Default
 ///<br/><br/>
 ///Specifies the processing mode of the report.
 ///<br/>processingMode-ej.ReportViewer.ProcessingMode|string	default-ej.ReportViewer.ProcessingMode.Remote
@@ -24333,6 +24342,12 @@ ejReportViewer :function (options) {
 ///<br/><br/>
 ///Specifies the width of the combobox parameter popup list. By default, the popup width sets based on the width of the component.
 ///<br/>popupWidth-string	default-auto
+///<br/><br/>
+///Specifies the width of the parameter item. By default, the item width value is set as "185px".
+///<br/>itemWidth-string	default-185px
+///<br/><br/>
+///Specifies the width of the parameter label. By default, the parameter label width value is set as "110px".
+///<br/>labelWidth-string	default-110px
 ///<br/><br/>
 ///Gets or sets the zoom factor for report viewer.
 ///<br/>zoomFactor-number	default-1

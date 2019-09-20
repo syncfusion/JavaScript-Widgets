@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.compatibility.css
-*  version : 17.2.0.46
+*  version : 17.3.0.9
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -534,13 +534,7 @@
 .e-js .e-reportdesigner-stepped-line-chart .path2:before {
   color: #4da6ff;
 }
-.e-js .e-reportdesigner-widget-grid:before {
-  color: #4da6ff;
-}
 .e-js .e-reportdesigner-widget-subreport:before {
-  color: #4da6ff;
-}
-.e-js .e-reportdesigner-widget-pivotgrid:before {
   color: #4da6ff;
 }
 .e-js .e-qrydesigner-table-column-deselect:before {
@@ -1306,7 +1300,8 @@
 .e-js .e-rptdesigner-previewbtn,
 .e-js .e-rptdesigner-designbutton,
 .e-js .e-designer-setparam-btn,
-.e-js .e-qrydesigner-addbtn {
+.e-js .e-qrydesigner-addbtn,
+.e-js .e-rptdesigner-prop-btn {
   font-weight: 400 !important;
   font-size: 11px !important;
   
@@ -1318,7 +1313,8 @@
 .e-js .e-rptdesigner-previewbtn,
 .e-js .e-rptdesigner-designbutton,
 .e-js .e-designer-setparam-btn,
-.e-js .e-qrydesigner-addbtn {
+.e-js .e-qrydesigner-addbtn,
+.e-js .e-rptdesigner-prop-btn {
   border-radius: 4px !important;
 }
 .e-js .e-table-user-selection-active,
@@ -1601,7 +1597,8 @@
 .e-js .e-rptdesigner-textElement > a,
 .e-js .e-rptdesigner-noRecords,
 .e-js .e-rptdesigner-tablix-searchtxtbx,
-.e-js .e-designer-tablix-alert-radiobtn .e-text {
+.e-js .e-designer-tablix-alert-radiobtn .e-text,
+.e-js .e-rptdesigner-prop-btn.e-txt {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 .e-js.e-textarea-codeeditor .CodeMirror {
@@ -2039,6 +2036,9 @@
 .e-js .e-rptdesigner-error.e-designer-textarea {
   border: 1px solid #cd0a0a !important;
 }
+.e-js .e-rptdesigner-error.e-textarea.e-preview-txt {
+  border: 0.5px solid #cd0a0a !important;
+}
 .e-js .e-rptdesigner-error-icon,
 .e-js .e-reportdesigner-alertinfo,
 .e-js .e-rptdesigner-error-content {
@@ -2251,7 +2251,7 @@
 .e-js .e-rptdesigner-data-schema {
   color: #cccccc !important;
 }
-.e-js.e-reportdesigner .e-split-btn-separator {
+.e-js.e-reportdesigner .e-split-add-btn-separator {
   border-left: 0.5px solid #777777;
 }
 .e-js .e-rptdesigner-data-bgreset {
@@ -2278,6 +2278,9 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a5038', endColorstr='#404a22', GradientType=0);
   /* IE6-9 */
 
+}
+.e-js .e-split .e-rptdesigner-data-splitbtn.e-left-btn .e-btntxt.e-rptdesigner-txtoverflow {
+  font-size: 12px !important;
 }
 /*----------------------Dataset CSS End-----------------------*/
 

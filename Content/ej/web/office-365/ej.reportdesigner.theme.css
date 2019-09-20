@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.css
-*  version : 17.2.0.46
+*  version : 17.3.0.9
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -524,13 +524,7 @@
 .e-reportdesigner-stepped-line-chart .path2:before {
   color: #4da6ff;
 }
-.e-reportdesigner-widget-grid:before {
-  color: #4da6ff;
-}
 .e-reportdesigner-widget-subreport:before {
-  color: #4da6ff;
-}
-.e-reportdesigner-widget-pivotgrid:before {
   color: #4da6ff;
 }
 .e-qrydesigner-table-column-deselect:before {
@@ -1127,7 +1121,8 @@
 .e-rptdesigner-previewbtn,
 .e-rptdesigner-designbutton,
 .e-designer-setparam-btn,
-.e-qrydesigner-addbtn {
+.e-qrydesigner-addbtn,
+.e-rptdesigner-prop-btn {
   font-weight: 400 !important;
   font-size: 11px !important;
   
@@ -1394,7 +1389,8 @@
 .e-rptdesigner-textElement > a,
 .e-rptdesigner-noRecords,
 .e-rptdesigner-tablix-searchtxtbx,
-.e-designer-tablix-alert-radiobtn .e-text {
+.e-designer-tablix-alert-radiobtn .e-text,
+.e-rptdesigner-prop-btn.e-txt {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 .e-textarea-codeeditor .CodeMirror {
@@ -1764,6 +1760,9 @@
 .e-rptdesigner-error.e-designer-textarea {
   border: 1px solid #cd0a0a !important;
 }
+.e-rptdesigner-error.e-textarea.e-preview-txt {
+  border: 0.5px solid #cd0a0a !important;
+}
 .e-rptdesigner-error-icon,
 .e-reportdesigner-alertinfo,
 .e-rptdesigner-error-content {
@@ -1979,7 +1978,7 @@
 .e-rptdesigner-data-schema {
   color: #666666 !important;
 }
-.e-reportdesigner .e-split-btn-separator {
+.e-reportdesigner .e-split-add-btn-separator {
   border-left: 0.5px solid #c8c8c8;
 }
 .e-rptdesigner-data-bgreset {
@@ -1990,6 +1989,9 @@
 }
 .e-rptdesigner-data-bgset {
   background-color: #eaeaea;
+}
+.e-split .e-rptdesigner-data-splitbtn.e-left-btn .e-btntxt.e-rptdesigner-txtoverflow {
+  font-size: 12px !important;
 }
 /*----------------------Dataset CSS End-----------------------*/
 
