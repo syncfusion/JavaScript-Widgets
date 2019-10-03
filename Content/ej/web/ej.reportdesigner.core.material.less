@@ -269,6 +269,74 @@
         content: "\ea54";
     }
 
+     .e-rptdesigner-toolbar-leftalign:before {
+        content: "\ea56";
+    }
+
+     .e-rptdesigner-toolbar-center:before {
+        content: "\ea57";
+    }
+
+     .e-rptdesigner-toolbar-rightalign:before {
+        content: "\ea58";
+    }
+
+     .e-rptdesigner-toolbar-topalign:before {
+        content: "\ea59";
+    }
+
+     .e-rptdesigner-toolbar-middle:before {
+        content: "\ea5a";
+    }
+
+     .e-rptdesigner-toolbar-bottomalign:before {
+        content: "\ea5b";
+    }
+
+     .e-rptdesigner-toolbar-vertical:before {
+        content: "\ea60";
+    }
+
+     .e-rptdesigner-toolbar-horizontal:before {
+        content: "\ea61";
+    }
+
+     .e-rptdesigner-toolbar-spacinghorizontal:before {
+        content: "\ea5d";
+    }
+
+     .e-rptdesigner-toolbar-spacingvertical:before {
+        content: "\ea5c";
+    }
+
+     .e-rptdesigner-toolbar-sizeToControl:before {
+        content: "\ea62";
+    }
+
+     .e-rptdesigner-toolbar-sizeToWidth:before {
+        content: "\ea63";
+    }
+
+     .e-rptdesigner-toolbar-sizeToHeight:before {
+        content: "\ea64";
+    }
+
+     .e-rptdesigner-toolbar-aligntogrid:before {
+        content: "\ea5f";
+    }
+
+     .e-rptdesigner-toolbar-sizetogrid:before {
+        content: "\ea5e";
+    }
+
+     .e-rptdesigner-toolbar-snaptoshape:before {
+        content: "\ea55";
+    }
+
+     .e-rptdesigner-toolbar-fullscreen:before {
+        content: "\ea0c";
+    }
+
      .e-reportdesigner-variables:before {
         content: "\e925";
     }
@@ -1417,6 +1485,18 @@
         content: "\ea50";
         margin-left: -1em;
     }
+
+     .e-reportdesigner-toolbar-view:before {
+        content: "\ea65";
+    }
+
+     .e-designer-viewCheck:before {
+        content: "\ea66";
+        float: left;
+        padding-left: 3px;
+        padding-top: 1px;
+        visibility: hidden;
+    }
     /*----------------------ReportDesigner Font Icons End----------------------*/
     /*----------------------ReportDesigner Common Styles----------------------*/
      .e-rptdesigner-dataconfig,
@@ -1438,7 +1518,9 @@
     .e-rptdesigner-dialog .e-footerbar,
     .e-rptdesigner-ejdialog .e-footerbar,
      .e-rptdesigner-rowColumn-elementDiv,
-     .e-rptdesigner-rowColumn-containerTable {
+     .e-rptdesigner-rowColumn-containerTable,
+     .e-rptdesigner-datafield-search-box,
+     .e-rptdesigner-datafield-search-container {
         -webkit-box-sizing: border-box !important;
         -moz-box-sizing: border-box !important;
         box-sizing: border-box !important;
@@ -1493,7 +1575,8 @@
      .e-rptdesigner .e-rptviewer-updown .e-arrow-sans-up:before,
     .e-reportdesigner .e-toolbarsmallfonticonsettings,
     .e-reportdesigner .e-reporticons,
-     .e-rptdesigner-codeinfo {
+     .e-rptdesigner-codeinfo,
+     .e-designer-viewCheckIcon {
         font-family: 'ejreportdesigner' !important;
     }
 
@@ -1578,6 +1661,13 @@
         text-overflow: ellipsis !important;
     }
 
+     .e-designer-viewCheckIcon {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
      .e-designer-content-icon,
      .e-rptdesigner-data-icon,
      .e-designer-tile,
@@ -1589,6 +1679,13 @@
 
      .e-rptdesigner-new-btn-footer {
         height: 1px !important;
+    }
+
+     .e-designer-textarea,
+     .e-designer-textbox {
+        padding-bottom: 4px;
+        padding-top: 4px;
+        padding-right: 4px;
     }
 
     .e-rptdesigner-toolbarcontainer,
@@ -1711,58 +1808,36 @@
         letter-spacing: 0.5px;
     }
 
+     .e-rptdesigner-format-input,
+     .e-rptdesigner-link-input {
+        padding-top: 1px;
+
+        & when (@skin= "material") {
+            width: 232px !important;
+        }
+    }
+
+     .e-rptdesigner-format-btn,
      .e-rptdesigner-browse-btn {
-        & when (@skin= "office-365") {
-            width: 0 !important;
-            height: 32px !important;
-        }
-    }
-
-     .e-rptdesigner-format-input {
-        padding-top: 0.5px;
-
-        & when (@skin= "office-365") {
-            width: 197px !important;
-        }
-    }
-
-     .e-rptdesigner-format-btn {
-        & when not (@skin= "material") {
-            margin-top: -1.5px;
-        }
-
-        & when (@skin= "office-365") {
-            padding: 0px 20px 0px !important;
-            width: 0 !important;
-            height: 31px !important;
-        }
+        cursor: pointer;
+        height: 30px;
+        width: 24px
     }
 
      .e-rptdesigner-browse-icon {
-        display: inline-block;
-
-        & when not (@skin = "material") and not (@skin= "office-365") {
-            margin-top: 5px;
-        }
-
-        & when (@skin = "material") {
-            margin-top: 4px;
-        }
-
-        & when (@skin = "office-365") {
-            margin-top: 7px;
-            margin-left: -7px;
-        }
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
     }
 
-     .e-rptdesigner-browse-rpt.e-rptdesigner-browse-icon {
-        & when not (@skin= "office-365") {
-            margin-top: 6px;
-        }
+     .e-rptdesigner-browse-icon:not(.e-rptdesigner-browse-rpt) {
+        width: 24px;
+        height: 30px;
+    }
 
-        & when (@skin = "office-365") {
-            margin-top: 9px;
-        }
+     .e-rptdesigner-browse-icon.e-rptdesigner-browse-rpt {
+        width: 20px;
+        height: 26px;
     }
 
      .e-widgeticon-drag {
@@ -1842,6 +1917,7 @@
         background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: center;
+        background-color: white;
     }
 
      .e-reportdesigner-image {
@@ -2037,7 +2113,14 @@
     }
 
      .e-rptdesigner-preview-div {
-        width: 130px;
+        & when not (@skin = "material") {
+            width: 90px;
+        }
+
+        & when (@skin = "material") {
+            width: 130px;
+        }
+
         float: right;
     }
 
@@ -2056,6 +2139,7 @@
         text-align: center;
         float: left;
         margin: 9px 6px;
+        width: 30px;
     }
 
      .e-rptdesigner-toolbar-icon {
@@ -2099,6 +2183,31 @@
             margin-top: 2.5px;
         }
     }
+
+    .e-rptdesigner-zoomout-li {
+        margin-right: 0px !important;
+    }
+
+     .e-designer-menuItem-uncheck::before {
+        visibility: hidden !important;
+    }
+    
+     .e-designer-menuItem-check::before {
+        visibility: visible !important;
+    }
+
+     .e-rptdesigner-btnText-div {
+        display: table;
+        width: 50px;
+    }
+    
+     .e-rptdesigner-btnText {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 12px;
+        font-weight: normal !important;
+    }
     /*----------------------Toolbar End-----------------------*/
     /************************Itempanel Start***********************************/
      .e-reportdesigner-atc-boxshadow {
@@ -2122,7 +2231,8 @@
         }
     }
 
-     .e-rptdesigner-itempanel-textbox {
+     .e-rptdesigner-itempanel-textbox,
+     .e-rptdesigner-datasearch-textbox {
         text-align: left;
         float: left;
         height: 24px !important;
@@ -2589,6 +2699,19 @@
         -moz-box-sizing: content-box !important;
         -webkit-box-sizing: content-box !important;
     }
+
+     .e-designer-areaborder {
+        width: 100%;
+        height: 100%;
+        left: 0px !important;
+        top: 0px !important;
+        display: block;
+        position: absolute !important;
+        pointer-events: none;
+        box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        -webkit-box-sizing: border-box !important;
+    }
     /************************DesignPanel CSS End***********************************/
     /************************DataAssign panel CSS Start***********************************/
      .e-rptdesigner-dataassign-sep,
@@ -2631,6 +2754,14 @@
         padding-left: 5px;
     }
 
+     .e-reportdesigner-contextmenu-icon-align {
+        padding: 2px 5px 5px 5px !important;
+    }
+
+     .e-reportdesigner-viewmenu-icon-align {
+        margin: 1px 4px !important;
+    }
+
      .e-rptdesigner-da-searchicon {
         margin-top: -16.5px;
     }
@@ -2649,10 +2780,6 @@
 
      .e-rptdesigner-da-emptyLabel {
         margin: 6px;
-    }
-
-     .e-rptdesigner-da-emptySpan {
-        padding-left: 65px;
     }
 
      .e-rptdesigner-da-dragDiv {
@@ -2685,7 +2812,6 @@
         outline: none;
     }
 
-     .e-rptdesigner-da-emptySpan,
      .e-rptdesigner-da-dragLabel,
      .e-rptdesigner-da-closeicon,
      .e-rptdesigner-da-settingsicon {
@@ -3069,11 +3195,12 @@
 
      .e-rptdesigner-report-caption {
         float: right;
-        margin-right: 5px;
+        margin-right: 4px;
     }
 
-     .e-rptdesigner-report-margin {
-        margin-left: 2px;
+     .e-rptdesigner-report-margin,
+     .e-rptdesigner-report-chckbox {
+        margin-left: 4px;
     }
 
      .e-rptdesigner-report-url {
@@ -3093,7 +3220,7 @@
     }
 
      .e-designer-setparam-btn {
-        margin-left: 2px;
+        margin-left: 4px;
     }
     /*----------------------Report Action End-----------------------*/
     /*----------------------Dataset CSS Start-----------------------*/
@@ -3443,13 +3570,7 @@
     }
 
      .e-designer-prop-checkbox .e-chkbox-small > span {
-        top: 3px !important;
-    }
-
-     .e-rptdesigner-group-check .e-chkbox-small > span {
-        & when (@skin= "material") {
-            top: 1.5px !important;
-        }
+        top: 1.5px !important;
     }
 
      .e-rptdesigner-paramquery-div {
@@ -4160,6 +4281,23 @@
      .e-reportdesigner-dsscroller {
         padding-bottom: 10px;
     }
+
+     .e-reportdesigner-full-screen {
+        bottom: 0px;
+        height: 100% !important;
+        left: 0px;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        padding: 0px;
+        margin: 0px;
+        width: 100% !important;
+        z-index: 999;
+    }
+
+     .e-reportdesigner-document-full-screen {
+        overflow: hidden !important;
+    }
     /*----------------------Scroller End-----------------------*/
     /*----------------------Drag Element Start-----------------------*/
      .e-rptdesigner-drag-element {
@@ -4244,6 +4382,10 @@
         & when (@skin= "material") {
             margin-top: 3px !important;
         }
+    }
+
+     .e-designer-menu .e-list {
+        padding: 2px !important;
     }
 
      .e-rptdesigner-padding-property .e-rptdesigner-exp-cont {
@@ -4670,6 +4812,14 @@
      .e-rptdesigner-prop-textbox-exp {
         padding: 2px 0px;
     }
+
+     .e-rptdesigner-prop-advc .e-rptdesigner-txtoverflow,
+     .e-rptdesigner-acrdn-header .e-header-row-txt {
+        padding: 4px 12px;
+        font-size: 13px;
+        min-width: 400px;
+        float: left;
+    }
     /*************************************Property panel [End] ******************************************/
     /*************************************Code Module [Start] ******************************************/
      .e-rptdesigner-codeinfo:before {
@@ -4689,6 +4839,43 @@
         width: 25px;
     }
     /*************************************Code Module [End] ******************************************/
+
+    /*************************************Data Field Search [Start] ******************************************/
+     .e-rptdesigner-datasearch-textbox {
+        text-align: left;
+
+        & when (@skin = "bootstrap") {
+            border-radius: 4px;
+        }
+    
+        & when not (@skin = "bootstrap") {
+            border-radius: 0px;
+        }
+    }
+
+     .e-rptdesigner-datafield-search-box {
+        height: 29px;
+
+        & when (@skin = "bootstrap") {
+            border-radius: 4px;
+        }
+    
+        & when not (@skin = "bootstrap") {
+            border-radius: 0px;
+        }
+    }
+
+     .e-rptdesigner-datafield-search-box .e-designer-searchIcon {
+        margin-top: 7px;
+        margin-right: 12px;
+        font-size: 12px;
+    }
+
+     .e-rptdesigner-datafield-search-container {
+        height: 52px;
+        padding: 10px 8px 12px 8px;
+    }
+    /*************************************Data Field Search [End] ******************************************/
 }
 
 

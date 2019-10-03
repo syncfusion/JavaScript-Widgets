@@ -19668,7 +19668,7 @@ addDataSource:function(datasource){
 /// </summary>
 /// <param name="datasource"	type="any">a JSON to define a connection properties for datasource.</param>
 },
-addReportItem:function(item){
+addItem:function(item){
 /// <summary>
 /// Add a report item to the report at runtime.
 /// </summary>
@@ -19771,6 +19771,11 @@ openReport:function(){
 /// This method opens the report from the server.
 /// </summary>
 },
+openReportDefinition:function(){
+/// <summary>
+/// This method opens the report using raw report data.
+/// </summary>
+},
 openReportFromDevice:function(){
 /// <summary>
 /// Opens the client browse dialog to browse the report.
@@ -19808,7 +19813,7 @@ removeDatasource:function(datasource){
 /// </summary>
 /// <param name="datasource"	type="string">Name of the datasource.</param>
 },
-removeReportItem:function(itemName){
+removeItem:function(itemName){
 /// <summary>
 /// Remove the given report item from the report.
 /// </summary>
@@ -19817,6 +19822,11 @@ removeReportItem:function(itemName){
 saveReport:function(){
 /// <summary>
 /// This method saves the report into the server.
+/// </summary>
+},
+saveReportDefinition:function(){
+/// <summary>
+/// This method returns the report in JSON or XML format.
 /// </summary>
 },
 saveServerReportDialog:function(){
@@ -19829,11 +19839,11 @@ saveToDevice:function(){
 /// To download the designed report.
 /// </summary>
 },
-selectReportItem:function(itemName){
+selectItems:function(itemNames){
 /// <summary>
-/// Update the selection to report item at runtime.
+/// Update the selection to report items at runtime.
 /// </summary>
-/// <param name="itemName"	type="string">Name of the report item.</param>
+/// <param name="itemNames"	type="any[]">Name of the report items as string array.</param>
 },
 sendBackward:function(){
 /// <summary>
@@ -19893,7 +19903,10 @@ jQuery.fn.ejReportDesigner = function (options) {
 /// <summary><br/>
 ///Report Designer allows to design the report that can be published in the server or downloaded in the local physical path.<br/><br/>
 ///Shows or hides the items of configuration pane in ReportDesigner control.
-///<br/>configurePaneSettings-ConfigurePaneSettings	default-ej.ReportDesigner.ConfigureItems.All
+///<br/>configurePaneSettings-ConfigurePaneSettings	default-
+///<br/><br/>
+///Shows or hides the grouped items in the configuration pane with the help of enum ej.ReportDesigner.ConfigureItems
+///<br/>items-ej.ReportDesigner.ConfigureItems|string	default-ej.ReportDesigner.ConfigureItems.All
 ///<br/><br/>
 ///Shows or hides the configuration pane in ReportDesigner control.
 ///<br/>showConfigurePane-boolean	default-true
@@ -20082,6 +20095,9 @@ jQuery.fn.ejReportViewer = function (options) {
 ///Specifies the word export format.
 ///<br/>wordFormat-ej.ReportViewer.WordFormats|string	default-ej.ReportViewer.WordFormats.Doc
 ///<br/><br/>
+///Specifies the ppt export format.
+///<br/>pptFormat-ej.ReportViewer.PPTFormats|string	default-ej.ReportViewer.PPTFormats.PowerPoint97to2003
+///<br/><br/>
 ///Add the custom icon item to the export options.
 ///<br/>customItems-Array&lt;any&gt;	default-empty
 ///<br/><br/>
@@ -20117,6 +20133,24 @@ jQuery.fn.ejReportViewer = function (options) {
 ///<br/><br/>
 ///Gets or sets the parameter values.
 ///<br/>values-Array&lt;any&gt;	default-[]
+///<br/><br/>
+///Specifies the parameter settings.
+///<br/>parameterSettings-ParameterSettings	default-
+///<br/><br/>
+///Sets the separator when the multiSelectMode with delimiter option or checkbox is enabled with the dropdown. When you enter the delimiter value, the texts after the delimiter are considered as a separate word or query. The delimiter string is a single character and must be a symbol. Mostly, the delimiter symbol is used as comma (,) or semi-colon (;) or any other special character.
+///<br/>delimiterChar-string	default-,
+///<br/><br/>
+///Specifies the height of the combobox parameter popup list. By default, the popup height value is "152px".
+///<br/>popupHeight-string	default-152px
+///<br/><br/>
+///Specifies the width of the combobox parameter popup list. By default, the popup width sets based on the width of the component.
+///<br/>popupWidth-string	default-auto
+///<br/><br/>
+///Specifies the width of the parameter item. By default, the item width value is set as "185px".
+///<br/>itemWidth-string	default-185px
+///<br/><br/>
+///Specifies the width of the parameter label. By default, the parameter label width value is set as "110px".
+///<br/>labelWidth-string	default-110px
 ///<br/><br/>
 ///Enables and disables the print mode.
 ///<br/>printMode-boolean	default-false
@@ -20163,24 +20197,6 @@ jQuery.fn.ejReportViewer = function (options) {
 ///Add the custom icon groups to the toolbar.
 ///<br/>customGroups-Array&lt;any&gt;	default-empty
 ///<br/><br/>
-///Specifies the parameter settings.
-///<br/>parameterSettings-ParameterSettings	default-
-///<br/><br/>
-///Sets the separator when the multiSelectMode with delimiter option or checkbox is enabled with the dropdown. When you enter the delimiter value, the texts after the delimiter are considered as a separate word or query. The delimiter string is a single character and must be a symbol. Mostly, the delimiter symbol is used as comma (,) or semi-colon (;) or any other special character.
-///<br/>delimiterChar-string	default-,
-///<br/><br/>
-///Specifies the height of the combobox parameter popup list. By default, the popup height value is "152px".
-///<br/>popupHeight-string	default-152px
-///<br/><br/>
-///Specifies the width of the combobox parameter popup list. By default, the popup width sets based on the width of the component.
-///<br/>popupWidth-string	default-auto
-///<br/><br/>
-///Specifies the width of the parameter item. By default, the item width value is set as "185px".
-///<br/>itemWidth-string	default-185px
-///<br/><br/>
-///Specifies the width of the parameter label. By default, the parameter label width value is set as "110px".
-///<br/>labelWidth-string	default-110px
-///<br/><br/>
 ///Gets or sets the zoom factor for report viewer.
 ///<br/>zoomFactor-number	default-1
 ///<br/><br/>
@@ -20207,6 +20223,9 @@ jQuery.fn.ejReportViewer = function (options) {
 ///<br/><br/>
 ///Enables and disables the PageVirtualization.
 ///<br/>enablePageVirtualization-boolean	default-false
+///<br/><br/>
+///Gets or sets the showExceptionsInDialog for report viewer.
+///<br/>showExceptionsInDialog-boolean	default-false
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options

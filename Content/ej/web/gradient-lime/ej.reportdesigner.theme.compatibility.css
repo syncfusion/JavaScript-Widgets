@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.compatibility.css
-*  version : 17.3.0.9
+*  version : 17.3.0.14
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -601,10 +601,10 @@
 .e-js .e-rptdesigner-ejwidgets-splitbtn {
   color: #686969 !important;
 }
-.e-js .e-rptdesigner-toolbarli.e-hover .e-rptdesigner-ejwidgets-splitbtn {
+.e-js .e-rptdesigner-toolbarli.e-hover:not(.e-active) .e-rptdesigner-ejwidgets-splitbtn {
   
 }
-.e-js .e-rptdesigner-toolbarli.e-hover .e-rptdesigner-ejwidgets-splitbtn {
+.e-js .e-rptdesigner-toolbarli.e-hover:not(.e-active) .e-rptdesigner-ejwidgets-splitbtn {
   color: #282827 !important;
 }
 .e-js .e-rptdesigner-preview {
@@ -806,14 +806,110 @@
 .e-js .e-rptdesigner-prop-num {
   border: 0 solid #c8c8c8;
 }
-.e-js .e-rptdesigner-format-input {
+.e-js .e-rptdesigner-format-input,
+.e-js .e-rptdesigner-link-input {
   border-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.e-js .e-rptdesigner-format-btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.e-js .e-rptdesigner-link-input[disabled] {
+  opacity: 0.2 !important;
+}
+.e-js .e-rptdesigner-format-btn,
+.e-js .e-rptdesigner-browse-btn {
+  border-radius: 0px 4px 4px 0px !important;
+  opacity: 1px !important;
+  
+}
+.e-js .e-rptdesigner-format-btn,
+.e-js .e-rptdesigner-browse-btn {
+  color: #333333;
+  border: 1px solid #c8c8c8;
+}
+.e-js .e-rptdesigner-format-btn,
+.e-js .e-rptdesigner-browse-btn {
+  background: whitesmoke;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, whitesmoke, #dddddd);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(100%, #dddddd));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, whitesmoke, #dddddd);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, whitesmoke, #dddddd);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, whitesmoke, #dddddd);
+  /* IE10+ */
+  background: linear-gradient(to bottom, whitesmoke, #dddddd);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='whitesmoke', endColorstr='#dddddd', GradientType=0);
+  /* IE6-9 */
+
+}
+.e-js .e-rptdesigner-format-btn:hover,
+.e-js .e-rptdesigner-browse-btn:hover {
+  
+}
+.e-js .e-rptdesigner-format-btn:hover,
+.e-js .e-rptdesigner-browse-btn:hover {
+  border-color: #c8c8c8;
+  color: #282827;
+}
+.e-js .e-rptdesigner-format-btn:hover,
+.e-js .e-rptdesigner-browse-btn:hover {
+  background: #e7f1c9;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e7f1c9, #d3e59b);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e7f1c9), color-stop(100%, #d3e59b));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e7f1c9, #d3e59b);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e7f1c9, #d3e59b);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e7f1c9, #d3e59b);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e7f1c9, #d3e59b);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e7f1c9', endColorstr='#d3e59b', GradientType=0);
+  /* IE6-9 */
+
+}
+.e-js .e-rptdesigner-format-btn[disabled],
+.e-js .e-rptdesigner-format-btn[disabled]:hover,
+.e-js .e-rptdesigner-browse-btn[disabled],
+.e-js .e-rptdesigner-browse-btn[disabled]:hover {
+  opacity: 0.2 !important;
+  
+}
+.e-js .e-rptdesigner-format-btn[disabled],
+.e-js .e-rptdesigner-format-btn[disabled]:hover,
+.e-js .e-rptdesigner-browse-btn[disabled],
+.e-js .e-rptdesigner-browse-btn[disabled]:hover {
+  color: #333333;
+  border-color: #c8c8c8;
+}
+.e-js .e-rptdesigner-format-btn[disabled],
+.e-js .e-rptdesigner-format-btn[disabled]:hover,
+.e-js .e-rptdesigner-browse-btn[disabled],
+.e-js .e-rptdesigner-browse-btn[disabled]:hover {
+  background: whitesmoke;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, whitesmoke, #dddddd);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(100%, #dddddd));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, whitesmoke, #dddddd);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, whitesmoke, #dddddd);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, whitesmoke, #dddddd);
+  /* IE10+ */
+  background: linear-gradient(to bottom, whitesmoke, #dddddd);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='whitesmoke', endColorstr='#dddddd', GradientType=0);
+  /* IE6-9 */
+
 }
 .e-js .e-rptdesigner-browse-icon {
   font-size: 16.5px;
@@ -1313,6 +1409,16 @@
 .e-js .e-designer-menu > li > ul {
   border-radius: 4px;
 }
+.e-js .e-designer-menu.e-menu.e-context .e-list:not(.e-disable-item):hover {
+  
+}
+.e-js .e-designer-menu.e-menu.e-context .e-active {
+  
+}
+.e-js .e-designer-menu.e-menu.e-context .e-mhover > .e-menulink,
+.e-js .e-designer-menu.e-menu.e-context .e-active > .e-menulink {
+  
+}
 .e-js .e-designer-menu .e-menulink,
 .e-js .e-rptdesigner-designbutton {
   font-size: 13px !important;
@@ -1470,7 +1576,6 @@
   font-size: 14px;
 }
 .e-js .e-rptdesigner-box-sizing,
-.e-js .e-reportdesigner-designArea,
 .e-js .e-rptdesigner-pg-tag {
   -webkit-box-sizing: content-box !important;
   -moz-box-sizing: content-box !important;
@@ -1580,7 +1685,8 @@
 .e-js .e-rptdesigner-noRecords,
 .e-js .e-rptdesigner-tablix-searchtxtbx,
 .e-js .e-designer-tablix-alert-radiobtn .e-text,
-.e-js .e-rptdesigner-prop-btn.e-txt {
+.e-js .e-rptdesigner-prop-btn.e-txt,
+.e-js .e-rptdesigner-btnText {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 .e-js.e-textarea-codeeditor .CodeMirror {
@@ -2560,7 +2666,21 @@
 .e-js .e-reportdesigner-infoIcon-border {
   border-left: 1px solid #dedede;
 }
+.e-widget .e-designer-codeTip a {
+  
+}
 /*************************************Code Module End******************************************/
+
+/*************************************Data Field Search [Start] ******************************************/
+
+.e-js .e-rptdesigner-datafield-search-box {
+  background-color: white;
+  
+}
+.e-js .e-rptdesigner-datafield-search-box {
+  border: 1px solid #c8c8c8;
+}
+/*************************************Data Field Search [End] ******************************************/
 
 /*------------------------------querydesigner toolbar Start-------------------------------*/
 

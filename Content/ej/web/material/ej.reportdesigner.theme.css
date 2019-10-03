@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.reportdesigner.theme.css
-*  version : 17.3.0.9
+*  version : 17.3.0.14
 *  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -598,10 +598,10 @@
 .e-rptdesigner-ejwidgets-splitbtn {
   color: rgba(0, 0, 0, 0.54) !important;
 }
-.e-rptdesigner-toolbarli.e-hover .e-rptdesigner-ejwidgets-splitbtn {
+.e-rptdesigner-toolbarli.e-hover:not(.e-active) .e-rptdesigner-ejwidgets-splitbtn {
   
 }
-.e-rptdesigner-toolbarli.e-hover .e-rptdesigner-ejwidgets-splitbtn {
+.e-rptdesigner-toolbarli.e-hover:not(.e-active) .e-rptdesigner-ejwidgets-splitbtn {
   color: #424242 !important;
 }
 .e-rptdesigner-preview {
@@ -738,14 +738,55 @@
 .e-rptdesigner-prop-num {
   border: 0 solid #e0e0e0;
 }
-.e-rptdesigner-format-input {
+.e-rptdesigner-format-input,
+.e-rptdesigner-link-input {
   border-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.e-rptdesigner-format-btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.e-rptdesigner-link-input[disabled] {
+  opacity: 0.2 !important;
+}
+.e-rptdesigner-format-btn,
+.e-rptdesigner-browse-btn {
+  border-radius: 0px 4px 4px 0px !important;
+  opacity: 1px !important;
+  
+}
+.e-rptdesigner-format-btn,
+.e-rptdesigner-browse-btn {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fafafa;
+  border: 1px none #fafafa;
+}
+.e-rptdesigner-format-btn:hover,
+.e-rptdesigner-browse-btn:hover {
+  
+}
+.e-rptdesigner-format-btn:hover,
+.e-rptdesigner-browse-btn:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background-color: rgba(0, 0, 0, 0.12);
+  font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial;
+}
+.e-rptdesigner-format-btn[disabled],
+.e-rptdesigner-format-btn[disabled]:hover,
+.e-rptdesigner-browse-btn[disabled],
+.e-rptdesigner-browse-btn[disabled]:hover {
+  opacity: 0.2 !important;
+  
+}
+.e-rptdesigner-format-btn[disabled],
+.e-rptdesigner-format-btn[disabled]:hover,
+.e-rptdesigner-browse-btn[disabled],
+.e-rptdesigner-browse-btn[disabled]:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.38);
+  border: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.26);
+  background-color: #fafafa;
+  font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial;
+  border-color: #fafafa;
 }
 .e-rptdesigner-browse-icon {
   font-size: 16.5px;
@@ -1134,6 +1175,16 @@
 .e-designer-menu > li > ul {
   border-radius: 2px;
 }
+.e-designer-menu.e-menu.e-context .e-list:not(.e-disable-item):hover {
+  background: #cccccc !important;
+}
+.e-designer-menu.e-menu.e-context .e-active {
+  background: #bdbdbd !important;
+}
+.e-designer-menu.e-menu.e-context .e-mhover > .e-menulink,
+.e-designer-menu.e-menu.e-context .e-active > .e-menulink {
+  background: transparent !important;
+}
 .e-designer-menu .e-menulink,
 .e-rptdesigner-designbutton {
   font-size: 13px !important;
@@ -1274,7 +1325,6 @@
   font-size: 14px;
 }
 .e-rptdesigner-box-sizing,
-.e-reportdesigner-designArea,
 .e-rptdesigner-pg-tag {
   -webkit-box-sizing: content-box !important;
   -moz-box-sizing: content-box !important;
@@ -1384,7 +1434,8 @@
 .e-rptdesigner-noRecords,
 .e-rptdesigner-tablix-searchtxtbx,
 .e-designer-tablix-alert-radiobtn .e-text,
-.e-rptdesigner-prop-btn.e-txt {
+.e-rptdesigner-prop-btn.e-txt,
+.e-rptdesigner-btnText {
   font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial' !important;
 }
 .e-textarea-codeeditor .CodeMirror {
@@ -2169,7 +2220,21 @@
 .e-reportdesigner-infoIcon-border {
   border-left: 1px solid #dedede;
 }
+.e-designer-codeTip a {
+  color: #f380aa !important;
+}
 /*************************************Code Module End******************************************/
+
+/*************************************Data Field Search [Start] ******************************************/
+
+.e-rptdesigner-datafield-search-box {
+  background-color: white;
+  
+}
+.e-rptdesigner-datafield-search-box {
+  border-bottom: 1px solid #e0e0e0;
+}
+/*************************************Data Field Search [End] ******************************************/
 
 /*------------------------------querydesigner toolbar Start-------------------------------*/
 
