@@ -1106,6 +1106,9 @@ padding-bottom:7px;
         .e-menu.e-horizontal.e-menu-responsive li.e-list,.e-menu.e-vertical.e-menu-responsive,.e-menu.e-vertical.e-menu-responsive li.e-list  {
         display: block;
         }
+        .e-menu.e-horizontal.e-menu-responsive li.e-list.e-hidden-item {
+            display: none;
+        }
     .e-menu.e-horizontal.e-menu-responsive li.e-list > ul, .e-menu.e-horizontal.e-menu-responsive  li.e-list,.e-menu.e-vertical.e-menu-responsive li.e-list > ul, .e-menu.e-vertical.e-menu-responsive  li.e-list  {
         position: static;
         }
