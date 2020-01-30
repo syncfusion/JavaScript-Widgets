@@ -563,8 +563,8 @@
     }
 
     .e-menu, input.e-input, input[type="text"].e-input, .e-widget.e-mask, .e-ul,  .e-btn .e-btn-span, .e-widget  .e-tbtn.e-chkbx-hidden,  .e-widget.e-datepicker table,  .e-widget.e-datepicker table th,  .e-widget.e-datepicker table td,
-    .e-menu.e-horizontal > .e-list, .e-menu.e-vertical > li.e-separator, .e-menu.e-context > li.e-separator, .e-js.e-tab.e-js > .e-header, .e-js.e-uploadbox .e-action-perform,
-    .e-js.e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content, .e-js.e-tagcloud .e-load, .e-scale, .e-select, .e-input.e-placeholder {
+    .e-menu.e-horizontal > .e-list, .e-menu.e-vertical > li.e-separator, .e-menu.e-context > li.e-separator, .e-js.e-tab.e-js > .e-header, .e-widget.e-uploadbox .e-action-perform,
+    .e-widget.e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content, .e-js.e-tagcloud .e-load, .e-scale, .e-select, .e-input.e-placeholder {
         margin: 0;
         padding: 0;
         outline: 0 none;
@@ -574,7 +574,7 @@
     .e-btn,  .e-btn .e-btn-span,  .e-widget.e-datepicker .e-header .e-next,  .e-widget.e-datepicker .e-header .e-prev,  .e-widget.e-datepicker .e-header .e-text, .e-menu > .e-list > a > img, .e-menu > .e-list > span > img,
     .e-menu > .e-list > a > div, .e-menu > .e-list > span > div, .e-menu > .e-list > a > span, .e-menu > .e-list > span > span, .e-menu .e-list > a span.e-icon, .e-menu .e-list > span span.e-icon, .e-menu.e-horizontal > .e-list,
     .e-menu.e-vertical, .e-menu.e-context,  .e-widget.e-chkbox-wrap,  .e-widget.e-radiobtn-wrap,  .e-widget.e-chkbox-wrap div,  .e-widget.e-chkbox-wrap .e-text,  .e-widget.e-radiobtn-wrap .e-text,
-    .e-js.e-tab.e-js > .e-header, .e-js.e-tab .e-header li, .e-js.e-tab .e-header li a, .e-widget.e-dialog .e-dialog-icon, .e-widget.e-dialog .e-icon, .e-js.e-uploadbox .e-selectpart, .e-js.e-uploadbox .e-file-list,
+    .e-js.e-tab.e-js > .e-header, .e-js.e-tab .e-header li, .e-js.e-tab .e-header li a, .e-widget.e-dialog .e-dialog-icon, .e-widget.e-dialog .e-icon, .e-js.e-uploadbox .e-selectpart, .e-widget.e-uploadbox .e-file-list,
     .e-js.e-treeview .e-text, .e-js.e-tagcloud .e-cloud, .e-js.e-tagcloud .e-list, .e-js.e-tagcloud .e-cloud .e-tagitems, .e-h-scale .e-tick, .e-grid .e-groupheadercell,
     .e-grid .e-groupheadercell:hover, .e-js.e-pager, .e-js.e-pager .e-disableditem, .e-grid div.e-parentmsgbar, .e-grid .e-toolbaricons,  .e-js.e-pager .e-pagercontainer {
         display: inline-block;
@@ -584,7 +584,7 @@
         list-style-type: none;
     }
 
-    input.e-input, input[type="text"].e-input, .e-input.e-placeholder {
+    .e-widget input.e-input, .e-widget input[type="text"].e-input,.e-widget.e-input.e-placeholder, .e-widget .e-input.e-placeholder {
         border: medium none;
         height: 100%;
         width: 100%;
@@ -975,11 +975,11 @@
         }
     }
 
-    .e-textbox {
+    .e-textbox:not(.e-control) {
         height: @input-height;
     }
 
-    .e-textbox, .e-textarea {
+    .e-textbox:not(.e-control), .e-textarea:not(.e-control) {
         line-height: 1.908em;
         outline: medium none;
         border: 1px solid;
@@ -6581,7 +6581,7 @@
         .border-radius(@border-radius);
     }
 
-    .e-js.e-uploadbox .e-action-container {
+    .e-widget.e-uploadbox .e-action-container {
         width: 233px;
 
         & when (@skin="material") {
@@ -6628,11 +6628,11 @@
         filter: alpha(opacity=0);
     }
 
-    .e-js.e-uploadbox .e-ul {
+    .e-widget.e-uploadbox .e-ul {
         width: 100%;
     }
 
-    .e-js.e-uploadbox .e-file-list {
+    .e-widget.e-uploadbox .e-file-list {
         & when (@skin= "material") {
             /*material*/
             height: 64px;
@@ -6650,7 +6650,7 @@
         position: relative;
     }
 
-    .e-js.e-uploadbox .e-file-list .file-status {
+    .e-widget.e-uploadbox .e-file-list .file-status {
         float: left;
         min-width: 77px;
         padding-right: 0;
@@ -6658,11 +6658,11 @@
         text-align: right;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-file-view {
+    .e-widget.e-uploadbox .e-file-list .e-file-view {
         height: 85%;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-file-percentage {
+    .e-widget.e-uploadbox .e-file-list .e-file-percentage {
         float: left;
         padding-left: 0;
         padding-right: 0;
@@ -6671,21 +6671,21 @@
         font-size: 10px;
     }
 
-    .e-js.e-uploadbox .e-file-progress {
+    .e-widget.e-uploadbox .e-file-progress {
         float: left;
         width: 200px;
         position: relative;
         overflow: hidden;
     }
 
-    .e-js.e-uploadbox .e-file-name {
+    .e-widget.e-uploadbox .e-file-name {
         display: block;
         height: 25px;
         text-align: left;
         width: 100%;
     }
 
-    .e-js.e-uploadbox .e-file-progress-bar {
+    .e-widget.e-uploadbox .e-file-progress-bar {
         & when (@skin= "material") {
             /*material*/
             height: 5px;
@@ -6711,7 +6711,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-ul > li {
+    .e-widget.e-uploadbox .e-ul > li {
         width: 100%;
 
         & when (@skin= "material") {
@@ -6725,12 +6725,12 @@
         }
     }
 
-    .e-js.e-uploadbox .e-ul li .e-file-list {
+    .e-widget.e-uploadbox .e-ul li .e-file-list {
         width: 100%;
         clear: both;
     }
 
-    .e-js.e-uploadbox .e-file-progress-status {
+    .e-widget.e-uploadbox .e-file-progress-status {
         & when (@skin= "material") {
             /*material*/
             height: 5px;
@@ -6751,7 +6751,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-file-list .e-file-size {
+    .e-widget.e-uploadbox .e-file-list .e-file-size {
         float: left;
         min-width: 100px;
         padding-left: 0;
@@ -6759,16 +6759,16 @@
         width: 100px;
     }
 
-    .e-js.e-uploadbox .e-file-name .e-file-name-txt, .e-uploadbox .e-drag-wrapper .e-file-name .e-file-name-txt, .e-uploadbox .e-file-head.e-head-name, .e-uploadbox .e-drag-wrapper .e-file-head.e-head-name {
+    .e-widget.e-uploadbox .e-file-name .e-file-name-txt, .e-uploadbox .e-drag-wrapper .e-file-name .e-file-name-txt, .e-uploadbox .e-file-head.e-head-name, .e-uploadbox .e-drag-wrapper .e-file-head.e-head-name {
         text-indent: 16px;
     }
 
-    .e-js.e-uploadbox .e-file-size .e-file-name-txt {
+    .e-widget.e-uploadbox .e-file-size .e-file-name-txt {
         left: -11px;
         text-align: left;
     }
 
-    .e-js.e-uploadbox .e-file-name-txt {
+    .e-widget.e-uploadbox .e-file-name-txt {
         position: relative;
         top: 13px;
         font-weight: @content-font-weight;
@@ -6779,7 +6779,7 @@
         text-indent: 20px;
     }
 
-    .e-js.e-uploadbox .e-file-upload {
+    .e-widget.e-uploadbox .e-file-upload {
         & when (@skin= "material") {
             /*material*/
             padding: 0;
@@ -6800,7 +6800,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-uploadbtn, .e-uploadbox .e-uploadclosebtn {
+    .e-widget.e-uploadbox .e-uploadbtn, .e-uploadbox .e-uploadclosebtn {
         font-weight: @content-font-weight;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -6828,23 +6828,23 @@
         margin: 0;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-icon.e-file-cancel:before,
-    .e-js.e-uploadbox.e-rtl .e-icon.e-delete:before,
-    .e-js.e-uploadbox.e-rtl .e-icon.e-reload:before {
+    .e-widget.e-uploadbox.e-rtl .e-icon.e-file-cancel:before,
+    .e-widget.e-uploadbox.e-rtl .e-icon.e-delete:before,
+    .e-widget.e-uploadbox.e-rtl .e-icon.e-reload:before {
         top: 0px;
         left: 2px;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-name-txt, .e-js.e-mobile-upload.e-uploadbox.e-dialog.e-rtl .e-file-name-txt {
+    .e-widget.e-uploadbox.e-rtl .e-file-name-txt, .e-widget.e-mobile-upload.e-uploadbox.e-dialog.e-rtl .e-file-name-txt {
         text-align: right;
         left: 0px;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-view, .e-js.e-uploadbox.e-rtl .e-file-head, .e-js.e-uploadbox.e-rtl .e-action-perform, .e-js.e-uploadbox.e-rtl .e-icon.e-file-cancel {
+    .e-widget.e-uploadbox.e-rtl .e-file-view, .e-widget.e-uploadbox.e-rtl .e-file-head, .e-widget.e-uploadbox.e-rtl .e-action-perform, .e-widget.e-uploadbox.e-rtl .e-icon.e-file-cancel {
         float: right;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-action-perform {
+    .e-widget.e-uploadbox.e-rtl .e-action-perform {
         margin-left: 0px;
 
         & when (@skin= "material") {
@@ -6858,32 +6858,32 @@
         }
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-progress-bar {
+    .e-widget.e-uploadbox.e-rtl .e-file-progress-bar {
         & when (@skin= "material") {
             /*material*/
             margin-right: 30px;
         }
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-size .e-file-name-txt {
+    .e-widget.e-uploadbox.e-rtl .e-file-size .e-file-name-txt {
         left: 10px;
         text-align: right;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-list {
+    .e-widget.e-uploadbox.e-rtl .e-file-list {
         text-align: right;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-upload-file .e-icon {
+    .e-widget.e-uploadbox.e-rtl .e-upload-file .e-icon {
         margin-right: 35%;
         left: 0;
     }
 
-    .e-js.e-uploadbox .e-file-progress {
+    .e-widget.e-uploadbox .e-file-progress {
         border: @border-size @border-type transparent;
     }
 
-    .e-js.e-uploadbox .e-upload-progress {
+    .e-widget.e-uploadbox .e-upload-progress {
         border: @border-size @border-type transparent;
     }
 
@@ -6903,7 +6903,7 @@
             width: 30px;
         }
     }
-    .e-js.e-uploaddialog.e-dialog .e-ul .e-action-perform .e-icon {
+    .e-widget.e-uploaddialog.e-dialog .e-ul .e-action-perform .e-icon {
         float: left;
         margin-top: 5px;
         position: relative;
@@ -6919,7 +6919,7 @@
             width: 30px;
         }
     }
-    .e-js.e-uploadbox .e-file-list .e-checkmark, .e-js.e-uploadbox .e-file-list .e-file-percentage-failed {
+    .e-widget.e-uploadbox .e-file-list .e-checkmark, .e-widget.e-uploadbox .e-file-list .e-file-percentage-failed {
         margin-top: -5px;
         left: 43%;
         border-radius: 60px 60px 60px 60px;
@@ -6939,7 +6939,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-action-perform {
+    .e-widget.e-uploadbox .e-action-perform {
         border-radius: 4px 4px 4px 4px;
 
         & when (@skin= "material") {
@@ -6979,53 +6979,53 @@
         }
     }
 
-    .e-js.e-uploadbox.e-rtl .e-dialog .e-ul .e-action-perform .e-icon:before {
+    .e-widget.e-uploadbox.e-rtl .e-dialog .e-ul .e-action-perform .e-icon:before {
         & when (@skin= "material") {
             /*material*/
             margin-left: 3px;
         }
     }
 
-    .e-js.e-uploadbox .e-icon.e-checkmark:before {
+    .e-widget.e-uploadbox .e-icon.e-checkmark:before {
         top: 4px;
         position: relative;
         left: -3px;
     }
 
-    .e-js.e-uploadbox .e-head-name, .e-uploadbox .e-head-status {
+    .e-widget.e-uploadbox .e-head-name, .e-uploadbox .e-head-status {
         width: 200px;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-image-wrapper {
+    .e-widget.e-uploadbox .e-file-list .e-image-wrapper {
         height: 85%;
         padding: 0 5px;
         float: left;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-image-wrapper {
+    .e-widget.e-uploadbox .e-file-list .e-image-wrapper {
         text-align: left;
         width: 30px;
         margin-top: 1%;
         margin-left: 1%;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-image-wrapper .e-fileformat-image {
+    .e-widget.e-uploadbox .e-file-list .e-image-wrapper .e-fileformat-image {
         height: 40px;
         width: 40px;
         display: block;
     }
 
-    .e-js.e-uploadbox .e-file-progress {
+    .e-widget.e-uploadbox .e-file-progress {
         width: 200px;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-icon.e-file-percentage-failed:before, .e-js.e-uploadbox.e-rtl .e-icon.e-checkmark:before {
+    .e-widget.e-uploadbox.e-rtl .e-icon.e-file-percentage-failed:before, .e-widget.e-uploadbox.e-rtl .e-icon.e-checkmark:before {
         left: 3px;
     }
 
-    .e-js.e-uploadbox .e-icon.e-file-cancel:before,
-    .e-js.e-uploadbox .e-icon.e-delete:before,
-    .e-js.e-uploadbox .e-icon.e-reload:before {
+    .e-widget.e-uploadbox .e-icon.e-file-cancel:before,
+    .e-widget.e-uploadbox .e-icon.e-delete:before,
+    .e-widget.e-uploadbox .e-icon.e-reload:before {
         top: 0px;
         position: relative;
 
@@ -7042,7 +7042,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content {
+    .e-widget.e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content {
         position: relative;
         border: 0;
         background: none;
@@ -7100,7 +7100,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-file-head {
+    .e-widget.e-uploadbox .e-file-head {
         & when (@skin= "material") {
             /*material*/
             font-size: 13px;
@@ -7126,11 +7126,11 @@
         top: 30%;
     }
 
-    .e-js.e-uploadbox .e-head-size {
+    .e-widget.e-uploadbox .e-head-size {
         width: 100px;
     }
 
-    .e-js.e-uploadbox .e-file-head.e-head-status {
+    .e-widget.e-uploadbox .e-file-head.e-head-status {
         text-indent: 50px;
 
         & when (@skin= "material") {
@@ -7139,7 +7139,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-head-content {
+    .e-widget.e-uploadbox .e-head-content {
         & when (@skin= "material") {
             /*material*/
             height: 64px;
@@ -7161,14 +7161,14 @@
         width: 100%;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-head-content {
+    .e-widget.e-uploadbox.e-rtl .e-head-content {
         & when (@skin= "material") {
             /*material*/
             padding-right: 12px;
         }
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-upload {
+    .e-widget.e-uploadbox.e-rtl .e-file-upload {
         & when (@skin= "material") {
             /*material*/
             padding-right: 12px;
@@ -7176,11 +7176,11 @@
         }
     }
 
-    .e-js.e-uploadbox .e-dialog.e-widget-content {
+    .e-widget.e-uploadbox .e-dialog.e-widget-content {
         padding: 0px;
     }
 
-    .e-js.e-uploadbox .e-dialog.e-widget-content .e-icon {
+    .e-widget.e-uploadbox .e-dialog.e-widget-content .e-icon {
         display: block;
         vertical-align: middle;
     }
@@ -7349,7 +7349,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-icon.e-checkmark:before, .e-js.e-uploadbox .e-icon.e-file-percentage-failed:before {
+    .e-widget.e-uploadbox .e-icon.e-checkmark:before, .e-widget.e-uploadbox .e-icon.e-file-percentage-failed:before {
         position: relative;
 
         & when (@skin= "material") {

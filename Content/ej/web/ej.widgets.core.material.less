@@ -521,7 +521,7 @@
         list-style-type: none;
     }
 
-    input.e-input, input[type="text"].e-input, .e-input.e-placeholder {
+     input.e-input,  input[type="text"].e-input,.e-input.e-placeholder,  .e-input.e-placeholder {
         border: medium none;
         height: 100%;
         width: 100%;
@@ -912,11 +912,11 @@
         }
     }
 
-    .e-textbox {
+    .e-textbox:not(.e-control) {
         height: @input-height;
     }
 
-    .e-textbox, .e-textarea {
+    .e-textbox:not(.e-control), .e-textarea:not(.e-control) {
         line-height: 1.908em;
         outline: medium none;
         border: 1px solid;

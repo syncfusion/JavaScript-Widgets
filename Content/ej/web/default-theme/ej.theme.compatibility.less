@@ -15728,21 +15728,21 @@ border-bottom: @border-size @border-type @tab-background-color;
 		}
     } 
 }
-.e-js.e-uploadbox .e-file-size .e-file-name-txt {
+.e-widget.e-uploadbox .e-file-size .e-file-name-txt {
         & when (@skin= "material") {
         /*material*/  
        color:  fade(@base-font-color,38%);   
     } 
 }
-.e-js.e-uploadbox .e-file-list .e-file-status-failed 
+.e-widget.e-uploadbox .e-file-list .e-file-status-failed 
 {
     color: @error-font-color;
 }
-.e-js.e-uploadbox .e-file-list .e-file-status-success 
+.e-widget.e-uploadbox .e-file-list .e-file-status-success 
 {
    color: @content-font-color;
 }
-.e-js.e-uploadbox .e-file-progress-status 
+.e-widget.e-uploadbox .e-file-progress-status 
 {
    & when (@skin= "material") {
         /*material*/
@@ -15761,11 +15761,11 @@ border-bottom: @border-size @border-type @tab-background-color;
 		}
     } 
 }
-.e-js.e-uploadbox .e-file-list {
+.e-widget.e-uploadbox .e-file-list {
    background-color: @content-bg-color;
    color: @content-font-color;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
    & when (@skin= "office-365") {
 		border-bottom-width: 0px;
    }
@@ -15774,23 +15774,23 @@ border-bottom: @border-size @border-type @tab-background-color;
 		background-color: @content-bg-color;
 	}
 }
-.e-js.e-uploadbox .e-head-content {
+.e-widget.e-uploadbox .e-head-content {
 	& when (@skin= "office-365") {
 		background-color: @neutral-white;
 		border-bottom: @border-size @border-type @gdroparea-border-color ;
 	}
 }
-.e-js.e-uploadbox .e-ul li:last-child .e-file-list {
+.e-widget.e-uploadbox .e-ul li:last-child .e-file-list {
 	& when (@skin= "office-365") {
 		border-bottom: @border-size @border-type @gdroparea-border-color ;
 	}
 }
-.e-js.e-uploadbox .e-ul li .e-file-list {
+.e-widget.e-uploadbox .e-ul li .e-file-list {
 	& when (@skin= "office-365") {
 		background-color: @neutral-white;
 	}
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list, .e-js.e-uploadbox .e-head-content {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list, .e-widget.e-uploadbox .e-head-content {
 
 	& when not (@skin= "office-365") {
 		.material-upload-dialog-bg-color;
@@ -15798,7 +15798,7 @@ border-bottom: @border-size @border-type @tab-background-color;
 		border-bottom: @border-size @border-type @gdroparea-border-color ;
 	}
 }
-.e-js.e-uploadbox.e-dialog > .e-header + .e-dialog-scroller {
+.e-widget.e-uploadbox.e-dialog > .e-header + .e-dialog-scroller {
     border-top: 0px;
 }
 .e-js.e-mobile-upload.e-uploadbox .e-ul li:nth-child(even) .e-file-list, .e-js.e-mobile-upload.e-uploadbox .e-ul li:nth-child(odd) .e-file-list{
@@ -15813,7 +15813,7 @@ border-bottom: @border-size @border-type @tab-background-color;
 		background-color: @alt-row-bg-color;
 	}
 }
-.e-js.e-uploadbox .e-file-progress-bar {
+.e-widget.e-uploadbox .e-file-progress-bar {
      & when (@skin= "material") {
         /*material*/  
 	   background-color: fade(@base-font-color,12%);   
@@ -15830,7 +15830,7 @@ border-bottom: @border-size @border-type @tab-background-color;
 }
 /*Icons */
 
-.e-js.e-uploadbox .e-file-list .e-checkmark
+.e-widget.e-uploadbox .e-file-list .e-checkmark
 {
    background-color:#39b54a;
    color:@active-font-color;
@@ -15840,7 +15840,7 @@ border-bottom: @border-size @border-type @tab-background-color;
 	   margin-top: 4px;
     } 
 }
-.e-js.e-uploadbox .e-file-list .e-file-percentage-failed 
+.e-widget.e-uploadbox .e-file-list .e-file-percentage-failed 
 {
    background-color:red;
    color:@active-font-color;
@@ -15851,7 +15851,7 @@ border-bottom: @border-size @border-type @tab-background-color;
     } 
 }
 
-.e-js.e-uploadbox.e-dialog .e-header{
+.e-widget.e-uploadbox.e-dialog .e-header{
      & when (@skin= "material") {
         /*material*/ 
        color: @base-font-color;  
@@ -15882,28 +15882,28 @@ border-bottom: @border-size @border-type @tab-background-color;
 font-size: 200px;
 }
 
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
     background-color: @content-bg-color;
 	color: @default-icon-color;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover {
     & when not (@skin="office-365") {
 		background-color: @alt-row-bg-color;
 		color: @default-icon-color;
 	}
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
 	& when not (@skin="office-365") {
 		.hover-gradient();
 		color: @hover-icon-color;
 		border-color:@hover-bg-stcolor;
 	}
 }
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover{     
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover{     
     background:none;
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select{
@@ -15921,6 +15921,7 @@ font-size: 200px;
     .high-contrast-upload-btn-hover-color;
     .material-upload-background;
     background: @default-bg-stcolor;
+	color: @hover-font-color;
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select:active{ 
     & when (@skin="material") { 
@@ -15937,6 +15938,13 @@ font-size: 200px;
     }
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select{
+   & when not (@skin="material") {
+   & when not(@skin="office-365") {
+        .bs-default-gradient();
+        background: @default-bg-stcolor;
+        color: @default-font-color;
+    }
+	}
     & when (@skin="material") { 
         color: @accent-color;
         background: @content-bg-color;

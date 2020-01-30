@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.compatibility.css
-*  version : 17.4.0.39
-*  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
+*  version : 17.4.0.46
+*  Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
 *  licensing@syncfusion.com. Any infringement will be prosecuted under
@@ -12072,50 +12072,50 @@ input[type="text"].e-input {
 .e-js.e-uploadbox .e-file-name-txt {
   color: #333333;
 }
-.e-js.e-uploadbox .e-file-size .e-file-name-txt {
+.e-widget.e-uploadbox .e-file-size .e-file-name-txt {
   
 }
-.e-js.e-uploadbox .e-file-list .e-file-status-failed {
+.e-widget.e-uploadbox .e-file-list .e-file-status-failed {
   color: #cd0a0a;
 }
-.e-js.e-uploadbox .e-file-list .e-file-status-success {
+.e-widget.e-uploadbox .e-file-list .e-file-status-success {
   color: #212121;
 }
-.e-js.e-uploadbox .e-file-progress-status {
+.e-widget.e-uploadbox .e-file-progress-status {
   
 }
-.e-js.e-uploadbox .e-file-progress-status {
+.e-widget.e-uploadbox .e-file-progress-status {
   
 }
-.e-js.e-uploadbox .e-file-progress-status {
+.e-widget.e-uploadbox .e-file-progress-status {
   background: #0078d7;
   border-color: #0078d7;
 }
-.e-js.e-uploadbox .e-file-list {
+.e-widget.e-uploadbox .e-file-list {
   background-color: white;
   color: #212121;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
   
 }
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
   border-bottom-width: 0px;
 }
-.e-js.e-uploadbox .e-head-content {
+.e-widget.e-uploadbox .e-head-content {
   background-color: white;
   border-bottom: 1px solid #c8c8c8;
 }
-.e-js.e-uploadbox .e-ul li:last-child .e-file-list {
+.e-widget.e-uploadbox .e-ul li:last-child .e-file-list {
   border-bottom: 1px solid #c8c8c8;
 }
-.e-js.e-uploadbox .e-ul li .e-file-list {
+.e-widget.e-uploadbox .e-ul li .e-file-list {
   background-color: white;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list,
-.e-js.e-uploadbox .e-head-content {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list,
+.e-widget.e-uploadbox .e-head-content {
   
 }
-.e-js.e-uploadbox.e-dialog > .e-header + .e-dialog-scroller {
+.e-widget.e-uploadbox.e-dialog > .e-header + .e-dialog-scroller {
   border-top: 0px;
 }
 .e-js.e-mobile-upload.e-uploadbox .e-ul li:nth-child(even) .e-file-list,
@@ -12128,40 +12128,40 @@ input[type="text"].e-input {
 .e-js.e-uploadbox .e-file-upload {
   background-color: white;
 }
-.e-js.e-uploadbox .e-file-progress-bar {
+.e-widget.e-uploadbox .e-file-progress-bar {
   
 }
-.e-js.e-uploadbox .e-file-progress-bar {
+.e-widget.e-uploadbox .e-file-progress-bar {
   
 }
-.e-js.e-uploadbox .e-file-progress-bar {
+.e-widget.e-uploadbox .e-file-progress-bar {
   background-color: #eaeaea;
 }
 /*Icons */
 
-.e-js.e-uploadbox .e-file-list .e-checkmark {
+.e-widget.e-uploadbox .e-file-list .e-checkmark {
   background-color: #39b54a;
   color: white;
   border-radius: 10px;
   
 }
-.e-js.e-uploadbox .e-file-list .e-file-percentage-failed {
+.e-widget.e-uploadbox .e-file-list .e-file-percentage-failed {
   background-color: red;
   color: white;
   border-radius: 10px;
   
 }
-.e-js.e-uploadbox.e-dialog .e-header {
+.e-widget.e-uploadbox.e-dialog .e-header {
   
   border-color: #c8c8c8;
   border-bottom: none;
 }
-.e-js.e-uploadbox.e-dialog .e-header {
+.e-widget.e-uploadbox.e-dialog .e-header {
   /*other*/
 
   
 }
-.e-js.e-uploadbox.e-dialog .e-header {
+.e-widget.e-uploadbox.e-dialog .e-header {
   color: #333333;
   font-size: 21px;
   font-weight: 100;
@@ -12170,21 +12170,21 @@ input[type="text"].e-input {
 .e-js.e-uploadbox .e-uploadinput {
   font-size: 200px;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
   background-color: white;
   color: #666666;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover {
   
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
   
 }
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
   background: none;
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select {
@@ -12195,6 +12195,7 @@ input[type="text"].e-input {
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select:hover {
   background: #eaeaea;
+  color: #212121;
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select:active {
   
@@ -12205,6 +12206,9 @@ input[type="text"].e-input {
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select:active {
   background-color: #0078d7;
   color: white;
+}
+.e-js .e-uploaddialog.e-dialog .e-btn.e-select {
+  
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select {
   

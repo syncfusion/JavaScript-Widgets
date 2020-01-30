@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.compatibility.css
-*  version : 17.4.0.39
-*  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
+*  version : 17.4.0.46
+*  Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
 *  licensing@syncfusion.com. Any infringement will be prosecuted under
@@ -13275,27 +13275,27 @@ input[type="text"].e-input {
 .e-js.e-uploadbox .e-file-name-txt {
   color: #333333;
 }
-.e-js.e-uploadbox .e-file-size .e-file-name-txt {
+.e-widget.e-uploadbox .e-file-size .e-file-name-txt {
   
 }
-.e-js.e-uploadbox .e-file-list .e-file-status-failed {
+.e-widget.e-uploadbox .e-file-list .e-file-status-failed {
   color: #cd0a0a;
 }
-.e-js.e-uploadbox .e-file-list .e-file-status-success {
+.e-widget.e-uploadbox .e-file-list .e-file-status-success {
   color: #333333;
 }
-.e-js.e-uploadbox .e-file-progress-status {
+.e-widget.e-uploadbox .e-file-progress-status {
   
 }
-.e-js.e-uploadbox .e-file-progress-status {
+.e-widget.e-uploadbox .e-file-progress-status {
   
 }
-.e-js.e-uploadbox .e-file-progress-status {
+.e-widget.e-uploadbox .e-file-progress-status {
   /*other*/
 
   border-color: #c8c8c8;
 }
-.e-js.e-uploadbox .e-file-progress-status {
+.e-widget.e-uploadbox .e-file-progress-status {
   background: #74c3e7;
   /* Old browsers */
   background: -moz-linear-gradient(top, #74c3e7, #179bd7);
@@ -13314,32 +13314,32 @@ input[type="text"].e-input {
   /* IE6-9 */
 
 }
-.e-js.e-uploadbox .e-file-list {
+.e-widget.e-uploadbox .e-file-list {
   background-color: white;
   color: #333333;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
   
 }
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list {
   border-bottom: 1px solid #c8c8c8;
   background-color: white;
 }
-.e-js.e-uploadbox .e-head-content {
+.e-widget.e-uploadbox .e-head-content {
   
 }
-.e-js.e-uploadbox .e-ul li:last-child .e-file-list {
+.e-widget.e-uploadbox .e-ul li:last-child .e-file-list {
   
 }
-.e-js.e-uploadbox .e-ul li .e-file-list {
+.e-widget.e-uploadbox .e-ul li .e-file-list {
   
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list,
-.e-js.e-uploadbox .e-head-content {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list,
+.e-widget.e-uploadbox .e-head-content {
   background-color: #f7f7f7;
   border-bottom: 1px solid #c8c8c8;
 }
-.e-js.e-uploadbox.e-dialog > .e-header + .e-dialog-scroller {
+.e-widget.e-uploadbox.e-dialog > .e-header + .e-dialog-scroller {
   border-top: 0px;
 }
 .e-js.e-mobile-upload.e-uploadbox .e-ul li:nth-child(even) .e-file-list,
@@ -13352,41 +13352,41 @@ input[type="text"].e-input {
 .e-js.e-uploadbox .e-file-upload {
   background-color: #f7f7f7;
 }
-.e-js.e-uploadbox .e-file-progress-bar {
+.e-widget.e-uploadbox .e-file-progress-bar {
   
 }
-.e-js.e-uploadbox .e-file-progress-bar {
+.e-widget.e-uploadbox .e-file-progress-bar {
   
 }
-.e-js.e-uploadbox .e-file-progress-bar {
+.e-widget.e-uploadbox .e-file-progress-bar {
   /*other*/
   border: 1px solid #c8c8c8;
 }
 /*Icons */
 
-.e-js.e-uploadbox .e-file-list .e-checkmark {
+.e-widget.e-uploadbox .e-file-list .e-checkmark {
   background-color: #39b54a;
   color: white;
   border-radius: 10px;
   
 }
-.e-js.e-uploadbox .e-file-list .e-file-percentage-failed {
+.e-widget.e-uploadbox .e-file-list .e-file-percentage-failed {
   background-color: red;
   color: white;
   border-radius: 10px;
   
 }
-.e-js.e-uploadbox.e-dialog .e-header {
+.e-widget.e-uploadbox.e-dialog .e-header {
   
   border-color: #c8c8c8;
   border-bottom: 3px solid #74c3e7;
 }
-.e-js.e-uploadbox.e-dialog .e-header {
+.e-widget.e-uploadbox.e-dialog .e-header {
   /*other*/
 
   
 }
-.e-js.e-uploadbox.e-dialog .e-header {
+.e-widget.e-uploadbox.e-dialog .e-header {
   color: #282827;
   font-size: 23px;
   font-weight: normal;
@@ -13394,23 +13394,23 @@ input[type="text"].e-input {
 .e-js.e-uploadbox .e-uploadinput {
   font-size: 200px;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
   background-color: white;
   color: #686969;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover {
   background-color: #f7f7f7;
   color: #686969;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
   color: #282827;
   border-color: #c5e6f5;
 }
-.e-js.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
-.e-js.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
+.e-widget.e-uploadbox .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
   background: #c5e6f5;
   /* Old browsers */
   background: -moz-linear-gradient(top, #c5e6f5, #96d2ed);
@@ -13429,8 +13429,8 @@ input[type="text"].e-input {
   /* IE6-9 */
 
 }
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
-.e-js.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(even) .e-file-list .e-action-perform:hover,
+.e-widget.e-uploadbox.e-disable .e-ul li:nth-child(odd) .e-file-list .e-action-perform:hover {
   background: none;
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select {
@@ -13441,6 +13441,7 @@ input[type="text"].e-input {
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select:hover {
   background: whitesmoke;
+  color: #282827;
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select:active {
   
@@ -13453,6 +13454,29 @@ input[type="text"].e-input {
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select {
   
+}
+.e-js .e-uploaddialog.e-dialog .e-btn.e-select {
+  background: whitesmoke;
+  color: #333333;
+}
+.e-js .e-uploaddialog.e-dialog .e-btn.e-select {
+  background: whitesmoke;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, whitesmoke, #dddddd);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(100%, #dddddd));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, whitesmoke, #dddddd);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, whitesmoke, #dddddd);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, whitesmoke, #dddddd);
+  /* IE10+ */
+  background: linear-gradient(to bottom, whitesmoke, #dddddd);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='whitesmoke', endColorstr='#dddddd', GradientType=0);
+  /* IE6-9 */
+
 }
 .e-js .e-uploaddialog.e-dialog .e-btn.e-select {
   

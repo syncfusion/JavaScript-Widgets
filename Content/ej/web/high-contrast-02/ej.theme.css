@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.css
-*  version : 17.4.0.39
-*  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
+*  version : 17.4.0.46
+*  Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
 *  licensing@syncfusion.com. Any infringement will be prosecuted under
@@ -11323,6 +11323,7 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-uploaddialog.e-dialog .e-btn.e-select:hover {
   background: #1010af;
+  color: white;
 }
 .e-uploaddialog.e-dialog .e-btn.e-select:active {
   
@@ -11335,6 +11336,13 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-uploaddialog.e-dialog .e-btn.e-select {
   
+}
+.e-uploaddialog.e-dialog .e-btn.e-select {
+  background: black;
+  color: white;
+}
+.e-uploaddialog.e-dialog .e-btn.e-select {
+  background: black;
 }
 .e-uploaddialog.e-dialog .e-btn.e-select {
   

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.css
-*  version : 17.4.0.39
-*  Copyright Syncfusion Inc. 2001 - 2019. All rights reserved.
+*  version : 17.4.0.46
+*  Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
 *  licensing@syncfusion.com. Any infringement will be prosecuted under
@@ -14140,6 +14140,7 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-uploaddialog.e-dialog .e-btn.e-select:hover {
   background: #4d4d4d;
+  color: #dddddd;
 }
 .e-uploaddialog.e-dialog .e-btn.e-select:active {
   
@@ -14152,6 +14153,29 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-uploaddialog.e-dialog .e-btn.e-select {
   
+}
+.e-uploaddialog.e-dialog .e-btn.e-select {
+  background: #4d4d4d;
+  color: #dddddd;
+}
+.e-uploaddialog.e-dialog .e-btn.e-select {
+  background: #4d4d4d;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4d4d4d, #212121);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(100%, #212121));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4d4d4d, #212121);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4d4d4d, #212121);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4d4d4d, #212121);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4d4d4d, #212121);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4d4d', endColorstr='#212121', GradientType=0);
+  /* IE6-9 */
+
 }
 .e-uploaddialog.e-dialog .e-btn.e-select {
   

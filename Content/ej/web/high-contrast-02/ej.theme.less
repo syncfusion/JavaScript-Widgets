@@ -16047,6 +16047,7 @@ font-size: 200px;
     .high-contrast-upload-btn-hover-color;
     .material-upload-background;
     background: @default-bg-stcolor;
+	color: @hover-font-color;
 }
  .e-uploaddialog.e-dialog .e-btn.e-select:active{ 
     & when (@skin="material") { 
@@ -16063,6 +16064,13 @@ font-size: 200px;
     }
 }
  .e-uploaddialog.e-dialog .e-btn.e-select{
+   & when not (@skin="material") {
+   & when not(@skin="office-365") {
+        .bs-default-gradient();
+        background: @default-bg-stcolor;
+        color: @default-font-color;
+    }
+	}
     & when (@skin="material") { 
         color: @accent-color;
         background: @content-bg-color;
