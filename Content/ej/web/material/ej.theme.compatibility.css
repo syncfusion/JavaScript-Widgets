@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.compatibility.css
-*  version : 18.1.0.52
+*  version : 18.2.0.44
 *  Copyright Syncfusion Inc. 2001 - 2020. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -3084,12 +3084,12 @@ input[type="text"].e-input {
 }
 /*------------------------------------- Button -------------------------------------------*/
 
-.e-btn,
+.e-btn:not(.e-inputbtn),
 .e-widget .e-tbtn,
 .e-widget .e-split-btn {
   
 }
-.e-btn,
+.e-btn:not(.e-inputbtn),
 .e-widget .e-tbtn,
 .e-widget .e-split-btn {
   font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial;

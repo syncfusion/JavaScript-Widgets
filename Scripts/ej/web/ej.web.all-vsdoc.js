@@ -23194,12 +23194,6 @@ setActiveCell:function(rowIdx, colIdx, sheetIdx){
 /// <param name="colIdx"	type="number">Pass the column index.</param>
 /// <param name="sheetIdx"	type="number">Pass the index of the sheet.</param>
 },
-setActiveSheetIndex:function(sheetIdx){
-/// <summary>
-/// This method is used to set active sheet index for the Spreadsheet.
-/// </summary>
-/// <param name="sheetIdx"	type="number">Pass the active sheet index for Spreadsheet.</param>
-},
 setBorder:function(property, range){
 /// <summary>
 /// This method is used to set border for the specified range of cells in the Spreadsheet.

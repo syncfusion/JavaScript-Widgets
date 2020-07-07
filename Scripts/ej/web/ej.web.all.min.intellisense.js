@@ -28324,14 +28324,6 @@ setActiveCell:function(rowIdx, colIdx, sheetIdx){
 /// <param name="sheetIdx"	type="number">Pass the index of the sheet.</param>
 /// </signature>
 },
-setActiveSheetIndex:function(sheetIdx){
-/// <signature>
-/// <summary>
-/// This method is used to set active sheet index for the Spreadsheet.
-/// </summary>
-/// <param name="sheetIdx"	type="number">Pass the active sheet index for Spreadsheet.</param>
-/// </signature>
-},
 setBorder:function(property, range){
 /// <signature>
 /// <summary>
