@@ -5510,7 +5510,7 @@
             top: 3px;
         }
     }
-     .e-widget.e-excelfilter .e-menu.e-vertical .e-list .e-chkbox-small > span {
+     .e-widget.e-excelfilter.e-js .e-menu.e-vertical .e-list .e-chkbox-small > span {
         & when (@skin= "material") {
             /*material*/
             top: 4px;
@@ -11873,7 +11873,7 @@ background-image: url('../@{font-path}/icons-white.png');
     }
     .e-js.e-grid .e-dialog.e-widget .e-dialog-icon, .e-js.e-grid .e-widget .e-pagercontainer > .e-icon, .e-js.e-grid .e-widget .e-pagercontainer .e-numericitem,
     .e-js.e-grid .e-widget .e-filtericon, .e-js.e-grid .e-widget .e-filtertext, .e-js.e-grid .e-widget .e-predicate span, .e-js.e-grid .e-widget .e-value .e-chk-act, .e-js.e-grid .e-detailcell .e-groupheadercell,
-    .e-js.e-grid .e-detailcell .e-ungroupbutton, .e-js.e-grid .e-excelfilter .e-chk-act {
+    .e-js.e-grid .e-detailcell .e-ungroupbutton, .e-js.e-grid .e-excelfilter.e-js .e-chk-act {
         box-sizing: content-box;
     }
 
@@ -13544,7 +13544,7 @@ background-image: url('../@{font-path}/icons-white.png');
         color: red;
     }
 
-    .e-js.e-grid .e-excelfilter .e-ejinputtext::-ms-clear {
+    .e-js.e-grid .e-excelfilter.e-js .e-ejinputtext::-ms-clear {
         display: none;
     }
 
@@ -13898,27 +13898,27 @@ background-image: url('../@{font-path}/icons-white.png');
         margin-left: 0px;
     }
 
-    .e-js.e-grid.e-rtl .e-checkboxlist.e-scroller.e-rtl .e-content > .e-ftrchk label, .e-js.e-grid.e-rtl .e-checkboxlist.e-scroller.e-rtl .e-content > .e-ftrchk, .e-js.e-grid.e-rtl .e-excelfilter .e-checkboxlist .e-ftrchk {
+    .e-js.e-grid.e-rtl .e-checkboxlist.e-scroller.e-rtl .e-content > .e-ftrchk label, .e-js.e-grid.e-rtl .e-checkboxlist.e-scroller.e-rtl .e-content > .e-ftrchk, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-checkboxlist .e-ftrchk {
         margin-right: 10px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-vertical.e-rtl .e-list {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-vertical.e-rtl .e-list {
         height: 27px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-vertical.e-rtl .e-list.e-separator {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-vertical.e-rtl .e-list.e-separator {
         height: 1px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > ul li.e-separator {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > ul li.e-separator {
         margin: 2px 0px 2px 0;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl.e-vertical .e-list > ul .e-list > a {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl.e-vertical .e-list > ul .e-list > a {
         padding: 0px 22px 0px 15px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-searchbox .e-icon.e-search, .e-js.e-grid.e-rtl .e-excelfilter .e-searchbox .e-icon.e-cancel {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-searchbox .e-icon.e-search, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-searchbox .e-icon.e-cancel {
         position: absolute;
         right: 215px;
     }
@@ -13928,7 +13928,7 @@ background-image: url('../@{font-path}/icons-white.png');
         right: 189px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > a span.e-filternone.e-icon, .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > a span.e-sortdesc.e-icon, .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > a span.e-sortasc.e-icon, .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > a span.e-exceltick.e-icon {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > a span.e-filternone.e-icon, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > a span.e-sortdesc.e-icon, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > a span.e-sortasc.e-icon, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > a span.e-exceltick.e-icon {
         right: 0px;
     }
 
@@ -29339,7 +29339,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
 .mixin(@widget) when (@widget = excelfilter), (@widget = none) {
     /*Excel Filter Core*/
-    .e-excelfilter.e-dlgcontainer {
+    .e-excelfilter.e-js.e-dlgcontainer {
         min-width: 266px;
         padding: 0px;
         width: 266px;
@@ -29355,9 +29355,9 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcontainer,
-    .e-excelfilter .e-searchcontainer,
-    .e-excelfilter .e-searchcontainer input {
+    .e-excelfilter.e-js.e-dlgcontainer,
+    .e-excelfilter.e-js .e-searchcontainer,
+    .e-excelfilter.e-js .e-searchcontainer input {
         box-sizing: content-box;
     }
 
@@ -29373,7 +29373,7 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e77a";
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-list > a {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-list > a {
           margin: 0px 10px 0px 15px;
         
 
@@ -29384,7 +29384,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-list > ul .e-list > a {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-list > ul .e-list > a {
         padding-left: 15px;
         & when (@skin= "material") {
             padding-left: 20px;
@@ -29394,32 +29394,32 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-menu.e-vertical li.e-separator,
-    .e-excelfilter .e-list > ul li.e-separator {
+    .e-excelfilter.e-js .e-menu.e-vertical li.e-separator,
+    .e-excelfilter.e-js .e-list > ul li.e-separator {
         margin: 4px 0px 4px 0px;
     }
 
-    .e-excelfilter .e-menu.e-vertical {
+    .e-excelfilter.e-js .e-menu.e-vertical {
         border: none;
     }
 
-    .e-excelfilter .e-menu .e-menulink .e-chkbox-wrap {
+    .e-excelfilter.e-js .e-menu .e-menulink .e-chkbox-wrap {
         top: 0;
         opacity: 1;
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-exceltick::before {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-exceltick::before {
         margin-left: -7px;
 		& when (@skin= "material") {
             margin-left: -1px;
         }
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-exceltick:before {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-exceltick:before {
         margin-left: ~"-7px\9";
     }
 
-    .e-excelfilter .e-searchcontainer {
+    .e-excelfilter.e-js .e-searchcontainer {
         position: relative;
         margin-left: 15px;
         margin-top: 4px;
@@ -29431,7 +29431,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-searchcontainer .e-fields {
+    .e-excelfilter.e-js .e-searchcontainer .e-fields {
         margin: 7px 0px;
 
         & when (@skin= "office-365") {
@@ -29439,27 +29439,27 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-checkboxlist {
+    .e-excelfilter.e-js .e-checkboxlist {
         width: 234px;
         height: 130px;
         outline: none;
     }
 
-    .e-excelfilter .e-searchbox .e-icon:before {
+    .e-excelfilter.e-js .e-searchbox .e-icon:before {
         display: inline-block;
     }
 
 
-    .e-excelfilter .e-searchbox .e-ejinputtext {
+    .e-excelfilter.e-js .e-searchbox .e-ejinputtext {
         width: 228px;
         height: 23px;
     }
 
-    .e-excelfilter .e-searchinput::-ms-check {
+    .e-excelfilter.e-js .e-searchinput::-ms-check {
         display: none;
     }
 
-    .e-excelfilter .e-btncontainer.e-fields {
+    .e-excelfilter.e-js .e-btncontainer.e-fields {
         & when not (@skin= "material") {
             width: 170px;
             margin: 16px 0px 0px 68px;
@@ -29471,8 +29471,8 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-btncontainer input,
-    .e-excelfilter .e-checkboxlist .e-ftrchk {
+    .e-excelfilter.e-js .e-btncontainer input,
+    .e-excelfilter.e-js .e-checkboxlist .e-ftrchk {
         margin-left: 10px;
 
         & when not (@skin= "material") {
@@ -29485,15 +29485,15 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-checkboxlist .e-ftrchk {
+    .e-excelfilter.e-js .e-checkboxlist .e-ftrchk {
         white-space: nowrap;
     }
 
-    .e-excelfilter .e-checkboxlist {
+    .e-excelfilter.e-js .e-checkboxlist {
         padding-top: 3px;
     }
 
-    .e-excelfilter .e-btncontainer > div {
+    .e-excelfilter.e-js .e-btncontainer > div {
         margin-bottom: 5px;
 
         & when (@skin= "office-365") {
@@ -29502,13 +29502,13 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-checkboxlist label.e-ftrchk,
-    .e-excelfilter .e-searchbox .e-searchitem {
+    .e-excelfilter.e-js .e-checkboxlist label.e-ftrchk,
+    .e-excelfilter.e-js .e-searchbox .e-searchitem {
         cursor: pointer;
         line-height: 11px;
     }
 
-    .e-excelfilter.e-dlgcustom {
+    .e-excelfilter.e-js.e-dlgcustom {
         width: 341px;
         padding: 10px 14px 0;
         box-sizing: content-box;
@@ -29518,7 +29518,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-dlgfields {
+    .e-excelfilter.e-js.e-dlgcustom .e-dlgfields {
         padding-bottom: 14px;
         box-sizing: content-box;
 
@@ -29527,13 +29527,13 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-dlgfields:last-child {
+    .e-excelfilter.e-js.e-dlgcustom .e-dlgfields:last-child {
         & when (@skin= "material") {
             padding-bottom: 0px;
         }
     }
 
-    .e-excelfilter.e-dlgcustom fieldset.e-fieldset {
+    .e-excelfilter.e-js.e-dlgcustom fieldset.e-fieldset {
         & when not (@skin= "material") {
             padding: 14px 8px 13px;
         }
@@ -29546,19 +29546,19 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-fieldset legend {
+    .e-excelfilter.e-js.e-dlgcustom .e-fieldset legend {
         width: auto;
         margin-left: 3px;
         margin-bottom: 2px;
         padding: 0 3px;
     }
 
-    .e-excelfilter.e-dlgcustom .e-optable {
+    .e-excelfilter.e-js.e-dlgcustom .e-optable {
         border-collapse: separate;
         border-spacing: 1px;
     }
 
-    .e-excelfilter.e-dlgcustom .e-optable td {
+    .e-excelfilter.e-js.e-dlgcustom .e-optable td {
         width: 27px;
         padding: 0px 5px;
 
@@ -29567,7 +29567,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-optable .e-predicate td {
+    .e-excelfilter.e-js.e-dlgcustom .e-optable .e-predicate td {
         padding-top: 11px;
         padding-bottom: 11px;
 
@@ -29581,7 +29581,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-optable .e-predicate td:last-child {
+    .e-excelfilter.e-js.e-dlgcustom .e-optable .e-predicate td:last-child {
         padding-top: 8px;
 
         & when (@skin= "material") {
@@ -29593,7 +29593,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-dlgfields .e-btncontainer {
+    .e-excelfilter.e-js.e-dlgcustom .e-dlgfields .e-btncontainer {
         width: 100%;
 
         & when not (@skin= "material") {
@@ -29612,7 +29612,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-dlgfields .e-predicate .e-caption {
+    .e-excelfilter.e-js.e-dlgcustom .e-dlgfields .e-predicate .e-caption {
         margin-left: 5px;
         padding-right: 13px;
 
@@ -29624,19 +29624,19 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-dlgcustom.e-dialog .e-predicate td div.e-radsmall,
-    .e-excelfilter .e-dlgcustom.e-dialog .e-predicate td span.e-check-small {
+    .e-excelfilter.e-js .e-dlgcustom.e-dialog .e-predicate td div.e-radsmall,
+    .e-excelfilter.e-js .e-dlgcustom.e-dialog .e-predicate td span.e-check-small {
         & when (@skin= "office-365") {
             height: 32px;
             margin-bottom: -8px;
         }
     }
 
-    .e-excelfilter .e-hide {
+    .e-excelfilter.e-js .e-hide {
         display: none !important;
     }
 
-    .e-excelfilter.e-js .e-searchbox span {
+    .e-excelfilter.e-js.e-js .e-searchbox span {
         cursor: pointer;
         display: block;
         height: 16px;
@@ -29650,35 +29650,35 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom.e-dialog,
-    .e-excelfilter.e-dlgcustom.e-dialog [class^="e-"] {
+    .e-excelfilter.e-js.e-dlgcustom .e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom.e-dialog,
+    .e-excelfilter.e-js.e-dlgcustom.e-dialog [class^="e-"] {
         box-sizing: content-box;
     }
 
-    .e-excelfilter .e-ftrchk * {
+    .e-excelfilter.e-js .e-ftrchk * {
         box-sizing: content-box !important;
     }
 
-    .e-excelfilter.e-dlgcustom .e-ddl.e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom .e-atc.e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom .e-datewidget.e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom .e-numeric.e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom .e-ejinputtext {
+    .e-excelfilter.e-js.e-dlgcustom .e-ddl.e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom .e-atc.e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom .e-datewidget.e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom .e-numeric.e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom .e-ejinputtext {
         box-sizing: border-box;
     }
 
-    .e-excelfilter .e-menu .e-list .e-bghdrcolor {
+    .e-excelfilter.e-js .e-menu .e-list .e-bghdrcolor {
         padding: 0px;
         height: 26px;
     }
 
-    .e-excelfilter .e-menu .e-list .e-fghdrcolor {
+    .e-excelfilter.e-js .e-menu .e-list .e-fghdrcolor {
         padding-bottom: 4px;
         height: 26px;
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-list ul li.e-bghdrcolor > a, .e-excelfilter .e-menu.e-vertical .e-list ul li.e-fghdrcolor > a {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-list ul li.e-bghdrcolor > a, .e-excelfilter.e-js .e-menu.e-vertical .e-list ul li.e-fghdrcolor > a {
         padding: 0px;
     }
 
@@ -29686,7 +29686,7 @@ background-image: url('../@{font-path}/icons-white.png');
         font-size: 13px;
     }
 
-    .e-excelfilter .e-menu .e-list .e-valcolor {
+    .e-excelfilter.e-js .e-menu .e-list .e-valcolor {
         margin: 0 auto;
         height: 16px;
         width: 70px;
@@ -37579,7 +37579,7 @@ slideRight Animate
         color: inherit;
     }
 
-    .e-js.e-spreadsheet .e-excelfilter .e-in-wrap {
+    .e-js.e-spreadsheet .e-excelfilter.e-js .e-in-wrap {
         border: 1px solid;
     }
 
@@ -41450,7 +41450,7 @@ slideRight Animate
         display: none;
     }
     /*---------- Excel Like Filter Changes------- */
-    .e-js.e-spreadsheet .e-excelfilter .e-btncontainer input {
+    .e-js.e-spreadsheet .e-excelfilter.e-js .e-btncontainer input {
         padding: .2em .4em .3em;
     }
 
@@ -43621,6 +43621,8 @@ slideRight Animate
         }
     }
 }
+
+.mixin(@widget) when (@widget = mediaplayer), (@widget = none) {
 /*------------------------------------- Media Player-------------------------------------------*/
 .e-js.e-media-player .e-media-stop:before {
     content: "\e126";
@@ -45251,7 +45253,7 @@ slideRight Animate
             box-sizing: content-box;
 }
 
-
+}
 
 
 /*------------------------------------- End Media Player-------------------------------------------*/
