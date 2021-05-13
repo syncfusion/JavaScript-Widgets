@@ -10938,6 +10938,15 @@ color:@theme-dark;
      }
 }
 
+.e-widget .e-js.e-titlebar.e-dialog-header.e-dialog.e-header, 
+.e-widget .e-js.e-footerbar.e-dialog-footer.e-dialog {
+    width: auto;
+    & when not (@skin= "material") {
+        & when not (@skin= "office-365") {
+            box-shadow: none;
+        }
+    }
+}
 
 
 /*------------------------------------- dropdownlist -------------------------------------------*/
@@ -31573,64 +31582,64 @@ outline:none !important;
 
 /*------------------------------------- ComboBox -------------------------------------------*/
 
-.e-widget .e-ddl-icon {
+.e-widget.ej1-combobox .e-ddl-icon {
       & when (@skin= "material") {
   transform: rotate(0deg);
   transition: transform 300ms ease;
   }
 }
 
-.e-widget .e-ddl.e-input-group .e-ddl-hidden {
+.e-widget.ej1-combobox.e-ddl.e-input-group .e-ddl-hidden {
   border: 0;
   height: 0;
   visibility: hidden;
   width: 0;
 }
 
-.e-widget .e-input-group .e-input.e-placeholder {
+.e-widget.ej1-combobox.e-input-group .e-input.e-placeholder {
 	top: 0px;
 	position: absolute;
 	border:inherit;
 	font-style: italic;
 }
 
-.e-widget.e-ddl.e-input-group .e-input-group-btn button:hover,
-.e-widget.e-ddl.e-input-group .e-input-group-icon:hover,
-.e-widget.e-ddl.e-input-group .e-input-group-btn button:active,
-.e-widget.e-ddl.e-input-group .e-input-group-icon:active {
+.e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button:hover,
+.e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:hover,
+.e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button:active,
+.e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:active {
     & when (@skin= "material") {
          background: white;
   }
   }
 
-  .e-widget.e-input-group::before {
+  .e-widget.ej1-combobox.e-input-group::before {
     & when (@skin= "material") {
   left: 50%;
   }
 }
 
-.e-widget.e-input-group::before,
-.e-widget.e-input-group::after {
+.e-widget.ej1-combobox.e-input-group::before,
+.e-widget.ej1-combobox.e-input-group::after {
     & when (@skin= "material") {
     background: @accent-color;
     }
   }
 
-  .e-widget.e-input-group.e-input-focus::before,
-  .e-widget.e-input-group.e-input-focus::after {
+  .e-widget.ej1-combobox.e-input-group.e-input-focus::before,
+  .e-widget.ej1-combobox.e-input-group.e-input-focus::after {
     & when (@skin= "material") {
   width: 50%;
   }
 }
 
-.e-widget.e-input-group::after {
+.e-widget.ej1-combobox.e-input-group::after {
     & when (@skin= "material") {
   right: 50%;
   }
 }
 
-.e-widget.e-input-group::before,
-.e-widget.e-input-group::after {
+.e-widget.ej1-combobox.e-input-group::before,
+.e-widget.ej1-combobox.e-input-group::after {
         & when (@skin= "material") {
   bottom: -2px;
   content: '';
@@ -31642,26 +31651,26 @@ outline:none !important;
   }
 }
 
-.e-widget.e-icon-anim .e-ddl-icon {
+.e-widget.ej1-combobox.e-icon-anim .e-ddl-icon {
     & when (@skin= "material") {
   transform: rotate(180deg);
   transition: transform 300ms ease;
   }
 }
 
-.e-widget.e-input-group .e-ddl-icon:hover {
+.e-widget.ej1-combobox.e-input-group .e-ddl-icon:hover {
     & when (@skin= "material") {
   background: transparent;
   }
 }
 
-.e-widget.e-input-group:not(.e-disabled) .e-ddl-icon:active {
+.e-widget.ej1-combobox.e-input-group:not(.e-disabled) .e-ddl-icon:active {
     & when (@skin= "material") {
   background: transparent;
   }
 }
 
-.e-widget input.e-combobox.e-input::selection {
+.e-widget.ej1-combobox input.e-combobox.e-input::selection {
     & when (@skin= "material") {
 		background: @accent-color;
         color: @accent-font-color;
@@ -31673,7 +31682,7 @@ outline:none !important;
 		}
 }
 
-.e-widget input.e-combobox.e-input::-moz-selection {
+.e-widget.ej1-combobox input.e-combobox.e-input::-moz-selection {
     & when (@skin= "material") {
         background: @accent-color;
         color: @accent-font-color;
@@ -31684,62 +31693,64 @@ outline:none !important;
     }
 }
 
-.e-widget.e-input-group .e-ddl-icon:not(:active)::after {
+.e-widget.ej1-combobox.e-input-group .e-ddl-icon:not(:active)::after {
      & when (@skin= "material") {
   animation: none;
   }
 }
 
-.e-widget .e-dropdownbase.e-content {
+.e-widget.ej1-combobox .e-dropdownbase.e-content {
     background: @content-bg-color;
     color: @content-font-color;
   }
 
-  .e-widget .e-list-item.e-hover {
+  .e-widget.ej1-combobox .e-list-item.e-hover {
     background: @hover-bg-stcolor;
     color: @hover-font-color;
   }
   
-  .e-widget input.e-combobox.e-input {
-    border: @border-size @border-type;
+  .e-widget.ej1-combobox input.e-combobox.e-input {
+    & when not (@skin= "material")  {
+      border: @border-size @border-type;
+    }
     font-family: @font-family;
     font-size: @content-font-size;
   }
 
-  .e-widget  .e-combobox.e-input[disabled],
-  .e-widget.e-ddl.e-input-group.e-disabled {
+  .e-widget.ej1-combobox  .e-combobox.e-input[disabled],
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-disabled {
     border-style: @border-type;
   }
 
-  .e-widget.e-ddl.e-input-group.e-disabled {
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-disabled {
     border-bottom-style: @border-type;
   }
 
-  .e-widget.e-ddl.e-input-group .e-input-group-btn button {
+  .e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button {
     font-family: @font-family;
     font-size: @content-font-size;
   }
 
-  .e-widget.e-ddl.e-input-group.e-disabled {
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-disabled {
     border-style: @border-type;
   }
 
-  .e-widget.e-ddl.e-input-group .e-clear-icon {
+  .e-widget.ej1-combobox.e-ddl.e-input-group .e-clear-icon {
     color: @default-icon-color;
   }
  
-  .e-widget input.e-combobox.e-input,
-  .e-widget textarea.e-combobox.e-input {
+  .e-widget.ej1-combobox input.e-combobox.e-input,
+  .e-widget.ej1-combobox textarea.e-combobox.e-input {
     background: @content-bg-color;
     border-color: @content-border-color;
     color:@content-font-color;
   }
 
-  .e-widget.e-ddl.e-input-group {
+  .e-widget.ej1-combobox.e-ddl.e-input-group {
     background: @content-bg-color;
   }
 
-  .e-widget.e-ddl.e-input-group .e-input-group-icon {
+  .e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-icon {
     & when (@skin= "material") {
         /*material*/
         background-color: @content-bg-color;
@@ -31761,7 +31772,7 @@ outline:none !important;
     }
   }
   
-  .e-widget.e-ddl.e-input-group:not(.e-rtl) .e-input-group-icon {
+  .e-widget.ej1-combobox.e-ddl.e-input-group:not(.e-rtl) .e-input-group-icon {
     & when not (@skin= "material")  {
      & when not (@skin= "office-365") {
 		border-left: 1px solid @content-border-color;
@@ -31769,7 +31780,7 @@ outline:none !important;
     }
   }
 
-  .e-widget.e-ddl.e-input-group.e-rtl .e-input-group-icon {
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-rtl .e-input-group-icon {
       & when (@skin= "material") { 
         border: none;
     } 
@@ -31777,51 +31788,51 @@ outline:none !important;
 		    border-right: 1px solid @content-border-color; 
     }
   }
-  .e-widget .e-combobox.e-input[disabled] {
+  .e-widget.ej1-combobox .e-combobox.e-input[disabled] {
     background: 0px;
   }
 
-  .e-widget .e-combobox.e-input[readonly] {
+  .e-widget.ej1-combobox .e-combobox.e-input[readonly] {
     background: @content-bg-color;
  }
 
- .e-widget.e-ddl.e-input-group .e-input-group-btn button {
+ .e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button {
     background: @content-bg-color;
     border-color: @content-border-color;
     color: @default-icon-color;
   }
 
-  .e-widget.e-ddl.e-input-group .e-input-group-btn button:hover,
-  .e-widget.e-ddl.e-input-group .e-input-group-icon:hover {
+  .e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button:hover,
+  .e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:hover {
     & when not (@skin= "material") {
     background: @hover-bg-stcolor;
     }
   }
 
  
-  .e-widget.e-ddl.e-input-group:not(.e-disabled) .e-input-group-btn:active button,
-  .e-widget.e-ddl.e-input-group:not(.e-disabled) .e-input-group-icon:active,
-  input.e-combobox.e-input::selection {
+  .e-widget.ej1-combobox.e-ddl.e-input-group:not(.e-disabled) .e-input-group-btn:active button,
+  .e-widget.ej1-combobox.e-ddl.e-input-group:not(.e-disabled) .e-input-group-icon:active,
+  .e-widget.ej1-combobox input.e-combobox.e-input::selection {
     & when not (@skin= "material") {
     background: @active-bg-stcolor;
     color: @active-font-color;
     }
   }
  
-  .e-widget input.e-combobox.e-input::-webkit-input-placeholder,
-  .e-widget input.e-combobox.e-input:-moz-placeholder,
-  .e-widget input.e-combobox.e-input::-moz-placeholder,
-  .e-widget input.e-combobox.e-input:-ms-input-placeholder {
+  .e-widget.ej1-combobox input.e-combobox.e-input::-webkit-input-placeholder,
+  .e-widget.ej1-combobox input.e-combobox.e-input:-moz-placeholder,
+  .e-widget.ej1-combobox input.e-combobox.e-input::-moz-placeholder,
+  .e-widget.ej1-combobox input.e-combobox.e-input:-ms-input-placeholder {
     color: @header-border-color;
   }
 
 
-  .e-widget.e-ddl.e-input-group {
+  .e-widget.ej1-combobox.e-ddl.e-input-group {
     border-bottom-color: @content-border-color;
    }
 
 
-   .e-widget.e-ddl.e-input-group .e-ddl-icon:before {
+   .e-widget.ej1-combobox.e-ddl.e-input-group .e-ddl-icon:before {
     & when (@skin= "material") {
             content: "\e666";
     }
@@ -31840,7 +31851,7 @@ outline:none !important;
   }
 
 
-  .e-widget.e-input-group.e-ddl {
+  .e-widget.ej1-combobox.e-input-group.e-ddl {
     & when (@skin= "material") {
       height: 31px;
     }
@@ -31854,7 +31865,7 @@ outline:none !important;
   }
   }
 
-  .e-widget.e-ddl.e-popup {
+  .e-widget.ej1-combobox.e-ddl.e-popup {
     border: 1px solid @default-border-color;
     position: absolute;
       & .e-input-group {
@@ -31863,17 +31874,17 @@ outline:none !important;
   }
 
 
-  .e-widget.e-ddl.e-popup {
+  .e-widget.ej1-combobox.e-ddl.e-popup {
     border-color: @default-border-color;
   }
 
-  .e-widget .e-dropdownbase.e-nodata {
+  .e-widget.ej1-combobox .e-dropdownbase.e-nodata {
     font-family: @font-family;
     font-size: 16px;
   }
 
   // theme
-  .e-widget .e-dropdownbase {
+  .e-widget.ej1-combobox .e-dropdownbase {
     border-color: @default-border-color;
       & .e-list-item {
          & when (@skin= "material") { 
@@ -31983,12 +31994,12 @@ outline:none !important;
   }
 
 
-  .e-widget.e-ddl.e-input-group input.e-combobox.e-input ,
-  .e-widget.e-ddl.e-input-group.e-input-focus .e-combobox.e-input:focus {
+  .e-widget.ej1-combobox.e-ddl.e-input-group input.e-combobox.e-input ,
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus .e-combobox.e-input:focus {
     border-color: @content-border-color;
   }
 
-  .e-widget.e-ddl.e-input-group.e-input-focus {
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus {
     & when (@skin= "office-365") {
        border-color:@theme-primary !important;
     }
@@ -32001,24 +32012,28 @@ outline:none !important;
     }
    }
 
-   .e-widget.e-ddl.e-input-group.e-input-focus .e-combobox.e-input:first-child:focus,
-   .e-widget.e-ddl.e-input-group.e-input-focus.e-rtl span:last-child.e-input-group-icon,
-   .e-widget.e-ddl.e-input-group.e-input-focus.e-rtl span:last-child button {
+   .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus .e-combobox.e-input:first-child:focus,
+   .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span:last-child.e-input-group-icon,
+   .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span:last-child button {
     border-color: transparent @content-border-color transparent transparent;
   }
 
-  .e-widget.e-ddl.e-input-group.e-input-focus.e-rtl span.e-input-group-icon,
-  .e-widget.e-ddl.e-input-group.e-input-focus span button,
-  .e-widget.e-ddl.e-input-group.e-input-focus.e-rtl span:first-child.e-input-group-icon,
-  .e-widget.e-ddl.e-input-group.e-input-focus.e-rtl span:first-child button,
-  .e-widget.e-input-focus.e-rtl .e-combobox.e-input:first-child:focus,
-  .e-widget.e-input-focus .e-combobox.e-input:last-child:focus,
-  .e-widget.e-ddl.e-input-group.e-input-focus span.e-input-group-icon,
-  .e-widget.e-ddl.e-input-group.e-input-focus span button {
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span.e-input-group-icon,
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus span button,
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span:first-child.e-input-group-icon,
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span:first-child button,
+  .e-widget.ej1-combobox.e-input-focus.e-rtl .e-combobox.e-input:first-child:focus,
+  .e-widget.ej1-combobox.e-input-focus .e-combobox.e-input:last-child:focus,
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus span.e-input-group-icon,
+  .e-widget.ej1-combobox.e-ddl.e-input-group.e-input-focus span button {
     border-color:  transparent transparent transparent @content-border-color;
    }
 
-   .e-widget.e-ddl.e-input-group {
+   .e-widget.ej1-combobox.e-input-group:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+   .e-widget.ej1-combobox.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+   .e-widget.ej1-combobox.e-input-group.e-input-focus:not(.e-float-icon-left):not(.e-success):not(.e-warning):not(.e-error),
+   .e-widget.ej1-combobox.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+   .e-widget.ej1-combobox.e-ddl.e-input-group {
     border: @border-size @border-type;
     border-color: @content-border-color;
      & when (@skin= "material") {
@@ -32029,8 +32044,8 @@ outline:none !important;
     }
   }
 
-  .e-widget .e-input-group-btn:not(:last-child) button,
-  .e-widget.e-ddl.e-input-group .e-input-group-icon:not(:last-child) {
+  .e-widget.ej1-combobox .e-input-group-btn:not(:last-child) button,
+  .e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:not(:last-child) {
     & when (@skin= "material") {
             border-left-width: 0px;
         }
@@ -32046,8 +32061,8 @@ outline:none !important;
     
   }
 
-  .e-widget.e-ddl.e-input-group .e-input-group-icon,
-  .e-widget.e-ddl.e-input-group .e-input-group-btn button {
+  .e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-icon,
+  .e-widget.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button {
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -32057,14 +32072,14 @@ outline:none !important;
         border-radius: 0px 4px 4px 0px;          
     }
   }
-  .e-widget.e-ddl.e-rtl.e-input-group .e-input-group-icon,
-  .e-widget.e-ddl.e-rtl.e-input-group .e-input-group-btn button {
+  .e-widget.ej1-combobox.e-ddl.e-rtl.e-input-group .e-input-group-icon,
+  .e-widget.ej1-combobox.e-ddl.e-rtl.e-input-group .e-input-group-btn button {
     & when (@skin= "bootstrap") {
         border-radius: 4px 0px 0px 4px;          
     }
   }
 
-  .e-widget.e-ddl {
+  .e-widget.ej1-combobox.e-ddl {
     .e-input-value,
     .e-input-value:focus {
       font-family: @font-family;
@@ -32078,7 +32093,7 @@ outline:none !important;
     }
   }
   
-  .e-widget.e-input-group.e-ddl .e-comboie8.e-comboie.e-ddl-icon{
+  .e-widget.ej1-combobox.e-input-group.e-ddl .e-comboie8.e-comboie.e-ddl-icon{
 	& when not (@skin= "material")  {
      & when not (@skin= "office-365") {
 		border-left-width: 1px;
@@ -32087,5 +32102,31 @@ outline:none !important;
      }
     } 
   }
+
+  .e-widget.ej1-combobox.e-input-group:not(.e-float-icon-left):not(.e-float-input)::after
+  .e-widget.ej1-combobox.e-input-group:not(.e-float-icon-left):not(.e-float-input)::before,
+  .e-widget.ej1-combobox.e-input-group::before,
+  .e-widget.ej1-combobox.e-input-group::after {
+    & when not(@skin= "material") {
+      background: none;
+    }
+
+    & when (@skin= "material"){
+      background: @content-bg-color;
+    }
+  }
+
+  
+.e-widget.ej1-combobox .e-input-group-icon.e-ddl-icon {
+  min-height: unset;
+  min-width: unset;
+}
+
+.e-widget.ej1-combobox .e-dropdownbase.e-nodata {
+  & when (@skin= "material"){
+    height: 48px;
+    padding: 12px 16px;
+  }
+}
 
   /*------------------------------------- End ComboBox -------------------------------------------*/

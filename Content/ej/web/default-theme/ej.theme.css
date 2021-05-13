@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.css
-*  version : 19.1.0.54
+*  version : 19.1.0.63
 *  Copyright Syncfusion Inc. 2001 - 2021. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -6977,6 +6977,14 @@ input.e-fe-dialog-text:not(.e-textbox),
 .e-dialog.e-widget-content .e-pager .e-nextpagedisabled,
 .e-dialog.e-widget-content .e-pager .e-lastpagedisabled {
   
+}
+.e-js.e-titlebar.e-dialog-header.e-dialog.e-header,
+.e-js.e-footerbar.e-dialog-footer.e-dialog {
+  width: auto;
+}
+.e-js.e-titlebar.e-dialog-header.e-dialog.e-header,
+.e-js.e-footerbar.e-dialog-footer.e-dialog {
+  box-shadow: none;
 }
 
 /*-----------------------Map------------------*/
@@ -24405,190 +24413,192 @@ ej-ribbon {
 }
 /*------------------------------------- ComboBox -------------------------------------------*/
 
-.e-ddl-icon {
+.ej1-combobox .e-ddl-icon {
   
 }
-.e-ddl.e-input-group .e-ddl-hidden {
+.ej1-combobox.e-ddl.e-input-group .e-ddl-hidden {
   border: 0;
   height: 0;
   visibility: hidden;
   width: 0;
 }
-.e-input-group .e-input.e-placeholder {
+.ej1-combobox.e-input-group .e-input.e-placeholder {
   top: 0px;
   position: absolute;
   border: inherit;
   font-style: italic;
 }
-.e-ddl.e-input-group .e-input-group-btn button:hover,
-.e-ddl.e-input-group .e-input-group-icon:hover,
-.e-ddl.e-input-group .e-input-group-btn button:active,
-.e-ddl.e-input-group .e-input-group-icon:active {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button:hover,
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:hover,
+.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button:active,
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:active {
   
 }
-.e-input-group::before {
+.ej1-combobox.e-input-group::before {
   
 }
-.e-input-group::before,
-.e-input-group::after {
+.ej1-combobox.e-input-group::before,
+.ej1-combobox.e-input-group::after {
   
 }
-.e-input-group.e-input-focus::before,
-.e-input-group.e-input-focus::after {
+.ej1-combobox.e-input-group.e-input-focus::before,
+.ej1-combobox.e-input-group.e-input-focus::after {
   
 }
-.e-input-group::after {
+.ej1-combobox.e-input-group::after {
   
 }
-.e-input-group::before,
-.e-input-group::after {
+.ej1-combobox.e-input-group::before,
+.ej1-combobox.e-input-group::after {
   
 }
-.e-icon-anim .e-ddl-icon {
+.ej1-combobox.e-icon-anim .e-ddl-icon {
   
 }
-.e-input-group .e-ddl-icon:hover {
+.ej1-combobox.e-input-group .e-ddl-icon:hover {
   
 }
-.e-input-group:not(.e-disabled) .e-ddl-icon:active {
+.ej1-combobox.e-input-group:not(.e-disabled) .e-ddl-icon:active {
   
 }
-input.e-combobox.e-input::selection {
+.ej1-combobox input.e-combobox.e-input::selection {
   
 }
-input.e-combobox.e-input::-moz-selection {
+.ej1-combobox input.e-combobox.e-input::-moz-selection {
   
 }
-.e-input-group .e-ddl-icon:not(:active)::after {
+.ej1-combobox.e-input-group .e-ddl-icon:not(:active)::after {
   
 }
-.e-dropdownbase.e-content {
+.ej1-combobox .e-dropdownbase.e-content {
   background: white;
   color: #333333;
 }
-.e-list-item.e-hover {
+.ej1-combobox .e-list-item.e-hover {
   background: #86cbea;
   color: #282827;
 }
-input.e-combobox.e-input {
-  border: 1px solid;
+.ej1-combobox input.e-combobox.e-input {
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
   font-size: 14px;
 }
-.e-combobox.e-input[disabled],
-.e-ddl.e-input-group.e-disabled {
+.ej1-combobox input.e-combobox.e-input {
+  border: 1px solid;
+}
+.ej1-combobox .e-combobox.e-input[disabled],
+.ej1-combobox.e-ddl.e-input-group.e-disabled {
   border-style: solid;
 }
-.e-ddl.e-input-group.e-disabled {
+.ej1-combobox.e-ddl.e-input-group.e-disabled {
   border-bottom-style: solid;
 }
-.e-ddl.e-input-group .e-input-group-btn button {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button {
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
   font-size: 14px;
 }
-.e-ddl.e-input-group.e-disabled {
+.ej1-combobox.e-ddl.e-input-group.e-disabled {
   border-style: solid;
 }
-.e-ddl.e-input-group .e-clear-icon {
+.ej1-combobox.e-ddl.e-input-group .e-clear-icon {
   color: #686969;
 }
-input.e-combobox.e-input,
-textarea.e-combobox.e-input {
+.ej1-combobox input.e-combobox.e-input,
+.ej1-combobox textarea.e-combobox.e-input {
   background: white;
   border-color: #c8c8c8;
   color: #333333;
 }
-.e-ddl.e-input-group {
+.ej1-combobox.e-ddl.e-input-group {
   background: white;
 }
-.e-ddl.e-input-group .e-input-group-icon {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon {
   
 }
-.e-ddl.e-input-group .e-input-group-icon {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon {
   
 }
-.e-ddl.e-input-group .e-input-group-icon {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon {
   /*other*/
 
   color: #686969;
   border-color: #c8c8c8;
 }
-.e-ddl.e-input-group .e-input-group-icon {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon {
   background: #ececec;
 }
-.e-ddl.e-input-group:not(.e-rtl) .e-input-group-icon {
+.ej1-combobox.e-ddl.e-input-group:not(.e-rtl) .e-input-group-icon {
   border-left: 1px solid #c8c8c8;
 }
-.e-ddl.e-input-group.e-rtl .e-input-group-icon {
+.ej1-combobox.e-ddl.e-input-group.e-rtl .e-input-group-icon {
   
 }
-.e-ddl.e-input-group.e-rtl .e-input-group-icon {
+.ej1-combobox.e-ddl.e-input-group.e-rtl .e-input-group-icon {
   border-right: 1px solid #c8c8c8;
 }
-.e-combobox.e-input[disabled] {
+.ej1-combobox .e-combobox.e-input[disabled] {
   background: 0px;
 }
-.e-combobox.e-input[readonly] {
+.ej1-combobox .e-combobox.e-input[readonly] {
   background: white;
 }
-.e-ddl.e-input-group .e-input-group-btn button {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button {
   background: white;
   border-color: #c8c8c8;
   color: #686969;
 }
-.e-ddl.e-input-group .e-input-group-btn button:hover,
-.e-ddl.e-input-group .e-input-group-icon:hover {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button:hover,
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:hover {
   background: #86cbea;
 }
-.e-ddl.e-input-group:not(.e-disabled) .e-input-group-btn:active button,
-.e-ddl.e-input-group:not(.e-disabled) .e-input-group-icon:active,
-input.e-combobox.e-input::selection {
+.ej1-combobox.e-ddl.e-input-group:not(.e-disabled) .e-input-group-btn:active button,
+.ej1-combobox.e-ddl.e-input-group:not(.e-disabled) .e-input-group-icon:active,
+.ej1-combobox input.e-combobox.e-input::selection {
   background: #179bd7;
   color: white;
 }
-input.e-combobox.e-input::-webkit-input-placeholder,
-input.e-combobox.e-input:-moz-placeholder,
-input.e-combobox.e-input::-moz-placeholder,
-input.e-combobox.e-input:-ms-input-placeholder {
+.ej1-combobox input.e-combobox.e-input::-webkit-input-placeholder,
+.ej1-combobox input.e-combobox.e-input:-moz-placeholder,
+.ej1-combobox input.e-combobox.e-input::-moz-placeholder,
+.ej1-combobox input.e-combobox.e-input:-ms-input-placeholder {
   color: #c8c8c8;
 }
-.e-ddl.e-input-group {
+.ej1-combobox.e-ddl.e-input-group {
   border-bottom-color: #c8c8c8;
 }
-.e-ddl.e-input-group .e-ddl-icon:before {
+.ej1-combobox.e-ddl.e-input-group .e-ddl-icon:before {
   
   width: 14px;
   height: 14px;
   display: block;
   margin: 0 auto;
 }
-.e-ddl.e-input-group .e-ddl-icon:before {
+.ej1-combobox.e-ddl.e-input-group .e-ddl-icon:before {
   content: "\e63b";
 }
-.e-input-group.e-ddl {
+.ej1-combobox.e-input-group.e-ddl {
   
 }
-.e-input-group.e-ddl {
+.ej1-combobox.e-input-group.e-ddl {
   height: 28px;
 }
-.e-ddl.e-popup {
+.ej1-combobox.e-ddl.e-popup {
   border: 1px solid #c8c8c8;
   position: absolute;
 }
-.e-ddl.e-popup .e-input-group {
+.ej1-combobox.e-ddl.e-popup .e-input-group {
   margin-bottom: 0;
 }
-.e-ddl.e-popup {
+.ej1-combobox.e-ddl.e-popup {
   border-color: #c8c8c8;
 }
-.e-dropdownbase.e-nodata {
+.ej1-combobox .e-dropdownbase.e-nodata {
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
   font-size: 16px;
 }
-.e-dropdownbase {
+.ej1-combobox .e-dropdownbase {
   border-color: #c8c8c8;
 }
-.e-dropdownbase .e-list-item {
+.ej1-combobox .e-dropdownbase .e-list-item {
   
   background-color: white;
   border-bottom: 1px;
@@ -24599,14 +24609,14 @@ input.e-combobox.e-input:-ms-input-placeholder {
   line-height: 2.4em;
   text-indent: 1.067em;
 }
-.e-dropdownbase .e-list-item {
+.ej1-combobox .e-dropdownbase .e-list-item {
   
 }
-.e-dropdownbase .e-list-item {
+.ej1-combobox .e-dropdownbase .e-list-item {
   color: #333333;
 }
-.e-dropdownbase .e-list-group-item,
-.e-dropdownbase .e-fixed-head {
+.ej1-combobox .e-dropdownbase .e-list-group-item,
+.ej1-combobox .e-dropdownbase .e-fixed-head {
   background-color: white;
   border-color: white;
   
@@ -24616,96 +24626,104 @@ input.e-combobox.e-input:-ms-input-placeholder {
   line-height: 2.4em;
   padding-left: 1.067em;
 }
-.e-dropdownbase .e-list-group-item,
-.e-dropdownbase .e-fixed-head {
+.ej1-combobox .e-dropdownbase .e-list-group-item,
+.ej1-combobox .e-dropdownbase .e-fixed-head {
   
 }
-.e-dropdownbase .e-list-group-item,
-.e-dropdownbase .e-fixed-head {
+.ej1-combobox .e-dropdownbase .e-list-group-item,
+.ej1-combobox .e-dropdownbase .e-fixed-head {
   color: #333333;
 }
-.e-dropdownbase .e-list-item.e-active.e-hover {
+.ej1-combobox .e-dropdownbase .e-list-item.e-active.e-hover {
   
 }
-.e-dropdownbase .e-list-item.e-hover {
+.ej1-combobox .e-dropdownbase .e-list-item.e-hover {
   
 }
-.e-dropdownbase .e-list-item.e-hover {
+.ej1-combobox .e-dropdownbase .e-list-item.e-hover {
   /*other*/
 
   
 }
-.e-dropdownbase .e-list-item.e-hover {
+.ej1-combobox .e-dropdownbase .e-list-item.e-hover {
   color: #282827;
   border-color: #c8c8c8;
 }
-.e-dropdownbase .e-list-item.e-hover {
+.ej1-combobox .e-dropdownbase .e-list-item.e-hover {
   background: #86cbea;
 }
-.e-dropdownbase .e-list-item.e-active {
+.ej1-combobox .e-dropdownbase .e-list-item.e-active {
   
 }
-.e-dropdownbase .e-list-item.e-active {
+.ej1-combobox .e-dropdownbase .e-list-item.e-active {
   /*other*/
 
   
 }
-.e-dropdownbase .e-list-item.e-active {
+.ej1-combobox .e-dropdownbase .e-list-item.e-active {
   color: white;
 }
-.e-dropdownbase .e-list-item.e-active {
+.ej1-combobox .e-dropdownbase .e-list-item.e-active {
   background: #179bd7;
 }
-.e-dropdownbase .e-list-item:last-child {
+.ej1-combobox .e-dropdownbase .e-list-item:last-child {
   border-bottom: 0;
 }
-.e-dropdownbase .e-list-item.e-item-focus {
+.ej1-combobox .e-dropdownbase .e-list-item.e-item-focus {
   background-color: #86cbea;
 }
-.e-ddl.e-input-group input.e-combobox.e-input,
-.e-ddl.e-input-group.e-input-focus .e-combobox.e-input:focus {
+.ej1-combobox.e-ddl.e-input-group input.e-combobox.e-input,
+.ej1-combobox.e-ddl.e-input-group.e-input-focus .e-combobox.e-input:focus {
   border-color: #c8c8c8;
 }
-.e-ddl.e-input-group.e-input-focus {
+.ej1-combobox.e-ddl.e-input-group.e-input-focus {
   
 }
-.e-ddl.e-input-group.e-input-focus {
+.ej1-combobox.e-ddl.e-input-group.e-input-focus {
   box-shadow: 0 0 2px #cbcbcb;
 }
-.e-ddl.e-input-group.e-input-focus .e-combobox.e-input:first-child:focus,
-.e-ddl.e-input-group.e-input-focus.e-rtl span:last-child.e-input-group-icon,
-.e-ddl.e-input-group.e-input-focus.e-rtl span:last-child button {
+.ej1-combobox.e-ddl.e-input-group.e-input-focus .e-combobox.e-input:first-child:focus,
+.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span:last-child.e-input-group-icon,
+.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span:last-child button {
   border-color: transparent #c8c8c8 transparent transparent;
 }
-.e-ddl.e-input-group.e-input-focus.e-rtl span.e-input-group-icon,
-.e-ddl.e-input-group.e-input-focus span button,
-.e-ddl.e-input-group.e-input-focus.e-rtl span:first-child.e-input-group-icon,
-.e-ddl.e-input-group.e-input-focus.e-rtl span:first-child button,
-.e-input-focus.e-rtl .e-combobox.e-input:first-child:focus,
-.e-input-focus .e-combobox.e-input:last-child:focus,
-.e-ddl.e-input-group.e-input-focus span.e-input-group-icon {
+.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span.e-input-group-icon,
+.ej1-combobox.e-ddl.e-input-group.e-input-focus span button,
+.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span:first-child.e-input-group-icon,
+.ej1-combobox.e-ddl.e-input-group.e-input-focus.e-rtl span:first-child button,
+.ej1-combobox.e-input-focus.e-rtl .e-combobox.e-input:first-child:focus,
+.ej1-combobox.e-input-focus .e-combobox.e-input:last-child:focus,
+.ej1-combobox.e-ddl.e-input-group.e-input-focus span.e-input-group-icon {
   border-color: transparent transparent transparent #c8c8c8;
 }
-.e-ddl.e-input-group {
+.ej1-combobox.e-input-group:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+.ej1-combobox.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+.ej1-combobox.e-input-group.e-input-focus:not(.e-float-icon-left):not(.e-success):not(.e-warning):not(.e-error),
+.ej1-combobox.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+.ej1-combobox.e-ddl.e-input-group {
   border: 1px solid;
   border-color: #c8c8c8;
   
 }
-.e-ddl.e-input-group {
+.ej1-combobox.e-input-group:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+.ej1-combobox.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+.ej1-combobox.e-input-group.e-input-focus:not(.e-float-icon-left):not(.e-success):not(.e-warning):not(.e-error),
+.ej1-combobox.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+.ej1-combobox.e-ddl.e-input-group {
   border-width: 1px;
 }
-.e-input-group-btn:not(:last-child) button,
-.e-ddl.e-input-group .e-input-group-icon:not(:last-child) {
+.ej1-combobox .e-input-group-btn:not(:last-child) button,
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:not(:last-child) {
   
 }
-.e-input-group-btn:not(:last-child) button,
-.e-ddl.e-input-group .e-input-group-icon:not(:last-child) {
+.ej1-combobox .e-input-group-btn:not(:last-child) button,
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon:not(:last-child) {
   border-left: 1px solid;
   border-left-width: 1px;
   border-color: #c8c8c8;
 }
-.e-ddl.e-input-group .e-input-group-icon,
-.e-ddl.e-input-group .e-input-group-btn button {
+.ej1-combobox.e-ddl.e-input-group .e-input-group-icon,
+.ej1-combobox.e-ddl.e-input-group .e-input-group-btn button {
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -24713,12 +24731,12 @@ input.e-combobox.e-input:-ms-input-placeholder {
   padding: 7px;
   
 }
-.e-ddl.e-rtl.e-input-group .e-input-group-icon,
-.e-ddl.e-rtl.e-input-group .e-input-group-btn button {
+.ej1-combobox.e-ddl.e-rtl.e-input-group .e-input-group-icon,
+.ej1-combobox.e-ddl.e-rtl.e-input-group .e-input-group-btn button {
   
 }
-.e-ddl .e-input-value,
-.e-ddl .e-input-value:focus {
+.ej1-combobox.e-ddl .e-input-value,
+.ej1-combobox.e-ddl .e-input-value:focus {
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
   font-size: 14px;
   height: auto;
@@ -24728,10 +24746,27 @@ input.e-combobox.e-input:-ms-input-placeholder {
   padding: 2px 0;
   width: 100%;
 }
-.e-input-group.e-ddl .e-comboie8.e-comboie.e-ddl-icon {
+.ej1-combobox.e-input-group.e-ddl .e-comboie8.e-comboie.e-ddl-icon {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #c8c8c8;
+}
+.ej1-combobox.e-input-group:not(.e-float-icon-left):not(.e-float-input)::after .ej1-combobox.e-input-group:not(.e-float-icon-left):not(.e-float-input)::before,
+.ej1-combobox.e-input-group::before,
+.ej1-combobox.e-input-group::after {
+  
+}
+.ej1-combobox.e-input-group:not(.e-float-icon-left):not(.e-float-input)::after .ej1-combobox.e-input-group:not(.e-float-icon-left):not(.e-float-input)::before,
+.ej1-combobox.e-input-group::before,
+.ej1-combobox.e-input-group::after {
+  background: none;
+}
+.ej1-combobox .e-input-group-icon.e-ddl-icon {
+  min-height: unset;
+  min-width: unset;
+}
+.ej1-combobox .e-dropdownbase.e-nodata {
+  
 }
 /*------------------------------------- End ComboBox -------------------------------------------*/
 
