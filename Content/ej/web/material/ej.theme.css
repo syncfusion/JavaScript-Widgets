@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 *  filename: ej.theme.css
-*  version : 19.1.0.63
+*  version : 19.2.0.44
 *  Copyright Syncfusion Inc. 2001 - 2021. All rights reserved.
 *  Use of this code is subject to the terms of our license.
 *  A copy of the current license can be obtained at any time by e-mailing
@@ -16,8 +16,6 @@
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -857,8 +855,6 @@
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -971,8 +967,6 @@
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -1167,8 +1161,6 @@ e-excelfilter .e-menu .e-list.e-fghdrcolor.e-mhover.e-mfocused,
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -1871,8 +1863,6 @@ e-excelfilter .e-menu .e-list.e-fghdrcolor.e-mhover.e-mfocused,
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -2302,8 +2292,6 @@ e-excelfilter .e-menu .e-list.e-fghdrcolor.e-mhover.e-mfocused,
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -2547,8 +2535,6 @@ e-excelfilter .e-menu .e-list.e-fghdrcolor.e-mhover.e-mfocused,
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -2732,8 +2718,6 @@ e-excelfilter .e-menu .e-list.e-fghdrcolor.e-mhover.e-mfocused,
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -3050,8 +3034,6 @@ input[type="text"].e-input {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -4286,8 +4268,6 @@ input[type="text"].e-input {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -4428,8 +4408,6 @@ input[type="text"].e-input {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -4801,8 +4779,6 @@ input[type="text"].e-input {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -5267,8 +5243,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -6024,8 +5998,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -6660,8 +6632,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -7169,8 +7139,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -7334,8 +7302,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -7544,7 +7510,12 @@ input.e-fe-dialog-text:not(.e-textbox),
 .e-js.e-titlebar.e-dialog-header.e-dialog.e-header,
 .e-js.e-footerbar.e-dialog-footer.e-dialog {
   width: auto;
+}
+.e-js.e-titlebar.e-dialog-header.e-dialog.e-header {
   
+}
+.e-js.e-footerbar.e-dialog-footer.e-dialog {
+  box-shadow: none;
 }
 
 /*-----------------------Map------------------*/
@@ -7554,8 +7525,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -7879,8 +7848,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -7998,8 +7965,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -8170,8 +8135,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -8413,8 +8376,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -8832,8 +8793,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -9244,8 +9203,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -9301,8 +9258,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -9432,8 +9387,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -9605,8 +9558,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -9771,8 +9722,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -10013,8 +9962,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -10198,8 +10145,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -10609,8 +10554,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -10696,8 +10639,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -10906,8 +10847,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -11237,8 +11176,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -11428,8 +11365,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -11700,8 +11635,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -12183,8 +12116,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -12241,8 +12172,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -12462,8 +12391,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -12697,8 +12624,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -12943,8 +12868,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -13233,8 +13156,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -13304,8 +13225,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -16683,8 +16602,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -19601,8 +19518,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -19948,8 +19863,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -20023,8 +19936,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -20137,8 +20048,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -20406,273 +20315,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
-/*-----------------------SymbolPalette Definition-----------------*/
-/*-----------------------Diagram Definition-----------------*/
-/*-----------------------Datepicker Definition-----------------*/
-/*-----------------------Bootstrap support-----------------*/
-/*----------------------Ribbon Definition-----------------------*/
-/*----------------------Ribbon End-----------------------*/
-/*----------------------File Explorer Start-----------------------*/
-/*----------------------File Explorer End-----------------------*/
-/*----------------------Kanban Definition-----------------------*/
-/*----------------------Kanban End-----------------------*/
-/*----------------------Spreadsheet Definition-----------------------*/
-/*----------------------Spreadsheet End-----------------------*/
-/*----------------------Office 365 theme-----------------------*/
-/*----------------------rangeScrollbar Start------------------*/
-/*----------------------rangeScrollbar End--------------------*/
-/*----------------------High-Contrast-01 & High-Contrast-02 theme-----------------------*/
-/*--------------- common ----------------- */
-/*---------------high-contrast ------*/
-/*---------------- Office-365 ----------------*/
-/*------------------ material theme ---------------------*/
-/*------------------ DatePicker ---------------------*/
-/*-----------------------HeatMap Definition-----------------*/
-/* Common style */
-
-.e-content-area {
-  background-color: white;
-  color: #111111;
-  border-color: #e0e0e0;
-  font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial;
-}
-/*------------------------------reportviewer Theme Start-------------------------------*/
-
-.e-reportviewer-outerborder:hover {
-  border-color: #e0e0e0;
-  color: #212121;
-}
-.e-reportviewer-outerborder:hover {
-  background: #e0e0e0;
-}
-.e-reportviewer-tbdiv.e-reportviewer-exporttip {
-  border-color: #e0e0e0;
-  
-}
-.e-reportviewer-tbdiv.e-reportviewer-exporttip {
-  background: whitesmoke;
-}
-.e-reportviewer-tbdiv.e-reportviewer-exporttip {
-  /*material*/
-  background-color: white !important;
-}
-.e-reportviewer-tbdiv.e-reportviewer-fittopagetip {
-  border-color: #e0e0e0;
-  
-}
-.e-reportviewer-tbdiv.e-reportviewer-fittopagetip {
-  background: whitesmoke;
-}
-.e-reportviewer-tbdiv.e-reportviewer-fittopagetip {
-  /*material*/
-  background-color: white !important;
-}
-.e-reportviewer-tbdiv.e-reportviewer-tooltip {
-  
-  border-color: #e0e0e0;
-}
-.e-reportviewer-tbdiv.e-reportviewer-tooltip {
-  /*material*/
-  background-color: #616161;
-}
-.e-reportviewer-headerspan,
-.e-reportviewer-contentspan {
-  
-  font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial !important;
-}
-.e-reportviewer-headerspan,
-.e-reportviewer-contentspan {
-  /*material*/
-  color: white;
-}
-.e-reportviewer-viewer {
-  font-size: 14px;
-}
-.e-reportviewer-popuppageno,
-.e-reportviewer-popuptotalpage {
-  color: white;
-}
-.e-reportviewer-toolbarcontainer .ejinputtext {
-  
-}
-.e-reportviewer-toolbarcontainer .ejinputtext {
-  /*material*/
-  background-color: #fafafa !important;
-  font-size: 16px;
-}
-.e-reportviewer-viewerblock {
-  
-}
-.e-reportviewer-viewerblock {
-  /*material*/
-  background-color: #fafafa;
-  font-size: 13px;
-  color: black;
-}
-.e-reportviewer-viewerblockcellcontent {
-  
-}
-.e-reportviewer-viewerblockcellcontent {
-  /*material*/
-  font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial;
-  font-size: 13px;
-  color: black;
-  opacity: 87;
-}
-.e-reportviewer-viewreport {
-  border-left-color: #e0e0e0;
-  
-}
-.e-reportviewer-viewreport {
-  /*material*/
-  padding-left: 40px;
-}
-.e-reportviewer-scrollcontainer,
-.e-reportviewer-viewer > .e-splitter .e-pane {
-  
-}
-.e-reportviewer-scrollcontainer,
-.e-reportviewer-viewer > .e-splitter .e-pane {
-  /*material*/
-  background-color: #eeeeee;
-}
-.e-reportviewer-pageviewcontainer {
-  
-}
-.e-reportviewer-pageviewcontainer {
-  /*material*/
-  background-color: #eeeeee;
-}
-.e-reportviewer-pageview {
-  
-}
-.e-reportviewer-pageview {
-  /*material*/
-  -moz-box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.16);
-  -webkit-box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.16);
-  border-color: gray;
-}
-.e-reportviewer-label,
-.e-reportviewer-tbpage,
-.e-reportviewer-elementalignments,
-.e-reportviewer-textbox {
-  color: #212121;
-}
-.e-reportviewer-label,
-.e-reportviewer-tbpage,
-.e-reportviewer-elementalignments,
-.e-reportviewer-textbox {
-  font-size: 14px;
-  font-weight: normal;
-}
-.e-reportviewer-labelpageno {
-  font-size: 16px !important;
-}
-.e-reportviewer-documentmapcontainer div,
-.e-reportviewer-documentmappopup {
-  background-color: #ebebeb;
-}
-.e-reportviewer-pagepopupinfo {
-  background-color: black;
-}
-.e-reportviewer-viewerblock,
-.e-reportviewer-pagenumber,
-.e-reportviewer-tbpage,
-.e-reportviewer-tbdiv.e-reportviewer-exportlist,
-.e-reportviewer-label,
-.e-reportviewer-labelpageno {
-  font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial !important;
-}
-.e-reportviewer-toolbarcontainer,
-.e-reportviewer-viewerblock,
-.e-reportviewer-viewercontainer,
-.e-reportviewer-elementalignments,
-.e-reportviewer-viewerblockcellcontent,
-.e-reportviewer-viewerblockcontent,
-.e-reportviewer-textbox,
-.e-reportviewer-documentmappopup {
-  
-}
-.e-reportviewer-toolbarcontainer,
-.e-reportviewer-viewerblock,
-.e-reportviewer-viewercontainer,
-.e-reportviewer-elementalignments,
-.e-reportviewer-viewerblockcellcontent,
-.e-reportviewer-viewerblockcontent,
-.e-reportviewer-textbox,
-.e-reportviewer-documentmappopup {
-  /*material*/
-  border-color: #e0e0e0;
-}
-.e-reportviewer-printExportLoading {
-  font-style: italic;
-  font-weight: bolder;
-  font-size: larger;
-  opacity: 0.7;
-  color: black;
-  background-color: rgba(56, 56, 56, 0.2);
-}
-.e-reportviewer-popupli:hover {
-  
-}
-.e-reportviewer-popupli:hover {
-  background: #e0e0e0;
-}
-.e-reportviewer-popupli:hover {
-  background-color: #eeeeee;
-}
-.e-reportviewer-popupli {
-  
-  font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial !important;
-  font-size: 14px !important;
-  font-weight: normal !important;
-}
-.e-reportviewer-popupli {
-  color: #212121 !important;
-}
-.e-reportviewer-toolbarli.e-reportviewer-ejdropdownlist .e-rptviewer-drpdown .e-in-wrap.e-box {
-  border-style: none;
-}
-.e-reportviewer-toolbarli.e-reportviewer-ejdropdownlist .e-rptviewer-drpdown .e-in-wrap.e-box .e-input,
-.e-reportviewer-toolbarli.e-reportviewer-ejdropdownlist .e-rptviewer-drpdown .e-in-wrap.e-box .e-select {
-  background-color: transparent;
-}
-.e-reportviewer-gotonext.e-reportviewer-disabled,
-.e-reportviewer-gotoprevious.e-reportviewer-disabled,
-.e-reportviewer-gotolast.e-reportviewer-disabled,
-.e-reportviewer-gotofirst.e-reportviewer-disabled {
-  opacity: 0.5;
-}
-.e-reportviewer-viewreportbutton {
-  font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial !important;
-  
-}
-.e-reportviewer-alert-icon {
-  color: #f44336;
-  font-size: 40px;
-}
-.e-reportviewer-error-content {
-  
-  font-size: 12.5px;
-}
-.e-reportviewer-scroller .e-scrollbar .e-icon {
-  font-size: 0;
-}
-/*------------------------------reportviewer Theme End-------------------------------*/
-
-
-/*-----------------------Map------------------*/
-/*-----------------------PdfViewer------------------*/
-/*-----------------------End PdfViewer------------------*/
-/*-----------------------OLAP Definition-----------------*/
-/*-----------------------OLAP Definition End-----------------*/
-/*----------------------Reportviewer Definition start------------------*/
-/*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -20920,8 +20562,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -21179,8 +20819,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -21279,8 +20917,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -21822,8 +21458,6 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -22645,8 +22279,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -23502,8 +23134,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -24330,8 +23960,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -24392,8 +24020,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -24720,8 +24346,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -25048,8 +24672,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -25125,8 +24747,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -25311,8 +24931,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -25428,8 +25046,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -25488,8 +25104,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -25535,8 +25149,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
@@ -25598,8 +25210,6 @@ ej-ribbon {
 /*-----------------------OLAP Definition End-----------------*/
 /*----------------------Reportviewer Definition start------------------*/
 /*----------------------Reportviewer Definition End------------------*/
-/*----------------------Reportdesigner Definition Start------------------*/
-/*----------------------Reportdesigner Definition End------------------*/
 /*-----------------------SymbolPalette Definition-----------------*/
 /*-----------------------Diagram Definition-----------------*/
 /*-----------------------Datepicker Definition-----------------*/
