@@ -30,7 +30,7 @@
 	
 	"jquery": "*",
 
-    "jquery-validation": "*",
+    "jquery-validation": ">=1.19.5",
 
     "jsrender": "*"
 
