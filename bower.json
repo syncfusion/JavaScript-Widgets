@@ -28,9 +28,9 @@
 
     "syncfusion-ej-global": "*",
 	
-	"jquery": "*",
+	"jquery": ">=3.4.0",
 
-    "jquery-validation": ">=1.19.5",
+    "jquery-validation": ">=1.20.0",
 
     "jsrender": "*"
 
