@@ -38,7 +38,7 @@
 	
     "jquery": "*",
 
-    "jquery-validation": ">=1.19.5",
+    "jquery-validation": ">=1.20.0",
 
     "jsrender": "*"
 
@@ -68,7 +68,7 @@
 	    "syncfusion-ej-global": "*",
             "jquery": "*",
             "jsrender": "*",
-            "jquery-validation": ">=1.19.5"
+            "jquery-validation": ">=1.20.0"
         },
         "ignore": [
           "Scripts/ej.widgets.all*.js",
