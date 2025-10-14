@@ -35,12 +35,12 @@
   "dependencies": {
 
     "syncfusion-ej-global": "*",
-	
-    "jquery": "*",
+
+    "jquery": "^1.9.0",
 
     "jquery-validation": ">=1.20.0",
 
-    "jsrender": "*"
+    "jsrender": "^0.9.74"
 
   },
 
@@ -66,8 +66,8 @@
         ],
         "dependencies": {
 	    "syncfusion-ej-global": "*",
-            "jquery": "*",
-            "jsrender": "*",
+            "jquery": "^1.9.0",
+            "jsrender": "^0.9.74",
             "jquery-validation": ">=1.20.0"
         },
         "ignore": [
